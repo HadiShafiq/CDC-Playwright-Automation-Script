@@ -17,6 +17,12 @@ export const test = base.extend<{ katalon: void }>({
   storageState: { cookies: [], origins: [] },
   katalon: [
     async ({ page, evidence, baseURL }, use, testInfo) => {
+      // From 2026-11-06 the SIT home page opens a "TERKINI" announcement (YUI modal); its mask blocks the Login click.
+      const terkini = page.locator('.yui3-widget-modal').filter({ has: page.locator('h3', { hasText: 'TERKINI' }) });
+      await page.addLocatorHandler(terkini, async () => {
+        await terkini.locator('.modal-footer button', { hasText: 'OK' }).click();
+        evidence.log('Closed the TERKINI announcement');
+      });
       bindKatalon({ page, testInfo, log: evidence.log, baseURL: baseURL! });
       await use();
       if (!page.isClosed() && testInfo.status !== testInfo.expectedStatus) {

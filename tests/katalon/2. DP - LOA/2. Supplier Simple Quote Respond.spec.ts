@@ -11,6 +11,7 @@ import { waitBlockUI, wVisible, c, t } from '../../../support/katalon/helpers';
  *          also suite "DP Supplier Respond Simple Quote/Supplier Respond Simple quote" → Data Files/DP - Supplier Respons Simple Quote/Supplier Respond Simple Quotes
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
+ * Katalon step repaired: Supplier reply priced only the first line (loopCount = 1), so a Simple Quote with several lines got a partial reply and its Request Note could not be submitted (ERR-760356: Recommended Supplier is required); now counts the Unit Price fields and prices every line.
  */
 test.describe('KAT-022 2. Supplier Simple Quote Respond', () => {
   test(
@@ -343,7 +344,11 @@ test.describe('KAT-022 2. Supplier Simple Quote Respond', () => {
 
     gAssert(found, "❌ SQ Number not found from pagination 1 until 10: " + targetSQ) //WebUI.click(findTestObject('Object Repository/DLOA/5. SUpplier Simple Quote Respond/Click Procument Tittle'))
 
-    let loopCount: any = 1
+    let allPriceFields: any = new TestObject('allPriceFields')
+    allPriceFields.addProperty('xpath', ConditionType.EQUALS, "//input[contains(@id,'questionTbl:') and contains(@id,':ratePerUom')]")
+    let loopCount: any = (await WebUI.findWebElements(allPriceFields, 20)).size()
+    await WebUI.comment("Price lines on this Simple Quote: " + loopCount)
+    gAssert(loopCount > 0, "No unit price fields found on the Simple Quote")
 
     for (let i = 0; i < loopCount; i++) {
 

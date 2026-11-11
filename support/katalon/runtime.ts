@@ -103,7 +103,8 @@ export class TestObject {
 /** Object Repository lookup; "Object Repository/" prefix optional, as in Katalon. */
 export function findTestObject(id: string, params?: Record<string, any>): TestObject {
   const key = id.replace(/^Object Repository\//, '');
-  const entry = repo[key];
+  // Katalon on Windows finds objects whatever the letter case ("Freq. Per UOM" → "Freq. per UOM.rs").
+  const entry = repo[key] ?? Object.entries(repo).find(([k]) => k.toLowerCase() === key.toLowerCase())?.[1];
   if (!entry) throw new Error(`Object Repository entry not found: ${key}`);
   let selector = entry.selector;
   // Parameterised test objects: ${name} placeholders filled from params.

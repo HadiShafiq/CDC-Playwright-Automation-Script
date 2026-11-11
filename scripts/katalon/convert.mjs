@@ -233,6 +233,68 @@ $1}`,
     note: 'Simple Quote: Criteria and Supplier List was filled only for procurement type 1, so with type 2 (Direct LOA, the test case default) SIT rejected the submit (ERR-760109: at least one supplier); fill it for type 2 too',
   },
   {
+    // Hard-coded October 2026 dates are now in the past and no longer in the datepicker; keep their spacing,
+    // counted from 2026-10-01 = the run date.
+    when: (tc) => /2\. DP - LOA\/[56]\. /.test(tc.rel),
+    find: /pickDate\("2026-10-(\d\d)"\)/g,
+    replace: (_, day) => `pickDate(LocalDate.now().plusDays(${Number(day) - 1}).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))`,
+    note: 'Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14) and are now in the past ("Date not found in datepicker"); now the run date plus the same offsets (0, 12, 13 days)',
+  },
+  {
+    // A Schedule / As And When service line has no PR/LOA Prepared By (one-off lines get the requisitioner); the
+    // script's search for it was commented out, so Submit failed with ERR-100022. Fill only the empty ones.
+    when: (tc) => /2\. DP - LOA\/3\. Prepare Request Note$/.test(tc.rel),
+    find: /\/\*int loopCount = 1[\s\S]*?\n\}\*\//,
+    replace: `TestObject prepSearchLinks = new TestObject('prepSearchLinks')
+prepSearchLinks.addProperty('xpath', ConditionType.EQUALS, "//a[contains(@id,':requestListDataTable:') and contains(@id,':preparedBySearchCL')]")
+int prepRows = WebUI.findWebElements(prepSearchLinks, 20).size()
+for (int i = 0; i < prepRows; i++) {
+\tString rowId = "_scDirectPurchaseTask_WAR_NGePportlet_:form:requestListDataTable:" + i
+\tTestObject prepInput = new TestObject("prepInput_" + i)
+\tprepInput.addProperty('xpath', ConditionType.EQUALS, "(//a[@id='" + rowId + ":preparedBySearchCL']/ancestor::td[1]//input[@type='text'])[1]")
+\tString current = WebUI.getAttribute(prepInput, 'value', FailureHandling.OPTIONAL)
+\tif (current != null && !current.trim().isEmpty()) continue
+\tassert preparedBy != null && !preparedBy.toString().trim().isEmpty() : "Row " + (i + 1) + ": PR/LOA Prepared By is mandatory (ERR-100022) and no preparedBy (IC or name) is set"
+\tWebUI.comment("Row " + (i + 1) + ": PR/LOA Prepared By is empty; searching " + preparedBy)
+\tTestObject prepSearch = new TestObject("prepSearch_" + i)
+\tprepSearch.addProperty('xpath', ConditionType.EQUALS, "//a[@id='" + rowId + ":preparedBySearchCL']")
+\tc(prepSearch, 20)
+\twaitBlockUI(20)
+\tboolean byIc = preparedBy.toString().trim().isInteger()
+\tTestObject prepCriteria = new TestObject("prepCriteria_" + i)
+\tprepCriteria.addProperty('xpath', ConditionType.EQUALS, "//input[@id='" + rowId + ":beforeSaveLov:" + (byIc ? "searchIc" : "searchName") + "']")
+\tt(prepCriteria, preparedBy.toString().trim(), 20)
+\tTestObject prepSearchBtn = new TestObject("prepSearchBtn_" + i)
+\tprepSearchBtn.addProperty('xpath', ConditionType.EQUALS, "//*[@id='" + rowId + ":beforeSaveLov:searcbBtnId']")
+\tc(prepSearchBtn, 20)
+\twaitBlockUI(20)
+\tTestObject prepFirstRow = new TestObject("prepFirstRow_" + i)
+\tprepFirstRow.addProperty('xpath', ConditionType.EQUALS, "//*[@id='" + rowId + ":beforeSaveLov:dtUserOrg_data']/tr[1][not(contains(@class,'ui-datatable-empty-message'))]")
+\tassert WebUI.waitForElementVisible(prepFirstRow, 20, FailureHandling.OPTIONAL) : "PR/LOA Prepared By search found nobody for " + preparedBy
+\tc(prepFirstRow, 20)
+\tWebUI.delay(1)
+\tTestObject prepSelectBtn = new TestObject("prepSelectBtn_" + i)
+\tprepSelectBtn.addProperty('xpath', ConditionType.EQUALS, "//*[@id='" + rowId + ":beforeSaveLov:slbtn']")
+\tc(prepSelectBtn, 20)
+\twaitBlockUI(20)
+\tWebUI.delay(1)
+}`,
+    note: 'Schedule / As And When service lines have no PR/LOA Prepared By and Submit failed (ERR-100022); the script\'s Prepared By search was commented out. Now, for each empty line only, search the preparedBy officer (by IC No. if digits, else by name) in the requisitioner\'s own PTJ and select them',
+  },
+  {
+    // The supplier priced only the first line (loopCount = 1); the requisitioner then cannot submit the Request Note
+    // ("Recommended Supplier is required", ERR-760356) for the unpriced lines, and the SQ is wasted.
+    when: (tc) => tc.rel.includes('Supplier Simple Quote Respond'),
+    find: /^int loopCount = 1\n/m,
+    replace: `TestObject allPriceFields = new TestObject('allPriceFields')
+allPriceFields.addProperty('xpath', ConditionType.EQUALS, "//input[contains(@id,'questionTbl:') and contains(@id,':ratePerUom')]")
+int loopCount = WebUI.findWebElements(allPriceFields, 20).size()
+WebUI.comment("Price lines on this Simple Quote: " + loopCount)
+assert loopCount > 0 : "No unit price fields found on the Simple Quote"
+`,
+    note: 'Supplier reply priced only the first line (loopCount = 1), so a Simple Quote with several lines got a partial reply and its Request Note could not be submitted (ERR-760356: Recommended Supplier is required); now counts the Unit Price fields and prices every line',
+  },
+  {
     // The loop adds the first search result twice; a supplier already in the list drops out of the search, so an exact name finds nothing the second time.
     when: (tc) => tc.rel.includes('Add Simple Quotes'),
     find: /^([ \t]*)WebUI\.waitForElementVisible\(supplierRow, 20\)\n/m,

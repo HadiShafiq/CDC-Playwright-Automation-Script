@@ -89,34 +89,37 @@
     "PerformanceBond": "2"
   },
   "KAT-021": {
-    "_why": "Start date 2026-10-19 is in the past (run date instead); default supplier Basic FL Organization (Others) 1 + item 851220040000000000 give 0 catalogue results. Use the company of KAT-022 supplier account BASICFLROS3 and its service item (Catalogue Search, 2026-10-30). Procurement type stays the test case's 2 (Direct LOA, needed for Prepare LOA KAT-025); with type 1 (used 2026-10-30 for SQ260000000002272) the RN goes to Submit PR instead. Supplier List: the test case search \"ANE\" invites KEDAI SERBANEKA ALI / KANEDA JAPANESE CUISINE (SQ260000000002277), whose logins we do not have; AINHALIM ENTERPRISE (NURULAINMOF) is not offered for this service SQ (search gives no records), so invite the catalogue supplier, BASICFLROS3 company (2026-11-04)",
+    "_why": "Start date 2026-10-19 is in the past (run date instead); default supplier Basic FL Organization (Others) 1 + item 851220040000000000 give 0 catalogue results. Use the company of KAT-022 supplier account BASICFLROS3 and its service item (Catalogue Search, 2026-10-30). Procurement type stays the test case's 2 (Direct LOA, needed for Prepare LOA KAT-025); with type 1 (used 2026-10-30 for SQ260000000002272) the RN goes to Submit PR instead. Supplier List: the test case search \"ANE\" invites KEDAI SERBANEKA ALI / KANEDA JAPANESE CUISINE (SQ260000000002277), whose logins we do not have; AINHALIM ENTERPRISE (NURULAINMOF) is not offered for this service SQ (search gives no records), so invite the catalogue supplier, BASICFLROS3 company (2026-11-04). Fulfilmenttype 2 (Schedule): per the user, only a Services SQ with Schedule or As And When gives an RN that goes to Prepare LOA (KAT-025); One Off (1) went to a Purchase Request (SQ260000000002305 → PR260000000004856)",
     "dateValue": "{yyyy-MM-dd}",
     "SupplierName": "Basic FL ROC (registration with SSM as ROC) 3",
     "ItemCode": "801218020000000000",
-    "AddSupplierNameNormal": "Basic FL ROC (registration with SSM as ROC) 3"
+    "AddSupplierNameNormal": "Basic FL ROC (registration with SSM as ROC) 3",
+    "Fulfilmenttype": 2
   },
   "KAT-022": {
-    "_why": "Respond to our Direct LOA Simple Quote SQ260000000002278 (KAT-021, 2026-11-04 17:11, Supplier List = BASICFLROS3 company) as the default BASICFLROS3 account; SQ260000000002276 closed (END_DATE moved by SQL) before any reply, SQ260000000002277 went to KEDAI SERBANEKA ALI / KANEDA JAPANESE CUISINE. Answered before: SQ260000000002272 (default account), SQ260000000002273 and SQ260000000002274 (AINHALIM, the KAT-030 login, on 2026-11-02 and 2026-11-04)",
-    "sqNo": "SQ260000000002278"
+    "_why": "Respond to our new Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, 2026-11-11 18:13, Supplier List = BASICFLROS3 company) as the default BASICFLROS3 account, pricing every line; this SQ is for the LOA chain KAT-025/026/027",
+    "sqNo": "SQ260000000002309"
   },
   "KAT-023": {
-    "_why": "Prepare RN from our Simple Quote SQ260000000002274 (KAT-037: AINHALIM product + 2 service lines without item code, answered by AINHALIM; END_DATE set to 2026-11-04 11:00 in SC_QUOTE by the user) instead of the Katalon SQ260000000002149, for Assign Code KAT-038/039; prepared by the requisitioner who created the SQ. Earlier: SQ260000000002272 gave RN260000000004509, SQ260000000002273 gave RN260000000004511 (2026-11-04)",
-    "Document_Number": "SQ260000000002274",
-    "_accountOf": "KAT-037"
+    "_why": "Prepare RN from our Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, BASICFLROS3 replied 2026-11-11 18:16, END 18:30) as the requisitioner who created it (draft RN260000000004702 exists); its line has no PR/LOA Prepared By, so pick officer 710527085562 (given by the user)",
+    "Document_Number": "SQ260000000002309",
+    "_accountOf": "KAT-021",
+    "preparedBy": "710527085562"
   },
   "KAT-024": {
-    "_why": "Approve our product RN260000000004511 (KAT-023 from SQ260000000002273) instead of the Katalon RN260000000004206; its Review Direct Purchase task is assigned to officer 690127065209 (Task Status Search 2026-11-04). RN260000000004509 was approved with the default account on 2026-11-04",
-    "Document_Number": "RN260000000004511",
+    "_why": "Approve our RN RN260000000004702 (KAT-023 from Services Schedule SQ260000000002309); Review Direct Purchase ASSIGNED to officer 690127065209 (Task Status Search)",
+    "Document_Number": "RN260000000004702",
     "_officer": "690127065209"
   },
   "KAT-025": {
-    "_why": "Prepare the LOA from our approved RN260000000004509 (KAT-024) instead of the Katalon RN260000000004244; file reference from the RN number like the Katalon data",
-    "Document_Number": "RN260000000004509",
-    "FileReference1": "260000000004509"
+    "_why": "Prepare the LOA from our approved RN RN260000000004702 (Services Schedule SQ260000000002309); next task ASSIGNED to 710527085562 (Task Status Search); file reference from the RN number",
+    "Document_Number": "RN260000000004702",
+    "FileReference1": "260000000004702",
+    "_officer": "710527085562"
   },
   "KAT-038": {
-    "_why": "Assign Code on our product RN260000000004511 (KAT-023 from SQ260000000002273) instead of the Katalon RN260000000004210; its Review Direct Purchase task is assigned to officer 690127065209 (Task Status Search 2026-11-04), not a Katalon account",
-    "Document_Number": "RN260000000004511",
+    "_why": "Assign Code (product) on our RN260000000004701 (KAT-023 from SQ260000000002308: product + service lines without item code, all priced by AINHALIM) instead of the Katalon RN; Task Status Search shows Review Direct Purchase ASSIGNED to officer 690127065209",
+    "Document_Number": "RN260000000004701",
     "_officer": "690127065209"
   },
   "KAT-040": {
@@ -233,5 +236,24 @@
     "dateValue": "{yyyy-MM-dd}",
     "DeliveryAmount": 300000,
     "_accountOf": "KAT-008"
+  },
+  "KAT-008": {
+    "_why": "Respond to our new services LOA LA260000000004124 (KAT-002, 2026-11-11 16:03, supplier MOF FL LLP 6 = this account) instead of the Katalon LA260000000003988",
+    "Document_Number": "LA260000000004124"
+  },
+  "KAT-033": {
+    "_why": "Submit the Purchase Request of our approved RN260000000004698 (SQ260000000002305, approved 2026-11-11 16:49), which SIT routed to PR260000000004856 (Ad Hoc) instead of a Direct LOA; its Submit PR task is ASSIGNED to officer 710527085562 (Task Status Search). User chose to continue it as a PR",
+    "Document_Number": "RN260000000004698",
+    "_officer": "710527085562"
+  },
+  "KAT-034": {
+    "_why": "Approve our PR260000000004856 (KAT-033 from RN260000000004698, 2026-11-11 17:02); Task Status Search shows Review PR ASSIGNED to officer 690127065209",
+    "Document_Number": "PR260000000004856",
+    "_officer": "690127065209"
+  },
+  "KAT-039": {
+    "_why": "Assign Code (service) on our RN260000000004701 (KAT-023 from SQ260000000002308: product + service lines without item code, all priced by AINHALIM) instead of the Katalon RN; Task Status Search shows Review Direct Purchase ASSIGNED to officer 690127065209",
+    "Document_Number": "RN260000000004701",
+    "_officer": "690127065209"
   }
 }
