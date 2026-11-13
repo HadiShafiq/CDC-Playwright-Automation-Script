@@ -118,9 +118,9 @@
     "_officer": "710527085562"
   },
   "KAT-038": {
-    "_why": "Assign Code (product) on our RN260000000004701 (KAT-023 from SQ260000000002308: product + service lines without item code, all priced by AINHALIM) instead of the Katalon RN; Task Status Search shows Review Direct Purchase ASSIGNED to officer 690127065209",
+    "_why": "Assign Code on our RN260000000004701 (KAT-023 from SQ260000000002308: product + service lines without item code, AINHALIM priced all lines); Task Status shows Codify Purchase Request ASSIGNED to nurulainmof (AINHALIM, the KAT-030 login) and 2 officers",
     "Document_Number": "RN260000000004701",
-    "_officer": "690127065209"
+    "_accountOf": "KAT-030"
   },
   "KAT-040": {
     "_why": "Performance Bond dates 2026-06-15 are in the past (datepicker does not offer them); use 180 days from the run date; tickPerformanceBond 2: with 1 the script ticks Performance Bond Deferment but adds no deferment history, so Approve FD fails (ERR-750071)",
@@ -252,8 +252,18 @@
     "_officer": "690127065209"
   },
   "KAT-039": {
-    "_why": "Assign Code (service) on our RN260000000004701 (KAT-023 from SQ260000000002308: product + service lines without item code, all priced by AINHALIM) instead of the Katalon RN; Task Status Search shows Review Direct Purchase ASSIGNED to officer 690127065209",
-    "Document_Number": "RN260000000004701",
-    "_officer": "690127065209"
+    "_why": "Assign Code (service) on RN260000000004511 (KAT-023 from SQ260000000002273, approved 2026-11-04), which sits in the Group Task of nurulainmof (AINHALIM, the KAT-030 login) as Pending Assign Item Code; RN260000000004701 was done by KAT-038",
+    "Document_Number": "RN260000000004511",
+    "_accountOf": "KAT-030"
+  },
+  "KAT-026": {
+    "_why": "Accept our LOA LA260000000004130 (KAT-025 from RN260000000004702, Services Schedule SQ260000000002309, 2026-11-13) instead of the Katalon LA260000000003868; Task Status shows Accept LOA ASSIGNED to basicflros3, the KAT-022 supplier account",
+    "Document_Number": "LA260000000004130",
+    "_accountOf": "KAT-022"
+  },
+  "KAT-027": {
+    "_why": "Verify our LOA LA260000000004130 (accepted by basicflros3 2026-11-13 15:29) instead of the Katalon LA260000000003868; Task Status shows Verify LOA ASSIGNED to officer 710527085562",
+    "Document_Number": "LA260000000004130",
+    "_officer": "710527085562"
   }
 }

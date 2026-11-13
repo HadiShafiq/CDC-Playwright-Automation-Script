@@ -54,13 +54,38 @@ function latestExecution(specFile) {
   return undefined;
 }
 
+// Each test also writes evidence/<ENV>/<CR>/<ScenarioId>/<RunId>/summary.json. Some runs' reports/ folders are gone,
+// so when a scenario's evidence is newer than its latest report, the evidence result counts.
+function latestEvidence(id) {
+  let best;
+  for (const env of ['SIT', 'UAT']) {
+    const envDir = path.join(root, 'evidence', env);
+    if (!fs.existsSync(envDir)) continue;
+    for (const cr of fs.readdirSync(envDir)) {
+      const dir = path.join(envDir, cr, id);
+      if (!fs.existsSync(dir)) continue;
+      for (const run of fs.readdirSync(dir)) {
+        if (best && best.run >= run) continue;
+        try {
+          const s = JSON.parse(fs.readFileSync(path.join(dir, run, 'summary.json'), 'utf8'));
+          if (['PASS', 'FAIL', 'BLOCKED'].includes(s.status)) best = { run, status: s.status, note: `${env} run ${run} (evidence): ${s.status}` };
+        } catch {}
+      }
+    }
+  }
+  return best;
+}
+const runIdOf = (note) => note?.match(/run (\d{4}-\d\d-\d\d_\d{6})/)?.[1] ?? '';
+
 const rows = walk(katalon).sort().map((f, i) => {
   const id = `KAT-${String(i + 1).padStart(3, '0')}`;
   const rel = path.relative(katalon, f).split(path.sep).join('/').replace(/\.tc$/, '');
   const parts = rel.split('/');
   const name = parts.at(-1);
   const spec = specs.find(([, src]) => src.includes(`'${id}'`) || src.includes(`@${id}`));
-  const execution = spec ? latestExecution(spec[0]) : undefined;
+  const reported = spec ? latestExecution(spec[0]) : undefined;
+  const evidence = spec ? latestEvidence(id) : undefined;
+  const execution = evidence && evidence.run > runIdOf(reported?.note) ? evidence : reported;
   return {
     'Scenario ID': id,
     'CR Number': '',

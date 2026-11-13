@@ -10,7 +10,8 @@ import { waitBlockUI, wVisible, c, t, up, selectDropdownByIndex } from '../../..
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
  * Katalon step repaired: ENHANCEMENT: Task List search is clicked again when no result appears within 10 s (the first click sometimes renders no My Task table).
- * Katalon step repaired: Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14) and are now in the past ("Date not found in datepicker"); now the run date plus the same offsets (0, 12, 13 days).
+ * Katalon step repaired: Supplier LOA: the Assign step was always run, but an item that already has an item code (e.g. a catalogue service from the Simple Quote) has a disabled Assign button and the test timed out; now it assigns only when an enabled Assign button is there.
+ * Katalon step repaired: Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14), now in the past ("Date not found in datepicker"), and the Contract Effective Date was before the LOA Signing Date By Government (ERR-760468); now signing dates = run date, Contract Effective Date = run date + 1.
  */
 test.describe('KAT-026 6. Supplier Direct LOA - Services', () => {
   test(
@@ -325,7 +326,7 @@ test.describe('KAT-026 6. Supplier Direct LOA - Services', () => {
 
     //WebUI.click(findTestObject('Object Repository/Direct LOA/2. Direct LOA Supplier/General Information/Pick LOA Signer Date'))
 
-    await pickDate(LocalDate.now().plusDays(12).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))   // <-- put your date here
+    await pickDate(LocalDate.now().plusDays(0).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))   // <-- put your date here
     await waitBlockUI(20)
     await WebUI.delay(1)
 
@@ -386,6 +387,7 @@ test.describe('KAT-026 6. Supplier Direct LOA - Services', () => {
 
     await WebUI.click(findTestObject('Object Repository/DLOA/9. DLOA Supplier/Side Menu Supplier/Zone Item Service'))
 
+    if (await WebUI.waitForElementClickable(findTestObject('Object Repository/DLOA/9. DLOA Supplier/Zone Item/Zone Item Supplier Service/Click Assign Button Service'), 10, FailureHandling.OPTIONAL)) {
     await WebUI.click(findTestObject('Object Repository/DLOA/9. DLOA Supplier/Zone Item/Zone Item Supplier Service/Click Assign Button Service'))
 
     await WebUI.setText(findTestObject('Object Repository/DLOA/9. DLOA Supplier/Zone Item/Zone Item Supplier Service/Input Item Code for Services'), 
@@ -400,6 +402,9 @@ test.describe('KAT-026 6. Supplier Direct LOA - Services', () => {
 
     //click simbol YES at popup 
     await WebUI.click(findTestObject('Object Repository/DLOA/9. DLOA Supplier/Zone Item/Zone Item Supplier Service/Click Yes Popup'))
+    } else {
+    	await WebUI.comment('Zone / Item Details: no enabled Assign button (the items already have item codes); nothing to assign')
+    }
 
     /* =========================
      * Accept and Reject Button

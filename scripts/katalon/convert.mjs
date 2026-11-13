@@ -167,7 +167,8 @@ $1$2`,
   },
   {
     // FD / Agreement / Fulfillment tasks are often group tasks (several assignees); they must be claimed first.
-    when: (tc) => /^[34]\./.test(tc.rel) && !/Claim GroupTask/.test(tc.rel),
+    // Assign Code (Codify Purchase Request, "Pending Assign Item Code") is a group task for the supplier and 2 officers too.
+    when: (tc) => (/^[34]\./.test(tc.rel) || /Product and Service \(One Off\)\/4[ab]\./.test(tc.rel)) && !/Claim GroupTask/.test(tc.rel),
     find: /^([ \t]*)(c\(findTestObject\('Object Repository\/Direct LOA\/2\. Direct LOA Supplier\/TaskList Supplier\/MyTask_Tasklist_Dropdown'\)\)[^\n]*)([\s\S]{0,400}?Input Document Number'\)\s*,\s*([A-Za-z_]\w*))/m,
     replace: '$1claimGroupTaskIfAny($4)\n$1$2$3',
     note: 'ENHANCEMENT: before searching My Task, claim the document from Group Task if it is a group task (e.g. Submit FD is assigned to 7 officers); same steps as WebHelper.claimDocument',
@@ -233,12 +234,41 @@ $1}`,
     note: 'Simple Quote: Criteria and Supplier List was filled only for procurement type 1, so with type 2 (Direct LOA, the test case default) SIT rejected the submit (ERR-760109: at least one supplier); fill it for type 2 too',
   },
   {
+    // Item Code Assignment page: Submit was commented out (4a) or used the FD screen's Submit object (4b).
+    when: (tc) => /Product and Service \(One Off\)\/4[ab]\./.test(tc.rel),
+    find: /^\/?\/?c\(findTestObject\('Object Repository\/FD and Agreement\/FD Application\/Approver Setting\/Submit Button'\)\)$/m,
+    replace: `TestObject itemCodeSubmit = new TestObject('itemCodeSubmit')
+itemCodeSubmit.addProperty('xpath', ConditionType.EQUALS, "//button[.//span[normalize-space(.)='Submit']]")
+c(itemCodeSubmit, 20)`,
+    note: 'Item Code Assignment: the Submit click was commented out (4a) or pointed at the FD screen\'s Submit button (4b), so the codes were assigned but never submitted; now clicks this page\'s Submit button before the Yes confirmation',
+  },
+  {
+    // 4a was updated to the "Yes" button ("dh tukar YES sblm ni OK"); 4b still looked for "OK".
+    when: (tc) => /Product and Service \(One Off\)\/4b\./.test(tc.rel),
+    find: `"//button[span[normalize-space(text())='OK']]"`,
+    replace: `"//button[span[normalize-space(text())='Yes']]"`,
+    note: 'Item Code Assignment confirmation ("Are you sure with the item code assignment? Yes No") was answered with an OK button that does not exist; now Yes, as in 4a',
+  },
+  {
+    // An LOA line whose item already has a code (e.g. catalogue service from the Simple Quote) has a disabled Assign button.
+    when: (tc) => /2\. DP - LOA\/6\. Supplier Direct LOA - Services$/.test(tc.rel),
+    find: /^(WebUI\.click\(findTestObject\('Object Repository\/DLOA\/9\. DLOA Supplier\/Zone Item\/Zone Item Supplier Service\/Click Assign Button Service'\)\)[\s\S]*?Click Yes Popup'\)\))$/m,
+    replace: `if (WebUI.waitForElementClickable(findTestObject('Object Repository/DLOA/9. DLOA Supplier/Zone Item/Zone Item Supplier Service/Click Assign Button Service'), 10, FailureHandling.OPTIONAL)) {
+$1
+} else {
+\tWebUI.comment('Zone / Item Details: no enabled Assign button (the items already have item codes); nothing to assign')
+}`,
+    note: 'Supplier LOA: the Assign step was always run, but an item that already has an item code (e.g. a catalogue service from the Simple Quote) has a disabled Assign button and the test timed out; now it assigns only when an enabled Assign button is there',
+  },
+  {
     // Hard-coded October 2026 dates are now in the past and no longer in the datepicker; keep their spacing,
     // counted from 2026-10-01 = the run date.
     when: (tc) => /2\. DP - LOA\/[56]\. /.test(tc.rel),
     find: /pickDate\("2026-10-(\d\d)"\)/g,
-    replace: (_, day) => `pickDate(LocalDate.now().plusDays(${Number(day) - 1}).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))`,
-    note: 'Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14) and are now in the past ("Date not found in datepicker"); now the run date plus the same offsets (0, 12, 13 days)',
+    // 10-01 = Contract Effective Date, 10-14 = LOA Signing Date By Government (KAT-025), 10-13 = supplier date (KAT-026).
+    // SIT wants effective >= government signing (ERR-760468), which the Katalon dates broke: sign today, effective tomorrow.
+    replace: (_, day) => `pickDate(LocalDate.now().plusDays(${{ '01': 1 }[day] ?? 0}).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))`,
+    note: 'Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14), now in the past ("Date not found in datepicker"), and the Contract Effective Date was before the LOA Signing Date By Government (ERR-760468); now signing dates = run date, Contract Effective Date = run date + 1',
   },
   {
     // A Schedule / As And When service line has no PR/LOA Prepared By (one-off lines get the requisitioner); the

@@ -10,7 +10,7 @@ import { waitBlockUI, wVisible, c, t, up, selectDropdownByIndex } from '../../..
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
  * Katalon step repaired: ENHANCEMENT: before Submit, open Verification And Approval and pick the first approver when the LOA asks for one ("Approver is required", ERR-760315); the Katalon script never fills it.
- * Katalon step repaired: Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14) and are now in the past ("Date not found in datepicker"); now the run date plus the same offsets (0, 12, 13 days).
+ * Katalon step repaired: Datepicker dates were hard-coded (2026-10-01, 2026-10-13, 2026-10-14), now in the past ("Date not found in datepicker"), and the Contract Effective Date was before the LOA Signing Date By Government (ERR-760468); now signing dates = run date, Contract Effective Date = run date + 1.
  */
 test.describe('KAT-025 5. Prepare LOA', () => {
   test(
@@ -317,7 +317,7 @@ test.describe('KAT-025 5. Prepare LOA', () => {
 
     await c(findTestObject('Object Repository/DLOA/8. Prepare LOA/Date Picker COntract Details icon'), 20)
 
-    await pickDate(LocalDate.now().plusDays(0).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))   // <-- put your date here
+    await pickDate(LocalDate.now().plusDays(1).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))   // <-- put your date here
     await waitBlockUI(20)
     await WebUI.delay(1)
 
@@ -363,7 +363,7 @@ test.describe('KAT-025 5. Prepare LOA', () => {
     await WebUI.delay(1)
 
     await c(findTestObject('Object Repository/DLOA/8. Prepare LOA/LOA And Attachment/Date Picker LOA and Attachment'), 20)
-    await pickDate(LocalDate.now().plusDays(13).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))   // <-- put your date here
+    await pickDate(LocalDate.now().plusDays(0).format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))   // <-- put your date here
     await waitBlockUI(20)
     await WebUI.delay(1)
 
