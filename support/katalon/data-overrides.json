@@ -150,16 +150,18 @@
     "ItemCode": "14111503005010013D"
   },
   "KAT-029": {
-    "_why": "The script reads SupplierName1-3 and DaytoResponse, which the test case never defines (Katalon defect); ItemCode1 441217070000300057rn has no catalogue offer. Supplier/item pairs found by Catalogue Search 2026-11-02",
-    "SupplierName1": "Basic FL ROC (registration with SSM as ROC) 3",
-    "ItemCode1": "101017030000000000",
+    "_why": "The script reads SupplierName1-3 and DaytoResponse, which the test case never defines (Katalon defect). 2026-11-13 new Compare chain: AINHALIM ENTERPRISE (the KAT-044/048/052 supplier account) is supplier 1 so its Item Inquiry is our own group task for KAT-044 and the PO goes to that account; pairs from Catalogue Search 2026-11-02",
+    "SupplierName1": "AINHALIM ENTERPRISE",
+    "ItemCode1": "502023050020000215",
     "SupplierName2": "TYESO",
-    "SupplierName3": "AINHALIM ENTERPRISE",
+    "ItemCode2": "10101801004000020C",
+    "SupplierName3": "Basic FL ROC (registration with SSM as ROC) 3",
+    "ItemCode3": "101017030000000000",
     "DaytoResponse": "3"
   },
   "KAT-030": {
-    "_why": "\"Response To Inquiry\" for the KAT-029 inquiry is assigned to the first supplier, basicflros3 (KAT-022 account), not the Katalon default AINHALIM account",
-    "_accountOf": "KAT-022"
+    "_why": "Respond to our own Item Inquiry PI260000000000764 (KAT-029 2026-11-13) as AINHALIM ENTERPRISE, the Katalon default account, which claimed it in KAT-044",
+    "Document_Number": "PI260000000000764"
   },
   "KAT-045": {
     "_why": "Amend our contract CT260000000002209 (FD and agreement approved by KAT-040..043); date 2026-06-20 is in the past, use +30 days; the default account is a Kementerian Kesihatan contract admin and cannot see a Kementerian Kewangan contract, so use the contract officer of KAT-040/042; authority 9 (Desk Officer Committee) left out: the desk officer list is empty for this PTJ in SIT",
@@ -174,27 +176,27 @@
     "_accountOf": "KAT-022"
   },
   "KAT-048": {
-    "_why": "PO260000000006601 was created from our PR260000000004657 (KAT-046/047, process instance 15973541); its Acknowledge PO task is assigned to this test's account",
-    "Document_Number": "PO260000000006601"
+    "_why": "PO260000000007002 was created from our services PR260000000004860 (debit note chain 2026-11-16, RN260000000004722, supplier AINHALIM ENTERPRISE = this test account); PO number from the user (DBeaver). Earlier today: PO260000000007001 from PR260000000004859",
+    "Document_Number": "PO260000000007002"
   },
   "KAT-049": {
-    "_why": "Deliver against our PO260000000006601 (acknowledged by KAT-048, same supplier account); default date 2026-10-09 is in the past, use today; quantity 10 = Ordered_Quantity of KAT-046; amount = full ordered amount RM1,000 (10 x RM100) so the invoice/payment steps match",
-    "Purchase_Number": "PO260000000006601",
+    "_why": "Deliver against our services PO260000000007002 (acknowledged by KAT-048 2026-11-16, same supplier account); quantity 2 = OrderQuantity of KAT-028; amount RM1,500 ABOVE the ordered RM1,000 so the invoice creates a debit note for KAT-056 (as DN260000000002801: invoiced 4,000 against 1,500 ordered); default date 2026-10-09 is in the past, use today",
+    "Purchase_Number": "PO260000000007002",
     "dateValue": "{yyyy-MM-dd}",
-    "DeliveryAmount": 1000
+    "DeliveryQuantity": 2,
+    "DeliveryAmount": 1500
   },
   "KAT-050": {
-    "_why": "Acknowledge our delivery: KAT-049 submitted DO-PO260000000006601, which is Delivery Order 01309H005M2600500 in this receiving officer's Group Task (seen 2026-11-02 15:58)",
-    "Document_Number": "01309H005M2600500"
+    "_why": "Acknowledge our delivery: KAT-049 (2026-11-16) submitted DO-PO260000000007002 (services, RM1,500 against RM1,000 ordered, debit note chain), which is Delivery Order 01309H005M2600503 in this receiving officer's Group Task",
+    "Document_Number": "01309H005M2600503"
   },
   "KAT-052": {
-    "_why": "Stop delivery on our own PO260000000006602 (Compare chain, acknowledged by KAT-035, not used by any later step); PO260000000006601 is kept for the delivery/invoice/payment chain; the stop is raised by the PO's supplier, basicflros3 (KAT-022 account), the default supplier cannot see this PO",
-    "PO_Number": "PO260000000006602",
-    "_accountOf": "KAT-022"
+    "_why": "Stop the undelivered balance of our services PO260000000007002 (debit note chain 2026-11-16: 2 of the ordered units delivered at RM1,500, FRN FN260000000005402 approved) so the Create Invoice task is released, as it was for PO260000000007001 after SD260000000002401; the PO supplier AINHALIM is the Katalon default account",
+    "PO_Number": "PO260000000007002"
   },
   "KAT-051": {
-    "_why": "Approve our FRN FN260000000005202 (from KAT-050, DO 01309H005M2600500); its Approve FRN task is assigned to officer 180220145443, which none of the test cases log in as",
-    "Document_Number": "FN260000000005202",
+    "_why": "Approve our FRN FN260000000005402 (KAT-050 2026-11-16, DO 01309H005M2600503, services PO260000000007002, debit note chain); Task Status Search shows Approve FRN ASSIGNED to officer 180220145443",
+    "Document_Number": "FN260000000005402",
     "_officer": "180220145443"
   },
   "KAT-061": {
@@ -208,8 +210,8 @@
     "_officer": "180220145443"
   },
   "KAT-054": {
-    "_why": "Invoice our PO260000000006601 (delivered by KAT-049, FRN FN260000000005202 approved by KAT-051); the invoice is raised by the PO's supplier, the KAT-048 account",
-    "Document_Number": "PO260000000006601",
+    "_why": "Invoice our services PO260000000007002 (debit note chain 2026-11-16: delivered RM1,500 against RM1,000 ordered, FRN FN260000000005402 approved, balance stopped by SD260000000002402); the invoice is raised by the PO supplier AINHALIM, the KAT-048 account; the invoice form showed RM1,500, so submitting it should create the debit note for KAT-056",
+    "Document_Number": "PO260000000007002",
     "_accountOf": "KAT-048"
   },
   "KAT-063": {
@@ -265,5 +267,38 @@
     "_why": "Verify our LOA LA260000000004130 (accepted by basicflros3 2026-11-13 15:29) instead of the Katalon LA260000000003868; Task Status shows Verify LOA ASSIGNED to officer 710527085562",
     "Document_Number": "LA260000000004130",
     "_officer": "710527085562"
+  },
+  "KAT-044": {
+    "_why": "Claim our own Item Inquiry PI260000000000764 (KAT-029, 2026-11-13, AINHALIM ENTERPRISE as supplier 1); the default PI342/343 and the other group tasks belong to other testers (JGN USIK)",
+    "Document_Number": "PI260000000000764"
+  },
+  "KAT-031": {
+    "_why": "Prepare the RN from our own Item Inquiry PI260000000000764 (AINHALIM ENTERPRISE responded 2026-11-16, KAT-030)",
+    "Document_Number": "PI260000000000764"
+  },
+  "KAT-032": {
+    "_why": "Approve our services RN260000000004722 (KAT-028 2026-11-16, AINHALIM ENTERPRISE services item 701216070000000000, for the debit note chain); Review Direct Purchase ASSIGNED to officer 690127065209. Earlier today it approved RN260000000004719",
+    "Document_Number": "RN260000000004722",
+    "_officer": "690127065209"
+  },
+  "KAT-046": {
+    "_why": "Submit the PR of our approved services RN260000000004722 (KAT-028 2026-11-16, debit note chain, supplier AINHALIM ENTERPRISE); Submit PR ASSIGNED to officer 710527085562. Earlier today it submitted PR260000000004859 from RN260000000004719",
+    "Document_Number": "RN260000000004722",
+    "_officer": "710527085562"
+  },
+  "KAT-047": {
+    "_why": "Approve our services PR260000000004860 (KAT-046 2026-11-16 from RN260000000004722, debit note chain); Review PR ASSIGNED to officer 690127065209. Earlier today it approved PR260000000004859",
+    "Document_Number": "PR260000000004860",
+    "_officer": "690127065209"
+  },
+  "KAT-053": {
+    "_why": "Approve our Stop Delivery Instruction SD260000000002402 (KAT-052 2026-11-16 on services PO260000000007002, debit note chain); Review SD goes to officer 690127065209 (as SD260000000002401 this morning)",
+    "Document_Number": "SD260000000002402",
+    "_officer": "690127065209"
+  },
+  "KAT-056": {
+    "_why": "Approve our debit note DN260000000004401, created by SIT when AINHALIM invoiced services PO260000000007002 at RM1,500 against the stopped order (KAT-054 2026-11-16); Task Status Search shows Review DAN ASSIGNED to officer 690127065209",
+    "Document_Number": "DN260000000004401",
+    "_officer": "690127065209"
   }
 }
