@@ -7,6 +7,9 @@ import lowMemoryArgs from './config/low-memory-chromium-args.json';
 // Login credentials (E2E_USERNAME / E2E_PASSWORD) live in the git-ignored .env file.
 // Values already set in the shell win over the file.
 if (fs.existsSync('.env')) process.loadEnvFile('.env');
+// EXTRA_ENV_FILE: another project's .env to load as well (e.g. the mailbox settings of the MOF
+// registration chain), without copying its values into this repo. Values already set win.
+if (process.env.EXTRA_ENV_FILE && fs.existsSync(process.env.EXTRA_ENV_FILE)) process.loadEnvFile(process.env.EXTRA_ENV_FILE);
 
 const env = getEnv();
 

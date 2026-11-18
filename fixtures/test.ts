@@ -38,7 +38,7 @@ interface StepRecord {
 export interface Evidence {
   dir: string;
   /** Screenshot a checkpoint (sensitive fields masked) and record it in the scenario summary. */
-  capture(name: string, info: { step: string; expected?: string; actual?: string }): Promise<void>;
+  capture(name: string, info: { step: string; expected?: string; actual?: string; page?: Page }): Promise<void>;
   /** Record the observed result shown in the execution report. */
   actual(text: string): void;
   /** Timestamped line in the console and in execution.log. */
@@ -75,7 +75,8 @@ export const test = base.extend<Fixtures>({
       dir,
       async capture(name, info) {
         const file = `${String(++counter).padStart(2, '0')}_${name.replace(/[^\w-]+/g, '_')}.png`;
-        await page.screenshot({ path: path.join(dir, file), mask: sensitiveMasks(page), animations: 'disabled' });
+        const target = info.page ?? page;
+        await target.screenshot({ path: path.join(dir, file), mask: sensitiveMasks(target), animations: 'disabled' });
         steps.push({ file, step: info.step, expected: info.expected ?? '', actual: info.actual ?? '' });
       },
       actual(text) {
