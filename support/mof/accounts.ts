@@ -19,6 +19,8 @@ export interface MofAccount {
   email: string;
   /** Set by REG-002 (Declare): the MOF application number, e.g. KN-16112026-0001. */
   applicationNo?: string;
+  /** Soft cert enrolment (SC-004): PIN and the 5 security questions. Git-ignored file only. */
+  softCert?: { pin: string; questions: { question: string; answer: string }[] };
   /** Free-form progress notes written by the stages. */
   notes?: string[];
 }
