@@ -457,7 +457,7 @@ async uploadDummyFile(page: Page): Promise<void> {
 
 // uploader for supporting document in registration
 getFirstUploadFile(): string {
-  // RUU-Playwright: the test PDF shipped with the repo (the original read the user's Downloads folder).
+  // CDC Playwright Automation Script: the test PDF shipped with the repo (the original read the user's Downloads folder).
   const file = path.resolve(__dirname, '../../../../../../../fixtures/files/File_pdf_for_testing.pdf');
   if (!fs.existsSync(file)) throw new Error(`Upload file not found: ${file}`);
   return file;
@@ -1243,7 +1243,7 @@ async fillFacility(owner: string, price: string, value: string) {
   async fillDOB(year = '1985'){
     await this.mrPage.DateOfBirth.click();
     await this.page.waitForSelector("#ui-datepicker-div", { state: "visible" });
-    // RUU-Playwright: pick a past year when the calendar has a year list (the original picked day 1 of the
+    // CDC Playwright Automation Script: pick a past year when the calendar has a year list (the original picked day 1 of the
     // current month, i.e. a newborn).
     const yearSelect = this.page.locator('#ui-datepicker-div select.ui-datepicker-year');
     if (await yearSelect.count()) {
