@@ -52,7 +52,9 @@ export default defineConfig({
     actionTimeout: 30_000,
     navigationTimeout: 60_000,
     screenshot: 'only-on-failure',
-    trace: 'retain-on-failure',
+    // Traces are OFF by default: they record every typed value in plain text, including login passwords
+    // (found 2026-11-23). TRACE=1 turns them on for a debugging session; delete test-results/ and reports/html afterwards.
+    trace: process.env.TRACE ? 'retain-on-failure' : 'off',
     // Video recording costs memory and CPU for every test; enable with VIDEO=1 when needed.
     video: process.env.VIDEO ? 'retain-on-failure' : 'off',
     launchOptions: { args: lowMemoryArgs },

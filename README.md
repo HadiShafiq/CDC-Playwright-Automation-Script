@@ -32,7 +32,7 @@ For automatic login, fill in the yellow Username and Password cells of `.auth/cr
 ## Outputs
 - `evidence/<ENV>/<CR>/<Scenario>/<RunId>/`: numbered checkpoint screenshots, `summary.md` and `summary.json`. On failure it also holds `<prefix>_FAILURE_<time>.png` and `failure_dom.html`. Screenshot names follow `CR_Scenario_Module_Lang_StepNN_Action_yyyyMMdd_HHmmss_xxxx.png`.
 - `reports/<ENV>/<RunId>/`: `execution-report.csv` (opens in Excel), `execution-summary.md`, `results.json`, `junit.xml`
-- `reports/html/`: Playwright HTML report with traces for failed tests
+- `reports/html/`: Playwright HTML report. Traces are off by default (they record typed passwords); `TRACE=1` turns them on for debugging only
 - `knowledge/`: application map, repair log, defect register, data-change audit
 
 ## Katalon test cases (tests/katalon)

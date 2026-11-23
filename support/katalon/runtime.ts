@@ -315,6 +315,32 @@ async function guardTaskRow(obj: TestObject | WebElement) {
     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
 }
 
+/**
+ * LOA signer popup (Create LOA → Letter Of Acceptance And Attachment): the scripts click and double-click the first
+ * result row and move on. On SIT 2026-11-23 (run dloa-oneoff-services_20261123-163647) the row was found
+ * ("Siti Roveah Binti Simon 590401107064") but the selection did not register: signer and designation stayed empty,
+ * so leaving the section failed with "LOA Signer Designation is mandatory." Confirm the signer field is filled and
+ * select again (up to 3 times) before the script continues; otherwise stop with the real reason.
+ */
+const LOV_SIGNER_ROW = 'Direct LOA/1. Direct LOA Requistioner/LOA And Attachment Tab/Click in user Table';
+async function ensureLovSignerSelected(obj: TestObject | WebElement) {
+  if (!(obj instanceof TestObject) || obj.getObjectId() !== LOV_SIGNER_ROW) return;
+  const page = cur().page;
+  const signer = page.locator('input[id$=":lovUser:lovUserlov"]').first();
+  const filled = async () => ((await signer.inputValue({ timeout: 5_000 }).catch(() => '')) ?? '').trim() !== '';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    await waitForAjaxIdle(page).catch(() => {});
+    if (await filled()) return;
+    cur().log(`LOA signer not selected yet (attempt ${attempt}): double-clicking the result row again`);
+    const row = loc(obj);
+    if (!(await row.isVisible().catch(() => false))) break;
+    await row.dblclick({ timeout: 10_000 }).catch(() => {});
+    await page.waitForTimeout(1_000);
+  }
+  await waitForAjaxIdle(page).catch(() => {});
+  if (!(await filled())) throw new Error('LOA signer was found in the search but not selected into the form (Letter Of Acceptance Signer stayed empty)');
+}
+
 const isFH = (v: any): v is FH => typeof v === 'string' && v in FailureHandling;
 /** Katalon overloads: (obj, timeout?, fh?) or (obj, fh?). */
 const tf = (a?: any, b?: any): [number, FH | undefined] => (isFH(a) ? [DEFAULT_TIMEOUT, a] : [a ?? DEFAULT_TIMEOUT, b]);
@@ -385,7 +411,9 @@ export const WebUI = {
     });
   },
   async doubleClick(obj: TestObject, fh?: FH) {
-    return step(`doubleClick ${name(obj)}`, fh, undefined, () => likeSelenium(() => loc(obj).dblclick({ timeout: DEFAULT_TIMEOUT * 1000 })));
+    const result = await step(`doubleClick ${name(obj)}`, fh, undefined, () => likeSelenium(() => loc(obj).dblclick({ timeout: DEFAULT_TIMEOUT * 1000 })));
+    await ensureLovSignerSelected(obj);
+    return result;
   },
   /**
    * Katalon setText = clear, then Selenium sendKeys: real key events, which autocompletes (UOM) and masked
