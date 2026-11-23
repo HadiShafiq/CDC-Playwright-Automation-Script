@@ -839,6 +839,30 @@ export function katalonMissing(n: string): any {
   throw new Error(`Katalon script defect: "${n}" is not defined where the Katalon script uses it (Katalon stops here too). Set KAT_${n} to supply a value.`);
 }
 
+/*
+ * Live dates (user rule 2026-11-23: every date and time a script uses comes from the live date, never a fixed value).
+ * Tokens in support/katalon/data-overrides.json (and flow --var values):
+ *   {yyyy-MM-dd}, {dd/MM/yyyy}, {MMddHHmmss}…  any Java date pattern, today;   {yyyy-MM-dd+180d}  N days from today
+ *   {MI} / {MI+2m}   month index N months from now (1 = January … 12 = December: the Fulfilment Schedule month list)
+ *   {YI} / {YI+2m}   year index of that month in a year list that starts at the current year (1 = this year, 2 = next):
+ *                    the Fulfilment Schedule year list of a contract that starts today (seen on SIT 2026-11-23)
+ */
+const LIVE_TOKEN = /\{(?:(MI|YI)(?:\+(\d+)m)?|([yMdHms][yMdHms\-/.: ]*?)(?:\+(\d+)d)?)\}/g;
+function hasLiveToken(v: unknown): boolean {
+  LIVE_TOKEN.lastIndex = 0;
+  return typeof v === 'string' && LIVE_TOKEN.test(v);
+}
+export function liveValue(v: unknown, now = new Date()): unknown {
+  if (typeof v !== 'string') return v;
+  return v.replace(LIVE_TOKEN, (_m, idx?: string, months?: string, pattern?: string, days?: string) => {
+    if (idx) {
+      const d = new Date(now.getFullYear(), now.getMonth() + Number(months ?? 0), 1);
+      return String(idx === 'MI' ? d.getMonth() + 1 : d.getFullYear() - now.getFullYear() + 1);
+    }
+    return formatJavaDate(pattern!, new Date(now.getTime() + Number(days ?? 0) * 86_400_000));
+  });
+}
+
 /** Folder searched (recursively) for the bound Excel files. */
 export const KATALON_DATA_DIR = process.env.KATALON_DATA_DIR ?? path.join(os.homedir(), 'Desktop', 'Data Prep Excel AP 201');
 
@@ -871,10 +895,7 @@ export async function katalonVariables(caseId: string, defaults: Record<string, 
   if (_why) cur().log(`Test data corrected (support/katalon/data-overrides.json): ${Object.keys(corrections).join(', ')}: ${_why}`);
   // "{MMddHHmmss}" etc. in a correction: the run's time in that Java date pattern (for values SIT wants unique);
   // "{yyyy-MM-dd+180d}": that many days from today (for dates SIT wants in the future).
-  const now = new Date();
-  const expand = (_: string, p: string, days?: string) => formatJavaDate(p, new Date(now.getTime() + Number(days ?? 0) * 86_400_000));
-  for (const [k, v] of Object.entries(corrections))
-    vars[k] = typeof v === 'string' ? v.replace(/\{([yMdHms][yMdHms\-/.: ]*?)(?:\+(\d+)d)?\}/g, expand) : v;
+  for (const [k, v] of Object.entries(corrections)) vars[k] = liveValue(v);
   const secretFile = path.join(ROOT, '.auth', 'katalon-variables.json');
   if (fs.existsSync(secretFile)) {
     const secrets = JSON.parse(fs.readFileSync(secretFile, 'utf8'));
@@ -916,6 +937,11 @@ export async function katalonVariables(caseId: string, defaults: Record<string, 
       cur().log(`Variables from ${path.relative(KATALON_DATA_DIR, file)} [${ws.name}] row ${n}`);
     }
   }
+  // Live dates always win over the Excel row: corrections with a live token are applied again here.
+  const liveKeys = Object.entries(corrections).filter(([, v]) => hasLiveToken(v)).map(([k]) => k);
+  for (const k of liveKeys) vars[k] = liveValue(corrections[k]);
+  if (liveKeys.length) cur().log(`Live dates: ${liveKeys.map((k) => `${k}=${vars[k]}`).join(', ')}`);
+
   const flow = flowInputs.get(caseId);
   if (flow) {
     Object.assign(vars, flow.vars);

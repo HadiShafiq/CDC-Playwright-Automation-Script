@@ -20,26 +20,46 @@
     "FileReference1": "Test{MMddHHmmss}"
   },
   "KAT-004": {
-    "_why": "File Reference No. unique (ERR-700027); LOA price 200000 < 1 product line x 10 x 30000 = 300000 (ERR-700125); supplier = company of KAT-007 account MOFFLROSNEW3; Fulfilment Schedule (2026-11-23, ERR-760348 \"End date should be in contract validity period\"): Katalon defaults Jan-Oct 2026 (month index 1-10) fell outside a 2-month contract starting today; row 1 = this month, row 2 = next month (month index = month number, year index 1 = current year; inferred from the 2026-10-30 pass, not yet verified)",
+    "_why": "File Reference No. unique (ERR-700027); LOA price 200000 < 1 product line x 10 x 30000 = 300000 (ERR-700125); supplier = company of KAT-007 account MOFFLROSNEW3; Fulfilment Schedule from the live date (user rule 2026-11-23; ERR-760348 \"End date should be in contract validity period\" with the fixed Katalon months): row 1 = this month, row 2 = next month; month index = month number, year index 1 = current year (list seen on SIT 2026-11-23)",
     "FileReference1": "Test{MMddHHmmss}",
     "LOAOfferedPrice": "300000",
     "SupplierName": "MOF FL Organization JPPM - New 3",
-    "StartMonth": "{M}",
-    "EndMonth": "{M}",
-    "StartMonth2": "{M+31d}",
-    "EndMonth2": "{M+31d}"
+    "StartMonth": "{MI}",
+    "EndMonth": "{MI}",
+    "StartMonth2": "{MI+1m}",
+    "EndMonth2": "{MI+1m}",
+    "StartYear": "{YI}",
+    "EndYear": "{YI}",
+    "StartYear2": "{YI+1m}",
+    "EndYear2": "{YI+1m}"
   },
   "KAT-005": {
-    "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6; ZoneLocation 2 (No): the suite data is Non-Zonal-Schedule-Service-PK7, and with zone Yes the service quantity/price are per-zone popups the script does not fill; ContractPeriod 24 months: the schedule data ends in year 2 (EndYear2=2) but a 2-month contract only offers the current year; LOA price 300000: with 24 months the service items total 288,000 > 200,000 (ERR-700125)",
+    "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6; ZoneLocation 2 (No): the suite data is Non-Zonal-Schedule-Service-PK7, and with zone Yes the service quantity/price are per-zone popups the script does not fill; ContractPeriod 24 months: the schedule data ends in year 2 (EndYear2=2) but a 2-month contract only offers the current year; LOA price 300000: with 24 months the service items total 288,000 > 200,000 (ERR-700125); Fulfilment Schedule from the live date (user rule 2026-11-23; ERR-760348 \"End date should be in contract validity period\" with the fixed Katalon months): row 1 = this month, row 2 = next month; month index = month number, year index 1 = current year (list seen on SIT 2026-11-23)",
     "FileReference1": "Test{MMddHHmmss}",
     "SupplierName": "MOF FL LLP (registration with SSM as LLP)6",
     "ZoneLocation": "2",
     "ContractPeriod": "24",
-    "LOAOfferedPrice": "300000"
+    "LOAOfferedPrice": "300000",
+    "StartMonth": "{MI}",
+    "StartYear": "{YI}",
+    "EndMonth": "{MI}",
+    "EndYear": "{YI}",
+    "StartMonth2": "{MI+1m}",
+    "StartYear2": "{YI+1m}",
+    "EndMonth2": "{MI+1m}",
+    "EndYear2": "{YI+1m}"
   },
   "KAT-006": {
-    "_why": "File Reference No. unique (ERR-700027) (supplier BUMI = KAT-009 account bumiwarisanmaju)",
-    "FileReference1": "Test{MMddHHmmss}"
+    "_why": "File Reference No. unique (ERR-700027) (supplier BUMI = KAT-009 account bumiwarisanmaju); Fulfilment Schedule from the live date (user rule 2026-11-23; ERR-760348 \"End date should be in contract validity period\" with the fixed Katalon months): row 1 = this month, row 2 = next month; month index = month number, year index 1 = current year (list seen on SIT 2026-11-23)",
+    "FileReference1": "Test{MMddHHmmss}",
+    "StartMonth": "{MI}",
+    "StartYear": "{YI}",
+    "EndMonth": "{MI}",
+    "EndYear": "{YI}",
+    "StartMonth2": "{MI+1m}",
+    "StartYear2": "{YI+1m}",
+    "EndMonth2": "{MI+1m}",
+    "EndYear2": "{YI+1m}"
   },
   "KAT-011": {
     "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-007 account MOFFLROSNEW3",
@@ -56,18 +76,42 @@
     "FileReference1": "Test{MMddHHmmss}"
   },
   "KAT-014": {
-    "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-007 account MOFFLROSNEW3",
+    "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-007 account MOFFLROSNEW3; Fulfilment Schedule from the live date (user rule 2026-11-23; ERR-760348 \"End date should be in contract validity period\" with the fixed Katalon months): row 1 = this month, row 2 = next month; month index = month number, year index 1 = current year (list seen on SIT 2026-11-23)",
     "FileReference1": "Test{MMddHHmmss}",
-    "SupplierName": "MOF FL Organization JPPM - New 3"
+    "SupplierName": "MOF FL Organization JPPM - New 3",
+    "StartMonth": "{MI}",
+    "StartYear": "{YI}",
+    "EndMonth": "{MI}",
+    "EndYear": "{YI}",
+    "StartMonth2": "{MI+1m}",
+    "StartYear2": "{YI+1m}",
+    "EndMonth2": "{MI+1m}",
+    "EndYear2": "{YI+1m}"
   },
   "KAT-015": {
-    "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6",
+    "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6; Fulfilment Schedule from the live date (user rule 2026-11-23; ERR-760348 \"End date should be in contract validity period\" with the fixed Katalon months): row 1 = this month, row 2 = next month; month index = month number, year index 1 = current year (list seen on SIT 2026-11-23)",
     "FileReference1": "Test{MMddHHmmss}",
-    "SupplierName": "MOF FL LLP (registration with SSM as LLP)6"
+    "SupplierName": "MOF FL LLP (registration with SSM as LLP)6",
+    "StartMonth": "{MI}",
+    "StartYear": "{YI}",
+    "EndMonth": "{MI}",
+    "EndYear": "{YI}",
+    "StartMonth2": "{MI+1m}",
+    "StartYear2": "{YI+1m}",
+    "EndMonth2": "{MI+1m}",
+    "EndYear2": "{YI+1m}"
   },
   "KAT-016": {
-    "_why": "File Reference No. unique (ERR-700027) (supplier BUMI = KAT-009 account bumiwarisanmaju)",
-    "FileReference1": "Test{MMddHHmmss}"
+    "_why": "File Reference No. unique (ERR-700027) (supplier BUMI = KAT-009 account bumiwarisanmaju); Fulfilment Schedule from the live date (user rule 2026-11-23; ERR-760348 \"End date should be in contract validity period\" with the fixed Katalon months): row 1 = this month, row 2 = next month; month index = month number, year index 1 = current year (list seen on SIT 2026-11-23)",
+    "FileReference1": "Test{MMddHHmmss}",
+    "StartMonth": "{MI}",
+    "StartYear": "{YI}",
+    "EndMonth": "{MI}",
+    "EndYear": "{YI}",
+    "StartMonth2": "{MI+1m}",
+    "StartYear2": "{YI+1m}",
+    "EndMonth2": "{MI+1m}",
+    "EndYear2": "{YI+1m}"
   },
   "KAT-017": {
     "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-007 account MOFFLROSNEW3; ProductUnitPrice \"3000rn\" in the .tc is a line-break typo",

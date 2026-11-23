@@ -14,7 +14,10 @@ Read `docs/phase1-plan.md` first: it is the live plan (stage, done, open, blocke
 - **English first.** BM flows (`tests/flows/bm`) stay fixme until every EN flow passes AND the user allows it.
 - **Never invent** statuses, roles, messages or expected results. Registry facts carry a verification level
   (`execution` | `source` | `documentation` | `unverified`); raise it only with evidence (run ID).
-- No credentials in git, logs, screenshots or chat. They live in `.auth/` (git-ignored).
+- **Live dates only** (user rule 2026-11-23): every date/time a step uses comes from the live date. Use the tokens of
+  `support/katalon/runtime.ts` in `data-overrides.json`: `{yyyy-MM-dd}`, `{yyyy-MM-dd+30d}`, `{MI+1m}`/`{YI+1m}` (schedule month/year
+  index); they win over the Excel rows. SQ gates use the next quarter hour. Unit test: `tests/unit/live-dates.spec.ts`.
+- No credentials in git, logs, screenshots or chat. Playwright traces are off (they record typed passwords). They live in `.auth/` (git-ignored).
 
 ## Layout
 | Path | What |
