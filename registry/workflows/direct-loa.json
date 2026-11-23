@@ -45,8 +45,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-002 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-11-11_160032"
+        "verification": "execution",
+        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:51:02: \"Letter of Acceptance (LOA) LA260000000004216 is successfully submitted.\" (attempt 2; attempt 1 failed on signer selection timing, nothing saved)"
       }
     },
     "KAT-003": {
@@ -423,8 +423,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-008 waits for 'is acknowledged'; passed SIT 2026-11-11_161844"
+        "verification": "execution",
+        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:52:13: \"Letter of Acceptance (LOA) LA260000000004216 is acknowledged.\""
       }
     },
     "KAT-009": {
@@ -466,7 +466,12 @@
           "doc": "LA"
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "Letter of Acceptance.*is completed"
+        }
+      ],
       "checkpoint": {
         "id": "LA_VERIFIED",
         "description": "LOA verified by the Desk Officer",
@@ -474,8 +479,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "KAT-010 does not wait for a success message; passed SIT 2026-10-30_154320 (completion only)"
+        "verification": "execution",
+        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:53:48: \"Letter of Acceptance (LOA) LA260000000004216 is completed.\" as the KAT-010 default Desk Officer"
       }
     },
     "KAT-025": {
@@ -580,8 +585,8 @@
     {
       "id": "dloa-oneoff-services",
       "title": "Direct LOA Direct LOA One-Off - Services → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-002 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Verified by Phase 1 run dloa-oneoff-services_20261123-163647 (2026-11-23): LA260000000004216 submitted, acknowledged, completed. Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-002 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-002",
         "KAT-008",
