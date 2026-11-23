@@ -316,7 +316,7 @@
       "outputs": [
         {
           "doc": "CR",
-          "message": null
+          "message": "Contract Request.*is successfully submitted"
         }
       ],
       "checkpoint": {
@@ -326,8 +326,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "The contract is chosen by its LOA number (ContractList); dates today and +7 d (data-overrides); passed SIT 2026-10-30_174031"
+        "verification": "execution",
+        "evidence": "SIT flow run fl-contract_20261123-170117 2026-11-23 17:02:55: \"Contract Request CR260000000006053 is successfully submitted.\" (contract of LA260000000004216 / CT260000000002293; 17:02:39 \"Selected Charge Line Items updated.\")"
       }
     },
     "KAT-058": {
@@ -344,7 +344,7 @@
       "outputs": [
         {
           "doc": "CR",
-          "message": null
+          "message": "Contract Request.*is approved and has been sent to iGFMAS"
         }
       ],
       "checkpoint": {
@@ -354,8 +354,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "2026-10-30 CR260000000005449 approved, 'sent to iGFMAS for verification' (knowledge DEF-2); passed SIT 2026-10-30_175022"
+        "verification": "execution",
+        "evidence": "SIT flow run fl-contract_20261123-170117 2026-11-23 17:03:32: \"Contract Request CR260000000006053 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status…\""
       }
     },
     "KAT-059": {
