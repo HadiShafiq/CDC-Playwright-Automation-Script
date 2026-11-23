@@ -35,7 +35,8 @@ export const test = base.extend<{ katalon: void }>({
         // The evidence fixture saves failure_dom.html after this teardown, i.e. after sign-out; keep the real page.
         fs.writeFileSync(path.join(evidence.dir, 'failure_dom_before_signout.html'), await page.content().catch(() => ''));
       }
-      if (!page.isClosed()) {
+      // Nothing to sign out of when the test never left about:blank (e.g. a flow item skipped before logging in).
+      if (!page.isClosed() && page.url() !== 'about:blank') {
         await page
           .goto(`http://${getEnv().ssoHost}/oam/server/logout?end_url=${encodeURIComponent(`${baseURL}/c/portal/logout`)}`, { timeout: 30_000 })
           .then(() => evidence.log('Signed out (SSO logout)'))

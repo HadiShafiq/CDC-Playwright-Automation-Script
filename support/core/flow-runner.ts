@@ -111,7 +111,7 @@ async function openRun(flow: FlowDef, lang: Lang): Promise<string> {
       s.status = 'in-progress';
       delete s.blockedReason;
     });
-    emit(id, flow.id, 'flow-start', { resumed: true, module: flow.module, language: lang, items: flow.items.map(itemKey) });
+    emit(id, flow.id, 'flow-start', { resumed: Object.keys(existing.steps).length + Object.keys(existing.gates).length > 0, module: flow.module, language: lang, items: flow.items.map(itemKey) });
   }
   return id;
 }
@@ -142,7 +142,7 @@ function guard(ctx: ItemCtx, s: RunState) {
   if (fs.existsSync(path.join(runDir(ctx.flowRunId), 'STOP'))) skipItem(ctx, 'Stopped by the tester before this item (resume with: npm run qa -- resume)');
   if (s.status === 'uncertain') skipItem(ctx, `Run is UNCERTAIN: ${s.blockedReason ?? ''}`);
   if (s.status === 'blocked' && s.blockedReason && !s.blockedReason.includes(itemKey(ctx.item)))
-    skipItem(ctx, `Run is blocked earlier: ${s.blockedReason}`);
+    skipItem(ctx, `Run is blocked earlier (${s.blockedReason.match(/^GATE \w+|^KAT-\d+/)?.[0] ?? 'see status'})`);
   const keys = ctx.flow.items.map(itemKey);
   const from = s.from ? keys.indexOf(s.from) : 0;
   const to = s.to ? keys.indexOf(s.to) : keys.length - 1;
