@@ -169,7 +169,7 @@
       "id": "ct-fd-agreement",
       "title": "Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment",
       "verification": "documentation",
-      "notes": "2026-10-30 chain: LA260000000004032 → FD CT260000000002209 (KAT-040/041) → agreement (KAT-042/043) → amendment (KAT-045, 2026-11-02). Start after a Direct LOA flow that reached LA_VERIFIED, or give --input LA=….",
+      "notes": "2026-10-30 chain: LA260000000004032 → FD CT260000000002209 (KAT-040/041) → agreement (KAT-042/043) → amendment (KAT-045, 2026-11-02). Start after a Direct LOA flow that reached LA_VERIFIED, or give --input LA=…. DATA RULE (run ct-fd-agreement_20261123-162306): KAT-040 fills 2 payment schedules with month index 5 (Katalon defaults), so the LOA contract must span at least ~6 months; a DP-route LOA from a 1-month SQ (LA260000000004215, Nov-Dec 2026) fails at fromMonth_0. Use an LOA from a Direct LOA flow (e.g. dloa-oneoff-services).",
       "steps": [
         {
           "gate": "LA_LOOKUP"
