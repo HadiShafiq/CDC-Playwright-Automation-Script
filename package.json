@@ -5,7 +5,7 @@
   "description": "Playwright QA automation for ePerolehan (SIT/UAT). Standalone; reads the Katalon project (CDC-Katalon-Automation) only to build the coverage matrix.",
   "scripts": {
     "qa": "node cli/qa.mjs",
-    "flows:sit": "cross-env TEST_ENV=SIT playwright test tests/flows/en --project=chromium --workers=1",
+    "flows:sit": "cross-env TEST_ENV=SIT playwright test tests/flows/en --project=flows --workers=1",
     "auth:sit": "cross-env TEST_ENV=SIT playwright test --project=auth --headed --workers=1",
     "auth:uat": "cross-env TEST_ENV=UAT playwright test --project=auth --headed --workers=1",
     "test:sit": "cross-env TEST_ENV=SIT playwright test --project=chromium",
@@ -15,15 +15,16 @@
     "report": "playwright show-report reports/html",
     "matrix": "node scripts/build-matrix.mjs",
     "katalon:convert": "node scripts/katalon/convert.mjs && node scripts/build-matrix.mjs",
-    "katalon:sit": "cross-env TEST_ENV=SIT playwright test tests/katalon --project=chromium --workers=1",
-    "katalon:uat": "cross-env TEST_ENV=UAT playwright test tests/katalon --project=chromium --workers=1",
+    "katalon:sit": "cross-env TEST_ENV=SIT playwright test tests/katalon --project=flows --workers=1",
+    "katalon:uat": "cross-env TEST_ENV=UAT playwright test tests/katalon --project=flows --workers=1",
     "typecheck": "tsc --noEmit",
     "browser:sit": "cross-env TEST_ENV=SIT node scripts/browser-server.mjs --detached",
     "browser:uat": "cross-env TEST_ENV=UAT node scripts/browser-server.mjs --detached",
-    "mof:sit": "cross-env TEST_ENV=SIT CDP_URL=http://127.0.0.1:9333 playwright test tests/mof --project=chromium --workers=1",
+    "mof:sit": "cross-env TEST_ENV=SIT CDP_URL=http://127.0.0.1:9333 playwright test tests/mof --project=flows --workers=1",
     "browsers:mem": "node scripts/browser-memory.mjs",
     "browsers:kill": "node scripts/browser-memory.mjs --kill",
-    "mofreg:sit": "cross-env TEST_ENV=SIT playwright test tests/mof-registration --project=chromium --workers=1"
+    "mofreg:sit": "cross-env TEST_ENV=SIT playwright test tests/mof-registration --project=flows --workers=1",
+    "status:gen": "node scripts/gen-status.mjs"
   },
   "devDependencies": {
     "@faker-js/faker": "^10.6.0",

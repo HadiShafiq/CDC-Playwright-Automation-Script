@@ -222,6 +222,39 @@ async function cmdRun(args) {
   await execute(env, f, st.flowRunId, args);
 }
 
+/** Ways to reach a status: every (flow, step) whose checkpoint is it, best first. */
+function statusCandidates(reg, status, { module, flow } = {}) {
+  const RANK = { execution: 0, documentation: 1, source: 2, unverified: 3 };
+  const out = [];
+  for (const f of Object.values(reg.flows)) {
+    if (flow && f.id !== flow) continue;
+    f.steps.forEach((r, i) => {
+      if (typeof r !== 'string') return;
+      const s = reg.steps[r];
+      if (s.checkpoint.id !== status || (module && s.module !== module)) return;
+      const gates = f.steps.slice(0, i + 1).filter((x) => typeof x === 'object').map((x) => x.gate);
+      out.push({ flow: f, step: s, index: i, gates });
+    });
+  }
+  return out.sort((a, b) => RANK[a.flow.verification] - RANK[b.flow.verification] || a.gates.length - b.gates.length || a.index - b.index);
+}
+
+/** Prepare a transaction at a status for manual testing: run the best flow up to the step that reaches it, then stop. */
+async function cmdPrepare(args) {
+  const reg = loadRegistry();
+  if (!args.status || args.status === true) {
+    console.log('Give --status <STATUS>. Statuses:');
+    return cmdListStatuses(args);
+  }
+  const c = statusCandidates(reg, String(args.status), { module: args.module, flow: args.flow });
+  if (!c.length) die(`No flow reaches status ${args.status}${args.flow ? ` in ${args.flow}` : ''}. npm run qa -- list-statuses`);
+  const best = c[0];
+  console.log(`${bold('Prepare')} ${args.status}: ${best.step.checkpoint.description}\n  via ${bold(best.flow.id)} up to ${best.step.id} (${best.index + 1} items${best.gates.length ? `; gates ${best.gates.join(', ')}` : '; no gates'})`);
+  if (c.length > 1) console.log(dim(`  other ways (use --flow): ${c.slice(1, 6).map((x) => `${x.flow.id} (${x.index + 1} items)`).join(', ')}${c.length > 6 ? ', …' : ''}`));
+  if (args.plan) return cmdPlan({ ...args, flow: best.flow.id, to: best.step.id });
+  return cmdRun({ ...args, flow: best.flow.id, to: best.step.id });
+}
+
 async function cmdResume(args) {
   const env = envOf(args);
   const reg = loadRegistry();
@@ -263,7 +296,7 @@ async function execute(env, f, flowRunId, args) {
   writeJson(lock, { pid: process.pid, flowRunId, startedAt: nowMy() });
 
   const lang = readJson(path.join(dir, 'state.json')).language.toLowerCase();
-  const pwArgs = ['playwright', 'test', `tests/flows/${lang}/${f.module}.flow.spec.ts`, '--project=chromium', '--workers=1', '--grep', `@flow-${f.id}(\\s|$)`];
+  const pwArgs = ['playwright', 'test', `tests/flows/${lang}/${f.module}.flow.spec.ts`, '--project=flows', '--workers=1', '--grep', `@flow-${f.id}(\\s|$)`];
   if (args.headed) pwArgs.push('--headed');
   const env2 = { ...process.env, TEST_ENV: env, QA_FLOW: f.id, QA_FLOW_RUN: flowRunId, QA_LANG: lang.toUpperCase(), RUN_ID: undefined };
   if (args.cr) env2.QA_CR = String(args.cr);
@@ -635,6 +668,9 @@ ${bold('Run')} ${dim('(--env is always required; SIT only for now)')}
   plan   --env sit --flow <id> [run options]     Dry run: show what would run
   run    --env sit --flow <id> [--from KAT-023] [--to KAT-024] [--input SQ=SQ26…] [--var KAT-021.Fulfilmenttype=2]
          [--officer KAT-024=<id>] [--cr CR-12345] [--lang en] [--headed] [--yes]
+  prepare --env sit --status LA_VERIFIED [--flow <id>] [--module dp] [--input …] [--headed] [--plan]
+                                                 Make a transaction at that status for manual testing, then stop
+                                                 (catalogue: docs/status-catalog.md; specs: tests/status/en/<module>/<flow>/)
   resume --env sit [--run <id>] [--headed] [--yes]     Continue a run; finished steps are skipped
   stop   --env sit [--run <id>]                  Stop after the current step
   watch  --env sit [--run <id>]                  Live view of a run started elsewhere
@@ -663,7 +699,7 @@ const args = parseArgs(process.argv.slice(2));
 const cmd = args._[0] ?? 'help';
 const COMMANDS = {
   help: () => console.log(HELP), 'list-modules': cmdListModules, 'list-flows': cmdListFlows, 'show-flow': cmdShowFlow, 'list-statuses': cmdListStatuses,
-  doctor: cmdDoctor, plan: cmdPlan, run: cmdRun, resume: cmdResume, stop: cmdStop, watch: cmdWatch,
+  doctor: cmdDoctor, plan: cmdPlan, run: cmdRun, prepare: cmdPrepare, resume: cmdResume, stop: cmdStop, watch: cmdWatch,
   gate: cmdGate, reconcile: cmdReconcile, retry: cmdRetry, runs: cmdRuns, status: cmdStatus, report: cmdReport, data: cmdData, clean: cmdClean, menu: cmdMenu,
 };
 if (!COMMANDS[cmd]) die(`Unknown command "${cmd}". npm run qa -- help`);

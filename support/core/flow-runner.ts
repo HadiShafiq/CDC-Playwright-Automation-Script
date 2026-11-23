@@ -38,15 +38,18 @@ export function flowTitle(flow: FlowDef, lang: Lang) {
   return `${flow.id} [${lang}] ${flow.title}`;
 }
 
-/** Inside the flow's describe block: serial mode, language guard, and the run state opened before the first item. */
-export function setupFlow(flow: FlowDef, lang: Lang): () => string {
+/**
+ * Inside the flow's describe block: serial mode, language guard, and the run state opened before the first item.
+ * opts.to: stop after this item (status specs in tests/status prepare a transaction up to one status for manual testing).
+ */
+export function setupFlow(flow: FlowDef, lang: Lang, opts: { to?: string } = {}): () => string {
   test.describe.configure({ mode: 'serial' });
   if (lang === 'BM')
     test.fixme(process.env.QA_ALLOW_BM !== '1', 'Bahasa Melayu flows start only after every English flow passes and the user allows it (QA_ALLOW_BM=1).');
   if (lang !== language()) test.skip(true, `QA_LANG is ${language()}; this is the ${lang} flow`);
   let flowRunId = '';
   test.beforeAll(async () => {
-    flowRunId = await openRun(flow, lang);
+    flowRunId = await openRun(flow, lang, opts.to);
   });
   return () => flowRunId;
 }
@@ -99,13 +102,13 @@ interface ItemCtx {
 
 const itemKey = (it: FlowItem) => (it.kind === 'step' ? it.step.id : it.gate.id);
 
-async function openRun(flow: FlowDef, lang: Lang): Promise<string> {
+async function openRun(flow: FlowDef, lang: Lang, to?: string): Promise<string> {
   const wanted = process.env.QA_FLOW === flow.id ? process.env.QA_FLOW_RUN : undefined;
-  const id = wanted || `${flow.id}_${process.env.RUN_ID ?? 'local'}`;
+  const id = wanted || `${flow.id}${to ? `-to-${to}` : ''}_${process.env.RUN_ID ?? 'local'}`;
   const existing = readRunState(id);
   if (existing && existing.flowId !== flow.id) throw new Error(`Run ${id} belongs to flow ${existing.flowId}, not ${flow.id}`);
   if (!existing) {
-    writeJson(stateFile(id), newRunState(id, flow.id, flow.module, lang));
+    writeJson(stateFile(id), { ...newRunState(id, flow.id, flow.module, lang), to: to ?? null });
     emit(id, flow.id, 'flow-start', { module: flow.module, language: lang, items: flow.items.map(itemKey) });
   } else if (existing.status !== 'uncertain') {
     await updateRunState(id, (s) => {

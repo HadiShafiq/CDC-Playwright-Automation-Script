@@ -60,3 +60,13 @@ test('Blank value is rejected', scenario({
 - After every PrimeFaces action, call `waitForAjaxIdle(page)` or `clickAndSettle()`. Don't use `waitForTimeout` or `force: true`.
 - Multi-step workflows: use `test.describe.configure({ mode: 'serial' })`. Wrap shared records in `withDataLock('record-key', ...)`.
 - Runs use 1 worker and `retries: 0`. Blind retries could submit a transaction twice.
+
+## Manual testing: prepare a transaction at a status (Phase 1)
+Every status the automation can reach has a ready-made "prepare" run that stops right there, so you can continue by hand.
+- **Catalogue:** `docs/status-catalog.md`: every status per module, what it means, which flows reach it, gates on the way.
+- **CLI:** `npm run qa -- prepare --env sit --status LA_VERIFIED` (add `--plan` to only see the plan, `--flow <id>` to choose the route, `--headed` to watch).
+- **Folder:** `tests/status/en/<module>/<flow>/<NN>-<STATUS>.spec.ts`, e.g.
+  `npx cross-env TEST_ENV=SIT playwright test "tests/status/en/direct-loa/dloa-oneoff-services/03-LA_VERIFIED.spec.ts" --project=flows --headed`
+- The documents it created: `npm run qa -- data --env sit` or the run report. A route through a gate (SQL date move, PO lookup) stops there until you record it: `npm run qa -- gate …`, then `npm run qa -- resume`.
+- Flows and status specs run only with `--project=flows` (the CLI does this); `npm run test:sit` never runs them.
+- After changing `registry/`, regenerate: `npm run status:gen`.

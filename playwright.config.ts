@@ -68,12 +68,20 @@ export default defineConfig({
     { name: 'auth', testMatch: /auth\.setup\.ts/, use: { ...devices['Desktop Chrome'], viewport: { width: 1600, height: 900 } } },
     {
       name: 'chromium',
-      testIgnore: /auth\.setup\.ts/,
+      // Phase 1 flows and status preparations change SIT data in long chains: they run only in the "flows" project.
+      testIgnore: [/auth\.setup\.ts/, /[\\/]tests[\\/](flows|status)[\\/]/],
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1600, height: 900 },
         storageState: hasSavedSession(env) ? env.storageStatePath : undefined,
       },
+    },
+    {
+      // Flows (tests/flows) and "prepare to a status" specs (tests/status). Select explicitly: --project=flows
+      // (the QA CLI does). Each step logs in by itself, so no saved session.
+      name: 'flows',
+      testMatch: /[\\/]tests[\\/](flows|status)[\\/].*\.spec\.ts$/,
+      use: { ...devices['Desktop Chrome'], viewport: { width: 1600, height: 900 } },
     },
   ],
 });
