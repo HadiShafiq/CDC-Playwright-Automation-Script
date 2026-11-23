@@ -1,0 +1,353 @@
+{
+  "baselineCommit": "1a96d4c",
+  "baselineTag": "baseline/katalon-64",
+  "copiedOn": "2026-11-23",
+  "note": "Frozen copies of the original scripts. Never edit or run these; the runnable originals are tests/katalon (generated) and tests/mof*, tests/smoke.",
+  "scripts": [
+    {
+      "id": "-",
+      "module": "mof",
+      "source": "tests/mof/update-mof-profile.spec.ts"
+    },
+    {
+      "id": "-",
+      "module": "mof",
+      "source": "tests/mof-registration/mof-registration.spec.ts"
+    },
+    {
+      "id": "-",
+      "module": "mof",
+      "source": "tests/mof-registration/soft-cert.spec.ts"
+    },
+    {
+      "id": "-",
+      "module": "mof",
+      "source": "tests/mof-registration/upload-catalogue.spec.ts"
+    },
+    {
+      "id": "-",
+      "module": "shared",
+      "source": "tests/smoke/portal.smoke.spec.ts"
+    },
+    {
+      "id": "KAT-001",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/1. One-Off/1. Direct LOA One-Off - Product.spec.ts"
+    },
+    {
+      "id": "KAT-002",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/1. One-Off/2. Direct LOA One-Off - Services.spec.ts"
+    },
+    {
+      "id": "KAT-003",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/1. One-Off/3. Direct LOA One-Off - Product Plus Service.spec.ts"
+    },
+    {
+      "id": "KAT-004",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/3. Schedule/1. Direct LOA Agreement_Periodic (As And When or Schedule) - Product.spec.ts"
+    },
+    {
+      "id": "KAT-005",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/3. Schedule/2. Direct LOA Agreement_Periodic (As And When or Schedule) - Service.spec.ts"
+    },
+    {
+      "id": "KAT-006",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/3. Schedule/3. Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service.spec.ts"
+    },
+    {
+      "id": "KAT-007",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/4. Supplier/Supplier Direct LOA - Product.spec.ts"
+    },
+    {
+      "id": "KAT-008",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/4. Supplier/Supplier Direct LOA - Services.spec.ts"
+    },
+    {
+      "id": "KAT-009",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/4. Supplier/Supplier Direct LOA -Global.spec.ts"
+    },
+    {
+      "id": "KAT-010",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/5. Verify/DO Verify LOA.spec.ts"
+    },
+    {
+      "id": "KAT-011",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/6. Open/1. One-Off - Open/1. Open Direct LOA One-Off - Product.spec.ts"
+    },
+    {
+      "id": "KAT-012",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/6. Open/1. One-Off - Open/2. Open Direct LOA One-Off - Services.spec.ts"
+    },
+    {
+      "id": "KAT-013",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/6. Open/1. One-Off - Open/3. Open Direct LOA One-Off - Product Plus Service.spec.ts"
+    },
+    {
+      "id": "KAT-014",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/6. Open/2. Schedule_and _As And When - Open/1. Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product.spec.ts"
+    },
+    {
+      "id": "KAT-015",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/6. Open/2. Schedule_and _As And When - Open/2. Open Direct LOA Agreement_Periodic (As And When or Schedule) - Service.spec.ts"
+    },
+    {
+      "id": "KAT-016",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/6. Open/2. Schedule_and _As And When - Open/3. Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service.spec.ts"
+    },
+    {
+      "id": "KAT-017",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/Zonal Direct LOA/1. One-Off/1. Direct LOA One-Off - Product.spec.ts"
+    },
+    {
+      "id": "KAT-018",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/Zonal Direct LOA/1. One-Off/2. Direct LOA One-Off - Services.spec.ts"
+    },
+    {
+      "id": "KAT-019",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/Zonal Direct LOA/2. As And When and Schedule/1. Direct LOA Agreement_Periodic (As And When_Schedule) - Product.spec.ts"
+    },
+    {
+      "id": "KAT-020",
+      "module": "direct-loa",
+      "source": "1. Direct LOA Script (PK7) - QT/Zonal Direct LOA/2. As And When and Schedule/2. Direct LOA Agreement_Periodic (As And When_Schedule) - Services.spec.ts"
+    },
+    {
+      "id": "KAT-021",
+      "module": "sq",
+      "source": "2. DP - LOA/1. DLOA Requestioner Add Simple Quotes - Services.spec.ts"
+    },
+    {
+      "id": "KAT-022",
+      "module": "sq",
+      "source": "2. DP - LOA/2. Supplier Simple Quote Respond.spec.ts"
+    },
+    {
+      "id": "KAT-023",
+      "module": "dp",
+      "source": "2. DP - LOA/3. Prepare Request Note.spec.ts"
+    },
+    {
+      "id": "KAT-024",
+      "module": "dp",
+      "source": "2. DP - LOA/4. Approve Request Notes.spec.ts"
+    },
+    {
+      "id": "KAT-025",
+      "module": "direct-loa",
+      "source": "2. DP - LOA/5. Prepare LOA.spec.ts"
+    },
+    {
+      "id": "KAT-026",
+      "module": "direct-loa",
+      "source": "2. DP - LOA/6. Supplier Direct LOA - Services.spec.ts"
+    },
+    {
+      "id": "KAT-027",
+      "module": "direct-loa",
+      "source": "2. DP - LOA/7. DO Verify LOA.spec.ts"
+    },
+    {
+      "id": "KAT-028",
+      "module": "dp",
+      "source": "2. DP - LOA/Add To Carts/1. Add to Cart Requestioner - Services.spec.ts"
+    },
+    {
+      "id": "KAT-029",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/1. Add To Compare.spec.ts"
+    },
+    {
+      "id": "KAT-030",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/2. Supplier Respond.spec.ts"
+    },
+    {
+      "id": "KAT-031",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/3. Prepare Request Note - Compare.spec.ts"
+    },
+    {
+      "id": "KAT-032",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/4. Approve Request Notes - Compare.spec.ts"
+    },
+    {
+      "id": "KAT-033",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/5. Submit Purchase Request.spec.ts"
+    },
+    {
+      "id": "KAT-034",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/6. Approve Purchase Request.spec.ts"
+    },
+    {
+      "id": "KAT-035",
+      "module": "dp",
+      "source": "2. DP - LOA/Compare/7. Acknowledge Purchase Request.spec.ts"
+    },
+    {
+      "id": "KAT-036",
+      "module": "sq",
+      "source": "2. DP - LOA/DLOA - Product_Services/8. DLOA Requestioner Add Simple Quotes - Product.spec.ts"
+    },
+    {
+      "id": "KAT-037",
+      "module": "sq",
+      "source": "2. DP - LOA/DLOA - Product_Services/9. DLOA Requestioner Add Simple Quotes - Product Plus Services.spec.ts"
+    },
+    {
+      "id": "KAT-038",
+      "module": "dp",
+      "source": "2. DP - LOA/Product and Service (One Off)/4a. Assign Code Product.spec.ts"
+    },
+    {
+      "id": "KAT-039",
+      "module": "dp",
+      "source": "2. DP - LOA/Product and Service (One Off)/4b. Assign Code Service.spec.ts"
+    },
+    {
+      "id": "KAT-040",
+      "module": "ct",
+      "source": "3. Submit FD and Agreement/3.1 FD/1. Submit FD.spec.ts"
+    },
+    {
+      "id": "KAT-041",
+      "module": "ct",
+      "source": "3. Submit FD and Agreement/3.1 FD/2. Approve FD.spec.ts"
+    },
+    {
+      "id": "KAT-042",
+      "module": "ct",
+      "source": "3. Submit FD and Agreement/3.2 Agreement/1. Agreement Submit.spec.ts"
+    },
+    {
+      "id": "KAT-043",
+      "module": "ct",
+      "source": "3. Submit FD and Agreement/3.2 Agreement/2. Agreement Approve.spec.ts"
+    },
+    {
+      "id": "KAT-044",
+      "module": "ct",
+      "source": "3. Submit FD and Agreement/3.2 Agreement/Claim GroupTask Application.spec.ts"
+    },
+    {
+      "id": "KAT-045",
+      "module": "ct",
+      "source": "3. Submit FD and Agreement/3.3 Amendment/1. Amendment With Supplement.spec.ts"
+    },
+    {
+      "id": "KAT-046",
+      "module": "fl",
+      "source": "4. Fulfillment/1. Prepare Purchase Request (PR).spec.ts"
+    },
+    {
+      "id": "KAT-047",
+      "module": "fl",
+      "source": "4. Fulfillment/2. Approver - Approve Purchase Request.spec.ts"
+    },
+    {
+      "id": "KAT-048",
+      "module": "fl",
+      "source": "4. Fulfillment/3. Supplier - Acknowledge Purchase Order.spec.ts"
+    },
+    {
+      "id": "KAT-049",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/1. Pending Delivery List.spec.ts"
+    },
+    {
+      "id": "KAT-050",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/2. Receiving Officer - Acknowledge Delivery Order.spec.ts"
+    },
+    {
+      "id": "KAT-051",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/3. Acknowledge Officer - Approve Fulfillment Received Note.spec.ts"
+    },
+    {
+      "id": "KAT-052",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/3a. Stop Delivery Instruction.spec.ts"
+    },
+    {
+      "id": "KAT-053",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/3b. Approve Stop Delivery Instruction.spec.ts"
+    },
+    {
+      "id": "KAT-054",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/4. Create Invoice.spec.ts"
+    },
+    {
+      "id": "KAT-055",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/5. Payment Match.spec.ts"
+    },
+    {
+      "id": "KAT-056",
+      "module": "fl",
+      "source": "4. Fulfillment/4.1 Non-Contract Fulfillment/5a. Payment - Approve Debit Note.spec.ts"
+    },
+    {
+      "id": "KAT-057",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/1. Requisitioner - Prepare Contract Request (CR).spec.ts"
+    },
+    {
+      "id": "KAT-058",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/2. Approval - Approve Contract Request.spec.ts"
+    },
+    {
+      "id": "KAT-059",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/3. Supplier - Acknowledge Contract Order.spec.ts"
+    },
+    {
+      "id": "KAT-060",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/4. Supplier - Pending Delivery List.spec.ts"
+    },
+    {
+      "id": "KAT-061",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/5. Receiving Officer - Acknowledge Delivery Order - (Fulfilment Received Note).spec.ts"
+    },
+    {
+      "id": "KAT-062",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/6. Acknowledge Officer - Approve Fulfilment Received Note.spec.ts"
+    },
+    {
+      "id": "KAT-063",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/7. Supplier - Create Invoice.spec.ts"
+    },
+    {
+      "id": "KAT-064",
+      "module": "fl",
+      "source": "4. Fulfillment/4.2 Contract Fulfillment/8. Payment Match.spec.ts"
+    }
+  ]
+}
