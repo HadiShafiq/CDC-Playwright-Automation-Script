@@ -1,0 +1,146 @@
+{
+  "module": "dp",
+  "name": "Direct Purchase",
+  "description": "Request Note from a closed Simple Quote, Add to Cart or Compare (Item Inquiry); approval; Purchase Request route to a PO; Assign Code.",
+  "steps": {
+    "KAT-023": {
+      "title": "Prepare Request Note from a closed Simple Quote",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": { "accountOf": "KAT-021" },
+      "inputs": [{ "var": "Document_Number", "doc": "SQ" }],
+      "outputs": [{ "doc": "RN", "message": "Request Note.*is successfully submitted" }],
+      "checkpoint": { "id": "RN_SUBMITTED", "description": "Request Note submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-023 waits for 'is successfully submitted' (example 'Request Note RN… is successfully submitted.'); passed SIT 2026-11-11_184459" }
+    },
+    "KAT-024": {
+      "title": "Approve Request Note (SQ route)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [{ "var": "Document_Number", "doc": "RN" }],
+      "outputs": [{ "doc": "RN", "message": "is approved" }],
+      "checkpoint": { "id": "RN_APPROVED", "description": "Request Note approved", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-024 waits for 'is approved.'; the task goes to the officer SIT assigns (Task Status Search: Review Direct Purchase)" }
+    },
+    "KAT-028": {
+      "title": "Add to Cart (Services) and submit Request Note",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [{ "doc": "RN", "message": "Request Note.*is successfully submitted" }],
+      "checkpoint": { "id": "RN_SUBMITTED", "description": "Request Note submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-028 waits for 'is successfully submitted'; passed SIT 2026-11-16_111215" }
+    },
+    "KAT-029": {
+      "title": "Add to Compare: submit Item Inquiry to suppliers",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [{ "doc": "PI", "message": "is successfully submitted" }],
+      "checkpoint": { "id": "PI_SUBMITTED", "description": "Item Inquiry submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-029 waits for 'is successfully submitted.'; passed SIT 2026-11-13_174251" }
+    },
+    "KAT-030": {
+      "title": "Supplier responds to the Item Inquiry",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [{ "var": "Document_Number", "doc": "PI" }],
+      "outputs": [{ "doc": "PI", "message": "is successfully submitted" }],
+      "checkpoint": { "id": "PI_SUPPLIER_RESPONDED", "description": "Supplier reply to Item Inquiry submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-030 waits for 'is successfully submitted.'; the account must be supplier 1 of KAT-029 (AINHALIM, data-overrides 2026-11-13)" }
+    },
+    "KAT-031": {
+      "title": "Prepare Request Note from Compare",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [{ "var": "Document_Number", "doc": "PI" }],
+      "outputs": [{ "doc": "RN", "message": "Request Note.*is successfully submitted" }],
+      "checkpoint": { "id": "RN_SUBMITTED", "description": "Request Note submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-031 waits for 'is successfully submitted'; passed SIT 2026-11-16_103717" }
+    },
+    "KAT-032": {
+      "title": "Approve Request Note (Compare / Add to Cart)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [{ "var": "Document_Number", "doc": "RN" }],
+      "outputs": [{ "doc": "RN", "message": "is approved" }],
+      "checkpoint": { "id": "RN_APPROVED", "description": "Request Note approved", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-032 waits for 'is approved.'; officer from Task Status Search (690127065209 on 2026-11-16)" }
+    },
+    "KAT-033": {
+      "title": "Submit Purchase Request from the approved Request Note",
+      "role": "Requisitioner (PR officer)",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [{ "var": "Document_Number", "doc": "RN" }],
+      "outputs": [{ "doc": "PR", "message": "is successfully submitted" }],
+      "checkpoint": { "id": "PR_SUBMITTED", "description": "Purchase Request submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-033 waits for 'is successfully submitted.'; Submit PR task ASSIGNED to the officer in Task Status Search (710527085562 on 2026-11-11)" }
+    },
+    "KAT-034": {
+      "title": "Approve Purchase Request (sent to iGFMAS)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [{ "var": "Document_Number", "doc": "PR" }],
+      "outputs": [{ "doc": "PR", "message": "is approved and has been sent to iGFMAS" }],
+      "checkpoint": { "id": "PR_APPROVED", "description": "Purchase Request approved, sent to iGFMAS", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-034 waits for 'is approved and has been sent to iGFMAS for verification.'" }
+    },
+    "KAT-035": {
+      "title": "Supplier acknowledges the Purchase Order",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [{ "var": "Document_Number", "doc": "PO" }],
+      "outputs": [{ "doc": "PO", "message": "is acknowledged" }],
+      "checkpoint": { "id": "PO_ACKNOWLEDGED", "description": "Purchase Order acknowledged", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-035 waits for 'is acknowledged.'; the account must be the PO supplier (data-overrides used the KAT-022 account)" }
+    },
+    "KAT-038": {
+      "title": "Assign Code - Product (Request Note lines without item code)",
+      "role": "Codifier",
+      "stateChanging": true,
+      "login": { "accountOf": "KAT-030" },
+      "inputs": [{ "var": "Document_Number", "doc": "RN" }],
+      "outputs": [{ "doc": "RN", "message": "is successfully submitted" }],
+      "checkpoint": { "id": "RN_CODE_ASSIGNED", "description": "Item code assigned", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-038 waits for 'is successfully submitted.'; task 'Codify Purchase Request' in the Group Task of the KAT-030 account (2026-11-13)" }
+    },
+    "KAT-039": {
+      "title": "Assign Code - Service",
+      "role": "Codifier",
+      "stateChanging": true,
+      "login": { "accountOf": "KAT-030" },
+      "inputs": [{ "var": "Document_Number", "doc": "RN" }],
+      "outputs": [{ "doc": "RN", "message": "is successfully submitted" }],
+      "checkpoint": { "id": "RN_CODE_ASSIGNED", "description": "Item code assigned", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-039 waits for 'is successfully submitted.'" }
+    }
+  },
+  "flows": [
+    {
+      "id": "dp-sq-pr",
+      "title": "DP from Simple Quote, Purchase Request route (One Off / product)",
+      "verification": "documentation",
+      "notes": "Route rule from memory dp-loa-route-rule: product items or One Off services go to PR. Example SQ260000000002305 → RN260000000004698 → PR260000000004856 (2026-11-11).",
+      "steps": ["KAT-021", { "gate": "SQ_START_SQL" }, "KAT-022", { "gate": "SQ_END_SQL" }, "KAT-023", "KAT-024", "KAT-033", "KAT-034", { "gate": "PO_LOOKUP" }, "KAT-035"],
+      "variables": { "KAT-021": { "Fulfilmenttype": 1 } }
+    },
+    {
+      "id": "dp-add-to-cart",
+      "title": "DP Add to Cart (Services) to Purchase Request approval",
+      "verification": "execution",
+      "notes": "Chain run 2026-11-16 (debit note chain): KAT-028 → RN260000000004722 → KAT-032 → KAT-046 PR260000000004860 → KAT-047 → PO260000000007002. Continues in fl-noncontract.",
+      "steps": ["KAT-028", "KAT-032", "KAT-046", "KAT-047", { "gate": "PO_LOOKUP" }]
+    },
+    {
+      "id": "dp-compare",
+      "title": "DP Compare (Item Inquiry) to Purchase Order acknowledgement",
+      "verification": "documentation",
+      "notes": "2026-11-13/16 Compare chain: PI260000000000764 → RN (KAT-031) → approve (KAT-032). PO260000000006602 came from Compare PR260000000004659.",
+      "steps": ["KAT-029", "KAT-030", "KAT-031", "KAT-032", "KAT-033", "KAT-034", { "gate": "PO_LOOKUP" }, "KAT-035"]
+    },
+    {
+      "id": "dp-assign-code",
+      "title": "Assign Code on a Request Note (product, then service)",
+      "verification": "unverified",
+      "notes": "Needs an RN whose lines have no item code (e.g. from sq-product-services). Give the RN with --input RN=…",
+      "steps": ["KAT-038", "KAT-039"]
+    }
+  ]
+}

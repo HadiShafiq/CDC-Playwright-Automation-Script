@@ -1,0 +1,54 @@
+{
+  "SQ_START_SQL": {
+    "type": "sql",
+    "title": "Open the Simple Quote now (move START_DATE to the past)",
+    "needs": ["SQ"],
+    "instructions": "In DBeaver (SIT connection only): UPDATE NGEP_SIT.SC_QUOTE SET START_DATE = TO_DATE('{NOW_MINUS_1H}','YYYY-MM-DD HH24:MI:SS') WHERE QUOTE_NO = '{SQ}'; COMMIT;  Do NOT change END_DATE yet. Then wait until {SQ} shows in the supplier's Simple Quote Respond list.",
+    "source": "memory sq-date-sql-procedure (user procedure, 2026-11-04); SQ260000000002276 was lost by closing before the reply"
+  },
+  "SQ_END_SQL": {
+    "type": "sql",
+    "title": "Close the Simple Quote (move END_DATE to the past) — only after the supplier replied",
+    "needs": ["SQ"],
+    "instructions": "In DBeaver (SIT connection only): UPDATE NGEP_SIT.SC_QUOTE SET END_DATE = TO_DATE('{NOW_MINUS_1H}','YYYY-MM-DD HH24:MI:SS') WHERE QUOTE_NO = '{SQ}'; COMMIT;  Then wait until the Prepare Request Note task for {SQ} appears in the requisitioner's My Task.",
+    "source": "memory sq-date-sql-procedure (user procedure, 2026-11-04)"
+  },
+  "PO_LOOKUP": {
+    "type": "lookup",
+    "title": "Purchase Order number after iGFMAS verification",
+    "needs": ["PR"],
+    "provides": ["PO"],
+    "instructions": "iGFMAS creates the PO some time after {PR} is approved (about 1 h on 2026-11-16). Find it in DBeaver (NGEP_SIT.FL_FULFILMENT_REQUEST / FL_FULFILMENT_ORDER) or Task Status Search, then: npm run qa -- gate --run {RUN} --gate PO_LOOKUP --set PO=PO26…",
+    "source": "knowledge/defects.md DEF-2 (delay, not a defect); memory debit-credit-note-procedure step 5"
+  },
+  "CO_LOOKUP": {
+    "type": "lookup",
+    "title": "Contract Order number after iGFMAS verification",
+    "needs": ["CR"],
+    "provides": ["CO"],
+    "instructions": "iGFMAS creates the CO some time after {CR} is approved. Find it in DBeaver (NGEP_SIT.FL_FULFILMENT_ORDER) or Task Status Search, then: npm run qa -- gate --run {RUN} --gate CO_LOOKUP --set CO=CO26…",
+    "source": "knowledge/defects.md DEF-2; data-overrides KAT-059 (CO260000000005848 from CR260000000005449)"
+  },
+  "DO_LOOKUP": {
+    "type": "lookup",
+    "title": "Delivery Order number in the receiving officer's Group Task",
+    "needs": ["PO|CO"],
+    "provides": ["DO"],
+    "instructions": "The delivery submitted against {PO|CO} becomes a Delivery Order (e.g. 01309H005M2600503) in the receiving officer's Group Task. Find it there or in DBeaver, then: npm run qa -- gate --run {RUN} --gate DO_LOOKUP --set DO=<number>",
+    "source": "data-overrides KAT-050, KAT-061"
+  },
+  "LA_LOOKUP": {
+    "type": "lookup",
+    "title": "Letter of Acceptance to build on",
+    "provides": ["LA"],
+    "instructions": "Give an LA that is already verified by the Desk Officer (KAT-010/027) and belongs to your test data: npm run qa -- gate --run {RUN} --gate LA_LOOKUP --set LA=LA26…",
+    "source": "flow design: CT and contract fulfilment start from an existing LOA"
+  },
+  "CT_LOOKUP": {
+    "type": "lookup",
+    "title": "Contract (or its LOA) for a Contract Request",
+    "provides": ["LA"],
+    "instructions": "KAT-057 picks the contract by its LOA number (ContractList). Give the LA of a contract whose FD and agreement are approved: npm run qa -- gate --run {RUN} --gate CT_LOOKUP --set LA=LA26…",
+    "source": "data-overrides KAT-057 (ContractList=LA260000000004032, FD CT260000000002209 approved)"
+  }
+}

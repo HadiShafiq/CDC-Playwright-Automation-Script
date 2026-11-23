@@ -13,13 +13,13 @@ if (process.env.EXTRA_ENV_FILE && fs.existsSync(process.env.EXTRA_ENV_FILE)) pro
 
 const env = getEnv();
 
-// Up to 3 workers, but only as many as free RAM allows (~1 GB per browser worker).
-// Override with WORKERS=n.
+// One worker by default: most specs change SIT data and share accounts, and concurrency safety is not verified
+// (Phase 1 rule). WORKERS=n raises it, capped by free RAM (~1 GB per browser worker).
 const freeGb = os.freemem() / 1024 ** 3;
-const workers = Number(process.env.WORKERS) || Math.max(1, Math.min(3, Math.floor(freeGb)));
-if (!process.env.WORKERS && workers < 3 && !process.env.PW_MEM_NOTICE) {
+const workers = process.env.WORKERS ? Math.max(1, Math.min(Number(process.env.WORKERS), Math.floor(freeGb) || 1)) : 1;
+if (process.env.WORKERS && workers < Number(process.env.WORKERS) && !process.env.PW_MEM_NOTICE) {
   process.env.PW_MEM_NOTICE = '1'; // print once, not in every worker
-  console.log(`[config] ${freeGb.toFixed(1)} GB RAM free → ${workers} worker(s). Set WORKERS=n to override.`);
+  console.log(`[config] ${freeGb.toFixed(1)} GB RAM free → ${workers} worker(s) instead of ${process.env.WORKERS}.`);
 }
 // Run ID in Malaysia time, e.g. 2026-10-28_153000
 const runId =
@@ -33,7 +33,8 @@ export default defineConfig({
   // Isolated workers (see above). Multi-step business workflows must opt into serial mode
   // (test.describe.configure({ mode: 'serial' })) and use dataLock() for shared records.
   workers,
-  fullyParallel: true,
+  // Files may run in parallel only when WORKERS>1 is set on purpose; flows are serial inside (describe mode serial).
+  fullyParallel: !!process.env.WORKERS,
   // No blind retries: a retry can re-submit a business transaction. Failures go through
   // the analyse → repair → rerun loop instead (see knowledge/repair-log.md).
   retries: 0,

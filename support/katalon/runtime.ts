@@ -30,6 +30,36 @@ let ctx: Ctx | undefined;
 /** Set by the Katalon fixture before each test. */
 export function bindKatalon(c: Ctx) {
   ctx = c;
+  observed = [];
+}
+
+/*
+ * Phase 1 flow hooks (used by support/core/flow-runner.ts; the Katalon specs never set them, so they run as before).
+ *
+ * Flow inputs: values a flow run passes to a step (documents from earlier steps, per-flow variables, the login to use).
+ * They are applied after the data file and before KAT_<Variable> (an explicit KAT_ override still wins).
+ *
+ * Observed texts: every text the script reads (getText) or logs (comment), so the flow runner can find the document
+ * number a script captured, e.g. "✅ Captured SQ No: SQ26…".
+ */
+export type FlowLogin = { accountOf: string } | { officer: string };
+export interface FlowInputs {
+  vars: Record<string, any>;
+  login?: FlowLogin;
+}
+const flowInputs = new Map<string, FlowInputs>();
+export function setFlowInputs(caseId: string, inputs: FlowInputs | undefined) {
+  if (inputs) flowInputs.set(caseId, inputs);
+  else flowInputs.delete(caseId);
+}
+let observed: string[] = [];
+function observe(text: string): string {
+  if (text) observed.push(text);
+  return text;
+}
+/** Texts read or logged by the script since the runtime was bound to this test's page. */
+export function observedTexts(): readonly string[] {
+  return observed;
 }
 function cur(): Ctx {
   if (!ctx) throw new Error('Katalon runtime used outside a test (use fixtures/katalon.ts)');
@@ -308,7 +338,7 @@ export const WebUI = {
     await cur().page.waitForTimeout(Number(seconds) * 1000);
   },
   comment(m: any) {
-    cur().log(String(m));
+    cur().log(observe(String(m)));
   },
   async navigateToUrl(url: string) {
     // Katalon scripts hard-code SIT (or UAT); go to the same path on the environment under test.
@@ -407,7 +437,7 @@ export const WebUI = {
     return step(`selectOptionByIndex ${name(obj)}`, fh, undefined, () => likeSelenium(() => loc(obj).selectOption({ index: Number(index) })));
   },
   async getText(obj: TestObject, fh?: FH) {
-    return step(`getText ${name(obj)}`, fh, '', async () => (await loc(obj).innerText({ timeout: DEFAULT_TIMEOUT * 1000 })).trim());
+    return step(`getText ${name(obj)}`, fh, '', async () => observe((await loc(obj).innerText({ timeout: DEFAULT_TIMEOUT * 1000 })).trim()));
   },
   async getAttribute(obj: TestObject, attr: string, fh?: FH) {
     return step(`getAttribute ${name(obj)}`, fh, null as any, async () => {
@@ -856,6 +886,27 @@ export async function katalonVariables(caseId: string, defaults: Record<string, 
         if (i > 0) vars[v] = cellText(row[i]).trim();
       }
       cur().log(`Variables from ${path.relative(KATALON_DATA_DIR, file)} [${ws.name}] row ${n}`);
+    }
+  }
+  const flow = flowInputs.get(caseId);
+  if (flow) {
+    Object.assign(vars, flow.vars);
+    const shown = Object.entries(flow.vars).filter(([k]) => !/^(username|password)$/i.test(k)).map(([k, v]) => `${k}=${v}`);
+    cur().log(`Flow inputs: ${shown.join(', ') || '(none)'}`);
+    if (flow.login && 'accountOf' in flow.login) {
+      const secretFile = path.join(ROOT, '.auth', 'katalon-variables.json');
+      const secrets = fs.existsSync(secretFile) ? JSON.parse(fs.readFileSync(secretFile, 'utf8')) : {};
+      const acc = secrets[flow.login.accountOf];
+      if (!acc?.Username || !acc?.Password) throw new Error(`Flow login: no account for ${flow.login.accountOf} in .auth/katalon-variables.json`);
+      vars.Username = acc.Username;
+      vars.Password = acc.Password;
+      cur().log(`Flow login: the account of ${flow.login.accountOf}`);
+    } else if (flow.login && 'officer' in flow.login) {
+      const password = await loadSharedOfficerPassword(getEnv().name);
+      if (!password) throw new Error(`Flow login as officer ${flow.login.officer} needs the shared officer password: a row with Username "*" in .auth/credentials.xlsx`);
+      vars.Username = flow.login.officer;
+      vars.Password = password;
+      cur().log(`Flow login: officer ${flow.login.officer} (shared officer password)`);
     }
   }
   for (const k of Object.keys(vars)) if (process.env[`KAT_${k}`] !== undefined) vars[k] = process.env[`KAT_${k}`];

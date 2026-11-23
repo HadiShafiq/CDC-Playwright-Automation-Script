@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "description": "Playwright QA automation for ePerolehan (SIT/UAT). Standalone; reads the Katalon project (CDC-Katalon-Automation) only to build the coverage matrix.",
   "scripts": {
+    "qa": "node cli/qa.mjs",
+    "flows:sit": "cross-env TEST_ENV=SIT playwright test tests/flows/en --project=chromium --workers=1",
     "auth:sit": "cross-env TEST_ENV=SIT playwright test --project=auth --headed --workers=1",
     "auth:uat": "cross-env TEST_ENV=UAT playwright test --project=auth --headed --workers=1",
     "test:sit": "cross-env TEST_ENV=SIT playwright test --project=chromium",

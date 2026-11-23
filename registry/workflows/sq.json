@@ -1,0 +1,66 @@
+{
+  "module": "sq",
+  "name": "Simple Quote",
+  "description": "Requisitioner creates a Simple Quote (DP), the supplier replies, the quote closes. A closed SQ feeds the DP Request Note (module dp).",
+  "steps": {
+    "KAT-021": {
+      "title": "Create Simple Quote - Services",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [{ "doc": "SQ", "message": "Simple Quote.*is successfully submitted" }],
+      "checkpoint": { "id": "SQ_SUBMITTED", "description": "Simple Quote submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-021 waits for an info message containing 'Simple Quote' and 'is successfully submitted' and reads SQ\\d+ from it; passed on SIT 2026-11-11_180957" }
+    },
+    "KAT-036": {
+      "title": "Create Simple Quote - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [{ "doc": "SQ", "message": "Simple Quote.*is successfully submitted" }],
+      "checkpoint": { "id": "SQ_SUBMITTED", "description": "Simple Quote submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-036 waits for 'is successfully submitted'; passed on SIT 2026-10-30_175441" }
+    },
+    "KAT-037": {
+      "title": "Create Simple Quote - Product plus Services",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [{ "doc": "SQ", "message": "Simple Quote.*is successfully submitted" }],
+      "checkpoint": { "id": "SQ_SUBMITTED", "description": "Simple Quote submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "source", "evidence": "KAT-037 waits for 'is successfully submitted'; passed on SIT 2026-11-11_165238" }
+    },
+    "KAT-022": {
+      "title": "Supplier responds to the Simple Quote (prices every line)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [{ "var": "sqNo", "doc": "SQ" }],
+      "outputs": [],
+      "checkpoint": { "id": "SQ_SUPPLIER_RESPONDED", "description": "Supplier reply submitted", "displayedStatus": { "en": null, "bm": null }, "verification": "unverified", "evidence": "The script does not wait for a success message; record the message seen in the first run" }
+    }
+  },
+  "flows": [
+    {
+      "id": "sq-services",
+      "title": "Simple Quote (Services): create, open, supplier reply, close",
+      "verification": "documentation",
+      "notes": "Fulfilment type decides the later DP route: One Off (1) → Purchase Request; Schedule (2) / As And When (3) → LOA (memory dp-loa-route-rule). The supplier account of KAT-022 must be in the SQ supplier list.",
+      "steps": ["KAT-021", { "gate": "SQ_START_SQL" }, "KAT-022", { "gate": "SQ_END_SQL" }]
+    },
+    {
+      "id": "sq-product",
+      "title": "Simple Quote (Product): create, open, supplier reply, close",
+      "verification": "unverified",
+      "notes": "Pairing KAT-036 → KAT-022 is from the Katalon folder order; the KAT-022 supplier must be in KAT-036's supplier list.",
+      "steps": ["KAT-036", { "gate": "SQ_START_SQL" }, "KAT-022", { "gate": "SQ_END_SQL" }]
+    },
+    {
+      "id": "sq-product-services",
+      "title": "Simple Quote (Product + Services): create, open, supplier reply, close",
+      "verification": "unverified",
+      "notes": "Data-overrides 2026-11-13: KAT-038 used RN from SQ260000000002308 (product + service lines) replied by AINHALIM (KAT-030 login); check the supplier account before running.",
+      "steps": ["KAT-037", { "gate": "SQ_START_SQL" }, "KAT-022", { "gate": "SQ_END_SQL" }]
+    }
+  ]
+}

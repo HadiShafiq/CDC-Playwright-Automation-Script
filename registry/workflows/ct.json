@@ -1,0 +1,194 @@
+{
+  "module": "ct",
+  "name": "Contract (FD, Agreement, Amendment)",
+  "description": "From a Desk-Officer-verified LOA: Fulfilment Details (FD) submit/approve, agreement submit/approve, amendment with supplement. Produces the contract (CT…) used by contract fulfilment (fl).",
+  "steps": {
+    "KAT-040": {
+      "title": "Submit Fulfilment Details (FD) for a verified LOA",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CT",
+          "message": "is successfully submitted to Contract Approver"
+        }
+      ],
+      "checkpoint": {
+        "id": "FD_SUBMITTED",
+        "description": "FD submitted to the Contract Approver",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-040 waits for 'is successfully submitted to Contract Approver.' and reads CT\\d+; passed SIT 2026-10-30_171540. Performance bond date = run date + 180 d (data-overrides)"
+      }
+    },
+    "KAT-041": {
+      "title": "Approve Fulfilment Details",
+      "role": "Contract Approver",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CT",
+          "message": "is approved"
+        }
+      ],
+      "checkpoint": {
+        "id": "FD_APPROVED",
+        "description": "FD approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "KAT-041 waits for 'is approved'. Its Katalon default Document_Number is 690127065209 (an officer ID; the real value came from the Excel row): whether the My Task filter needs the CT or the LA number is not verified"
+      }
+    },
+    "KAT-042": {
+      "title": "Submit Agreement",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CT",
+          "message": "is successfully submitted to Contract Approver"
+        }
+      ],
+      "checkpoint": {
+        "id": "AGREEMENT_SUBMITTED",
+        "description": "Agreement submitted to the Contract Approver",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-042 waits for 'is successfully submitted to Contract Approver'; Katalon default input is an LA number; passed SIT 2026-10-30_172225"
+      }
+    },
+    "KAT-043": {
+      "title": "Approve Agreement",
+      "role": "Contract Approver",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CT",
+          "message": "is approved"
+        }
+      ],
+      "checkpoint": {
+        "id": "AGREEMENT_APPROVED",
+        "description": "Agreement approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-043 waits for 'is approved.'; Katalon default input is a CT number; passed SIT 2026-10-30_172359"
+      }
+    },
+    "KAT-044": {
+      "title": "Claim Group Task application",
+      "role": "Officer",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "PI"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "GROUP_TASK_CLAIMED",
+        "description": "Group task claimed into My Task",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Katalon default input is a list of PI numbers (DocumentType 3); data-overrides 2026-11-16 used PI260000000000764; no success message in the script"
+      }
+    },
+    "KAT-045": {
+      "title": "Contract Amendment with Supplement",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-040"
+      },
+      "inputs": [
+        {
+          "var": "ContractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "CT_AMENDED",
+        "description": "Amendment with supplement submitted",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script; passed SIT 2026-11-02_114434 on CT260000000002209 as the KAT-040 account"
+      }
+    }
+  },
+  "flows": [
+    {
+      "id": "ct-fd-agreement",
+      "title": "Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment",
+      "verification": "documentation",
+      "notes": "2026-10-30 chain: LA260000000004032 → FD CT260000000002209 (KAT-040/041) → agreement (KAT-042/043) → amendment (KAT-045, 2026-11-02). Start after a Direct LOA flow that reached LA_VERIFIED, or give --input LA=….",
+      "steps": [
+        {
+          "gate": "LA_LOOKUP"
+        },
+        "KAT-040",
+        "KAT-041",
+        "KAT-042",
+        "KAT-043",
+        "KAT-045"
+      ]
+    },
+    {
+      "id": "ct-claim-group-task",
+      "title": "Claim a group task (Item Inquiry)",
+      "verification": "unverified",
+      "notes": "Give the document with --input PI=…",
+      "steps": [
+        "KAT-044"
+      ]
+    }
+  ]
+}

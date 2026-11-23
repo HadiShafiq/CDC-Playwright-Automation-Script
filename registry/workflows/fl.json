@@ -1,0 +1,598 @@
+{
+  "module": "fl",
+  "name": "Fulfilment",
+  "description": "Non-contract: PR from an approved RN → PO → delivery → FRN → (stop delivery) → invoice → payment match (+ debit note). Contract: Contract Request → CO → delivery → FRN → invoice → payment match.",
+  "steps": {
+    "KAT-046": {
+      "title": "Submit Purchase Request from an approved Request Note",
+      "role": "Requisitioner (PR officer)",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "RN"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PR",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "PR_SUBMITTED",
+        "description": "Purchase Request submitted",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-046 waits for 'is successfully submitted.'; Submit PR task appears a few minutes after RN approval; passed SIT 2026-11-16_112140"
+      }
+    },
+    "KAT-047": {
+      "title": "Approve Purchase Request (sent to iGFMAS)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "PR"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PR",
+          "message": "is approved and has been sent to iGFMAS"
+        }
+      ],
+      "checkpoint": {
+        "id": "PR_APPROVED",
+        "description": "PR approved and sent to iGFMAS",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-047 waits for 'is approved and has been sent to iGFMAS for verification.'; passed SIT 2026-11-16_112351"
+      }
+    },
+    "KAT-048": {
+      "title": "Supplier acknowledges the Purchase Order",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PO",
+          "message": "is acknowledged"
+        }
+      ],
+      "checkpoint": {
+        "id": "PO_ACKNOWLEDGED",
+        "description": "Purchase Order acknowledged",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-048 waits for 'is acknowledged.'; the account must be the PO supplier (AINHALIM on 2026-11-16); passed SIT 2026-11-16_123056"
+      }
+    },
+    "KAT-049": {
+      "title": "Supplier submits delivery (Pending Delivery List)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "inputs": [
+        {
+          "var": "Purchase_Number",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "DO",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "DELIVERY_SUBMITTED",
+        "description": "Delivery submitted against the PO",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script (it reads DO… text); a delivery amount above the PO total makes a debit note later (memory debit-credit-note-procedure); passed SIT 2026-11-16_123253"
+      }
+    },
+    "KAT-050": {
+      "title": "Receiving Officer acknowledges the Delivery Order (creates FRN)",
+      "role": "Receiving Officer",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "DO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "FN",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "FRN_CREATED",
+        "description": "Fulfilment Received Note created",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script (it reads FN…); DO number from the receiving officer Group Task; passed SIT 2026-11-16_123454"
+      }
+    },
+    "KAT-051": {
+      "title": "Acknowledge Officer approves the FRN",
+      "role": "Acknowledge Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "FN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FRN_APPROVED",
+        "description": "FRN approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script; officer from Task Status Search (180220145443 on 2026-11-16); passed SIT 2026-11-16_123622"
+      }
+    },
+    "KAT-052": {
+      "title": "Supplier submits Stop Delivery Instruction for the undelivered balance",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "inputs": [
+        {
+          "var": "PO_Number",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "SD",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "SD_SUBMITTED",
+        "description": "Stop Delivery submitted",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Needed when the PO shows Pending Partial Fulfilment, so the Create Invoice task is released (memory debit-credit-note-procedure); passed SIT 2026-11-16_125047"
+      }
+    },
+    "KAT-053": {
+      "title": "Approve Stop Delivery Instruction",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "SD"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SD_APPROVED",
+        "description": "Stop Delivery approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script; officer 690127065209 on 2026-11-16; passed SIT 2026-11-16_125421"
+      }
+    },
+    "KAT-054": {
+      "title": "Supplier creates the invoice",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "IN",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "INVOICE_CREATED",
+        "description": "Invoice created",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "A services invoice above the ordered amount makes SIT create a debit note (DN…, Pending Debit Note Approval); passed SIT 2026-11-16_125626"
+      }
+    },
+    "KAT-055": {
+      "title": "Payment match (non-contract)",
+      "role": "Finance",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PA",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "PAYMENT_MATCHED",
+        "description": "Payment matched",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Match Payment is a group task of this account group; passed SIT 2026-11-02_174635"
+      }
+    },
+    "KAT-056": {
+      "title": "Approve Debit Note",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "DN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DN_APPROVED",
+        "description": "Debit note approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Task Review DAN; officer 690127065209 on 2026-11-16; passed SIT 2026-11-16_125842"
+      }
+    },
+    "KAT-057": {
+      "title": "Prepare Contract Request from a contract",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "ContractList",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CR",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "CR_SUBMITTED",
+        "description": "Contract Request submitted",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "The contract is chosen by its LOA number (ContractList); dates today and +7 d (data-overrides); passed SIT 2026-10-30_174031"
+      }
+    },
+    "KAT-058": {
+      "title": "Approve Contract Request (sent to iGFMAS)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "CR"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CR",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "CR_APPROVED",
+        "description": "Contract Request approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "2026-10-30 CR260000000005449 approved, 'sent to iGFMAS for verification' (knowledge DEF-2); passed SIT 2026-10-30_175022"
+      }
+    },
+    "KAT-059": {
+      "title": "Supplier acknowledges the Contract Order",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-008"
+      },
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "CO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "CO",
+          "message": "is acknowledged"
+        }
+      ],
+      "checkpoint": {
+        "id": "CO_ACKNOWLEDGED",
+        "description": "Contract Order acknowledged",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-059 waits for 'is acknowledged.'; the CO supplier was the KAT-008 account on 2026-11-02; passed SIT 2026-11-02_154038"
+      }
+    },
+    "KAT-060": {
+      "title": "Supplier submits delivery against the Contract Order",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-008"
+      },
+      "inputs": [
+        {
+          "var": "Purchase_Number",
+          "doc": "CO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "DO",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "DELIVERY_SUBMITTED",
+        "description": "Delivery submitted against the CO",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script; passed SIT 2026-11-02_160423"
+      }
+    },
+    "KAT-061": {
+      "title": "Receiving Officer acknowledges the contract Delivery Order (FRN)",
+      "role": "Receiving Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "DO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "FN",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "FRN_CREATED",
+        "description": "FRN created",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Create FRN task assigned to an officer no test case logs in as (831221115096 on 2026-11-02); passed SIT 2026-11-02_173646"
+      }
+    },
+    "KAT-062": {
+      "title": "Acknowledge Officer approves the contract FRN",
+      "role": "Acknowledge Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "FN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FRN_APPROVED",
+        "description": "FRN approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Officer 180220145443 on 2026-11-02; passed SIT 2026-11-02_173919"
+      }
+    },
+    "KAT-063": {
+      "title": "Supplier creates the contract invoice",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-008"
+      },
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "CO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "IN",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "INVOICE_CREATED",
+        "description": "Invoice created",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Invoice IN-CO… raised by the CO supplier; passed SIT 2026-11-02_174056"
+      }
+    },
+    "KAT-064": {
+      "title": "Payment match (contract)",
+      "role": "Finance",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "CO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PA",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "PAYMENT_MATCHED",
+        "description": "Payment matched",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "Group task of this account group; passed SIT 2026-11-02_174526"
+      }
+    }
+  },
+  "flows": [
+    {
+      "id": "fl-noncontract",
+      "title": "Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment",
+      "verification": "execution",
+      "notes": "Chain run 2026-11-16 (PR260000000004860 → PO260000000007002 → DO 01309H005M2600503 → FN260000000005402 → SD260000000002402 → invoice → DN260000000004401). Starts from an approved RN (after dp-add-to-cart, or --input RN=…). If the PO shows Pending Partial Fulfilment, use fl-noncontract-partial-debit-note from KAT-049.",
+      "steps": [
+        "KAT-046",
+        "KAT-047",
+        {
+          "gate": "PO_LOOKUP"
+        },
+        "KAT-048",
+        "KAT-049",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-050",
+        "KAT-051",
+        "KAT-054",
+        "KAT-055"
+      ]
+    },
+    {
+      "id": "fl-noncontract-partial-debit-note",
+      "title": "Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval",
+      "verification": "execution",
+      "notes": "Memory debit-credit-note-procedure (verified 2026-11-16): services PO, delivery amount above the ordered amount; give --input PO=… of an acknowledged services PO.",
+      "steps": [
+        "KAT-049",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-050",
+        "KAT-051",
+        "KAT-052",
+        "KAT-053",
+        "KAT-054",
+        "KAT-056"
+      ]
+    },
+    {
+      "id": "fl-contract",
+      "title": "Contract fulfilment: CR → CO → delivery → FRN → invoice → payment",
+      "verification": "execution",
+      "notes": "Chain 2026-10-30..11-02: CR260000000005449 → CO260000000005848 → DO 01400K003S2600002 → FN260000000005203 → IN-CO… → payment. Needs the LA of a contract with approved FD and agreement (ct-fd-agreement).",
+      "steps": [
+        {
+          "gate": "CT_LOOKUP"
+        },
+        "KAT-057",
+        "KAT-058",
+        {
+          "gate": "CO_LOOKUP"
+        },
+        "KAT-059",
+        "KAT-060",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-061",
+        "KAT-062",
+        "KAT-063",
+        "KAT-064"
+      ]
+    }
+  ]
+}

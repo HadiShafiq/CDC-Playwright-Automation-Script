@@ -24,13 +24,13 @@ For automatic login, fill in the yellow Username and Password cells of `.auth/cr
 
 ## Low-memory machines
 - All Playwright browsers start with `config/low-memory-chromium-args.json`. `--disable-gpu` is the main saving: one SIT tab measured 789 MB → 612 MB.
-- Workers = free RAM in GB (1 to 3). Override with `WORKERS=n`.
+- One worker by default (most tests change SIT data). `WORKERS=n` allows more, capped by free RAM in GB.
 - Video is off by default. Use `VIDEO=1` to record failures.
 - `npm run browser:sit` starts the kept-open browser **detached**, so closing the terminal doesn't close it.
 - `npm run browsers:mem` shows Playwright browser memory. `npm run browsers:kill` closes Playwright browsers only, never your own Chrome.
 
 ## Outputs
-- `evidence/<ENV>/<CR>/<Scenario>/<RunId>/`: numbered checkpoint screenshots, `summary.md` and `summary.json`. On failure it also holds `failure_details.png` and `failure_dom.html`.
+- `evidence/<ENV>/<CR>/<Scenario>/<RunId>/`: numbered checkpoint screenshots, `summary.md` and `summary.json`. On failure it also holds `<prefix>_FAILURE_<time>.png` and `failure_dom.html`. Screenshot names follow `CR_Scenario_Module_Lang_StepNN_Action_yyyyMMdd_HHmmss_xxxx.png`.
 - `reports/<ENV>/<RunId>/`: `execution-report.csv` (opens in Excel), `execution-summary.md`, `results.json`, `junit.xml`
 - `reports/html/`: Playwright HTML report with traces for failed tests
 - `knowledge/`: application map, repair log, defect register, data-change audit
@@ -59,4 +59,4 @@ test('Blank value is rejected', scenario({
 - Locators, in this order: `getByRole` → `getByLabel` → `getByPlaceholder` → `getByTestId` → `byJsfIdSuffix` → XPath (only with a reason).
 - After every PrimeFaces action, call `waitForAjaxIdle(page)` or `clickAndSettle()`. Don't use `waitForTimeout` or `force: true`.
 - Multi-step workflows: use `test.describe.configure({ mode: 'serial' })`. Wrap shared records in `withDataLock('record-key', ...)`.
-- Runs use 3 workers and `retries: 0`. Blind retries could submit a transaction twice.
+- Runs use 1 worker and `retries: 0`. Blind retries could submit a transaction twice.

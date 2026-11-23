@@ -3,6 +3,8 @@ import path from 'node:path';
 import { test as base, expect, type Page, type TestDetails } from '@playwright/test';
 import { getEnv, type EnvConfig } from '../config/environments';
 import { redactUrl, sensitiveMasks } from '../support/redact';
+import { randomBytes } from 'node:crypto';
+import { language, stampMy } from '../support/core/context';
 
 export interface ScenarioMeta {
   cr: string;
@@ -71,10 +73,14 @@ export const test = base.extend<Fixtures>({
     page.on('response', (r) => r.status() >= 500 && networkFailures.push(`${r.status()} ${r.request().method()} ${redactUrl(r.url())}`));
 
     let counter = 0;
+    // Unique, meaningful names: CR_Scenario_Module_Lang_StepNN_Action_yyyyMMdd_HHmmss_xxxx.png (no secrets: only
+    // annotation values and the caller's action name go in). The random suffix keeps retries/workers apart.
+    const part = (s: string, max = 40) => s.replace(/[^\w-]+/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '').slice(0, max) || 'NA';
+    const prefix = [cr, id, annotation('module'), language()].map((s) => part(s)).join('_');
     const evidence: Evidence = {
       dir,
       async capture(name, info) {
-        const file = `${String(++counter).padStart(2, '0')}_${name.replace(/[^\w-]+/g, '_')}.png`;
+        const file = `${prefix}_Step${String(++counter).padStart(2, '0')}_${part(name, 50)}_${stampMy()}_${randomBytes(2).toString('hex')}.png`;
         const target = info.page ?? page;
         await target.screenshot({ path: path.join(dir, file), mask: sensitiveMasks(target), animations: 'disabled' });
         steps.push({ file, step: info.step, expected: info.expected ?? '', actual: info.actual ?? '' });
@@ -93,8 +99,9 @@ export const test = base.extend<Fixtures>({
     await use(evidence);
 
     const failed = testInfo.status !== testInfo.expectedStatus;
+    const failureShot = `${prefix}_FAILURE_${stampMy()}_${randomBytes(2).toString('hex')}.png`;
     if (failed && !page.isClosed()) {
-      await page.screenshot({ path: path.join(dir, 'failure_details.png'), mask: sensitiveMasks(page) }).catch(() => {});
+      await page.screenshot({ path: path.join(dir, failureShot), mask: sensitiveMasks(page) }).catch(() => {});
       fs.writeFileSync(path.join(dir, 'failure_dom.html'), await page.content().catch(() => ''));
     }
     const summary = {
@@ -129,7 +136,7 @@ export const test = base.extend<Fixtures>({
         '| Screenshot | Step | Expected | Actual |',
         '|---|---|---|---|',
         ...steps.map((s) => `| ${s.file} | ${s.step} | ${s.expected} | ${s.actual} |`),
-        ...(failed ? ['', '| failure_details.png | Failure state | | |', '', '```', summary.error ?? '', '```'] : []),
+        ...(failed ? ['', `| ${failureShot} | Failure state | | |`, '', '```', summary.error ?? '', '```'] : []),
       ].join('\n'),
     );
     testInfo.annotations.push({ type: 'evidence', description: dir }, { type: 'actual', description: summary.actual });

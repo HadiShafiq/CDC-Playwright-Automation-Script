@@ -1,0 +1,762 @@
+{
+  "module": "direct-loa",
+  "name": "Direct LOA",
+  "description": "Letter of Acceptance created directly (PK7 quotation/tender: one-off, schedule, open, zonal) or from a DP Request Note; supplier acceptance; Desk Officer verification. A verified LOA feeds CT.",
+  "steps": {
+    "KAT-001": {
+      "title": "Create Direct LOA: Direct LOA One-Off - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-001 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-11-11_154409"
+      }
+    },
+    "KAT-002": {
+      "title": "Create Direct LOA: Direct LOA One-Off - Services",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-002 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-11-11_160032"
+      }
+    },
+    "KAT-003": {
+      "title": "Create Direct LOA: Direct LOA One-Off - Product Plus Service",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-003 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_123329"
+      }
+    },
+    "KAT-004": {
+      "title": "Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-004 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_125640"
+      }
+    },
+    "KAT-005": {
+      "title": "Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-005 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_134751"
+      }
+    },
+    "KAT-006": {
+      "title": "Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-006 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_130321"
+      }
+    },
+    "KAT-011": {
+      "title": "Create Direct LOA: Open Open Direct LOA One-Off - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-011 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_135403"
+      }
+    },
+    "KAT-012": {
+      "title": "Create Direct LOA: Open Open Direct LOA One-Off - Services",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-012 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_140102"
+      }
+    },
+    "KAT-013": {
+      "title": "Create Direct LOA: Open Open Direct LOA One-Off - Product Plus Service",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-013 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_140624"
+      }
+    },
+    "KAT-014": {
+      "title": "Create Direct LOA: Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-014 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_141409"
+      }
+    },
+    "KAT-015": {
+      "title": "Create Direct LOA: Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Service",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-015 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_142125"
+      }
+    },
+    "KAT-016": {
+      "title": "Create Direct LOA: Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-016 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_142649"
+      }
+    },
+    "KAT-017": {
+      "title": "Create Direct LOA: Zonal Direct LOA One-Off - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-017 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_150838"
+      }
+    },
+    "KAT-018": {
+      "title": "Create Direct LOA: Zonal Direct LOA One-Off - Services",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-018 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_151615"
+      }
+    },
+    "KAT-019": {
+      "title": "Create Direct LOA: Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-019 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_153607"
+      }
+    },
+    "KAT-020": {
+      "title": "Create Direct LOA: Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Services",
+      "role": "Requisitioner",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is successfully submitted"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "Letter of Acceptance submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-020 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_155833"
+      }
+    },
+    "KAT-007": {
+      "title": "Supplier acknowledges Direct LOA - Product",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is acknowledged"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_ACKNOWLEDGED",
+        "description": "LOA acknowledged (accepted) by the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-007 waits for 'is acknowledged'; passed SIT 2026-10-30_153952"
+      }
+    },
+    "KAT-008": {
+      "title": "Supplier acknowledges Direct LOA - Services",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is acknowledged"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_ACKNOWLEDGED",
+        "description": "LOA acknowledged (accepted) by the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-008 waits for 'is acknowledged'; passed SIT 2026-11-11_161844"
+      }
+    },
+    "KAT-009": {
+      "title": "Supplier acknowledges Direct LOA - Global (product + services)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "is acknowledged"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_ACKNOWLEDGED",
+        "description": "LOA acknowledged (accepted) by the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-009 waits for 'is acknowledged'; passed SIT 2026-10-30_143034"
+      }
+    },
+    "KAT-010": {
+      "title": "Desk Officer verifies the LOA",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LA_VERIFIED",
+        "description": "LOA verified by the Desk Officer",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "KAT-010 does not wait for a success message; passed SIT 2026-10-30_154320 (completion only)"
+      }
+    },
+    "KAT-025": {
+      "title": "Prepare LOA from an approved Request Note (DP-LOA route)",
+      "role": "Requisitioner (LOA officer)",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "RN"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "submitted successfully"
+        }
+      ],
+      "checkpoint": {
+        "id": "LA_SUBMITTED",
+        "description": "LOA submitted to the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "KAT-025 waits for 'submitted successfully'; next task ASSIGNED to 710527085562 on 2026-11-13; passed SIT 2026-11-13_152341"
+      }
+    },
+    "KAT-026": {
+      "title": "Supplier accepts the LOA (DP-LOA route)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-022"
+      },
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LA_ACKNOWLEDGED",
+        "description": "LOA accepted by the supplier",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script; the supplier is the KAT-022 account that replied to the SQ (data-overrides 2026-11-13); passed SIT 2026-11-13_152822"
+      }
+    },
+    "KAT-027": {
+      "title": "Desk Officer verifies the LOA (DP-LOA route)",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "inputs": [
+        {
+          "var": "Document_Number",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LA_VERIFIED",
+        "description": "LOA verified",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "unverified",
+        "evidence": "No success message in the script; Verify LOA ASSIGNED to 710527085562 on 2026-11-13; passed SIT 2026-11-13_153001"
+      }
+    }
+  },
+  "flows": [
+    {
+      "id": "dloa-oneoff-product",
+      "title": "Direct LOA Direct LOA One-Off - Product → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-001 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-001",
+        "KAT-007",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-oneoff-services",
+      "title": "Direct LOA Direct LOA One-Off - Services → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-002 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-002",
+        "KAT-008",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-oneoff-product-services",
+      "title": "Direct LOA Direct LOA One-Off - Product Plus Service → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-003 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-003",
+        "KAT-009",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-schedule-product",
+      "title": "Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-004 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-004",
+        "KAT-007",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-schedule-services",
+      "title": "Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-005 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-005",
+        "KAT-008",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-schedule-product-services",
+      "title": "Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-006 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-006",
+        "KAT-009",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-open-oneoff-product",
+      "title": "Direct LOA Open Open Direct LOA One-Off - Product → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-011 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-011",
+        "KAT-007",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-open-oneoff-services",
+      "title": "Direct LOA Open Open Direct LOA One-Off - Services → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-012 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-012",
+        "KAT-008",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-open-oneoff-product-services",
+      "title": "Direct LOA Open Open Direct LOA One-Off - Product Plus Service → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-013 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-013",
+        "KAT-009",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-open-schedule-product",
+      "title": "Direct LOA Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-014 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-014",
+        "KAT-007",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-open-schedule-services",
+      "title": "Direct LOA Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-015 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-015",
+        "KAT-008",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-open-schedule-product-services",
+      "title": "Direct LOA Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-016 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-016",
+        "KAT-009",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-zonal-oneoff-product",
+      "title": "Direct LOA Zonal Direct LOA One-Off - Product → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-017 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-017",
+        "KAT-007",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-zonal-oneoff-services",
+      "title": "Direct LOA Zonal Direct LOA One-Off - Services → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-018 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-018",
+        "KAT-008",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-zonal-schedule-product",
+      "title": "Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-019 = company of the KAT-007 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-019",
+        "KAT-007",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-zonal-schedule-services",
+      "title": "Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Services → supplier → DO verify",
+      "verification": "documentation",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-020 = company of the KAT-008 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account.",
+      "steps": [
+        "KAT-020",
+        "KAT-008",
+        "KAT-010"
+      ]
+    },
+    {
+      "id": "dloa-from-dp-rn",
+      "title": "Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify",
+      "verification": "execution",
+      "notes": "Chain run 2026-11-11..13: SQ260000000002309 → RN260000000004702 → LA260000000004130 (KAT-025/026/027 passed). LOA route needs a Services SQ with fulfilment Schedule/As And When (memory dp-loa-route-rule).",
+      "steps": [
+        "KAT-021",
+        {
+          "gate": "SQ_START_SQL"
+        },
+        "KAT-022",
+        {
+          "gate": "SQ_END_SQL"
+        },
+        "KAT-023",
+        "KAT-024",
+        "KAT-025",
+        "KAT-026",
+        "KAT-027"
+      ],
+      "variables": {
+        "KAT-021": {
+          "Fulfilmenttype": 2
+        }
+      }
+    }
+  ]
+}
