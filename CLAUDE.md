@@ -17,7 +17,8 @@ Read `docs/phase1-plan.md` first: it is the live plan (stage, done, open, blocke
 - **Live dates only** (user rule 2026-11-23): every date/time a step uses comes from the live date. Use the tokens of
   `support/katalon/runtime.ts` in `data-overrides.json`: `{yyyy-MM-dd}`, `{yyyy-MM-dd+30d}`, `{MI+1m}`/`{YI+1m}` (schedule month/year
   index); they win over the Excel rows. SQ gates use the next quarter hour. Unit test: `tests/unit/live-dates.spec.ts`.
-- No credentials in git, logs, screenshots or chat. Playwright traces are off (they record typed passwords). They live in `.auth/` (git-ignored).
+- No credentials in git, logs, screenshots or chat; they live in `.auth/` (git-ignored). Playwright traces are off by
+  default because they record typed passwords (`TRACE=1` only for debugging, then delete `test-results/`).
 
 ## Layout
 | Path | What |
