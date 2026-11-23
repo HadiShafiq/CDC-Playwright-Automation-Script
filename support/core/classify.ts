@@ -36,6 +36,10 @@ export function classify(error: string, messages: AppMessage[] = []): Classifica
     [/Target page, context or browser has been closed|Test was interrupted|SIGINT|SIGTERM/i, 'INTERRUPTED', 'medium', 'the run was stopped or the browser closed'],
   ];
   for (const [re, cls, conf, because] of rules) if (re.test(e)) return { class: cls, confidence: conf, because };
+  // ERR-000001 "Error encountered processing your last request! Please try again later…" is SIT's generic server error
+  // (seen 2026-11-23 on KAT-010): not a business rule. Retry later; report as a defect candidate if it repeats.
+  if (errCode === 'ERR-000001')
+    return { class: 'ENVIRONMENT', confidence: 'medium', because: `SIT server error ERR-000001 ("${appErrors[0].text.slice(0, 120)}"): retry later; a defect candidate if it repeats on the same document` };
   if (errCode) return { class: 'APPLICATION_VALIDATION', confidence: 'medium', because: `the application showed ${errCode}: ${appErrors[0].text.slice(0, 200)}` };
   if (/Timeout \d+ms exceeded|waiting for locator|strict mode violation|element is not (visible|enabled|attached)|not clickable|Element not found|Unable to find/i.test(e))
     return { class: 'LOCATOR_OR_TIMING', confidence: 'low', because: 'an element was not found or not ready in time (could also be a slow SIT)' };
