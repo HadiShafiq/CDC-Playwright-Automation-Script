@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import type { Page, TestInfo } from '@playwright/test';
 import { test, scenario } from '../../fixtures/flow';
@@ -188,6 +189,28 @@ async function runGate(ctx: ItemCtx, gate: GateDef) {
   await block(ctx, `GATE ${gate.id} — ${gate.title}. ${fill(gate.instructions, s)}${why} When done: npm run qa -- gate --run ${s.flowRunId} --gate ${gate.id} --done`);
 }
 
+/**
+ * Memory guard (2026-11-23: a batch was killed mid-step when the PC ran low on memory). Before a step starts, wait
+ * until at least QA_MIN_FREE_GB (default 1.2 GB) is free, checking every 30 s for up to QA_MEMORY_WAIT_MIN (default
+ * 10) minutes; if memory stays low, stop BETWEEN steps (BLOCKED, resumable) instead of risking a kill mid-step.
+ */
+async function waitForMemory(ctx: ItemCtx, step: StepDef) {
+  const min = Number(process.env.QA_MIN_FREE_GB ?? 1.2);
+  const deadline = Date.now() + Number(process.env.QA_MEMORY_WAIT_MIN ?? 10) * 60_000;
+  const freeGb = () => os.freemem() / 1024 ** 3;
+  let warned = false;
+  while (freeGb() < min) {
+    if (Date.now() > deadline)
+      await block(ctx, `LOW MEMORY before ${step.id}: only ${freeGb().toFixed(1)} GB free (need ${min} GB). Close some apps (e.g. browser tabs), then: npm run qa -- resume --env sit --run ${ctx.flowRunId}`);
+    if (!warned) {
+      ctx.evidence.log(`Waiting for memory before ${step.id}: ${freeGb().toFixed(1)} GB free, need ${min} GB`);
+      emit(ctx.flowRunId, ctx.flow.id, 'note', { item: step.id, text: `waiting for memory (${freeGb().toFixed(1)} GB free)` });
+      warned = true;
+    }
+    await new Promise((r) => setTimeout(r, 30_000));
+  }
+}
+
 function officerFromOverrides(stepId: string): string | undefined {
   return (overrides as unknown as Record<string, Record<string, unknown>>)[stepId]?._officer as string | undefined;
 }
@@ -238,6 +261,8 @@ async function runStep(ctx: ItemCtx, step: StepDef) {
     login = { accountOf: step.login.accountOf };
     loginNote = `account of ${step.login.accountOf}`;
   }
+
+  await waitForMemory(ctx, step);
 
   const attemptStart = nowMy();
   await updateRunState(ctx.flowRunId, (x) => {

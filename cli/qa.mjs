@@ -330,6 +330,7 @@ function watchEvents(env, flowRunId, f, started) {
       else if (e.type === 'step-skip') console.log(`${t} ${dim(`· skip ${e.item}: ${e.why}`)}`);
       else if (e.type === 'flow-start') console.log(`${t} ${bold(e.resumed ? 'resumed' : 'started')} ${e.flowId} (${e.language})`);
       else if (e.type === 'flow-end') console.log(`${t} ${bold('flow ended')} ${statusColor(e.status)}`);
+      else if (e.type === 'note') console.log(`${t} ${yellow('…')} ${e.item ?? ''} ${e.text ?? ''}`);
     }
   };
   const h = setInterval(tick, 500);

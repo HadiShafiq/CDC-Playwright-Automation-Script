@@ -20,10 +20,14 @@
     "FileReference1": "Test{MMddHHmmss}"
   },
   "KAT-004": {
-    "_why": "File Reference No. unique (ERR-700027); LOA price 200000 < 1 product line x 10 x 30000 = 300000 (ERR-700125); supplier = company of KAT-007 account MOFFLROSNEW3",
+    "_why": "File Reference No. unique (ERR-700027); LOA price 200000 < 1 product line x 10 x 30000 = 300000 (ERR-700125); supplier = company of KAT-007 account MOFFLROSNEW3; Fulfilment Schedule (2026-11-23, ERR-760348 \"End date should be in contract validity period\"): Katalon defaults Jan-Oct 2026 (month index 1-10) fell outside a 2-month contract starting today; row 1 = this month, row 2 = next month (month index = month number, year index 1 = current year; inferred from the 2026-10-30 pass, not yet verified)",
     "FileReference1": "Test{MMddHHmmss}",
     "LOAOfferedPrice": "300000",
-    "SupplierName": "MOF FL Organization JPPM - New 3"
+    "SupplierName": "MOF FL Organization JPPM - New 3",
+    "StartMonth": "{M}",
+    "EndMonth": "{M}",
+    "StartMonth2": "{M+31d}",
+    "EndMonth2": "{M+31d}"
   },
   "KAT-005": {
     "_why": "File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6; ZoneLocation 2 (No): the suite data is Non-Zonal-Schedule-Service-PK7, and with zone Yes the service quantity/price are per-zone popups the script does not fill; ContractPeriod 24 months: the schedule data ends in year 2 (EndYear2=2) but a 2-month contract only offers the current year; LOA price 300000: with 24 months the service items total 288,000 > 200,000 (ERR-700125)",
