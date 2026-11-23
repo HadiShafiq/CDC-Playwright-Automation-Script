@@ -164,7 +164,15 @@ const fill = (text: string, s: RunState) =>
 async function runGate(ctx: ItemCtx, gate: GateDef) {
   const s = readRunState(ctx.flowRunId)!;
   guard(ctx, s);
-  const g = s.gates[gate.id];
+  let g = s.gates[gate.id];
+  // A lookup gate whose documents the tester already gave (--input) needs no second answer.
+  if (!g?.done && gate.type === 'lookup' && gate.provides?.length && gate.provides.every((d) => s.docs[d])) {
+    const values = Object.fromEntries(gate.provides.map((d) => [d, s.docs[d]!]));
+    g = { done: true, by: `${s.tester} (--input)`, at: nowMy(), values };
+    await updateRunState(ctx.flowRunId, (x) => {
+      x.gates[gate.id] = g!;
+    });
+  }
   if (g?.done) {
     const missing = (gate.provides ?? []).filter((d) => !s.docs[d]);
     if (missing.length) await block(ctx, `GATE ${gate.id} is marked done but ${missing.join(', ')} was not given. ${fill(gate.instructions, s)}`);

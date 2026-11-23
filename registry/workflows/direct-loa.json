@@ -502,8 +502,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-025 waits for 'submitted successfully'; next task ASSIGNED to 710527085562 on 2026-11-13; passed SIT 2026-11-13_152341"
+        "verification": "execution",
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:19:39: \"Letter of Acceptance (LOA) LA260000000004215 is submitted successfully.\" as officer 710527085562"
       }
     },
     "KAT-026": {
@@ -519,7 +519,12 @@
           "doc": "LA"
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "Letter Of Acceptance.*is accepted successfully"
+        }
+      ],
       "checkpoint": {
         "id": "LA_ACKNOWLEDGED",
         "description": "LOA accepted by the supplier",
@@ -527,8 +532,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script; the supplier is the KAT-022 account that replied to the SQ (data-overrides 2026-11-13); passed SIT 2026-11-13_152822"
+        "verification": "execution",
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:20:35: \"Letter Of Acceptance LA260000000004215 is accepted successfully.\" as the KAT-022 supplier account"
       }
     },
     "KAT-027": {
@@ -542,7 +547,12 @@
           "doc": "LA"
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "doc": "LA",
+          "message": "Letter of Acceptance.*is completed"
+        }
+      ],
       "checkpoint": {
         "id": "LA_VERIFIED",
         "description": "LOA verified",
@@ -550,8 +560,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script; Verify LOA ASSIGNED to 710527085562 on 2026-11-13; passed SIT 2026-11-13_153001"
+        "verification": "execution",
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:22:07: \"Letter of Acceptance (LOA) LA260000000004215 is completed.\" as officer 710527085562"
       }
     }
   },
@@ -736,7 +746,7 @@
       "id": "dloa-from-dp-rn",
       "title": "Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify",
       "verification": "execution",
-      "notes": "Chain run 2026-11-11..13: SQ260000000002309 → RN260000000004702 → LA260000000004130 (KAT-025/026/027 passed). LOA route needs a Services SQ with fulfilment Schedule/As And When (memory dp-loa-route-rule).",
+      "notes": "Verified end to end by Phase 1 flow run dloa-from-dp-rn_20261123-155431 (2026-11-23, 26 min incl. SQL gates): SQ260000000002363 → RN260000000004908 → LA260000000004215 (completed). Officers: approve RN 690127065209, LOA + verify 710527085562. Chain run 2026-11-11..13: SQ260000000002309 → RN260000000004702 → LA260000000004130 (KAT-025/026/027 passed). LOA route needs a Services SQ with fulfilment Schedule/As And When (memory dp-loa-route-rule).",
       "steps": [
         "KAT-021",
         {

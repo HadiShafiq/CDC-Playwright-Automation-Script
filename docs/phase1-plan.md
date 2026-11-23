@@ -40,7 +40,8 @@ Architecture decisions (Claude, within the approved plan):
 | Step bodies identical to baseline | VERIFIED | node diff 2026-11-23: 64/64 identical |
 | Typecheck, Playwright loads 346 tests | VERIFIED | `npm run typecheck`, `playwright test --list` |
 | `qa doctor --env sit` | VERIFIED | all 14 checks PASS 2026-11-23 15:53 |
-| First flow run on SIT | IN PROGRESS | `dloa-from-dp-rn` |
+| Flow dloa-from-dp-rn (SQ → DP → Direct LOA) | **VERIFIED end to end** | run dloa-from-dp-rn_20261123-155431: SQ260000000002363 → RN260000000004908 → LA260000000004215 completed; 9/9 items, KAT-021..027 success messages observed; 2 SQL gates run by Claude with permission |
+| Quarter-hour SQ rule | VERIFIED | END 16:15 → SC_QUOTE.CHANGED_DATE 16:16:00 |
 | Displayed statuses (EN/BM) | NOT VERIFIED | none read on screen yet |
 | Resume after interruption | NOT VERIFIED | |
 | BM | NOT STARTED | D4 |
@@ -53,4 +54,7 @@ Architecture decisions (Claude, within the approved plan):
 - Displayed status text per checkpoint is unknown until read on screen (Task Status Search / document lists).
 
 ## Next action
-See the bottom of this file (updated after each run).
+1. ct-fd-agreement with --input LA=LA260000000004215 (FD, agreement, amendment).
+2. fl-contract from that contract; dp-sq-pr / dp-add-to-cart → fl-noncontract.
+3. Remaining Direct LOA flows (16), then dp-compare, dp-assign-code, sq-product*.
+4. Officer lookup via Task Status Search (replace data-overrides fallback).
