@@ -17,7 +17,7 @@
       "outputs": [
         {
           "doc": "CT",
-          "message": "is successfully submitted to Contract Approver"
+          "message": "Fulfilment Details Creation.*is successfully submitted to Contract Approver"
         }
       ],
       "checkpoint": {
@@ -27,8 +27,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-040 waits for 'is successfully submitted to Contract Approver.' and reads CT\\d+; passed SIT 2026-10-30_171540. Performance bond date = run date + 180 d (data-overrides)"
+        "verification": "execution",
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:56:13: \"Fulfilment Details Creation CT260000000002293 is successfully submitted to Contract Approver.\" from LA260000000004216 (Direct LOA). Needs a contract of ~6+ months (failed on a 2-month DP-route LOA, run ct-fd-agreement_20261123-162306)"
       }
     },
     "KAT-041": {
@@ -45,7 +45,7 @@
       "outputs": [
         {
           "doc": "CT",
-          "message": "is approved"
+          "message": "Fulfilment Details Creation.*is approved"
         }
       ],
       "checkpoint": {
@@ -55,8 +55,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "KAT-041 waits for 'is approved'. Its Katalon default Document_Number is 690127065209 (an officer ID; the real value came from the Excel row): whether the My Task filter needs the CT or the LA number is not verified"
+        "verification": "execution",
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:56:58: \"Fulfilment Details Creation CT260000000002293 is approved.\" — My Task filter takes the CT number (verified)"
       }
     },
     "KAT-042": {
@@ -73,7 +73,7 @@
       "outputs": [
         {
           "doc": "CT",
-          "message": "is successfully submitted to Contract Approver"
+          "message": "Agreement.*is successfully submitted to Contract Approver"
         }
       ],
       "checkpoint": {
@@ -83,8 +83,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-042 waits for 'is successfully submitted to Contract Approver'; Katalon default input is an LA number; passed SIT 2026-10-30_172225"
+        "verification": "execution",
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:58:15: \"Agreement CT260000000002293 is successfully submitted to Contract Approver.\" (input: the LA number)"
       }
     },
     "KAT-043": {
@@ -101,7 +101,7 @@
       "outputs": [
         {
           "doc": "CT",
-          "message": "is approved"
+          "message": "Agreement.*is approved"
         }
       ],
       "checkpoint": {
@@ -111,8 +111,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-043 waits for 'is approved.'; Katalon default input is a CT number; passed SIT 2026-10-30_172359"
+        "verification": "execution",
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:59:01: \"Agreement CT260000000002293 is approved.\""
       }
     },
     "KAT-044": {
@@ -139,9 +139,9 @@
       }
     },
     "KAT-045": {
-      "title": "Contract Amendment with Supplement",
+      "title": "Contract Amendment with Supplement: fill the form (the Katalon script never submits)",
       "role": "Contract Administrator",
-      "stateChanging": true,
+      "stateChanging": false,
       "login": {
         "accountOf": "KAT-040"
       },
@@ -153,14 +153,14 @@
       ],
       "outputs": [],
       "checkpoint": {
-        "id": "CT_AMENDED",
-        "description": "Amendment with supplement submitted",
+        "id": "AMENDMENT_FORM_FILLED",
+        "description": "Amendment form filled (NOT submitted: the Katalon script has no Save/Submit)",
         "displayedStatus": {
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script; passed SIT 2026-11-02_114434 on CT260000000002209 as the KAT-040 account"
+        "verification": "source",
+        "evidence": "support/katalon/steps/KAT-045.ts ends after the upload; no Save/Submit click anywhere (only the login submit). SIT run ct-fd-agreement_20261123-165421 2026-11-23 17:00:05 finished with no application message. Submitting the amendment needs a business decision (expected result) from the user."
       }
     }
   },
@@ -168,8 +168,8 @@
     {
       "id": "ct-fd-agreement",
       "title": "Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment",
-      "verification": "documentation",
-      "notes": "2026-10-30 chain: LA260000000004032 → FD CT260000000002209 (KAT-040/041) → agreement (KAT-042/043) → amendment (KAT-045, 2026-11-02). Start after a Direct LOA flow that reached LA_VERIFIED, or give --input LA=…. DATA RULE (run ct-fd-agreement_20261123-162306): KAT-040 fills 2 payment schedules with month index 5 (Katalon defaults), so the LOA contract must span at least ~6 months; a DP-route LOA from a 1-month SQ (LA260000000004215, Nov-Dec 2026) fails at fromMonth_0. Use an LOA from a Direct LOA flow (e.g. dloa-oneoff-services).",
+      "verification": "execution",
+      "notes": "Verified by Phase 1 run ct-fd-agreement_20261123-165421 (2026-11-23): LA260000000004216 → FD CT260000000002293 submitted+approved → agreement submitted+approved; amendment form filled only (script never submits). 2026-10-30 chain: LA260000000004032 → FD CT260000000002209 (KAT-040/041) → agreement (KAT-042/043) → amendment (KAT-045, 2026-11-02). Start after a Direct LOA flow that reached LA_VERIFIED, or give --input LA=…. DATA RULE (run ct-fd-agreement_20261123-162306): KAT-040 fills 2 payment schedules with month index 5 (Katalon defaults), so the LOA contract must span at least ~6 months; a DP-route LOA from a 1-month SQ (LA260000000004215, Nov-Dec 2026) fails at fromMonth_0. Use an LOA from a Direct LOA flow (e.g. dloa-oneoff-services).",
       "steps": [
         {
           "gate": "LA_LOOKUP"

@@ -41,12 +41,16 @@ Architecture decisions (Claude, within the approved plan):
 | Typecheck, Playwright loads 346 tests | VERIFIED | `npm run typecheck`, `playwright test --list` |
 | `qa doctor --env sit` | VERIFIED | all 14 checks PASS 2026-11-23 15:53 |
 | Flow dloa-from-dp-rn (SQ → DP → Direct LOA) | **VERIFIED end to end** | run dloa-from-dp-rn_20261123-155431: SQ260000000002363 → RN260000000004908 → LA260000000004215 completed; 9/9 items, KAT-021..027 success messages observed; 2 SQL gates run by Claude with permission |
+| Flow dloa-oneoff-services | **VERIFIED** | LA260000000004216 (attempt 2 after signer-timing fix) |
+| Flow ct-fd-agreement | **VERIFIED** (amendment: form only) | LA260000000004216 → CT260000000002293 FD + agreement approved; first attempt on a 2-month DP LOA failed (data) |
 | Quarter-hour SQ rule | VERIFIED | END 16:15 → SC_QUOTE.CHANGED_DATE 16:16:00 |
 | Displayed statuses (EN/BM) | NOT VERIFIED | none read on screen yet |
 | Resume after interruption | NOT VERIFIED | |
 | BM | NOT STARTED | D4 |
 
 ## Open questions / blockers
+- **KAT-045 Amendment never submits** (original Katalon gap). Should the amendment be submitted, and what is the expected result? (user decision)
+- Security: Playwright traces recorded typed passwords; traces now off by default (TRACE=1), old traces deleted. User advised to consider changing the exposed SIT test password.
 - Each SQ cycle needs the user's SQL twice (SQ_START_SQL, SQ_END_SQL) — gate, by design.
 - PO/CO numbers come only after iGFMAS (up to ~1 h) and are found in the DB — PO_LOOKUP/CO_LOOKUP gates.
 - Steps run by "the officer SIT assigned" fall back to the officer seen in an earlier run (data-overrides);
