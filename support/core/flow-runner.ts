@@ -152,8 +152,13 @@ function guard(ctx: ItemCtx, s: RunState) {
 const fill = (text: string, s: RunState) =>
   text
     .replace(/\{RUN\}/g, s.flowRunId)
-    // Malaysia time one hour ago, as 'YYYY-MM-DD HH24:MI:SS' for TO_DATE
-    .replace(/\{NOW_MINUS_1H\}/g, new Date(Date.now() + 7 * 3600_000).toISOString().slice(0, 19).replace('T', ' '))
+    // Nearest upcoming quarter hour in Malaysia time (:00/:15/:30/:45), as 'YYYY-MM-DD HH24:MI:SS' for TO_DATE.
+    // User rule 2026-11-23: SIT processes Simple Quote dates on the quarter hour.
+    .replace(/\{NEXT_QUARTER\}/g, () => {
+      const q = 15 * 60_000;
+      const t = Math.ceil((Date.now() + 8 * 3600_000) / q) * q;
+      return new Date(t).toISOString().slice(0, 19).replace('T', ' ');
+    })
     .replace(/\{([A-Z]{2}(?:\|[A-Z]{2})*)\}/g, (_m, types: string) => types.split('|').map((t) => s.docs[t as DocType]).find(Boolean) ?? `<${types}>`);
 
 async function runGate(ctx: ItemCtx, gate: GateDef) {

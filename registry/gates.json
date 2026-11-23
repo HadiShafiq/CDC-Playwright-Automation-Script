@@ -1,20 +1,20 @@
 {
   "SQ_START_SQL": {
     "type": "sql",
-    "title": "Open the Simple Quote now (move START_DATE to the past)",
+    "title": "Open the Simple Quote at the next quarter hour (START_DATE)",
     "needs": [
       "SQ"
     ],
-    "instructions": "In DBeaver (SIT connection only), the user's SQL with START_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('{NOW_MINUS_1H}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('{SQ}');  Do NOT change END_DATE yet. Then wait until {SQ} shows in the supplier's Simple Quote Respond list.",
+    "instructions": "In DBeaver (SIT connection only), the user's SQL with START_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('{NEXT_QUARTER}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('{SQ}');  Do NOT change END_DATE yet. Then wait until {SQ} shows in the supplier's Simple Quote Respond list. Time rule (user, 2026-11-23): always the nearest upcoming quarter hour (:00, :15, :30, :45), e.g. 16:04 → 16:15; SIT processes SQ dates on the quarter (CHANGED_DATE = END_DATE + 1 min for SQ…2305/2309).",
     "source": "User SQL template (2026-11-23: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE/END_DATE = TO_DATE(..) WHERE mp.QUOTE_NO IN (..)) + memory sq-date-sql-procedure (START first, END after the reply)"
   },
   "SQ_END_SQL": {
     "type": "sql",
-    "title": "Close the Simple Quote (move END_DATE to the past) — only after the supplier replied",
+    "title": "Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied",
     "needs": [
       "SQ"
     ],
-    "instructions": "Only after the supplier replied. In DBeaver (SIT connection only), the user's SQL with END_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('{NOW_MINUS_1H}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('{SQ}');  Then wait until the Prepare Request Note task for {SQ} appears in the requisitioner's My Task.",
+    "instructions": "Only after the supplier replied. In DBeaver (SIT connection only), the user's SQL with END_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('{NEXT_QUARTER}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('{SQ}');  Then wait until the Prepare Request Note task for {SQ} appears in the requisitioner's My Task. Time rule (user, 2026-11-23): always the nearest upcoming quarter hour (:00, :15, :30, :45), e.g. 16:04 → 16:15; SIT processes SQ dates on the quarter (CHANGED_DATE = END_DATE + 1 min for SQ…2305/2309).",
     "source": "User SQL template (2026-11-23: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE/END_DATE = TO_DATE(..) WHERE mp.QUOTE_NO IN (..)) + memory sq-date-sql-procedure (START first, END after the reply)"
   },
   "PO_LOOKUP": {
