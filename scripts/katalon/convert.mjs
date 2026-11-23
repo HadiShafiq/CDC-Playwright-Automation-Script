@@ -137,8 +137,8 @@ const SELECT_SUPPLIER = "c(findTestObject('Object Repository/Direct LOA/1. Direc
 const REPAIRS = [
   {
     find: SELECT_SUPPLIER,
-    replace: `if (!WebUI.waitForElementNotVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 3, FailureHandling.OPTIONAL)) ${SELECT_SUPPLIER}`,
-    note: 'Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still open 3 s later (it raced before)',
+    replace: `if (!WebUI.waitForElementNotVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 10, FailureHandling.OPTIONAL) && WebUI.verifyElementVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), FailureHandling.OPTIONAL)) WebUI.click(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), FailureHandling.OPTIONAL)`,
+    note: 'Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still visible after up to 10 s, and never forced (2026-11-23 KAT-005: popup closed after the 3 s check, the forced click waited 30 s and failed)',
   },
   {
     // LOAs over RM500,000 a year open a GST notice on the supplier's Zone / Item page that blocks the Assign buttons.

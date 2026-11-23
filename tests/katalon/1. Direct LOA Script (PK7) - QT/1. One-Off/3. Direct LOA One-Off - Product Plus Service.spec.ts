@@ -9,7 +9,7 @@ import { run } from '../../../../support/katalon/steps/KAT-003';
  * Data:    test case defaults (no suite binds a data file)
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
- * Katalon step repaired: Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still open 3 s later (it raced before).
+ * Katalon step repaired: Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still visible after up to 10 s, and never forced (2026-11-23 KAT-005: popup closed after the 3 s check, the forced click waited 30 s and failed).
  * Katalon step repaired: ENHANCEMENT: before Submit, open Verification And Approval and pick the first approver when the LOA asks for one ("Approver is required", ERR-760315); the Katalon script never fills it.
  */
 test.describe('KAT-003 3. Direct LOA One-Off - Product Plus Service', () => {

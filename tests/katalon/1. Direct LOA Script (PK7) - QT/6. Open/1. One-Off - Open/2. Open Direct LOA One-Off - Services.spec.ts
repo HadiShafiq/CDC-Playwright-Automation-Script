@@ -9,7 +9,7 @@ import { run } from '../../../../../support/katalon/steps/KAT-012';
  * Data:    suite "Direct LOA Open/One-Off/Open_Direct_LOA_One-Off_Service" → Data Files/Direct LOA Open/Open_Direct_LOA_One-Off_Service (LOA_Variables_Open_Service_AP_201_One_Off.xlsx, sheet "Sheet1")
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
- * Katalon step repaired: Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still open 3 s later (it raced before).
+ * Katalon step repaired: Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still visible after up to 10 s, and never forced (2026-11-23 KAT-005: popup closed after the 3 s check, the forced click waited 30 s and failed).
  * Katalon step repaired: "uploadFilePath" was declared only in the Agreement = No branch but used by the LOA signer upload in every run; declared once at the top.
  * Katalon step repaired: ENHANCEMENT: before Submit, open Verification And Approval and pick the first approver when the LOA asks for one ("Approver is required", ERR-760315); the Katalon script never fills it.
  */

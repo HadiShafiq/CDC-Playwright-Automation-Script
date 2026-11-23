@@ -8,7 +8,7 @@ import { toInt, waitBlockUI, wVisible, c, t, up, selectDropdownByIndex } from '.
  * Data:    test case defaults (no suite binds a data file)
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
- * Katalon step repaired: Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still open 3 s later (it raced before).
+ * Katalon step repaired: Supplier popup: the double-click on the supplier row already selects it and closes the popup, so "Select" is clicked only if the popup is still visible after up to 10 s, and never forced (2026-11-23 KAT-005: popup closed after the 3 s check, the forced click waited 30 s and failed).
  * Katalon step repaired: ENHANCEMENT: before Submit, open Verification And Approval and pick the first approver when the LOA asks for one ("Approver is required", ERR-760315); the Katalon script never fills it.
  */
 export const meta = {"id":"KAT-003","name":"3. Direct LOA One-Off - Product Plus Service","katalonPath":"1. Direct LOA Script (PK7) - QT/1. One-Off/3. Direct LOA One-Off - Product Plus Service","folder":"1. Direct LOA Script (PK7) - QT / 1. One-Off","role":"TBD"} as const;
@@ -206,7 +206,7 @@ export async function run(): Promise<void> {
   await WebUI.delay(0.5)
   await WebUI.doubleClick(supplierRow, FailureHandling.OPTIONAL)
 
-  if (!await WebUI.waitForElementNotVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 3, FailureHandling.OPTIONAL)) await c(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 20)
+  if (!await WebUI.waitForElementNotVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 10, FailureHandling.OPTIONAL) && await WebUI.verifyElementVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), FailureHandling.OPTIONAL)) await WebUI.click(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), FailureHandling.OPTIONAL)
   await waitBlockUI(1)
   await WebUI.delay(2)
 
