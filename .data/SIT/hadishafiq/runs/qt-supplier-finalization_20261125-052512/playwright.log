@@ -1,0 +1,447 @@
+
+Running 1 test using 1 worker
+
+[05:25:21] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:25:21] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:25:25] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:25:31] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:25:33] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (14.6s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Evaluation task "Consolidate Report" is not mapped yet
+
+       at ..\support\modules\qt\ecphase.ts:328
+
+      326 |     for (const t of openTasks(qt).filter((x) => !SKIP.test(x.activity))) {
+      327 |       const h = HANDLERS.find(([re]) => re.test(t.activity));
+    > 328 |       if (!h) throw new Error(`Evaluation task "${t.activity}" is not mapped yet`);
+          |                     ^
+      329 |       if (done.has(t.taskId)) continue;
+      330 |       const user = t.claimedBy || t.assignees[0];
+      331 |       // BPM sometimes creates the task before naming its assignees: look again next round (ngep-runner skips these too)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:328:21)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:189:75)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:29)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_052512\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_052512\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:26:38] qt-supplier-finalization/01_QT-016: SELF-HEAL QT-016: retry once — the SIT DB still shows QT260000000004539 at null , as before the attempt
+[05:26:40] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:26:40] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:26:44] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:26:50] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:26:52] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (15.0s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Evaluation task "Consolidate Report" is not mapped yet
+
+       at ..\support\modules\qt\ecphase.ts:328
+
+      326 |     for (const t of openTasks(qt).filter((x) => !SKIP.test(x.activity))) {
+      327 |       const h = HANDLERS.find(([re]) => re.test(t.activity));
+    > 328 |       if (!h) throw new Error(`Evaluation task "${t.activity}" is not mapped yet`);
+          |                     ^
+      329 |       if (done.has(t.taskId)) continue;
+      330 |       const user = t.claimedBy || t.assignees[0];
+      331 |       // BPM sometimes creates the task before naming its assignees: look again next round (ngep-runner skips these too)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:328:21)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:189:75)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:29)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_052635\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_052635\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:31:33] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:31:33] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:31:37] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:31:39] qt-supplier-finalization/01_QT-016: QT-016: Consolidate Report -> 881204115188
+[05:31:41] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:31:41] qt-supplier-finalization/01_QT-016: QT-016: login 881204115188 (switch)
+[05:31:42] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 881204115188
+[05:31:52] qt-supplier-finalization/01_QT-016: QT-016: consolidation: 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:31:59] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (28.0s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Consolidation submit: Please give ranking to at least 1 suppliers - Item : PENSEL KAYU 2B BERPEMADAM (ERR-760384)
+
+       at ..\support\modules\qt\ecphase.ts:324
+
+      322 |   log(`consolidation: ${n} supplier(s) ranked; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+      323 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+    > 324 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Consolidation submit: ${msgs.join(' | ') || 'no message'}`);
+          |                                                              ^
+      325 | }
+      326 |
+      327 | async function approveCommittee(ctx: EcCtx, qt: string) {
+        at Array.consolidateReport (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:324:62)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:372:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_053125\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_053125\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:33:04] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-760384: Please give ranking to at least 1 suppliers - Item : PENSEL KAYU 2B BERPEMADAM (ERR-760384)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+[05:35:41] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:35:41] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:35:44] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:35:46] qt-supplier-finalization/01_QT-016: QT-016: Consolidate Report -> 881204115188
+[05:35:48] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:35:48] qt-supplier-finalization/01_QT-016: QT-016: login 881204115188 (switch)
+[05:35:50] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 881204115188
+[05:36:02] qt-supplier-finalization/01_QT-016: QT-016: item "PENSEL KAYU 2B BERPEMADAM": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:36:06] qt-supplier-finalization/01_QT-016: QT-016: item "PEN BOLA (BALL POINT) DAKWAT BIRU": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:36:07] qt-supplier-finalization/01_QT-016: QT-016: consolidation: 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:36:08] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Are you sure with your recommendation(s)? Yes No" -> Yes
+[05:36:18] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (39.3s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Consolidation submit: LATAR BELAKANG, TUJUAN, METODOLOGI PENILAIAN, ULASAN DAN PENGESYORAN URUSETIA PEROLEHAN is mandatory. (ERR-775149)
+
+       at ..\support\modules\qt\ecphase.ts:347
+
+      345 |   log(`consolidation: ${n} supplier(s) ranked; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+      346 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+    > 347 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Consolidation submit: ${msgs.join(' | ') || 'no message'}`);
+          |                                                              ^
+      348 | }
+      349 |
+      350 | async function approveCommittee(ctx: EcCtx, qt: string) {
+        at Array.consolidateReport (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:347:62)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:395:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_053533\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_053533\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:37:23] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-775149: LATAR BELAKANG, TUJUAN, METODOLOGI PENILAIAN, ULASAN DAN PENGESYORAN URUSETIA PEROLEHAN is mandatory. (ERR-775149)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+[05:40:01] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:40:01] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:40:04] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:40:05] qt-supplier-finalization/01_QT-016: QT-016: Consolidate Report -> 881204115188
+[05:40:07] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:40:07] qt-supplier-finalization/01_QT-016: QT-016: login 881204115188 (switch)
+[05:40:09] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 881204115188
+[05:40:20] qt-supplier-finalization/01_QT-016: QT-016: item "PENSEL KAYU 2B BERPEMADAM": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:40:22] qt-supplier-finalization/01_QT-016: QT-016: item "PEN BOLA (BALL POINT) DAKWAT BIRU": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:40:23] qt-supplier-finalization/01_QT-016: QT-016: consolidation: 2 supplier(s) ranked; save: Quotation/Tender QT260000000004539 is successfully saved.
+[05:40:25] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[05:40:26] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[05:40:27] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[05:40:28] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[05:40:30] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Are you sure with your recommendation(s)? Yes No" -> Yes
+[05:40:41] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (42.4s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Evaluation task "Assign FC Secretary" is not mapped yet
+
+       at ..\support\modules\qt\ecphase.ts:404
+
+      402 |     for (const t of openTasks(qt).filter((x) => !SKIP.test(x.activity))) {
+      403 |       const h = HANDLERS.find(([re]) => re.test(t.activity));
+    > 404 |       if (!h) throw new Error(`Evaluation task "${t.activity}" is not mapped yet`);
+          |                     ^
+      405 |       if (done.has(t.taskId)) continue;
+      406 |       const user = t.claimedBy || t.assignees[0];
+      407 |       // BPM sometimes creates the task before naming its assignees: look again next round (ngep-runner skips these too)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:404:21)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_053953\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_053953\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:41:46] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+[05:44:35] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:44:35] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:44:38] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:44:39] qt-supplier-finalization/01_QT-016: QT-016: Assign FC Secretary -> 881204115188
+[05:44:41] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:44:41] qt-supplier-finalization/01_QT-016: QT-016: login 881204115188 (switch)
+[05:44:43] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 881204115188
+[05:44:52] qt-supplier-finalization/01_QT-016: QT-016: finalization committee: Quotation Committee, secretary: 11oct-desk Officer Federal Procurement Board Sarawak
+[05:44:54] qt-supplier-finalization/01_QT-016: QT-016: save: Quotation/Tender QT260000000004539 has been successfully saved.
+[05:46:00] qt-supplier-finalization/01_QT-016: QT-016: Coordinate FC Meeting -> 111020145651
+[05:46:01] qt-supplier-finalization/01_QT-016: QT-016: login 111020145651 (switch)
+[05:46:03] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 111020145651
+[05:46:43] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:46:45] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (2.2m)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    TimeoutError: locator.inputValue: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('[id$=":0:locationId"]').first()
+
+
+       at ..\support\modules\qt\ecphase.ts:252
+
+      250 |   await pfSelect(page, mi, '30');
+      251 |   const v = page.locator('[id$=":0:locationId"]').first();
+    > 252 |   if (!(await v.inputValue()).trim()) {
+          |                 ^
+      253 |     await v.fill('Bilik Mesyuarat (QA automation)');
+      254 |     await v.press('Tab');
+      255 |     await pfIdle(page);
+        at Array.coordinateMeeting (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:252:17)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:447:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_054427\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_054427\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:47:51] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+[05:48:43] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:48:43] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:48:47] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:48:48] qt-supplier-finalization/01_QT-016: QT-016: Coordinate FC Meeting -> 111020145651
+[05:48:51] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:48:51] qt-supplier-finalization/01_QT-016: QT-016: login 111020145651 (switch)
+[05:48:52] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 111020145651
+[05:49:00] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Confirmation Are you sure to send meeting and invitation for supplier finalization decision to this committee member? Ye" -> Yes
+[05:49:04] qt-supplier-finalization/01_QT-016: QT-016: Finalize FC Selection -> 111020145651
+[05:49:46] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (1.1m)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByText(/^\s*(Evaluation|Opening|Technical( Evaluation)?|Financial( Evaluation)?) Committee\s*$/).first()
+
+
+       at ..\support\modules\qt\ecphase.ts:87
+
+      85 |
+      86 | async function markAttendance(page: Page) {
+    > 87 |   await page.getByText(/^\s*(Evaluation|Opening|Technical( Evaluation)?|Financial( Evaluation)?) Committee\s*$/).first().click();
+         |                                                                                                                          ^
+      88 |   await page.waitForLoadState('networkidle').catch(() => {});
+      89 |   await pfIdle(page);
+      90 |   const boxes = page.locator('tr:visible .ui-chkbox-box:not(.ui-state-active)');
+        at markAttendance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:87:122)
+        at Array.finalizeEvaluation (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:183:29)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:449:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_054835\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_054835\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:50:51] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+[05:53:28] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:53:28] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:53:31] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:53:32] qt-supplier-finalization/01_QT-016: QT-016: Finalize FC Selection -> 111020145651
+[05:53:34] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:53:34] qt-supplier-finalization/01_QT-016: QT-016: login 111020145651 (switch)
+[05:53:36] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 111020145651
+[05:53:48] qt-supplier-finalization/01_QT-016: QT-016: meeting Done, attendance 4 member(s); save: Supplier Finalization QT260000000004539 is successfully saved.
+[05:53:56] qt-supplier-finalization/01_QT-016: QT-016: decision Supplier Finalization / Award / rank-1 supplier; save: Supplier Finalization QT260000000004539 is successfully saved.
+[05:53:57] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Please ensure that the committee members are updated based on attendance. Are you sure with the meet" -> Yes
+[05:54:05] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (39.6s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Finalize FC Selection submit: ULASAN DAN PERAKUAN URUSETIA PIHAK BERKUASA MELULUS is mandatory. (ERR-775149)
+
+       at ..\support\modules\qt\ecphase.ts:443
+
+      441 |   log(`decision Supplier Finalization / Award / rank-1 supplier; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+      442 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+    > 443 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Finalize FC Selection submit: ${msgs.join(' | ') || 'no message'}`);
+          |                                                              ^
+      444 | }
+      445 |
+      446 | async function approveCommittee(ctx: EcCtx, qt: string) {
+        at Array.finalizeFcSelection (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:443:62)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:493:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_055320\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_055320\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:55:10] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-775149: ULASAN DAN PERAKUAN URUSETIA PIHAK BERKUASA MELULUS is mandatory. (ERR-775149)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+[05:56:03] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[05:56:03] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[05:56:07] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[05:56:08] qt-supplier-finalization/01_QT-016: QT-016: Finalize FC Selection -> 111020145651
+[05:56:11] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[05:56:11] qt-supplier-finalization/01_QT-016: QT-016: login 111020145651 (switch)
+[05:56:12] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 111020145651
+[05:56:24] qt-supplier-finalization/01_QT-016: QT-016: meeting Done, attendance 4 member(s); save: Supplier Finalization QT260000000004539 is successfully saved.
+[05:56:30] qt-supplier-finalization/01_QT-016: QT-016: decision Supplier Finalization / Award / rank-1 supplier; save: Supplier Finalization QT260000000004539 is successfully saved.
+[05:56:34] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[05:56:38] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Please ensure that the committee members are updated based on attendance. Are you sure with the meet" -> Yes
+[05:56:45] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (44.2s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Finalize FC Selection submit: Please upload the endorsement report signed by the committee members. (ERR-770271)
+
+       at ..\support\modules\qt\ecphase.ts:427
+
+      425 |   await clickButton(page, 'Save');
+      426 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+    > 427 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Finalize FC Selection submit: ${msgs.join(' | ') || 'no message'}`);
+          |                                                              ^
+      428 | }
+      429 |
+      430 | /**
+        at Array.finalizeFcSelection (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:427:62)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:503:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_055555\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_055555\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[05:57:50] qt-supplier-finalization/01_QT-016: BLOCKED: QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016
+
+  1 skipped

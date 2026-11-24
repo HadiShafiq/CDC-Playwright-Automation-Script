@@ -1,0 +1,226 @@
+{
+  "flowRunId": "qt-supplier-finalization_20261125-052512",
+  "flowId": "qt-supplier-finalization",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T05:25:12+08:00",
+  "updatedAt": "2026-11-25T05:57:50+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004539"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-016": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_052512",
+          "startedAt": "2026-11-25T05:25:20+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_052512",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": null
+          },
+          "endedAt": "2026-11-25T05:25:31+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Evaluation task \"Consolidate Report\" is not mapped yet"
+        },
+        {
+          "runId": "2026-11-25_052635",
+          "startedAt": "2026-11-25T05:26:39+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_052635",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": null
+          },
+          "selfHeal": "the SIT DB still shows QT260000000004539 at null , as before the attempt",
+          "endedAt": "2026-11-25T05:26:50+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Evaluation task \"Consolidate Report\" is not mapped yet"
+        },
+        {
+          "runId": "2026-11-25_053125",
+          "startedAt": "2026-11-25T05:31:32+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_053125",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": null
+          },
+          "endedAt": "2026-11-25T05:31:56+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "Please give ranking to at least 1 suppliers - Item : PENSEL KAYU 2B BERPEMADAM (ERR-760384)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760384: Please give ranking to at least 1 suppliers - Item : PENSEL KAYU 2B BERPEMADAM (ERR-760384)",
+          "error": "Consolidation submit: Please give ranking to at least 1 suppliers - Item : PENSEL KAYU 2B BERPEMADAM (ERR-760384)"
+        },
+        {
+          "runId": "2026-11-25_053533",
+          "startedAt": "2026-11-25T05:35:40+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_053533",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": null
+          },
+          "endedAt": "2026-11-25T05:36:15+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "LATAR BELAKANG, TUJUAN, METODOLOGI PENILAIAN, ULASAN DAN PENGESYORAN URUSETIA PEROLEHAN is mandatory. (ERR-775149)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-775149: LATAR BELAKANG, TUJUAN, METODOLOGI PENILAIAN, ULASAN DAN PENGESYORAN URUSETIA PEROLEHAN is mandatory. (ERR-775149)",
+          "error": "Consolidation submit: LATAR BELAKANG, TUJUAN, METODOLOGI PENILAIAN, ULASAN DAN PENGESYORAN URUSETIA PEROLEHAN is mandatory. (ERR-775149)"
+        },
+        {
+          "runId": "2026-11-25_053953",
+          "startedAt": "2026-11-25T05:40:00+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_053953",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": null
+          },
+          "endedAt": "2026-11-25T05:40:39+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Desk Officer recommendation for Quotation/Tender QT260000000004539 has been submitted successfully."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Evaluation task \"Assign FC Secretary\" is not mapped yet"
+        },
+        {
+          "runId": "2026-11-25_054427",
+          "startedAt": "2026-11-25T05:44:34+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_054427",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": null
+          },
+          "endedAt": "2026-11-25T05:46:43+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004539 has been successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004539 is successfully submitted."
+            }
+          ],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.inputValue: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_054835",
+          "startedAt": "2026-11-25T05:48:42+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_054835",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": 62200
+          },
+          "endedAt": "2026-11-25T05:49:44+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Meeting details and Authorized Authority for Quotation/Tender QT260000000004539 has been submitted successfully."
+            }
+          ],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_055320",
+          "startedAt": "2026-11-25T05:53:27+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_055320",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": 62201
+          },
+          "endedAt": "2026-11-25T05:54:03+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "ULASAN DAN PERAKUAN URUSETIA PIHAK BERKUASA MELULUS is mandatory. (ERR-775149)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-775149: ULASAN DAN PERAKUAN URUSETIA PIHAK BERKUASA MELULUS is mandatory. (ERR-775149)",
+          "error": "Finalize FC Selection submit: ULASAN DAN PERAKUAN URUSETIA PIHAK BERKUASA MELULUS is mandatory. (ERR-775149)"
+        },
+        {
+          "runId": "2026-11-25_055555",
+          "startedAt": "2026-11-25T05:56:02+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_055555",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": 62201
+          },
+          "endedAt": "2026-11-25T05:56:43+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "Please upload the endorsement report signed by the committee members. (ERR-770271)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)",
+          "error": "Finalize FC Selection submit: Please upload the endorsement report signed by the committee members. (ERR-770271)"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "blocked",
+  "blockedReason": "QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016"
+}

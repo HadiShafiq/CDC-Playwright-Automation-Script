@@ -1,0 +1,22 @@
+{
+  "flowRunId": "qt-supplier-finalization_20261125-052437",
+  "flowId": "qt-supplier-finalization",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T05:24:37+08:00",
+  "updatedAt": "2026-11-25T05:24:37+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004539"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {},
+  "allowRerun": [],
+  "vars": {},
+  "status": "in-progress"
+}

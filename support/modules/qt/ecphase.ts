@@ -6,6 +6,8 @@ import { clickButton, openTab, pageMessages, pfIdle, pfSelect, pressAndConfirm, 
 import { addCommitteeMember, QT_SIT, type StageCtx } from './stages';
 import { openTask } from './tasklist';
 
+const clean = (t: string) => t.replace(/\s+/g, ' ').trim();
+
 /**
  * QT-012..015 (60022 → 60010 → OC/TEC/FEC → 60023): driven by the open BPM tasks, not the QT status, because several
  * tasks run under one status. Ported from ngep-runner stages/ecphase.mjs, evaluation.mjs and ecmeeting.mjs.
@@ -246,7 +248,9 @@ async function coordinateMeeting(ctx: EcCtx, qt: string) {
   const mi = await settledEval(page, () => document.querySelector('select[id$="meetingDatesb:calMin"]')?.id ?? '', undefined);
   await pfSelect(page, hr, '23');
   await pfSelect(page, mi, '30');
-  const v = page.locator('[id$=":0:locationId"]').first();
+  // EC/OC/TEC meetings: input :0:locationId; the FC (Supplier Finalization) meeting has a Venue textarea (SIT 2026-11-25)
+  const v = page.locator('[id$=":0:locationId"]').or(page.locator('xpath=//table[.//th[contains(normalize-space(),"Venue")]]//textarea')).first();
+  await v.waitFor({ timeout: 30_000 });
   if (!(await v.inputValue()).trim()) {
     await v.fill('Bilik Mesyuarat (QA automation)');
     await v.press('Tab');
@@ -294,6 +298,161 @@ async function assignCommittee(ctx: EcCtx, qt: string) {
   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Committee submit not confirmed: ${msgs.join(' | ') || 'no message'}`);
 }
 
+/**
+ * "Consolidate Report" (Desk Officer, at 60023): Consolidation Of Report. Package Wise has a rank + remarks per supplier
+ * (deskOfficerRankInput / deskOfficerRemarks) and an overall remark; Save, then Submit. Ranks follow the table order.
+ * Read on SIT 2026-11-25 (QT260000000004539, read-only); first real run pending.
+ */
+async function consolidateReport(ctx: EcCtx, qt: string) {
+  const { page, log } = ctx;
+  await openTask(page, ctx.baseURL, qt, log);
+  await openTab(page, 'Package Wise');
+  await pfIdle(page);
+  const ranks = page.locator('input[id$="deskOfficerRankInput"]:visible:enabled');
+  const remarks = page.locator('input[id$="deskOfficerRemarks"]:visible:enabled');
+  const n = await ranks.count();
+  if (!n) throw new Error('Consolidation Of Report: no supplier rank fields on Package Wise');
+  for (let i = 0; i < n; i++) {
+    await ranks.nth(i).fill(String(i + 1));
+    await ranks.nth(i).blur();
+    await pfIdle(page);
+    if (i < (await remarks.count())) await remarks.nth(i).fill('QA automation ranking');
+  }
+  await clickButton(page, 'Save');
+  // Itemized: SIT also wants a rank per ITEM (ERR-760384 "Please give ranking to at least 1 suppliers - Item : …",
+  // 2026-11-25): select each item of itemListTbl, rank its qualified suppliers, Save.
+  await openTab(page, 'Itemized');
+  await pfIdle(page);
+  const items = page.locator('tbody[id$="itemListTbl_data"] > tr[data-ri]');
+  const m = await items.count();
+  for (let k = 0; k < m; k++) {
+    const name = (await items.nth(k).locator('td').first().innerText()).trim();
+    await items.nth(k).locator('td').first().click();
+    await pfIdle(page);
+    const r = page.locator('input[id*="qualifiedSuppliers"][id$="deskOfficerRankInput"]:visible:enabled');
+    const rm = page.locator('input[id*="qualifiedSuppliers"][id$="deskOfficerRemarks"]:visible:enabled');
+    const c = await r.count();
+    for (let i = 0; i < c; i++) {
+      await r.nth(i).fill(String(i + 1));
+      await r.nth(i).blur();
+      await pfIdle(page);
+      if (i < (await rm.count())) await rm.nth(i).fill('QA automation ranking');
+    }
+    await clickButton(page, 'Save');
+    log(`item "${name.slice(0, 40)}": ${c} supplier(s) ranked; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+  }
+  await settledEval(page, (r: string) => document.querySelectorAll('textarea').forEach((t) => {
+    const ta = t as HTMLTextAreaElement;
+    if (ta.offsetWidth && !ta.disabled && !ta.readOnly && !ta.value && !ta.closest('.ui-dialog')) { ta.value = r; ta.dispatchEvent(new Event('change', { bubbles: true })); }
+  }), 'Consolidated by QA automation');
+  await clickButton(page, 'Save');
+  log(`consolidation: ${n} supplier(s) ranked; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+  await fillBriefing(page, log);
+  await clickButton(page, 'Save');
+  const msgs = await pressAndConfirm(page, 'Submit', log);
+  if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Consolidation submit: ${msgs.join(' | ') || 'no message'}`);
+}
+
+/**
+ * "Assign FC Secretary" (Desk Officer, 60011 Pending Supplier Finalization): tab "Quotation Committee Secretary" →
+ * Finalization Committee (only option on SIT: "Quotation Committee") → Secretary Name (filled by AJAX, first one) →
+ * Save → Submit. Read on SIT 2026-11-25 (QT260000000004539).
+ */
+async function assignFcSecretary(ctx: EcCtx, qt: string) {
+  const { page, log } = ctx;
+  await openTask(page, ctx.baseURL, qt, log);
+  await openTab(page, 'Quotation Committee Secretary');
+  await pfIdle(page);
+  const pick = async (end: string) => {
+    for (let i = 0; i < 20; i++) {
+      const sel = await page.evaluate((e) => {
+        const el = document.querySelector(`select[id$="${e}_input"]`) as HTMLSelectElement | null;
+        const o = el ? [...el.options].find((x) => x.value && !/Select One/i.test(x.text)) : undefined;
+        return el && o ? { id: el.id.replace(/_input$/, ''), text: o.text.trim() } : null;
+      }, end);
+      if (sel) { await pfSelect(page, sel.id, sel.text); await pfIdle(page); return sel.text; }
+      await page.waitForTimeout(500);
+    }
+    throw new Error(`Assign FC Secretary: no option in ${end}`);
+  };
+  log(`finalization committee: ${await pick('finalizationCommittesId')}, secretary: ${await pick('secretaryId')}`);
+  await clickButton(page, 'Save');
+  log(`save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+  const msgs = await pressAndConfirm(page, 'Submit', log);
+  if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Assign FC Secretary submit: ${msgs.join(' | ') || 'no message'}`);
+}
+
+/**
+ * "Finalize FC Selection" (FC secretary/Desk Officer, SF 62201 Pending Supplier Finalization Decision): Meeting Decision
+ * screen. Meeting Details status → Done; Quotation Committee → tick every member's attendance; tab Meeting Decision →
+ * Meeting Decision "Supplier Finalization", Packaged Wise, method "Award", LOI/LOA by Desk Officer, the rank-1 supplier;
+ * Save → Submit. Mapped read-only on SIT 2026-11-25 (QT260000000004539).
+ */
+async function finalizeFcSelection(ctx: EcCtx, qt: string) {
+  const { page, log } = ctx;
+  await openTask(page, ctx.baseURL, qt, log);
+  const selectWith = async (option: string) => {
+    const id = await page.evaluate((o) => {
+      const el = [...document.querySelectorAll('select')].find((x) => [...(x as HTMLSelectElement).options].some((y) => y.text.trim() === o) && ((x.closest('.ui-selectonemenu') as HTMLElement | null)?.offsetParent));
+      return el ? el.id.replace(/_input$/, '') : '';
+    }, option);
+    if (!id) throw new Error(`Finalize FC Selection: no menu offering "${option}"`);
+    await pfSelect(page, id, option);
+    await pfIdle(page);
+  };
+  await selectWith('Done');
+  await page.locator('a, span').filter({ hasText: /^\s*Quotation Committee\s*$/ }).first().click();
+  await pfIdle(page);
+  const boxes = page.locator('table:visible').filter({ has: page.locator('th', { hasText: 'Attendance' }) }).last().locator('tbody .ui-chkbox-box');
+  const nb = await boxes.count();
+  for (let i = 0; i < nb; i++) if (!/ui-state-active/.test((await boxes.nth(i).getAttribute('class')) ?? '')) { await boxes.nth(i).click(); await pfIdle(page); }
+  await clickButton(page, 'Save');
+  log(`meeting Done, attendance ${nb} member(s); save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+  await openTab(page, 'Meeting Decision');
+  await pfIdle(page);
+  await selectWith('Supplier Finalization');
+  await selectWith('Award');
+  const radio = page.locator('[id$="supplierListTblSingle"] tbody tr, table:visible').filter({ has: page.locator('input[name$="supplierListTblSingle_radio"]') }).locator('.ui-radiobutton-box').first();
+  await radio.click();
+  await pfIdle(page);
+  await settledEval(page, (r: string) => document.querySelectorAll('textarea').forEach((t) => {
+    const ta = t as HTMLTextAreaElement;
+    if (ta.offsetWidth && !ta.disabled && !ta.readOnly && !ta.value && !ta.closest('.ui-dialog')) { ta.value = r; ta.dispatchEvent(new Event('change', { bubbles: true })); }
+  }), 'Keputusan mesyuarat: ujian automasi QA');
+  await clickButton(page, 'Save');
+  log(`decision Supplier Finalization / Award / rank-1 supplier; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+  await fillBriefing(page, log);
+  await clickButton(page, 'Save');
+  const msgs = await pressAndConfirm(page, 'Submit', log);
+  if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Finalize FC Selection submit: ${msgs.join(' | ') || 'no message'}`);
+}
+
+/**
+ * Briefing Paper Preparation tab: every "*" paragraph is mandatory (ERR-775149): pencil → dialog textarea → Save.
+ * Consolidation Of Report has 4 (LATAR BELAKANG, TUJUAN, METODOLOGI PENILAIAN, ULASAN DAN PENGESYORAN URUSETIA
+ * PEROLEHAN); the FC Meeting Decision adds ULASAN DAN PERAKUAN URUSETIA PIHAK BERKUASA MELULUS (SIT 2026-11-25).
+ * Paragraphs that already have text are filled again harmlessly.
+ */
+async function fillBriefing(page: Page, log: (m: string) => void) {
+  await openTab(page, 'Briefing Paper Preparation');
+  await pfIdle(page);
+  const sections = page.locator('tr:visible').filter({ has: page.locator('img[src*="edit.png"]') }).filter({ hasText: '*' });
+  const ns = await sections.count();
+  for (let i = 0; i < ns; i++) {
+    const title = clean(await sections.nth(i).locator('td').first().innerText());
+    await sections.nth(i).locator('a').filter({ has: page.locator('img[src*="edit.png"]') }).first().click();
+    await pfIdle(page).catch(() => {});
+    const dlg = page.locator('.ui-dialog:visible').filter({ has: page.locator('textarea') }).last();
+    await dlg.waitFor({ timeout: 20_000 });
+    await dlg.locator('textarea').first().fill(`${title.replace(/\*/g, '').trim()}: disediakan oleh ujian automasi QA (SIT).`);
+    await dlg.getByRole('button', { name: 'Save', exact: true }).click();
+    await pfIdle(page).catch(() => {});
+    if (await dlg.isVisible().catch(() => false)) await dlg.getByRole('button', { name: 'Close', exact: true }).click().catch(() => {});
+    await pfIdle(page).catch(() => {});
+    log(`briefing "${title.slice(0, 40)}": filled`);
+  }
+}
+
 async function approveCommittee(ctx: EcCtx, qt: string) {
   const { page, log } = ctx;
   await openTask(page, ctx.baseURL, qt, log);
@@ -304,10 +463,13 @@ async function approveCommittee(ctx: EcCtx, qt: string) {
 const HANDLERS: [RegExp, (ctx: EcCtx, qt: string) => Promise<void>][] = [
   [/Assign (EC\/OC|TEC|FEC) Committee|Committee Formation Submission/i, assignCommittee],
   [/Approve Committee/i, approveCommittee],
+  [/Consolidate Report/i, consolidateReport],
+  [/Assign FC Secretary/i, assignFcSecretary],
   // FC = Finalization Committee (Supplier Finalization, SF 622xx, after 60023): same task shapes, "Selection" instead of
   // "Evaluation" (SIT QT260000000003654, read 2026-11-25). Not run on SIT yet: the forms may differ.
   [/Coordinate (EC|OC|TEC|FEC|FC) Meeting/i, coordinateMeeting],
-  [/Finalize (EC|OC|TEC|FEC) Evaluation|Finalize FC Selection/i, finalizeEvaluation],
+  [/Finalize FC Selection/i, finalizeFcSelection],
+  [/Finalize (EC|OC|TEC|FEC) Evaluation/i, finalizeEvaluation],
   [/Endorse (EC|OC|TEC|FEC) Evaluation|Endorse FC Selection/i, (c, q) => endorseEvaluation(c, q, 'Endorsement')],
   [/SignOff (EC|OC|TEC|FEC) Evaluation|SignOff FC Selection/i, (c, q) => endorseEvaluation(c, q, 'Sign Off')],
 ];

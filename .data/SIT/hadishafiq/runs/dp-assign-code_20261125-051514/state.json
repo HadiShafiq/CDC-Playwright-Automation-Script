@@ -7,7 +7,7 @@
   "language": "EN",
   "cr": null,
   "createdAt": "2026-11-25T05:15:14+08:00",
-  "updatedAt": "2026-11-25T05:22:02+08:00",
+  "updatedAt": "2026-11-25T05:24:34+08:00",
   "from": null,
   "to": null,
   "docs": {
@@ -40,7 +40,7 @@
       "checkpoint": "RN_CODE_ASSIGNED"
     },
     "KAT-039": {
-      "state": "running",
+      "state": "failed",
       "attempts": [
         {
           "runId": "2026-11-25_051515",
@@ -60,8 +60,17 @@
         {
           "runId": "2026-11-25_052154",
           "startedAt": "2026-11-25T05:22:02+08:00",
-          "result": "running",
-          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-assign-code\\02_KAT-039\\2026-11-25_052154"
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-assign-code\\02_KAT-039\\2026-11-25_052154",
+          "endedAt": "2026-11-25T05:24:34+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-750010: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)",
+          "error": "❌ RN number not found. Message was: "
         }
       ],
       "outputs": {},
@@ -70,5 +79,5 @@
   },
   "allowRerun": [],
   "vars": {},
-  "status": "in-progress"
+  "status": "failed"
 }

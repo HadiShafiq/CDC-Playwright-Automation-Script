@@ -85,3 +85,37 @@ Running 2 tests using 1 worker
 [05:22:26] dp-assign-code/02_KAT-039: RN260000000004925 is already in My Task (no claim needed)
 [05:22:26] dp-assign-code/02_KAT-039: RN260000000004925 is already in My Task (no claim needed)
 [05:22:50] dp-assign-code/02_KAT-039: Total Assign buttons found: 0
+[05:24:34] dp-assign-code/02_KAT-039: Message: 
+[05:24:36] dp-assign-code/02_KAT-039: Application message on failure: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)
+[05:24:37] dp-assign-code/02_KAT-039: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 (2.6m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 
+
+    Error: ❌ RN number not found. Message was: 
+
+       at ..\support\katalon\runtime.ts:696
+
+      694 | /** Groovy `assert cond : message`. */
+      695 | export function gAssert(cond: any, message?: any): asserts cond {
+    > 696 |   if (!cond) throw new Error(message == null ? 'Assertion failed' : String(message));
+          |                    ^
+      697 | }
+      698 |
+      699 | /** Groovy `text =~ /re/`: a java.util.regex.Matcher with find()/group(). */
+        at gAssert (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:696:20)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-039.ts:388:11)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:769:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_052154\flows-en-dp.flow-dp-assign-48cf2-T-039-Assign-Code---Service-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_052154\flows-en-dp.flow-dp-assign-48cf2-T-039-Assign-Code---Service-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 
+  1 skipped
