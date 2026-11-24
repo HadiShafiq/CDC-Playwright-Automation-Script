@@ -1,0 +1,54 @@
+{
+  "flowRunId": "fl-contract_20261123-192148",
+  "flowId": "fl-contract",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T19:21:48+08:00",
+  "updatedAt": "2026-11-23T19:24:14+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004216"
+  },
+  "officers": {},
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-23T19:21:54+08:00",
+      "values": {
+        "LA": "LA260000000004216"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-23_192149",
+          "startedAt": "2026-11-23T19:21:55+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-23_192149",
+          "endedAt": "2026-11-23T19:24:14+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "The PTJ has utilized this One Off Contract. (ERR-740030)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-740030: The PTJ has utilized this One Off Contract. (ERR-740030)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

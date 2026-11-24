@@ -1,0 +1,92 @@
+{
+  "flowRunId": "fl-contract_20261123-170117",
+  "flowId": "fl-contract",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T17:01:17+08:00",
+  "updatedAt": "2026-11-23T18:23:42+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004216",
+    "CR": "CR260000000006053",
+    "CO": "CO260000000006651"
+  },
+  "officers": {},
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-23T17:01:29+08:00",
+      "values": {
+        "LA": "LA260000000004216"
+      }
+    },
+    "CO_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq",
+      "at": "2026-11-23T18:23:42+08:00",
+      "values": {
+        "CO": "CO260000000006651"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_170119",
+          "startedAt": "2026-11-23T17:01:29+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-23_170119",
+          "endedAt": "2026-11-23T17:03:01+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Selected Charge Line Items updated."
+            },
+            {
+              "severity": "info",
+              "text": "Contract Request CR260000000006053 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CR": "CR260000000006053"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "CR_SUBMITTED"
+    },
+    "KAT-058": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_170119",
+          "startedAt": "2026-11-23T17:03:02+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\03_KAT-058\\2026-11-23_170119",
+          "endedAt": "2026-11-23T17:03:38+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Contract Request CR260000000006053 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Purchase Order document."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CR": "CR260000000006053"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "CR_APPROVED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "in-progress"
+}

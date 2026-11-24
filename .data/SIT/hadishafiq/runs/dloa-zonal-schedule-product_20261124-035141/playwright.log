@@ -1,0 +1,68 @@
+
+Running 3 tests using 1 worker
+
+[03:51:48] dloa-zonal-schedule-product/01_KAT-019: KAT-019 Create Direct LOA: Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product — role Requisitioner, login: Katalon default account of the step
+[03:51:48] dloa-zonal-schedule-product/01_KAT-019: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName, PerformanceBond: File Reference No. unique (ERR-700027); supplier = company of KAT-007 account MOFFLROSNEW3; TEMPORARY PerformanceBond 2 (No): SIT rule setting Performance Bond Percentage expired (ERR-770222, knowledge/defects.md DEF-1) - remove when renewed
+[03:51:48] dloa-zonal-schedule-product/01_KAT-019: Live dates: FileReference1=Test1124035148
+[03:51:48] dloa-zonal-schedule-product/01_KAT-019: Flow inputs: (none)
+[03:51:51] dloa-zonal-schedule-product/01_KAT-019: Closed the TERKINI announcement
+[03:51:54] dloa-zonal-schedule-product/01_KAT-019: Closed the TERKINI announcement
+[03:52:36] dloa-zonal-schedule-product/01_KAT-019: Final LOA Offered Price = 4,800,000
+[03:52:43] dloa-zonal-schedule-product/01_KAT-019: Final Duration = 4
+[03:52:45] dloa-zonal-schedule-product/01_KAT-019: DEBUG Agreement raw value = [1]
+[03:52:45] dloa-zonal-schedule-product/01_KAT-019: DEBUG Agreement class = java.lang.Integer
+[03:52:45] dloa-zonal-schedule-product/01_KAT-019: DEBUG Agreement intValue = 1
+[03:52:59] dloa-zonal-schedule-product/01_KAT-019: Processing Zone A
+[03:53:11] dloa-zonal-schedule-product/01_KAT-019: Processing Zone B
+[03:53:22] dloa-zonal-schedule-product/01_KAT-019: Loop #1 of 3
+[03:53:44] dloa-zonal-schedule-product/01_KAT-019: Loop #2 of 3
+[03:54:08] dloa-zonal-schedule-product/01_KAT-019: Loop #3 of 3
+[03:54:47] dloa-zonal-schedule-product/01_KAT-019: Message: Letter of Acceptance (LOA) LA260000000004237 is successfully submitted.
+[03:54:47] dloa-zonal-schedule-product/01_KAT-019: ✅ Captured LOA No: LA260000000004237
+[03:54:47] dloa-zonal-schedule-product/01_KAT-019: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/LOA_Zonal_PK7_Product_AsAndWhen_Shedule_2026.xlsx
+[03:54:47] dloa-zonal-schedule-product/01_KAT-019: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/LOA_Zonal_PK7_Product_AsAndWhen_Shedule_2026.xlsx
+[03:54:49] dloa-zonal-schedule-product/01_KAT-019: Closed the TERKINI announcement
+[03:54:49] dloa-zonal-schedule-product/01_KAT-019: closeBrowser (the fixture closes the browser at the end of the test)
+[03:54:50] dloa-zonal-schedule-product/01_KAT-019: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-zonal-schedule-product [EN] Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product → supplier → DO verify › 01 KAT-019 Create Direct LOA: Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product @flow-dloa-zonal-schedule-product @module-direct-loa @lang-en @FLOW @dloa-zonal-schedule-product/01_KAT-019 @KAT-019 (3.0m)
+[03:54:51] dloa-zonal-schedule-product/02_KAT-007: BPM task "Accept Manual LOA" of LA260000000004237 is open (assigned to mofflrosnew3)
+[03:54:52] dloa-zonal-schedule-product/02_KAT-007: BPM task assigned to mofflrosnew3; no step account matches (this step uses MOFFLROSNEW3)
+[03:54:53] dloa-zonal-schedule-product/02_KAT-007: KAT-007 Supplier acknowledges Direct LOA - Product — role Supplier, login: Katalon default account of the step
+[03:54:53] dloa-zonal-schedule-product/02_KAT-007: Test data corrected (support/katalon/data-overrides.json): P_Item_Code: Katalon default P_Item_Code is empty, SIT item search needs an 8-digit UNSPSC code (ERR-716006, ERR-715026); 10101703 from item 101017030000000000 in Desktop/Akta 882 RUU/Excel for Katalon Data Prep/DP PI Add to compare.xlsx
+[03:54:53] dloa-zonal-schedule-product/02_KAT-007: Flow inputs: Document_Number=LA260000000004237
+[03:54:56] dloa-zonal-schedule-product/02_KAT-007: Closed the TERKINI announcement
+[03:55:00] dloa-zonal-schedule-product/02_KAT-007: Closed the TERKINI announcement
+[03:55:16] dloa-zonal-schedule-product/02_KAT-007: LA260000000004237 is already in My Task (no claim needed)
+[03:55:30] dloa-zonal-schedule-product/02_KAT-007: Total Assign buttons found: 3
+[03:55:30] dloa-zonal-schedule-product/02_KAT-007: Click Assign button at row index: 0
+[03:56:17] dloa-zonal-schedule-product/02_KAT-007: Click Assign button at row index: 2
+[03:57:04] dloa-zonal-schedule-product/02_KAT-007: Click Assign button at row index: 4
+[03:57:57] dloa-zonal-schedule-product/02_KAT-007: Message: Letter of Acceptance (LOA) LA260000000004237 is acknowledged.
+[03:57:57] dloa-zonal-schedule-product/02_KAT-007: ✅ Captured LOA No: LA260000000004237
+[03:57:57] dloa-zonal-schedule-product/02_KAT-007: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Product_AP_201_2026.xlsx
+[03:57:57] dloa-zonal-schedule-product/02_KAT-007: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Product_AP_201_2026.xlsx
+[03:58:02] dloa-zonal-schedule-product/02_KAT-007: Closed the TERKINI announcement
+[03:58:02] dloa-zonal-schedule-product/02_KAT-007: closeBrowser (the fixture closes the browser at the end of the test)
+[03:58:03] dloa-zonal-schedule-product/02_KAT-007: DB status LA LA260000000004237: 62505 Pending Verification of Acknowledgement Receipt's Letter Of Acceptance / Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima (expected 62505, OK)
+[03:58:03] dloa-zonal-schedule-product/02_KAT-007: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-zonal-schedule-product [EN] Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product → supplier → DO verify › 02 KAT-007 Supplier acknowledges Direct LOA - Product @flow-dloa-zonal-schedule-product @module-direct-loa @lang-en @FLOW @dloa-zonal-schedule-product/02_KAT-007 @KAT-007 (3.2m)
+[03:58:05] dloa-zonal-schedule-product/03_KAT-010: BPM task "Verify Manual LOA" of LA260000000004237 is open (assigned to 710527085562)
+[03:58:06] dloa-zonal-schedule-product/03_KAT-010: KAT-010 Desk Officer verifies the LOA — role Desk Officer, login: Katalon default account of the step
+[03:58:07] dloa-zonal-schedule-product/03_KAT-010: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[03:58:07] dloa-zonal-schedule-product/03_KAT-010: Flow inputs: Document_Number=LA260000000004237
+[03:58:10] dloa-zonal-schedule-product/03_KAT-010: Closed the TERKINI announcement
+[03:58:13] dloa-zonal-schedule-product/03_KAT-010: Closed the TERKINI announcement
+[03:58:29] dloa-zonal-schedule-product/03_KAT-010: LA260000000004237 is already in My Task (no claim needed)
+[03:59:37] dloa-zonal-schedule-product/03_KAT-010: Message: Letter of Acceptance (LOA) LA260000000004237 is completed.
+[03:59:37] dloa-zonal-schedule-product/03_KAT-010: ✅ Captured LOA No: LA260000000004237
+[03:59:37] dloa-zonal-schedule-product/03_KAT-010: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[03:59:37] dloa-zonal-schedule-product/03_KAT-010: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[03:59:38] dloa-zonal-schedule-product/03_KAT-010: Closed the TERKINI announcement
+[03:59:38] dloa-zonal-schedule-product/03_KAT-010: closeBrowser (the fixture closes the browser at the end of the test)
+[03:59:51] dloa-zonal-schedule-product/03_KAT-010: DB status LA LA260000000004237: 62506 Letter of Acceptance Completed / Surat Setuju Terima Telah Selesai (expected 62506, OK)
+[03:59:52] dloa-zonal-schedule-product/03_KAT-010: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-zonal-schedule-product [EN] Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-zonal-schedule-product @module-direct-loa @lang-en @FLOW @dloa-zonal-schedule-product/03_KAT-010 @KAT-010 (1.8m)
+
+  Slow test file: [flows] › tests\flows\en\direct-loa.flow.spec.ts (8.1m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  3 passed (8.2m)

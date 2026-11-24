@@ -1,0 +1,12 @@
+-- SIMULATE SQ260000000002371 (SQ, doc_id 33414): 60852 → 60852 Pending Request Note Creation / Menunggu Ciptaan Nota Minta
+-- DATA PATCH: SIT only, run by the tester in DBeaver (SIT connection). Moves the status row only: no BPM task is
+-- created or closed, so use it for status-dependent screens, lists, reports and validations, not to continue the workflow.
+UPDATE ngep_sit.sc_workflow_status SET is_current = 0, changed_by = 907, changed_date = systimestamp WHERE doc_type = 'SQ' AND doc_id = 33414 AND is_current = 1;
+INSERT INTO ngep_sit.sc_workflow_status (workflow_status_id, doc_type, doc_id, is_current, status_id, record_status, created_by, created_date) VALUES (ngep_sit.SC_WORKFLOW_STATUS_SEQ.nextval, 'SQ', 33414, 1, 60852, 1, 907, systimestamp);
+COMMIT;
+-- Check: SELECT doc_type, status_id, is_current, created_date FROM ngep_sit.sc_workflow_status WHERE doc_type = 'SQ' AND doc_id = 33414 ORDER BY created_date;
+
+-- ROLLBACK (back to 60852):
+-- DELETE FROM ngep_sit.sc_workflow_status WHERE doc_type = 'SQ' AND doc_id = 33414 AND is_current = 1 AND status_id = 60852;
+-- UPDATE ngep_sit.sc_workflow_status SET is_current = 1 WHERE workflow_status_id = 785658;
+-- COMMIT;

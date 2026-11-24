@@ -1,0 +1,59 @@
+
+Running 3 tests using 1 worker
+
+[17:19:34] dloa-schedule-product/01_KAT-004: KAT-004 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Product — role Requisitioner, login: Katalon default account of the step
+[17:19:34] dloa-schedule-product/01_KAT-004: Test data corrected (support/katalon/data-overrides.json): FileReference1, LOAOfferedPrice, SupplierName: File Reference No. unique (ERR-700027); LOA price 200000 < 1 product line x 10 x 30000 = 300000 (ERR-700125); supplier = company of KAT-007 account MOFFLROSNEW3
+[17:19:34] dloa-schedule-product/01_KAT-004: Data file "1_FL FOR DLOA.xlsx" (Data Files/Akta_882_RU/4- NEW DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[17:19:34] dloa-schedule-product/01_KAT-004: Flow inputs: (none)
+[17:19:38] dloa-schedule-product/01_KAT-004: Closed the TERKINI announcement
+[17:19:42] dloa-schedule-product/01_KAT-004: Closed the TERKINI announcement
+[17:20:38] dloa-schedule-product/01_KAT-004: Final File Reference No_1 = Test1123171934
+[17:20:46] dloa-schedule-product/01_KAT-004: Final LOA Offered Price = 300,000.00
+[17:20:51] dloa-schedule-product/01_KAT-004: Final Sales Tax / Service Tax (RM) = 0.00
+[17:21:10] dloa-schedule-product/01_KAT-004: Final Month Period / Duration = 2
+[17:21:14] dloa-schedule-product/01_KAT-004: DEBUG Agreement = [2]
+[17:21:14] dloa-schedule-product/01_KAT-004: DEBUG QuotationTenderType = [7]
+[17:21:14] dloa-schedule-product/01_KAT-004: Required Agreement: Dropdown
+[17:21:15] dloa-schedule-product/01_KAT-004: Agreement No: Checking UI condition
+[17:21:15] dloa-schedule-product/01_KAT-004: Condition 1: Confirmation popup detected
+[17:21:15] dloa-schedule-product/01_KAT-004: SUCCESS: Popup Yes clicked
+[17:21:15] dloa-schedule-product/01_KAT-004: SUCCESS Required Agreement selection = No
+[17:21:29] dloa-schedule-product/01_KAT-004: Zone Location = No. Skip zonal coverage and zone locality section.
+[17:21:30] dloa-schedule-product/01_KAT-004: Loop #1 of 1
+[17:22:13] dloa-schedule-product/01_KAT-004: Fulfilment Schedule completed successfully
+[17:30:33] dloa-schedule-product/01_KAT-004: Message: 
+[17:30:33] dloa-schedule-product/01_KAT-004: Application message on failure: End date should be in contract validity period in Fulfilment Schedule. (ERR-760348)
+[17:30:36] dloa-schedule-product/01_KAT-004: Signed out (SSO logout)
+  ✘  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-product [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify › 01 KAT-004 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Product @flow-dloa-schedule-product @module-direct-loa @lang-en @FLOW @dloa-schedule-product/01_KAT-004 @KAT-004 (11.1m)
+  -  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-product [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify › 02 KAT-007 Supplier acknowledges Direct LOA - Product @flow-dloa-schedule-product @module-direct-loa @lang-en @FLOW @dloa-schedule-product/02_KAT-007 @KAT-007
+  -  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-product [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-schedule-product @module-direct-loa @lang-en @FLOW @dloa-schedule-product/03_KAT-010 @KAT-010
+
+
+  1) [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-product [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify › 01 KAT-004 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Product @flow-dloa-schedule-product @module-direct-loa @lang-en @FLOW @dloa-schedule-product/01_KAT-004 @KAT-004 
+
+    Error: ❌ LOA number not found. Message was: 
+
+       at ..\support\katalon\runtime.ts:617
+
+      615 | /** Groovy `assert cond : message`. */
+      616 | export function gAssert(cond: any, message?: any): asserts cond {
+    > 617 |   if (!cond) throw new Error(message == null ? 'Assertion failed' : String(message));
+          |                    ^
+      618 | }
+      619 |
+      620 | /** Groovy `text =~ /re/`: a java.util.regex.Matcher with find()/group(). */
+        at gAssert (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:617:20)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-004.ts:1126:11)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:268:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:85:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\direct-loa.flow.spec.ts:13:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_171925\flows-en-direct-loa.flow-d-ab48c--When-or-Schedule---Product-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_171925\flows-en-direct-loa.flow-d-ab48c--When-or-Schedule---Product-chromium\error-context.md
+
+  1 failed
+    [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-product [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify › 01 KAT-004 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Product @flow-dloa-schedule-product @module-direct-loa @lang-en @FLOW @dloa-schedule-product/01_KAT-004 @KAT-004 
+  2 did not run

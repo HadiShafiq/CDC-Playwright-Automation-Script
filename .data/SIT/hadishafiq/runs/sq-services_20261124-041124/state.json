@@ -1,0 +1,120 @@
+{
+  "flowRunId": "sq-services_20261124-041124",
+  "flowId": "sq-services",
+  "module": "sq",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:11:24+08:00",
+  "updatedAt": "2026-11-24T05:16:30+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "SQ": "SQ260000000002365"
+  },
+  "officers": {},
+  "gates": {
+    "SQ_START_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T04:16:30+08:00"
+    },
+    "SQ_END_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T05:16:30+08:00",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002365",
+        "expected": 60852,
+        "statusId": 60852,
+        "en": "Pending Request Note Creation",
+        "bm": "Menunggu Ciptaan Nota Minta",
+        "at": "2026-11-24 05:16:00",
+        "ok": true,
+        "checkedAt": "2026-11-24T05:16:30+08:00"
+      }
+    }
+  },
+  "steps": {
+    "KAT-021": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_041124",
+          "startedAt": "2026-11-24T04:11:28+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-services\\01_KAT-021\\2026-11-24_041124",
+          "endedAt": "2026-11-24T04:14:12+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002365 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002365"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUBMITTED",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002365",
+        "expected": 60851,
+        "statusId": 60851,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-24 04:14:06",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:14:12+08:00"
+      }
+    },
+    "KAT-022": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-24_041124",
+          "startedAt": "2026-11-24T04:16:31+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-services\\03_KAT-022\\2026-11-24_041124",
+          "dbBefore": {
+            "kind": "SQ",
+            "docNo": "SQ260000000002365",
+            "statusId": 60851
+          },
+          "endedAt": "2026-11-24T04:17:24+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote will start on 24 Nov 2026 at 20:15. Kindly log in on time setting."
+            }
+          ],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.fill: Timeout 30000ms exceeded.",
+          "selfHeal": "DB shows 60851 Pending Supplier Response: the attempt went through"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUPPLIER_RESPONDED",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002365",
+        "expected": 60851,
+        "statusId": 60851,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-24 04:14:06",
+        "ok": true,
+        "checkedAt": "2026-11-24T05:02:35+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed",
+  "blockedReason": "INVALID (2026-11-24 05:50): self-heal wrongly treated KAT-022 as done (SQ status 60851 is the same before and after a reply); no supplier replied (SC_QUOTE_SUPPLIER.IS_SUBMITTED = 0) and SQ_END_SQL then closed the SQ. Do not use this SQ."
+}

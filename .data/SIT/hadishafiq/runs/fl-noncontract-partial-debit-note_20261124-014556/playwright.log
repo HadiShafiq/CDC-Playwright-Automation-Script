@@ -1,0 +1,117 @@
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 01 KAT-049 Supplier submits delivery (Pending Delivery List) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/01_KAT-049 @KAT-049
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 02 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/02_DO_LOOKUP @gate-DO_LOOKUP
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 03 KAT-050 Receiving Officer acknowledges the Delivery Order (creates FRN) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/03_KAT-050 @KAT-050
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 04 KAT-051 Acknowledge Officer approves the FRN @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/04_KAT-051 @KAT-051
+[01:46:05] fl-noncontract-partial-debit-note/05_KAT-052: KAT-052 Supplier submits Stop Delivery Instruction for the undelivered balance — role Supplier, login: account of KAT-048
+[01:46:05] fl-noncontract-partial-debit-note/05_KAT-052: Test data corrected (support/katalon/data-overrides.json): PO_Number: Stop the undelivered balance of our services PO260000000007002 (debit note chain 2026-11-16: 2 of the ordered units delivered at RM1,500, FRN FN260000000005402 approved) so the Create Invoice task is released, as it was for PO260000000007001 after SD260000000002401; the PO supplier AINHALIM is the Katalon default account
+[01:46:05] fl-noncontract-partial-debit-note/05_KAT-052: Flow inputs: PO_Number=PO260000000007216
+[01:46:05] fl-noncontract-partial-debit-note/05_KAT-052: Flow login: the account of KAT-048
+[01:46:08] fl-noncontract-partial-debit-note/05_KAT-052: Closed the TERKINI announcement
+[01:46:11] fl-noncontract-partial-debit-note/05_KAT-052: Closed the TERKINI announcement
+[01:46:46] fl-noncontract-partial-debit-note/05_KAT-052: Message: Stop Delivery Instruction SD260000000002802 is successfully submitted.
+[01:46:46] fl-noncontract-partial-debit-note/05_KAT-052: ✅ Captured SD No: SD260000000002802
+[01:46:46] fl-noncontract-partial-debit-note/05_KAT-052: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Stop_Delivery_Instruction.xlsx
+[01:46:46] fl-noncontract-partial-debit-note/05_KAT-052: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Stop_Delivery_Instruction.xlsx
+[01:46:48] fl-noncontract-partial-debit-note/05_KAT-052: Closed the TERKINI announcement
+[01:46:48] fl-noncontract-partial-debit-note/05_KAT-052: closeBrowser (the fixture closes the browser at the end of the test)
+[01:46:48] fl-noncontract-partial-debit-note/05_KAT-052: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 05 KAT-052 Supplier submits Stop Delivery Instruction for the undelivered balance @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/05_KAT-052 @KAT-052 (44.5s)
+[01:46:49] fl-noncontract-partial-debit-note/06_KAT-053: KAT-053 Approve Stop Delivery Instruction — role Approver, login: officer 690127065209: BPM task "Review SD" of SD260000000002802 is ASSIGNED to 690127065209 (SIT WFTASK)
+[01:46:49] fl-noncontract-partial-debit-note/06_KAT-053: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our Stop Delivery Instruction SD260000000002402 (KAT-052 2026-11-16 on services PO260000000007002, debit note chain); Review SD goes to officer 690127065209 (as SD260000000002401 this morning)
+[01:46:49] fl-noncontract-partial-debit-note/06_KAT-053: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[01:46:49] fl-noncontract-partial-debit-note/06_KAT-053: Flow inputs: Document_Number=SD260000000002802
+[01:46:49] fl-noncontract-partial-debit-note/06_KAT-053: Flow login: officer 690127065209 (shared officer password)
+[01:46:52] fl-noncontract-partial-debit-note/06_KAT-053: Closed the TERKINI announcement
+[01:46:55] fl-noncontract-partial-debit-note/06_KAT-053: Closed the TERKINI announcement
+[01:47:10] fl-noncontract-partial-debit-note/06_KAT-053: SD260000000002802 is already in My Task (no claim needed)
+[01:47:11] fl-noncontract-partial-debit-note/06_KAT-053: SD260000000002802 is already in My Task (no claim needed)
+[01:47:26] fl-noncontract-partial-debit-note/06_KAT-053: Message: Stop Delivery Instruction SD260000000002802 is approved and has been sent to iGFMAS for acknowledgement.
+     Tax Invoice must be issued by Supplier within thirty (30) days after the Stop Delivery Instruction is approved by the Government and acknowledged at iGFMAS.
+[01:47:26] fl-noncontract-partial-debit-note/06_KAT-053: ✅ Captured SD No: SD260000000002802
+[01:47:26] fl-noncontract-partial-debit-note/06_KAT-053: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Stop_Delivery_Instruction.xlsx
+[01:47:26] fl-noncontract-partial-debit-note/06_KAT-053: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Stop_Delivery_Instruction.xlsx
+[01:47:27] fl-noncontract-partial-debit-note/06_KAT-053: Closed the TERKINI announcement
+[01:47:27] fl-noncontract-partial-debit-note/06_KAT-053: closeBrowser (the fixture closes the browser at the end of the test)
+[01:47:28] fl-noncontract-partial-debit-note/06_KAT-053: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 06 KAT-053 Approve Stop Delivery Instruction @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/06_KAT-053 @KAT-053 (39.6s)
+[01:47:29] fl-noncontract-partial-debit-note/07_KAT-054: KAT-054 Supplier creates the invoice — role Supplier, login: account of KAT-035 (nurulainmof) — self-heal: the open BPM task "Create Invoice" is assigned to nurulainmof, 880801029878, not to NURULAINMOF
+[01:47:29] fl-noncontract-partial-debit-note/07_KAT-054: Test data corrected (support/katalon/data-overrides.json): Document_Number: Invoice our services PO260000000007002 (debit note chain 2026-11-16: delivered RM1,500 against RM1,000 ordered, FRN FN260000000005402 approved, balance stopped by SD260000000002402); the invoice is raised by the PO supplier AINHALIM, the KAT-048 account; the invoice form showed RM1,500, so submitting it should create the debit note for KAT-056
+[01:47:29] fl-noncontract-partial-debit-note/07_KAT-054: Using the login of KAT-048 (support/katalon/data-overrides.json)
+[01:47:29] fl-noncontract-partial-debit-note/07_KAT-054: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[01:47:29] fl-noncontract-partial-debit-note/07_KAT-054: Flow inputs: Document_Number=PO260000000007216
+[01:47:29] fl-noncontract-partial-debit-note/07_KAT-054: Flow login: the account of KAT-035
+[01:47:32] fl-noncontract-partial-debit-note/07_KAT-054: Closed the TERKINI announcement
+[01:47:35] fl-noncontract-partial-debit-note/07_KAT-054: Closed the TERKINI announcement
+[01:47:56] fl-noncontract-partial-debit-note/07_KAT-054: Claimed group task PO260000000007216 (moved to My Task)
+[01:47:57] fl-noncontract-partial-debit-note/07_KAT-054: PO260000000007216 is already in My Task (no claim needed)
+[01:48:01] fl-noncontract-partial-debit-note/07_KAT-054: Purchase Order No = PO260000000007216
+[01:48:08] fl-noncontract-partial-debit-note/07_KAT-054: Message: Invoice IN-PO260000000007216 is successfully submitted.
+[01:48:08] fl-noncontract-partial-debit-note/07_KAT-054: ✅ Captured PO No: PO260000000007216
+[01:48:08] fl-noncontract-partial-debit-note/07_KAT-054: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Create_Invoice_Supplier.xlsx
+[01:48:08] fl-noncontract-partial-debit-note/07_KAT-054: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Create_Invoice_Supplier.xlsx
+[01:48:09] fl-noncontract-partial-debit-note/07_KAT-054: Closed the TERKINI announcement
+[01:48:09] fl-noncontract-partial-debit-note/07_KAT-054: closeBrowser (the fixture closes the browser at the end of the test)
+[01:48:10] fl-noncontract-partial-debit-note/07_KAT-054: Signed out (SSO logout)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 07 KAT-054 Supplier creates the invoice @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/07_KAT-054 @KAT-054 (42.3s)
+[01:58:27] fl-noncontract-partial-debit-note/08_DN_LOOKUP: BLOCKED: GATE DN_LOOKUP — Debit Note created by SIT for an invoice above the order. SIT creates a Debit Note when the invoice amount is above the order (PO260000000007216); the runner reads it from FL_ADJUSTMENT. By hand: npm run qa -- gate --run fl-noncontract-partial-debit-note_20261124-014556 --gate DN_LOOKUP --set DN=DN26… When done: npm run qa -- gate --run fl-noncontract-partial-debit-note_20261124-014556 --gate DN_LOOKUP --done
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 08 GATE DN_LOOKUP Debit Note created by SIT for an invoice above the order @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/08_DN_LOOKUP @gate-DN_LOOKUP
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 09 KAT-056 Approve Debit Note @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/09_KAT-056 @KAT-056
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 10 KAT-055 Payment match (non-contract) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/10_KAT-055 @KAT-055
+
+  Slow test file: [flows] › tests\flows\en\fl.flow.spec.ts (12.4m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  7 skipped
+  3 passed (12.5m)
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 01 KAT-049 Supplier submits delivery (Pending Delivery List) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/01_KAT-049 @KAT-049
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 02 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/02_DO_LOOKUP @gate-DO_LOOKUP
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 03 KAT-050 Receiving Officer acknowledges the Delivery Order (creates FRN) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/03_KAT-050 @KAT-050
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 04 KAT-051 Acknowledge Officer approves the FRN @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/04_KAT-051 @KAT-051
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 05 KAT-052 Supplier submits Stop Delivery Instruction for the undelivered balance @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/05_KAT-052 @KAT-052
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 06 KAT-053 Approve Stop Delivery Instruction @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/06_KAT-053 @KAT-053
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 07 KAT-054 Supplier creates the invoice @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/07_KAT-054 @KAT-054
+[01:59:03] fl-noncontract-partial-debit-note/08_DN_LOOKUP: Gate DN_LOOKUP not needed — no debit note: PO260000000007216 is at 41025 Pending Payment Match
+[01:59:03] fl-noncontract-partial-debit-note/08_DN_LOOKUP: BLOCKED: GATE DN_LOOKUP is marked done but DN was not given. SIT creates a Debit Note when the invoice amount is above the order (PO260000000007216); the runner reads it from FL_ADJUSTMENT. By hand: npm run qa -- gate --run fl-noncontract-partial-debit-note_20261124-014556 --gate DN_LOOKUP --set DN=DN26…
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 08 GATE DN_LOOKUP Debit Note created by SIT for an invoice above the order @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/08_DN_LOOKUP @gate-DN_LOOKUP
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 09 KAT-056 Approve Debit Note @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/09_KAT-056 @KAT-056
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 10 KAT-055 Payment match (non-contract) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/10_KAT-055 @KAT-055
+
+  10 skipped
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 01 KAT-049 Supplier submits delivery (Pending Delivery List) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/01_KAT-049 @KAT-049
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 02 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/02_DO_LOOKUP @gate-DO_LOOKUP
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 03 KAT-050 Receiving Officer acknowledges the Delivery Order (creates FRN) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/03_KAT-050 @KAT-050
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 04 KAT-051 Acknowledge Officer approves the FRN @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/04_KAT-051 @KAT-051
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 05 KAT-052 Supplier submits Stop Delivery Instruction for the undelivered balance @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/05_KAT-052 @KAT-052
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 06 KAT-053 Approve Stop Delivery Instruction @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/06_KAT-053 @KAT-053
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 07 KAT-054 Supplier creates the invoice @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/07_KAT-054 @KAT-054
+[01:59:53] fl-noncontract-partial-debit-note/08_DN_LOOKUP: Gate DN_LOOKUP done by SIT database (no debit note: PO260000000007216 is at 41025 Pending Payment Match) at 2026-11-24T01:59:03+08:00
+  ✓   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 08 GATE DN_LOOKUP Debit Note created by SIT for an invoice above the order @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/08_DN_LOOKUP @gate-DN_LOOKUP (229ms)
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 09 KAT-056 Approve Debit Note @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/09_KAT-056 @KAT-056
+[01:59:54] fl-noncontract-partial-debit-note/10_KAT-055: KAT-055 Payment match (non-contract) — role Finance, login: Katalon default account of the step
+[01:59:54] fl-noncontract-partial-debit-note/10_KAT-055: Test data corrected (support/katalon/data-overrides.json): Document_Number: Match payment for our PO260000000006601 (invoice IN-PO260000000006601 from KAT-054); Match Payment is a group task for this account's group
+[01:59:54] fl-noncontract-partial-debit-note/10_KAT-055: Flow inputs: Document_Number=PO260000000007216
+[02:00:02] fl-noncontract-partial-debit-note/10_KAT-055: Closed the TERKINI announcement
+[02:00:05] fl-noncontract-partial-debit-note/10_KAT-055: Closed the TERKINI announcement
+[02:00:24] fl-noncontract-partial-debit-note/10_KAT-055: Claimed group task PO260000000007216 (moved to My Task)
+[02:00:25] fl-noncontract-partial-debit-note/10_KAT-055: PO260000000007216 is already in My Task (no claim needed)
+[02:00:28] fl-noncontract-partial-debit-note/10_KAT-055: Purchase Order No = PO260000000007216
+[02:00:35] fl-noncontract-partial-debit-note/10_KAT-055: Message: Payment Advice PA260000000006414 is successfully submitted and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Payment Match document.
+[02:00:35] fl-noncontract-partial-debit-note/10_KAT-055: ✅ Captured PA No: PA260000000006414
+[02:00:35] fl-noncontract-partial-debit-note/10_KAT-055: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Payment_Match.xlsx
+[02:00:35] fl-noncontract-partial-debit-note/10_KAT-055: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Payment_Match.xlsx
+[02:00:36] fl-noncontract-partial-debit-note/10_KAT-055: Closed the TERKINI announcement
+[02:00:36] fl-noncontract-partial-debit-note/10_KAT-055: closeBrowser (the fixture closes the browser at the end of the test)
+[02:00:37] fl-noncontract-partial-debit-note/10_KAT-055: Signed out (SSO logout)
+  ✓  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-partial-debit-note [EN] Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval › 10 KAT-055 Payment match (non-contract) @flow-fl-noncontract-partial-debit-note @module-fl @lang-en @FLOW @fl-noncontract-partial-debit-note/10_KAT-055 @KAT-055 (43.9s)
+
+  8 skipped
+  2 passed (52.3s)

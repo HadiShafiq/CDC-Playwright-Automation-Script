@@ -1,0 +1,3 @@
+# fl-noncontract-partial-debit-note_20261124-014556 is waiting
+
+GATE DN_LOOKUP is marked done but DN was not given. SIT creates a Debit Note when the invoice amount is above the order (PO260000000007216); the runner reads it from FL_ADJUSTMENT. By hand: npm run qa -- gate --run fl-noncontract-partial-debit-note_20261124-014556 --gate DN_LOOKUP --set DN=DN26…

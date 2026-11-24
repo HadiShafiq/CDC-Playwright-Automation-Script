@@ -1,0 +1,107 @@
+{
+  "module": "CM",
+  "at": "2026-11-24T17:26:51+08:00",
+  "dry": true,
+  "sandbox": {
+    "CE": null,
+    "CU": null
+  },
+  "results": [
+    {
+      "wf": "CE",
+      "status": 15001,
+      "en": "Pending Extension Code Review",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15002,
+      "en": "Extension Recommendation",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15003,
+      "en": "Extension Code Request Completed",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15004,
+      "en": "Pending Extension Code Approval",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15005,
+      "en": "Item Code Request Completed",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15007,
+      "en": "Extension Code Acknowledgement",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15008,
+      "en": "Pending Extension Code Review (Revise)",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CE",
+      "status": 15009,
+      "en": "Extension Code Request Rejected",
+      "result": "no sandbox RC with a CE workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15006,
+      "en": "Item Code Acknowledgement",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15011,
+      "en": "Pending Item Code Review",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15012,
+      "en": "UNSPSC Recommendation",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15014,
+      "en": "Pending Item Code Creation",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15015,
+      "en": "UNSPSC Completion",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15016,
+      "en": "Pending Item Code Creation (Revise)",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15017,
+      "en": "Item Code Request Rejected",
+      "result": "no sandbox RC with a CU workflow row"
+    },
+    {
+      "wf": "CU",
+      "status": 15018,
+      "en": "Pending Item Code Review (Revise)",
+      "result": "no sandbox RC with a CU workflow row"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "flowRunId": "sq-product_20261124-123132",
+  "flowId": "sq-product",
+  "module": "sq",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T12:31:32+08:00",
+  "updatedAt": "2026-11-24T13:01:31+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "SQ": "SQ260000000002370"
+  },
+  "officers": {},
+  "gates": {
+    "SQ_START_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T12:46:30+08:00"
+    },
+    "SQ_END_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T13:01:30+08:00",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002370",
+        "expected": 60852,
+        "statusId": 60852,
+        "en": "Pending Request Note Creation",
+        "bm": "Menunggu Ciptaan Nota Minta",
+        "at": "2026-11-24 13:01:00",
+        "ok": true,
+        "checkedAt": "2026-11-24T13:01:31+08:00"
+      }
+    }
+  },
+  "steps": {
+    "KAT-036": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_123133",
+          "startedAt": "2026-11-24T12:31:39+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-product\\01_KAT-036\\2026-11-24_123133",
+          "endedAt": "2026-11-24T12:34:18+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002370 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002370"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUBMITTED"
+    },
+    "KAT-022": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_123133",
+          "startedAt": "2026-11-24T12:46:32+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-product\\03_KAT-022\\2026-11-24_123133",
+          "dbBefore": {
+            "kind": "SQ",
+            "docNo": "SQ260000000002370",
+            "statusId": 60851
+          },
+          "endedAt": "2026-11-24T12:47:15+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002370 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002370"
+      },
+      "login": "account of KAT-030 (NURULAINMOF) — self-heal: the SQ was sent to the companies of NURULAINMOF, not to BASICFLROS3",
+      "checkpoint": "SQ_SUPPLIER_RESPONDED",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002370",
+        "expected": 60851,
+        "statusId": 60851,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-24 12:34:12",
+        "ok": true,
+        "checkedAt": "2026-11-24T12:47:14+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

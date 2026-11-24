@@ -1,0 +1,78 @@
+{
+  "flowRunId": "fl-contract-debit-note_20261124-012614",
+  "flowId": "fl-contract-debit-note",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T01:26:14+08:00",
+  "updatedAt": "2026-11-24T01:28:10+08:00",
+  "from": "DN_LOOKUP",
+  "to": null,
+  "docs": {
+    "CO": "CO260000000006653",
+    "DN": "DN260000000004802",
+    "PA": "PA260000000006413"
+  },
+  "officers": {},
+  "gates": {
+    "DN_LOOKUP": {
+      "done": true,
+      "by": "SIT database (automatic lookup)",
+      "at": "2026-11-24T01:26:24+08:00",
+      "values": {
+        "DN": "DN260000000004802"
+      }
+    }
+  },
+  "steps": {
+    "KAT-056": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_012615",
+          "startedAt": "2026-11-24T01:26:25+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-debit-note\\12_KAT-056\\2026-11-24_012615",
+          "endedAt": "2026-11-24T01:27:14+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Debit Note DN260000000004802 is successfully submitted and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Debit Note document."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 690127065209: BPM task \"Review DAN\" of DN260000000004802 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "DN_APPROVED"
+    },
+    "KAT-064": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_012615",
+          "startedAt": "2026-11-24T01:27:16+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-debit-note\\13_KAT-064\\2026-11-24_012615",
+          "endedAt": "2026-11-24T01:28:10+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Payment Advice PA260000000006413 is successfully submitted and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Payment Match document."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PA": "PA260000000006413"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "PAYMENT_MATCHED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

@@ -1,0 +1,1259 @@
+{
+  "module": "CT",
+  "at": "2026-11-24T17:49:01+08:00",
+  "dry": false,
+  "sandbox": {
+    "AC": "CT260000000002301",
+    "CB": null,
+    "COM": null,
+    "CQ": null,
+    "FA": null,
+    "FD": "CT260000000002301",
+    "FS": null,
+    "FT": null,
+    "FU": null,
+    "FW": null,
+    "NT": null,
+    "PQ": null,
+    "RA": null,
+    "RC": null,
+    "RF": null,
+    "SA": null,
+    "UF": null,
+    "XA": null,
+    "XF": null
+  },
+  "results": [
+    {
+      "wf": "AC",
+      "status": 56000,
+      "en": "Pending Draft Agreement Creation",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56050,
+      "en": "Pending Draft Agreement Approval",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56100,
+      "en": "Pending Draft Agreement Revision",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56150,
+      "en": "Pending Draft Agreement Revision Approval",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56250,
+      "en": "Pending Final Agreement Update",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56300,
+      "en": "Pending Final Agreement Approval",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56350,
+      "en": "Pending Final Agreement Revision",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56400,
+      "en": "Pending Final Agreement Revision Approval",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56601,
+      "en": "Pending Contract Request Creation",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56700,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56750,
+      "en": "Pending Agreement Creation",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56850,
+      "en": "Pending Agreement Revision",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56900,
+      "en": "Pending Agreement Revision Approval",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56950,
+      "en": "Pending Draft Agreement Creation Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56955,
+      "en": "Pending Draft Agreement Approval Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56960,
+      "en": "Pending Draft Agreement Revision Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56965,
+      "en": "Pending Draft Agreement Revision Approval Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56970,
+      "en": "Pending Final Agreement Update Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56975,
+      "en": "Pending Final Agreement Approval Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56980,
+      "en": "Pending Final Agreement Revision Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "AC",
+      "status": 56985,
+      "en": "Pending Final Agreement Revision Approval Cancelled",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 56600"
+    },
+    {
+      "wf": "CB",
+      "status": 55500,
+      "en": "Pending Update Bank Info Submission",
+      "result": "no sandbox CT with a CB workflow row"
+    },
+    {
+      "wf": "CB",
+      "status": 55550,
+      "en": "Pending Confirmation Bank Information Update",
+      "result": "no sandbox CT with a CB workflow row"
+    },
+    {
+      "wf": "CB",
+      "status": 55600,
+      "en": "Update Bank Info Completed",
+      "result": "no sandbox CT with a CB workflow row"
+    },
+    {
+      "wf": "CB",
+      "status": 55700,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a CB workflow row"
+    },
+    {
+      "wf": "COM",
+      "status": 59000,
+      "en": "Pending Contract Owner Submission",
+      "result": "no sandbox CT with a COM workflow row"
+    },
+    {
+      "wf": "COM",
+      "status": 59200,
+      "en": "Contract Owner Management Completed",
+      "result": "no sandbox CT with a COM workflow row"
+    },
+    {
+      "wf": "COM",
+      "status": 59250,
+      "en": "Contract Owner Management Cancelled",
+      "result": "no sandbox CT with a COM workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58000,
+      "en": "Pending Treasury Circular (PP) Central Contract Creation Submission",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58005,
+      "en": "Pending Treasury Circular (PP) Central Contract Creation Approval",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58010,
+      "en": "Pending Treasury Circular (PP) Central Contract Creation Revision",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58015,
+      "en": "Pending Treasury Circular (PP) Central Contract Creation Revision Approval",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58020,
+      "en": "Treasury Circular (PP)  Central Contract Creation Cancelled",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58025,
+      "en": "Treasury Circular (PP)  Central Contract Creation Approved",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58030,
+      "en": "Treasury Circular (PP) Central Contract Creation Rejected",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58035,
+      "en": "Pending Treasury Circular (PP) Central Contract Update Submission",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58040,
+      "en": "Pending Treasury Circular (PP) Central Contract Update Approval",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58045,
+      "en": "Pending Treasury Circular (PP) Central Contract Update Revision",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58050,
+      "en": "Pending Treasury Circular (PP) Central Contract Update Revision Approval",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58055,
+      "en": "Treasury Circular (PP) Central Contract Update Cancelled",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58060,
+      "en": "Treasury Circular (PP) Central Contract Update Approved",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58065,
+      "en": "Treasury Circular (PP) Central Contract Update Rejected",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58070,
+      "en": "Pending Cancellation Treasury Circular (PP) Central Contract Approval",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58075,
+      "en": "Pending Cancellation Treasury Circular (PP) Central Contract Revision",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58080,
+      "en": "Pending Cancellation Treasury Circular (PP) Central Contract Revision Approval",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58085,
+      "en": "Cancellation Treasury Circular (PP) Central Contract Approved",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "CQ",
+      "status": 58090,
+      "en": "Cancellation Treasury Circular (PP) Central Contract Rejected",
+      "result": "no sandbox TC with a CQ workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51000,
+      "en": "Pending Amendment With Supplemental Submission",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51050,
+      "en": "Pending Amendment With Supplemental Approval",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51100,
+      "en": "Pending Amendment With Supplemental Revision",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51150,
+      "en": "Pending Amendment With Supplemental Revision Approval",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51200,
+      "en": "Pending Meeting Confirmation",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51210,
+      "en": "Pending Meeting Confirmation Revision",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51250,
+      "en": "Pending Decision by the Approving Authority at the Ministry / Jabatan Level",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51260,
+      "en": "Pending Decision by the Approving Authority at the Ministry / Jabatan Level Revision",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51300,
+      "en": "Pending Verification",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51320,
+      "en": "Pending Chairperson Sign Off",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51400,
+      "en": "Pending Supplemental Contract Letter Submission",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51405,
+      "en": "Pending Supplemental Contract Letter Approval",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51410,
+      "en": "Pending Supplemental Contract Letter Revision",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51420,
+      "en": "Pending Supplemental Contract Letter Revision Approval",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51450,
+      "en": "Pending Supplemental Contract Letter Acknowledgement",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51500,
+      "en": "Pending Verification Acknowledgement of Supplemental Contract Letter",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51600,
+      "en": "Amendment With Supplemental Contract Rejected",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51650,
+      "en": "Amendment With Supplemental Contract Cancelled",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51700,
+      "en": "Supplemental Contract Letter Completed",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51750,
+      "en": "Supplemental Contract Letter Rejected",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51800,
+      "en": "Pending Decision by the Approving Authority at the Ministry of Finance Level",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51850,
+      "en": "Pending Cancellation Acknowledgement Amendment With Supplemental Contract",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51900,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51950,
+      "en": "Pending Rejection Acknowledgement of Supplemental Contract Letter",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51960,
+      "en": "Cancelled due to Disciplinary Action",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51961,
+      "en": "Cancelled due to Bumiputera Status has been Cancelled",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51970,
+      "en": "Rejected due to Disciplinary Action",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51971,
+      "en": "Rejected due to Bumiputera Status has been Cancelled",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51980,
+      "en": "Revised due to Disciplinary Action",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51981,
+      "en": "Revised due to Bumiputera Status has been Cancelled",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51990,
+      "en": "Pending Cancellation Acknowledgement due to Disciplinary Action",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FA",
+      "status": 51991,
+      "en": "Pending Cancellation Acknowledgement due to Bumiputera Status has been Cancelled",
+      "result": "no sandbox CT with a FA workflow row"
+    },
+    {
+      "wf": "FD",
+      "status": 50050,
+      "en": "Pending Fulfilment Details Creation",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 50300"
+    },
+    {
+      "wf": "FD",
+      "status": 50200,
+      "en": "Pending Fulfilment Details Revision",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 50300"
+    },
+    {
+      "wf": "FD",
+      "status": 50250,
+      "en": "Pending Fulfilment Details Revision Approval",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 50300"
+    },
+    {
+      "wf": "FD",
+      "status": 50400,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "doc": "CT260000000002301",
+      "result": "OK; restored to 50300"
+    },
+    {
+      "wf": "FS",
+      "status": 53000,
+      "en": "Pending Suspension Submission",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53050,
+      "en": "Pending Suspension Approval",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53100,
+      "en": "Pending Suspension Revision",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53150,
+      "en": "Pending Suspension Revision Approval",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53200,
+      "en": "Contract Suspension Approved",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53250,
+      "en": "Contract Suspension Rejected",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53300,
+      "en": "Contract Suspension Cancelled",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FS",
+      "status": 53400,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a FS workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52000,
+      "en": "Pending Termination Submission",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52050,
+      "en": "Pending Termination Approval",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52100,
+      "en": "Pending Termination Revision",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52150,
+      "en": "Pending Termination Revision Approval",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52200,
+      "en": "Pending Termination Letter Printing",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52250,
+      "en": "Contract Termination Completed",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52350,
+      "en": "Contract Termination Cancelled",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FT",
+      "status": 52400,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a FT workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54000,
+      "en": "Pending Fulfilment Details Submission",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54050,
+      "en": "Pending Fulfilment Details Approval",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54100,
+      "en": "Pending Fulfilment Details Revision",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54150,
+      "en": "Pending Fulfilment Details Revision Approval",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54200,
+      "en": "Fulfilment Details Approved",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54250,
+      "en": "Fulfilment Details Rejected",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FU",
+      "status": 54300,
+      "en": "Fulfilment Details Cancelled",
+      "result": "no sandbox CT with a FU workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54500,
+      "en": "Pending Amendment Without Supplemental Submission",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54550,
+      "en": "Pending Amendment Without Supplemental Approval",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54600,
+      "en": "Pending Amendment Without Supplemental Revision",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54650,
+      "en": "Pending Amendment Without Supplemental Revision Approval",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54700,
+      "en": "Amendment Without Supplemental Approved",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54750,
+      "en": "Amendment Without Supplemental Rejected",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54800,
+      "en": "Amendment Without Supplemental Cancelled",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "FW",
+      "status": 54900,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a FW workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54850,
+      "en": "Pending Notification Setting Submission",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54860,
+      "en": "Pending Notification Setting Approval",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54870,
+      "en": "Pending Notification Setting Revision",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54880,
+      "en": "Pending Notification Setting Revision Approval",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54910,
+      "en": "Notification Setting Approved",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54950,
+      "en": "Notification Setting Rejected",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "NT",
+      "status": 54990,
+      "en": "Notification Setting Cancelled",
+      "result": "no sandbox CT with a NT workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58100,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Submission",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58105,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Approval",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58110,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Revision",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58115,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Revision Approval",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58120,
+      "en": "Treasury Circular (PP) Central Panel Contract Creation Cancelled",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58125,
+      "en": "Treasury Circular (PP) Central Panel Contract Creation Approved",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58130,
+      "en": "Treasury Circular (PP) Central Panel Contract Creation Rejected",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58135,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Update Submission",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58140,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Update Approval",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58145,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Update Revision",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58150,
+      "en": "Pending Treasury Circular (PP) Central Panel Contract Update Revision Approval",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58155,
+      "en": "Treasury Circular (PP) Central Panel Contract Cancelled",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58160,
+      "en": "Treasury Circular (PP) Central Panel Contract Update Approved",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58165,
+      "en": "Treasury Circular (PP) Central Panel Contract Update Rejected",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58170,
+      "en": "Pending Cancellation Treasury Circular (PP) Central Panel Contract Approval",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58175,
+      "en": "Pending Cancellation Treasury Circular (PP) Central Panel Contract Revision",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58180,
+      "en": "Pending Cancellation Treasury Circular (PP) Central Panel Contract Revision Approval",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58185,
+      "en": "Cancellation Treasury Circular (PP) Central Panel Contract Approved",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "PQ",
+      "status": 58190,
+      "en": "Cancellation Treasury Circular (PP) Central Panel Contract Rejected",
+      "result": "no sandbox TC with a PQ workflow row"
+    },
+    {
+      "wf": "RA",
+      "status": 59100,
+      "en": "Pending Designation of Contract Administrator Submission",
+      "result": "no sandbox CT with a RA workflow row"
+    },
+    {
+      "wf": "RA",
+      "status": 59150,
+      "en": "Pending Designation of Contract Administrator Approval",
+      "result": "no sandbox CT with a RA workflow row"
+    },
+    {
+      "wf": "RA",
+      "status": 59300,
+      "en": "Contract Administrator Designation Application Approved",
+      "result": "no sandbox CT with a RA workflow row"
+    },
+    {
+      "wf": "RA",
+      "status": 59301,
+      "en": "Contract Administrator Designation Application completed",
+      "result": "no sandbox CT with a RA workflow row"
+    },
+    {
+      "wf": "RA",
+      "status": 59350,
+      "en": "Contract Administrator Designation Application Rejected",
+      "result": "no sandbox CT with a RA workflow row"
+    },
+    {
+      "wf": "RA",
+      "status": 59400,
+      "en": "Contract Administrator Designation Application Cancelled",
+      "result": "no sandbox CT with a RA workflow row"
+    },
+    {
+      "wf": "RC",
+      "status": 58600,
+      "en": "Pending Cancel Treasury Circular (PP) Submission",
+      "result": "no sandbox CX with a RC workflow row"
+    },
+    {
+      "wf": "RC",
+      "status": 58650,
+      "en": "Pending Cancel Treasury Circular (PP) Approval",
+      "result": "no sandbox CX with a RC workflow row"
+    },
+    {
+      "wf": "RC",
+      "status": 58700,
+      "en": "Pending Cancel Treasury Circular (PP) Revision",
+      "result": "no sandbox CX with a RC workflow row"
+    },
+    {
+      "wf": "RC",
+      "status": 58750,
+      "en": "Pending Cancel Treasury Circular (PP) Revision Approval",
+      "result": "no sandbox CX with a RC workflow row"
+    },
+    {
+      "wf": "RC",
+      "status": 58800,
+      "en": "Cancel Treasury Circular (PP) Approved",
+      "result": "no sandbox CX with a RC workflow row"
+    },
+    {
+      "wf": "RC",
+      "status": 58850,
+      "en": "Cancel Treasury Circular (PP) Rejected",
+      "result": "no sandbox CX with a RC workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55000,
+      "en": "Pending Factoring Submission",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55050,
+      "en": "Pending Factoring Acknowledgement",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55060,
+      "en": "Factoring Acknowledgement Rejected",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55100,
+      "en": "Pending Factoring Approval",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55110,
+      "en": "Factoring Request Rejected",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55150,
+      "en": "Factoring Request Approved",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "RF",
+      "status": 55160,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a RF workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57000,
+      "en": "Pending Draft Supplemental Agreement Creation",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57050,
+      "en": "Pending Draft Supplemental Agreement Approval",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57100,
+      "en": "Pending Draft Supplemental Agreement Revision",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57150,
+      "en": "Pending Draft Supplemental Agreement Revision Approval",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57250,
+      "en": "Pending Final Supplemental Agreement Update",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57300,
+      "en": "Pending Final Supplemental Agreement Approval",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57350,
+      "en": "Pending Final Supplemental Agreement Revision",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57400,
+      "en": "Pending Final Supplemental Agreement Revision Approval",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57600,
+      "en": "Supplemental Agreement Completed",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57700,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57750,
+      "en": "Pending Supplemental Agreement Creation",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57800,
+      "en": "Pending Supplemental  Agreement Approval",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57850,
+      "en": "Pending Supplemental Agreement Revision",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57900,
+      "en": "Pending Supplemental Agreement Revision Approval",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57950,
+      "en": "Pending Draft Supplemental Agreement Creation Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57955,
+      "en": "Pending Draft Supplemental Agreement Approval Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57960,
+      "en": "Pending Draft Supplemental Agreement Revision Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57965,
+      "en": "Pending Draft Supplemental Agreement Revision Approval Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57970,
+      "en": "Pending Final Supplemental Agreement Update Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57975,
+      "en": "Pending Final Supplemental Agreement Approval Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57980,
+      "en": "Pending Final Supplemental Agreement Revision",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "SA",
+      "status": 57985,
+      "en": "Pending Final Supplemental Agreement Revision Approval Cancelled",
+      "result": "no sandbox CT with a SA workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55800,
+      "en": "Pending Update Factoring Submission",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55850,
+      "en": "Pending Update Factoring Acknowledgement",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55860,
+      "en": "Update Factoring Acknowledgement Rejected",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55870,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55900,
+      "en": "Pending Update Factoring Approval",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55910,
+      "en": "Update Factoring Rejected",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "UF",
+      "status": 55950,
+      "en": "Update Factoring Approved",
+      "result": "no sandbox CT with a UF workflow row"
+    },
+    {
+      "wf": "XA",
+      "status": 59110,
+      "en": "Pending Remove Designation of Contract Administrator Submission",
+      "result": "no sandbox CT with a XA workflow row"
+    },
+    {
+      "wf": "XA",
+      "status": 59160,
+      "en": "Pending Remove Designation of Contract Administrator Approval",
+      "result": "no sandbox CT with a XA workflow row"
+    },
+    {
+      "wf": "XA",
+      "status": 59310,
+      "en": "Contract Administrator Designation Cancellation Application completed",
+      "result": "no sandbox CT with a XA workflow row"
+    },
+    {
+      "wf": "XA",
+      "status": 59311,
+      "en": "Contract Administrator Designation Cancellation Approved",
+      "result": "no sandbox CT with a XA workflow row"
+    },
+    {
+      "wf": "XA",
+      "status": 59360,
+      "en": "Remove Designation of Contract Administrator Rejected",
+      "result": "no sandbox CT with a XA workflow row"
+    },
+    {
+      "wf": "XA",
+      "status": 59410,
+      "en": "Remove Designation of Contract Administrator Cancelled",
+      "result": "no sandbox CT with a XA workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55200,
+      "en": "Pending Remove Factoring Submission",
+      "result": "no sandbox CT with a XF workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55250,
+      "en": "Pending Remove Factoring Acknowledgement",
+      "result": "no sandbox CT with a XF workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55260,
+      "en": "Remove Factoring Acknowledgement Rejected",
+      "result": "no sandbox CT with a XF workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55300,
+      "en": "Pending Remove Factoring Approval",
+      "result": "no sandbox CT with a XF workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55310,
+      "en": "Remove Factoring Rejected",
+      "result": "no sandbox CT with a XF workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55350,
+      "en": "Remove Factoring Approved",
+      "result": "no sandbox CT with a XF workflow row"
+    },
+    {
+      "wf": "XF",
+      "status": 55400,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "result": "no sandbox CT with a XF workflow row"
+    }
+  ]
+}

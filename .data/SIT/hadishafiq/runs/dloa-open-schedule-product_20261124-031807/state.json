@@ -1,0 +1,128 @@
+{
+  "flowRunId": "dloa-open-schedule-product_20261124-031807",
+  "flowId": "dloa-open-schedule-product",
+  "module": "direct-loa",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T03:18:07+08:00",
+  "updatedAt": "2026-11-24T03:25:14+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004232"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-014": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_031808",
+          "startedAt": "2026-11-24T03:18:14+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-open-schedule-product\\01_KAT-014\\2026-11-24_031808",
+          "endedAt": "2026-11-24T03:21:04+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "No. is mandatory."
+            },
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004232 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004232"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_SUBMITTED"
+    },
+    "KAT-007": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_031808",
+          "startedAt": "2026-11-24T03:21:07+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-open-schedule-product\\02_KAT-007\\2026-11-24_031808",
+          "dbBefore": {
+            "kind": "LA",
+            "docNo": "LA260000000004232",
+            "statusId": 62504
+          },
+          "endedAt": "2026-11-24T03:23:28+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004232 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004232"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_ACKNOWLEDGED",
+      "db": {
+        "kind": "LA",
+        "docNo": "LA260000000004232",
+        "expected": 62505,
+        "statusId": 62505,
+        "en": "Pending Verification of Acknowledgement Receipt's Letter Of Acceptance",
+        "bm": "Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima",
+        "at": "2026-11-24 03:23:23",
+        "ok": true,
+        "checkedAt": "2026-11-24T03:23:28+08:00"
+      }
+    },
+    "KAT-010": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_031808",
+          "startedAt": "2026-11-24T03:23:31+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-open-schedule-product\\03_KAT-010\\2026-11-24_031808",
+          "dbBefore": {
+            "kind": "LA",
+            "docNo": "LA260000000004232",
+            "statusId": 62505
+          },
+          "endedAt": "2026-11-24T03:25:14+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004232 is completed."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004232"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_VERIFIED",
+      "db": {
+        "kind": "LA",
+        "docNo": "LA260000000004232",
+        "expected": 62506,
+        "statusId": 62506,
+        "en": "Letter of Acceptance Completed",
+        "bm": "Surat Setuju Terima Telah Selesai",
+        "at": "2026-11-24 03:25:14",
+        "ok": true,
+        "checkedAt": "2026-11-24T03:25:14+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

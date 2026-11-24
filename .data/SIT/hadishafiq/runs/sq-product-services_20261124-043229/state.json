@@ -1,0 +1,104 @@
+{
+  "flowRunId": "sq-product-services_20261124-043229",
+  "flowId": "sq-product-services",
+  "module": "sq",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:32:29+08:00",
+  "updatedAt": "2026-11-24T05:46:30+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "SQ": "SQ260000000002367"
+  },
+  "officers": {},
+  "gates": {
+    "SQ_START_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T04:46:30+08:00"
+    },
+    "SQ_END_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T05:46:30+08:00",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002367",
+        "expected": 60852,
+        "statusId": 60852,
+        "en": "Pending Request Note Creation",
+        "bm": "Menunggu Ciptaan Nota Minta",
+        "at": "2026-11-24 05:46:00",
+        "ok": true,
+        "checkedAt": "2026-11-24T05:46:30+08:00"
+      }
+    }
+  },
+  "steps": {
+    "KAT-037": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043229",
+          "startedAt": "2026-11-24T04:32:36+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-product-services\\01_KAT-037\\2026-11-24_043229",
+          "endedAt": "2026-11-24T04:36:08+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002367 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002367"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUBMITTED"
+    },
+    "KAT-022": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043229",
+          "startedAt": "2026-11-24T04:46:31+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-product-services\\03_KAT-022\\2026-11-24_043229",
+          "dbBefore": {
+            "kind": "SQ",
+            "docNo": "SQ260000000002367",
+            "statusId": 60851
+          },
+          "endedAt": "2026-11-24T04:47:26+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "❌ SQ Number not found from pagination 1 until 10: SQ260000000002367",
+          "selfHeal": "DB shows 60851 Pending Supplier Response: the attempt went through"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUPPLIER_RESPONDED",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002367",
+        "expected": 60851,
+        "statusId": 60851,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-24 04:36:03",
+        "ok": true,
+        "checkedAt": "2026-11-24T05:31:39+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed",
+  "blockedReason": "INVALID (2026-11-24 05:50): self-heal wrongly treated KAT-022 as done (SQ status 60851 is the same before and after a reply); no supplier replied (SC_QUOTE_SUPPLIER.IS_SUBMITTED = 0) and SQ_END_SQL then closed the SQ. Do not use this SQ."
+}

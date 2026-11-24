@@ -1,0 +1,72 @@
+
+Running 6 tests using 1 worker
+
+[16:23:12] ct-fd-agreement/01_LA_LOOKUP: Gate LA_LOOKUP done by hadishafiq (--input) at 2026-11-23T16:23:12+08:00 (LA=LA260000000004215)
+  ✓  1 [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 01 GATE LA_LOOKUP Letter of Acceptance to build on @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/01_LA_LOOKUP @gate-LA_LOOKUP (334ms)
+[16:23:13] ct-fd-agreement/02_KAT-040: KAT-040 Submit Fulfilment Details (FD) for a verified LOA — role Contract Administrator, login: Katalon default account of the step
+[16:23:13] ct-fd-agreement/02_KAT-040: Test data corrected (support/katalon/data-overrides.json): dateValue, tickPerformanceBond: Performance Bond dates 2026-06-15 are in the past (datepicker does not offer them); use 180 days from the run date; tickPerformanceBond 2: with 1 the script ticks Performance Bond Deferment but adds no deferment history, so Approve FD fails (ERR-750071)
+[16:23:13] ct-fd-agreement/02_KAT-040: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:23:13] ct-fd-agreement/02_KAT-040: Flow inputs: Document_Number=LA260000000004215
+[16:23:15] ct-fd-agreement/02_KAT-040: Closed the TERKINI announcement
+[16:23:21] ct-fd-agreement/02_KAT-040: Closed the TERKINI announcement
+[16:23:39] ct-fd-agreement/02_KAT-040: Claimed group task LA260000000004215 (moved to My Task)
+[16:23:49] ct-fd-agreement/02_KAT-040: Contract No = CT260000000002292
+[16:23:49] ct-fd-agreement/02_KAT-040: Physical Contract No field = textarea
+[16:23:50] ct-fd-agreement/02_KAT-040: Using dperiod field
+[16:24:10] ct-fd-agreement/02_KAT-040: Loop 1 Final PTJ Code = 42240201
+[16:24:16] ct-fd-agreement/02_KAT-040: Total Agency checkbox found = 5
+[16:24:16] ct-fd-agreement/02_KAT-040: Checkbox row 0 | isSelected = false | checked = null | aria-checked = null
+[16:24:16] ct-fd-agreement/02_KAT-040: Checkbox row 1 | isSelected = false | checked = null | aria-checked = null
+[16:24:17] ct-fd-agreement/02_KAT-040: Checkbox row 2 | isSelected = false | checked = null | aria-checked = null
+[16:24:17] ct-fd-agreement/02_KAT-040: Checkbox row 3 | isSelected = false | checked = null | aria-checked = null
+[16:24:17] ct-fd-agreement/02_KAT-040: Checkbox row 4 | isSelected = true | checked = checked | aria-checked = null
+[16:24:17] ct-fd-agreement/02_KAT-040: Ticked checkbox found at row 4
+[16:24:17] ct-fd-agreement/02_KAT-040: Agency checkbox ticked = true
+[16:24:17] ct-fd-agreement/02_KAT-040: File Ref Agency = File Ref CT260000000002292
+[16:24:27] ct-fd-agreement/02_KAT-040: Skip: menu not available -> Object Repository/FD and Agreement/Side Menu/FD Application/Performance Bond Side Menu
+[16:35:25] ct-fd-agreement/02_KAT-040: Signed out (SSO logout)
+  ✘  2 [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 02 KAT-040 Submit Fulfilment Details (FD) for a verified LOA @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/02_KAT-040 @KAT-040 (12.3m)
+  -  3 [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 03 KAT-041 Approve Fulfilment Details @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/03_KAT-041 @KAT-041
+  -  4 [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 04 KAT-042 Submit Agreement @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/04_KAT-042 @KAT-042
+  -  5 [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 05 KAT-043 Approve Agreement @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/05_KAT-043 @KAT-043
+  -  6 [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 06 KAT-045 Contract Amendment with Supplement @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/06_KAT-045 @KAT-045
+
+
+  1) [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 02 KAT-040 Submit Fulfilment Details (FD) for a verified LOA @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/02_KAT-040 @KAT-040 
+
+    Error: ❌ Dropdown failed (stale/DOM refresh): fromMonth_0
+
+       at ..\support\katalon\runtime.ts:589
+
+      587 | /** Groovy `assert cond : message`. */
+      588 | export function gAssert(cond: any, message?: any): asserts cond {
+    > 589 |   if (!cond) throw new Error(message == null ? 'Assertion failed' : String(message));
+          |                    ^
+      590 | }
+      591 |
+      592 | /** Groovy `text =~ /re/`: a java.util.regex.Matcher with find()/group(). */
+        at gAssert (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:589:20)
+        at selectDropdownByIndex (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:170:9)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-040.ts:784:5)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:268:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:85:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_162307\flows-en-ct.flow-ct-fd-agr-8a8e3-tails-FD-for-a-verified-LOA-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_162307\flows-en-ct.flow-ct-fd-agr-8a8e3-tails-FD-for-a-verified-LOA-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_162307\flows-en-ct.flow-ct-fd-agr-8a8e3-tails-FD-for-a-verified-LOA-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\SIT\2026-11-23_162307\flows-en-ct.flow-ct-fd-agr-8a8e3-tails-FD-for-a-verified-LOA-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 02 KAT-040 Submit Fulfilment Details (FD) for a verified LOA @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/02_KAT-040 @KAT-040 
+  4 did not run
+  1 passed (12.5m)

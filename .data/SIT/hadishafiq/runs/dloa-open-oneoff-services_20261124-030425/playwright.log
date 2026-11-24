@@ -1,0 +1,67 @@
+
+Running 3 tests using 1 worker
+
+[03:04:32] dloa-open-oneoff-services/01_KAT-012: KAT-012 Create Direct LOA: Open Open Direct LOA One-Off - Services — role Requisitioner, login: Katalon default account of the step
+[03:04:32] dloa-open-oneoff-services/01_KAT-012: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName: File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6
+[03:04:32] dloa-open-oneoff-services/01_KAT-012: Data file "LOA_Variables_Open_Service_AP_201_One_Off.xlsx" (Data Files/Direct LOA Open/Open_Direct_LOA_One-Off_Service) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[03:04:32] dloa-open-oneoff-services/01_KAT-012: Live dates: FileReference1=Test1124030432
+[03:04:32] dloa-open-oneoff-services/01_KAT-012: Flow inputs: (none)
+[03:04:36] dloa-open-oneoff-services/01_KAT-012: Closed the TERKINI announcement
+[03:04:39] dloa-open-oneoff-services/01_KAT-012: Closed the TERKINI announcement
+[03:05:28] dloa-open-oneoff-services/01_KAT-012: Final File Reference No_1 = Test1124030432
+[03:05:37] dloa-open-oneoff-services/01_KAT-012: Final LOA Offered Price = 3,300,000.00
+[03:05:42] dloa-open-oneoff-services/01_KAT-012: Final Sales Tax / Service Tax (RM) = 0.00
+[03:05:51] dloa-open-oneoff-services/01_KAT-012: Final Month Period / Duration = 30
+[03:05:54] dloa-open-oneoff-services/01_KAT-012: Agreement = No, skip upload button.
+[03:06:10] dloa-open-oneoff-services/01_KAT-012: Zone Location = No. Skip zonal coverage and zone locality section.
+[03:06:12] dloa-open-oneoff-services/01_KAT-012: Loop #1 of 2
+[03:06:27] dloa-open-oneoff-services/01_KAT-012: Loop #2 of 2
+[03:07:02] dloa-open-oneoff-services/01_KAT-012: Message: Letter of Acceptance (LOA) LA260000000004230 is successfully submitted.
+[03:07:02] dloa-open-oneoff-services/01_KAT-012: ✅ Captured LOA No: LA260000000004230
+[03:07:02] dloa-open-oneoff-services/01_KAT-012: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_One-Off_Open_Service_AP_201_2026.xlsx
+[03:07:02] dloa-open-oneoff-services/01_KAT-012: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_One-Off_Open_Service_AP_201_2026.xlsx
+[03:07:06] dloa-open-oneoff-services/01_KAT-012: Closed the TERKINI announcement
+[03:07:06] dloa-open-oneoff-services/01_KAT-012: closeBrowser (the fixture closes the browser at the end of the test)
+[03:07:06] dloa-open-oneoff-services/01_KAT-012: DB status LA LA260000000004230: 62504 Pending Acknowledgement Receipt's Letter Of Acceptance / Menunggu Pengakuan Penerimaan Surat Setuju Terima (expected 62504, OK)
+[03:07:07] dloa-open-oneoff-services/01_KAT-012: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-open-oneoff-services [EN] Direct LOA Open Open Direct LOA One-Off - Services → supplier → DO verify › 01 KAT-012 Create Direct LOA: Open Open Direct LOA One-Off - Services @flow-dloa-open-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-open-oneoff-services/01_KAT-012 @KAT-012 (2.6m)
+[03:07:09] dloa-open-oneoff-services/02_KAT-008: BPM task "Accept Manual LOA" of LA260000000004230 is open (assigned to mofflros_6)
+[03:07:10] dloa-open-oneoff-services/02_KAT-008: BPM task assigned to mofflros_6; no step account matches (this step uses MOFFLROS_6)
+[03:07:11] dloa-open-oneoff-services/02_KAT-008: KAT-008 Supplier acknowledges Direct LOA - Services — role Supplier, login: Katalon default account of the step
+[03:07:11] dloa-open-oneoff-services/02_KAT-008: Test data corrected (support/katalon/data-overrides.json): Document_Number: Respond to our new services LOA LA260000000004124 (KAT-002, 2026-11-11 16:03, supplier MOF FL LLP 6 = this account) instead of the Katalon LA260000000003988
+[03:07:11] dloa-open-oneoff-services/02_KAT-008: Flow inputs: Document_Number=LA260000000004230
+[03:07:23] dloa-open-oneoff-services/02_KAT-008: Closed the TERKINI announcement
+[03:07:27] dloa-open-oneoff-services/02_KAT-008: Closed the TERKINI announcement
+[03:07:48] dloa-open-oneoff-services/02_KAT-008: LA260000000004230 is already in My Task (no claim needed)
+[03:08:06] dloa-open-oneoff-services/02_KAT-008: Total Assign buttons found: 2
+[03:08:06] dloa-open-oneoff-services/02_KAT-008: Click Assign button at row index: 0
+[03:08:11] dloa-open-oneoff-services/02_KAT-008: Click Assign button at row index: 2
+[03:08:21] dloa-open-oneoff-services/02_KAT-008: Message: Letter of Acceptance (LOA) LA260000000004230 is acknowledged.
+[03:08:21] dloa-open-oneoff-services/02_KAT-008: ✅ Captured LOA No: LA260000000004230
+[03:08:21] dloa-open-oneoff-services/02_KAT-008: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Service_AP_201_2026.xlsx
+[03:08:21] dloa-open-oneoff-services/02_KAT-008: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Service_AP_201_2026.xlsx
+[03:08:22] dloa-open-oneoff-services/02_KAT-008: Closed the TERKINI announcement
+[03:08:22] dloa-open-oneoff-services/02_KAT-008: closeBrowser (the fixture closes the browser at the end of the test)
+[03:08:23] dloa-open-oneoff-services/02_KAT-008: DB status LA LA260000000004230: 62505 Pending Verification of Acknowledgement Receipt's Letter Of Acceptance / Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima (expected 62505, OK)
+[03:08:24] dloa-open-oneoff-services/02_KAT-008: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-open-oneoff-services [EN] Direct LOA Open Open Direct LOA One-Off - Services → supplier → DO verify › 02 KAT-008 Supplier acknowledges Direct LOA - Services @flow-dloa-open-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-open-oneoff-services/02_KAT-008 @KAT-008 (1.3m)
+[03:08:25] dloa-open-oneoff-services/03_KAT-010: BPM task "Verify Manual LOA" of LA260000000004230 is open (assigned to 710527085562)
+[03:08:27] dloa-open-oneoff-services/03_KAT-010: KAT-010 Desk Officer verifies the LOA — role Desk Officer, login: Katalon default account of the step
+[03:08:27] dloa-open-oneoff-services/03_KAT-010: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[03:08:27] dloa-open-oneoff-services/03_KAT-010: Flow inputs: Document_Number=LA260000000004230
+[03:08:30] dloa-open-oneoff-services/03_KAT-010: Closed the TERKINI announcement
+[03:08:34] dloa-open-oneoff-services/03_KAT-010: Closed the TERKINI announcement
+[03:08:52] dloa-open-oneoff-services/03_KAT-010: LA260000000004230 is already in My Task (no claim needed)
+[03:10:15] dloa-open-oneoff-services/03_KAT-010: Message: Letter of Acceptance (LOA) LA260000000004230 is completed.
+[03:10:15] dloa-open-oneoff-services/03_KAT-010: ✅ Captured LOA No: LA260000000004230
+[03:10:15] dloa-open-oneoff-services/03_KAT-010: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[03:10:15] dloa-open-oneoff-services/03_KAT-010: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[03:10:17] dloa-open-oneoff-services/03_KAT-010: Closed the TERKINI announcement
+[03:10:17] dloa-open-oneoff-services/03_KAT-010: closeBrowser (the fixture closes the browser at the end of the test)
+[03:10:29] dloa-open-oneoff-services/03_KAT-010: DB status LA LA260000000004230: 62506 Letter of Acceptance Completed / Surat Setuju Terima Telah Selesai (expected 62506, OK)
+[03:10:30] dloa-open-oneoff-services/03_KAT-010: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-open-oneoff-services [EN] Direct LOA Open Open Direct LOA One-Off - Services → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-open-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-open-oneoff-services/03_KAT-010 @KAT-010 (2.1m)
+
+  Slow test file: [flows] › tests\flows\en\direct-loa.flow.spec.ts (6.0m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  3 passed (6.1m)

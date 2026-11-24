@@ -1,0 +1,3 @@
+# dloa-from-dp-rn_20261123-155431 is waiting
+
+GATE SQ_END_SQL — Close the Simple Quote (move END_DATE to the past) — only after the supplier replied. Only after the supplier replied. In DBeaver (SIT connection only), the user's SQL with END_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('2026-11-23 15:05:32', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002363'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('SQ260000000002363');  Then wait until the Prepare Request Note task for SQ260000000002363 appears in the requisitioner's My Task. When done: npm run qa -- gate --run dloa-from-dp-rn_20261123-155431 --gate SQ_END_SQL --done

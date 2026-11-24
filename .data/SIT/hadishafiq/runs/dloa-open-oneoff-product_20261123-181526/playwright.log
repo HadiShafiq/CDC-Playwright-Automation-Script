@@ -1,0 +1,58 @@
+
+Running 3 tests using 1 worker
+
+[18:15:33] dloa-open-oneoff-product/01_KAT-011: KAT-011 Create Direct LOA: Open Open Direct LOA One-Off - Product — role Requisitioner, login: Katalon default account of the step
+[18:15:33] dloa-open-oneoff-product/01_KAT-011: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName: File Reference No. unique (ERR-700027); supplier = company of KAT-007 account MOFFLROSNEW3
+[18:15:33] dloa-open-oneoff-product/01_KAT-011: Live dates: FileReference1=Test1123181533
+[18:15:33] dloa-open-oneoff-product/01_KAT-011: Flow inputs: (none)
+[18:15:35] dloa-open-oneoff-product/01_KAT-011: Closed the TERKINI announcement
+[18:15:39] dloa-open-oneoff-product/01_KAT-011: Closed the TERKINI announcement
+[18:16:24] dloa-open-oneoff-product/01_KAT-011: Final File Reference No_1 = Test1123181533
+[18:16:33] dloa-open-oneoff-product/01_KAT-011: Final LOA Offered Price = 3,000,000.00
+[18:16:37] dloa-open-oneoff-product/01_KAT-011: Final Sales Tax / Service Tax (RM) = 0.00
+[18:16:54] dloa-open-oneoff-product/01_KAT-011: Final Month Period / Duration = 30
+[18:16:56] dloa-open-oneoff-product/01_KAT-011: Agreement = No, skip upload button.
+[18:17:08] dloa-open-oneoff-product/01_KAT-011: Zone Location = No. Skip zonal coverage and zone locality section.
+[18:17:10] dloa-open-oneoff-product/01_KAT-011: Loop #1 of 2
+[18:17:26] dloa-open-oneoff-product/01_KAT-011: Loop #2 of 2
+[18:18:00] dloa-open-oneoff-product/01_KAT-011: Message: Letter of Acceptance (LOA) LA260000000004226 is successfully submitted.
+[18:18:00] dloa-open-oneoff-product/01_KAT-011: ✅ Captured LOA No: LA260000000004226
+[18:18:00] dloa-open-oneoff-product/01_KAT-011: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_One-Off_Open_Product_AP_201_2026.xlsx
+[18:18:00] dloa-open-oneoff-product/01_KAT-011: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_One-Off_Open_Product_AP_201_2026.xlsx
+[18:18:01] dloa-open-oneoff-product/01_KAT-011: Closed the TERKINI announcement
+[18:18:01] dloa-open-oneoff-product/01_KAT-011: closeBrowser (the fixture closes the browser at the end of the test)
+[18:18:02] dloa-open-oneoff-product/01_KAT-011: Signed out (SSO logout)
+  ✓  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-open-oneoff-product [EN] Direct LOA Open Open Direct LOA One-Off - Product → supplier → DO verify › 01 KAT-011 Create Direct LOA: Open Open Direct LOA One-Off - Product @flow-dloa-open-oneoff-product @module-direct-loa @lang-en @FLOW @dloa-open-oneoff-product/01_KAT-011 @KAT-011 (2.5m)
+[18:18:02] dloa-open-oneoff-product/02_KAT-007: KAT-007 Supplier acknowledges Direct LOA - Product — role Supplier, login: Katalon default account of the step
+[18:18:02] dloa-open-oneoff-product/02_KAT-007: Test data corrected (support/katalon/data-overrides.json): P_Item_Code: Katalon default P_Item_Code is empty, SIT item search needs an 8-digit UNSPSC code (ERR-716006, ERR-715026); 10101703 from item 101017030000000000 in Desktop/Akta 882 RUU/Excel for Katalon Data Prep/DP PI Add to compare.xlsx
+[18:18:02] dloa-open-oneoff-product/02_KAT-007: Flow inputs: Document_Number=LA260000000004226
+[18:18:04] dloa-open-oneoff-product/02_KAT-007: Closed the TERKINI announcement
+[18:18:07] dloa-open-oneoff-product/02_KAT-007: Closed the TERKINI announcement
+[18:18:39] dloa-open-oneoff-product/02_KAT-007: Total Assign buttons found: 2
+[18:18:39] dloa-open-oneoff-product/02_KAT-007: Click Assign button at row index: 0
+[18:19:26] dloa-open-oneoff-product/02_KAT-007: Click Assign button at row index: 2
+[18:20:18] dloa-open-oneoff-product/02_KAT-007: Message: Letter of Acceptance (LOA) LA260000000004226 is acknowledged.
+[18:20:18] dloa-open-oneoff-product/02_KAT-007: ✅ Captured LOA No: LA260000000004226
+[18:20:19] dloa-open-oneoff-product/02_KAT-007: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Product_AP_201_2026.xlsx
+[18:20:19] dloa-open-oneoff-product/02_KAT-007: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Product_AP_201_2026.xlsx
+[18:20:20] dloa-open-oneoff-product/02_KAT-007: Closed the TERKINI announcement
+[18:20:20] dloa-open-oneoff-product/02_KAT-007: closeBrowser (the fixture closes the browser at the end of the test)
+[18:20:20] dloa-open-oneoff-product/02_KAT-007: Signed out (SSO logout)
+  ✓  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-open-oneoff-product [EN] Direct LOA Open Open Direct LOA One-Off - Product → supplier → DO verify › 02 KAT-007 Supplier acknowledges Direct LOA - Product @flow-dloa-open-oneoff-product @module-direct-loa @lang-en @FLOW @dloa-open-oneoff-product/02_KAT-007 @KAT-007 (2.3m)
+[18:20:21] dloa-open-oneoff-product/03_KAT-010: KAT-010 Desk Officer verifies the LOA — role Desk Officer, login: Katalon default account of the step
+[18:20:21] dloa-open-oneoff-product/03_KAT-010: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:20:21] dloa-open-oneoff-product/03_KAT-010: Flow inputs: Document_Number=LA260000000004226
+[18:20:22] dloa-open-oneoff-product/03_KAT-010: Closed the TERKINI announcement
+[18:20:26] dloa-open-oneoff-product/03_KAT-010: Closed the TERKINI announcement
+[18:21:46] dloa-open-oneoff-product/03_KAT-010: Message: Letter of Acceptance (LOA) LA260000000004226 is completed.
+[18:21:46] dloa-open-oneoff-product/03_KAT-010: ✅ Captured LOA No: LA260000000004226
+[18:21:46] dloa-open-oneoff-product/03_KAT-010: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[18:21:46] dloa-open-oneoff-product/03_KAT-010: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[18:21:47] dloa-open-oneoff-product/03_KAT-010: Closed the TERKINI announcement
+[18:21:47] dloa-open-oneoff-product/03_KAT-010: closeBrowser (the fixture closes the browser at the end of the test)
+[18:21:48] dloa-open-oneoff-product/03_KAT-010: Signed out (SSO logout)
+  ✓  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-open-oneoff-product [EN] Direct LOA Open Open Direct LOA One-Off - Product → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-open-oneoff-product @module-direct-loa @lang-en @FLOW @dloa-open-oneoff-product/03_KAT-010 @KAT-010 (1.5m)
+
+  Slow test file: [chromium] › tests\flows\en\direct-loa.flow.spec.ts (6.3m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  3 passed (6.4m)

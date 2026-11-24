@@ -1,0 +1,141 @@
+
+Running 10 tests using 1 worker
+
+[02:02:31] dp-sq-pr/01_KAT-021: KAT-021 Create Simple Quote - Services — role Requisitioner, login: Katalon default account of the step
+[02:02:31] dp-sq-pr/01_KAT-021: Test data corrected (support/katalon/data-overrides.json): dateValue, SupplierName, ItemCode, AddSupplierNameNormal, Fulfilmenttype: Start date 2026-10-19 is in the past (run date instead); default supplier Basic FL Organization (Others) 1 + item 851220040000000000 give 0 catalogue results. Use the company of KAT-022 supplier account BASICFLROS3 and its service item (Catalogue Search, 2026-10-30). Procurement type stays the test case's 2 (Direct LOA, needed for Prepare LOA KAT-025); with type 1 (used 2026-10-30 for SQ260000000002272) the RN goes to Submit PR instead. Supplier List: the test case search "ANE" invites KEDAI SERBANEKA ALI / KANEDA JAPANESE CUISINE (SQ260000000002277), whose logins we do not have; AINHALIM ENTERPRISE (NURULAINMOF) is not offered for this service SQ (search gives no records), so invite the catalogue supplier, BASICFLROS3 company (2026-11-04). Fulfilmenttype 2 (Schedule): per the user, only a Services SQ with Schedule or As And When gives an RN that goes to Prepare LOA (KAT-025); One Off (1) went to a Purchase Request (SQ260000000002305 → PR260000000004856)
+[02:02:31] dp-sq-pr/01_KAT-021: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[02:02:31] dp-sq-pr/01_KAT-021: Live dates: dateValue=2026-11-24
+[02:02:31] dp-sq-pr/01_KAT-021: Flow inputs: Fulfilmenttype=1
+[02:02:34] dp-sq-pr/01_KAT-021: Closed the TERKINI announcement
+[02:02:37] dp-sq-pr/01_KAT-021: Closed the TERKINI announcement
+[02:03:31] dp-sq-pr/01_KAT-021: Loop #1 of 1
+[02:05:13] dp-sq-pr/01_KAT-021: Message: Simple Quote SQ260000000002364 is successfully submitted.
+[02:05:13] dp-sq-pr/01_KAT-021: ✅ Captured SQ No: SQ260000000002364
+[02:05:13] dp-sq-pr/01_KAT-021: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[02:05:13] dp-sq-pr/01_KAT-021: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[02:05:15] dp-sq-pr/01_KAT-021: Closed the TERKINI announcement
+[02:05:15] dp-sq-pr/01_KAT-021: closeBrowser (the fixture closes the browser at the end of the test)
+[02:05:16] dp-sq-pr/01_KAT-021: DB status SQ SQ260000000002364: 60851 Pending Supplier Response / Menunggu Maklumbalas Pembekal (expected 60851, OK)
+[02:05:16] dp-sq-pr/01_KAT-021: Signed out (SSO logout)
+  ✓   1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 01 KAT-021 Create Simple Quote - Services @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/01_KAT-021 @KAT-021 (2.8m)
+[02:05:17] dp-sq-pr/02_SQ_START_SQL: Gate SQ_START_SQL: ran UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('2026-11-24 02:15:00', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002364')
+[02:16:30] dp-sq-pr/02_SQ_START_SQL: Gate SQ_START_SQL done by hadishafiq via automatic SQL (user permission) at 2026-11-24T02:16:30+08:00
+  ✓   2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/02_SQ_START_SQL @gate-SQ_START_SQL (11.2m)
+[02:16:31] dp-sq-pr/03_KAT-022: KAT-022 Supplier responds to the Simple Quote (prices every line) — role Supplier, login: Katalon default account of the step
+[02:16:31] dp-sq-pr/03_KAT-022: Test data corrected (support/katalon/data-overrides.json): sqNo: Respond to our new Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, 2026-11-11 18:13, Supplier List = BASICFLROS3 company) as the default BASICFLROS3 account, pricing every line; this SQ is for the LOA chain KAT-025/026/027
+[02:16:31] dp-sq-pr/03_KAT-022: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[02:16:31] dp-sq-pr/03_KAT-022: Flow inputs: sqNo=SQ260000000002364
+[02:16:39] dp-sq-pr/03_KAT-022: Closed the TERKINI announcement
+[02:16:42] dp-sq-pr/03_KAT-022: Closed the TERKINI announcement
+[02:17:03] dp-sq-pr/03_KAT-022: Checking page index: 1 for SQ No: SQ260000000002364
+[02:17:03] dp-sq-pr/03_KAT-022: ✅ Found SQ Number: SQ260000000002364 on page index 1
+[02:17:04] dp-sq-pr/03_KAT-022: Price lines on this Simple Quote: 1
+[02:17:04] dp-sq-pr/03_KAT-022: Fill Unit Price row #1
+[02:17:16] dp-sq-pr/03_KAT-022: Closed the TERKINI announcement
+[02:17:16] dp-sq-pr/03_KAT-022: closeBrowser (the fixture closes the browser at the end of the test)
+[02:17:17] dp-sq-pr/03_KAT-022: DB status SQ SQ260000000002364: 60851 Pending Supplier Response / Menunggu Maklumbalas Pembekal (expected 60851, OK)
+[02:17:18] dp-sq-pr/03_KAT-022: Signed out (SSO logout)
+  ✓   3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/03_KAT-022 @KAT-022 (48.3s)
+[02:17:19] dp-sq-pr/04_SQ_END_SQL: Gate SQ_END_SQL: ran UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('2026-11-24 02:30:00', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002364')
+[02:31:30] dp-sq-pr/04_SQ_END_SQL: Gate SQ_END_SQL done by hadishafiq via automatic SQL (user permission) at 2026-11-24T02:31:30+08:00
+[02:31:30] dp-sq-pr/04_SQ_END_SQL: DB status SQ SQ260000000002364: 60852 Pending Request Note Creation / Menunggu Ciptaan Nota Minta (expected 60852, OK)
+  ✓   4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/04_SQ_END_SQL @gate-SQ_END_SQL (14.2m)
+[02:31:31] dp-sq-pr/05_KAT-023: KAT-023 Prepare Request Note from a closed Simple Quote — role Requisitioner, login: account of KAT-021
+[02:31:31] dp-sq-pr/05_KAT-023: Test data corrected (support/katalon/data-overrides.json): Document_Number, preparedBy: Prepare RN from our Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, BASICFLROS3 replied 2026-11-11 18:16, END 18:30) as the requisitioner who created it (draft RN260000000004702 exists); its line has no PR/LOA Prepared By, so pick officer 710527085562 (given by the user)
+[02:31:31] dp-sq-pr/05_KAT-023: Using the login of KAT-021 (support/katalon/data-overrides.json)
+[02:31:31] dp-sq-pr/05_KAT-023: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[02:31:31] dp-sq-pr/05_KAT-023: Flow inputs: Document_Number=SQ260000000002364
+[02:31:31] dp-sq-pr/05_KAT-023: Flow login: the account of KAT-021
+[02:31:38] dp-sq-pr/05_KAT-023: Closed the TERKINI announcement
+[02:31:41] dp-sq-pr/05_KAT-023: Closed the TERKINI announcement
+[02:32:06] dp-sq-pr/05_KAT-023: SQ260000000002364 is already in My Task (no claim needed)
+[02:32:29] dp-sq-pr/05_KAT-023: Message: Request Note RN260000000004917 is successfully submitted.
+[02:32:29] dp-sq-pr/05_KAT-023: ✅ Captured RN No: RN260000000004917
+[02:32:29] dp-sq-pr/05_KAT-023: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_2026.xlsx
+[02:32:29] dp-sq-pr/05_KAT-023: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_2026.xlsx
+[02:32:30] dp-sq-pr/05_KAT-023: Closed the TERKINI announcement
+[02:32:30] dp-sq-pr/05_KAT-023: closeBrowser (the fixture closes the browser at the end of the test)
+[02:32:31] dp-sq-pr/05_KAT-023: DB status RN RN260000000004917: 60701 Pending Approval / Menunggu Kelulusan (expected 60701, OK)
+[02:32:32] dp-sq-pr/05_KAT-023: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/05_KAT-023 @KAT-023 (1.0m)
+[02:32:34] dp-sq-pr/06_KAT-024: KAT-024 Approve Request Note (SQ route) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004917 is ASSIGNED to 690127065209 (SIT WFTASK)
+[02:32:34] dp-sq-pr/06_KAT-024: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our RN RN260000000004702 (KAT-023 from Services Schedule SQ260000000002309); Review Direct Purchase ASSIGNED to officer 690127065209 (Task Status Search)
+[02:32:34] dp-sq-pr/06_KAT-024: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[02:32:34] dp-sq-pr/06_KAT-024: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[02:32:34] dp-sq-pr/06_KAT-024: Flow inputs: Document_Number=RN260000000004917
+[02:32:34] dp-sq-pr/06_KAT-024: Flow login: officer 690127065209 (shared officer password)
+[02:32:37] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[02:32:40] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[02:32:57] dp-sq-pr/06_KAT-024: RN260000000004917 is already in My Task (no claim needed)
+[02:33:07] dp-sq-pr/06_KAT-024: Message: Request Note RN260000000004917 is approved.
+[02:33:07] dp-sq-pr/06_KAT-024: ✅ Captured RN No: RN260000000004917
+[02:33:08] dp-sq-pr/06_KAT-024: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[02:33:08] dp-sq-pr/06_KAT-024: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[02:33:09] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[02:33:09] dp-sq-pr/06_KAT-024: closeBrowser (the fixture closes the browser at the end of the test)
+[02:33:10] dp-sq-pr/06_KAT-024: DB status RN RN260000000004917: 60701 Pending Approval / Menunggu Kelulusan (expected 60701, OK)
+[02:33:11] dp-sq-pr/06_KAT-024: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 06 KAT-024 Approve Request Note (SQ route) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/06_KAT-024 @KAT-024 (38.8s)
+[02:33:12] dp-sq-pr/07_KAT-033: No open BPM task for RN260000000004917 yet: waiting up to 10 min
+[02:38:13] dp-sq-pr/07_KAT-033: KAT-033 Submit Purchase Request from the approved Request Note — role Requisitioner (PR officer), login: officer 710527085562: BPM task "Submit PR" of RN260000000004917 is ASSIGNED to 710527085562 (SIT WFTASK)
+[02:38:13] dp-sq-pr/07_KAT-033: Test data corrected (support/katalon/data-overrides.json): Document_Number: Submit the Purchase Request of our approved RN260000000004698 (SQ260000000002305, approved 2026-11-11 16:49), which SIT routed to PR260000000004856 (Ad Hoc) instead of a Direct LOA; its Submit PR task is ASSIGNED to officer 710527085562 (Task Status Search). User chose to continue it as a PR
+[02:38:13] dp-sq-pr/07_KAT-033: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[02:38:13] dp-sq-pr/07_KAT-033: Flow inputs: Document_Number=RN260000000004917
+[02:38:13] dp-sq-pr/07_KAT-033: Flow login: officer 710527085562 (shared officer password)
+[02:38:16] dp-sq-pr/07_KAT-033: Closed the TERKINI announcement
+[02:38:19] dp-sq-pr/07_KAT-033: Closed the TERKINI announcement
+[02:38:35] dp-sq-pr/07_KAT-033: RN260000000004917 is already in My Task (no claim needed)
+[02:38:43] dp-sq-pr/07_KAT-033: Fill Ordered Quantity row #1
+[02:38:48] dp-sq-pr/07_KAT-033: Tick row #1
+[02:39:03] dp-sq-pr/07_KAT-033: Final Description Search = B0
+[02:39:28] dp-sq-pr/07_KAT-033: Message: Purchase Request PR260000000005073 is successfully submitted.
+[02:39:28] dp-sq-pr/07_KAT-033: ✅ Captured PR No: PR260000000005073
+[02:39:28] dp-sq-pr/07_KAT-033: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[02:39:28] dp-sq-pr/07_KAT-033: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[02:39:30] dp-sq-pr/07_KAT-033: Closed the TERKINI announcement
+[02:39:30] dp-sq-pr/07_KAT-033: closeBrowser (the fixture closes the browser at the end of the test)
+[02:39:30] dp-sq-pr/07_KAT-033: DB status PR PR260000000005073: 40010 Pending Approval / Menunggu Kelulusan (expected 40010, OK)
+[02:39:31] dp-sq-pr/07_KAT-033: Signed out (SSO logout)
+  ✓   7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 07 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/07_KAT-033 @KAT-033 (6.3m)
+[02:39:33] dp-sq-pr/08_KAT-034: KAT-034 Approve Purchase Request (sent to iGFMAS) — role Approver, login: officer 690127065209: BPM task "Review PR" of PR260000000005073 is ASSIGNED to 690127065209 (SIT WFTASK)
+[02:39:33] dp-sq-pr/08_KAT-034: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our PR260000000004856 (KAT-033 from RN260000000004698, 2026-11-11 17:02); Task Status Search shows Review PR ASSIGNED to officer 690127065209
+[02:39:33] dp-sq-pr/08_KAT-034: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[02:39:33] dp-sq-pr/08_KAT-034: Flow inputs: Document_Number=PR260000000005073
+[02:39:33] dp-sq-pr/08_KAT-034: Flow login: officer 690127065209 (shared officer password)
+[02:39:37] dp-sq-pr/08_KAT-034: Closed the TERKINI announcement
+[02:39:40] dp-sq-pr/08_KAT-034: Closed the TERKINI announcement
+[02:39:55] dp-sq-pr/08_KAT-034: PR260000000005073 is already in My Task (no claim needed)
+[02:40:06] dp-sq-pr/08_KAT-034: Message: Purchase Request PR260000000005073 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[02:40:06] dp-sq-pr/08_KAT-034: ✅ Captured PR No: PR260000000005073
+[02:40:06] dp-sq-pr/08_KAT-034: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[02:40:06] dp-sq-pr/08_KAT-034: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[02:40:08] dp-sq-pr/08_KAT-034: Closed the TERKINI announcement
+[02:40:08] dp-sq-pr/08_KAT-034: closeBrowser (the fixture closes the browser at the end of the test)
+[02:40:43] dp-sq-pr/08_KAT-034: DB status PR PR260000000005073: 40300 Purchase Request Approved / Permintaan Pembelian Diluluskan (expected 40300, OK)
+[02:40:44] dp-sq-pr/08_KAT-034: Signed out (SSO logout)
+  ✓   8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 08 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/08_KAT-034 @KAT-034 (1.2m)
+[02:40:45] dp-sq-pr/09_PO_LOOKUP: Gate PO_LOOKUP: found in the SIT database: PO PO260000000007217
+[02:40:45] dp-sq-pr/09_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-24T02:40:45+08:00 (PO=PO260000000007217)
+  ✓   9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 09 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/09_PO_LOOKUP @gate-PO_LOOKUP (986ms)
+[02:40:46] dp-sq-pr/10_KAT-035: BPM task assigned to basicflros3; no step account matches (this step uses BASICFLROS3)
+[02:40:47] dp-sq-pr/10_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: Katalon default account of the step
+[02:40:47] dp-sq-pr/10_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[02:40:47] dp-sq-pr/10_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[02:40:47] dp-sq-pr/10_KAT-035: Flow inputs: Document_Number=PO260000000007217
+[02:40:51] dp-sq-pr/10_KAT-035: Closed the TERKINI announcement
+[02:40:54] dp-sq-pr/10_KAT-035: Closed the TERKINI announcement
+[02:41:09] dp-sq-pr/10_KAT-035: PO260000000007217 is already in My Task (no claim needed)
+[02:41:17] dp-sq-pr/10_KAT-035: Message: Purchase Order PO260000000007217 is acknowledged.
+[02:41:17] dp-sq-pr/10_KAT-035: ✅ Captured PO No: PO260000000007217
+[02:41:17] dp-sq-pr/10_KAT-035: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/ACKNOWLEDGE_PURCHASE_REQUEST_2026.xlsx
+[02:41:17] dp-sq-pr/10_KAT-035: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/ACKNOWLEDGE_PURCHASE_REQUEST_2026.xlsx
+[02:41:19] dp-sq-pr/10_KAT-035: Closed the TERKINI announcement
+[02:41:19] dp-sq-pr/10_KAT-035: closeBrowser (the fixture closes the browser at the end of the test)
+[02:41:20] dp-sq-pr/10_KAT-035: DB status PO PO260000000007217: 41005 Pending Fulfilment / Menunggu Pemenuhan (expected 41005, OK)
+[02:41:20] dp-sq-pr/10_KAT-035: Signed out (SSO logout)
+  ✓  10 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 10 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/10_KAT-035 @KAT-035 (35.2s)
+
+  Slow test file: [flows] › tests\flows\en\dp.flow.spec.ts (38.8m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  10 passed (38.9m)

@@ -1,0 +1,263 @@
+{
+  "flowRunId": "qt-to-recommendation_eval_20261124-044738",
+  "flowId": "qt-to-recommendation",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:47:39+08:00",
+  "updatedAt": "2026-11-24T05:15:43+08:00",
+  "from": "QT-012",
+  "to": "QT-015",
+  "docs": {
+    "QT": "QT260000000004524"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-012": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_044756",
+          "startedAt": "2026-11-24T04:48:06+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\12_QT-012\\2026-11-24_044756",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60022
+          },
+          "endedAt": "2026-11-24T04:55:30+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "OC_FORMED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60010,
+        "statusId": 60010,
+        "en": "Pending Proposal Evaluation",
+        "bm": "Menunggu Penilaian Cadangan",
+        "at": "2026-11-24 04:55:17",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:55:30+08:00"
+      }
+    },
+    "QT-013": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_044756",
+          "startedAt": "2026-11-24T04:55:31+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\13_QT-013\\2026-11-24_044756",
+          "dbBefore": {
+            "kind": "QT:OC",
+            "docNo": "QT260000000004524",
+            "statusId": 62000
+          },
+          "endedAt": "2026-11-24T04:56:39+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Confirmation committee member and meeting schedule for QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation Compliance is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is submitted successfully."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "\"Endorse OC Evaluation\" has no user assignee (none)"
+        },
+        {
+          "runId": "2026-11-24_045754",
+          "startedAt": "2026-11-24T04:58:03+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\13_QT-013\\2026-11-24_045754",
+          "dbBefore": {
+            "kind": "QT:OC",
+            "docNo": "QT260000000004524",
+            "statusId": 62002
+          },
+          "endedAt": "2026-11-24T04:59:44+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is successfully endorsed."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is successfully signed off."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "OC_COMPLETED",
+      "db": {
+        "kind": "QT:OC",
+        "docNo": "QT260000000004524",
+        "expected": 62004,
+        "statusId": 62004,
+        "en": "Compliance Verification Completed",
+        "bm": "Pengesahan Pematuhan Telah Selesai",
+        "at": "2026-11-24 04:59:35",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:59:44+08:00"
+      }
+    },
+    "QT-014": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_045754",
+          "startedAt": "2026-11-24T04:59:45+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\14_QT-014\\2026-11-24_045754",
+          "dbBefore": {
+            "kind": "QT:TEC",
+            "docNo": "QT260000000004524",
+            "statusId": null
+          },
+          "endedAt": "2026-11-24T05:07:57+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is approved."
+            },
+            {
+              "severity": "info",
+              "text": "Confirmation committee member and meeting schedule for QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation Scores is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is submitted successfully."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is successfully endorsed."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is successfully signed off."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "TEC_COMPLETED",
+      "db": {
+        "kind": "QT:TEC",
+        "docNo": "QT260000000004524",
+        "expected": 62105,
+        "statusId": 62105,
+        "en": "Technical Proposal Evaluation Completed",
+        "bm": "Penilaian Cadangan Teknikal Telah Selesai",
+        "at": "2026-11-24 05:07:53",
+        "ok": true,
+        "checkedAt": "2026-11-24T05:07:57+08:00"
+      }
+    },
+    "QT-015": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_045754",
+          "startedAt": "2026-11-24T05:07:59+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\15_QT-015\\2026-11-24_045754",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60010
+          },
+          "endedAt": "2026-11-24T05:15:43+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is approved."
+            },
+            {
+              "severity": "info",
+              "text": "Confirmation committee member and meeting schedule for QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is submitted successfully."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is successfully endorsed."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal Evaluation for QT260000000004524 is successfully signed off."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "PENDING_RECOMMENDATION",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60023,
+        "statusId": 60023,
+        "en": "Pending Recommendation",
+        "bm": "Menunggu Pengesyoran",
+        "at": "2026-11-24 05:15:39",
+        "ok": true,
+        "checkedAt": "2026-11-24T05:15:43+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

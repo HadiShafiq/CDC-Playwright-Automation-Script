@@ -1,0 +1,550 @@
+
+Running 6 tests using 1 worker
+
+[15:54:07] sm-mof-new/01_SM-001: SM-001 Register the supplier and start the MOF application (draft) — role Supplier, login: Katalon default account of the step
+[15:54:08] sm-mof-new/01_SM-001: Registering Test Company 84803828 (reg no 202026802732), owner Owner 1617, login ID 900101921645, e-mail newsupplier002@commercedc.com.my
+[15:54:12] sm-mof-new/01_SM-001: Closed the TERKINI announcement
+[15:55:01] sm-mof-new/01_SM-001: No Telco dropdown on this form; skipped
+[15:55:03] sm-mof-new/01_SM-001: After Proceed: Your application to register as MOF Account supplier has been accepted. Activation information has been sent to your e-mail (newsupplier002@commercedc.com.my). Please activate your account within 7 days from the submitted date.
+[15:55:03] sm-mof-new/01_SM-001: Waiting for the activation e-mail in newsupplier002@commercedc.com.my
+[15:56:08] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 1, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[15:57:28] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 2, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[15:58:48] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 3, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:00:08] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 4, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:01:29] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 5, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:02:49] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 6, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:04:09] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 7, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:05:29] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 8, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:06:50] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 9, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:08:10] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 10, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:09:30] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 11, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:10:50] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 12, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:12:10] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 13, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:13:31] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 14, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:14:51] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: check 15, no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i among 0 []; next check in 20s
+[16:16:13] sm-mof-new/01_SM-001: Closed the TERKINI announcement
+[16:16:13] sm-mof-new/01_SM-001: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 (22.1m)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+
+    Error: Outlook newsupplier002@commercedc.com.my: no mail matching /Activation|Pengaktifan/i + /^(?=[\s\S]*(?:Test Company 84803828|Owner 1617|900101921645))[\s\S]*(?:supplier-user-activation)/i after 20 min
+
+       at ..\support\mof\outlook.ts:120
+
+      118 |       const n = Math.min(await items.count().catch(() => 0), 25);
+      119 |       const seen: string[] = [];
+    > 120 |       for (let i = 0; i < n; i++) {
+          |           ^
+      121 |         const item = items.nth(i);
+      122 |         const label = clean((await item.innerText().catch(() => '')) || (await item.getAttribute('aria-label')) || '');
+      123 |         seen.push(label.slice(0, 80));
+        at readOutlook (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\mof\outlook.ts:120:11)
+        at reg001 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:232:21)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:67:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_155404\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_155404\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+  5 did not run
+
+Running 6 tests using 1 worker
+
+[16:17:20] sm-mof-new/01_SM-001: BLOCKED: SM-001 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-mof-new_20261124-155404 --step SM-001
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+  6 skipped
+
+Running 6 tests using 1 worker
+
+[16:17:46] sm-mof-new/01_SM-001: SM-001 Register the supplier and start the MOF application (draft) — role Supplier, login: Katalon default account of the step
+[16:17:46] sm-mof-new/01_SM-001: Resuming 900101921645 (Test Company 84803828, newsupplier002@commercedc.com.my); last note: registration submitted
+[16:17:46] sm-mof-new/01_SM-001: Waiting for the activation e-mail in newsupplier002@commercedc.com.my
+[16:17:52] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: found "noreply@eperolehan.com.my Registration MOF Account Activation for - Test Company 84803828 3:56 PM Dear Sir / Madam, COMP"
+[16:17:52] sm-mof-new/01_SM-001: Activation key received; link http://ngepsit.eperolehan.com.my/web/guest/supplier-user-activation?pr=10476332&…
+[16:18:02] sm-mof-new/01_SM-001: After activation: Anda telah berjaya mengaktifkan Akaun MOF anda dengan No. eP berikut: eP-0101L0017 . Sila semak emel anda untuk kata laluan log masuk kali pertama.
+[16:18:12] sm-mof-new/01_SM-001: Waiting for the first-time-login e-mail in newsupplier002@commercedc.com.my
+[16:18:18] sm-mof-new/01_SM-001: Outlook newsupplier002@commercedc.com.my: found "noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First Time Login) : 900101921645 4:18 PM Dear Sir"
+[16:18:18] sm-mof-new/01_SM-001: Temporary password received
+[16:18:25] sm-mof-new/01_SM-001: After password change: /identity/faces/firstlogin
+[16:18:29] sm-mof-new/01_SM-001: Logged in as 900101921645
+[16:18:32] sm-mof-new/01_SM-001: Logged in as 900101921645
+Full Message: Please click HERE or navigate to Task List Menu in order to proceed with New MOF Account Registration KN-24112026-0035.
+[16:18:42] sm-mof-new/01_SM-001: Application number KN-24112026-0035
+Panel toggler not found – assuming expanded.
+Table visible: true
+Total rows: 1
+Rows: 1
+Row 0:
+	Cik OWNER 1617	900101921645	Yes	Pending Request  	Director	Temporary Supplier Admin Role (Contract Signer)	N/A	
+Found 1 rows to edit (N/A academic + Edit button).
+Role in eP: "Temporary Supplier Admin Role (Contract Signer)"
+Processed row 1
+Found 0 rows to edit (N/A academic + Edit button).
+All editable rows processed (1 rows).
+[16:19:26] sm-mof-new/01_SM-001: No "Equity Owner" role for this business type; Management only
+[16:19:31] sm-mof-new/01_SM-001: No residential/office address sections for this person; skipped
+[16:20:40] sm-mof-new/01_SM-001: Dialog: Capital / Equity Status Change Equity info was changed. Please click to update equity information for related shareholders OK → OK
+[16:20:43] sm-mof-new/01_SM-001: Capital: total share 60001, 3 members, 100% Bumiputera; New MOF Account Registration : KN-24112026-0035 has been successfully saved
+[16:21:39] sm-mof-new/01_SM-001: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 (3.9m)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Next Section' })
+        - locator resolved to <button type="submit" role="button" aria-disabled="false" id="_MOFApplication_WAR_NGePportlet_:form:tt:j_idt5350" name="_MOFApplication_WAR_NGePportlet_:form:tt:j_idt5350" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'_MOFApplication_WAR_NGePportlet_:form:tt:j_idt5350',update:'_MOFApplication_WAR_NGePportlet_:form',onstart:function(cfg){blockWidget.show();},oncomplete:function(xhr,status,args){blockWidget.hide();scrollToTop();;}});return…>…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div class="ui-widget-overlay" id="_MOFApplication_WAR_NGePportlet_:form:tt:bankDialog_modal"></div> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div class="ui-widget-overlay" id="_MOFApplication_WAR_NGePportlet_:form:tt:bankDialog_modal"></div> intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        55 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div class="ui-widget-overlay" id="_MOFApplication_WAR_NGePportlet_:form:tt:bankDialog_modal"></div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+       at ..\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1726
+
+      1724 |     await this.page.waitForTimeout(1000);
+      1725 |     await expect(this.mrPage.nextSectionBtn).toBeVisible({timeout: TIMEOUTS.LONG});
+    > 1726 |     await this.mrPage.nextSectionBtn.click();
+           |                                      ^
+      1727 |     await this.page.waitForLoadState("networkidle");
+      1728 | }
+      1729 |
+        at mofRegistrationAction.clickNextsection (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1726:38)
+        at reg002 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:453:5)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:68:18)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_161743\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_161743\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+  5 did not run
+
+Running 6 tests using 1 worker
+
+[16:22:47] sm-mof-new/01_SM-001: BLOCKED: SM-001 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-mof-new_20261124-155404 --step SM-001
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+  6 skipped
+
+Running 6 tests using 1 worker
+
+[16:24:18] sm-mof-new/01_SM-001: SM-001 Register the supplier and start the MOF application (draft) — role Supplier, login: Katalon default account of the step
+[16:24:19] sm-mof-new/01_SM-001: Registering Test Company 65902566 (reg no 202068507339), owner Owner 0739, login ID 900101239121, e-mail newsupplier003@commercedc.com.my
+[16:24:23] sm-mof-new/01_SM-001: Closed the TERKINI announcement
+[16:25:08] sm-mof-new/01_SM-001: Closed the TERKINI announcement
+[16:25:09] sm-mof-new/01_SM-001: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 (50.7s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('div[id*="bankInfoId"][id$="bankNameId"]')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('div[id*="bankInfoId"][id$="bankNameId"]') with timeout 15000ms
+      - waiting for locator('div[id*="bankInfoId"][id$="bankNameId"]')
+
+
+       at ..\support\cdc\library\2-object\online-registration\action.ts:416
+
+      414 |         await this.regPage.addBankButton.click({ force: true });
+      415 |         await this.page.waitForLoadState("networkidle");
+    > 416 |         await expect(this.page.locator('div[id*="bankInfoId"][id$="bankNameId"]')).toBeVisible({ timeout: 15000 });
+          |                                                                                    ^
+      417 |     }
+      418 |
+      419 |     async clickDeleteBank() {
+        at OnlineRegistrationAction.clickAddBank (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\cdc\library\2-object\online-registration\action.ts:416:84)
+        at reg001 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:167:5)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:67:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_162412\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_162412\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+  5 did not run
+
+Running 6 tests using 1 worker
+
+[16:26:13] sm-mof-new/01_SM-001: BLOCKED: SM-001 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-mof-new_20261124-155404 --step SM-001
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+  6 skipped
+
+Running 6 tests using 1 worker
+
+[16:27:06] sm-mof-new/01_SM-001: SM-001 Register the supplier and start the MOF application (draft) — role Supplier, login: Katalon default account of the step
+[16:27:06] sm-mof-new/01_SM-001: SM-001: continuing account 900101921645 (Test Company 84803828, draft KN-24112026-0035): already registered and logged in
+[16:27:08] sm-mof-new/01_SM-001: Logged in as 900101921645
+[16:27:08] sm-mof-new/01_SM-001: Resuming the saved application KN-24112026-0035 from Task List
+[16:27:18] sm-mof-new/01_SM-001: Personnel / Branch already saved by an earlier run; skipped
+[16:27:19] sm-mof-new/01_SM-001: Capital already saved; skipped
+[16:27:41] sm-mof-new/01_SM-001: Bank dialog still open after Save (attempt 1): no message
+[16:27:41] sm-mof-new/01_SM-001: Bank dialog still open after Save (attempt 2): no message
+[16:28:01] sm-mof-new/01_SM-001: Closed the TERKINI announcement
+[16:28:01] sm-mof-new/01_SM-001: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 (56.2s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+       at ..\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1581
+
+      1579 |     const options = await dropdown.locator('option').allTextContents();
+      1580 |     return options.filter(o => o.trim() && o !== '- Select One -').length;
+    > 1581 |   }).toBeGreaterThan(0);
+           |      ^
+      1582 | }
+      1583 |
+      1584 |   // --- BUTTONS ---
+        at mofRegistrationAction.waitDropdownPopulated (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1581:6)
+        at mofRegistrationAction.selectCategoryCodes (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1566:14)
+        at reg002 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:475:5)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:74:18)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_162659\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_162659\flows-en-sm.flow-sm-mof-ne-3b37b--the-MOF-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 
+  5 did not run
+
+Running 6 tests using 1 worker
+
+[16:29:06] sm-mof-new/01_SM-001: BLOCKED: SM-001 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-mof-new_20261124-155404 --step SM-001
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+  6 skipped
+
+Running 6 tests using 1 worker
+
+[16:30:47] sm-mof-new/01_SM-001: SM-001 Register the supplier and start the MOF application (draft) — role Supplier, login: Katalon default account of the step
+[16:30:47] sm-mof-new/01_SM-001: SM-001: continuing account 900101921645 (Test Company 84803828, draft KN-24112026-0035): already registered and logged in
+[16:30:50] sm-mof-new/01_SM-001: Logged in as 900101921645
+[16:30:50] sm-mof-new/01_SM-001: Resuming the saved application KN-24112026-0035 from Task List
+[16:31:04] sm-mof-new/01_SM-001: Personnel / Branch already saved by an earlier run; skipped
+[16:31:05] sm-mof-new/01_SM-001: Capital already saved; skipped
+[16:31:06] sm-mof-new/01_SM-001: Bank already saved; skipped
+ℹ️ No Overlap Category Supporting Documents table - skipping
+[16:31:40] sm-mof-new/01_SM-001: DB status AP KN-24112026-0035: 20100 Pending Application Declaration / Menunggu Pengisytiharan Permohonan (expected 20100, OK)
+[16:31:41] sm-mof-new/01_SM-001: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001 (54.0s)
+[16:31:44] sm-mof-new/02_SM-002: SM-002 Declare the application and pay the processing fee — role Supplier, login: Katalon default account of the step
+[16:31:47] sm-mof-new/02_SM-002: Logged in as 900101921645
+[16:31:47] sm-mof-new/02_SM-002: Resuming the saved application KN-24112026-0035 from Task List
+[16:31:57] sm-mof-new/02_SM-002: Personnel / Branch already saved by an earlier run; skipped
+[16:31:58] sm-mof-new/02_SM-002: Capital already saved; skipped
+[16:31:59] sm-mof-new/02_SM-002: Bank already saved; skipped
+[16:32:00] sm-mof-new/02_SM-002: Category codes already saved; skipped
+[16:32:29] sm-mof-new/02_SM-002: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 (47.9s)
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Declare' })
+    Expected: visible
+    Timeout: 20000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Declare' }) with timeout 20000ms
+      - waiting for getByRole('button', { name: 'Declare' })
+
+
+       at ..\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1783
+
+      1781 | async clickDeclare(): Promise<void> {
+      1782 |   await expect(this.mrPage.declareBtn)
+    > 1783 |       .toBeVisible({ timeout: TIMEOUTS.LONG });
+           |        ^
+      1784 |
+      1785 |   await this.mrPage.declareBtn.first().click();
+      1786 | }
+        at mofRegistrationAction.clickDeclare (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1783:8)
+        at reg002 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:504:14)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:78:81)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_163039\flows-en-sm.flow-sm-mof-ne-e048a--and-pay-the-processing-fee-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_163039\flows-en-sm.flow-sm-mof-ne-e048a--and-pay-the-processing-fee-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 
+  4 did not run
+  1 passed (1.8m)
+
+Running 6 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001
+[16:33:35] sm-mof-new/02_SM-002: SELF-HEAL SM-002: retry once — the SIT DB still shows KN-24112026-0035 at 20100 Pending Application Declaration, as before the attempt
+[16:33:37] sm-mof-new/02_SM-002: SM-002 Declare the application and pay the processing fee — role Supplier, login: Katalon default account of the step
+[16:33:41] sm-mof-new/02_SM-002: Logged in as 900101921645
+[16:33:41] sm-mof-new/02_SM-002: Resuming the saved application KN-24112026-0035 from Task List
+[16:33:51] sm-mof-new/02_SM-002: Personnel / Branch already saved by an earlier run; skipped
+[16:33:52] sm-mof-new/02_SM-002: Capital already saved; skipped
+[16:33:53] sm-mof-new/02_SM-002: Bank already saved; skipped
+[16:33:54] sm-mof-new/02_SM-002: Category codes already saved; skipped
+[16:34:23] sm-mof-new/02_SM-002: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 (50.0s)
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Declare' })
+    Expected: visible
+    Timeout: 20000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Declare' }) with timeout 20000ms
+      - waiting for getByRole('button', { name: 'Declare' })
+
+
+       at ..\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1783
+
+      1781 | async clickDeclare(): Promise<void> {
+      1782 |   await expect(this.mrPage.declareBtn)
+    > 1783 |       .toBeVisible({ timeout: TIMEOUTS.LONG });
+           |        ^
+      1784 |
+      1785 |   await this.mrPage.declareBtn.first().click();
+      1786 | }
+        at mofRegistrationAction.clickDeclare (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\cdc\library\2-object\webb\epapp\supptemp-mof-registration\action.ts:1783:8)
+        at reg002 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:504:14)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:78:81)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_163330\flows-en-sm.flow-sm-mof-ne-e048a--and-pay-the-processing-fee-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_163330\flows-en-sm.flow-sm-mof-ne-e048a--and-pay-the-processing-fee-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 
+  1 skipped
+  4 did not run
+
+Running 6 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 01 SM-001 Register the supplier and start the MOF application (draft) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/01_SM-001 @SM-001
+[16:36:48] sm-mof-new/02_SM-002: SM-002 Declare the application and pay the processing fee — role Supplier, login: Katalon default account of the step
+[16:36:52] sm-mof-new/02_SM-002: Logged in as 900101921645
+[16:36:52] sm-mof-new/02_SM-002: Resuming the saved application KN-24112026-0035 from Task List
+[16:37:03] sm-mof-new/02_SM-002: Personnel / Branch already saved by an earlier run; skipped
+[16:37:04] sm-mof-new/02_SM-002: Capital already saved; skipped
+[16:37:05] sm-mof-new/02_SM-002: Bank already saved; skipped
+[16:37:06] sm-mof-new/02_SM-002: Category codes already saved; skipped
+[16:37:08] sm-mof-new/02_SM-002: Mandatory supporting documents: 6 rows
+✔ Uploaded: BORANG PENGISYTIHARAN MOF (Boleh dimuat turun melalui pautan https://www.eperolehan.gov.my/supplier-registration-guide)
+✔ Uploaded: PERJANJIAN SEWA DIMATIKAN SETEM/ GERAN/ S&P/ BIL UTILITI YANG MENGANDUNGI NAMA DAN ALAMAT SYARIKAT/ SURAT KEBENARAN YANG DITANDATANGAN OLEH PEMILIK PREMIS
+✔ Uploaded: SURAT KEBENARAN YANG DITANDATANGAN OLEH PEMILIK PREMIS
+✔ Uploaded: BIL UTILITI YANG MENGANDUNGI NAMA DAN ALAMAT SYARIKAT
+[16:37:13] sm-mof-new/02_SM-002: Uploading the missing document on row 1: SURAT AKUAN SYARIKAT - LAMPIRAN 11 (Boleh dimuat turun melalui pautan https://www.eperolehan.gov.my/supplier-registration-guide.)
+📤 Uploading Row 1: "SURAT AKUAN SYARIKAT - LAMPIRAN 11 (Boleh dimuat turun melalui pautan https://www.eperolehan.gov.my/supplier-registration-guide.)"
+✔ Uploaded: SURAT AKUAN SYARIKAT - LAMPIRAN 11 (Boleh dimuat turun melalui pautan https://www.eperolehan.gov.my/supplier-registration-guide.) (Row 1)
+[16:37:15] sm-mof-new/02_SM-002: Uploading the missing document on row 2: SIJIL PENDAFTARAN PERTUBUHAN
+📤 Uploading Row 2: "SIJIL PENDAFTARAN PERTUBUHAN"
+✔ Uploaded: SIJIL PENDAFTARAN PERTUBUHAN (Row 2)
+[16:37:16] sm-mof-new/02_SM-002: Uploading the missing document on row 3: UNDANG-UNDANG TUBUH/ PERLEMBAGAAN PERTUBUHAN
+📤 Uploading Row 3: "UNDANG-UNDANG TUBUH/ PERLEMBAGAAN PERTUBUHAN"
+✔ Uploaded: UNDANG-UNDANG TUBUH/ PERLEMBAGAAN PERTUBUHAN (Row 3)
+[16:37:18] sm-mof-new/02_SM-002: Uploading the missing document on row 4: MINIT MESYUARAT AGUNG TAHUNAN PERTUBUHAN TERKINI
+📤 Uploading Row 4: "MINIT MESYUARAT AGUNG TAHUNAN PERTUBUHAN TERKINI"
+✔ Uploaded: MINIT MESYUARAT AGUNG TAHUNAN PERTUBUHAN TERKINI (Row 4)
+[16:37:23] sm-mof-new/02_SM-002: After Declare → Proceed: Your New MOF Account Registration (KN-24112026-0035) has been successfully declared. Please pay RM50.00 processing fee within 365 days to avoid your application being cancelled automatically by the system. Please click HERE or go Task List menu to do payment.
+[16:37:27] sm-mof-new/02_SM-002: After processing fee Proceed: Processing fee was successful made. Your application has been submitted to the Unit Pendaftaran Syarikat, BPK, Ministry of Finance for processing. You can check the application status via e-mail or in ePerolehan System.
+[16:37:30] sm-mof-new/02_SM-002: Closed the TERKINI announcement
+[16:38:01] sm-mof-new/02_SM-002: DB status AP KN-24112026-0035: 20101 Pending Supporting Document Verification / Menunggu Pengesahan Dokumen Sokongan (expected 20101, OK)
+[16:38:02] sm-mof-new/02_SM-002: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/02_SM-002 @SM-002 (1.3m)
+[16:38:04] sm-mof-new/03_SM-005: SM-005 SDO verifies the supporting documents — role SDO, login: Katalon default account of the step
+[16:38:08] sm-mof-new/03_SM-005: Logged in as 900101921645
+[16:38:15] sm-mof-new/03_SM-005: Round 1 Task Status of KN-24112026-0035:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [780729035858, 920302095001, 910727015792, 880000000001, 070820252007, 880519565015, 851221145103, 660000000004, 810901075224, 881017045401, 771227145503, 880730055010, 870906435078, 770617105197, 224422111234, 100000000068, 871023146138, 701012105670, 789078907890, 800101085644, 800611125052, 880314086440, 810309115434, 820219035835, 781126145411, 970112055215, 565656565656] ASSIGNED
+[16:38:19] sm-mof-new/03_SM-005: Closed the TERKINI announcement
+[16:38:19] sm-mof-new/03_SM-005: Pending: "Verify Supporting Documents" assigned to 780729035858, 920302095001, 910727015792, 880000000001, 070820252007, 880519565015, 851221145103, 660000000004, 810901075224, 881017045401, 771227145503, 880730055010, 870906435078, 770617105197, 224422111234, 100000000068, 871023146138, 701012105670, 789078907890, 800101085644, 800611125052, 880314086440, 810309115434, 820219035835, 781126145411, 970112055215, 565656565656 → logging in as 780729035858
+[16:38:21] sm-mof-new/03_SM-005: Logged in as 780729035858
+[16:38:25] sm-mof-new/03_SM-005: Group Task has it: claiming "KN-24112026-0035 Supplier Application New MOF registration application - verify supporting documents ( Test Company 8480"
+[16:38:29] sm-mof-new/03_SM-005: Opening My Task "KN-24112026-0035 Supplier Application New MOF registration application - verify supporting documents ( Test Company 84803828 ) 24/11/2026 16"
+[16:38:41] sm-mof-new/03_SM-005: 780729035858 did "verify supporting documents": Application No. KN-24112026-0035 is successfully sent to the Processing Officer(Posit) for approval
+[16:38:43] sm-mof-new/03_SM-005: DB status AP KN-24112026-0035: 20104 Pending Review Application / Menunggu Semakan Permohonan (expected 20104, OK)
+[16:38:44] sm-mof-new/03_SM-005: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/03_SM-005 @SM-005 (41.4s)
+[16:38:46] sm-mof-new/04_SM-006: SM-006 Processing Officer reviews and recommends — role Processing Officer, login: Katalon default account of the step
+[16:38:50] sm-mof-new/04_SM-006: Logged in as 900101921645
+[16:38:57] sm-mof-new/04_SM-006: Round 1 Task Status of KN-24112026-0035:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [] COMPLETED
+   Review Application [880000000001] ASSIGNED
+[16:39:00] sm-mof-new/04_SM-006: Closed the TERKINI announcement
+[16:39:00] sm-mof-new/04_SM-006: Pending: "Review Application" assigned to 880000000001 → logging in as 880000000001
+[16:39:02] sm-mof-new/04_SM-006: Logged in as 880000000001
+[16:39:12] sm-mof-new/04_SM-006: Opening My Task "KN-24112026-0035 Supplier Application Review New MOF registration application ( Test Company 84803828 ) 24/11/2026 16:38 24/11/2026 03/12/20"
+[16:39:17] sm-mof-new/04_SM-006: Category codes: Approve All (no banner)
+[16:39:30] sm-mof-new/04_SM-006: 880000000001 did "review → category codes Approve All → All Valid → Recommend to Approve": Application No. (KN-24112026-0035) is recommended for approval and has been sent to 1) Ku Harmizan Bin Ku Haron 2) Mohd Alif Aziz 3) Shafiza binti Arshad 4) Massliana Binti Mohamed Mansor 5) Wan Mohd Asri Bin Wan Yusof 6) Nor Haffezul Bin Shafie 7) Do Not Use By Mmz - Processing Officer 8) Othman Bin Semail
+[16:39:32] sm-mof-new/04_SM-006: DB status AP KN-24112026-0035: 20108 Pending Application Approval / Menunggu Kelulusan Permohonan (expected 20108, OK)
+[16:39:33] sm-mof-new/04_SM-006: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/04_SM-006 @SM-006 (49.1s)
+[16:39:35] sm-mof-new/05_SM-011: Waiting for memory before SM-011: 0.8 GB free, need 1.2 GB
+[16:40:06] sm-mof-new/05_SM-011: SM-011 Approver approves (registration fee to pay) — role Approver, login: Katalon default account of the step
+[16:40:09] sm-mof-new/05_SM-011: Logged in as 900101921645
+[16:40:16] sm-mof-new/05_SM-011: Round 1 Task Status of KN-24112026-0035:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [] COMPLETED
+   Review Application [] COMPLETED
+   Review Application (Escalated) [761028025717, 761120035467, 258502022000, 820205086172, 610320045549, 780801086757, 660000000003, 810720075698] ASSIGNED
+[16:40:19] sm-mof-new/05_SM-011: Closed the TERKINI announcement
+[16:40:19] sm-mof-new/05_SM-011: Pending: "Review Application (Escalated)" assigned to 761028025717, 761120035467, 258502022000, 820205086172, 610320045549, 780801086757, 660000000003, 810720075698 → logging in as 761028025717
+[16:40:21] sm-mof-new/05_SM-011: Logged in as 761028025717
+[16:40:27] sm-mof-new/05_SM-011: Group Task has it: claiming "KN-24112026-0035 Supplier Application Review escalated New MOF registration application ( Test Company 84803828 ) 24/11/"
+[16:40:33] sm-mof-new/05_SM-011: Opening My Task "KN-24112026-0035 Supplier Application Review escalated New MOF registration application ( Test Company 84803828 ) 24/11/2026 16:39 03/12/202"
+[16:40:47] sm-mof-new/05_SM-011: 761028025717 did "approver decision → Approve": Application No.KN-24112026-0035 has been approved.
+[16:40:48] sm-mof-new/05_SM-011: DB status AP KN-24112026-0035: 20251 Pending Payment Registration Fee / Menunggu Bayaran Pendaftaran (expected 20251, OK)
+[16:40:49] sm-mof-new/05_SM-011: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/05_SM-011 @SM-011 (1.3m)
+[16:40:52] sm-mof-new/06_SM-012: SM-012 Pay the registration fee — role Supplier, login: Katalon default account of the step
+[16:40:55] sm-mof-new/06_SM-012: Logged in as 900101921645
+[16:41:00] sm-mof-new/06_SM-012: My Task: KN-24112026-0035 Supplier Application New MOF registration application - Make payment ( Test Company 84803828 ) 24/11/2026 16:40 24/11/2027 16:40 Pend
+[16:41:07] sm-mof-new/06_SM-012: Registration fee: Your registration fee has been successfully made. Please click HERE or go to the Overview menu to retrieve the MOF Accounts Virtual Certificate of your company.
+[16:41:10] sm-mof-new/06_SM-012: Followed HERE → /web/epapp/view-virtual-certification
+[16:41:21] sm-mof-new/06_SM-012: Certificate not released yet (check 1); reloading in 30s
+[16:41:55] sm-mof-new/06_SM-012: Certificate not released yet (check 2); reloading in 30s
+[16:42:43] sm-mof-new/06_SM-012: Certificate page: eP App/My Application/Supplier Management/View Virtual Certification Virtual Certificate Virtual Certificate VIRTUAL CERTIFICATE No. MOF No. Certificate No. Release Date Application Type Type Download 1 357-0002294562 K10344206661990765 24/11/2026 New MOF Account Registration Contractor View
+[16:42:46] sm-mof-new/06_SM-012: DB status AP KN-24112026-0035: 20199 Registered / Berdaftar (expected 20199, OK)
+[16:42:46] sm-mof-new/06_SM-012: Signed out (SSO logout)
+  ✓  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-mof-new [EN] New MOF supplier (contractor or consultant) to Registered › 06 SM-012 Pay the registration fee @flow-sm-mof-new @module-sm @lang-en @FLOW @sm-mof-new/06_SM-012 @SM-012 (2.0m)
+
+  Slow test file: [flows] › tests\flows\en\sm.flow.spec.ts (6.0m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 skipped
+  5 passed (6.1m)

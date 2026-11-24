@@ -1,0 +1,69 @@
+{
+  "flowRunId": "dp-add-to-cart_20261124-135339",
+  "flowId": "dp-add-to-cart",
+  "module": "dp",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T13:53:39+08:00",
+  "updatedAt": "2026-11-24T13:55:59+08:00",
+  "from": null,
+  "to": "KAT-032",
+  "docs": {
+    "RN": "RN260000000004927"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-028": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_135340",
+          "startedAt": "2026-11-24T13:53:43+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-add-to-cart\\01_KAT-028\\2026-11-24_135340",
+          "endedAt": "2026-11-24T13:55:17+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004927 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004927"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "RN_SUBMITTED"
+    },
+    "KAT-032": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_135340",
+          "startedAt": "2026-11-24T13:55:19+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-add-to-cart\\02_KAT-032\\2026-11-24_135340",
+          "endedAt": "2026-11-24T13:55:59+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004927 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004927"
+      },
+      "login": "officer 690127065209: BPM task \"Review Direct Purchase\" of RN260000000004927 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "RN_APPROVED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

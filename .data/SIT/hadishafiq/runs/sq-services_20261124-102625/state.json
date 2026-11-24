@@ -1,0 +1,141 @@
+{
+  "flowRunId": "sq-services_20261124-102625",
+  "flowId": "sq-services",
+  "module": "sq",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T10:26:25+08:00",
+  "updatedAt": "2026-11-24T12:31:31+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "SQ": "SQ260000000002368"
+  },
+  "officers": {},
+  "gates": {
+    "SQ_START_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T10:31:30+08:00"
+    },
+    "SQ_END_SQL": {
+      "done": true,
+      "by": "hadishafiq via automatic SQL (user permission)",
+      "at": "2026-11-24T12:31:30+08:00",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002368",
+        "expected": 60852,
+        "statusId": 60852,
+        "en": "Pending Request Note Creation",
+        "bm": "Menunggu Ciptaan Nota Minta",
+        "at": "2026-11-24 12:31:00",
+        "ok": true,
+        "checkedAt": "2026-11-24T12:31:31+08:00"
+      }
+    }
+  },
+  "steps": {
+    "KAT-021": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_102626",
+          "startedAt": "2026-11-24T10:26:31+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-services\\01_KAT-021\\2026-11-24_102626",
+          "endedAt": "2026-11-24T10:29:36+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Maximum period allowed is not more than 3.00 days. (ERR-760430)"
+            },
+            {
+              "severity": "error",
+              "text": "Maximum period allowed is not more than 3 days. (ERR-760430)"
+            },
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002368 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002368"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUBMITTED",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002368",
+        "expected": 60851,
+        "statusId": 60851,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-24 10:29:30",
+        "ok": true,
+        "checkedAt": "2026-11-24T10:29:36+08:00"
+      }
+    },
+    "KAT-022": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_102626",
+          "startedAt": "2026-11-24T10:31:32+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-services\\03_KAT-022\\2026-11-24_102626",
+          "dbBefore": {
+            "kind": "SQ",
+            "docNo": "SQ260000000002368",
+            "statusId": 60851
+          },
+          "endedAt": "2026-11-24T10:32:33+08:00",
+          "messages": [],
+          "classification": "ENVIRONMENT (medium): network/VPN or server problem",
+          "error": "page.goto: Timeout 60000ms exceeded."
+        },
+        {
+          "runId": "2026-11-24_121850",
+          "startedAt": "2026-11-24T12:18:58+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-services\\03_KAT-022\\2026-11-24_121850",
+          "dbBefore": {
+            "kind": "SQ",
+            "docNo": "SQ260000000002368",
+            "statusId": 60851
+          },
+          "endedAt": "2026-11-24T12:19:41+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002368 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002368"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUPPLIER_RESPONDED",
+      "db": {
+        "kind": "SQ",
+        "docNo": "SQ260000000002368",
+        "expected": 60851,
+        "statusId": 60851,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-24 10:29:30",
+        "ok": true,
+        "checkedAt": "2026-11-24T12:19:40+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

@@ -1,0 +1,22 @@
+{
+  "flowRunId": "status-SC-LA-62505_2026-11-24_003759",
+  "flowId": "dloa-oneoff-services",
+  "module": "direct-loa",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T00:38:03+08:00",
+  "updatedAt": "2026-11-24T00:38:06+08:00",
+  "from": null,
+  "to": "KAT-008",
+  "docs": {
+    "LA": "LA260000000004227"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {},
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

@@ -1,0 +1,106 @@
+{
+  "flowRunId": "dloa-schedule-product-services_20261123-173458",
+  "flowId": "dloa-schedule-product-services",
+  "module": "direct-loa",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T17:34:58+08:00",
+  "updatedAt": "2026-11-23T18:10:03+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004224"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-006": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_173459",
+          "startedAt": "2026-11-23T17:35:06+08:00",
+          "result": "running",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-product-services\\01_KAT-006\\2026-11-23_173459",
+          "reconciled": {
+            "by": "hadishafiq",
+            "at": "2026-11-23T18:02:20+08:00",
+            "decision": "did not go through"
+          }
+        },
+        {
+          "runId": "2026-11-23_180318",
+          "startedAt": "2026-11-23T18:03:24+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-product-services\\01_KAT-006\\2026-11-23_180318",
+          "endedAt": "2026-11-23T18:06:32+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agency are fully responsibility in procurement for items which is only subject to PK 7/WP Item (exceptional from government procurement procedures)."
+            },
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004224 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004224"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_SUBMITTED"
+    },
+    "KAT-009": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_180318",
+          "startedAt": "2026-11-23T18:06:33+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-product-services\\02_KAT-009\\2026-11-23_180318",
+          "endedAt": "2026-11-23T18:09:06+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004224 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004224"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_ACKNOWLEDGED"
+    },
+    "KAT-010": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-23_180318",
+          "startedAt": "2026-11-23T18:09:07+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-product-services\\03_KAT-010\\2026-11-23_180318",
+          "endedAt": "2026-11-23T18:10:03+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Error encountered processing your last request! Please try again later or contact our help desk. (ERR-000001)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-000001: Error encountered processing your last request! Please try again later or contact our help desk. (ERR-000001)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

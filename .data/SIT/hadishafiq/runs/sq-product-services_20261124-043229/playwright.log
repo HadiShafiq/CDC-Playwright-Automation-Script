@@ -1,0 +1,95 @@
+
+Running 4 tests using 1 worker
+
+[04:32:36] sq-product-services/01_KAT-037: KAT-037 Create Simple Quote - Product plus Services — role Requisitioner, login: Katalon default account of the step
+[04:32:36] sq-product-services/01_KAT-037: Test data corrected (support/katalon/data-overrides.json): dateValue, SupplierName, ItemCode: Simple Quote start date 2026-10-12 is in the past; use the run date; default supplier Basic FL ROS - Organization (Registered with JPPM) 1 + item 911015030000000000 give 0 catalogue results; AINHALIM ENTERPRISE product 14111503005010013D (as in KAT-036, which passed; generic 18-digit codes have no product specification box) (the script takes the product line from the catalogue and adds 2 service lines by hand) (Catalogue Search 2026-10-30)
+[04:32:36] sq-product-services/01_KAT-037: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[04:32:36] sq-product-services/01_KAT-037: Live dates: dateValue=2026-11-24
+[04:32:36] sq-product-services/01_KAT-037: Flow inputs: (none)
+[04:32:39] sq-product-services/01_KAT-037: Closed the TERKINI announcement
+[04:32:42] sq-product-services/01_KAT-037: Closed the TERKINI announcement
+[04:33:32] sq-product-services/01_KAT-037: Loop #1 of 2
+[04:33:35] sq-product-services/01_KAT-037: First loop and record exists → skip click Action Item Product
+[04:33:49] sq-product-services/01_KAT-037: Loop #2 of 2
+[04:33:52] sq-product-services/01_KAT-037: Record exists and loop > 1 → click Action Item Product
+[04:34:09] sq-product-services/01_KAT-037: Service Loop #1 of 2
+[04:34:09] sq-product-services/01_KAT-037: No records found → click Action Item for Service
+[04:34:26] sq-product-services/01_KAT-037: Service Loop #2 of 2
+[04:34:29] sq-product-services/01_KAT-037: Record exists and loop > 1 → click Action Item for Service
+[04:36:07] sq-product-services/01_KAT-037: Message: Simple Quote SQ260000000002367 is successfully submitted.
+[04:36:07] sq-product-services/01_KAT-037: ✅ Captured SQ No: SQ260000000002367
+[04:36:07] sq-product-services/01_KAT-037: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[04:36:07] sq-product-services/01_KAT-037: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[04:36:08] sq-product-services/01_KAT-037: Closed the TERKINI announcement
+[04:36:08] sq-product-services/01_KAT-037: closeBrowser (the fixture closes the browser at the end of the test)
+[04:36:09] sq-product-services/01_KAT-037: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 01 KAT-037 Create Simple Quote - Product plus Services @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/01_KAT-037 @KAT-037 (3.6m)
+[04:36:10] sq-product-services/02_SQ_START_SQL: Gate SQ_START_SQL: ran UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('2026-11-24 04:45:00', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002367')
+[04:46:30] sq-product-services/02_SQ_START_SQL: Gate SQ_START_SQL done by hadishafiq via automatic SQL (user permission) at 2026-11-24T04:46:30+08:00
+  ✓  2 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/02_SQ_START_SQL @gate-SQ_START_SQL (10.3m)
+[04:46:32] sq-product-services/03_KAT-022: KAT-022 Supplier responds to the Simple Quote (prices every line) — role Supplier, login: Katalon default account of the step
+[04:46:32] sq-product-services/03_KAT-022: Test data corrected (support/katalon/data-overrides.json): sqNo: Respond to our new Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, 2026-11-11 18:13, Supplier List = BASICFLROS3 company) as the default BASICFLROS3 account, pricing every line; this SQ is for the LOA chain KAT-025/026/027
+[04:46:32] sq-product-services/03_KAT-022: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[04:46:32] sq-product-services/03_KAT-022: Flow inputs: sqNo=SQ260000000002367
+[04:46:35] sq-product-services/03_KAT-022: Closed the TERKINI announcement
+[04:46:41] sq-product-services/03_KAT-022: Closed the TERKINI announcement
+[04:46:55] sq-product-services/03_KAT-022: Checking page index: 1 for SQ No: SQ260000000002367
+[04:46:58] sq-product-services/03_KAT-022: Checking page index: 2 for SQ No: SQ260000000002367
+[04:47:02] sq-product-services/03_KAT-022: Checking page index: 3 for SQ No: SQ260000000002367
+[04:47:05] sq-product-services/03_KAT-022: Checking page index: 4 for SQ No: SQ260000000002367
+[04:47:08] sq-product-services/03_KAT-022: Checking page index: 5 for SQ No: SQ260000000002367
+[04:47:11] sq-product-services/03_KAT-022: Checking page index: 6 for SQ No: SQ260000000002367
+[04:47:14] sq-product-services/03_KAT-022: Checking page index: 7 for SQ No: SQ260000000002367
+[04:47:17] sq-product-services/03_KAT-022: Checking page index: 8 for SQ No: SQ260000000002367
+[04:47:20] sq-product-services/03_KAT-022: Checking page index: 9 for SQ No: SQ260000000002367
+[04:47:23] sq-product-services/03_KAT-022: Checking page index: 10 for SQ No: SQ260000000002367
+[04:47:28] sq-product-services/03_KAT-022: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/03_KAT-022 @KAT-022 (58.8s)
+  -  4 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/04_SQ_END_SQL @gate-SQ_END_SQL
+
+
+  1) [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/03_KAT-022 @KAT-022 
+
+    Error: ❌ SQ Number not found from pagination 1 until 10: SQ260000000002367
+
+       at ..\support\katalon\runtime.ts:712
+
+      710 | /** Groovy `assert cond : message`. */
+      711 | export function gAssert(cond: any, message?: any): asserts cond {
+    > 712 |   if (!cond) throw new Error(message == null ? 'Assertion failed' : String(message));
+          |                    ^
+      713 | }
+      714 |
+      715 | /** Groovy `text =~ /re/`: a java.util.regex.Matcher with find()/group(). */
+        at gAssert (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:712:20)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-022.ts:335:10)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:709:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sq.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_043229\flows-en-sq.flow-sq-produc-aaedd-le-Quote-prices-every-line--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_043229\flows-en-sq.flow-sq-produc-aaedd-le-Quote-prices-every-line--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/03_KAT-022 @KAT-022 
+  1 did not run
+  2 passed (15.0m)
+
+Running 4 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 01 KAT-037 Create Simple Quote - Product plus Services @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/01_KAT-037 @KAT-037
+[05:31:38] sq-product-services/02_SQ_START_SQL: Gate SQ_START_SQL done by hadishafiq via automatic SQL (user permission) at 2026-11-24T04:46:30+08:00
+  ✓  2 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/02_SQ_START_SQL @gate-SQ_START_SQL (209ms)
+  ✓  3 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/03_KAT-022 @KAT-022 (1.0s)
+[05:31:40] sq-product-services/04_SQ_END_SQL: Gate SQ_END_SQL: ran UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('2026-11-24 05:45:00', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002367')
+[05:46:30] sq-product-services/04_SQ_END_SQL: Gate SQ_END_SQL done by hadishafiq via automatic SQL (user permission) at 2026-11-24T05:46:30+08:00
+[05:46:30] sq-product-services/04_SQ_END_SQL: DB status SQ SQ260000000002367: 60852 Pending Request Note Creation / Menunggu Ciptaan Nota Minta (expected 60852, OK)
+  ✓  4 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/04_SQ_END_SQL @gate-SQ_END_SQL (14.8m)
+
+  Slow test file: [flows] › tests\flows\en\sq.flow.spec.ts (14.9m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 skipped
+  3 passed (15.0m)

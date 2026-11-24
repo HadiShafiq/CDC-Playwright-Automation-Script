@@ -1,0 +1,52 @@
+
+Running 4 tests using 1 worker
+
+[13:01:46] sq-product-services/01_KAT-037: KAT-037 Create Simple Quote - Product plus Services — role Requisitioner, login: Katalon default account of the step
+[13:01:46] sq-product-services/01_KAT-037: Test data corrected (support/katalon/data-overrides.json): dateValue, SupplierName, ItemCode: Simple Quote start date 2026-10-12 is in the past; use the run date; default supplier Basic FL ROS - Organization (Registered with JPPM) 1 + item 911015030000000000 give 0 catalogue results; AINHALIM ENTERPRISE product 14111503005010013D (as in KAT-036, which passed; generic 18-digit codes have no product specification box) (the script takes the product line from the catalogue and adds 2 service lines by hand) (Catalogue Search 2026-10-30)
+[13:01:46] sq-product-services/01_KAT-037: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[13:01:46] sq-product-services/01_KAT-037: Live dates: dateValue=2026-11-24
+[13:01:46] sq-product-services/01_KAT-037: Flow inputs: (none)
+[13:01:52] sq-product-services/01_KAT-037: Closed the TERKINI announcement
+[13:01:56] sq-product-services/01_KAT-037: Closed the TERKINI announcement
+[13:02:42] sq-product-services/01_KAT-037: Loop #1 of 2
+[13:02:45] sq-product-services/01_KAT-037: First loop and record exists → skip click Action Item Product
+[13:02:58] sq-product-services/01_KAT-037: Loop #2 of 2
+[13:03:01] sq-product-services/01_KAT-037: Record exists and loop > 1 → click Action Item Product
+[13:05:18] sq-product-services/01_KAT-037: Service Loop #1 of 2
+[13:05:48] sq-product-services/01_KAT-037: No records found → click Action Item for Service
+[13:11:23] sq-product-services/01_KAT-037: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 01 KAT-037 Create Simple Quote - Product plus Services @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/01_KAT-037 @KAT-037 (9.6m)
+  -  2 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/02_SQ_START_SQL @gate-SQ_START_SQL
+  -  3 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/03_KAT-022 @KAT-022
+  -  4 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/04_SQ_END_SQL @gate-SQ_END_SQL
+
+
+  1) [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 01 KAT-037 Create Simple Quote - Product plus Services @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/01_KAT-037 @KAT-037 
+
+    Error: ❌ Dropdown failed (stale/DOM refresh): DLOA/4. DLOA - Requestioner/2. Item List/Fulfilment Type Services
+
+       at ..\support\katalon\runtime.ts:696
+
+      694 | /** Groovy `assert cond : message`. */
+      695 | export function gAssert(cond: any, message?: any): asserts cond {
+    > 696 |   if (!cond) throw new Error(message == null ? 'Assertion failed' : String(message));
+          |                    ^
+      697 | }
+      698 |
+      699 | /** Groovy `text =~ /re/`: a java.util.regex.Matcher with find()/group(). */
+        at gAssert (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:696:20)
+        at selectDropdownByIndex (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:170:9)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-037.ts:678:4)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:759:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sq.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_130134\flows-en-sq.flow-sq-produc-894b5-ote---Product-plus-Services-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_130134\flows-en-sq.flow-sq-produc-894b5-ote---Product-plus-Services-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product-services [EN] Simple Quote (Product + Services): create, open, supplier reply, close › 01 KAT-037 Create Simple Quote - Product plus Services @flow-sq-product-services @module-sq @lang-en @FLOW @sq-product-services/01_KAT-037 @KAT-037 
+  3 did not run

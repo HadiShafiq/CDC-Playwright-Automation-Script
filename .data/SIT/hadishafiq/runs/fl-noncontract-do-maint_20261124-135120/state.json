@@ -1,0 +1,40 @@
+{
+  "flowRunId": "fl-noncontract-do-maint_20261124-135120",
+  "flowId": "fl-noncontract-do-maint",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T13:51:20+08:00",
+  "updatedAt": "2026-11-24T13:53:33+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "RN": "RN260000000004926"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-046": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-24_135120",
+          "startedAt": "2026-11-24T13:51:29+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-noncontract-do-maint\\01_KAT-046\\2026-11-24_135120",
+          "endedAt": "2026-11-24T13:53:33+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "officer 690127065209: BPM task \"Review Direct Purchase\" of RN260000000004926 is ASSIGNED to 690127065209 (SIT WFTASK)"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

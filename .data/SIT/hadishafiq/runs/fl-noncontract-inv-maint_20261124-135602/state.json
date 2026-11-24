@@ -1,0 +1,98 @@
+{
+  "flowRunId": "fl-noncontract-inv-maint_20261124-135602",
+  "flowId": "fl-noncontract-inv-maint",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T13:56:02+08:00",
+  "updatedAt": "2026-11-24T15:34:35+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "RN": "RN260000000004927",
+    "PR": "PR260000000005075"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-046": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_135602",
+          "startedAt": "2026-11-24T14:01:15+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-noncontract-inv-maint\\01_KAT-046\\2026-11-24_135602",
+          "endedAt": "2026-11-24T14:02:32+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Selected Charge Line Items updated."
+            },
+            {
+              "severity": "info",
+              "text": "Purchase Request PR260000000005075 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PR": "PR260000000005075"
+      },
+      "login": "officer 710527085562: BPM task \"Submit PR\" of RN260000000004927 is ASSIGNED to 710527085562 (SIT WFTASK)",
+      "checkpoint": "PR_SUBMITTED",
+      "db": {
+        "kind": "PR",
+        "docNo": "PR260000000005075",
+        "expected": 40010,
+        "statusId": 40010,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-24 14:02:24",
+        "ok": true,
+        "checkedAt": "2026-11-24T14:02:32+08:00"
+      }
+    },
+    "KAT-047": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_135602",
+          "startedAt": "2026-11-24T14:02:34+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-noncontract-inv-maint\\02_KAT-047\\2026-11-24_135602",
+          "dbBefore": {
+            "kind": "PR",
+            "docNo": "PR260000000005075",
+            "statusId": 40010
+          },
+          "reconciled": {
+            "by": "hadishafiq",
+            "at": "2026-11-24T15:21:14+08:00",
+            "decision": "went through",
+            "values": {}
+          }
+        }
+      ],
+      "outputs": {},
+      "login": "officer 690127065209: BPM task \"Review PR\" of PR260000000005075 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "db": {
+        "kind": "PR",
+        "docNo": "PR260000000005075",
+        "expected": 40300,
+        "statusId": 40110,
+        "en": "Pending PR Review from iGFMAS",
+        "bm": "Menunggu Semakan PR dari iGFMAS",
+        "at": "2026-11-24 14:03:08",
+        "ok": false,
+        "checkedAt": "2026-11-24T15:34:35+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "blocked",
+  "blockedReason": "KAT-047 is recorded as done, but PR260000000005075 is at 40110 Pending PR Review from iGFMAS, not 40300 Purchase Request Approved (PR_APPROVED). Finish it in the application, then: npm run qa -- resume --env sit --run fl-noncontract-inv-maint_20261124-135602"
+}

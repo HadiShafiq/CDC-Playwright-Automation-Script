@@ -1,0 +1,61 @@
+
+Running 10 tests using 1 worker
+
+[13:51:29] fl-noncontract-do-maint/01_KAT-046: KAT-046 Submit Purchase Request from an approved Request Note — role Requisitioner (PR officer), login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004926 is ASSIGNED to 690127065209 (SIT WFTASK)
+[13:51:30] fl-noncontract-do-maint/01_KAT-046: Test data corrected (support/katalon/data-overrides.json): Document_Number: Submit the PR of our approved services RN260000000004722 (KAT-028 2026-11-16, debit note chain, supplier AINHALIM ENTERPRISE); Submit PR ASSIGNED to officer 710527085562. Earlier today it submitted PR260000000004859 from RN260000000004719
+[13:51:30] fl-noncontract-do-maint/01_KAT-046: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[13:51:30] fl-noncontract-do-maint/01_KAT-046: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[13:51:30] fl-noncontract-do-maint/01_KAT-046: Flow inputs: Document_Number=RN260000000004926
+[13:51:30] fl-noncontract-do-maint/01_KAT-046: Flow login: officer 690127065209 (shared officer password)
+[13:51:32] fl-noncontract-do-maint/01_KAT-046: Closed the TERKINI announcement
+[13:51:36] fl-noncontract-do-maint/01_KAT-046: Closed the TERKINI announcement
+[13:51:51] fl-noncontract-do-maint/01_KAT-046: RN260000000004926 is already in My Task (no claim needed)
+[13:51:51] fl-noncontract-do-maint/01_KAT-046: RN260000000004926 is already in My Task (no claim needed)
+[13:53:36] fl-noncontract-do-maint/01_KAT-046: Signed out (SSO logout)
+  ✘   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/01_KAT-046 @KAT-046 (2.2m)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 02 KAT-047 Approve Purchase Request (sent to iGFMAS) @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/02_KAT-047 @KAT-047
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 03 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/03_PO_LOOKUP @gate-PO_LOOKUP
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 04 KAT-048 Supplier acknowledges the Purchase Order @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/04_KAT-048 @KAT-048
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 05 KAT-049 Supplier submits delivery (Pending Delivery List) @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/05_KAT-049 @KAT-049
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 06 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/06_DO_LOOKUP @gate-DO_LOOKUP
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 07 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/07_FL-101 @FL-101
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 08 FL-102 FL Approver approves the DO modification @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/08_FL-102 @FL-102
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 09 FL-103 Supplier cancels the Delivery Order @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/09_FL-103 @FL-103
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 10 FL-104 FL Approver approves the DO cancellation @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/10_FL-104 @FL-104
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/01_KAT-046 @KAT-046 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//span[contains(.,\'I declare\')]/ancestor::tr[1]/td[1]//div[contains(@class,\'ui-chkbox-box\')]').first()
+
+
+       at ..\support\katalon\runtime.ts:402
+
+      400 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      401 |       await guardTaskRow(obj);
+    > 402 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      403 |     });
+      404 |   },
+      405 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-046.ts:322:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:759:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_135120\flows-en-fl.flow-fl-noncon-bfeab-om-an-approved-Request-Note-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_135120\flows-en-fl.flow-fl-noncon-bfeab-om-an-approved-Request-Note-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-do-maint [EN] Non-contract: DO update and cancel (Fulfilment Maintenance) › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract-do-maint @module-fl @lang-en @FLOW @fl-noncontract-do-maint/01_KAT-046 @KAT-046 
+  9 did not run

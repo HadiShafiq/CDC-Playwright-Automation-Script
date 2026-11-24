@@ -1,0 +1,163 @@
+{
+  "flowRunId": "pm-access-cp_20261124-164952",
+  "flowId": "pm-access-cp",
+  "module": "pm",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T16:49:52+08:00",
+  "updatedAt": "2026-11-24T17:09:57+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "AA": "AP261124000001579"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "PM-001": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_164953",
+          "startedAt": "2026-11-24T16:50:00+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\01_PM-001\\2026-11-24_164953",
+          "endedAt": "2026-11-24T16:50:11+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan adalah wajib. (ERR-100022)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100022: Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan adalah wajib. (ERR-100022)",
+          "error": "Access application not confirmed: Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan adalah wajib. (ERR-100022)"
+        },
+        {
+          "runId": "2026-11-24_165801",
+          "startedAt": "2026-11-24T16:58:08+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\01_PM-001\\2026-11-24_165801",
+          "endedAt": "2026-11-24T16:58:36+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Attachment not accepted for \"*Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan\""
+        },
+        {
+          "runId": "2026-11-24_170518",
+          "startedAt": "2026-11-24T17:05:24+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\01_PM-001\\2026-11-24_170518",
+          "endedAt": "2026-11-24T17:05:40+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Permohonan bagi Akses Maklumat Syarikat AP261124000001578 anda telah berjaya diserahkan kepada pelulus. Pihak Kementerian Kewangan akan berurusan melalui emel selepas permohonan diproses. Sila semak emel anda dalam tempoh 14 hari bagi notifikasi berkaitan dengan permohonan anda. Sebarang pertanyaan, sila hubungi: Tel: +603 7985 7777/7888 Emel: bantuan@eperolehan.gov.my"
+            },
+            {
+              "severity": "info",
+              "text": "Permohonan bagi Akses Maklumat Syarikat AP261124000001579 anda telah berjaya diserahkan kepada pelulus. Pihak Kementerian Kewangan akan berurusan melalui emel selepas permohonan diproses. Sila semak emel anda dalam tempoh 14 hari bagi notifikasi berkaitan dengan permohonan anda. Sebarang pertanyaan, sila hubungi: Tel: +603 7985 7777/7888 Emel: bantuan@eperolehan.gov.my"
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "AA": "AP261124000001579"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "CP_SUBMITTED",
+      "db": {
+        "kind": "AA:CP",
+        "docNo": "AP261124000001579",
+        "expected": 75005,
+        "statusId": 75005,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-24 17:05:35",
+        "ok": true,
+        "checkedAt": "2026-11-24T17:05:40+08:00",
+        "observeOnly": true
+      }
+    },
+    "PM-011": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_170518",
+          "startedAt": "2026-11-24T17:05:42+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\02_PM-011\\2026-11-24_170518",
+          "dbBefore": {
+            "kind": "AA:CP",
+            "docNo": "AP261124000001579",
+            "statusId": 75005
+          },
+          "endedAt": "2026-11-24T17:06:07+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Application AP261124000001579 for Company Profile Information Access is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "CP_APPROVED_PENDING_ACTIVATION",
+      "db": {
+        "kind": "AA:CP",
+        "docNo": "AP261124000001579",
+        "expected": 75020,
+        "statusId": 75020,
+        "en": "Pending Activation",
+        "bm": "Menunggu Pengaktifan",
+        "at": "2026-11-24 17:06:03",
+        "ok": true,
+        "checkedAt": "2026-11-24T17:06:07+08:00",
+        "observeOnly": true
+      }
+    },
+    "PM-021": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-24_170518",
+          "startedAt": "2026-11-24T17:06:09+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\03_PM-021\\2026-11-24_170518",
+          "dbBefore": {
+            "kind": "AA:CP",
+            "docNo": "AP261124000001579",
+            "statusId": 75020
+          },
+          "endedAt": "2026-11-24T17:08:32+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Activation not confirmed: Skip to Content Log Masuk Portal dikemaskini kali terakhir pada 6 November 2026 04:54:51 PM UTAMA MENGENAI eP PENGGUNA eP PERKHIDMATAN TAMBAHAN BANTUAN DAN RUJUKAN MUAT TURUN PAUTAN SEGERA CARIAN UTAMA/Pengaktifan Akaun Pengaktifan Akaun Sila masukkan maklumat berikut untuk mengaktifkan akaun anda N"
+        },
+        {
+          "runId": "2026-11-24_170937",
+          "startedAt": "2026-11-24T17:09:43+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\03_PM-021\\2026-11-24_170937",
+          "dbBefore": {
+            "kind": "AA:CP",
+            "docNo": "AP261124000001579",
+            "statusId": 75020
+          },
+          "selfHeal": "the SIT DB still shows AP261124000001579 at 75020 Pending Activation, as before the attempt",
+          "endedAt": "2026-11-24T17:09:57+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Activation not confirmed: Skip to Content Log Masuk Portal dikemaskini kali terakhir pada 6 November 2026 04:54:51 PM UTAMA MENGENAI eP PENGGUNA eP PERKHIDMATAN TAMBAHAN BANTUAN DAN RUJUKAN MUAT TURUN PAUTAN SEGERA CARIAN UTAMA/Pengaktifan Akaun Pengaktifan Akaun Sila masukkan maklumat berikut untuk mengaktifkan akaun anda N"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

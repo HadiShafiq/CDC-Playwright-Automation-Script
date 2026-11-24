@@ -1,0 +1,151 @@
+{
+  "flowRunId": "qt-to-recommendation-to-QT-003_2026-11-24_041721",
+  "flowId": "qt-to-recommendation",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:17:26+08:00",
+  "updatedAt": "2026-11-24T04:23:29+08:00",
+  "from": null,
+  "to": "QT-003",
+  "docs": {
+    "QT": "QT260000000004524"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-001": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_041721",
+          "startedAt": "2026-11-24T04:17:26+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\01_QT-001\\2026-11-24_041721",
+          "endedAt": "2026-11-24T04:17:47+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 has been successfully saved. Further action needs to be taken through Task List."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "QT": "QT260000000004524"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "QT_DRAFT",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60002,
+        "statusId": 60002,
+        "en": "Pending Quotation / Tender Submission",
+        "bm": "Menunggu Penyerahan Sebut Harga / Tender",
+        "at": "2026-11-24 04:17:42",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:17:47+08:00"
+      }
+    },
+    "QT-002": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_041721",
+          "startedAt": "2026-11-24T04:17:49+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\02_QT-002\\2026-11-24_041721",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60002
+          },
+          "endedAt": "2026-11-24T04:20:19+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-24_042110",
+          "startedAt": "2026-11-24T04:21:17+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\02_QT-002\\2026-11-24_042110",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60002
+          },
+          "selfHeal": "the SIT DB still shows QT260000000004524 at 60002 Pending Quotation / Tender Submission, as before the attempt",
+          "endedAt": "2026-11-24T04:22:15+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 has been successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 881204115188: BPM task \"Submit Quotation Tender\" of QT260000000004524 is ASSIGNED to 881204115188 (SIT WFTASK)",
+      "checkpoint": "QT_SUBMITTED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60024,
+        "statusId": 60024,
+        "en": "Pending Quotation / Tender Approval",
+        "bm": "Menunggu Kelulusan Sebut Harga / Tender",
+        "at": "2026-11-24 04:22:10",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:22:15+08:00"
+      }
+    },
+    "QT-003": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_042110",
+          "startedAt": "2026-11-24T04:22:17+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\03_QT-003\\2026-11-24_042110",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60024
+          },
+          "endedAt": "2026-11-24T04:23:29+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 580401035583: BPM task \"Approve Committee\" of QT260000000004524 is ASSIGNED to 580401035583 (SIT WFTASK)",
+      "checkpoint": "QT_APPROVED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60003,
+        "statusId": 60003,
+        "en": "Pending Specification Preparation",
+        "bm": "Menunggu Penyediaan Spesifikasi",
+        "at": "2026-11-24 04:23:24",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:23:29+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

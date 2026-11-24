@@ -1,0 +1,837 @@
+{
+  "module": "FL",
+  "at": "2026-11-24T18:07:22+08:00",
+  "dry": false,
+  "sandbox": {
+    "CN": null,
+    "CO": "CO260000000006653",
+    "CR": "CR260000000006054",
+    "DN": "DN260000000004802",
+    "DO": "01309H005M2600504",
+    "FN": "FN260000000005812",
+    "IN": null,
+    "PA": "PA260000000006414",
+    "PO": "PO260000000007218",
+    "PR": "PR260000000005074",
+    "SD": "SD260000000002802"
+  },
+  "results": [
+    {
+      "wf": "CN",
+      "status": 45600,
+      "en": "Generated",
+      "result": "no sandbox CN with a CN workflow row"
+    },
+    {
+      "wf": "CN",
+      "status": 45900,
+      "en": "Cancelled",
+      "result": "no sandbox CN with a CN workflow row"
+    },
+    {
+      "wf": "CN",
+      "status": 45910,
+      "en": "Cancelled by Year End Process",
+      "result": "no sandbox CN with a CN workflow row"
+    },
+    {
+      "wf": "CO",
+      "status": 41441,
+      "en": "Carry Forward",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41500,
+      "en": "Pending Supplier Acknowledgement",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41510,
+      "en": "Pending Partial Fulfilment",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41515,
+      "en": "Pending Invoice",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41517,
+      "en": "Pending Revision (Invoice Cancellation)",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41520,
+      "en": "Pending Debit Note Approval",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41525,
+      "en": "Pending Payment Match",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41526,
+      "en": "Pending Payment Instruction Query from iGFMAS",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41527,
+      "en": "Pending Payment Instruction Query Verification",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41530,
+      "en": "Pending Payment",
+      "doc": "CO260000000006653",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "CO",
+      "status": 41535,
+      "en": "Closed",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41540,
+      "en": "Complete for Payment Process",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41600,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41630,
+      "en": "Pending Cancellation Submission",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41640,
+      "en": "Pending AP59 Submission",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41900,
+      "en": "Cancelled",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41910,
+      "en": "Cancelled by Year End Process",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41920,
+      "en": "Closed Due To AP59",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41930,
+      "en": "Closed - Manual Action By User",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41931,
+      "en": "Closed/Manual Payment",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41932,
+      "en": "Closed with manual payment at iGFMAS",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41940,
+      "en": "Cancelled Due To Ministry Restructuring",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CO",
+      "status": 41941,
+      "en": "Cancelled due to PTJ Code Changed",
+      "doc": "CO260000000006653",
+      "result": "OK; restored to 41530"
+    },
+    {
+      "wf": "CR",
+      "status": 40500,
+      "en": "Pending Contract Request Creation",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40501,
+      "en": "Pending MTO Creation",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40515,
+      "en": "Pending Revision",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40520,
+      "en": "Pending Revision Approval",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40600,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40610,
+      "en": "Pending CR Review from iGFMAS",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40620,
+      "en": "Pending Query Verification",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40810,
+      "en": "Rejected",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40900,
+      "en": "Cancelled",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40910,
+      "en": "Cancelled by Year End Process",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40911,
+      "en": "Closed Due To AP59",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40940,
+      "en": "Cancelled due to PID validity expired",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40950,
+      "en": "Rejected due to PID validity expired",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "CR",
+      "status": 40960,
+      "en": "Cancelled Due to Ministry Restructuring",
+      "doc": "CR260000000006054",
+      "result": "OK; restored to 40800"
+    },
+    {
+      "wf": "DN",
+      "status": 45000,
+      "en": "Pending Debit Note Approval",
+      "doc": "DN260000000004802",
+      "result": "OK; restored to 45300"
+    },
+    {
+      "wf": "DN",
+      "status": 45100,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "DN260000000004802",
+      "result": "OK; restored to 45300"
+    },
+    {
+      "wf": "DN",
+      "status": 45400,
+      "en": "Cancelled",
+      "doc": "DN260000000004802",
+      "result": "OK; restored to 45300"
+    },
+    {
+      "wf": "DN",
+      "status": 45410,
+      "en": "Cancelled by Year End Process",
+      "doc": "DN260000000004802",
+      "result": "OK; restored to 45300"
+    },
+    {
+      "wf": "DO",
+      "status": 42005,
+      "en": "Acknowledged",
+      "doc": "01309H005M2600504",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "DO",
+      "status": 42030,
+      "en": "Pending Cancellation Submission",
+      "doc": "01309H005M2600504",
+      "result": "OK; restored to 42005"
+    },
+    {
+      "wf": "DO",
+      "status": 42810,
+      "en": "Rejected",
+      "doc": "01309H005M2600504",
+      "result": "OK; restored to 42005"
+    },
+    {
+      "wf": "DO",
+      "status": 42910,
+      "en": "Cancelled by Year End Process",
+      "doc": "01309H005M2600504",
+      "result": "OK; restored to 42005"
+    },
+    {
+      "wf": "DO",
+      "status": 42911,
+      "en": "Closed Due To AP59",
+      "doc": "01309H005M2600504",
+      "result": "OK; restored to 42005"
+    },
+    {
+      "wf": "DO",
+      "status": 42912,
+      "en": "Cancelled Due To Ministry Restructuring",
+      "doc": "01309H005M2600504",
+      "result": "OK; restored to 42005"
+    },
+    {
+      "wf": "FN",
+      "status": 43000,
+      "en": "Pending Acknowledgement",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43004,
+      "en": "Pending Revision",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43006,
+      "en": "Pending Revision Approval",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43020,
+      "en": "Pending Modification Submission",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43030,
+      "en": "Pending Cancellation Submission",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43100,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43810,
+      "en": "Rejected",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43900,
+      "en": "Cancelled",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43910,
+      "en": "Cancelled by Year End Process",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43911,
+      "en": "Closed Due To AP59",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "FN",
+      "status": 43912,
+      "en": "Cancelled Due To Ministry Restructuring",
+      "doc": "FN260000000005812",
+      "result": "OK; restored to 43010"
+    },
+    {
+      "wf": "IN",
+      "status": 44000,
+      "en": "Pending Invoice Creation",
+      "result": "no sandbox IN with a IN workflow row"
+    },
+    {
+      "wf": "IN",
+      "status": 44017,
+      "en": "Pending Revision (Invoice Cancellation)",
+      "result": "no sandbox IN with a IN workflow row"
+    },
+    {
+      "wf": "IN",
+      "status": 44100,
+      "en": "Awaiting iGFMAS Response",
+      "result": "no sandbox IN with a IN workflow row"
+    },
+    {
+      "wf": "IN",
+      "status": 44130,
+      "en": "Pending Cancellation Submission",
+      "result": "no sandbox IN with a IN workflow row"
+    },
+    {
+      "wf": "IN",
+      "status": 44910,
+      "en": "Closed Due To AP59",
+      "result": "no sandbox IN with a IN workflow row"
+    },
+    {
+      "wf": "IN",
+      "status": 44911,
+      "en": "Cancelled by Year End Process",
+      "result": "no sandbox IN with a IN workflow row"
+    },
+    {
+      "wf": "PA",
+      "status": 46003,
+      "en": "Pending Revision (Invoice Cancellation)",
+      "doc": "PA260000000006414",
+      "result": "OK; restored to 46005"
+    },
+    {
+      "wf": "PA",
+      "status": 46005,
+      "en": "Payment Instruction Completed",
+      "doc": "PA260000000006414",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "PA",
+      "status": 46100,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "PA260000000006414",
+      "result": "OK; restored to 46005"
+    },
+    {
+      "wf": "PA",
+      "status": 46900,
+      "en": "Cancelled",
+      "doc": "PA260000000006414",
+      "result": "OK; restored to 46005"
+    },
+    {
+      "wf": "PA",
+      "status": 46910,
+      "en": "Cancelled by Year End Process",
+      "doc": "PA260000000006414",
+      "result": "OK; restored to 46005"
+    },
+    {
+      "wf": "PA",
+      "status": 46913,
+      "en": "Closed with manual payment at iGFMAS",
+      "doc": "PA260000000006414",
+      "result": "OK; restored to 46005"
+    },
+    {
+      "wf": "PO",
+      "status": 41000,
+      "en": "Pending Supplier Acknowledgement",
+      "doc": "PO260000000007218",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "PO",
+      "status": 41002,
+      "en": "Pending Rejection Acknowledgement",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41010,
+      "en": "Pending Partial Fulfilment",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41015,
+      "en": "Pending Invoice",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41017,
+      "en": "Pending Revision (Invoice Cancellation)",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41020,
+      "en": "Pending Debit Note Approval",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41025,
+      "en": "Pending Payment Match",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41026,
+      "en": "Pending Payment Instruction Query from iGFMAS",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41027,
+      "en": "Pending Payment Instruction Query Verification",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41030,
+      "en": "Pending Payment",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41035,
+      "en": "Closed",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41040,
+      "en": "Complete for Payment Process",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41100,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41130,
+      "en": "Pending Cancellation Submission",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41310,
+      "en": "Rejected",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41400,
+      "en": "Cancelled",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41410,
+      "en": "Cancelled by Year End Process",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41420,
+      "en": "Closed - Manual Action By User",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41421,
+      "en": "Closed/Manual Payment",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41422,
+      "en": "Closed with manual payment at iGFMAS",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41430,
+      "en": "Cancelled by System",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41440,
+      "en": "Cancelled Due To Ministry Restructuring",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 41442,
+      "en": "Cancelled due to PTJ Code Changed",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PO",
+      "status": 96708,
+      "en": "Both",
+      "doc": "PO260000000007218",
+      "result": "OK; restored to 41000"
+    },
+    {
+      "wf": "PR",
+      "status": 40000,
+      "en": "Pending Purchase Request Creation",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40015,
+      "en": "Pending Revision",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40020,
+      "en": "Pending Revision Approval",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40100,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40110,
+      "en": "Pending PR Review from iGFMAS",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40120,
+      "en": "Pending Query Verification",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40310,
+      "en": "Rejected",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40400,
+      "en": "Cancelled",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40401,
+      "en": "Cancelled due to Simple Quote validity period is expired (60 days).",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40402,
+      "en": "Rejected due to Simple Quote validity period is expired (60 days).",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40410,
+      "en": "Cancelled by Year End Process",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40430,
+      "en": "Cancelled by System",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40440,
+      "en": "Cancelled due to Purchase in Default validity period is expired (60 days).",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40450,
+      "en": "Rejected due to Purchase in Default validity period is expired (60 days).",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "PR",
+      "status": 40460,
+      "en": "Cancelled Due To Ministry Restructuring",
+      "doc": "PR260000000005074",
+      "result": "OK; restored to 40300"
+    },
+    {
+      "wf": "SD",
+      "status": 47000,
+      "en": "Pending Submission",
+      "doc": "SD260000000002802",
+      "result": "OK; restored to 47800"
+    },
+    {
+      "wf": "SD",
+      "status": 47100,
+      "en": "Awaiting iGFMAS Response",
+      "doc": "SD260000000002802",
+      "result": "OK; restored to 47800"
+    },
+    {
+      "wf": "SD",
+      "status": 47810,
+      "en": "Rejected",
+      "doc": "SD260000000002802",
+      "result": "OK; restored to 47800"
+    },
+    {
+      "wf": "SD",
+      "status": 47900,
+      "en": "Cancelled",
+      "doc": "SD260000000002802",
+      "result": "OK; restored to 47800"
+    },
+    {
+      "wf": "SD",
+      "status": 47910,
+      "en": "Cancelled by Year End Process",
+      "doc": "SD260000000002802",
+      "result": "OK; restored to 47800"
+    },
+    {
+      "wf": "SD",
+      "status": 47911,
+      "en": "Closed Due To AP59",
+      "doc": "SD260000000002802",
+      "result": "OK; restored to 47800"
+    }
+  ]
+}

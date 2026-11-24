@@ -1,11 +1,13 @@
 node_modules/
-.auth/
+# .auth and .data committed on user request 2026-11-25 (dummy SIT data); browser profiles, logs and Outlook sessions stay local
+.auth/profile-*/
+.auth/*.log
+.auth/outlook-*.json
 test-results/
 reports/
 evidence/
 .locks/
 .env
 .explore/
-.data/
 
 sqlnet.log

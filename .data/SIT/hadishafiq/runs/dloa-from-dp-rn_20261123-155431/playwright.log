@@ -1,0 +1,164 @@
+
+Running 9 tests using 1 worker
+
+[15:54:38] dloa-from-dp-rn/01_KAT-021: KAT-021 Create Simple Quote - Services — role Requisitioner, login: Katalon default account of the step
+[15:54:38] dloa-from-dp-rn/01_KAT-021: Test data corrected (support/katalon/data-overrides.json): dateValue, SupplierName, ItemCode, AddSupplierNameNormal, Fulfilmenttype: Start date 2026-10-19 is in the past (run date instead); default supplier Basic FL Organization (Others) 1 + item 851220040000000000 give 0 catalogue results. Use the company of KAT-022 supplier account BASICFLROS3 and its service item (Catalogue Search, 2026-10-30). Procurement type stays the test case's 2 (Direct LOA, needed for Prepare LOA KAT-025); with type 1 (used 2026-10-30 for SQ260000000002272) the RN goes to Submit PR instead. Supplier List: the test case search "ANE" invites KEDAI SERBANEKA ALI / KANEDA JAPANESE CUISINE (SQ260000000002277), whose logins we do not have; AINHALIM ENTERPRISE (NURULAINMOF) is not offered for this service SQ (search gives no records), so invite the catalogue supplier, BASICFLROS3 company (2026-11-04). Fulfilmenttype 2 (Schedule): per the user, only a Services SQ with Schedule or As And When gives an RN that goes to Prepare LOA (KAT-025); One Off (1) went to a Purchase Request (SQ260000000002305 → PR260000000004856)
+[15:54:38] dloa-from-dp-rn/01_KAT-021: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[15:54:38] dloa-from-dp-rn/01_KAT-021: Flow inputs: Fulfilmenttype=2
+[15:54:46] dloa-from-dp-rn/01_KAT-021: Closed the TERKINI announcement
+[15:54:52] dloa-from-dp-rn/01_KAT-021: Closed the TERKINI announcement
+[15:55:50] dloa-from-dp-rn/01_KAT-021: Loop #1 of 1
+[15:57:47] dloa-from-dp-rn/01_KAT-021: Message: Simple Quote SQ260000000002363 is successfully submitted.
+[15:57:47] dloa-from-dp-rn/01_KAT-021: ✅ Captured SQ No: SQ260000000002363
+[15:57:47] dloa-from-dp-rn/01_KAT-021: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[15:57:47] dloa-from-dp-rn/01_KAT-021: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[15:57:48] dloa-from-dp-rn/01_KAT-021: Closed the TERKINI announcement
+[15:57:48] dloa-from-dp-rn/01_KAT-021: closeBrowser (the fixture closes the browser at the end of the test)
+[15:57:49] dloa-from-dp-rn/01_KAT-021: Signed out (SSO logout)
+  ✓  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 01 KAT-021 Create Simple Quote - Services @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/01_KAT-021 @KAT-021 (3.2m)
+[15:57:49] dloa-from-dp-rn/02_SQ_START_SQL: BLOCKED: GATE SQ_START_SQL — Open the Simple Quote now (move START_DATE to the past). In DBeaver (SIT connection only): UPDATE NGEP_SIT.SC_QUOTE SET START_DATE = TO_DATE('2026-11-23 14:57:49','YYYY-MM-DD HH24:MI:SS') WHERE QUOTE_NO = 'SQ260000000002363'; COMMIT;  Do NOT change END_DATE yet. Then wait until SQ260000000002363 shows in the supplier's Simple Quote Respond list. When done: npm run qa -- gate --run dloa-from-dp-rn_20261123-155431 --gate SQ_START_SQL --done
+[15:57:52] dloa-from-dp-rn/02_SQ_START_SQL: Signed out (SSO logout)
+  -  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 02 GATE SQ_START_SQL Open the Simple Quote now (move START_DATE to the past) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/02_SQ_START_SQL @gate-SQ_START_SQL
+[15:57:55] dloa-from-dp-rn/03_KAT-022: Signed out (SSO logout)
+  -  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/03_KAT-022 @KAT-022
+[15:57:58] dloa-from-dp-rn/04_SQ_END_SQL: Signed out (SSO logout)
+  -  4 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 04 GATE SQ_END_SQL Close the Simple Quote (move END_DATE to the past) — only after the supplier replied @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/04_SQ_END_SQL @gate-SQ_END_SQL
+[15:58:02] dloa-from-dp-rn/05_KAT-023: Signed out (SSO logout)
+  -  5 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/05_KAT-023 @KAT-023
+[15:58:07] dloa-from-dp-rn/06_KAT-024: Signed out (SSO logout)
+  -  6 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 06 KAT-024 Approve Request Note (SQ route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/06_KAT-024 @KAT-024
+[15:58:11] dloa-from-dp-rn/07_KAT-025: Signed out (SSO logout)
+  -  7 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 07 KAT-025 Prepare LOA from an approved Request Note (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/07_KAT-025 @KAT-025
+[15:58:15] dloa-from-dp-rn/08_KAT-026: Signed out (SSO logout)
+  -  8 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 08 KAT-026 Supplier accepts the LOA (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/08_KAT-026 @KAT-026
+[15:58:18] dloa-from-dp-rn/09_KAT-027: Signed out (SSO logout)
+  -  9 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 09 KAT-027 Desk Officer verifies the LOA (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/09_KAT-027 @KAT-027
+
+  8 skipped
+  1 passed (3.8m)
+
+Running 9 tests using 1 worker
+
+  -  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 01 KAT-021 Create Simple Quote - Services @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/01_KAT-021 @KAT-021
+[16:04:48] dloa-from-dp-rn/02_SQ_START_SQL: Gate SQ_START_SQL done by hadishafiq at 2026-11-23T16:04:38+08:00
+  ✓  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 02 GATE SQ_START_SQL Open the Simple Quote now (move START_DATE to the past) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/02_SQ_START_SQL @gate-SQ_START_SQL (304ms)
+[16:04:49] dloa-from-dp-rn/03_KAT-022: KAT-022 Supplier responds to the Simple Quote (prices every line) — role Supplier, login: Katalon default account of the step
+[16:04:49] dloa-from-dp-rn/03_KAT-022: Test data corrected (support/katalon/data-overrides.json): sqNo: Respond to our new Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, 2026-11-11 18:13, Supplier List = BASICFLROS3 company) as the default BASICFLROS3 account, pricing every line; this SQ is for the LOA chain KAT-025/026/027
+[16:04:49] dloa-from-dp-rn/03_KAT-022: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:04:49] dloa-from-dp-rn/03_KAT-022: Flow inputs: sqNo=SQ260000000002363
+[16:04:55] dloa-from-dp-rn/03_KAT-022: Closed the TERKINI announcement
+[16:05:00] dloa-from-dp-rn/03_KAT-022: Closed the TERKINI announcement
+[16:05:16] dloa-from-dp-rn/03_KAT-022: Checking page index: 1 for SQ No: SQ260000000002363
+[16:05:16] dloa-from-dp-rn/03_KAT-022: ✅ Found SQ Number: SQ260000000002363 on page index 1
+[16:05:18] dloa-from-dp-rn/03_KAT-022: Price lines on this Simple Quote: 1
+[16:05:18] dloa-from-dp-rn/03_KAT-022: Fill Unit Price row #1
+[16:05:31] dloa-from-dp-rn/03_KAT-022: Closed the TERKINI announcement
+[16:05:31] dloa-from-dp-rn/03_KAT-022: closeBrowser (the fixture closes the browser at the end of the test)
+[16:05:31] dloa-from-dp-rn/03_KAT-022: Signed out (SSO logout)
+  ✓  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/03_KAT-022 @KAT-022 (43.0s)
+[16:05:32] dloa-from-dp-rn/04_SQ_END_SQL: BLOCKED: GATE SQ_END_SQL — Close the Simple Quote (move END_DATE to the past) — only after the supplier replied. Only after the supplier replied. In DBeaver (SIT connection only), the user's SQL with END_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('2026-11-23 15:05:32', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002363'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('SQ260000000002363');  Then wait until the Prepare Request Note task for SQ260000000002363 appears in the requisitioner's My Task. When done: npm run qa -- gate --run dloa-from-dp-rn_20261123-155431 --gate SQ_END_SQL --done
+  -  4 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 04 GATE SQ_END_SQL Close the Simple Quote (move END_DATE to the past) — only after the supplier replied @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/04_SQ_END_SQL @gate-SQ_END_SQL
+  -  5 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/05_KAT-023 @KAT-023
+  -  6 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 06 KAT-024 Approve Request Note (SQ route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/06_KAT-024 @KAT-024
+  -  7 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 07 KAT-025 Prepare LOA from an approved Request Note (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/07_KAT-025 @KAT-025
+  -  8 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 08 KAT-026 Supplier accepts the LOA (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/08_KAT-026 @KAT-026
+  -  9 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 09 KAT-027 Desk Officer verifies the LOA (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/09_KAT-027 @KAT-027
+
+  7 skipped
+  2 passed (52.4s)
+
+Running 9 tests using 1 worker
+
+  -  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 01 KAT-021 Create Simple Quote - Services @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/01_KAT-021 @KAT-021
+[16:16:58] dloa-from-dp-rn/02_SQ_START_SQL: Gate SQ_START_SQL done by hadishafiq at 2026-11-23T16:04:38+08:00
+  ✓  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/02_SQ_START_SQL @gate-SQ_START_SQL (252ms)
+  -  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/03_KAT-022 @KAT-022
+[16:16:58] dloa-from-dp-rn/04_SQ_END_SQL: Gate SQ_END_SQL done by hadishafiq at 2026-11-23T16:06:07+08:00
+  ✓  4 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/04_SQ_END_SQL @gate-SQ_END_SQL (290ms)
+[16:16:58] dloa-from-dp-rn/05_KAT-023: KAT-023 Prepare Request Note from a closed Simple Quote — role Requisitioner, login: account of KAT-021
+[16:16:58] dloa-from-dp-rn/05_KAT-023: Test data corrected (support/katalon/data-overrides.json): Document_Number, preparedBy: Prepare RN from our Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, BASICFLROS3 replied 2026-11-11 18:16, END 18:30) as the requisitioner who created it (draft RN260000000004702 exists); its line has no PR/LOA Prepared By, so pick officer 710527085562 (given by the user)
+[16:16:58] dloa-from-dp-rn/05_KAT-023: Using the login of KAT-021 (support/katalon/data-overrides.json)
+[16:16:58] dloa-from-dp-rn/05_KAT-023: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:16:58] dloa-from-dp-rn/05_KAT-023: Flow inputs: Document_Number=SQ260000000002363
+[16:16:58] dloa-from-dp-rn/05_KAT-023: Flow login: the account of KAT-021
+[16:17:05] dloa-from-dp-rn/05_KAT-023: Closed the TERKINI announcement
+[16:17:08] dloa-from-dp-rn/05_KAT-023: Closed the TERKINI announcement
+[16:17:33] dloa-from-dp-rn/05_KAT-023: Row 1: PR/LOA Prepared By is empty; searching 710527085562
+[16:17:57] dloa-from-dp-rn/05_KAT-023: Message: Request Note RN260000000004908 is successfully submitted.
+[16:17:57] dloa-from-dp-rn/05_KAT-023: ✅ Captured RN No: RN260000000004908
+[16:17:57] dloa-from-dp-rn/05_KAT-023: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_2026.xlsx
+[16:17:57] dloa-from-dp-rn/05_KAT-023: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_2026.xlsx
+[16:17:58] dloa-from-dp-rn/05_KAT-023: Closed the TERKINI announcement
+[16:17:58] dloa-from-dp-rn/05_KAT-023: closeBrowser (the fixture closes the browser at the end of the test)
+[16:17:59] dloa-from-dp-rn/05_KAT-023: Signed out (SSO logout)
+  ✓  5 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/05_KAT-023 @KAT-023 (1.0m)
+[16:17:59] dloa-from-dp-rn/06_KAT-024: KAT-024 Approve Request Note (SQ route) — role Approver, login: officer 690127065209 from data-overrides.json (seen in an earlier run; not checked for this document)
+[16:17:59] dloa-from-dp-rn/06_KAT-024: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our RN RN260000000004702 (KAT-023 from Services Schedule SQ260000000002309); Review Direct Purchase ASSIGNED to officer 690127065209 (Task Status Search)
+[16:17:59] dloa-from-dp-rn/06_KAT-024: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[16:17:59] dloa-from-dp-rn/06_KAT-024: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:17:59] dloa-from-dp-rn/06_KAT-024: Flow inputs: Document_Number=RN260000000004908
+[16:17:59] dloa-from-dp-rn/06_KAT-024: Flow login: officer 690127065209 (shared officer password)
+[16:18:02] dloa-from-dp-rn/06_KAT-024: Closed the TERKINI announcement
+[16:18:08] dloa-from-dp-rn/06_KAT-024: Closed the TERKINI announcement
+[16:18:45] dloa-from-dp-rn/06_KAT-024: Message: Request Note RN260000000004908 is approved.
+[16:18:45] dloa-from-dp-rn/06_KAT-024: ✅ Captured RN No: RN260000000004908
+[16:18:45] dloa-from-dp-rn/06_KAT-024: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[16:18:45] dloa-from-dp-rn/06_KAT-024: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[16:18:47] dloa-from-dp-rn/06_KAT-024: Closed the TERKINI announcement
+[16:18:47] dloa-from-dp-rn/06_KAT-024: closeBrowser (the fixture closes the browser at the end of the test)
+[16:18:48] dloa-from-dp-rn/06_KAT-024: Signed out (SSO logout)
+  ✓  6 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 06 KAT-024 Approve Request Note (SQ route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/06_KAT-024 @KAT-024 (48.8s)
+[16:18:48] dloa-from-dp-rn/07_KAT-025: KAT-025 Prepare LOA from an approved Request Note (DP-LOA route) — role Requisitioner (LOA officer), login: officer 710527085562 from data-overrides.json (seen in an earlier run; not checked for this document)
+[16:18:48] dloa-from-dp-rn/07_KAT-025: Test data corrected (support/katalon/data-overrides.json): Document_Number, FileReference1: Prepare the LOA from our approved RN RN260000000004702 (Services Schedule SQ260000000002309); next task ASSIGNED to 710527085562 (Task Status Search); file reference from the RN number
+[16:18:48] dloa-from-dp-rn/07_KAT-025: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[16:18:48] dloa-from-dp-rn/07_KAT-025: Data file "Data_Izzah_DP.xlsx" (Data Files/Direct_Purchased/DP_Izzah) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:18:48] dloa-from-dp-rn/07_KAT-025: Flow inputs: Document_Number=RN260000000004908
+[16:18:48] dloa-from-dp-rn/07_KAT-025: Flow login: officer 710527085562 (shared officer password)
+[16:18:52] dloa-from-dp-rn/07_KAT-025: Closed the TERKINI announcement
+[16:18:55] dloa-from-dp-rn/07_KAT-025: Closed the TERKINI announcement
+[16:19:24] dloa-from-dp-rn/07_KAT-025: DEBUG Aggrement raw value = [1]
+[16:19:24] dloa-from-dp-rn/07_KAT-025: DEBUG Aggrement class = java.lang.Integer
+[16:19:24] dloa-from-dp-rn/07_KAT-025: DEBUG Aggrement intValue = 1
+[16:19:24] dloa-from-dp-rn/07_KAT-025: DEBUG Agreement label = Yes
+[16:19:43] dloa-from-dp-rn/07_KAT-025: Message: Letter of Acceptance (LOA) LA260000000004215 is submitted successfully.
+[16:19:43] dloa-from-dp-rn/07_KAT-025: ✅ Captured LOA No: LA260000000004215
+[16:19:43] dloa-from-dp-rn/07_KAT-025: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_DP_CR_RN_LOA_PREPARE_LOA.xlsx
+[16:19:43] dloa-from-dp-rn/07_KAT-025: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_DP_CR_RN_LOA_PREPARE_LOA.xlsx
+[16:19:44] dloa-from-dp-rn/07_KAT-025: Closed the TERKINI announcement
+[16:19:44] dloa-from-dp-rn/07_KAT-025: closeBrowser (the fixture closes the browser at the end of the test)
+[16:19:45] dloa-from-dp-rn/07_KAT-025: Signed out (SSO logout)
+  ✓  7 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 07 KAT-025 Prepare LOA from an approved Request Note (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/07_KAT-025 @KAT-025 (57.3s)
+[16:19:45] dloa-from-dp-rn/08_KAT-026: KAT-026 Supplier accepts the LOA (DP-LOA route) — role Supplier, login: account of KAT-022
+[16:19:45] dloa-from-dp-rn/08_KAT-026: Test data corrected (support/katalon/data-overrides.json): Document_Number: Accept our LOA LA260000000004130 (KAT-025 from RN260000000004702, Services Schedule SQ260000000002309, 2026-11-13) instead of the Katalon LA260000000003868; Task Status shows Accept LOA ASSIGNED to basicflros3, the KAT-022 supplier account
+[16:19:45] dloa-from-dp-rn/08_KAT-026: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[16:19:45] dloa-from-dp-rn/08_KAT-026: Data file "Data_Izzah_DP.xlsx" (Data Files/Direct_Purchased/DP_Izzah) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:19:45] dloa-from-dp-rn/08_KAT-026: Flow inputs: Document_Number=LA260000000004215
+[16:19:45] dloa-from-dp-rn/08_KAT-026: Flow login: the account of KAT-022
+[16:19:48] dloa-from-dp-rn/08_KAT-026: Closed the TERKINI announcement
+[16:19:51] dloa-from-dp-rn/08_KAT-026: Closed the TERKINI announcement
+[16:20:33] dloa-from-dp-rn/08_KAT-026: Zone / Item Details: no enabled Assign button (the items already have item codes); nothing to assign
+[16:20:36] dloa-from-dp-rn/08_KAT-026: Closed the TERKINI announcement
+[16:20:36] dloa-from-dp-rn/08_KAT-026: closeBrowser (the fixture closes the browser at the end of the test)
+[16:20:37] dloa-from-dp-rn/08_KAT-026: Signed out (SSO logout)
+  ✓  8 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 08 KAT-026 Supplier accepts the LOA (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/08_KAT-026 @KAT-026 (52.5s)
+[16:20:38] dloa-from-dp-rn/09_KAT-027: KAT-027 Desk Officer verifies the LOA (DP-LOA route) — role Desk Officer, login: officer 710527085562 from data-overrides.json (seen in an earlier run; not checked for this document)
+[16:20:38] dloa-from-dp-rn/09_KAT-027: Test data corrected (support/katalon/data-overrides.json): Document_Number: Verify our LOA LA260000000004130 (accepted by basicflros3 2026-11-13 15:29) instead of the Katalon LA260000000003868; Task Status shows Verify LOA ASSIGNED to officer 710527085562
+[16:20:38] dloa-from-dp-rn/09_KAT-027: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[16:20:38] dloa-from-dp-rn/09_KAT-027: Data file "Data_Izzah_DP.xlsx" (Data Files/Direct_Purchased/DP_Izzah) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:20:38] dloa-from-dp-rn/09_KAT-027: Flow inputs: Document_Number=LA260000000004215
+[16:20:38] dloa-from-dp-rn/09_KAT-027: Flow login: officer 710527085562 (shared officer password)
+[16:20:40] dloa-from-dp-rn/09_KAT-027: Closed the TERKINI announcement
+[16:20:44] dloa-from-dp-rn/09_KAT-027: Closed the TERKINI announcement
+[16:22:09] dloa-from-dp-rn/09_KAT-027: Message: Letter of Acceptance (LOA) LA260000000004215 is completed.
+[16:22:09] dloa-from-dp-rn/09_KAT-027: ✅ Captured LOA No: LA260000000004215
+[16:22:09] dloa-from-dp-rn/09_KAT-027: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_DO_Verify_April_2026.xlsx
+[16:22:09] dloa-from-dp-rn/09_KAT-027: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_DO_Verify_April_2026.xlsx
+[16:22:10] dloa-from-dp-rn/09_KAT-027: Closed the TERKINI announcement
+[16:22:10] dloa-from-dp-rn/09_KAT-027: closeBrowser (the fixture closes the browser at the end of the test)
+[16:22:11] dloa-from-dp-rn/09_KAT-027: Signed out (SSO logout)
+  ✓  9 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-from-dp-rn [EN] Direct LOA from a DP Simple Quote (Services, Schedule): SQ → RN → LOA → supplier → DO verify › 09 KAT-027 Desk Officer verifies the LOA (DP-LOA route) @flow-dloa-from-dp-rn @module-direct-loa @lang-en @FLOW @dloa-from-dp-rn/09_KAT-027 @KAT-027 (1.6m)
+
+  Slow test file: [chromium] › tests\flows\en\direct-loa.flow.spec.ts (5.2m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  2 skipped
+  7 passed (5.3m)

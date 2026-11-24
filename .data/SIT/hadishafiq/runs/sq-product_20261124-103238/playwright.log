@@ -1,0 +1,21 @@
+
+Running 4 tests using 1 worker
+
+[10:32:44] sq-product/01_KAT-036: KAT-036 Create Simple Quote - Product — role Requisitioner, login: Katalon default account of the step
+[10:32:44] sq-product/01_KAT-036: Test data corrected (support/katalon/data-overrides.json): dateValue: Simple Quote start date 2026-10-12 is in the past; use the run date
+[10:32:44] sq-product/01_KAT-036: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[10:32:44] sq-product/01_KAT-036: Live dates: dateValue=2026-11-24
+[10:32:44] sq-product/01_KAT-036: Flow inputs: (none)
+[10:32:48] sq-product/01_KAT-036: Closed the TERKINI announcement
+[10:32:53] sq-product/01_KAT-036: Closed the TERKINI announcement
+[10:33:47] sq-product/01_KAT-036: Loop #1 of 1
+[10:33:50] sq-product/01_KAT-036: First loop and record exists → skip click Action Item Product
+[10:35:21] sq-product/01_KAT-036: Message: Simple Quote SQ260000000002369 is successfully submitted.
+[10:35:21] sq-product/01_KAT-036: ✅ Captured SQ No: SQ260000000002369
+[10:35:22] sq-product/01_KAT-036: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[10:35:22] sq-product/01_KAT-036: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FL_DP_CR_DLOA_Requestioner_Service_NEW.xlsx
+[10:35:23] sq-product/01_KAT-036: Closed the TERKINI announcement
+[10:35:23] sq-product/01_KAT-036: closeBrowser (the fixture closes the browser at the end of the test)
+[10:35:24] sq-product/01_KAT-036: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\sq.flow.spec.ts:12:11 › sq-product [EN] Simple Quote (Product): create, open, supplier reply, close › 01 KAT-036 Create Simple Quote - Product @flow-sq-product @module-sq @lang-en @FLOW @sq-product/01_KAT-036 @KAT-036 (2.7m)
+[10:35:26] sq-product/02_SQ_START_SQL: Gate SQ_START_SQL: ran UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('2026-11-24 10:45:00', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('SQ260000000002369')

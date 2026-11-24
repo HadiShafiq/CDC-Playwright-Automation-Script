@@ -1,0 +1,208 @@
+
+Running 3 tests using 1 worker
+
+[16:50:00] pm-access-cp/01_PM-001: PM-001 Agency user submits an Access Application for Company Profile access — role Applicant (non-federal agency user), login: Katalon default account of the step
+[16:50:00] pm-access-cp/01_PM-001: PM-001: applicant QA AUTO PEMOHON 4078, IC 900171997896, e-mail newsupplier001@commercedc.com.my, Company Profile
+[16:50:06] pm-access-cp/01_PM-001: PM-001: district BATU PAHAT, city 260825test
+[16:50:07] pm-access-cp/01_PM-001: PM-001: dialog: "Mesej Pengesahan Adakah anda pasti untuk menghantar permohonan ini? Ya Tidak" -> Ya
+[16:50:11] pm-access-cp/01_PM-001: Closed the TERKINI announcement
+[16:50:12] pm-access-cp/01_PM-001: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 (12.5s)
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021
+
+
+  1) [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 
+
+    Error: Access application not confirmed: Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan adalah wajib. (ERR-100022)
+
+       at ..\support\modules\pm\access.ts:98
+
+       96 |   const all = [...msgs, ...(await pageMessages(page)), (await page.locator('body').innerText()).slice(0, 3000)].join(' ');
+       97 |   const appl = all.match(/\bAP\d{15}\b/)?.[0];
+    >  98 |   if (!appl) throw new Error(`Access application not confirmed: ${msgs.join(' | ') || 'no message'}`);
+          |                    ^
+       99 |   return { appl, messages: [...msgs, `${appl} submitted for ${name} (${ic})`], mailbox: box.email };
+      100 | }
+      101 |
+        at submitAccessApplication (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:98:20)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:85:64)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\pm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_164953\flows-en-pm.flow-pm-access-4eb91--for-Company-Profile-access-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_164953\flows-en-pm.flow-pm-access-4eb91--for-Company-Profile-access-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 
+  2 did not run
+
+Running 3 tests using 1 worker
+
+[16:51:17] pm-access-cp/01_PM-001: BLOCKED: PM-001 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-100022: Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan adalah wajib. (ERR-100022)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run pm-access-cp_20261124-164952 --step PM-001
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021
+
+  3 skipped
+
+Running 3 tests using 1 worker
+
+[16:58:08] pm-access-cp/01_PM-001: PM-001 Agency user submits an Access Application for Company Profile access — role Applicant (non-federal agency user), login: Katalon default account of the step
+[16:58:08] pm-access-cp/01_PM-001: PM-001: applicant QA AUTO PEMOHON 0107, IC 900114165473, e-mail newsupplier001@commercedc.com.my, Company Profile
+[16:58:14] pm-access-cp/01_PM-001: PM-001: district BATU PAHAT, city AYER HITAM
+[16:58:36] pm-access-cp/01_PM-001: Closed the TERKINI announcement
+[16:58:36] pm-access-cp/01_PM-001: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 (28.9s)
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021
+
+
+  1) [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 
+
+    Error: Attachment not accepted for "*Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan"
+
+       at ..\support\modules\pm\access.ts:139
+
+      137 |     for (let k = 0; k < 20 && !(await cell.innerText()).trim(); k++) await page.waitForTimeout(500);
+      138 |     const got = (await cell.innerText()).trim();
+    > 139 |     if (!got) throw new Error(`Attachment not accepted for "${name}"`);
+          |                     ^
+      140 |     log(`attached ${got} to "${name.slice(0, 60)}"`);
+      141 |   }
+      142 | }
+        at uploadAttachments (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:139:21)
+        at submitAccessApplication (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:95:3)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:85:64)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\pm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_165801\flows-en-pm.flow-pm-access-4eb91--for-Company-Profile-access-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_165801\flows-en-pm.flow-pm-access-4eb91--for-Company-Profile-access-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 
+  2 did not run
+
+Running 3 tests using 1 worker
+
+[16:59:41] pm-access-cp/01_PM-001: BLOCKED: PM-001 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run pm-access-cp_20261124-164952 --step PM-001
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021
+
+  3 skipped
+
+Running 3 tests using 1 worker
+
+[17:05:24] pm-access-cp/01_PM-001: PM-001 Agency user submits an Access Application for Company Profile access — role Applicant (non-federal agency user), login: Katalon default account of the step
+[17:05:24] pm-access-cp/01_PM-001: PM-001: applicant QA AUTO PEMOHON 4180, IC 900116994920, e-mail newsupplier001@commercedc.com.my, Company Profile
+[17:05:30] pm-access-cp/01_PM-001: PM-001: district BATU PAHAT, city AYER HITAM
+[17:05:31] pm-access-cp/01_PM-001: PM-001: attached File_pdf_for_testing.pdf to "*Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan"
+[17:05:32] pm-access-cp/01_PM-001: PM-001: attached File_pdf_for_testing.pdf to "*Surat Pengesahan oleh Ketua Jabatan"
+[17:05:32] pm-access-cp/01_PM-001: PM-001: dialog: "Mesej Pengesahan Adakah anda pasti untuk menghantar permohonan ini? Ya Tidak" -> Ya
+[17:05:39] pm-access-cp/01_PM-001: Closed the TERKINI announcement
+[17:05:40] pm-access-cp/01_PM-001: DB status AA:CP AP261124000001579: 75005 Pending Approval / Menunggu Kelulusan (expected 75005, OK)
+[17:05:40] pm-access-cp/01_PM-001: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001 (16.4s)
+[17:05:43] pm-access-cp/02_PM-011: PM-011 UPS Approver approves the Company Profile access (new IC) — role UPS Approver, login: Katalon default account of the step
+[17:05:44] pm-access-cp/02_PM-011: PM-011: Approve Company Profile: pool of 13, using 660000000003
+[17:05:49] pm-access-cp/02_PM-011: Closed the TERKINI announcement
+[17:05:49] pm-access-cp/02_PM-011: PM-011: login 660000000003
+[17:05:52] pm-access-cp/02_PM-011: PM-011: Logged in as 660000000003
+[17:05:59] pm-access-cp/02_PM-011: PM-011: claimed AP261124000001579: now in My Task
+[17:06:01] pm-access-cp/02_PM-011: PM-011: dialog: "Confirmation Message Are you sure to approve this application? Yes No" -> Yes
+[17:06:06] pm-access-cp/02_PM-011: Closed the TERKINI announcement
+[17:06:07] pm-access-cp/02_PM-011: DB status AA:CP AP261124000001579: 75020 Pending Activation / Menunggu Pengaktifan (expected 75020, OK)
+[17:06:07] pm-access-cp/02_PM-011: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011 (26.9s)
+[17:06:10] pm-access-cp/03_PM-021: PM-021 Applicant activates the Company Profile access (email link) — role Applicant, login: Katalon default account of the step
+[17:06:15] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: check 1, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261124000001579/ among 19 [noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry Nam | noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry Nam | noreply@eperolehan.com.my Invitation to Quotation QT260000000004304 Ministry Nam]; next check in 20s
+[17:06:37] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: check 2, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261124000001579/ among 19 [noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry Nam | noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry Nam | noreply@eperolehan.com.my Invitation to Quotation QT260000000004304 Ministry Nam]; next check in 20s
+[17:06:59] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: check 3, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261124000001579/ among 19 [N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004304 Ministry N]; next check in 20s
+[17:07:20] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: check 4, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261124000001579/ among 19 [N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004304 Ministry N]; next check in 20s
+[17:07:41] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: check 5, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261124000001579/ among 19 [N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004304 Ministry N]; next check in 20s
+[17:08:03] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: check 6, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261124000001579/ among 19 [N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004304 Ministry N]; next check in 20s
+[17:08:26] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: found "N noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian Pasaran Tuan/Puan, No. Permohonan: AP261"
+[17:08:26] pm-access-cp/03_PM-021: PM-021: activation link http://ngepsit.eperolehan.com.my/web/guest/access-application-activation?ap=2835&sp=dfaab0…
+[17:08:32] pm-access-cp/03_PM-021: Closed the TERKINI announcement
+[17:08:35] pm-access-cp/03_PM-021: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 (2.5m)
+
+
+  1) [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 
+
+    Error: Activation not confirmed: Skip to Content Log Masuk Portal dikemaskini kali terakhir pada 6 November 2026 04:54:51 PM UTAMA MENGENAI eP PENGGUNA eP PERKHIDMATAN TAMBAHAN BANTUAN DAN RUJUKAN MUAT TURUN PAUTAN SEGERA CARIAN UTAMA/Pengaktifan Akaun Pengaktifan Akaun Sila masukkan maklumat berikut untuk mengaktifkan akaun anda N
+
+       at ..\support\modules\pm\access.ts:192
+
+      190 |   const msgs = (await confirm.isVisible().catch(() => false)) ? await pressAndConfirm(page, (await confirm.innerText()).trim(), log) : await pageMessages(page);
+      191 |   const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
+    > 192 |   if (![...msgs, text].some((m) => /berjaya|success|diaktifkan|activated/i.test(m))) throw new Error(`Activation not confirmed: ${(msgs.join(' | ') || text).slice(0, 300)}`);
+          |                                                                                            ^
+      193 |   return { messages: msgs.length ? msgs : [text.slice(0, 200)] };
+      194 | }
+      195 |
+        at activateAccess (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:192:92)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\pm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_170518\flows-en-pm.flow-pm-access-e2f12--Profile-access-email-link--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_170518\flows-en-pm.flow-pm-access-e2f12--Profile-access-email-link--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 
+  2 passed (3.3m)
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+[17:09:42] pm-access-cp/03_PM-021: SELF-HEAL PM-021: retry once — the SIT DB still shows AP261124000001579 at 75020 Pending Activation, as before the attempt
+[17:09:44] pm-access-cp/03_PM-021: PM-021 Applicant activates the Company Profile access (email link) — role Applicant, login: Katalon default account of the step
+[17:09:50] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: found "noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian Pasaran Tuan/Puan, No. Permohonan: AP26112"
+[17:09:51] pm-access-cp/03_PM-021: PM-021: activation link http://ngepsit.eperolehan.com.my/web/guest/access-application-activation?ap=2835&sp=dfaab0…
+[17:09:57] pm-access-cp/03_PM-021: Closed the TERKINI announcement
+[17:10:00] pm-access-cp/03_PM-021: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 (18.8s)
+
+
+  1) [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 
+
+    Error: Activation not confirmed: Skip to Content Log Masuk Portal dikemaskini kali terakhir pada 6 November 2026 04:54:51 PM UTAMA MENGENAI eP PENGGUNA eP PERKHIDMATAN TAMBAHAN BANTUAN DAN RUJUKAN MUAT TURUN PAUTAN SEGERA CARIAN UTAMA/Pengaktifan Akaun Pengaktifan Akaun Sila masukkan maklumat berikut untuk mengaktifkan akaun anda N
+
+       at ..\support\modules\pm\access.ts:192
+
+      190 |   const msgs = (await confirm.isVisible().catch(() => false)) ? await pressAndConfirm(page, (await confirm.innerText()).trim(), log) : await pageMessages(page);
+      191 |   const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
+    > 192 |   if (![...msgs, text].some((m) => /berjaya|success|diaktifkan|activated/i.test(m))) throw new Error(`Activation not confirmed: ${(msgs.join(' | ') || text).slice(0, 300)}`);
+          |                                                                                            ^
+      193 |   return { messages: msgs.length ? msgs : [text.slice(0, 200)] };
+      194 | }
+      195 |
+        at activateAccess (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:192:92)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\pm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_170937\flows-en-pm.flow-pm-access-e2f12--Profile-access-email-link--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_170937\flows-en-pm.flow-pm-access-e2f12--Profile-access-email-link--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 
+  2 skipped

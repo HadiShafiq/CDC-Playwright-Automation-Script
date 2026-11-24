@@ -1,0 +1,126 @@
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/01_KAT-046 @KAT-046
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 02 KAT-047 Approve Purchase Request (sent to iGFMAS) @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/02_KAT-047 @KAT-047
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 03 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/03_PO_LOOKUP @gate-PO_LOOKUP
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 04 KAT-048 Supplier acknowledges the Purchase Order @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/04_KAT-048 @KAT-048
+[01:41:47] fl-noncontract/05_KAT-049: KAT-049 Supplier submits delivery (Pending Delivery List) — role Supplier, login: account of KAT-048
+[01:41:47] fl-noncontract/05_KAT-049: Test data corrected (support/katalon/data-overrides.json): Purchase_Number, dateValue, DeliveryQuantity, DeliveryAmount: Deliver against our services PO260000000007002 (acknowledged by KAT-048 2026-11-16, same supplier account); quantity 2 = OrderQuantity of KAT-028; amount RM1,500 ABOVE the ordered RM1,000 so the invoice creates a debit note for KAT-056 (as DN260000000002801: invoiced 4,000 against 1,500 ordered); default date 2026-10-09 is in the past, use today
+[01:41:47] fl-noncontract/05_KAT-049: Live dates: dateValue=2026-11-24
+[01:41:47] fl-noncontract/05_KAT-049: Flow inputs: Purchase_Number=PO260000000007216
+[01:41:47] fl-noncontract/05_KAT-049: Flow login: the account of KAT-048
+[01:41:51] fl-noncontract/05_KAT-049: Closed the TERKINI announcement
+[01:41:55] fl-noncontract/05_KAT-049: Closed the TERKINI announcement
+[01:42:20] fl-noncontract/05_KAT-049: Purchase Order No = PO260000000007216
+[01:42:26] fl-noncontract/05_KAT-049: Element tak wujud, skip isi amount
+[01:42:37] fl-noncontract/05_KAT-049: Message: Delivery Order DO-PO260000000007216 is successfully submitted for acknowledgment. View Delivery Order
+[01:42:37] fl-noncontract/05_KAT-049: ✅ Captured PO No: DO-PO260000000007216
+[01:42:38] fl-noncontract/05_KAT-049: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery.xlsx
+[01:42:38] fl-noncontract/05_KAT-049: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery.xlsx
+[01:42:39] fl-noncontract/05_KAT-049: Closed the TERKINI announcement
+[01:42:39] fl-noncontract/05_KAT-049: closeBrowser (the fixture closes the browser at the end of the test)
+[01:42:39] fl-noncontract/05_KAT-049: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 05 KAT-049 Supplier submits delivery (Pending Delivery List) @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/05_KAT-049 @KAT-049 (53.0s)
+[01:42:40] fl-noncontract/06_DO_LOOKUP: Gate DO_LOOKUP: found in the SIT database: DO 01309H005M2600504
+[01:42:40] fl-noncontract/06_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-24T01:42:40+08:00 (DO=01309H005M2600504)
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 06 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/06_DO_LOOKUP @gate-DO_LOOKUP (1.0s)
+[01:42:41] fl-noncontract/07_KAT-050: KAT-050 Receiving Officer acknowledges the Delivery Order (creates FRN) — role Receiving Officer, login: Katalon default account of the step
+[01:42:41] fl-noncontract/07_KAT-050: Test data corrected (support/katalon/data-overrides.json): Document_Number: Acknowledge our delivery: KAT-049 (2026-11-16) submitted DO-PO260000000007002 (services, RM1,500 against RM1,000 ordered, debit note chain), which is Delivery Order 01309H005M2600503 in this receiving officer's Group Task
+[01:42:41] fl-noncontract/07_KAT-050: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[01:42:41] fl-noncontract/07_KAT-050: Flow inputs: Document_Number=01309H005M2600504
+[01:42:46] fl-noncontract/07_KAT-050: Closed the TERKINI announcement
+[01:42:50] fl-noncontract/07_KAT-050: Closed the TERKINI announcement
+[01:43:08] fl-noncontract/07_KAT-050: Claimed group task 01309H005M2600504 (moved to My Task)
+[01:43:09] fl-noncontract/07_KAT-050: 01309H005M2600504 is already in My Task (no claim needed)
+[01:43:27] fl-noncontract/07_KAT-050: Message: Fulfilment Received Note for Products / Services FN260000000005812 is successfully submitted for approval.
+[01:43:27] fl-noncontract/07_KAT-050: ✅ Captured FN No: FN260000000005812
+[01:43:27] fl-noncontract/07_KAT-050: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Fulfillment_Received_Note.xlsx
+[01:43:27] fl-noncontract/07_KAT-050: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Fulfillment_Received_Note.xlsx
+[01:43:29] fl-noncontract/07_KAT-050: Closed the TERKINI announcement
+[01:43:29] fl-noncontract/07_KAT-050: closeBrowser (the fixture closes the browser at the end of the test)
+[01:43:29] fl-noncontract/07_KAT-050: Signed out (SSO logout)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 07 KAT-050 Receiving Officer acknowledges the Delivery Order (creates FRN) @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/07_KAT-050 @KAT-050 (48.9s)
+[01:43:30] fl-noncontract/08_KAT-051: KAT-051 Acknowledge Officer approves the FRN — role Acknowledge Officer, login: officer 180220145443: BPM task "Approve FRN" of FN260000000005812 is ASSIGNED to 180220145443 (SIT WFTASK)
+[01:43:30] fl-noncontract/08_KAT-051: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our FRN FN260000000005402 (KAT-050 2026-11-16, DO 01309H005M2600503, services PO260000000007002, debit note chain); Task Status Search shows Approve FRN ASSIGNED to officer 180220145443
+[01:43:30] fl-noncontract/08_KAT-051: Using officer 180220145443 with the shared officer password (support/katalon/data-overrides.json)
+[01:43:30] fl-noncontract/08_KAT-051: Flow inputs: Document_Number=FN260000000005812
+[01:43:30] fl-noncontract/08_KAT-051: Flow login: officer 180220145443 (shared officer password)
+[01:43:35] fl-noncontract/08_KAT-051: Closed the TERKINI announcement
+[01:43:39] fl-noncontract/08_KAT-051: Closed the TERKINI announcement
+[01:43:55] fl-noncontract/08_KAT-051: FN260000000005812 is already in My Task (no claim needed)
+[01:43:55] fl-noncontract/08_KAT-051: FN260000000005812 is already in My Task (no claim needed)
+[01:44:04] fl-noncontract/08_KAT-051: Message: Fulfilment Received Note for Products / Services FN260000000005812 is acknowledged and has been sent for posting at iGFMAS.
+     Please click Alert/Notification to print the Fulfilment Received Note/Service and CoGSTR (if any).
+[01:44:04] fl-noncontract/08_KAT-051: ✅ Captured FN No: FN260000000005812
+[01:44:04] fl-noncontract/08_KAT-051: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Fulfillment_Received_Note.xlsx
+[01:44:04] fl-noncontract/08_KAT-051: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Fulfillment_Received_Note.xlsx
+[01:44:05] fl-noncontract/08_KAT-051: Closed the TERKINI announcement
+[01:44:05] fl-noncontract/08_KAT-051: closeBrowser (the fixture closes the browser at the end of the test)
+[01:44:06] fl-noncontract/08_KAT-051: Signed out (SSO logout)
+  ✓   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 08 KAT-051 Acknowledge Officer approves the FRN @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/08_KAT-051 @KAT-051 (36.7s)
+[01:44:07] fl-noncontract/09_KAT-054: KAT-054 Supplier creates the invoice — role Supplier, login: account of KAT-048
+[01:44:07] fl-noncontract/09_KAT-054: Test data corrected (support/katalon/data-overrides.json): Document_Number: Invoice our services PO260000000007002 (debit note chain 2026-11-16: delivered RM1,500 against RM1,000 ordered, FRN FN260000000005402 approved, balance stopped by SD260000000002402); the invoice is raised by the PO supplier AINHALIM, the KAT-048 account; the invoice form showed RM1,500, so submitting it should create the debit note for KAT-056
+[01:44:07] fl-noncontract/09_KAT-054: Using the login of KAT-048 (support/katalon/data-overrides.json)
+[01:44:07] fl-noncontract/09_KAT-054: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[01:44:07] fl-noncontract/09_KAT-054: Flow inputs: Document_Number=PO260000000007216
+[01:44:07] fl-noncontract/09_KAT-054: Flow login: the account of KAT-048
+[01:44:13] fl-noncontract/09_KAT-054: Closed the TERKINI announcement
+[01:44:17] fl-noncontract/09_KAT-054: Closed the TERKINI announcement
+[01:44:42] fl-noncontract/09_KAT-054: PO260000000007216 is not in Group Task (nothing to claim)
+[01:44:49] fl-noncontract/09_KAT-054: PO260000000007216 is not in Group Task (nothing to claim)
+[01:45:25] fl-noncontract/09_KAT-054: Signed out (SSO logout)
+  ✘   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 09 KAT-054 Supplier creates the invoice @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/09_KAT-054 @KAT-054 (1.3m)
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 10 KAT-055 Payment match (non-contract) @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/10_KAT-055 @KAT-055
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 09 KAT-054 Supplier creates the invoice @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/09_KAT-054 @KAT-054 
+
+    TimeoutError: locator.fill: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//*[starts-with(normalize-space(text()),\'Document No\') and contains(text(),\':\')]/following::input[@type=\'text\'][1])[last()]').first()
+        - locator resolved to <input value="" size="60" type="text" role="textbox" autocomplete="off" aria-disabled="false" aria-readonly="false" aria-multiline="false" id="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" name="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+        - fill("")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+          - waiting 100ms
+        59 × waiting for element to be visible, enabled and editable
+           - element is not visible
+         - retrying fill action
+           - waiting 500ms
+
+
+       at ..\support\katalon\runtime.ts:432
+
+      430 |       }
+      431 |       const l = loc(obj);
+    > 432 |       await l.fill('', { timeout: DEFAULT_TIMEOUT * 1000 });
+          |               ^
+      433 |       await l.pressSequentially(text == null ? '' : String(text));
+      434 |     });
+      435 |   },
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:432:15
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at t (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:65:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-054.ts:300:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:632:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:138:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_014142\flows-en-fl.flow-fl-noncon-4d711-upplier-creates-the-invoice-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_014142\flows-en-fl.flow-fl-noncon-4d711-upplier-creates-the-invoice-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract [EN] Non-contract fulfilment: PR → PO → delivery → FRN → invoice → payment › 09 KAT-054 Supplier creates the invoice @flow-fl-noncontract @module-fl @lang-en @FLOW @fl-noncontract/09_KAT-054 @KAT-054 
+  4 skipped
+  1 did not run
+  4 passed (3.7m)

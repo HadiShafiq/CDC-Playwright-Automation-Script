@@ -1,0 +1,54 @@
+
+Running 13 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/01_CT_LOOKUP @gate-CT_LOOKUP
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/10_KAT-063 @KAT-063
+[01:26:24] fl-contract-debit-note/11_DN_LOOKUP: Gate DN_LOOKUP: found in the SIT database: DN DN260000000004802
+[01:26:24] fl-contract-debit-note/11_DN_LOOKUP: Gate DN_LOOKUP done by SIT database (automatic lookup) at 2026-11-24T01:26:24+08:00 (DN=DN260000000004802)
+  ✓  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 11 GATE DN_LOOKUP Debit Note created by SIT for an invoice above the order @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/11_DN_LOOKUP @gate-DN_LOOKUP (1.1s)
+[01:26:25] fl-contract-debit-note/12_KAT-056: KAT-056 Approve Debit Note — role Approver, login: officer 690127065209: BPM task "Review DAN" of DN260000000004802 is ASSIGNED to 690127065209 (SIT WFTASK)
+[01:26:25] fl-contract-debit-note/12_KAT-056: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our debit note DN260000000004401, created by SIT when AINHALIM invoiced services PO260000000007002 at RM1,500 against the stopped order (KAT-054 2026-11-16); Task Status Search shows Review DAN ASSIGNED to officer 690127065209
+[01:26:25] fl-contract-debit-note/12_KAT-056: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[01:26:25] fl-contract-debit-note/12_KAT-056: Flow inputs: Document_Number=DN260000000004802
+[01:26:26] fl-contract-debit-note/12_KAT-056: Flow login: officer 690127065209 (shared officer password)
+[01:26:32] fl-contract-debit-note/12_KAT-056: Closed the TERKINI announcement
+[01:26:37] fl-contract-debit-note/12_KAT-056: Closed the TERKINI announcement
+[01:26:53] fl-contract-debit-note/12_KAT-056: DN260000000004802 is already in My Task (no claim needed)
+[01:26:54] fl-contract-debit-note/12_KAT-056: DN260000000004802 is already in My Task (no claim needed)
+[01:27:12] fl-contract-debit-note/12_KAT-056: Message: Debit Note DN260000000004802 is successfully submitted and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Debit Note document.
+[01:27:12] fl-contract-debit-note/12_KAT-056: ✅ Captured DN No: DN260000000004802
+[01:27:12] fl-contract-debit-note/12_KAT-056: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Debit_Note.xlsx
+[01:27:12] fl-contract-debit-note/12_KAT-056: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Debit_Note.xlsx
+[01:27:14] fl-contract-debit-note/12_KAT-056: Closed the TERKINI announcement
+[01:27:14] fl-contract-debit-note/12_KAT-056: closeBrowser (the fixture closes the browser at the end of the test)
+[01:27:14] fl-contract-debit-note/12_KAT-056: Signed out (SSO logout)
+  ✓  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 12 KAT-056 Approve Debit Note @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/12_KAT-056 @KAT-056 (50.1s)
+[01:27:16] fl-contract-debit-note/13_KAT-064: KAT-064 Payment match (contract) — role Finance, login: Katalon default account of the step
+[01:27:16] fl-contract-debit-note/13_KAT-064: Test data corrected (support/katalon/data-overrides.json): Document_Number: Match payment for our CO260000000005848 (invoice IN-CO260000000005848 from KAT-063); Match Payment is a group task for this account's group
+[01:27:16] fl-contract-debit-note/13_KAT-064: Flow inputs: Document_Number=CO260000000006653
+[01:27:22] fl-contract-debit-note/13_KAT-064: Closed the TERKINI announcement
+[01:27:26] fl-contract-debit-note/13_KAT-064: Closed the TERKINI announcement
+[01:27:48] fl-contract-debit-note/13_KAT-064: Claimed group task CO260000000006653 (moved to My Task)
+[01:27:48] fl-contract-debit-note/13_KAT-064: CO260000000006653 is already in My Task (no claim needed)
+[01:28:02] fl-contract-debit-note/13_KAT-064: Purchase Order No = CO260000000006653
+[01:28:08] fl-contract-debit-note/13_KAT-064: Message: Payment Advice PA260000000006413 is successfully submitted and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Payment Match document.
+[01:28:08] fl-contract-debit-note/13_KAT-064: ✅ Captured PA No: PA260000000006413
+[01:28:08] fl-contract-debit-note/13_KAT-064: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Payment_Match.xlsx
+[01:28:08] fl-contract-debit-note/13_KAT-064: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Payment_Match.xlsx
+[01:28:10] fl-contract-debit-note/13_KAT-064: Closed the TERKINI announcement
+[01:28:10] fl-contract-debit-note/13_KAT-064: closeBrowser (the fixture closes the browser at the end of the test)
+[01:28:10] fl-contract-debit-note/13_KAT-064: Signed out (SSO logout)
+  ✓  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-debit-note [EN] Contract fulfilment with a debit note: invoice above the order → DN approval → payment › 13 KAT-064 Payment match (contract) @flow-fl-contract-debit-note @module-fl @lang-en @FLOW @fl-contract-debit-note/13_KAT-064 @KAT-064 (56.1s)
+
+  10 skipped
+  3 passed (1.9m)

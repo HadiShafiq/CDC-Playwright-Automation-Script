@@ -1,0 +1,95 @@
+{
+  "module": "PP",
+  "at": "2026-11-24T17:26:56+08:00",
+  "dry": true,
+  "sandbox": {
+    "PE": null,
+    "PP": null
+  },
+  "results": [
+    {
+      "wf": "PE",
+      "status": 30006,
+      "en": "Pending Submission",
+      "result": "no sandbox PL with a PE workflow row"
+    },
+    {
+      "wf": "PE",
+      "status": 30007,
+      "en": "Pending Approval",
+      "result": "no sandbox PL with a PE workflow row"
+    },
+    {
+      "wf": "PE",
+      "status": 30008,
+      "en": "Pending Revision",
+      "result": "no sandbox PL with a PE workflow row"
+    },
+    {
+      "wf": "PE",
+      "status": 30009,
+      "en": "Approved",
+      "result": "no sandbox PL with a PE workflow row"
+    },
+    {
+      "wf": "PE",
+      "status": 30012,
+      "en": "Pending Revision Approval",
+      "result": "no sandbox PL with a PE workflow row"
+    },
+    {
+      "wf": "PE",
+      "status": 30014,
+      "en": "Cancelled",
+      "result": "no sandbox PL with a PE workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30001,
+      "en": "Pending Submission",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30002,
+      "en": "Pending Verification",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30003,
+      "en": "Pending Approval",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30004,
+      "en": "Pending Revision",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30005,
+      "en": "Approved",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30010,
+      "en": "Pending Revision Verification",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30011,
+      "en": "Pending Revision Approval",
+      "result": "no sandbox PL with a PP workflow row"
+    },
+    {
+      "wf": "PP",
+      "status": 30013,
+      "en": "Cancelled",
+      "result": "no sandbox PL with a PP workflow row"
+    }
+  ]
+}

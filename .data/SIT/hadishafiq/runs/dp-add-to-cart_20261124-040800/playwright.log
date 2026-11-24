@@ -1,0 +1,216 @@
+
+Running 5 tests using 1 worker
+
+[04:08:08] dp-add-to-cart/01_KAT-028: KAT-028 Add to Cart (Services) and submit Request Note — role Requisitioner, login: Katalon default account of the step
+[04:08:08] dp-add-to-cart/01_KAT-028: Flow inputs: (none)
+[04:08:11] dp-add-to-cart/01_KAT-028: Closed the TERKINI announcement
+[04:08:14] dp-add-to-cart/01_KAT-028: Closed the TERKINI announcement
+[04:09:50] dp-add-to-cart/01_KAT-028: Message: Request Note RN260000000004918 is successfully submitted.
+[04:09:50] dp-add-to-cart/01_KAT-028: ✅ Captured RN No: RN260000000004918
+[04:09:50] dp-add-to-cart/01_KAT-028: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumberAkta882 RUU/1.Services_Add_to_Cart.xlsx
+[04:09:50] dp-add-to-cart/01_KAT-028: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumberAkta882 RUU/1.Services_Add_to_Cart.xlsx
+[04:09:51] dp-add-to-cart/01_KAT-028: Closed the TERKINI announcement
+[04:09:51] dp-add-to-cart/01_KAT-028: closeBrowser (the fixture closes the browser at the end of the test)
+[04:09:52] dp-add-to-cart/01_KAT-028: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 01 KAT-028 Add to Cart (Services) and submit Request Note @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/01_KAT-028 @KAT-028 (1.7m)
+[04:09:53] dp-add-to-cart/02_KAT-032: KAT-032 Approve Request Note (Compare / Add to Cart) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004918 is ASSIGNED to 690127065209 (SIT WFTASK)
+[04:09:53] dp-add-to-cart/02_KAT-032: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our services RN260000000004722 (KAT-028 2026-11-16, AINHALIM ENTERPRISE services item 701216070000000000, for the debit note chain); Review Direct Purchase ASSIGNED to officer 690127065209. Earlier today it approved RN260000000004719
+[04:09:53] dp-add-to-cart/02_KAT-032: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[04:09:53] dp-add-to-cart/02_KAT-032: Flow inputs: Document_Number=RN260000000004918
+[04:09:53] dp-add-to-cart/02_KAT-032: Flow login: officer 690127065209 (shared officer password)
+[04:09:57] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:10:00] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:10:49] dp-add-to-cart/02_KAT-032: RN260000000004918 is not in Group Task (nothing to claim)
+[04:11:22] dp-add-to-cart/02_KAT-032: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 (1.5m)
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 03 KAT-046 Submit Purchase Request from an approved Request Note @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/03_KAT-046 @KAT-046
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 04 KAT-047 Approve Purchase Request (sent to iGFMAS) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/04_KAT-047 @KAT-047
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 05 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/05_PO_LOOKUP @gate-PO_LOOKUP
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 
+
+    TimeoutError: locator.fill: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//*[starts-with(normalize-space(text()),\'Document No\') and contains(text(),\':\')]/following::input[@type=\'text\'][1])[last()]').first()
+        - locator resolved to <input value="" size="60" type="text" role="textbox" autocomplete="off" aria-disabled="false" aria-readonly="false" aria-multiline="false" id="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" name="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+        - fill("")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+          - waiting 100ms
+        59 × waiting for element to be visible, enabled and editable
+           - element is not visible
+         - retrying fill action
+           - waiting 500ms
+
+
+       at ..\support\katalon\runtime.ts:432
+
+      430 |       }
+      431 |       const l = loc(obj);
+    > 432 |       await l.fill('', { timeout: DEFAULT_TIMEOUT * 1000 });
+          |               ^
+      433 |       await l.pressSequentially(text == null ? '' : String(text));
+      434 |     });
+      435 |   },
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:432:15
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at t (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:65:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-032.ts:290:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:670:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:138:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_040801\flows-en-dp.flow-dp-add-to-906a9-t-Note-Compare-Add-to-Cart--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_040801\flows-en-dp.flow-dp-add-to-906a9-t-Note-Compare-Add-to-Cart--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 
+  3 did not run
+  1 passed (3.4m)
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 01 KAT-028 Add to Cart (Services) and submit Request Note @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/01_KAT-028 @KAT-028
+[04:52:37] dp-add-to-cart/02_KAT-032: KAT-032 Approve Request Note (Compare / Add to Cart) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004918 is ASSIGNED to 690127065209 (SIT WFTASK)
+[04:52:37] dp-add-to-cart/02_KAT-032: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our services RN260000000004722 (KAT-028 2026-11-16, AINHALIM ENTERPRISE services item 701216070000000000, for the debit note chain); Review Direct Purchase ASSIGNED to officer 690127065209. Earlier today it approved RN260000000004719
+[04:52:37] dp-add-to-cart/02_KAT-032: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[04:52:37] dp-add-to-cart/02_KAT-032: Flow inputs: Document_Number=RN260000000004918
+[04:52:37] dp-add-to-cart/02_KAT-032: Flow login: officer 690127065209 (shared officer password)
+[04:52:40] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:52:43] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:53:25] dp-add-to-cart/02_KAT-032: RN260000000004918 is not in Group Task (nothing to claim)
+[04:53:58] dp-add-to-cart/02_KAT-032: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 (1.4m)
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 03 KAT-046 Submit Purchase Request from an approved Request Note @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/03_KAT-046 @KAT-046
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 04 KAT-047 Approve Purchase Request (sent to iGFMAS) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/04_KAT-047 @KAT-047
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 05 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/05_PO_LOOKUP @gate-PO_LOOKUP
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 
+
+    TimeoutError: locator.fill: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//*[starts-with(normalize-space(text()),\'Document No\') and contains(text(),\':\')]/following::input[@type=\'text\'][1])[last()]').first()
+        - locator resolved to <input value="" size="60" type="text" role="textbox" autocomplete="off" aria-disabled="false" aria-readonly="false" aria-multiline="false" id="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" name="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+        - fill("")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+          - waiting 100ms
+        59 × waiting for element to be visible, enabled and editable
+           - element is not visible
+         - retrying fill action
+           - waiting 500ms
+
+
+       at ..\support\katalon\runtime.ts:432
+
+      430 |       }
+      431 |       const l = loc(obj);
+    > 432 |       await l.fill('', { timeout: DEFAULT_TIMEOUT * 1000 });
+          |               ^
+      433 |       await l.pressSequentially(text == null ? '' : String(text));
+      434 |     });
+      435 |   },
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:432:15
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at t (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:65:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-032.ts:290:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:719:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_045231\flows-en-dp.flow-dp-add-to-906a9-t-Note-Compare-Add-to-Cart--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_045231\flows-en-dp.flow-dp-add-to-906a9-t-Note-Compare-Add-to-Cart--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 
+  1 skipped
+  3 did not run
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 01 KAT-028 Add to Cart (Services) and submit Request Note @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/01_KAT-028 @KAT-028
+[04:54:42] dp-add-to-cart/02_KAT-032: KAT-032 Approve Request Note (Compare / Add to Cart) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004918 is ASSIGNED to 690127065209 (SIT WFTASK)
+[04:54:42] dp-add-to-cart/02_KAT-032: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our services RN260000000004722 (KAT-028 2026-11-16, AINHALIM ENTERPRISE services item 701216070000000000, for the debit note chain); Review Direct Purchase ASSIGNED to officer 690127065209. Earlier today it approved RN260000000004719
+[04:54:42] dp-add-to-cart/02_KAT-032: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[04:54:42] dp-add-to-cart/02_KAT-032: Flow inputs: Document_Number=RN260000000004918
+[04:54:42] dp-add-to-cart/02_KAT-032: Flow login: officer 690127065209 (shared officer password)
+[04:54:44] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:54:48] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:55:03] dp-add-to-cart/02_KAT-032: RN260000000004918 is already in My Task (no claim needed)
+[04:55:14] dp-add-to-cart/02_KAT-032: Message: Request Note RN260000000004918 is approved.
+[04:55:14] dp-add-to-cart/02_KAT-032: ✅ Captured RN No: RN260000000004918
+[04:55:14] dp-add-to-cart/02_KAT-032: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[04:55:14] dp-add-to-cart/02_KAT-032: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[04:55:18] dp-add-to-cart/02_KAT-032: Closed the TERKINI announcement
+[04:55:19] dp-add-to-cart/02_KAT-032: closeBrowser (the fixture closes the browser at the end of the test)
+[04:55:20] dp-add-to-cart/02_KAT-032: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 02 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/02_KAT-032 @KAT-032 (39.3s)
+[04:55:21] dp-add-to-cart/03_KAT-046: No open BPM task for RN260000000004918 yet: waiting up to 10 min
+[05:00:22] dp-add-to-cart/03_KAT-046: KAT-046 Submit Purchase Request from an approved Request Note — role Requisitioner (PR officer), login: officer 710527085562: BPM task "Submit PR" of RN260000000004918 is ASSIGNED to 710527085562 (SIT WFTASK)
+[05:00:22] dp-add-to-cart/03_KAT-046: Test data corrected (support/katalon/data-overrides.json): Document_Number: Submit the PR of our approved services RN260000000004722 (KAT-028 2026-11-16, debit note chain, supplier AINHALIM ENTERPRISE); Submit PR ASSIGNED to officer 710527085562. Earlier today it submitted PR260000000004859 from RN260000000004719
+[05:00:22] dp-add-to-cart/03_KAT-046: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[05:00:22] dp-add-to-cart/03_KAT-046: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[05:00:22] dp-add-to-cart/03_KAT-046: Flow inputs: Document_Number=RN260000000004918
+[05:00:22] dp-add-to-cart/03_KAT-046: Flow login: officer 710527085562 (shared officer password)
+[05:00:25] dp-add-to-cart/03_KAT-046: Closed the TERKINI announcement
+[05:00:28] dp-add-to-cart/03_KAT-046: Closed the TERKINI announcement
+[05:00:46] dp-add-to-cart/03_KAT-046: RN260000000004918 is already in My Task (no claim needed)
+[05:00:47] dp-add-to-cart/03_KAT-046: RN260000000004918 is already in My Task (no claim needed)
+[05:00:55] dp-add-to-cart/03_KAT-046: Fill Ordered Quantity row #1
+[05:01:00] dp-add-to-cart/03_KAT-046: Tick row #1
+[05:01:14] dp-add-to-cart/03_KAT-046: Final Description Search = B0
+[05:01:32] dp-add-to-cart/03_KAT-046: Message: Purchase Request PR260000000005074 is successfully submitted.
+[05:01:32] dp-add-to-cart/03_KAT-046: ✅ Captured PR No: PR260000000005074
+[05:01:32] dp-add-to-cart/03_KAT-046: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[05:01:32] dp-add-to-cart/03_KAT-046: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[05:01:33] dp-add-to-cart/03_KAT-046: Closed the TERKINI announcement
+[05:01:33] dp-add-to-cart/03_KAT-046: closeBrowser (the fixture closes the browser at the end of the test)
+[05:01:34] dp-add-to-cart/03_KAT-046: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 03 KAT-046 Submit Purchase Request from an approved Request Note @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/03_KAT-046 @KAT-046 (6.2m)
+[05:01:35] dp-add-to-cart/04_KAT-047: KAT-047 Approve Purchase Request (sent to iGFMAS) — role Approver, login: officer 690127065209: BPM task "Review PR" of PR260000000005074 is ASSIGNED to 690127065209 (SIT WFTASK)
+[05:01:35] dp-add-to-cart/04_KAT-047: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our services PR260000000004860 (KAT-046 2026-11-16 from RN260000000004722, debit note chain); Review PR ASSIGNED to officer 690127065209. Earlier today it approved PR260000000004859
+[05:01:35] dp-add-to-cart/04_KAT-047: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[05:01:35] dp-add-to-cart/04_KAT-047: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[05:01:35] dp-add-to-cart/04_KAT-047: Flow inputs: Document_Number=PR260000000005074
+[05:01:35] dp-add-to-cart/04_KAT-047: Flow login: officer 690127065209 (shared officer password)
+[05:01:37] dp-add-to-cart/04_KAT-047: Closed the TERKINI announcement
+[05:01:41] dp-add-to-cart/04_KAT-047: Closed the TERKINI announcement
+[05:01:57] dp-add-to-cart/04_KAT-047: PR260000000005074 is already in My Task (no claim needed)
+[05:01:57] dp-add-to-cart/04_KAT-047: PR260000000005074 is already in My Task (no claim needed)
+[05:02:08] dp-add-to-cart/04_KAT-047: Message: Purchase Request PR260000000005074 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[05:02:08] dp-add-to-cart/04_KAT-047: ✅ Captured PR No: PR260000000005074
+[05:02:08] dp-add-to-cart/04_KAT-047: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[05:02:08] dp-add-to-cart/04_KAT-047: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[05:02:09] dp-add-to-cart/04_KAT-047: Closed the TERKINI announcement
+[05:02:09] dp-add-to-cart/04_KAT-047: closeBrowser (the fixture closes the browser at the end of the test)
+[05:02:10] dp-add-to-cart/04_KAT-047: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 04 KAT-047 Approve Purchase Request (sent to iGFMAS) @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/04_KAT-047 @KAT-047 (36.0s)
+[05:02:11] dp-add-to-cart/05_PO_LOOKUP: Gate PO_LOOKUP: found in the SIT database: PO PO260000000007218
+[05:02:11] dp-add-to-cart/05_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-24T05:02:11+08:00 (PO=PO260000000007218)
+  ✓  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-add-to-cart [EN] DP Add to Cart (Services) to Purchase Request approval › 05 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-add-to-cart @module-dp @lang-en @FLOW @dp-add-to-cart/05_PO_LOOKUP @gate-PO_LOOKUP (995ms)
+
+  Slow test file: [flows] › tests\flows\en\dp.flow.spec.ts (7.5m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 skipped
+  4 passed (7.6m)

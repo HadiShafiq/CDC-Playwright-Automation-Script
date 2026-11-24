@@ -1,0 +1,49 @@
+{
+  "flowRunId": "ct-fd-agreement_20261123-162306",
+  "flowId": "ct-fd-agreement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T16:23:06+08:00",
+  "updatedAt": "2026-11-23T16:35:21+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004215"
+  },
+  "officers": {},
+  "gates": {
+    "LA_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-23T16:23:12+08:00",
+      "values": {
+        "LA": "LA260000000004215"
+      }
+    }
+  },
+  "steps": {
+    "KAT-040": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-23_162307",
+          "startedAt": "2026-11-23T16:23:13+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-23_162307",
+          "endedAt": "2026-11-23T16:35:21+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "❌ Dropdown failed (stale/DOM refresh): fromMonth_0"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

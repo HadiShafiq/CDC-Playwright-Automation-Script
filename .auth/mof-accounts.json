@@ -1,0 +1,138 @@
+[
+  {
+    "env": "SIT",
+    "createdAt": "2026-11-16T07:42:42.477Z",
+    "supplierType": "Contractor",
+    "businessType": "Cooperative",
+    "companyName": "Test Company 90923536",
+    "regNo": "202039733204",
+    "ownerName": "Owner 1684",
+    "username": "900101370499",
+    "password": "P@ssw0rd1234",
+    "email": "mofreg14909235@yopmail.com",
+    "notes": [
+      "registration submitted",
+      "2026-11-18T03:21:19.938Z activated",
+      "2026-11-18T03:21:26.690Z waiting for the first-time-login e-mail (temporary password)",
+      "2026-11-18T03:30:15.286Z password changed",
+      "2026-11-18T03:30:20.976Z first login OK, display name \"OWNER 1684\"",
+      "2026-11-18T03:31:01.111Z application KN-18112026-0001 saved",
+      "2026-11-18T03:38:51.223Z KN-18112026-0001 personnel saved",
+      "2026-11-18T03:41:18.571Z KN-18112026-0001 capital saved",
+      "2026-11-18T03:41:30.091Z KN-18112026-0001 bank saved",
+      "2026-11-18T03:41:46.003Z KN-18112026-0001 category saved",
+      "2026-11-18T03:42:05.097Z declared: Your New MOF Account Registration (KN-18112026-0001) has been successfully declared. Please pay RM50.00 processing fee within 365 days to avoid your application",
+      "2026-11-18T03:42:08.931Z processing fee: Processing fee was successful made. Your application has been submitted to the Unit Pendaftaran Syarikat, BPK, Ministry of Finance for processing. You can check",
+      "2026-11-18T03:44:45.486Z Verify Supporting Documents by 780729035858: verify supporting documents",
+      "2026-11-18T03:48:27.979Z Review Application by 880000000001: review → category codes Approve All → All Valid → Recommend to Approve",
+      "2026-11-18T03:49:04.190Z Review Application (Escalated) by 761028025717: approver decision → Approve",
+      "2026-11-18T03:50:43.396Z KN-18112026-0001 approved; Make Payment pending",
+      "2026-11-18T03:50:56.879Z registration fee: Your registration fee has been successfully made. Please click HERE or go to the Overview menu to retrieve the MOF Accounts Virtual Certificate of your company.",
+      "2026-11-18T03:52:40.742Z certificate viewed (K10344207601990321)",
+      "2026-11-18T03:53:10.365Z MOF registration complete: MOF No 357-0002294531, certificate K10344207601990321 released 18/11/2026"
+    ],
+    "applicationNo": "KN-18112026-0001",
+    "epNo": "eP-0101L0015",
+    "mofNo": "357-0002294531",
+    "certificateNo": "K10344207601990321"
+  },
+  {
+    "env": "SIT",
+    "createdAt": "2026-11-18T07:14:22.697Z",
+    "supplierType": "Contractor",
+    "businessType": "Cooperative",
+    "companyName": "Test Company 01167338",
+    "regNo": "202080205148",
+    "ownerName": "Owner 8560",
+    "username": "900101010815",
+    "password": "P@ssw0rd1234",
+    "email": "newsupplier001@commercedc.com.my",
+    "notes": [
+      "registration submitted",
+      "2026-11-18T07:16:29.842Z activated",
+      "2026-11-18T07:16:47.820Z password changed",
+      "2026-11-18T07:16:49.876Z first login OK, display name \"OWNER 8560\"",
+      "2026-11-18T07:17:02.161Z application KN-18112026-0006 saved",
+      "2026-11-18T07:18:35.385Z KN-18112026-0006 personnel saved",
+      "2026-11-18T07:18:41.295Z KN-18112026-0006 capital saved",
+      "2026-11-18T07:18:53.919Z KN-18112026-0006 bank saved",
+      "2026-11-18T07:19:11.067Z KN-18112026-0006 category saved",
+      "2026-11-18T07:19:32.308Z declared: Your New MOF Account Registration (KN-18112026-0006) has been successfully declared. Please pay RM50.00 processing fee within 365 days to avoid your application",
+      "2026-11-18T07:19:36.128Z processing fee: Processing fee was successful made. Your application has been submitted to the Unit Pendaftaran Syarikat, BPK, Ministry of Finance for processing. You can check",
+      "2026-11-18T07:21:18.828Z Verify Supporting Documents by 780729035858: verify supporting documents",
+      "2026-11-18T07:21:55.663Z Review Application by 870906435078: review → category codes Approve All → All Valid → Recommend to Approve",
+      "2026-11-18T07:22:34.357Z Review Application (Escalated) by 761028025717: approver decision → Approve",
+      "2026-11-18T07:22:43.331Z KN-18112026-0006 approved; Make Payment pending",
+      "2026-11-18T07:22:57.727Z registration fee: Your registration fee has been successfully made. Please click HERE or go to the Overview menu to retrieve the MOF Accounts Virtual Certificate of your company.",
+      "2026-11-18T07:23:12.704Z certificate viewed",
+      "2026-11-18T07:25:21.311Z certificate viewed (K10344207591990353)",
+      "2026-11-18T07:47:55.611Z catalogue published: 14111512 product, 85151501 service (Item is successfully published. | Catalogue uploaded successfully. Please proceed to soft cert reque)",
+      "2026-11-18T08:08:59.074Z soft cert approved in ePRA: 2026-11-18 16:08:52.0 70207 ONLINE OWNER 8560 900101010815 eP-0101L0016 Test Com",
+      "2026-11-18T08:10:01.075Z soft cert requested 16:07 (submitted to CA); ePRA request 70207 approved 16:08",
+      "2026-11-18T08:10:32.995Z soft cert e-mail received: MN MyTrust Notification PENDAFTARAN Sijil Digital Sistem ePerolehan (softcert) /",
+      "2026-11-18T08:19:56.514Z soft cert enrolment submitted: Your digital certificate PIN and challenge response has been successfully set. Please proceed to htt",
+      "2026-11-18T08:46:39.056Z SIT DB: MOF expiry set to 18/02/2027 (3 months) for expiry-reminder testing"
+    ],
+    "applicationNo": "KN-18112026-0006",
+    "epNo": "eP-0101L0016",
+    "mofNo": "357-0002294532",
+    "certificateNo": "K10344207591990353",
+    "softCert": {
+      "pin": "wbbh6664",
+      "questions": [
+        {
+          "question": "What is your mother name?",
+          "answer": "Aminah"
+        },
+        {
+          "question": "What is your favourite teacher's name?",
+          "answer": "Cikgu Rahman"
+        },
+        {
+          "question": "Which is your favourite drink?",
+          "answer": "Teh Tarik"
+        },
+        {
+          "question": "How would you describe yourself in one word?",
+          "answer": "Tester"
+        },
+        {
+          "question": "What is your first school name?",
+          "answer": "SK Ayer Hitam"
+        }
+      ]
+    }
+  },
+  {
+    "env": "SIT",
+    "createdAt": "2026-11-24T07:55:03.307Z",
+    "supplierType": "Contractor",
+    "businessType": "Cooperative",
+    "companyName": "Test Company 84803828",
+    "regNo": "202026802732",
+    "ownerName": "Owner 1617",
+    "username": "900101921645",
+    "password": "P@ssw0rd1234",
+    "email": "newsupplier002@commercedc.com.my",
+    "notes": [
+      "registration submitted",
+      "2026-11-24T08:18:02.538Z activated",
+      "2026-11-24T08:18:25.763Z password changed",
+      "2026-11-24T08:18:29.935Z first login OK, display name \"OWNER 1617\"",
+      "2026-11-24T08:18:42.193Z application KN-24112026-0035 saved",
+      "2026-11-24T08:20:38.501Z KN-24112026-0035 personnel saved",
+      "2026-11-24T08:20:43.965Z KN-24112026-0035 capital saved",
+      "2026-11-24T08:23:56.923Z bank NOT saved (dialog errors: Bank Branch / Postcode mandatory); note removed so the rerun fills it",
+      "2026-11-24T08:27:42.099Z KN-24112026-0035 bank saved",
+      "2026-11-24T08:31:36.256Z KN-24112026-0035 category saved",
+      "2026-11-24T08:37:23.946Z declared: Your New MOF Account Registration (KN-24112026-0035) has been successfully declared. Please pay RM50.00 processing fee within 365 days to avoid your application",
+      "2026-11-24T08:37:27.728Z processing fee: Processing fee was successful made. Your application has been submitted to the Unit Pendaftaran Syarikat, BPK, Ministry of Finance for processing. You can check",
+      "2026-11-24T08:38:41.853Z Verify Supporting Documents by 780729035858: verify supporting documents",
+      "2026-11-24T08:39:30.672Z Review Application by 880000000001: review → category codes Approve All → All Valid → Recommend to Approve",
+      "2026-11-24T08:40:47.320Z Review Application (Escalated) by 761028025717: approver decision → Approve",
+      "2026-11-24T08:41:07.208Z registration fee: Your registration fee has been successfully made. Please click HERE or go to the Overview menu to retrieve the MOF Accounts Virtual Certificate of your company.",
+      "2026-11-24T08:42:43.812Z certificate viewed (K10344206661990765)"
+    ],
+    "applicationNo": "KN-24112026-0035"
+  }
+]

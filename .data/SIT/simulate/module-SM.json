@@ -1,0 +1,241 @@
+{
+  "module": "SM",
+  "at": "2026-11-24T17:53:53+08:00",
+  "dry": false,
+  "sandbox": {
+    "SR": "KN-24112026-0035"
+  },
+  "results": [
+    {
+      "wf": "SR",
+      "status": 20102,
+      "en": "Pending Application Verification",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20106,
+      "en": "Pending Re-Site Visit",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20107,
+      "en": "Pending Reply Enquiry by Processing Officer",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20109,
+      "en": "Pending Application Re-Approval",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20111,
+      "en": "Pending  Re-Site Visit Assignment",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20114,
+      "en": "Pending Payment Processing Fee",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20115,
+      "en": "Pending Application Rejection",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20118,
+      "en": "Rejected by system - No response to inquiry",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20119,
+      "en": "Auto-cancelled by System due to No Payment for Registration Fee",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20120,
+      "en": "Auto-deleted by System due to No Payment for Processing Fee",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20121,
+      "en": "The application has been rejected by system due to no response to Processing Officer inquiry within pre-defined period",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20122,
+      "en": "The application has been rejected by system due to no response to supporting document inquiry within pre-defined period",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20123,
+      "en": "Auto-deleted by system due to supplier has cancelled the MOF Account",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20124,
+      "en": "Draft application deleted by system due to not declare within the given period",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20125,
+      "en": "Pending Site Visit - Before Approval",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20126,
+      "en": "Pending Site Visit - After Approval",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20188,
+      "en": "Delete Company",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20189,
+      "en": "Deleted by Contractor",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20190,
+      "en": "Deleted by Consultant",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20192,
+      "en": "MOF Account Cancelled by Consultant",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20193,
+      "en": "Cancelled Pre-Registration Account",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20198,
+      "en": "Pending Certificate Generation",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20200,
+      "en": "Pending Application Enquiry",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20201,
+      "en": "Rejection",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20202,
+      "en": "Cancelled",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20209,
+      "en": "Cancelled Due To Migration",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20252,
+      "en": "Pending Payment Soft Cert Fee",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20299,
+      "en": "Updated Successfully",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20311,
+      "en": "Cancelled by system due to not activate the activation link within the given period",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20312,
+      "en": "Auto-deleted by system due to MOF Account has been cancelled",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20398,
+      "en": "Pending Revise Application",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 20400,
+      "en": "Application auto-rejected by system due to not submit supporting document (Offline) within pre-defined period",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    },
+    {
+      "wf": "SR",
+      "status": 97350,
+      "en": "Cancelled Pre-Registration Account",
+      "doc": "KN-24112026-0035",
+      "result": "OK; restored to 20199"
+    }
+  ]
+}

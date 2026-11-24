@@ -1,0 +1,315 @@
+{
+  "flowRunId": "dp-compare_20261123-204543",
+  "flowId": "dp-compare",
+  "module": "dp",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T20:45:43+08:00",
+  "updatedAt": "2026-11-24T01:41:20+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "PI": "PI260000000000804",
+    "RN": "RN260000000004916",
+    "PR": "PR260000000005072",
+    "PO": "PO260000000007216"
+  },
+  "officers": {},
+  "gates": {
+    "PO_LOOKUP": {
+      "done": true,
+      "by": "SIT database (automatic lookup)",
+      "at": "2026-11-23T21:16:03+08:00",
+      "values": {
+        "PO": "PO260000000007216"
+      }
+    }
+  },
+  "steps": {
+    "KAT-029": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_204544",
+          "startedAt": "2026-11-23T20:45:49+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\01_KAT-029\\2026-11-23_204544",
+          "endedAt": "2026-11-23T20:47:00+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Day to Respond is mandatory."
+            },
+            {
+              "severity": "info",
+              "text": "Agency are fully responsibility in procurement for items which is only subject to PK7 / WP Item (exceptional from government procurement procedures)."
+            },
+            {
+              "severity": "info",
+              "text": "Item Inquiry PI260000000000804 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PI": "PI260000000000804"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "PI_SUBMITTED",
+      "db": {
+        "kind": "PI",
+        "docNo": "PI260000000000804",
+        "expected": 60751,
+        "statusId": 60751,
+        "en": "Pending Supplier Response",
+        "bm": "Menunggu Maklumbalas Pembekal",
+        "at": "2026-11-23 20:46:52",
+        "ok": true,
+        "checkedAt": "2026-11-23T21:06:21+08:00"
+      }
+    },
+    "KAT-030": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_204544",
+          "startedAt": "2026-11-23T20:47:01+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\02_KAT-030\\2026-11-23_204544",
+          "endedAt": "2026-11-23T20:48:17+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "PI260000000000804 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-23_210616",
+          "startedAt": "2026-11-23T21:06:55+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\03_KAT-030\\2026-11-23_210616",
+          "endedAt": "2026-11-23T21:07:32+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Item Inquiry PI260000000000804 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PI": "PI260000000000804"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "PI_SUPPLIER_RESPONDED"
+    },
+    "KAT-044": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_210616",
+          "startedAt": "2026-11-23T21:06:21+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\02_KAT-044\\2026-11-23_210616",
+          "endedAt": "2026-11-23T21:06:54+08:00",
+          "messages": []
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "GROUP_TASK_CLAIMED"
+    },
+    "KAT-031": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_210616",
+          "startedAt": "2026-11-23T21:07:33+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\04_KAT-031\\2026-11-23_210616",
+          "endedAt": "2026-11-23T21:08:16+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004916 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004916"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "RN_SUBMITTED"
+    },
+    "KAT-032": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_210616",
+          "startedAt": "2026-11-23T21:08:17+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\05_KAT-032\\2026-11-23_210616",
+          "endedAt": "2026-11-23T21:09:03+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004916 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004916"
+      },
+      "login": "officer 690127065209: BPM task \"Review Direct Purchase\" of RN260000000004916 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "RN_APPROVED"
+    },
+    "KAT-033": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_210616",
+          "startedAt": "2026-11-23T21:09:04+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\06_KAT-033\\2026-11-23_210616",
+          "endedAt": "2026-11-23T21:10:16+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "RN260000000004916 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-23_211218",
+          "startedAt": "2026-11-23T21:14:16+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\06_KAT-033\\2026-11-23_211218",
+          "selfHeal": "the attempt failed before opening the document (RN260000000004916 is not in this account's My Task (no result)), so nothing was submitted",
+          "endedAt": "2026-11-23T21:15:28+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agency is responsible in procurement for items which falls under PK7 / WP Item (Exceptional from government procurement procedures) / Special Item (With Approval). All Purchase Orders must be issued before supplies received/ services rendered. Purchase Orders are allowed to be issued not more than one (1) week from supplies received/ services rendered for Procurement Type PK7 / WP Item - FMB PK7/WP Item Threshold DP&PR 100k BI. Any Purchase Order to be issued incompliance with treasury circular must be obtained prior approval from Ministry of Finance."
+            },
+            {
+              "severity": "info",
+              "text": "Selected Charge Line Items updated."
+            },
+            {
+              "severity": "info",
+              "text": "Purchase Request PR260000000005072 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PR": "PR260000000005072"
+      },
+      "login": "officer 710527085562: BPM task \"Submit PR\" of RN260000000004916 is ASSIGNED to 710527085562 (SIT WFTASK)",
+      "checkpoint": "PR_SUBMITTED"
+    },
+    "KAT-034": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_211218",
+          "startedAt": "2026-11-23T21:15:29+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\07_KAT-034\\2026-11-23_211218",
+          "endedAt": "2026-11-23T21:16:01+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agency is responsible in procurement for items which falls under PK7 / WP Item (Exceptional from government procurement procedures) / Special Item (With Approval). All Purchase Orders must be issued before supplies received/ services rendered. Purchase Orders are allowed to be issued not more than one (1) week from supplies received/ services rendered for Procurement Type PK7 / WP Item - FMB PK7/WP Item Threshold DP&PR 100k BI. Any Purchase Order to be issued incompliance with treasury circular must be obtained prior approval from Ministry of Finance."
+            },
+            {
+              "severity": "info",
+              "text": "Purchase Request PR260000000005072 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Purchase Order document."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PR": "PR260000000005072"
+      },
+      "login": "officer 690127065209: BPM task \"Review PR\" of PR260000000005072 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "PR_APPROVED"
+    },
+    "KAT-035": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_211218",
+          "startedAt": "2026-11-23T21:16:03+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\09_KAT-035\\2026-11-23_211218",
+          "endedAt": "2026-11-23T21:17:14+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "PO260000000007216 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-23_211852",
+          "startedAt": "2026-11-23T21:19:01+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\09_KAT-035\\2026-11-23_211852",
+          "selfHeal": "the attempt failed before opening the document (PO260000000007216 is not in this account's My Task (no result)), so nothing was submitted",
+          "endedAt": "2026-11-23T21:20:12+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "PO260000000007216 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-24_012923",
+          "startedAt": "2026-11-24T01:29:32+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\09_KAT-035\\2026-11-24_012923",
+          "endedAt": "2026-11-24T01:30:52+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "PO260000000007216 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-24_013625",
+          "startedAt": "2026-11-24T01:36:34+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\09_KAT-035\\2026-11-24_013625",
+          "endedAt": "2026-11-24T01:38:00+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.fill: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-24_013852",
+          "startedAt": "2026-11-24T01:39:02+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\09_KAT-035\\2026-11-24_013852",
+          "endedAt": "2026-11-24T01:39:57+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.fill: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-24_014037",
+          "startedAt": "2026-11-24T01:40:46+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-compare\\09_KAT-035\\2026-11-24_014037",
+          "endedAt": "2026-11-24T01:41:20+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Purchase Order PO260000000007216 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PO": "PO260000000007216"
+      },
+      "login": "account of KAT-035 (nurulainmof) — self-heal: the open BPM task \"Acknowledge PO\" is assigned to nurulainmof, not to BASICFLROS3",
+      "checkpoint": "PO_ACKNOWLEDGED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

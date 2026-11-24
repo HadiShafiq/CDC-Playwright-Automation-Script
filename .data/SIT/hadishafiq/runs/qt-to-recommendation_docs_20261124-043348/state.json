@@ -1,0 +1,139 @@
+{
+  "flowRunId": "qt-to-recommendation_docs_20261124-043348",
+  "flowId": "qt-to-recommendation",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:33:49+08:00",
+  "updatedAt": "2026-11-24T04:37:10+08:00",
+  "from": "QT-007",
+  "to": "QT-009",
+  "docs": {
+    "QT": "QT260000000004524"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-007": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043355",
+          "startedAt": "2026-11-24T04:34:03+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\07_QT-007\\2026-11-24_043355",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60004
+          },
+          "endedAt": "2026-11-24T04:35:53+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 has been successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 881204115188: BPM task \"Prepare QT Schedule\" of QT260000000004524 is ASSIGNED to 881204115188 (SIT WFTASK)",
+      "checkpoint": "DOCS_PREPARED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60030,
+        "statusId": 60030,
+        "en": "Pending BPK Approval",
+        "bm": "Menunggu Kelulusan BPK",
+        "at": "2026-11-24 04:35:48",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:35:53+08:00",
+        "observeOnly": true
+      }
+    },
+    "QT-008": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043355",
+          "startedAt": "2026-11-24T04:35:55+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\08_QT-008\\2026-11-24_043355",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60030
+          },
+          "endedAt": "2026-11-24T04:36:31+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 800912129080 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)",
+      "checkpoint": "BPK_APPROVED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60005,
+        "statusId": 60005,
+        "en": "Pending Document Approval for Publication",
+        "bm": "Menunggu Kelulusan Dokumen untuk Pengiklanan",
+        "at": "2026-11-24 04:36:27",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:36:31+08:00"
+      }
+    },
+    "QT-009": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043355",
+          "startedAt": "2026-11-24T04:36:33+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\09_QT-009\\2026-11-24_043355",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60005
+          },
+          "endedAt": "2026-11-24T04:37:10+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Publication notice for Quotation/Tender QT260000000004524 has successfully approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 580401035583: BPM task \"Approve Publication\" of QT260000000004524 is ASSIGNED to 580401035583 (SIT WFTASK)",
+      "checkpoint": "PUBLICATION_APPROVED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60007,
+        "statusId": 60007,
+        "en": "Pending Notice Publishing",
+        "bm": "Menunggu Notis Pengiklanan",
+        "at": "2026-11-24 04:37:05",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:37:10+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

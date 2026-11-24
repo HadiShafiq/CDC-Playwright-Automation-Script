@@ -1,0 +1,51 @@
+{
+  "flowRunId": "dloa-schedule-product_20261123-171924",
+  "flowId": "dloa-schedule-product",
+  "module": "direct-loa",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T17:19:24+08:00",
+  "updatedAt": "2026-11-23T17:30:33+08:00",
+  "from": null,
+  "to": null,
+  "docs": {},
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-004": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-23_171925",
+          "startedAt": "2026-11-23T17:19:34+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-product\\01_KAT-004\\2026-11-23_171925",
+          "endedAt": "2026-11-23T17:30:33+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agency are fully responsibility in procurement for items which is only subject to PK 7/WP Item (exceptional from government procurement procedures)."
+            },
+            {
+              "severity": "error",
+              "text": "No. is mandatory."
+            },
+            {
+              "severity": "error",
+              "text": "End date should be in contract validity period in Fulfilment Schedule. (ERR-760348)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760348: No. is mandatory.",
+          "error": "❌ LOA number not found. Message was: "
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

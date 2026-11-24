@@ -1,0 +1,127 @@
+
+Running 3 tests using 1 worker
+
+[16:36:59] dloa-oneoff-services/01_KAT-002: KAT-002 Create Direct LOA: Direct LOA One-Off - Services — role Requisitioner, login: Katalon default account of the step
+[16:36:59] dloa-oneoff-services/01_KAT-002: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName: File Reference No. must be unique per LOA (ERR-700027); supplier must be the company of KAT-008 supplier account MOFFLROS_6
+[16:36:59] dloa-oneoff-services/01_KAT-002: Flow inputs: (none)
+[16:37:02] dloa-oneoff-services/01_KAT-002: Closed the TERKINI announcement
+[16:37:06] dloa-oneoff-services/01_KAT-002: Closed the TERKINI announcement
+[16:38:17] dloa-oneoff-services/01_KAT-002: Final File Reference No_1 = Test1123163659
+[16:38:28] dloa-oneoff-services/01_KAT-002: Final LOA Offered Price = 3,300,000.00
+[16:38:34] dloa-oneoff-services/01_KAT-002: Final Sales Tax / Service Tax (RM) = 0.00
+[16:38:53] dloa-oneoff-services/01_KAT-002: Final Month Period / Duration = 30
+[16:38:59] dloa-oneoff-services/01_KAT-002: DEBUG Agreement = [1]
+[16:38:59] dloa-oneoff-services/01_KAT-002: DEBUG QuotationTenderType = [7]
+[16:38:59] dloa-oneoff-services/01_KAT-002: Required Agreement: Dropdown
+[16:39:00] dloa-oneoff-services/01_KAT-002: SUCCESS Required Agreement selection = Yes
+[16:43:26] dloa-oneoff-services/01_KAT-002: Application message on failure: LOA Signer Designation is mandatory.
+[16:43:27] dloa-oneoff-services/01_KAT-002: Signed out (SSO logout)
+  ✘  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 01 KAT-002 Create Direct LOA: Direct LOA One-Off - Services @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/01_KAT-002 @KAT-002 (6.6m)
+  -  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 02 KAT-008 Supplier acknowledges Direct LOA - Services @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/02_KAT-008 @KAT-008
+  -  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/03_KAT-010 @KAT-010
+
+
+  1) [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 01 KAT-002 Create Direct LOA: Direct LOA One-Off - Services @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/01_KAT-002 @KAT-002 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//*[@id=\'_scCreateManualSourcing_WAR_NGePportlet_:form:zoneLocFlg\']/tbody/tr/td[3]/div/div[2]').first()
+
+
+       at ..\support\katalon\runtime.ts:376
+
+      374 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      375 |       await guardTaskRow(obj);
+    > 376 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      377 |     });
+      378 |   },
+      379 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:376:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:376:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at clickZoneLocRadio (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-002.ts:813:4)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-002.ts:818:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:268:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:85:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\direct-loa.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_163649\flows-en-direct-loa.flow-d-ab759-rect-LOA-One-Off---Services-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_163649\flows-en-direct-loa.flow-d-ab759-rect-LOA-One-Off---Services-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_163649\flows-en-direct-loa.flow-d-ab759-rect-LOA-One-Off---Services-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\SIT\2026-11-23_163649\flows-en-direct-loa.flow-d-ab759-rect-LOA-One-Off---Services-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 01 KAT-002 Create Direct LOA: Direct LOA One-Off - Services @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/01_KAT-002 @KAT-002 
+  2 did not run
+
+Running 3 tests using 1 worker
+
+[16:48:18] dloa-oneoff-services/01_KAT-002: KAT-002 Create Direct LOA: Direct LOA One-Off - Services — role Requisitioner, login: Katalon default account of the step
+[16:48:19] dloa-oneoff-services/01_KAT-002: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName: File Reference No. must be unique per LOA (ERR-700027); supplier must be the company of KAT-008 supplier account MOFFLROS_6
+[16:48:19] dloa-oneoff-services/01_KAT-002: Flow inputs: (none)
+[16:48:21] dloa-oneoff-services/01_KAT-002: Closed the TERKINI announcement
+[16:48:25] dloa-oneoff-services/01_KAT-002: Closed the TERKINI announcement
+[16:49:21] dloa-oneoff-services/01_KAT-002: Final File Reference No_1 = Test1123164819
+[16:49:31] dloa-oneoff-services/01_KAT-002: Final LOA Offered Price = 3,300,000.00
+[16:49:35] dloa-oneoff-services/01_KAT-002: Final Sales Tax / Service Tax (RM) = 0.00
+[16:49:52] dloa-oneoff-services/01_KAT-002: Final Month Period / Duration = 30
+[16:49:56] dloa-oneoff-services/01_KAT-002: DEBUG Agreement = [1]
+[16:49:56] dloa-oneoff-services/01_KAT-002: DEBUG QuotationTenderType = [7]
+[16:49:56] dloa-oneoff-services/01_KAT-002: Required Agreement: Dropdown
+[16:49:57] dloa-oneoff-services/01_KAT-002: SUCCESS Required Agreement selection = Yes
+[16:50:14] dloa-oneoff-services/01_KAT-002: Zone Location = No. Skip zonal coverage and zone locality section.
+[16:50:16] dloa-oneoff-services/01_KAT-002: Loop #1 of 2
+[16:50:33] dloa-oneoff-services/01_KAT-002: Loop #2 of 2
+[16:51:05] dloa-oneoff-services/01_KAT-002: Message: Letter of Acceptance (LOA) LA260000000004216 is successfully submitted.
+[16:51:05] dloa-oneoff-services/01_KAT-002: ✅ Captured LOA No: LA260000000004216
+[16:51:05] dloa-oneoff-services/01_KAT-002: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_One-Off_PK7_Service_AP_201_2026.xlsx
+[16:51:05] dloa-oneoff-services/01_KAT-002: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_One-Off_PK7_Service_AP_201_2026.xlsx
+[16:51:07] dloa-oneoff-services/01_KAT-002: Closed the TERKINI announcement
+[16:51:07] dloa-oneoff-services/01_KAT-002: closeBrowser (the fixture closes the browser at the end of the test)
+[16:51:08] dloa-oneoff-services/01_KAT-002: Signed out (SSO logout)
+  ✓  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 01 KAT-002 Create Direct LOA: Direct LOA One-Off - Services @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/01_KAT-002 @KAT-002 (2.8m)
+[16:51:09] dloa-oneoff-services/02_KAT-008: KAT-008 Supplier acknowledges Direct LOA - Services — role Supplier, login: Katalon default account of the step
+[16:51:09] dloa-oneoff-services/02_KAT-008: Test data corrected (support/katalon/data-overrides.json): Document_Number: Respond to our new services LOA LA260000000004124 (KAT-002, 2026-11-11 16:03, supplier MOF FL LLP 6 = this account) instead of the Katalon LA260000000003988
+[16:51:09] dloa-oneoff-services/02_KAT-008: Flow inputs: Document_Number=LA260000000004216
+[16:51:12] dloa-oneoff-services/02_KAT-008: Closed the TERKINI announcement
+[16:51:16] dloa-oneoff-services/02_KAT-008: Closed the TERKINI announcement
+[16:51:58] dloa-oneoff-services/02_KAT-008: Total Assign buttons found: 2
+[16:51:58] dloa-oneoff-services/02_KAT-008: Click Assign button at row index: 0
+[16:52:04] dloa-oneoff-services/02_KAT-008: Click Assign button at row index: 2
+[16:52:15] dloa-oneoff-services/02_KAT-008: Message: Letter of Acceptance (LOA) LA260000000004216 is acknowledged.
+[16:52:15] dloa-oneoff-services/02_KAT-008: ✅ Captured LOA No: LA260000000004216
+[16:52:15] dloa-oneoff-services/02_KAT-008: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Service_AP_201_2026.xlsx
+[16:52:15] dloa-oneoff-services/02_KAT-008: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Service_AP_201_2026.xlsx
+[16:52:17] dloa-oneoff-services/02_KAT-008: Closed the TERKINI announcement
+[16:52:17] dloa-oneoff-services/02_KAT-008: closeBrowser (the fixture closes the browser at the end of the test)
+[16:52:18] dloa-oneoff-services/02_KAT-008: Signed out (SSO logout)
+  ✓  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 02 KAT-008 Supplier acknowledges Direct LOA - Services @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/02_KAT-008 @KAT-008 (1.2m)
+[16:52:19] dloa-oneoff-services/03_KAT-010: KAT-010 Desk Officer verifies the LOA — role Desk Officer, login: Katalon default account of the step
+[16:52:19] dloa-oneoff-services/03_KAT-010: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:52:19] dloa-oneoff-services/03_KAT-010: Flow inputs: Document_Number=LA260000000004216
+[16:52:22] dloa-oneoff-services/03_KAT-010: Closed the TERKINI announcement
+[16:52:26] dloa-oneoff-services/03_KAT-010: Closed the TERKINI announcement
+[16:53:50] dloa-oneoff-services/03_KAT-010: Message: Letter of Acceptance (LOA) LA260000000004216 is completed.
+[16:53:50] dloa-oneoff-services/03_KAT-010: ✅ Captured LOA No: LA260000000004216
+[16:53:50] dloa-oneoff-services/03_KAT-010: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[16:53:50] dloa-oneoff-services/03_KAT-010: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[16:53:52] dloa-oneoff-services/03_KAT-010: Closed the TERKINI announcement
+[16:53:52] dloa-oneoff-services/03_KAT-010: closeBrowser (the fixture closes the browser at the end of the test)
+[16:53:53] dloa-oneoff-services/03_KAT-010: Signed out (SSO logout)
+  ✓  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-oneoff-services [EN] Direct LOA Direct LOA One-Off - Services → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-oneoff-services @module-direct-loa @lang-en @FLOW @dloa-oneoff-services/03_KAT-010 @KAT-010 (1.6m)
+
+  Slow test file: [chromium] › tests\flows\en\direct-loa.flow.spec.ts (5.6m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  3 passed (5.8m)

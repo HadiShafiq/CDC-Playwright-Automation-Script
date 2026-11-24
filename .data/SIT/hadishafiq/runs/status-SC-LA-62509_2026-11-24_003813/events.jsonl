@@ -1,0 +1,2 @@
+{"t":"2026-11-24T00:38:15+08:00","type":"flow-start","flowRunId":"status-SC-LA-62509_2026-11-24_003813","flowId":"dloa-oneoff-services","module":"direct-loa","language":"EN","items":["KAT-002","KAT-008","KAT-010"],"docs":{"LA":"LA260000000004227"},"source":"QA_INPUT"}
+{"t":"2026-11-24T01:57:43+08:00","type":"flow-start","flowRunId":"status-SC-LA-62509_2026-11-24_003813","flowId":"dloa-oneoff-services","resumed":false,"module":"direct-loa","language":"EN","items":["KAT-002","KAT-008","KAT-010"]}

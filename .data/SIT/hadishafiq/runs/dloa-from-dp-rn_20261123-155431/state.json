@@ -1,0 +1,199 @@
+{
+  "flowRunId": "dloa-from-dp-rn_20261123-155431",
+  "flowId": "dloa-from-dp-rn",
+  "module": "direct-loa",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T15:54:31+08:00",
+  "updatedAt": "2026-11-23T16:22:10+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "SQ": "SQ260000000002363",
+    "RN": "RN260000000004908",
+    "LA": "LA260000000004215"
+  },
+  "officers": {},
+  "gates": {
+    "SQ_START_SQL": {
+      "done": true,
+      "by": "hadishafiq",
+      "at": "2026-11-23T16:04:38+08:00"
+    },
+    "SQ_END_SQL": {
+      "done": true,
+      "by": "hadishafiq",
+      "at": "2026-11-23T16:06:07+08:00"
+    }
+  },
+  "steps": {
+    "KAT-021": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_155431",
+          "startedAt": "2026-11-23T15:54:38+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\01_KAT-021\\2026-11-23_155431",
+          "endedAt": "2026-11-23T15:57:48+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Maximum period allowed is not more than 3.00 days. (ERR-760430)"
+            },
+            {
+              "severity": "error",
+              "text": "Maximum period allowed is not more than 3 days. (ERR-760430)"
+            },
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002363 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002363"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUBMITTED"
+    },
+    "KAT-022": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_160441",
+          "startedAt": "2026-11-23T16:04:49+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\03_KAT-022\\2026-11-23_160441",
+          "endedAt": "2026-11-23T16:05:31+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002363 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUPPLIER_RESPONDED"
+    },
+    "KAT-023": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_161651",
+          "startedAt": "2026-11-23T16:16:58+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\05_KAT-023\\2026-11-23_161651",
+          "endedAt": "2026-11-23T16:17:58+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004908 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004908"
+      },
+      "login": "account of KAT-021",
+      "checkpoint": "RN_SUBMITTED"
+    },
+    "KAT-024": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_161651",
+          "startedAt": "2026-11-23T16:17:59+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\06_KAT-024\\2026-11-23_161651",
+          "endedAt": "2026-11-23T16:18:47+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004908 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004908"
+      },
+      "login": "officer 690127065209 from data-overrides.json (seen in an earlier run; not checked for this document)",
+      "checkpoint": "RN_APPROVED"
+    },
+    "KAT-025": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_161651",
+          "startedAt": "2026-11-23T16:18:48+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\07_KAT-025\\2026-11-23_161651",
+          "endedAt": "2026-11-23T16:19:44+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004215 is submitted successfully."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004215"
+      },
+      "login": "officer 710527085562 from data-overrides.json (seen in an earlier run; not checked for this document)",
+      "checkpoint": "LA_SUBMITTED"
+    },
+    "KAT-026": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_161651",
+          "startedAt": "2026-11-23T16:19:45+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\08_KAT-026\\2026-11-23_161651",
+          "endedAt": "2026-11-23T16:20:36+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter Of Acceptance LA260000000004215 is accepted successfully."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-022",
+      "checkpoint": "LA_ACKNOWLEDGED"
+    },
+    "KAT-027": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_161651",
+          "startedAt": "2026-11-23T16:20:38+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-from-dp-rn\\09_KAT-027\\2026-11-23_161651",
+          "endedAt": "2026-11-23T16:22:10+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004215 is completed."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 710527085562 from data-overrides.json (seen in an earlier run; not checked for this document)",
+      "checkpoint": "LA_VERIFIED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

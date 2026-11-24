@@ -1,0 +1,126 @@
+
+Running 3 tests using 1 worker
+
+[17:30:50] dloa-schedule-services/01_KAT-005: KAT-005 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service — role Requisitioner, login: Katalon default account of the step
+[17:30:50] dloa-schedule-services/01_KAT-005: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName, ZoneLocation, ContractPeriod, LOAOfferedPrice: File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6; ZoneLocation 2 (No): the suite data is Non-Zonal-Schedule-Service-PK7, and with zone Yes the service quantity/price are per-zone popups the script does not fill; ContractPeriod 24 months: the schedule data ends in year 2 (EndYear2=2) but a 2-month contract only offers the current year; LOA price 300000: with 24 months the service items total 288,000 > 200,000 (ERR-700125)
+[17:30:50] dloa-schedule-services/01_KAT-005: Data file "1_FL FOR DLOA.xlsx" (Data Files/Akta_882_RU/4- NEW DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[17:30:50] dloa-schedule-services/01_KAT-005: Flow inputs: (none)
+[17:30:53] dloa-schedule-services/01_KAT-005: Closed the TERKINI announcement
+[17:30:56] dloa-schedule-services/01_KAT-005: Closed the TERKINI announcement
+[17:34:55] dloa-schedule-services/01_KAT-005: Signed out (SSO logout)
+  ✘  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 01 KAT-005 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/01_KAT-005 @KAT-005 (4.1m)
+  -  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 02 KAT-008 Supplier acknowledges Direct LOA - Services @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/02_KAT-008 @KAT-008
+  -  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/03_KAT-010 @KAT-010
+
+
+  1) [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 01 KAT-005 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/01_KAT-005 @KAT-005 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//button[contains(@id,\'slbtn\')]').first()
+        - locator resolved to <button type="submit" role="button" aria-disabled="false" id="_scCreateManualSourcing_WAR_NGePportlet_:form:j_idt76:slbtn" name="_scCreateManualSourcing_WAR_NGePportlet_:form:j_idt76:slbtn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only BtnSpacing" onclick="PrimeFaces.ab({source:'_scCreateManualSourcing_WAR_NGePportlet_:form:j_idt76:slbtn',process:'_scCreateManualSourcing_WAR_NGePportlet_:form:j_idt76:resultPanel',update:'_scCreateManualSourcing_WAR_NGePportlet_:form:j_i…>…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        57 × waiting for element to be visible, enabled and stable
+           - element is not visible
+         - retrying click action
+           - waiting 500ms
+
+
+       at ..\support\katalon\runtime.ts:402
+
+      400 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      401 |       await guardTaskRow(obj);
+    > 402 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      403 |     });
+      404 |   },
+      405 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-005.ts:214:200)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:268:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:85:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\direct-loa.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_173041\flows-en-direct-loa.flow-d-fb16d--When-or-Schedule---Service-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_173041\flows-en-direct-loa.flow-d-fb16d--When-or-Schedule---Service-chromium\error-context.md
+
+  1 failed
+    [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 01 KAT-005 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/01_KAT-005 @KAT-005 
+  2 did not run
+
+Running 3 tests using 1 worker
+
+[18:10:11] dloa-schedule-services/01_KAT-005: KAT-005 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service — role Requisitioner, login: Katalon default account of the step
+[18:10:11] dloa-schedule-services/01_KAT-005: Test data corrected (support/katalon/data-overrides.json): FileReference1, SupplierName, ZoneLocation, ContractPeriod, LOAOfferedPrice: File Reference No. unique (ERR-700027); supplier = company of KAT-008 account MOFFLROS_6; ZoneLocation 2 (No): the suite data is Non-Zonal-Schedule-Service-PK7, and with zone Yes the service quantity/price are per-zone popups the script does not fill; ContractPeriod 24 months: the schedule data ends in year 2 (EndYear2=2) but a 2-month contract only offers the current year; LOA price 300000: with 24 months the service items total 288,000 > 200,000 (ERR-700125)
+[18:10:11] dloa-schedule-services/01_KAT-005: Data file "1_FL FOR DLOA.xlsx" (Data Files/Akta_882_RU/4- NEW DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:10:11] dloa-schedule-services/01_KAT-005: Flow inputs: (none)
+[18:10:14] dloa-schedule-services/01_KAT-005: Closed the TERKINI announcement
+[18:10:17] dloa-schedule-services/01_KAT-005: Closed the TERKINI announcement
+[18:11:04] dloa-schedule-services/01_KAT-005: Final File Reference No_1 = Test1123181011
+[18:11:13] dloa-schedule-services/01_KAT-005: Final LOA Offered Price = 300,000.00
+[18:11:17] dloa-schedule-services/01_KAT-005: Final Sales Tax / Service Tax (RM) = 0.00
+[18:11:28] dloa-schedule-services/01_KAT-005: Final Month Period / Duration = 24
+[18:11:31] dloa-schedule-services/01_KAT-005: DEBUG Agreement = [1]
+[18:11:31] dloa-schedule-services/01_KAT-005: DEBUG QuotationTenderType = [1]
+[18:11:31] dloa-schedule-services/01_KAT-005: Required Agreement: Radio Button
+[18:11:31] dloa-schedule-services/01_KAT-005: SUCCESS Required Agreement selection = Yes
+[18:11:44] dloa-schedule-services/01_KAT-005: Zone Location = No. Skip zonal coverage and zone locality section.
+[18:11:46] dloa-schedule-services/01_KAT-005: Loop #1 of 2
+[18:12:01] dloa-schedule-services/01_KAT-005: Loop #2 of 2
+[18:12:41] dloa-schedule-services/01_KAT-005: Fulfilment Schedule completed successfully
+[18:12:56] dloa-schedule-services/01_KAT-005: Message: Letter of Acceptance (LOA) LA260000000004225 is successfully submitted.
+[18:12:56] dloa-schedule-services/01_KAT-005: ✅ Captured LOA No: LA260000000004225
+[18:12:56] dloa-schedule-services/01_KAT-005: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_Periodic_(Schedule)_PK7_Service_AP_201_2026.xlsx
+[18:12:56] dloa-schedule-services/01_KAT-005: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Non-Zonal_Periodic_(Schedule)_PK7_Service_AP_201_2026.xlsx
+[18:12:58] dloa-schedule-services/01_KAT-005: Closed the TERKINI announcement
+[18:12:58] dloa-schedule-services/01_KAT-005: closeBrowser (the fixture closes the browser at the end of the test)
+[18:12:58] dloa-schedule-services/01_KAT-005: Signed out (SSO logout)
+  ✓  1 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 01 KAT-005 Create Direct LOA: Direct LOA Agreement_Periodic (As And When or Schedule) - Service @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/01_KAT-005 @KAT-005 (2.8m)
+[18:12:59] dloa-schedule-services/02_KAT-008: KAT-008 Supplier acknowledges Direct LOA - Services — role Supplier, login: Katalon default account of the step
+[18:12:59] dloa-schedule-services/02_KAT-008: Test data corrected (support/katalon/data-overrides.json): Document_Number: Respond to our new services LOA LA260000000004124 (KAT-002, 2026-11-11 16:03, supplier MOF FL LLP 6 = this account) instead of the Katalon LA260000000003988
+[18:12:59] dloa-schedule-services/02_KAT-008: Flow inputs: Document_Number=LA260000000004225
+[18:13:00] dloa-schedule-services/02_KAT-008: Closed the TERKINI announcement
+[18:13:04] dloa-schedule-services/02_KAT-008: Closed the TERKINI announcement
+[18:13:37] dloa-schedule-services/02_KAT-008: Total Assign buttons found: 2
+[18:13:37] dloa-schedule-services/02_KAT-008: Click Assign button at row index: 0
+[18:13:42] dloa-schedule-services/02_KAT-008: Click Assign button at row index: 2
+[18:13:52] dloa-schedule-services/02_KAT-008: Message: Letter of Acceptance (LOA) LA260000000004225 is acknowledged.
+[18:13:52] dloa-schedule-services/02_KAT-008: ✅ Captured LOA No: LA260000000004225
+[18:13:52] dloa-schedule-services/02_KAT-008: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Service_AP_201_2026.xlsx
+[18:13:52] dloa-schedule-services/02_KAT-008: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_Supplier_Service_AP_201_2026.xlsx
+[18:13:53] dloa-schedule-services/02_KAT-008: Closed the TERKINI announcement
+[18:13:53] dloa-schedule-services/02_KAT-008: closeBrowser (the fixture closes the browser at the end of the test)
+[18:13:54] dloa-schedule-services/02_KAT-008: Signed out (SSO logout)
+  ✓  2 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 02 KAT-008 Supplier acknowledges Direct LOA - Services @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/02_KAT-008 @KAT-008 (55.4s)
+[18:13:54] dloa-schedule-services/03_KAT-010: KAT-010 Desk Officer verifies the LOA — role Desk Officer, login: Katalon default account of the step
+[18:13:54] dloa-schedule-services/03_KAT-010: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:13:54] dloa-schedule-services/03_KAT-010: Flow inputs: Document_Number=LA260000000004225
+[18:13:56] dloa-schedule-services/03_KAT-010: Closed the TERKINI announcement
+[18:13:59] dloa-schedule-services/03_KAT-010: Closed the TERKINI announcement
+[18:15:22] dloa-schedule-services/03_KAT-010: Message: Letter of Acceptance (LOA) LA260000000004225 is completed.
+[18:15:22] dloa-schedule-services/03_KAT-010: ✅ Captured LOA No: LA260000000004225
+[18:15:22] dloa-schedule-services/03_KAT-010: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[18:15:22] dloa-schedule-services/03_KAT-010: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Direct_LOA_DO_Verify_AP_201_2026.xlsx
+[18:15:24] dloa-schedule-services/03_KAT-010: Closed the TERKINI announcement
+[18:15:24] dloa-schedule-services/03_KAT-010: closeBrowser (the fixture closes the browser at the end of the test)
+[18:15:24] dloa-schedule-services/03_KAT-010: Signed out (SSO logout)
+  ✓  3 [chromium] › tests\flows\en\direct-loa.flow.spec.ts:12:11 › dloa-schedule-services [EN] Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify › 03 KAT-010 Desk Officer verifies the LOA @flow-dloa-schedule-services @module-direct-loa @lang-en @FLOW @dloa-schedule-services/03_KAT-010 @KAT-010 (1.5m)
+
+  Slow test file: [chromium] › tests\flows\en\direct-loa.flow.spec.ts (5.2m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  3 passed (5.3m)

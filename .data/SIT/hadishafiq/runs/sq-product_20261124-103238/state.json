@@ -1,0 +1,46 @@
+{
+  "flowRunId": "sq-product_20261124-103238",
+  "flowId": "sq-product",
+  "module": "sq",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T10:32:38+08:00",
+  "updatedAt": "2026-11-24T10:35:23+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "SQ": "SQ260000000002369"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-036": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_103239",
+          "startedAt": "2026-11-24T10:32:44+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-product\\01_KAT-036\\2026-11-24_103239",
+          "endedAt": "2026-11-24T10:35:23+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Simple Quote SQ260000000002369 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "SQ": "SQ260000000002369"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "SQ_SUBMITTED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "in-progress"
+}

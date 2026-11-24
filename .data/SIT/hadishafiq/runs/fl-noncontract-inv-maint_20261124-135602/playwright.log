@@ -1,0 +1,69 @@
+
+Running 13 tests using 1 worker
+
+[13:56:07] fl-noncontract-inv-maint/01_KAT-046: No open BPM task for RN260000000004927 yet: waiting up to 10 min
+[14:01:15] fl-noncontract-inv-maint/01_KAT-046: KAT-046 Submit Purchase Request from an approved Request Note — role Requisitioner (PR officer), login: officer 710527085562: BPM task "Submit PR" of RN260000000004927 is ASSIGNED to 710527085562 (SIT WFTASK)
+[14:01:15] fl-noncontract-inv-maint/01_KAT-046: Test data corrected (support/katalon/data-overrides.json): Document_Number: Submit the PR of our approved services RN260000000004722 (KAT-028 2026-11-16, debit note chain, supplier AINHALIM ENTERPRISE); Submit PR ASSIGNED to officer 710527085562. Earlier today it submitted PR260000000004859 from RN260000000004719
+[14:01:15] fl-noncontract-inv-maint/01_KAT-046: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[14:01:15] fl-noncontract-inv-maint/01_KAT-046: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[14:01:15] fl-noncontract-inv-maint/01_KAT-046: Flow inputs: Document_Number=RN260000000004927
+[14:01:15] fl-noncontract-inv-maint/01_KAT-046: Flow login: officer 710527085562 (shared officer password)
+[14:01:18] fl-noncontract-inv-maint/01_KAT-046: Closed the TERKINI announcement
+[14:01:22] fl-noncontract-inv-maint/01_KAT-046: Closed the TERKINI announcement
+[14:01:41] fl-noncontract-inv-maint/01_KAT-046: RN260000000004927 is already in My Task (no claim needed)
+[14:01:42] fl-noncontract-inv-maint/01_KAT-046: RN260000000004927 is already in My Task (no claim needed)
+[14:01:51] fl-noncontract-inv-maint/01_KAT-046: Fill Ordered Quantity row #1
+[14:01:56] fl-noncontract-inv-maint/01_KAT-046: Tick row #1
+[14:02:11] fl-noncontract-inv-maint/01_KAT-046: Final Description Search = B0
+[14:02:29] fl-noncontract-inv-maint/01_KAT-046: Message: Purchase Request PR260000000005075 is successfully submitted.
+[14:02:29] fl-noncontract-inv-maint/01_KAT-046: ✅ Captured PR No: PR260000000005075
+[14:02:29] fl-noncontract-inv-maint/01_KAT-046: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[14:02:29] fl-noncontract-inv-maint/01_KAT-046: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[14:02:31] fl-noncontract-inv-maint/01_KAT-046: Closed the TERKINI announcement
+[14:02:31] fl-noncontract-inv-maint/01_KAT-046: closeBrowser (the fixture closes the browser at the end of the test)
+[14:02:32] fl-noncontract-inv-maint/01_KAT-046: DB status PR PR260000000005075: 40010 Pending Approval / Menunggu Kelulusan (expected 40010, OK)
+[14:02:33] fl-noncontract-inv-maint/01_KAT-046: Signed out (SSO logout)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/01_KAT-046 @KAT-046 (6.5m)
+[14:02:35] fl-noncontract-inv-maint/02_KAT-047: KAT-047 Approve Purchase Request (sent to iGFMAS) — role Approver, login: officer 690127065209: BPM task "Review PR" of PR260000000005075 is ASSIGNED to 690127065209 (SIT WFTASK)
+[14:02:36] fl-noncontract-inv-maint/02_KAT-047: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our services PR260000000004860 (KAT-046 2026-11-16 from RN260000000004722, debit note chain); Review PR ASSIGNED to officer 690127065209. Earlier today it approved PR260000000004859
+[14:02:36] fl-noncontract-inv-maint/02_KAT-047: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[14:02:36] fl-noncontract-inv-maint/02_KAT-047: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[14:02:36] fl-noncontract-inv-maint/02_KAT-047: Flow inputs: Document_Number=PR260000000005075
+[14:02:36] fl-noncontract-inv-maint/02_KAT-047: Flow login: officer 690127065209 (shared officer password)
+[14:02:39] fl-noncontract-inv-maint/02_KAT-047: Closed the TERKINI announcement
+[14:02:42] fl-noncontract-inv-maint/02_KAT-047: Closed the TERKINI announcement
+[14:02:58] fl-noncontract-inv-maint/02_KAT-047: PR260000000005075 is already in My Task (no claim needed)
+[14:02:59] fl-noncontract-inv-maint/02_KAT-047: PR260000000005075 is already in My Task (no claim needed)
+[14:03:09] fl-noncontract-inv-maint/02_KAT-047: Message: Purchase Request PR260000000005075 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[14:03:09] fl-noncontract-inv-maint/02_KAT-047: ✅ Captured PR No: PR260000000005075
+[14:03:09] fl-noncontract-inv-maint/02_KAT-047: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[14:03:09] fl-noncontract-inv-maint/02_KAT-047: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[14:03:11] fl-noncontract-inv-maint/02_KAT-047: Closed the TERKINI announcement
+[14:03:11] fl-noncontract-inv-maint/02_KAT-047: closeBrowser (the fixture closes the browser at the end of the test)
+
+Running 13 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/01_KAT-046 @KAT-046
+
+Running 13 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 01 KAT-046 Submit Purchase Request from an approved Request Note @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/01_KAT-046 @KAT-046
+[15:34:35] fl-noncontract-inv-maint/02_KAT-047: DB status PR PR260000000005075: 40110 Pending PR Review from iGFMAS / Menunggu Semakan PR dari iGFMAS (expected 40300, MISMATCH)
+[15:34:35] fl-noncontract-inv-maint/02_KAT-047: BLOCKED: KAT-047 is recorded as done, but PR260000000005075 is at 40110 Pending PR Review from iGFMAS, not 40300 Purchase Request Approved (PR_APPROVED). Finish it in the application, then: npm run qa -- resume --env sit --run fl-noncontract-inv-maint_20261124-135602
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 02 KAT-047 Approve Purchase Request (sent to iGFMAS) @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/02_KAT-047 @KAT-047
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 03 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/03_PO_LOOKUP @gate-PO_LOOKUP
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 04 KAT-048 Supplier acknowledges the Purchase Order @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/04_KAT-048 @KAT-048
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 05 KAT-049 Supplier submits delivery (Pending Delivery List) @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/05_KAT-049 @KAT-049
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 06 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/06_DO_LOOKUP @gate-DO_LOOKUP
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 07 KAT-050 Receiving Officer acknowledges the Delivery Order (creates FRN) @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/07_KAT-050 @KAT-050
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 08 KAT-051 Acknowledge Officer approves the FRN @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/08_KAT-051 @KAT-051
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 09 KAT-054 Supplier creates the invoice @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/09_KAT-054 @KAT-054
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 10 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/10_FL-111 @FL-111
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 11 FL-112 FL Approver approves the invoice modification @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/11_FL-112 @FL-112
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 12 FL-113 Supplier cancels the invoice @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/12_FL-113 @FL-113
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-noncontract-inv-maint [EN] Non-contract: invoice update and cancel (Fulfilment Maintenance) › 13 FL-114 FL Approver approves the invoice cancellation @flow-fl-noncontract-inv-maint @module-fl @lang-en @FLOW @fl-noncontract-inv-maint/13_FL-114 @FL-114
+
+  Slow test file: [flows] › tests\flows\en\fl.flow.spec.ts (10.1m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  13 skipped

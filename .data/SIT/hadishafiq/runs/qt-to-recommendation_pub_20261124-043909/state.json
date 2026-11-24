@@ -1,0 +1,113 @@
+{
+  "flowRunId": "qt-to-recommendation_pub_20261124-043909",
+  "flowId": "qt-to-recommendation",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:39:10+08:00",
+  "updatedAt": "2026-11-24T04:45:30+08:00",
+  "from": "QT-010",
+  "to": "QT-011",
+  "docs": {
+    "QT": "QT260000000004524"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-010": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043916",
+          "startedAt": "2026-11-24T04:39:24+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\10_QT-010\\2026-11-24_043916",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60007
+          },
+          "endedAt": "2026-11-24T04:39:50+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "QT260000000004524 Publishing Started. Please wait a while for QT publishing."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "NOTICE_PUBLISHED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60009,
+        "statusId": 60009,
+        "en": "Pending Proposal Preparation",
+        "bm": "Menunggu Penyediaan Cadangan",
+        "at": "2026-11-24 04:39:33",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:39:50+08:00"
+      }
+    },
+    "QT-011": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_043916",
+          "startedAt": "2026-11-24T04:39:52+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\11_QT-011\\2026-11-24_043916",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60009
+          },
+          "endedAt": "2026-11-24T04:45:30+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "The file was uploaded successfully."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal No. PN260000000008225 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "The file was uploaded successfully."
+            },
+            {
+              "severity": "info",
+              "text": "Proposal No. PN260000000008226 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "QT260000000004524 Closing Started. Please wait a while for QT closing."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "QT_CLOSED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60022,
+        "statusId": 60022,
+        "en": "Quotation / Tender Closed",
+        "bm": "Sebut Harga / Tender Ditutup",
+        "at": "2026-11-24 04:45:26",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:45:30+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

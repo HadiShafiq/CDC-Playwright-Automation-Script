@@ -1,0 +1,49 @@
+
+Running 11 tests using 1 worker
+
+[17:01:29] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-23T17:01:29+08:00 (LA=LA260000000004216)
+  ✓   1 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (584ms)
+[17:01:29] fl-contract/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: Katalon default account of the step
+[17:01:29] fl-contract/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[17:01:29] fl-contract/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[17:01:29] fl-contract/02_KAT-057: Flow inputs: ContractList=LA260000000004216
+[17:01:32] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[17:01:36] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[17:02:14] fl-contract/02_KAT-057: Contract items are already listed; no item to add
+[17:02:17] fl-contract/02_KAT-057: Tick row #1
+[17:02:33] fl-contract/02_KAT-057: Final Description Search = B0
+[17:02:59] fl-contract/02_KAT-057: Message: Contract Request CR260000000006053 is successfully submitted.
+[17:02:59] fl-contract/02_KAT-057: ✅ Captured CR No: CR260000000006053
+[17:02:59] fl-contract/02_KAT-057: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[17:02:59] fl-contract/02_KAT-057: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[17:03:01] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[17:03:01] fl-contract/02_KAT-057: closeBrowser (the fixture closes the browser at the end of the test)
+[17:03:01] fl-contract/02_KAT-057: Signed out (SSO logout)
+  ✓   2 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 (1.5m)
+[17:03:02] fl-contract/03_KAT-058: KAT-058 Approve Contract Request (sent to iGFMAS) — role Approver, login: Katalon default account of the step
+[17:03:02] fl-contract/03_KAT-058: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[17:03:02] fl-contract/03_KAT-058: Flow inputs: Document_Number=CR260000000006053
+[17:03:07] fl-contract/03_KAT-058: Closed the TERKINI announcement
+[17:03:10] fl-contract/03_KAT-058: Closed the TERKINI announcement
+[17:03:25] fl-contract/03_KAT-058: CR260000000006053 is already in My Task (no claim needed)
+[17:03:36] fl-contract/03_KAT-058: Message: Contract Request CR260000000006053 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[17:03:36] fl-contract/03_KAT-058: ✅ Captured CR No: CR260000000006053
+[17:03:36] fl-contract/03_KAT-058: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[17:03:36] fl-contract/03_KAT-058: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[17:03:38] fl-contract/03_KAT-058: Closed the TERKINI announcement
+[17:03:38] fl-contract/03_KAT-058: closeBrowser (the fixture closes the browser at the end of the test)
+[17:03:39] fl-contract/03_KAT-058: Signed out (SSO logout)
+  ✓   3 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058 (37.4s)
+[17:03:39] fl-contract/04_CO_LOOKUP: BLOCKED: GATE CO_LOOKUP — Contract Order number after iGFMAS verification. iGFMAS creates the CO some time after CR260000000006053 is approved. Find it in DBeaver (NGEP_SIT.FL_FULFILMENT_ORDER) or Task Status Search, then: npm run qa -- gate --run fl-contract_20261123-170117 --gate CO_LOOKUP --set CO=CO26… When done: npm run qa -- gate --run fl-contract_20261123-170117 --gate CO_LOOKUP --done
+  -   4 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [chromium] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+  8 skipped
+  3 passed (2.4m)

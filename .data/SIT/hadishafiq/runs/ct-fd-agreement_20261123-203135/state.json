@@ -1,0 +1,306 @@
+{
+  "flowRunId": "ct-fd-agreement_20261123-203135",
+  "flowId": "ct-fd-agreement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T20:31:35+08:00",
+  "updatedAt": "2026-11-24T01:17:21+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004225",
+    "CT": "CT260000000002301"
+  },
+  "officers": {},
+  "gates": {
+    "LA_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-23T20:31:43+08:00",
+      "values": {
+        "LA": "LA260000000004225"
+      }
+    }
+  },
+  "steps": {
+    "KAT-040": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_203135",
+          "startedAt": "2026-11-23T20:31:43+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-23_203135",
+          "endedAt": "2026-11-23T20:43:51+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "❌ Dropdown failed (stale/DOM refresh): fromMonth_0"
+        },
+        {
+          "runId": "2026-11-23_212113",
+          "startedAt": "2026-11-23T21:21:20+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-23_212113",
+          "endedAt": "2026-11-23T21:22:49+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.waitFor: Timeout 10000ms exceeded."
+        },
+        {
+          "runId": "2026-11-23_212503",
+          "startedAt": "2026-11-23T21:25:10+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-23_212503",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002301",
+            "statusId": 50050
+          },
+          "endedAt": "2026-11-23T21:28:21+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Frequency Schedule Start Period is mandatory. (ERR-100022)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100022: Frequency Schedule Start Period is mandatory. (ERR-100022)",
+          "error": "❌ CT number not found. Message was: "
+        },
+        {
+          "runId": "2026-11-23_212912",
+          "startedAt": "2026-11-23T21:29:22+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-23_212912",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002301",
+            "statusId": 50050
+          },
+          "selfHeal": "the SIT DB still shows CT260000000002301 at 50050 Pending Fulfilment Details Creation, as before the attempt",
+          "endedAt": "2026-11-23T21:32:35+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Frequency Schedule Start Period is mandatory. (ERR-100022)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100022: Frequency Schedule Start Period is mandatory. (ERR-100022)",
+          "error": "❌ CT number not found. Message was: "
+        },
+        {
+          "runId": "2026-11-24_010142",
+          "startedAt": "2026-11-24T01:01:49+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-24_010142",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002301",
+            "statusId": 50050
+          },
+          "endedAt": "2026-11-24T01:04:59+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Frequency Schedule Start Period is mandatory. (ERR-100022)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100022: Frequency Schedule Start Period is mandatory. (ERR-100022)",
+          "error": "❌ CT number not found. Message was: "
+        },
+        {
+          "runId": "2026-11-24_010627",
+          "startedAt": "2026-11-24T01:06:35+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-24_010627",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002301",
+            "statusId": 50050
+          },
+          "endedAt": "2026-11-24T01:09:36+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Frequency Schedule Start Period is mandatory. (ERR-100022)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100022: Frequency Schedule Start Period is mandatory. (ERR-100022)",
+          "error": "❌ CT number not found. Message was: "
+        },
+        {
+          "runId": "2026-11-24_011159",
+          "startedAt": "2026-11-24T01:12:07+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-24_011159",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002301",
+            "statusId": 50050
+          },
+          "endedAt": "2026-11-24T01:13:48+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Details Creation CT260000000002301 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002301"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "FD_SUBMITTED",
+      "db": {
+        "kind": "CT:FD",
+        "docNo": "CT260000000002301",
+        "expected": 50150,
+        "statusId": 50150,
+        "en": "Pending Fulfilment Details Approval",
+        "bm": "Menunggu Kelulusan Maklumat Pemenuhan",
+        "at": "2026-11-24 01:13:42",
+        "ok": true,
+        "checkedAt": "2026-11-24T01:13:48+08:00"
+      }
+    },
+    "KAT-041": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_011159",
+          "startedAt": "2026-11-24T01:13:50+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\03_KAT-041\\2026-11-24_011159",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002301",
+            "statusId": 50150
+          },
+          "endedAt": "2026-11-24T01:14:33+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Details Creation CT260000000002301 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002301"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "FD_APPROVED",
+      "db": {
+        "kind": "CT:FD",
+        "docNo": "CT260000000002301",
+        "expected": 50300,
+        "statusId": 50300,
+        "en": "Fulfilment Details Approved",
+        "bm": "Maklumat Pemenuhan Diluluskan",
+        "at": "2026-11-24 01:14:27",
+        "ok": true,
+        "checkedAt": "2026-11-24T01:14:33+08:00"
+      }
+    },
+    "KAT-042": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_011159",
+          "startedAt": "2026-11-24T01:14:35+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\04_KAT-042\\2026-11-24_011159",
+          "dbBefore": {
+            "kind": "CT:AC",
+            "docNo": "CT260000000002301",
+            "statusId": 56750
+          },
+          "endedAt": "2026-11-24T01:15:45+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agreement CT260000000002301 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002301"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "AGREEMENT_SUBMITTED",
+      "db": {
+        "kind": "CT:AC",
+        "docNo": "CT260000000002301",
+        "expected": 56800,
+        "statusId": 56800,
+        "en": "Pending Agreement Approval",
+        "bm": "Menunggu Kelulusan Perjanjian",
+        "at": "2026-11-24 01:15:38",
+        "ok": true,
+        "checkedAt": "2026-11-24T01:15:45+08:00"
+      }
+    },
+    "KAT-043": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_011159",
+          "startedAt": "2026-11-24T01:15:47+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\05_KAT-043\\2026-11-24_011159",
+          "dbBefore": {
+            "kind": "CT:AC",
+            "docNo": "CT260000000002301",
+            "statusId": 56800
+          },
+          "endedAt": "2026-11-24T01:16:29+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agreement CT260000000002301 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002301"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "AGREEMENT_APPROVED",
+      "db": {
+        "kind": "CT:AC",
+        "docNo": "CT260000000002301",
+        "expected": 56600,
+        "statusId": 56600,
+        "en": "Agreement Completed",
+        "bm": "Perjanjian Selesai",
+        "at": "2026-11-24 01:16:22",
+        "ok": true,
+        "checkedAt": "2026-11-24T01:16:29+08:00"
+      }
+    },
+    "KAT-045": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_011159",
+          "startedAt": "2026-11-24T01:16:31+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\06_KAT-045\\2026-11-24_011159",
+          "endedAt": "2026-11-24T01:17:21+08:00",
+          "messages": []
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040",
+      "checkpoint": "AMENDMENT_FORM_FILLED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

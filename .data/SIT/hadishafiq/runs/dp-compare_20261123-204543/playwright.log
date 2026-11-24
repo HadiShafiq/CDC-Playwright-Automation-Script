@@ -1,0 +1,555 @@
+
+Running 8 tests using 1 worker
+
+[20:45:49] dp-compare/01_KAT-029: KAT-029 Add to Compare: submit Item Inquiry to suppliers — role Requisitioner, login: Katalon default account of the step
+[20:45:49] dp-compare/01_KAT-029: Test data corrected (support/katalon/data-overrides.json): SupplierName1, ItemCode1, SupplierName2, ItemCode2, SupplierName3, ItemCode3, DaytoResponse: The script reads SupplierName1-3 and DaytoResponse, which the test case never defines (Katalon defect). 2026-11-13 new Compare chain: AINHALIM ENTERPRISE (the KAT-044/048/052 supplier account) is supplier 1 so its Item Inquiry is our own group task for KAT-044 and the PO goes to that account; pairs from Catalogue Search 2026-11-02
+[20:45:49] dp-compare/01_KAT-029: Flow inputs: (none)
+[20:45:51] dp-compare/01_KAT-029: Closed the TERKINI announcement
+[20:45:54] dp-compare/01_KAT-029: Closed the TERKINI announcement
+[20:46:09] dp-compare/01_KAT-029: PROCESS LOOP : 1
+[20:46:18] dp-compare/01_KAT-029: PROCESS LOOP : 2
+[20:46:27] dp-compare/01_KAT-029: PROCESS LOOP : 3
+[20:46:55] dp-compare/01_KAT-029: Message: Item Inquiry PI260000000000804 is successfully submitted.
+[20:46:55] dp-compare/01_KAT-029: ✅ Captured PI No: PI260000000000804
+[20:46:55] dp-compare/01_KAT-029: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/9_10_2026_Item_Inquiry_Submitted.xlsx
+[20:46:55] dp-compare/01_KAT-029: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/9_10_2026_Item_Inquiry_Submitted.xlsx
+[20:46:59] dp-compare/01_KAT-029: Closed the TERKINI announcement
+[20:47:00] dp-compare/01_KAT-029: closeBrowser (the fixture closes the browser at the end of the test)
+[20:47:01] dp-compare/01_KAT-029: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029 (1.2m)
+[20:47:01] dp-compare/02_KAT-030: KAT-030 Supplier responds to the Item Inquiry — role Supplier, login: Katalon default account of the step
+[20:47:01] dp-compare/02_KAT-030: Test data corrected (support/katalon/data-overrides.json): Document_Number: Respond to our own Item Inquiry PI260000000000764 (KAT-029 2026-11-13) as AINHALIM ENTERPRISE, the Katalon default account, which claimed it in KAT-044
+[20:47:01] dp-compare/02_KAT-030: Flow inputs: Document_Number=PI260000000000804
+[20:47:04] dp-compare/02_KAT-030: Closed the TERKINI announcement
+[20:47:09] dp-compare/02_KAT-030: Closed the TERKINI announcement
+[20:48:17] dp-compare/02_KAT-030: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-030 @KAT-030 (1.3m)
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-031 @KAT-031
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-032 @KAT-032
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-033 @KAT-033
+  -  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-034 @KAT-034
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_PO_LOOKUP @gate-PO_LOOKUP
+  -  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_KAT-035 @KAT-035
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-030 @KAT-030 
+
+    Error: PI260000000000804 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-030.ts:327:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:529:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:132:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_204544\flows-en-dp.flow-dp-compar-6d3ca-esponds-to-the-Item-Inquiry-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_204544\flows-en-dp.flow-dp-compar-6d3ca-esponds-to-the-Item-Inquiry-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-030 @KAT-030 
+  6 did not run
+  1 passed (2.6m)
+
+Running 9 tests using 1 worker
+
+[21:06:21] dp-compare/01_KAT-029: DB status PI PI260000000000804: 60751 Pending Supplier Response / Menunggu Maklumbalas Pembekal (expected 60751, OK)
+  ✓  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029 (1.5s)
+[21:06:21] dp-compare/02_KAT-044: KAT-044 Claim Group Task application — role Officer, login: Katalon default account of the step
+[21:06:21] dp-compare/02_KAT-044: Test data corrected (support/katalon/data-overrides.json): Document_Number: Claim our own Item Inquiry PI260000000000764 (KAT-029, 2026-11-13, AINHALIM ENTERPRISE as supplier 1); the default PI342/343 and the other group tasks belong to other testers (JGN USIK)
+[21:06:21] dp-compare/02_KAT-044: Flow inputs: Document_Number=PI260000000000804
+[21:06:27] dp-compare/02_KAT-044: Closed the TERKINI announcement
+[21:06:31] dp-compare/02_KAT-044: Closed the TERKINI announcement
+[21:06:52] dp-compare/02_KAT-044: START CLAIM DOCUMENT: PI260000000000804
+[21:06:52] dp-compare/02_KAT-044: Checking page 1 for Document No: PI260000000000804
+[21:06:54] dp-compare/02_KAT-044: ✅ SUCCESS CLAIM: PI260000000000804
+[21:06:54] dp-compare/02_KAT-044: Total Document = 1
+[21:06:54] dp-compare/02_KAT-044: ✅ Success Count = 1
+[21:06:54] dp-compare/02_KAT-044: ❌ Failed Count = 0
+[21:06:54] dp-compare/02_KAT-044: ⚠️ Skipped Count = 0
+[21:06:54] dp-compare/02_KAT-044: ❌ Failed List = 
+[21:06:54] dp-compare/02_KAT-044: ⚠️ Skipped List = 
+[21:06:55] dp-compare/02_KAT-044: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044 (34.1s)
+[21:06:55] dp-compare/03_KAT-030: KAT-030 Supplier responds to the Item Inquiry — role Supplier, login: Katalon default account of the step
+[21:06:55] dp-compare/03_KAT-030: Test data corrected (support/katalon/data-overrides.json): Document_Number: Respond to our own Item Inquiry PI260000000000764 (KAT-029 2026-11-13) as AINHALIM ENTERPRISE, the Katalon default account, which claimed it in KAT-044
+[21:06:55] dp-compare/03_KAT-030: Flow inputs: Document_Number=PI260000000000804
+[21:06:57] dp-compare/03_KAT-030: Closed the TERKINI announcement
+[21:07:00] dp-compare/03_KAT-030: Closed the TERKINI announcement
+[21:07:21] dp-compare/03_KAT-030: DEBUG stock raw value = [1]
+[21:07:21] dp-compare/03_KAT-030: DEBUG stock class = java.lang.Integer
+[21:07:21] dp-compare/03_KAT-030: DEBUG Stock Availability intValue = 1
+[21:07:21] dp-compare/03_KAT-030: DEBUG Stock Availability label = Yes
+[21:07:27] dp-compare/03_KAT-030: Message: Item Inquiry PI260000000000804 is successfully submitted.
+[21:07:27] dp-compare/03_KAT-030: ✅ Captured PI No: PI260000000000804
+[21:07:27] dp-compare/03_KAT-030: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Item_Inquiry_Submitted.xlsx
+[21:07:27] dp-compare/03_KAT-030: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Item_Inquiry_Submitted.xlsx
+[21:07:31] dp-compare/03_KAT-030: Closed the TERKINI announcement
+[21:07:32] dp-compare/03_KAT-030: closeBrowser (the fixture closes the browser at the end of the test)
+[21:07:33] dp-compare/03_KAT-030: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030 (37.9s)
+[21:07:33] dp-compare/04_KAT-031: KAT-031 Prepare Request Note from Compare — role Requisitioner, login: Katalon default account of the step
+[21:07:33] dp-compare/04_KAT-031: Test data corrected (support/katalon/data-overrides.json): Document_Number: Prepare the RN from our own Item Inquiry PI260000000000764 (AINHALIM ENTERPRISE responded 2026-11-16, KAT-030)
+[21:07:33] dp-compare/04_KAT-031: Flow inputs: Document_Number=PI260000000000804
+[21:07:36] dp-compare/04_KAT-031: Closed the TERKINI announcement
+[21:07:39] dp-compare/04_KAT-031: Closed the TERKINI announcement
+[21:08:10] dp-compare/04_KAT-031: Message: Request Note RN260000000004916 is successfully submitted.
+[21:08:10] dp-compare/04_KAT-031: ✅ Captured RN No: RN260000000004916
+[21:08:10] dp-compare/04_KAT-031: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/PREPARE_RN_NO_(COMPARE).xlsx
+[21:08:10] dp-compare/04_KAT-031: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/PREPARE_RN_NO_(COMPARE).xlsx
+[21:08:14] dp-compare/04_KAT-031: Closed the TERKINI announcement
+[21:08:15] dp-compare/04_KAT-031: closeBrowser (the fixture closes the browser at the end of the test)
+[21:08:16] dp-compare/04_KAT-031: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031 (43.2s)
+[21:08:17] dp-compare/05_KAT-032: KAT-032 Approve Request Note (Compare / Add to Cart) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004916 is ASSIGNED to 690127065209 (SIT WFTASK)
+[21:08:17] dp-compare/05_KAT-032: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our services RN260000000004722 (KAT-028 2026-11-16, AINHALIM ENTERPRISE services item 701216070000000000, for the debit note chain); Review Direct Purchase ASSIGNED to officer 690127065209. Earlier today it approved RN260000000004719
+[21:08:17] dp-compare/05_KAT-032: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[21:08:17] dp-compare/05_KAT-032: Flow inputs: Document_Number=RN260000000004916
+[21:08:17] dp-compare/05_KAT-032: Flow login: officer 690127065209 (shared officer password)
+[21:08:19] dp-compare/05_KAT-032: Closed the TERKINI announcement
+[21:08:22] dp-compare/05_KAT-032: Closed the TERKINI announcement
+[21:08:57] dp-compare/05_KAT-032: Message: Request Note RN260000000004916 is approved.
+[21:08:57] dp-compare/05_KAT-032: ✅ Captured RN No: RN260000000004916
+[21:08:57] dp-compare/05_KAT-032: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[21:08:57] dp-compare/05_KAT-032: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[21:09:02] dp-compare/05_KAT-032: Closed the TERKINI announcement
+[21:09:03] dp-compare/05_KAT-032: closeBrowser (the fixture closes the browser at the end of the test)
+[21:09:03] dp-compare/05_KAT-032: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032 (47.3s)
+[21:09:04] dp-compare/06_KAT-033: Assigned officer not found in BPM: no open BPM task for RN260000000004916 yet
+[21:09:04] dp-compare/06_KAT-033: KAT-033 Submit Purchase Request from the approved Request Note — role Requisitioner (PR officer), login: officer 710527085562 from data-overrides.json (seen in an earlier run; not checked for this document)
+[21:09:04] dp-compare/06_KAT-033: Test data corrected (support/katalon/data-overrides.json): Document_Number: Submit the Purchase Request of our approved RN260000000004698 (SQ260000000002305, approved 2026-11-11 16:49), which SIT routed to PR260000000004856 (Ad Hoc) instead of a Direct LOA; its Submit PR task is ASSIGNED to officer 710527085562 (Task Status Search). User chose to continue it as a PR
+[21:09:04] dp-compare/06_KAT-033: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[21:09:04] dp-compare/06_KAT-033: Flow inputs: Document_Number=RN260000000004916
+[21:09:04] dp-compare/06_KAT-033: Flow login: officer 710527085562 (shared officer password)
+[21:09:07] dp-compare/06_KAT-033: Closed the TERKINI announcement
+[21:09:10] dp-compare/06_KAT-033: Closed the TERKINI announcement
+[21:10:16] dp-compare/06_KAT-033: Signed out (SSO logout)
+  ✘  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033 (1.2m)
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034
+  -  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP
+  -  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033 
+
+    Error: RN260000000004916 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-033.ts:315:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:529:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:132:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_210616\flows-en-dp.flow-dp-compar-84b51-m-the-approved-Request-Note-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_210616\flows-en-dp.flow-dp-compar-84b51-m-the-approved-Request-Note-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033 
+  3 did not run
+  5 passed (4.0m)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029
+  -  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032
+[21:12:26] dp-compare/06_KAT-033: SELF-HEAL KAT-033: retry once — the attempt failed before opening the document (RN260000000004916 is not in this account's My Task (no result)), so nothing was submitted
+[21:12:27] dp-compare/06_KAT-033: No open BPM task for RN260000000004916 yet: waiting up to 10 min
+[21:14:16] dp-compare/06_KAT-033: KAT-033 Submit Purchase Request from the approved Request Note — role Requisitioner (PR officer), login: officer 710527085562: BPM task "Submit PR" of RN260000000004916 is ASSIGNED to 710527085562 (SIT WFTASK)
+[21:14:17] dp-compare/06_KAT-033: Test data corrected (support/katalon/data-overrides.json): Document_Number: Submit the Purchase Request of our approved RN260000000004698 (SQ260000000002305, approved 2026-11-11 16:49), which SIT routed to PR260000000004856 (Ad Hoc) instead of a Direct LOA; its Submit PR task is ASSIGNED to officer 710527085562 (Task Status Search). User chose to continue it as a PR
+[21:14:17] dp-compare/06_KAT-033: Using officer 710527085562 with the shared officer password (support/katalon/data-overrides.json)
+[21:14:17] dp-compare/06_KAT-033: Flow inputs: Document_Number=RN260000000004916
+[21:14:17] dp-compare/06_KAT-033: Flow login: officer 710527085562 (shared officer password)
+[21:14:22] dp-compare/06_KAT-033: Closed the TERKINI announcement
+[21:14:25] dp-compare/06_KAT-033: Closed the TERKINI announcement
+[21:14:48] dp-compare/06_KAT-033: Fill Ordered Quantity row #1
+[21:14:53] dp-compare/06_KAT-033: Tick row #1
+[21:15:08] dp-compare/06_KAT-033: Final Description Search = B0
+[21:15:26] dp-compare/06_KAT-033: Message: Purchase Request PR260000000005072 is successfully submitted.
+[21:15:26] dp-compare/06_KAT-033: ✅ Captured PR No: PR260000000005072
+[21:15:27] dp-compare/06_KAT-033: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[21:15:27] dp-compare/06_KAT-033: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_PURCHASE_REQUEST_2026.xlsx
+[21:15:28] dp-compare/06_KAT-033: Closed the TERKINI announcement
+[21:15:28] dp-compare/06_KAT-033: closeBrowser (the fixture closes the browser at the end of the test)
+[21:15:28] dp-compare/06_KAT-033: Signed out (SSO logout)
+  ✓  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033 (3.0m)
+[21:15:29] dp-compare/07_KAT-034: KAT-034 Approve Purchase Request (sent to iGFMAS) — role Approver, login: officer 690127065209: BPM task "Review PR" of PR260000000005072 is ASSIGNED to 690127065209 (SIT WFTASK)
+[21:15:29] dp-compare/07_KAT-034: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our PR260000000004856 (KAT-033 from RN260000000004698, 2026-11-11 17:02); Task Status Search shows Review PR ASSIGNED to officer 690127065209
+[21:15:29] dp-compare/07_KAT-034: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[21:15:29] dp-compare/07_KAT-034: Flow inputs: Document_Number=PR260000000005072
+[21:15:29] dp-compare/07_KAT-034: Flow login: officer 690127065209 (shared officer password)
+[21:15:32] dp-compare/07_KAT-034: Closed the TERKINI announcement
+[21:15:35] dp-compare/07_KAT-034: Closed the TERKINI announcement
+[21:16:00] dp-compare/07_KAT-034: Message: Purchase Request PR260000000005072 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[21:16:00] dp-compare/07_KAT-034: ✅ Captured PR No: PR260000000005072
+[21:16:00] dp-compare/07_KAT-034: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[21:16:00] dp-compare/07_KAT-034: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_APPROVE_PURCHASE_REQUEST_2026.xlsx
+[21:16:01] dp-compare/07_KAT-034: Closed the TERKINI announcement
+[21:16:01] dp-compare/07_KAT-034: closeBrowser (the fixture closes the browser at the end of the test)
+[21:16:02] dp-compare/07_KAT-034: Signed out (SSO logout)
+  ✓  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034 (33.8s)
+[21:16:03] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP: found in the SIT database: PO PO260000000007216
+[21:16:03] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-23T21:16:03+08:00 (PO=PO260000000007216)
+  ✓  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP (815ms)
+[21:16:03] dp-compare/09_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: Katalon default account of the step
+[21:16:03] dp-compare/09_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[21:16:03] dp-compare/09_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[21:16:03] dp-compare/09_KAT-035: Flow inputs: Document_Number=PO260000000007216
+[21:16:05] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[21:16:09] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[21:17:20] dp-compare/09_KAT-035: Signed out (SSO logout)
+  ✘  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 (1.3m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+
+    Error: PO260000000007216 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-035.ts:306:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:568:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:132:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_211218\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_211218\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+  5 skipped
+  3 passed (5.0m)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029
+  -  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032
+  -  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034
+[21:19:00] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-23T21:16:03+08:00 (PO=PO260000000007216)
+  ✓  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP (279ms)
+[21:19:01] dp-compare/09_KAT-035: SELF-HEAL KAT-035: retry once — the attempt failed before opening the document (PO260000000007216 is not in this account's My Task (no result)), so nothing was submitted
+[21:19:01] dp-compare/09_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: Katalon default account of the step
+[21:19:01] dp-compare/09_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[21:19:01] dp-compare/09_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[21:19:01] dp-compare/09_KAT-035: Flow inputs: Document_Number=PO260000000007216
+[21:19:04] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[21:19:07] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[21:19:20] dp-compare/09_KAT-035: PO260000000007216 is not in Group Task (nothing to claim)
+[21:20:18] dp-compare/09_KAT-035: Signed out (SSO logout)
+  ✘  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 (1.3m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+
+    Error: PO260000000007216 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-035.ts:306:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:598:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:132:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-23_211852\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-23_211852\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+  7 skipped
+  1 passed (1.4m)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029
+  -  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032
+  -  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034
+[01:29:31] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-23T21:16:03+08:00 (PO=PO260000000007216)
+  ✓  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP (280ms)
+[01:29:32] dp-compare/09_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: Katalon default account of the step
+[01:29:32] dp-compare/09_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[01:29:32] dp-compare/09_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[01:29:32] dp-compare/09_KAT-035: Flow inputs: Document_Number=PO260000000007216
+[01:29:37] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:29:41] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:30:01] dp-compare/09_KAT-035: PO260000000007216 is not in Group Task (nothing to claim)
+[01:30:59] dp-compare/09_KAT-035: Signed out (SSO logout)
+  ✘  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 (1.5m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+
+    Error: PO260000000007216 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-035.ts:306:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:629:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:138:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_012923\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_012923\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+  7 skipped
+  1 passed (1.6m)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029
+  -  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032
+  -  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034
+[01:36:33] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-23T21:16:03+08:00 (PO=PO260000000007216)
+  ✓  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP (259ms)
+[01:36:34] dp-compare/09_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: Katalon default account of the step
+[01:36:34] dp-compare/09_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[01:36:34] dp-compare/09_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[01:36:34] dp-compare/09_KAT-035: Flow inputs: Document_Number=PO260000000007216
+[01:36:37] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:36:41] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:37:30] dp-compare/09_KAT-035: PO260000000007216 is not in Group Task (nothing to claim)
+[01:38:08] dp-compare/09_KAT-035: Signed out (SSO logout)
+  ✘  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 (1.6m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+
+    TimeoutError: locator.fill: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//*[starts-with(normalize-space(text()),\'Document No\') and contains(text(),\':\')]/following::input[@type=\'text\'][1])[last()]').first()
+        - locator resolved to <input value="" size="60" type="text" role="textbox" autocomplete="off" aria-disabled="false" aria-readonly="false" aria-multiline="false" id="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" name="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+        - fill("")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+          - waiting 100ms
+        59 × waiting for element to be visible, enabled and editable
+           - element is not visible
+         - retrying fill action
+           - waiting 500ms
+
+
+       at ..\support\katalon\runtime.ts:432
+
+      430 |       }
+      431 |       const l = loc(obj);
+    > 432 |       await l.fill('', { timeout: DEFAULT_TIMEOUT * 1000 });
+          |               ^
+      433 |       await l.pressSequentially(text == null ? '' : String(text));
+      434 |     });
+      435 |   },
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:432:15
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at t (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:65:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-035.ts:297:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:629:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:138:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_013625\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_013625\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+  7 skipped
+  1 passed (1.7m)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029
+  -  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032
+  -  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034
+[01:39:00] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-23T21:16:03+08:00 (PO=PO260000000007216)
+  ✓  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP (301ms)
+[01:39:02] dp-compare/09_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: account of KAT-035 (nurulainmof) — self-heal: the open BPM task "Acknowledge PO" is assigned to nurulainmof, 880801029878, not to BASICFLROS3
+[01:39:02] dp-compare/09_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[01:39:02] dp-compare/09_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[01:39:02] dp-compare/09_KAT-035: Flow inputs: Document_Number=PO260000000007216
+[01:39:02] dp-compare/09_KAT-035: Flow login: the account of KAT-035
+[01:39:06] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:39:09] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:39:27] dp-compare/09_KAT-035: Claimed group task PO260000000007216 (moved to My Task)
+[01:40:04] dp-compare/09_KAT-035: Signed out (SSO logout)
+  ✘  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 (1.1m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+
+    TimeoutError: locator.fill: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=(//*[starts-with(normalize-space(text()),\'Document No\') and contains(text(),\':\')]/following::input[@type=\'text\'][1])[last()]').first()
+        - locator resolved to <input value="" size="60" type="text" role="textbox" autocomplete="off" aria-disabled="false" aria-readonly="false" aria-multiline="false" id="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" name="_BpmTaskList_WAR_NGePportlet_:form:j_idt135" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+        - fill("")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not visible
+        - retrying fill action
+          - waiting 100ms
+        59 × waiting for element to be visible, enabled and editable
+           - element is not visible
+         - retrying fill action
+           - waiting 500ms
+
+
+       at ..\support\katalon\runtime.ts:432
+
+      430 |       }
+      431 |       const l = loc(obj);
+    > 432 |       await l.fill('', { timeout: DEFAULT_TIMEOUT * 1000 });
+          |               ^
+      433 |       await l.pressSequentially(text == null ? '' : String(text));
+      434 |     });
+      435 |   },
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:432:15
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at t (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:65:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-035.ts:297:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:632:5)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:138:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-24_013852\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-24_013852\flows-en-dp.flow-dp-compar-45f1c-owledges-the-Purchase-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 
+  7 skipped
+  1 passed (1.2m)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 01 KAT-029 Add to Compare: submit Item Inquiry to suppliers @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/01_KAT-029 @KAT-029
+  -  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 02 KAT-044 Claim Group Task application @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/02_KAT-044 @KAT-044
+  -  3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 03 KAT-030 Supplier responds to the Item Inquiry @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/03_KAT-030 @KAT-030
+  -  4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 04 KAT-031 Prepare Request Note from Compare @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/04_KAT-031 @KAT-031
+  -  5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 05 KAT-032 Approve Request Note (Compare / Add to Cart) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/05_KAT-032 @KAT-032
+  -  6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 06 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/06_KAT-033 @KAT-033
+  -  7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 07 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/07_KAT-034 @KAT-034
+[01:40:45] dp-compare/08_PO_LOOKUP: Gate PO_LOOKUP done by SIT database (automatic lookup) at 2026-11-23T21:16:03+08:00 (PO=PO260000000007216)
+  ✓  8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 08 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/08_PO_LOOKUP @gate-PO_LOOKUP (244ms)
+[01:40:46] dp-compare/09_KAT-035: KAT-035 Supplier acknowledges the Purchase Order — role Supplier, login: account of KAT-035 (nurulainmof) — self-heal: the open BPM task "Acknowledge PO" is assigned to nurulainmof, not to BASICFLROS3
+[01:40:46] dp-compare/09_KAT-035: Test data corrected (support/katalon/data-overrides.json): Document_Number: PO260000000006602 was created from our Compare PR260000000004659 (same process instance 16003097); its Acknowledge PO task is assigned to basicflros3, the KAT-022 supplier account
+[01:40:46] dp-compare/09_KAT-035: Using the login of KAT-022 (support/katalon/data-overrides.json)
+[01:40:46] dp-compare/09_KAT-035: Flow inputs: Document_Number=PO260000000007216
+[01:40:46] dp-compare/09_KAT-035: Flow login: the account of KAT-035
+[01:40:50] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:40:54] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:41:10] dp-compare/09_KAT-035: PO260000000007216 is already in My Task (no claim needed)
+[01:41:19] dp-compare/09_KAT-035: Message: Purchase Order PO260000000007216 is acknowledged.
+[01:41:19] dp-compare/09_KAT-035: ✅ Captured PO No: PO260000000007216
+[01:41:19] dp-compare/09_KAT-035: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/ACKNOWLEDGE_PURCHASE_REQUEST_2026.xlsx
+[01:41:19] dp-compare/09_KAT-035: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/ACKNOWLEDGE_PURCHASE_REQUEST_2026.xlsx
+[01:41:20] dp-compare/09_KAT-035: Closed the TERKINI announcement
+[01:41:20] dp-compare/09_KAT-035: closeBrowser (the fixture closes the browser at the end of the test)
+[01:41:21] dp-compare/09_KAT-035: Signed out (SSO logout)
+  ✓  9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-compare [EN] DP Compare (Item Inquiry) to Purchase Order acknowledgement › 09 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-compare @module-dp @lang-en @FLOW @dp-compare/09_KAT-035 @KAT-035 (35.9s)
+
+  7 skipped
+  2 passed (43.9s)

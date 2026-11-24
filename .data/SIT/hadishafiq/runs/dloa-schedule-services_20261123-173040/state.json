@@ -1,0 +1,106 @@
+{
+  "flowRunId": "dloa-schedule-services_20261123-173040",
+  "flowId": "dloa-schedule-services",
+  "module": "direct-loa",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-23T17:30:40+08:00",
+  "updatedAt": "2026-11-23T18:15:24+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004225"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-005": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_173041",
+          "startedAt": "2026-11-23T17:30:50+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-services\\01_KAT-005\\2026-11-23_173041",
+          "endedAt": "2026-11-23T17:34:55+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-23_181006",
+          "startedAt": "2026-11-23T18:10:11+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-services\\01_KAT-005\\2026-11-23_181006",
+          "endedAt": "2026-11-23T18:12:58+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "No. is mandatory."
+            },
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004225 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004225"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_SUBMITTED"
+    },
+    "KAT-008": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_181006",
+          "startedAt": "2026-11-23T18:12:59+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-services\\02_KAT-008\\2026-11-23_181006",
+          "endedAt": "2026-11-23T18:13:53+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004225 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004225"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_ACKNOWLEDGED"
+    },
+    "KAT-010": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-23_181006",
+          "startedAt": "2026-11-23T18:13:54+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dloa-schedule-services\\03_KAT-010\\2026-11-23_181006",
+          "endedAt": "2026-11-23T18:15:24+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004225 is completed."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "LA": "LA260000000004225"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "LA_VERIFIED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

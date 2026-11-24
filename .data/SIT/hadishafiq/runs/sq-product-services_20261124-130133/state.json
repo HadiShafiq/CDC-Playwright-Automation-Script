@@ -1,0 +1,38 @@
+{
+  "flowRunId": "sq-product-services_20261124-130133",
+  "flowId": "sq-product-services",
+  "module": "sq",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T13:01:33+08:00",
+  "updatedAt": "2026-11-24T13:11:22+08:00",
+  "from": null,
+  "to": null,
+  "docs": {},
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-037": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-24_130134",
+          "startedAt": "2026-11-24T13:01:46+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sq-product-services\\01_KAT-037\\2026-11-24_130134",
+          "endedAt": "2026-11-24T13:11:22+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "❌ Dropdown failed (stale/DOM refresh): DLOA/4. DLOA - Requestioner/2. Item List/Fulfilment Type Services"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

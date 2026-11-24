@@ -1,0 +1,150 @@
+{
+  "flowRunId": "qt-to-recommendation_spec_20261124-042619",
+  "flowId": "qt-to-recommendation",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-24T04:26:20+08:00",
+  "updatedAt": "2026-11-24T04:31:19+08:00",
+  "from": "QT-004",
+  "to": "QT-006",
+  "docs": {
+    "QT": "QT260000000004524"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-004": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_042626",
+          "startedAt": "2026-11-24T04:26:34+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\04_QT-004\\2026-11-24_042626",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60003
+          },
+          "endedAt": "2026-11-24T04:29:44+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Specification Details for QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Template Specification is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Scores is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Specification Details for QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Specification, Checklist and Scoring For QT260000000004524 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 810626015517: BPM task \"Finalize Scoring\" of QT260000000004524 is ASSIGNED to 810626015517 (SIT WFTASK)",
+      "checkpoint": "SPEC_PREPARED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60025,
+        "statusId": 60025,
+        "en": "Pending Specification Endorsement",
+        "bm": "Menunggu Pengesahan Spesifikasi",
+        "at": "2026-11-24 04:29:39",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:29:44+08:00"
+      }
+    },
+    "QT-005": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_042626",
+          "startedAt": "2026-11-24T04:29:46+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\05_QT-005\\2026-11-24_042626",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60025
+          },
+          "endedAt": "2026-11-24T04:30:48+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Specification, Checklist and Scoring For QT260000000004524 is successfully endorsed."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 770614135921 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)",
+      "checkpoint": "SPEC_ENDORSED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60026,
+        "statusId": 60026,
+        "en": "Pending Specification Sign Off",
+        "bm": "Menunggu Perakuan Spesifikasi",
+        "at": "2026-11-24 04:30:45",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:30:48+08:00"
+      }
+    },
+    "QT-006": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-24_042626",
+          "startedAt": "2026-11-24T04:30:50+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-to-recommendation\\06_QT-006\\2026-11-24_042626",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004524",
+            "statusId": 60026
+          },
+          "endedAt": "2026-11-24T04:31:19+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Specification, Checklist and Scoring For QT260000000004524 is successfully signed off."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 711105085487: BPM task \"SignOff Scoring\" of QT260000000004524 is ASSIGNED to 711105085487 (SIT WFTASK)",
+      "checkpoint": "SPEC_SIGNED_OFF",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004524",
+        "expected": 60004,
+        "statusId": 60004,
+        "en": "Pending Document Preparation",
+        "bm": "Menunggu Penyediaan Dokumen",
+        "at": "2026-11-24 04:31:14",
+        "ok": true,
+        "checkedAt": "2026-11-24T04:31:19+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}
