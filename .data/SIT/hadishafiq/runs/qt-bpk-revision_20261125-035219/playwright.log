@@ -1,0 +1,117 @@
+
+Running 8 tests using 1 worker
+
+[03:52:23] qt-bpk-revision/01_QT-001: QT-001 Create the Quotation / Tender draft (General Information, Save) — role Desk Officer, login: Katalon default account of the step
+[03:52:23] qt-bpk-revision/01_QT-001: QT-001: login 881204115188 (role user)
+[03:52:27] qt-bpk-revision/01_QT-001: QT-001: Logged in as 881204115188
+[03:52:46] qt-bpk-revision/01_QT-001: QT-001: QT draft saved: QT260000000004537
+[03:52:49] qt-bpk-revision/01_QT-001: Closed the TERKINI announcement
+[03:52:49] qt-bpk-revision/01_QT-001: DB status QT QT260000000004537: 60002 Pending Quotation / Tender Submission / Menunggu Penyerahan Sebut Harga / Tender (expected 60002, OK)
+[03:52:50] qt-bpk-revision/01_QT-001: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 01 QT-001 Create the Quotation / Tender draft (General Information, Save) @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/01_QT-001 @QT-001 (27.5s)
+[03:52:52] qt-bpk-revision/02_QT-002: QT-002 Complete the QT tabs and Submit — role Desk Officer, login: officer 881204115188: BPM task "Submit Quotation Tender" of QT260000000004537 is ASSIGNED to 881204115188 (SIT WFTASK)
+[03:52:52] qt-bpk-revision/02_QT-002: QT-002: login 881204115188 (BPM assignee)
+[03:52:56] qt-bpk-revision/02_QT-002: QT-002: Logged in as 881204115188
+[03:53:07] qt-bpk-revision/02_QT-002: QT-002: category: added
+[03:53:16] qt-bpk-revision/02_QT-002: QT-002: committee: 711105085487 added as Chairperson
+[03:53:21] qt-bpk-revision/02_QT-002: QT-002: committee: 810626015517 added as Secretary
+[03:53:25] qt-bpk-revision/02_QT-002: QT-002: committee: 770614135921 added as Member
+[03:53:30] qt-bpk-revision/02_QT-002: QT-002: committee: 770614135925 added as Member
+[03:53:38] qt-bpk-revision/02_QT-002: QT-002: approver: Hashmuddin selected
+[03:53:45] qt-bpk-revision/02_QT-002: QT-002: save: Quotation/Tender QT260000000004537 has been successfully saved.
+[03:53:47] qt-bpk-revision/02_QT-002: QT-002: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[03:53:54] qt-bpk-revision/02_QT-002: Closed the TERKINI announcement
+[03:53:55] qt-bpk-revision/02_QT-002: DB status QT QT260000000004537: 60024 Pending Quotation / Tender Approval / Menunggu Kelulusan Sebut Harga / Tender (expected 60024, OK)
+[03:53:56] qt-bpk-revision/02_QT-002: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 02 QT-002 Complete the QT tabs and Submit @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/02_QT-002 @QT-002 (1.1m)
+[03:53:58] qt-bpk-revision/03_QT-003: QT-003 Approve the QT and its committee formation — role Committee Approver, login: officer 580401035583: BPM task "Approve Committee" of QT260000000004537 is ASSIGNED to 580401035583 (SIT WFTASK)
+[03:53:58] qt-bpk-revision/03_QT-003: QT-003: login 580401035583 (BPM assignee)
+[03:54:02] qt-bpk-revision/03_QT-003: QT-003: Logged in as 580401035583
+[03:54:13] qt-bpk-revision/03_QT-003: QT-003: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[03:54:20] qt-bpk-revision/03_QT-003: Closed the TERKINI announcement
+[03:54:20] qt-bpk-revision/03_QT-003: DB status QT QT260000000004537: 60003 Pending Specification Preparation / Menunggu Penyediaan Spesifikasi (expected 60003, OK)
+[03:54:21] qt-bpk-revision/03_QT-003: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 03 QT-003 Approve the QT and its committee formation @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/03_QT-003 @QT-003 (25.5s)
+[03:54:22] qt-bpk-revision/04_QT-004: BPM task "Finalize Scoring" of QT260000000004537 is open (assigned to 810626015517)
+[03:54:24] qt-bpk-revision/04_QT-004: QT-004 Prepare the specification — role SC Secretary, login: officer 810626015517: BPM task "Finalize Scoring" of QT260000000004537 is ASSIGNED to 810626015517 (SIT WFTASK)
+[03:54:24] qt-bpk-revision/04_QT-004: QT-004: login 810626015517 (BPM assignee)
+[03:54:28] qt-bpk-revision/04_QT-004: QT-004: Logged in as 810626015517
+[03:54:41] qt-bpk-revision/04_QT-004: QT-004: qtContractDuration = 12
+[03:54:41] qt-bpk-revision/04_QT-004: QT-004: justificationProcValueId_2 = QA automation test data.
+[03:54:48] qt-bpk-revision/04_QT-004: QT-004: save: Specification Details for QT260000000004537 is successfully saved.
+[03:55:19] qt-bpk-revision/04_QT-004: QT-004: template save: Template Specification is successfully saved.
+[03:55:45] qt-bpk-revision/04_QT-004: QT-004: template: template completed
+[03:56:25] qt-bpk-revision/04_QT-004: QT-004: price: price completed
+[03:56:30] qt-bpk-revision/04_QT-004: QT-004: Technical Checklist: Bilangan Kakitangan: unticked
+[03:56:37] qt-bpk-revision/04_QT-004: QT-004: Financial Checklist: Penyata bank untuk tiga bulan: unticked; Aset dan Liabiliti (Dari Kunci Kira-kira): unticked; Kemudahan Kredit (Overdraf, Pinjaman Bank): unticked; Pengalaman Syarikat Dengan Kerajaan Persekutuan: unticked; Pengalaman Syarikat Dengan Bukan Kerajaan Persekutuan: unticked
+[03:56:46] qt-bpk-revision/04_QT-004: QT-004: delivery: first PTJ address added
+[03:56:50] qt-bpk-revision/04_QT-004: QT-004: Technical Checklist uploads: none pending
+[03:56:58] qt-bpk-revision/04_QT-004: QT-004: Financial Checklist uploads: DOCUMENT NAME PNA BI
+[03:57:24] qt-bpk-revision/04_QT-004: QT-004: forms: Bilangan Kakitangan: Scores is successfully saved.; bank statement: Scores is successfully saved.; Pengalaman Syarikat Dengan Kerajaan: Scores is successfully saved.; Pengalaman Syarikat Dengan Bukan: Scores is successfully saved.
+[03:57:30] qt-bpk-revision/04_QT-004: QT-004: Technical Scoring schema: schema uploaded
+[03:57:33] qt-bpk-revision/04_QT-004: QT-004: Financial Scoring schema: schema uploaded
+[03:57:39] qt-bpk-revision/04_QT-004: QT-004: save: Specification Details for QT260000000004537 is successfully saved.
+[03:57:43] qt-bpk-revision/04_QT-004: QT-004: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[03:57:56] qt-bpk-revision/04_QT-004: Closed the TERKINI announcement
+[03:57:57] qt-bpk-revision/04_QT-004: DB status QT QT260000000004537: 60025 Pending Specification Endorsement / Menunggu Pengesahan Spesifikasi (expected 60025, OK)
+[03:57:57] qt-bpk-revision/04_QT-004: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 04 QT-004 Prepare the specification @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/04_QT-004 @QT-004 (3.6m)
+[03:57:58] qt-bpk-revision/05_QT-005: Assigned officer not found in BPM: several or group BPM tasks are open for QT260000000004537: "Endorse Scoring" → ?; "Endorse Scoring" → 770614135925; "Endorse Scoring" → 770614135921
+[03:57:59] qt-bpk-revision/05_QT-005: QT-005 Every Specification Committee member endorses — role SC Member, login: officer 770614135921 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)
+[03:57:59] qt-bpk-revision/05_QT-005: QT-005: login 770614135921 (BPM assignee)
+[03:58:03] qt-bpk-revision/05_QT-005: QT-005: Logged in as 770614135921
+[03:58:25] qt-bpk-revision/05_QT-005: Closed the TERKINI announcement
+[03:58:25] qt-bpk-revision/05_QT-005: QT-005: login 770614135925 (switch)
+[03:58:27] qt-bpk-revision/05_QT-005: QT-005: Logged in as 770614135925
+[03:58:47] qt-bpk-revision/05_QT-005: DB status QT QT260000000004537: 60026 Pending Specification Sign Off / Menunggu Perakuan Spesifikasi (expected 60026, OK)
+[03:58:47] qt-bpk-revision/05_QT-005: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 05 QT-005 Every Specification Committee member endorses @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/05_QT-005 @QT-005 (50.2s)
+[03:58:50] qt-bpk-revision/06_QT-006: QT-006 Specification Committee chair signs off — role SC Chair, login: officer 711105085487: BPM task "SignOff Scoring" of QT260000000004537 is ASSIGNED to 711105085487 (SIT WFTASK)
+[03:58:50] qt-bpk-revision/06_QT-006: QT-006: login 711105085487 (BPM assignee)
+[03:58:53] qt-bpk-revision/06_QT-006: QT-006: Logged in as 711105085487
+[03:59:06] qt-bpk-revision/06_QT-006: QT-006: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[03:59:16] qt-bpk-revision/06_QT-006: Closed the TERKINI announcement
+[03:59:17] qt-bpk-revision/06_QT-006: DB status QT QT260000000004537: 60004 Pending Document Preparation / Menunggu Penyediaan Dokumen (expected 60004, OK)
+[03:59:18] qt-bpk-revision/06_QT-006: Signed out (SSO logout)
+  ✓  6 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 06 QT-006 Specification Committee chair signs off @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/06_QT-006 @QT-006 (30.3s)
+[03:59:20] qt-bpk-revision/07_QT-007: QT-007 Prepare the QT documents and submit — role Desk Officer, login: officer 881204115188: BPM task "Prepare QT Schedule" of QT260000000004537 is ASSIGNED to 881204115188 (SIT WFTASK)
+[03:59:20] qt-bpk-revision/07_QT-007: QT-007: login 881204115188 (BPM assignee)
+[03:59:23] qt-bpk-revision/07_QT-007: QT-007: Logged in as 881204115188
+[03:59:41] qt-bpk-revision/07_QT-007: QT-007: Opening Committee: 780513015364 added as Chairperson
+[03:59:48] qt-bpk-revision/07_QT-007: QT-007: Opening Committee: 840404085154 added as Secretary
+[03:59:53] qt-bpk-revision/07_QT-007: QT-007: Opening Committee: 770614135921 added as Member
+[04:00:00] qt-bpk-revision/07_QT-007: QT-007: Opening Committee: 840506145824 added as Member
+[04:00:07] qt-bpk-revision/07_QT-007: QT-007: Technical Evaluation Committee: 661027035165 added as Chairperson
+[04:00:12] qt-bpk-revision/07_QT-007: QT-007: Technical Evaluation Committee: 840202015713 added as Secretary
+[04:00:17] qt-bpk-revision/07_QT-007: QT-007: Technical Evaluation Committee: 760901017398 added as Member
+[04:00:23] qt-bpk-revision/07_QT-007: QT-007: Technical Evaluation Committee: 770614135921 added as Member
+[04:00:29] qt-bpk-revision/07_QT-007: QT-007: Financial Evaluation Committee: 740217035890 added as Chairperson
+[04:00:34] qt-bpk-revision/07_QT-007: QT-007: Financial Evaluation Committee: 780517025690 added as Secretary
+[04:00:41] qt-bpk-revision/07_QT-007: QT-007: Financial Evaluation Committee: 770714025664 added as Member
+[04:00:48] qt-bpk-revision/07_QT-007: QT-007: Financial Evaluation Committee: 770714025666 added as Member
+[04:00:50] qt-bpk-revision/07_QT-007: QT-007: publication approver: Hashmuddin selected
+[04:00:56] qt-bpk-revision/07_QT-007: QT-007: validity: validity 90 days
+[04:01:05] qt-bpk-revision/07_QT-007: QT-007: scope: open for All, locality State, all locations, save: Quotation/Tender QT260000000004537 has been successfully saved.
+[04:01:07] qt-bpk-revision/07_QT-007: QT-007: schedule: publish 26/11/2026, closing 03/12/2026 12:00 PM
+[04:01:07] qt-bpk-revision/07_QT-007: QT-007: contact: contact person present
+[04:01:09] qt-bpk-revision/07_QT-007: QT-007: save: Quotation/Tender QT260000000004537 has been successfully saved.
+[04:01:10] qt-bpk-revision/07_QT-007: QT-007: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[04:01:21] qt-bpk-revision/07_QT-007: QT-007: dialog: "Confirmation This Quotation/Tender requires BPK approval. Please check the request details for Government Procurement Di" -> Yes
+[04:01:31] qt-bpk-revision/07_QT-007: Closed the TERKINI announcement
+[04:01:32] qt-bpk-revision/07_QT-007: DB status QT QT260000000004537: 60030 Pending BPK Approval / Menunggu Kelulusan BPK (expected 60030, OK)
+[04:01:33] qt-bpk-revision/07_QT-007: Signed out (SSO logout)
+  ✓  7 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 07 QT-007 Prepare the QT documents and submit @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/07_QT-007 @QT-007 (2.2m)
+[04:01:34] qt-bpk-revision/08_QT-108: Assigned officer not found in BPM: several or group BPM tasks are open for QT260000000004537: "Approve BPK" → 610232045147/110000000065/100000000065/930120105618/800912129080/700304038900/191011145001/220701145000/200204145001/660000000009/660000000008/100000000165/750926145514/811227065519/760703075087/151515151515
+[04:01:34] qt-bpk-revision/08_QT-108: QT-108 BPK sends the documents back for revision — role BPK Approver, login: officer 800912129080 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)
+[04:01:34] qt-bpk-revision/08_QT-108: QT-108: login 800912129080 (BPM assignee)
+[04:01:37] qt-bpk-revision/08_QT-108: QT-108: Logged in as 800912129080
+[04:01:44] qt-bpk-revision/08_QT-108: QT-108: claimed QT260000000004537: now in My Task
+[04:01:54] qt-bpk-revision/08_QT-108: QT-108: dialog: "Revise Confirmation Are you sure to send for Revise? Yes No" -> Yes
+[04:02:00] qt-bpk-revision/08_QT-108: Closed the TERKINI announcement
+[04:02:01] qt-bpk-revision/08_QT-108: DB status QT:BPK QT260000000004537: 60153 Pending Document Revision (BPK) / Menunggu Kaji Semula Dokumen (BPK) (expected 60153, OK)
+[04:02:01] qt-bpk-revision/08_QT-108: Signed out (SSO logout)
+  ✓  8 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-bpk-revision [EN] QT documents sent back for revision by BPK › 08 QT-108 BPK sends the documents back for revision @flow-qt-bpk-revision @module-qt @lang-en @FLOW @qt-bpk-revision/08_QT-108 @QT-108 (28.9s)
+
+  Slow test file: [flows] › tests\flows\en\qt.flow.spec.ts (9.6m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  8 passed (9.7m)

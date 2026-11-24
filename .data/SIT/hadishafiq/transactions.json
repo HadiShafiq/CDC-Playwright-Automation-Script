@@ -1471,5 +1471,74 @@
     "reuse": "available",
     "cr": null,
     "notes": []
+  },
+  {
+    "ref": "QT260000000004536",
+    "docType": "QT",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "qt",
+    "checkpoint": "SPEC_SIGNED_OFF",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "qt-doc-revision_20261125-033605",
+      "stepId": "QT-001"
+    },
+    "lastStep": {
+      "flowRunId": "qt-doc-revision_20261125-033605",
+      "stepId": "QT-006"
+    },
+    "createdAt": "2026-11-25T03:36:40+08:00",
+    "lastVerifiedAt": "2026-11-25T03:46:41+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "QT260000000004537",
+    "docType": "QT",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "qt",
+    "checkpoint": "BPK_REVISION",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "qt-bpk-revision_20261125-035219",
+      "stepId": "QT-001"
+    },
+    "lastStep": {
+      "flowRunId": "qt-bpk-revision_20261125-035219",
+      "stepId": "QT-108"
+    },
+    "createdAt": "2026-11-25T03:52:49+08:00",
+    "lastVerifiedAt": "2026-11-25T04:02:01+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "QT260000000004538",
+    "docType": "QT",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "qt",
+    "checkpoint": "DOC_REVISION",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "qt-doc-revision_20261125-040330",
+      "stepId": "QT-001"
+    },
+    "lastStep": {
+      "flowRunId": "qt-doc-revision_20261125-040330",
+      "stepId": "QT-109"
+    },
+    "createdAt": "2026-11-25T04:04:02+08:00",
+    "lastVerifiedAt": "2026-11-25T04:12:52+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
   }
 ]

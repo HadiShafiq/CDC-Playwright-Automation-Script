@@ -4,7 +4,7 @@
 // Module:    sm / cancel · flow sm-cancel-mof
 // Stops at:  CANCEL_SUBMITTED — Cancellation submitted; to review (after SM-031, Supplier)
 // DB status: AP 20104 Pending Review Application
-// Path:      SM-031 (manual)
+// Path:      SM-031
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/cancel/sm-cancel-mof/01-CANCEL_SUBMITTED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-cancel-mof --status CANCEL_SUBMITTED

@@ -1,0 +1,59 @@
+{
+  "flowRunId": "sm-cancel-mof_20261125-032807",
+  "flowId": "sm-cancel-mof",
+  "module": "sm",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T03:28:07+08:00",
+  "updatedAt": "2026-11-25T03:31:42+08:00",
+  "from": null,
+  "to": null,
+  "docs": {},
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "SM-031": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_032807",
+          "startedAt": "2026-11-25T03:28:14+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-cancel-mof\\01_SM-031\\2026-11-25_032807",
+          "endedAt": "2026-11-25T03:28:23+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can be proceed. (ERR-722707)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-722707: The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can ",
+          "error": "Cancel MOF form: no known submit button (buttons: Proceed); form: eP App/My Application/Supplier Management/Cancel MOF Application Cancel MOF Account Application Cancel MOF Application The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Accou"
+        },
+        {
+          "runId": "2026-11-25_033013",
+          "startedAt": "2026-11-25T03:30:19+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-cancel-mof\\01_SM-031\\2026-11-25_033013",
+          "endedAt": "2026-11-25T03:30:37+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can be proceed. (ERR-722707)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-722707: The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can ",
+          "error": "Soft cert revocation signed, but Cancel MOF still answers ERR-722707 (revocation pending approval?)"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "blocked",
+  "blockedReason": "SM-031 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-722707: The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can ). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-cancel-mof_20261125-032807 --step SM-031"
+}

@@ -4,7 +4,7 @@
 // Module:    qt / revision · flow qt-doc-revision
 // Stops at:  DOC_REVISION — Pending Document Revision (after QT-109, Publication Approver)
 // DB status: QT 60006 Pending Document Revision
-// Path:      QT-001 → QT-002 → QT-003 → QT-004 → QT-005 → QT-006 → QT-107 → QT-109 (manual)
+// Path:      QT-001 → QT-002 → QT-003 → QT-004 → QT-005 → QT-006 → QT-107 → QT-109
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/qt/revision/qt-doc-revision/08-DOC_REVISION.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow qt-doc-revision --status DOC_REVISION

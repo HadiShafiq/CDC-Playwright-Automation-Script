@@ -1,0 +1,340 @@
+{
+  "flowRunId": "qt-doc-revision_20261125-040330",
+  "flowId": "qt-doc-revision",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T04:03:30+08:00",
+  "updatedAt": "2026-11-25T04:12:52+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004538"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-001": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:03:37+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\01_QT-001\\2026-11-25_040331",
+          "endedAt": "2026-11-25T04:04:02+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 has been successfully saved. Further action needs to be taken through Task List."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "QT": "QT260000000004538"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "QT_DRAFT",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60002,
+        "statusId": 60002,
+        "en": "Pending Quotation / Tender Submission",
+        "bm": "Menunggu Penyerahan Sebut Harga / Tender",
+        "at": "2026-11-25 04:03:56",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:04:02+08:00"
+      }
+    },
+    "QT-002": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:04:04+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\02_QT-002\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60002
+          },
+          "endedAt": "2026-11-25T04:05:06+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 has been successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 881204115188: BPM task \"Submit Quotation Tender\" of QT260000000004538 is ASSIGNED to 881204115188 (SIT WFTASK)",
+      "checkpoint": "QT_SUBMITTED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60024,
+        "statusId": 60024,
+        "en": "Pending Quotation / Tender Approval",
+        "bm": "Menunggu Kelulusan Sebut Harga / Tender",
+        "at": "2026-11-25 04:05:00",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:05:06+08:00"
+      }
+    },
+    "QT-003": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:05:08+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\03_QT-003\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60024
+          },
+          "endedAt": "2026-11-25T04:05:30+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 580401035583: BPM task \"Approve Committee\" of QT260000000004538 is ASSIGNED to 580401035583 (SIT WFTASK)",
+      "checkpoint": "QT_APPROVED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60003,
+        "statusId": 60003,
+        "en": "Pending Specification Preparation",
+        "bm": "Menunggu Penyediaan Spesifikasi",
+        "at": "2026-11-25 04:05:25",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:05:30+08:00"
+      }
+    },
+    "QT-004": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:05:33+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\04_QT-004\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60003
+          },
+          "endedAt": "2026-11-25T04:09:05+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Specification Details for QT260000000004538 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Template Specification is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Scores is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Specification Details for QT260000000004538 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Specification, Checklist and Scoring For QT260000000004538 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 810626015517: BPM task \"Finalize Scoring\" of QT260000000004538 is ASSIGNED to 810626015517 (SIT WFTASK)",
+      "checkpoint": "SPEC_PREPARED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60025,
+        "statusId": 60025,
+        "en": "Pending Specification Endorsement",
+        "bm": "Menunggu Pengesahan Spesifikasi",
+        "at": "2026-11-25 04:09:00",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:09:05+08:00"
+      }
+    },
+    "QT-005": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:09:07+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\05_QT-005\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60025
+          },
+          "endedAt": "2026-11-25T04:09:59+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Specification, Checklist and Scoring For QT260000000004538 is successfully endorsed."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 770614135921 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)",
+      "checkpoint": "SPEC_ENDORSED",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60026,
+        "statusId": 60026,
+        "en": "Pending Specification Sign Off",
+        "bm": "Menunggu Perakuan Spesifikasi",
+        "at": "2026-11-25 04:09:56",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:09:59+08:00"
+      }
+    },
+    "QT-006": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:10:01+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\06_QT-006\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60026
+          },
+          "endedAt": "2026-11-25T04:10:29+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Specification, Checklist and Scoring For QT260000000004538 is successfully signed off."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 711105085487: BPM task \"SignOff Scoring\" of QT260000000004538 is ASSIGNED to 711105085487 (SIT WFTASK)",
+      "checkpoint": "SPEC_SIGNED_OFF",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60004,
+        "statusId": 60004,
+        "en": "Pending Document Preparation",
+        "bm": "Menunggu Penyediaan Dokumen",
+        "at": "2026-11-25 04:10:24",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:10:29+08:00"
+      }
+    },
+    "QT-107": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:10:31+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\07_QT-107\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60004
+          },
+          "endedAt": "2026-11-25T04:12:28+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 has been successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 881204115188: BPM task \"Prepare QT Schedule\" of QT260000000004538 is ASSIGNED to 881204115188 (SIT WFTASK)",
+      "checkpoint": "DOCS_PREPARED_NO_BPK",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60005,
+        "statusId": 60005,
+        "en": "Pending Document Approval for Publication",
+        "bm": "Menunggu Kelulusan Dokumen untuk Pengiklanan",
+        "at": "2026-11-25 04:12:23",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:12:28+08:00"
+      }
+    },
+    "QT-109": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_040331",
+          "startedAt": "2026-11-25T04:12:30+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-doc-revision\\08_QT-109\\2026-11-25_040331",
+          "dbBefore": {
+            "kind": "QT",
+            "docNo": "QT260000000004538",
+            "statusId": 60005
+          },
+          "endedAt": "2026-11-25T04:12:52+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004538 is revised."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 580401035583: BPM task \"Approve Publication\" of QT260000000004538 is ASSIGNED to 580401035583 (SIT WFTASK)",
+      "checkpoint": "DOC_REVISION",
+      "db": {
+        "kind": "QT",
+        "docNo": "QT260000000004538",
+        "expected": 60006,
+        "statusId": 60006,
+        "en": "Pending Document Revision",
+        "bm": "Menunggu Kaji Semula Dokumen",
+        "at": "2026-11-25 04:12:47",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:12:52+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

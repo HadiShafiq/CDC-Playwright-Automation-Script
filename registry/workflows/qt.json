@@ -530,8 +530,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026",
+        "verification": "execution",
+        "evidence": "SIT run (EN): QT260000000004538 60004→60005 (Open For Bumiputra, no BPK) run qt-doc-revision 2026-11-25",
         "db": {
           "kind": "QT",
           "statusId": 60005,
@@ -546,8 +546,8 @@
       "role": "Publication Approver",
       "stateChanging": true,
       "login": "assignedOfficer",
-      "automation": "manual",
-      "source": "kapitan qt-create recipe \"docrev\"",
+      "automation": "module",
+      "source": "support/modules/qt stages.ts reviseTask — built 2026-11-25; kapitan qt-create recipe \"docrev\"",
       "instructions": "Publication Approver: My Task, Revise.",
       "inputs": [
         {
@@ -563,8 +563,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026",
+        "verification": "execution",
+        "evidence": "SIT run (EN): QT260000000004538 60005→60006, button Revise (qt-doc-revision 2026-11-25)",
         "db": {
           "kind": "QT",
           "statusId": 60006,
@@ -579,8 +579,8 @@
       "role": "BPK Approver",
       "stateChanging": true,
       "login": "assignedOfficer",
-      "automation": "manual",
-      "source": "kapitan qt-create recipe \"docrevbpk\"",
+      "automation": "module",
+      "source": "support/modules/qt docprep.ts bpkApprove(revise decision) — built 2026-11-25; kapitan qt-create recipe \"docrevbpk\"",
       "instructions": "BPK Approver: My Task, Revise.",
       "inputs": [
         {
@@ -596,8 +596,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026",
+        "verification": "execution",
+        "evidence": "SIT run (EN): QT260000000004537 BPK 60150→60153, button Revise (qt-bpk-revision 2026-11-25)",
         "db": {
           "kind": "QT:BPK",
           "statusId": 60153,
@@ -660,8 +660,8 @@
       "id": "qt-doc-revision",
       "submodule": "revision",
       "title": "QT documents sent back for revision by the Publication Approver",
-      "verification": "documentation",
-      "notes": "Path of QT260000000004373.",
+      "verification": "execution",
+      "notes": "Path of QT260000000004373. Verified on SIT 2026-11-25 (QT260000000004538).",
       "steps": [
         "QT-001",
         "QT-002",
@@ -677,8 +677,8 @@
       "id": "qt-bpk-revision",
       "submodule": "revision",
       "title": "QT documents sent back for revision by BPK",
-      "verification": "documentation",
-      "notes": "Path of QT260000000004374.",
+      "verification": "execution",
+      "notes": "Path of QT260000000004374. Verified on SIT 2026-11-25 (QT260000000004537).",
       "steps": [
         "QT-001",
         "QT-002",

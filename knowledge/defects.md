@@ -55,3 +55,10 @@ Mark each defect **Confirmed** (reproduced, evidence attached) or **Suspected** 
 - Actual result: two applications for the same applicant, 2 s apart: AP261124000001578 (17:05:33, CP 75005, left pending) and AP261124000001579 (17:05:35, used by the flow); both numbers in the success message
 - Evidence: SIT DB pm_access_appl / pm_workflow_status; .data/SIT/hadishafiq/runs/pm-access-cp_20261124-164952/events.jsonl
 - Needs: SIT team to check whether the Serah action is bound twice. AP…1578 is a stray test record (do not use)
+
+## SIT: expired soft cert blocks Cancel MOF but cannot be revoked (suspected, 2026-11-25)
+- Where: Cancel MOF Account Application (/web/epapp/cancel-mof-registered) and SoftCert Management → revoke (here → personnel → Proceed → PIN → Sign)
+- Data: supplier 900101010815 (OWNER 8560), soft cert 3b4e49a4…, validity 18/11/2026 - 20/11/2026, status "Ready For Renewal"
+- Expected: an expired cert does not block cancellation, or it can be revoked
+- Actual: Cancel MOF → Proceed answers ERR-722707 "has a valid digital certificate … revoke first"; the revoke PIN dialog's Sign closes with no message, no request and no status change (twice, run sm-cancel-mof_20261125-0328xx + probe)
+- Needs: SIT team to confirm whether an expired cert must be renewed before revocation, or ERR-722707 should ignore expired certs

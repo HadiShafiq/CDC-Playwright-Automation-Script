@@ -1,0 +1,149 @@
+
+Running 8 tests using 1 worker
+
+[03:36:12] qt-doc-revision/01_QT-001: QT-001 Create the Quotation / Tender draft (General Information, Save) — role Desk Officer, login: Katalon default account of the step
+[03:36:12] qt-doc-revision/01_QT-001: QT-001: login 881204115188 (role user)
+[03:36:16] qt-doc-revision/01_QT-001: QT-001: Logged in as 881204115188
+[03:36:36] qt-doc-revision/01_QT-001: QT-001: QT draft saved: QT260000000004536
+[03:36:39] qt-doc-revision/01_QT-001: Closed the TERKINI announcement
+[03:36:40] qt-doc-revision/01_QT-001: DB status QT QT260000000004536: 60002 Pending Quotation / Tender Submission / Menunggu Penyerahan Sebut Harga / Tender (expected 60002, OK)
+[03:36:41] qt-doc-revision/01_QT-001: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 01 QT-001 Create the Quotation / Tender draft (General Information, Save) @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/01_QT-001 @QT-001 (28.9s)
+[03:36:43] qt-doc-revision/02_QT-002: QT-002 Complete the QT tabs and Submit — role Desk Officer, login: officer 881204115188: BPM task "Submit Quotation Tender" of QT260000000004536 is ASSIGNED to 881204115188 (SIT WFTASK)
+[03:36:43] qt-doc-revision/02_QT-002: QT-002: login 881204115188 (BPM assignee)
+[03:36:47] qt-doc-revision/02_QT-002: QT-002: Logged in as 881204115188
+[03:37:18] qt-doc-revision/02_QT-002: QT-002: QT260000000004536 not on this user's task list yet: waiting up to 8 min
+[03:38:44] qt-doc-revision/02_QT-002: QT-002: category: added
+[03:38:54] qt-doc-revision/02_QT-002: QT-002: committee: 711105085487 added as Chairperson
+[03:39:01] qt-doc-revision/02_QT-002: QT-002: committee: 810626015517 added as Secretary
+[03:39:08] qt-doc-revision/02_QT-002: QT-002: committee: 770614135921 added as Member
+[03:39:15] qt-doc-revision/02_QT-002: QT-002: committee: 770614135925 added as Member
+[03:39:22] qt-doc-revision/02_QT-002: QT-002: approver: Hashmuddin selected
+[03:39:30] qt-doc-revision/02_QT-002: QT-002: save: Quotation/Tender QT260000000004536 has been successfully saved.
+[03:39:31] qt-doc-revision/02_QT-002: QT-002: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[03:39:39] qt-doc-revision/02_QT-002: Closed the TERKINI announcement
+[03:39:40] qt-doc-revision/02_QT-002: DB status QT QT260000000004536: 60024 Pending Quotation / Tender Approval / Menunggu Kelulusan Sebut Harga / Tender (expected 60024, OK)
+[03:39:41] qt-doc-revision/02_QT-002: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 02 QT-002 Complete the QT tabs and Submit @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/02_QT-002 @QT-002 (3.0m)
+[03:39:43] qt-doc-revision/03_QT-003: QT-003 Approve the QT and its committee formation — role Committee Approver, login: officer 580401035583: BPM task "Approve Committee" of QT260000000004536 is ASSIGNED to 580401035583 (SIT WFTASK)
+[03:39:43] qt-doc-revision/03_QT-003: QT-003: login 580401035583 (BPM assignee)
+[03:39:48] qt-doc-revision/03_QT-003: QT-003: Logged in as 580401035583
+[03:40:20] qt-doc-revision/03_QT-003: QT-003: QT260000000004536 not on this user's task list yet: waiting up to 8 min
+[03:40:58] qt-doc-revision/03_QT-003: QT-003: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[03:41:06] qt-doc-revision/03_QT-003: Closed the TERKINI announcement
+[03:41:07] qt-doc-revision/03_QT-003: DB status QT QT260000000004536: 60003 Pending Specification Preparation / Menunggu Penyediaan Spesifikasi (expected 60003, OK)
+[03:41:08] qt-doc-revision/03_QT-003: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 03 QT-003 Approve the QT and its committee formation @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/03_QT-003 @QT-003 (1.4m)
+[03:41:09] qt-doc-revision/04_QT-004: BPM task "Finalize Scoring" of QT260000000004536 is open (assigned to 810626015517)
+[03:41:10] qt-doc-revision/04_QT-004: QT-004 Prepare the specification — role SC Secretary, login: officer 810626015517: BPM task "Finalize Scoring" of QT260000000004536 is ASSIGNED to 810626015517 (SIT WFTASK)
+[03:41:11] qt-doc-revision/04_QT-004: QT-004: login 810626015517 (BPM assignee)
+[03:41:15] qt-doc-revision/04_QT-004: QT-004: Logged in as 810626015517
+[03:41:33] qt-doc-revision/04_QT-004: QT-004: qtContractDuration = 12
+[03:41:33] qt-doc-revision/04_QT-004: QT-004: justificationProcValueId_2 = QA automation test data.
+[03:41:41] qt-doc-revision/04_QT-004: QT-004: save: Specification Details for QT260000000004536 is successfully saved.
+[03:42:16] qt-doc-revision/04_QT-004: QT-004: template save: Template Specification is successfully saved.
+[03:42:41] qt-doc-revision/04_QT-004: QT-004: template: template completed
+[03:43:22] qt-doc-revision/04_QT-004: QT-004: price: price completed
+[03:43:28] qt-doc-revision/04_QT-004: QT-004: Technical Checklist: Bilangan Kakitangan: unticked
+[03:43:36] qt-doc-revision/04_QT-004: QT-004: Financial Checklist: Penyata bank untuk tiga bulan: unticked; Aset dan Liabiliti (Dari Kunci Kira-kira): unticked; Kemudahan Kredit (Overdraf, Pinjaman Bank): unticked; Pengalaman Syarikat Dengan Kerajaan Persekutuan: unticked; Pengalaman Syarikat Dengan Bukan Kerajaan Persekutuan: unticked
+[03:43:46] qt-doc-revision/04_QT-004: QT-004: delivery: first PTJ address added
+[03:43:50] qt-doc-revision/04_QT-004: QT-004: Technical Checklist uploads: none pending
+[03:43:58] qt-doc-revision/04_QT-004: QT-004: Financial Checklist uploads: DOCUMENT NAME PNA BI
+[03:44:25] qt-doc-revision/04_QT-004: QT-004: forms: Bilangan Kakitangan: Scores is successfully saved.; bank statement: Scores is successfully saved.; Pengalaman Syarikat Dengan Kerajaan: Scores is successfully saved.; Pengalaman Syarikat Dengan Bukan: Scores is successfully saved.
+[03:44:30] qt-doc-revision/04_QT-004: QT-004: Technical Scoring schema: schema uploaded
+[03:44:33] qt-doc-revision/04_QT-004: QT-004: Financial Scoring schema: schema uploaded
+[03:44:39] qt-doc-revision/04_QT-004: QT-004: save: Specification Details for QT260000000004536 is successfully saved.
+[03:44:45] qt-doc-revision/04_QT-004: QT-004: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[03:44:58] qt-doc-revision/04_QT-004: Closed the TERKINI announcement
+[03:44:59] qt-doc-revision/04_QT-004: DB status QT QT260000000004536: 60025 Pending Specification Endorsement / Menunggu Pengesahan Spesifikasi (expected 60025, OK)
+[03:44:59] qt-doc-revision/04_QT-004: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 04 QT-004 Prepare the specification @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/04_QT-004 @QT-004 (3.9m)
+[03:45:01] qt-doc-revision/05_QT-005: Assigned officer not found in BPM: several or group BPM tasks are open for QT260000000004536: "Endorse Scoring" → 770614135921; "Endorse Scoring" → ?; "Endorse Scoring" → 770614135925
+[03:45:01] qt-doc-revision/05_QT-005: QT-005 Every Specification Committee member endorses — role SC Member, login: officer 770614135921 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)
+[03:45:01] qt-doc-revision/05_QT-005: QT-005: login 770614135921 (BPM assignee)
+[03:45:05] qt-doc-revision/05_QT-005: QT-005: Logged in as 770614135921
+[03:45:40] qt-doc-revision/05_QT-005: Closed the TERKINI announcement
+[03:45:40] qt-doc-revision/05_QT-005: QT-005: login 770614135925 (switch)
+[03:45:43] qt-doc-revision/05_QT-005: QT-005: Logged in as 770614135925
+[03:46:06] qt-doc-revision/05_QT-005: DB status QT QT260000000004536: 60026 Pending Specification Sign Off / Menunggu Perakuan Spesifikasi (expected 60026, OK)
+[03:46:07] qt-doc-revision/05_QT-005: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 05 QT-005 Every Specification Committee member endorses @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/05_QT-005 @QT-005 (1.1m)
+[03:46:09] qt-doc-revision/06_QT-006: QT-006 Specification Committee chair signs off — role SC Chair, login: officer 711105085487: BPM task "SignOff Scoring" of QT260000000004536 is ASSIGNED to 711105085487 (SIT WFTASK)
+[03:46:09] qt-doc-revision/06_QT-006: QT-006: login 711105085487 (BPM assignee)
+[03:46:12] qt-doc-revision/06_QT-006: QT-006: Logged in as 711105085487
+[03:46:30] qt-doc-revision/06_QT-006: QT-006: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[03:46:40] qt-doc-revision/06_QT-006: Closed the TERKINI announcement
+[03:46:41] qt-doc-revision/06_QT-006: DB status QT QT260000000004536: 60004 Pending Document Preparation / Menunggu Penyediaan Dokumen (expected 60004, OK)
+[03:46:42] qt-doc-revision/06_QT-006: Signed out (SSO logout)
+  ✓  6 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 06 QT-006 Specification Committee chair signs off @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/06_QT-006 @QT-006 (35.1s)
+[03:46:44] qt-doc-revision/07_QT-107: QT-107 Prepare the QT documents and submit (no BPK needed) — role Desk Officer, login: officer 881204115188: BPM task "Prepare QT Schedule" of QT260000000004536 is ASSIGNED to 881204115188 (SIT WFTASK)
+[03:46:44] qt-doc-revision/07_QT-107: QT-107: login 881204115188 (BPM assignee)
+[03:46:47] qt-doc-revision/07_QT-107: QT-107: Logged in as 881204115188
+[03:47:08] qt-doc-revision/07_QT-107: QT-107: Opening Committee: 780513015364 added as Chairperson
+[03:47:14] qt-doc-revision/07_QT-107: QT-107: Opening Committee: 840404085154 added as Secretary
+[03:47:21] qt-doc-revision/07_QT-107: QT-107: Opening Committee: 770614135921 added as Member
+[03:47:26] qt-doc-revision/07_QT-107: QT-107: Opening Committee: 840506145824 added as Member
+[03:47:35] qt-doc-revision/07_QT-107: QT-107: Technical Evaluation Committee: 661027035165 added as Chairperson
+[03:47:42] qt-doc-revision/07_QT-107: QT-107: Technical Evaluation Committee: 840202015713 added as Secretary
+[03:47:47] qt-doc-revision/07_QT-107: QT-107: Technical Evaluation Committee: 760901017398 added as Member
+[03:47:53] qt-doc-revision/07_QT-107: QT-107: Technical Evaluation Committee: 770614135921 added as Member
+[03:47:59] qt-doc-revision/07_QT-107: QT-107: Financial Evaluation Committee: 740217035890 added as Chairperson
+[03:48:05] qt-doc-revision/07_QT-107: QT-107: Financial Evaluation Committee: 780517025690 added as Secretary
+[03:48:10] qt-doc-revision/07_QT-107: QT-107: Financial Evaluation Committee: 770714025664 added as Member
+[03:48:15] qt-doc-revision/07_QT-107: QT-107: Financial Evaluation Committee: 770714025666 added as Member
+[03:48:18] qt-doc-revision/07_QT-107: QT-107: publication approver: Hashmuddin selected
+[03:48:24] qt-doc-revision/07_QT-107: QT-107: validity: validity 9 days
+[03:48:33] qt-doc-revision/07_QT-107: QT-107: scope: open for All, locality State, all locations, save: Quotation/Tender QT260000000004536 has been successfully saved.
+[03:48:35] qt-doc-revision/07_QT-107: QT-107: schedule: publish 26/11/2026, closing 03/12/2026 12:00 PM
+[03:48:35] qt-doc-revision/07_QT-107: QT-107: contact: contact person present
+[03:48:37] qt-doc-revision/07_QT-107: QT-107: save: Quotation/Tender QT260000000004536 has been successfully saved.
+[03:48:38] qt-doc-revision/07_QT-107: QT-107: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[03:48:49] qt-doc-revision/07_QT-107: QT-107: dialog: "Confirmation This Quotation/Tender requires BPK approval. Please check the request details for Government Procurement Di" -> Yes
+[03:49:00] qt-doc-revision/07_QT-107: Closed the TERKINI announcement
+[03:51:04] qt-doc-revision/07_QT-107: DB status QT QT260000000004536: 60030 Pending BPK Approval / Menunggu Kelulusan BPK (expected 60005, MISMATCH)
+[03:51:05] qt-doc-revision/07_QT-107: Signed out (SSO logout)
+  ✘  7 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 07 QT-107 Prepare the QT documents and submit (no BPK needed) @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/07_QT-107 @QT-107 (4.4m)
+  -  8 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 08 QT-109 Publication Approver sends the documents back for revision @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/08_QT-109 @QT-109
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 07 QT-107 Prepare the QT documents and submit (no BPK needed) @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/07_QT-107 @QT-107 
+
+    Error: Expected outcome not in the database for QT-107: QT260000000004536 is at 60030 Pending BPK Approval, expected 60005 Pending Document Approval for Publication (DOCS_PREPARED_NO_BPK)
+
+       at ..\support\core\flow-runner.ts:823
+
+      821 |       });
+      822 |       emit(ctx.flowRunId, ctx.flow.id, 'failure', { item: step.id, class: 'BUSINESS_ASSERTION', error: text });
+    > 823 |       throw new Error(text);
+          |             ^
+      824 |     }
+      825 |   }
+      826 |   const proof = proofOf(step, { ...s.docs, ...outputs });
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:823:13)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_033606\flows-en-qt.flow-qt-doc-re-dc23f-s-and-submit-no-BPK-needed--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_033606\flows-en-qt.flow-qt-doc-re-dc23f-s-and-submit-no-BPK-needed--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 07 QT-107 Prepare the QT documents and submit (no BPK needed) @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/07_QT-107 @QT-107 
+  1 did not run
+  6 passed (15.0m)
+
+Running 8 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 01 QT-001 Create the Quotation / Tender draft (General Information, Save) @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/01_QT-001 @QT-001
+  -  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 02 QT-002 Complete the QT tabs and Submit @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/02_QT-002 @QT-002
+  -  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 03 QT-003 Approve the QT and its committee formation @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/03_QT-003 @QT-003
+  -  4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 04 QT-004 Prepare the specification @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/04_QT-004 @QT-004
+  -  5 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 05 QT-005 Every Specification Committee member endorses @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/05_QT-005 @QT-005
+  -  6 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 06 QT-006 Specification Committee chair signs off @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/06_QT-006 @QT-006
+[03:52:15] qt-doc-revision/07_QT-107: BLOCKED: QT-107 failed in an earlier attempt (BUSINESS_ASSERTION (high): the step finished but the SIT database status is not the expected one). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-doc-revision_20261125-033605 --step QT-107
+  -  7 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 07 QT-107 Prepare the QT documents and submit (no BPK needed) @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/07_QT-107 @QT-107
+  -  8 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-doc-revision [EN] QT documents sent back for revision by the Publication Approver › 08 QT-109 Publication Approver sends the documents back for revision @flow-qt-doc-revision @module-qt @lang-en @FLOW @qt-doc-revision/08_QT-109 @QT-109
+
+  8 skipped

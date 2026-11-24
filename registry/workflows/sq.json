@@ -120,8 +120,8 @@
     {
       "id": "sq-services",
       "title": "Simple Quote (Services): create, open, supplier reply, close",
-      "verification": "documentation",
-      "notes": "Fulfilment type decides the later DP route: One Off (1) → Purchase Request; Schedule (2) / As And When (3) → LOA (memory dp-loa-route-rule). The supplier account of KAT-022 must be in the SQ supplier list.",
+      "verification": "execution",
+      "notes": "Fulfilment type decides the later DP route: One Off (1) → Purchase Request; Schedule (2) / As And When (3) → LOA (memory dp-loa-route-rule). The supplier account of KAT-022 must be in the SQ supplier list. Verified on SIT by run sq-services_20261124-102625.",
       "steps": [
         "KAT-021",
         {
@@ -137,8 +137,8 @@
     {
       "id": "sq-product",
       "title": "Simple Quote (Product): create, open, supplier reply, close",
-      "verification": "unverified",
-      "notes": "Pairing KAT-036 → KAT-022 is from the Katalon folder order; the KAT-022 supplier must be in KAT-036's supplier list.",
+      "verification": "execution",
+      "notes": "Pairing KAT-036 → KAT-022 is from the Katalon folder order; the KAT-022 supplier must be in KAT-036's supplier list. Verified on SIT by run sq-product_20261124-123132.",
       "steps": [
         "KAT-036",
         {
@@ -154,8 +154,8 @@
     {
       "id": "sq-product-services",
       "title": "Simple Quote (Product + Services): create, open, supplier reply, close",
-      "verification": "unverified",
-      "notes": "Data-overrides 2026-11-13: KAT-038 used RN from SQ260000000002308 (product + service lines) replied by AINHALIM (KAT-030 login); check the supplier account before running.",
+      "verification": "execution",
+      "notes": "Data-overrides 2026-11-13: KAT-038 used RN from SQ260000000002308 (product + service lines) replied by AINHALIM (KAT-030 login); check the supplier account before running. Verified on SIT by run sq-product-services_20261124-131239.",
       "steps": [
         "KAT-037",
         {

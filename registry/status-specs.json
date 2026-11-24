@@ -2904,7 +2904,7 @@
    "method": "flow",
    "flow": "qt-bpk-revision",
    "upTo": "QT-108",
-   "manual": true
+   "manual": false
   },
   "SC|BPK|60154": {
    "spec": "tests/data-prep/en/by-status/sc/BPK/60154-Pending-BPK-Revision-Approval.spec.ts",
@@ -3267,155 +3267,155 @@
   "SC|LA|62500": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62500-Pending-Letter-Of-Acceptance-Submission.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62501": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62501-Pending-Letter-Of-Acceptance-Approval.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62502": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62502-Pending-Letter-of-Acceptance-Revision.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62504": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62504-Pending-Acknowledgement-Receipt-s-Letter-Of-Acceptance.spec.ts",
    "method": "flow",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62505": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62505-Pending-Verification-of-Acknowledgement-Receipt-s-Letter-Of-.spec.ts",
    "method": "flow",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-008",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-007",
    "manual": false
   },
   "SC|LA|62506": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62506-Letter-of-Acceptance-Completed.spec.ts",
    "method": "flow",
-   "flow": "dloa-oneoff-services",
+   "flow": "dloa-oneoff-product",
    "upTo": "KAT-010",
    "manual": false
   },
   "SC|LA|62507": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62507-Letter-of-Acceptance-Rejected.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62508": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62508-Pending-Letter-of-Acceptance-Revision-Approval.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62509": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62509-Cancelled.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62510": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62510-Cancel-Due-To-Ministry-Restructuring.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62511": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62511-Proceed-Manual-Due-To-Ministry-Restructuring.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62514": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62514-Quotation-Has-Been-Cancelled-Due-To-Proposal-Validity-Expire.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62515": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62515-Rejected-due-to-Simple-Quote-validity-period-is-expired-60-d.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62516": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62516-Cancelled-due-to-Simple-Quote-validity-period-is-expired-60-.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62517": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62517-Cancelled-Not-agree-with-extension-validity-period.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62520": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62520-Pending-Acknowledgement-Receipt-s-Letter-Of-Acceptance-Suppl.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62521": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62521-Pending-Cancellation-Letter-of-Acceptance.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62522": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62522-Letter-of-Acceptance-Cancellation-Approved.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62523": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62523-Letter-of-Acceptance-Cancellation-Rejected.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62602": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62602-Letter-of-Acceptance-Verified.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62604": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62604-QT-Cancellation-Request-From-User-Approved-By-BPK-MoF.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LA|62605": {
    "spec": "tests/data-prep/en/by-status/sc/LA/62605-Quotation-Tender-Closed-by-Agency-Due-To-Validity-Period-Exp.spec.ts",
    "method": "simulate",
-   "flow": "dloa-oneoff-services",
-   "upTo": "KAT-002",
+   "flow": "dloa-oneoff-product",
+   "upTo": "KAT-001",
    "manual": false
   },
   "SC|LI|62400": {
@@ -3956,8 +3956,8 @@
   "SC|QT|60005": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60005-Pending-Document-Approval-for-Publication.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
-   "upTo": "QT-008",
+   "flow": "qt-doc-revision",
+   "upTo": "QT-107",
    "manual": false
   },
   "SC|QT|60006": {
@@ -3965,7 +3965,7 @@
    "method": "flow",
    "flow": "qt-doc-revision",
    "upTo": "QT-109",
-   "manual": true
+   "manual": false
   },
   "SC|QT|60007": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60007-Pending-Notice-Publishing.spec.ts",
@@ -4675,77 +4675,77 @@
   "SC|SQ|60850": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60850-Pending-Submission.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60851": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60851-Pending-Supplier-Response.spec.ts",
    "method": "flow",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60852": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60852-Pending-Request-Note-Creation.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60853": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60853-Completed.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60854": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60854-Cancelled.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60855": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60855-Cancelled-due-to-Purchase-in-Default-validity-period-is-expi.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60856": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60856-Response-Submitted.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60857": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60857-Pending-Item-Code-Assignment.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60858": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60858-Cancel-Due-To-Ministry-Restructuring.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60860": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60860-Simple-Quote-Validity-Period-Expired.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
   "SC|SQ|60861": {
    "spec": "tests/data-prep/en/by-status/sc/SQ/60861-Cancelled-due-to-Simple-Quote-validity-period-is-expired-60-.spec.ts",
    "method": "simulate",
-   "flow": "dp-sq-pr",
+   "flow": "sq-services",
    "upTo": "KAT-021",
    "manual": false
   },
@@ -5192,7 +5192,7 @@
    "method": "flow",
    "flow": "sm-cancel-mof",
    "upTo": "SM-032",
-   "manual": true
+   "manual": false
   },
   "SM|SR|20192": {
    "spec": "tests/data-prep/en/by-status/sm/SR/20192-MOF-Account-Cancelled-by-Consultant.spec.ts",

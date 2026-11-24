@@ -4,7 +4,7 @@
 // Module:    qt / revision · flow qt-bpk-revision
 // Stops at:  BPK_REVISION — Pending Document Revision (BPK) (after QT-108, BPK Approver)
 // DB status: QT:BPK 60153 Pending Document Revision (BPK)
-// Path:      QT-001 → QT-002 → QT-003 → QT-004 → QT-005 → QT-006 → QT-007 → QT-108 (manual)
+// Path:      QT-001 → QT-002 → QT-003 → QT-004 → QT-005 → QT-006 → QT-007 → QT-108
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/qt/revision/qt-bpk-revision/08-BPK_REVISION.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow qt-bpk-revision --status BPK_REVISION

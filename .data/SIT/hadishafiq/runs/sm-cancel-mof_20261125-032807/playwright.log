@@ -1,0 +1,101 @@
+
+Running 2 tests using 1 worker
+
+[03:28:14] sm-cancel-mof/01_SM-031: SM-031 Submit the MOF account cancellation — role Supplier, login: Katalon default account of the step
+[03:28:16] sm-cancel-mof/01_SM-031: Logged in as 900101010815
+[03:28:20] sm-cancel-mof/01_SM-031: Cancel MOF form: eP App/My Application/Supplier Management/Cancel MOF Application Cancel MOF Account Application Cancel MOF Application The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Accou | buttons: Proceed
+[03:28:23] sm-cancel-mof/01_SM-031: Closed the TERKINI announcement
+[03:28:24] sm-cancel-mof/01_SM-031: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031 (11.1s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 02 SM-032 Approve the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/02_SM-032 @SM-032
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031 
+
+    Error: Cancel MOF form: no known submit button (buttons: Proceed); form: eP App/My Application/Supplier Management/Cancel MOF Application Cancel MOF Account Application Cancel MOF Application The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Accou
+
+       at ..\support\modules\sm\application.ts:316
+
+      314 |   await evidence.capture('cancel_form', { step: 'Cancel MOF Account form', expected: 'Submit', actual: buttons.join(', ') });
+      315 |   const submit = ['Submit', 'Declare', 'Cancel MOF Account', 'Hantar'].find((b) => buttons.includes(b));
+    > 316 |   if (!submit) throw new Error(`Cancel MOF form: no known submit button (buttons: ${buttons.join(', ')}); form: ${form.slice(0, 300)}`);
+          |                      ^
+      317 |   const msgs = await pressAndConfirm(page, submit, evidence.log);
+      318 |   const msg = [...msgs, await banner(page)].join(' | ');
+      319 |   evidence.log(`Cancel MOF → ${submit}: ${msg}`);
+        at cancelMof (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:316:22)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:103:65)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_032807\flows-en-sm.flow-sm-cancel-cb695-he-MOF-account-cancellation-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_032807\flows-en-sm.flow-sm-cancel-cb695-he-MOF-account-cancellation-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031 
+  1 did not run
+
+Running 2 tests using 1 worker
+
+[03:29:29] sm-cancel-mof/01_SM-031: BLOCKED: SM-031 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-722707: The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can ). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-cancel-mof_20261125-032807 --step SM-031
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 02 SM-032 Approve the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/02_SM-032 @SM-032
+
+  2 skipped
+
+Running 2 tests using 1 worker
+
+[03:30:19] sm-cancel-mof/01_SM-031: SM-031 Submit the MOF account cancellation — role Supplier, login: Katalon default account of the step
+[03:30:22] sm-cancel-mof/01_SM-031: Logged in as 900101010815
+[03:30:26] sm-cancel-mof/01_SM-031: Cancel MOF blocked: The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can be proceed. (ERR-722707)
+[03:30:30] sm-cancel-mof/01_SM-031: Revoke soft cert → Sign: (no banner)
+[03:30:37] sm-cancel-mof/01_SM-031: Closed the TERKINI announcement
+[03:30:37] sm-cancel-mof/01_SM-031: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031 (18.5s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 02 SM-032 Approve the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/02_SM-032 @SM-032
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031 
+
+    Error: Soft cert revocation signed, but Cancel MOF still answers ERR-722707 (revocation pending approval?)
+
+       at ..\support\modules\sm\application.ts:310
+
+      308 |     await revokeSoftCert(page, env, evidence, acct);
+      309 |     form = await open();
+    > 310 |     if (/ERR-722707/.test(form)) throw new Error('Soft cert revocation signed, but Cancel MOF still answers ERR-722707 (revocation pending approval?)');
+          |                                        ^
+      311 |   }
+      312 |   const buttons = (await page.locator('button:visible').allInnerTexts()).map(clean).filter(Boolean);
+      313 |   evidence.log(`Cancel MOF form: ${form.slice(0, 300)} | buttons: ${buttons.join(', ')}`);
+        at cancelMof (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:310:40)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:103:65)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_033013\flows-en-sm.flow-sm-cancel-cb695-he-MOF-account-cancellation-flows\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_033013\flows-en-sm.flow-sm-cancel-cb695-he-MOF-account-cancellation-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_033013\flows-en-sm.flow-sm-cancel-cb695-he-MOF-account-cancellation-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031 
+  1 did not run
+
+Running 2 tests using 1 worker
+
+[03:31:42] sm-cancel-mof/01_SM-031: BLOCKED: SM-031 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-722707: The personnel 1. OWNER 8560 has a valid digital certificate. Please go to the SoftCert Management menu to revoke this personnel digital certificate first before the Cancel MOF Account application can ). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-cancel-mof_20261125-032807 --step SM-031
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 01 SM-031 Submit the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/01_SM-031 @SM-031
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-cancel-mof [EN] Cancel MOF Account (contractor) › 02 SM-032 Approve the MOF account cancellation @flow-sm-cancel-mof @module-sm @lang-en @FLOW @sm-cancel-mof/02_SM-032 @SM-032
+
+  2 skipped

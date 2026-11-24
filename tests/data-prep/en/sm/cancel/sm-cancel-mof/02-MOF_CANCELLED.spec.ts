@@ -4,7 +4,7 @@
 // Module:    sm / cancel · flow sm-cancel-mof
 // Stops at:  MOF_CANCELLED — MOF account cancelled by the contractor (after SM-032, Approver)
 // DB status: AP 20191 MOF Account Cancelled by Contractor
-// Path:      SM-031 (manual) → SM-032 (manual)
+// Path:      SM-031 → SM-032
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/cancel/sm-cancel-mof/02-MOF_CANCELLED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-cancel-mof --status MOF_CANCELLED

@@ -23,8 +23,8 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | FL | 165 | 12 | 18 | 65 | 44 | 26 |
 | PM | 2 | 2 | 0 | 0 | 0 | 0 |
 | PP | 14 | 0 | 0 | 14 | 0 | 0 |
-| SC | 308 | 22 | 2 | 167 | 53 | 64 |
-| SM | 74 | 6 | 11 | 11 | 11 | 35 |
+| SC | 308 | 24 | 0 | 167 | 53 | 64 |
+| SM | 74 | 7 | 10 | 11 | 11 | 35 |
 
 ## CD
 
@@ -498,7 +498,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | BPK | 60150 | Pending BPK Approval | Menunggu Kelulusan BPK | 1719 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/BPK/60150-Pending-BPK-Approval.spec.ts) |
 | BPK | 60151 | BPK Approval Approved | Kelulusan BPK Telah Diluluskan | 1403 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/BPK/60151-BPK-Approval-Approved.spec.ts) |
 | BPK | 60152 | BPK Approval Rejected | Kelulusan BPK Telah Ditolak | 0 | NEVER_USED | [simulate](../tests/data-prep/en/by-status/sc/BPK/60152-BPK-Approval-Rejected.spec.ts) |
-| BPK | 60153 | Pending Document Revision (BPK) | Menunggu Kaji Semula Dokumen (BPK) | 115 (2026-11-11) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/sc/BPK/60153-Pending-Document-Revision-BPK.spec.ts) |
+| BPK | 60153 | Pending Document Revision (BPK) | Menunggu Kaji Semula Dokumen (BPK) | 115 (2026-11-11) | FLOW | [flow](../tests/data-prep/en/by-status/sc/BPK/60153-Pending-Document-Revision-BPK.spec.ts) |
 | BPK | 60154 | Pending BPK Revision Approval | Menunggu Kelulusan Kaji Semula BPK | 59 (2026-10-27) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/BPK/60154-Pending-BPK-Revision-Approval.spec.ts) |
 | BPK | 60157 | Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any) | Sebutharga Telah Dibatalkan Disebabkan Tamat Tempoh Sahlaku. Kelulusan Daripada Mof Perlu Diperolehi Sekiranya Perlu Tindakan Selanjutnya | 0 | SYSTEM | [simulate](../tests/data-prep/en/by-status/sc/BPK/60157-Quotation-Has-Been-Cancelled-Due-To-Proposal-Validity-Expire.spec.ts) |
 | BSA | 63500 | Pending Additional BSV Attendance Approval | Menunggu Kelulusan Penambahan Kedatangan BSV | 258 (2026-08-12) | UI_NO_FLOW | [unmapped](../tests/data-prep/en/by-status/sc/BSA/63500-Pending-Additional-BSV-Attendance-Approval.spec.ts) |
@@ -656,7 +656,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | QT | 60003 | Pending Specification Preparation | Menunggu Penyediaan Spesifikasi | 19769 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/sc/QT/60003-Pending-Specification-Preparation.spec.ts) |
 | QT | 60004 | Pending Document Preparation | Menunggu Penyediaan Dokumen | 15640 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/sc/QT/60004-Pending-Document-Preparation.spec.ts) |
 | QT | 60005 | Pending Document Approval for Publication | Menunggu Kelulusan Dokumen untuk Pengiklanan | 14955 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/sc/QT/60005-Pending-Document-Approval-for-Publication.spec.ts) |
-| QT | 60006 | Pending Document Revision | Menunggu Kaji Semula Dokumen | 1220 (2026-11-18) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/sc/QT/60006-Pending-Document-Revision.spec.ts) |
+| QT | 60006 | Pending Document Revision | Menunggu Kaji Semula Dokumen | 1220 (2026-11-18) | FLOW | [flow](../tests/data-prep/en/by-status/sc/QT/60006-Pending-Document-Revision.spec.ts) |
 | QT | 60007 | Pending Notice Publishing | Menunggu Notis Pengiklanan | 13049 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/sc/QT/60007-Pending-Notice-Publishing.spec.ts) |
 | QT | 60008 | Pending Briefing / Site Visit Registration | Menunggu Pendaftaran Taklimat / Lawatan Tapak | 987 (2026-11-13) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/QT/60008-Pending-Briefing-Site-Visit-Registration.spec.ts) |
 | QT | 60009 | Pending Proposal Preparation | Menunggu Penyediaan Cadangan | 11977 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/sc/QT/60009-Pending-Proposal-Preparation.spec.ts) |
@@ -850,7 +850,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | SR | 20188 | Delete Company | Pembatalan Syarikat | 3393 (2017-12-08) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sm/SR/20188-Delete-Company.spec.ts) |
 | SR | 20189 | Deleted by Contractor | Dihapuskan oleh Kontraktor | 25512 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sm/SR/20189-Deleted-by-Contractor.spec.ts) |
 | SR | 20190 | Deleted by Consultant | Dihapuskan oleh Perunding | 6472 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sm/SR/20190-Deleted-by-Consultant.spec.ts) |
-| SR | 20191 | MOF Account Cancelled by Contractor | Akaun MOF Dibatalkan oleh Kontraktor | 179 (2026-11-06) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/sm/SR/20191-MOF-Account-Cancelled-by-Contractor.spec.ts) |
+| SR | 20191 | MOF Account Cancelled by Contractor | Akaun MOF Dibatalkan oleh Kontraktor | 179 (2026-11-06) | FLOW | [flow](../tests/data-prep/en/by-status/sm/SR/20191-MOF-Account-Cancelled-by-Contractor.spec.ts) |
 | SR | 20192 | MOF Account Cancelled by Consultant | Akaun MOF Dibatalkan oleh Perunding | 40 (2026-06-24) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sm/SR/20192-MOF-Account-Cancelled-by-Consultant.spec.ts) |
 | SR | 20193 | Cancelled Pre-Registration Account | Pra-Pendaftaran Akaun Dibatalkan | 57 (2026-06-24) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sm/SR/20193-Cancelled-Pre-Registration-Account.spec.ts) |
 | SR | 20198 | Pending Certificate Generation | Menunggu Penjanaan Sijil | 0 | NEVER_USED | [simulate](../tests/data-prep/en/by-status/sm/SR/20198-Pending-Certificate-Generation.spec.ts) |

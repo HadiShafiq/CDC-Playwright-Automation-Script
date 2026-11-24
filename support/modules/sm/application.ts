@@ -9,6 +9,7 @@ import { loadCredentials, loadPasswordFor } from '../../credentials';
 import { sitQuery } from '../../core/sit-db';
 import { ssoLogin, ssoLogout, ensureEnglish } from '../../mof/sso';
 import { waitForAjaxIdle } from '../../primefaces';
+import { pressAndConfirm } from '../qt/pf';
 
 /*
  * SM supplier applications of an already REGISTERED MOF supplier (Update MOF Profile KU-…, later add category, delete…).
@@ -239,4 +240,89 @@ export async function createRenewalDraft({ page, env, evidence }: AppCtx): Promi
   audit(env.name, WHO, `SM-024 Renewal MOF Account of ${acct.username}`, `**Draft ${ap} saved**`, 'Save', 'Declare + processing fee');
   await ssoLogout(page, env);
   return ap;
+}
+
+/** Cancel supplier: SM_CANCEL_ACCOUNT, default our 900101010815 (the only one of ours with the Cancel link, 2026-11-25). */
+function cancelAccount(env: EnvConfig) {
+  const login = process.env.SM_CANCEL_ACCOUNT ?? '900101010815';
+  const acct = loadAccounts().find((a) => a.env === env.name && a.username === login);
+  if (!acct) throw new Error(`Cancel supplier ${login} is not in .auth/mof-accounts.json`);
+  return acct;
+}
+
+/**
+ * Revoke the supplier administrator's soft cert (SIT ERR-722707 blocks Cancel MOF while a valid soft cert exists).
+ * SoftCert Management → "here" → select the personnel → Proceed → PIN dialog (spki_dlg_id: challenge answer if asked,
+ * PIN from .auth/mof-accounts.json softCert) → Sign. Built from the SIT screens 2026-11-25.
+ */
+async function revokeSoftCert(page: Page, env: EnvConfig, evidence: Evidence, acct: ReturnType<typeof cancelAccount>) {
+  const soft = acct.softCert;
+  if (!soft?.pin) throw new Error(`No soft cert PIN stored for ${acct.username} (.auth/mof-accounts.json softCert)`);
+  await page.goto(`${env.baseURL}/web/epapp/pengurusan-sijil-digital`);
+  await waitForAjaxIdle(page);
+  await page.locator('a.ui-commandlink').filter({ hasText: 'here' }).first().click();
+  await waitForAjaxIdle(page);
+  await page.locator('.ui-radiobutton-box:visible').first().click();
+  await waitForAjaxIdle(page);
+  await page.getByRole('button', { name: 'Proceed', exact: true }).click();
+  await waitForAjaxIdle(page, 30_000, { dialogOpen: true });
+  const dlg = page.locator('.ui-dialog:visible').filter({ hasText: /Soft Cert PIN/i }).last();
+  await dlg.waitFor({ timeout: 30_000 });
+  const text = clean(await dlg.innerText());
+  const qa = (soft.questions ?? []).find((q: { question: string; answer: string }) => text.includes(q.question));
+  const answer = dlg.locator('input[type=text]:visible, input:not([type]):visible').first();
+  if (qa && (await answer.count())) await answer.fill(qa.answer);
+  else if (await answer.count()) throw new Error(`Revoke dialog asks a challenge question we have no answer for: ${text.slice(0, 200)}`);
+  await dlg.locator('input[type=password]:visible').first().fill(soft.pin);
+  await evidence.capture('revoke_softcert_dialog', { step: 'Revoke soft cert: PIN dialog', expected: 'PIN + challenge answer', actual: text.slice(0, 150) });
+  await dlg.getByRole('button', { name: /^Sign$/ }).click();
+  await waitForAjaxIdle(page);
+  await page.waitForTimeout(3000);
+  const msg = await banner(page);
+  evidence.log(`Revoke soft cert → Sign: ${msg || '(no banner)'}`);
+  await evidence.capture('revoke_softcert_done', { step: 'Revoke soft cert: Sign', expected: 'Revocation submitted', actual: msg });
+  audit(env.name, WHO, `SM-031 revoke soft cert of ${acct.username}`, `**Soft cert revocation signed** (${msg.slice(0, 120)})`, 'Sign', 'Cancel MOF Account');
+  if (/ERR-\d+/.test(msg) && !/success/i.test(msg)) throw new Error(`Soft cert revocation refused: ${msg}`);
+  return msg;
+}
+
+/** SM-031: Cancel MOF Account (revoking the soft cert first when SIT asks). Returns the cancellation application (KC-…). */
+export async function cancelMof({ page, env, evidence }: AppCtx): Promise<string> {
+  const acct = cancelAccount(env);
+  await ssoLogin(page, env, acct.username, acct.password, evidence.log);
+  await ensureEnglish(page);
+  // T&C → Proceed; SIT answers ERR-722707 only after Proceed when a valid soft cert exists (2026-11-25)
+  const open = async () => {
+    await page.goto(`${env.baseURL}/web/epapp/cancel-mof-registered`);
+    await waitForAjaxIdle(page);
+    await page.locator('.ui-chkbox-box:visible').first().click();
+    await waitForAjaxIdle(page);
+    await page.getByRole('button', { name: 'Proceed', exact: true }).click();
+    await waitForAjaxIdle(page);
+    await page.waitForTimeout(2000);
+    return clean(await page.locator('#main-content, #content').first().innerText().catch(() => ''));
+  };
+  let form = await open();
+  if (/ERR-722707/.test(form)) {
+    evidence.log(`Cancel MOF blocked: ${form.match(/The personnel.{0,200}?ERR-722707\)/)?.[0] ?? 'ERR-722707'}`);
+    await revokeSoftCert(page, env, evidence, acct);
+    form = await open();
+    if (/ERR-722707/.test(form)) throw new Error('Soft cert revocation signed, but Cancel MOF still answers ERR-722707 (revocation pending approval?)');
+  }
+  const buttons = (await page.locator('button:visible').allInnerTexts()).map(clean).filter(Boolean);
+  evidence.log(`Cancel MOF form: ${form.slice(0, 300)} | buttons: ${buttons.join(', ')}`);
+  await evidence.capture('cancel_form', { step: 'Cancel MOF Account form', expected: 'Submit', actual: buttons.join(', ') });
+  const submit = ['Submit', 'Declare', 'Cancel MOF Account', 'Hantar'].find((b) => buttons.includes(b));
+  if (!submit) throw new Error(`Cancel MOF form: no known submit button (buttons: ${buttons.join(', ')}); form: ${form.slice(0, 300)}`);
+  const msgs = await pressAndConfirm(page, submit, evidence.log);
+  const msg = [...msgs, await banner(page)].join(' | ');
+  evidence.log(`Cancel MOF → ${submit}: ${msg}`);
+  await evidence.capture('cancel_submitted', { step: `Cancel MOF → ${submit}`, expected: 'Cancellation submitted', actual: msg });
+  if (/ERR-\d+/.test(msg) && !/success/i.test(msg)) throw new Error(`Cancel MOF refused: ${msg}`);
+  const kc = msg.match(/\b[KJ]C-\d{8}-\d{4}\b/)?.[0]
+    ?? sitQuery(`select a.appl_no from ngep_sit.sm_appl a join ngep_sit.pm_user_org o on o.org_profile_id = a.supplier_id join ngep_sit.pm_user u on u.user_id = o.user_id where u.login_id = '${acct.username}' and a.appl_no like '_C-%' order by a.created_date desc`)[0]?.[0];
+  if (!kc) throw new Error(`Cancel MOF submitted but no KC application found: ${msg}`);
+  audit(env.name, WHO, `SM-031 Cancel MOF Account of ${acct.username}`, `**${kc} submitted** (${msg.slice(0, 120)})`, submit, 'Officer approval');
+  await ssoLogout(page, env);
+  return kc;
 }

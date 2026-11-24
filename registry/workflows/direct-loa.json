@@ -713,8 +713,8 @@
     {
       "id": "dloa-oneoff-product",
       "title": "Direct LOA Direct LOA One-Off - Product → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-001 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-001 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-oneoff-product_20261123-170404.",
       "steps": [
         "KAT-001",
         "LA-APPROVE",
@@ -739,8 +739,8 @@
     {
       "id": "dloa-oneoff-product-services",
       "title": "Direct LOA Direct LOA One-Off - Product Plus Service → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-003 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-003 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-oneoff-product-services_20261123-171141.",
       "steps": [
         "KAT-003",
         "LA-APPROVE",
@@ -752,8 +752,8 @@
     {
       "id": "dloa-schedule-product",
       "title": "Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-004 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-004 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-schedule-product_20261124-025014.",
       "steps": [
         "KAT-004",
         "LA-APPROVE",
@@ -765,8 +765,8 @@
     {
       "id": "dloa-schedule-services",
       "title": "Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-005 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-005 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-schedule-services_20261123-173040.",
       "steps": [
         "KAT-005",
         "LA-APPROVE",
@@ -778,8 +778,8 @@
     {
       "id": "dloa-schedule-product-services",
       "title": "Direct LOA Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-006 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-006 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-schedule-product-services_20261124-025622.",
       "steps": [
         "KAT-006",
         "LA-APPROVE",
@@ -791,8 +791,8 @@
     {
       "id": "dloa-open-oneoff-product",
       "title": "Direct LOA Open Open Direct LOA One-Off - Product → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-011 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-011 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-open-oneoff-product_20261123-181526.",
       "steps": [
         "KAT-011",
         "LA-APPROVE",
@@ -804,8 +804,8 @@
     {
       "id": "dloa-open-oneoff-services",
       "title": "Direct LOA Open Open Direct LOA One-Off - Services → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-012 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-012 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-open-oneoff-services_20261124-030425.",
       "steps": [
         "KAT-012",
         "LA-APPROVE",
@@ -817,8 +817,8 @@
     {
       "id": "dloa-open-oneoff-product-services",
       "title": "Direct LOA Open Open Direct LOA One-Off - Product Plus Service → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-013 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-013 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-open-oneoff-product-services_20261124-031031.",
       "steps": [
         "KAT-013",
         "LA-APPROVE",
@@ -830,8 +830,8 @@
     {
       "id": "dloa-open-schedule-product",
       "title": "Direct LOA Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-014 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-014 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-open-schedule-product_20261124-031807.",
       "steps": [
         "KAT-014",
         "LA-APPROVE",
@@ -843,8 +843,8 @@
     {
       "id": "dloa-open-schedule-services",
       "title": "Direct LOA Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Service → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-015 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-015 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-open-schedule-services_20261124-032517.",
       "steps": [
         "KAT-015",
         "LA-APPROVE",
@@ -856,8 +856,8 @@
     {
       "id": "dloa-open-schedule-product-services",
       "title": "Direct LOA Open Open Direct LOA Agreement_Periodic (As And When or Schedule) - Product Plus Service → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-016 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-016 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-open-schedule-product-services_20261124-033038.",
       "steps": [
         "KAT-016",
         "LA-APPROVE",
@@ -869,8 +869,8 @@
     {
       "id": "dloa-zonal-oneoff-product",
       "title": "Direct LOA Zonal Direct LOA One-Off - Product → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-017 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-017 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-zonal-oneoff-product_20261124-033845.",
       "steps": [
         "KAT-017",
         "LA-APPROVE",
@@ -882,8 +882,8 @@
     {
       "id": "dloa-zonal-oneoff-services",
       "title": "Direct LOA Zonal Direct LOA One-Off - Services → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-018 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-018 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-zonal-oneoff-services_20261124-034528.",
       "steps": [
         "KAT-018",
         "LA-APPROVE",
@@ -895,8 +895,8 @@
     {
       "id": "dloa-zonal-schedule-product",
       "title": "Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Product → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-019 = company of the KAT-007 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-019 = company of the KAT-007 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-zonal-schedule-product_20261124-035141.",
       "steps": [
         "KAT-019",
         "LA-APPROVE",
@@ -908,8 +908,8 @@
     {
       "id": "dloa-zonal-schedule-services",
       "title": "Direct LOA Zonal Direct LOA Agreement_Periodic (As And When_Schedule) - Services → supplier → DO verify",
-      "verification": "documentation",
-      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-020 = company of the KAT-008 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account.",
+      "verification": "execution",
+      "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-020 = company of the KAT-008 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account. Verified on SIT by run dloa-zonal-schedule-services_20261124-035953.",
       "steps": [
         "KAT-020",
         "LA-APPROVE",

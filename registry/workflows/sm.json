@@ -709,8 +709,8 @@
       "role": "Supplier",
       "stateChanging": true,
       "login": "default",
-      "automation": "manual",
-      "source": "unit_test (kapitan) tests/supplier-appl/cancel-mof-tracking-diary.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "automation": "module",
+      "source": "support/modules/sm/application.ts cancelMof (+ revokeSoftCert) — built 2026-11-25; unit_test (kapitan) tests/supplier-appl/cancel-mof-tracking-diary.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
       "instructions": "Revoke the soft cert, submit Cancel MOF Account.",
       "inputs": [],
       "outputs": [
@@ -741,9 +741,9 @@
       "title": "Approve the MOF account cancellation",
       "role": "Approver",
       "stateChanging": true,
-      "login": "assignedOfficer",
-      "automation": "manual",
-      "source": "unit_test (kapitan) tests/supplier-appl/cancel-mof-approve.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "login": "default",
+      "automation": "module",
+      "source": "reg003 officer loop — built 2026-11-25; unit_test (kapitan) tests/supplier-appl/cancel-mof-approve.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
       "instructions": "Officer: approve the cancellation (supplier, MOF account and certs → record_status 9).",
       "inputs": [
         {

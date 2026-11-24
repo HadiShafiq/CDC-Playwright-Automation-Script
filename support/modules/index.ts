@@ -3,10 +3,10 @@ import type { DocType } from '../core/documents';
 import type { EnvConfig } from '../../config/environments';
 import type { Evidence } from '../../fixtures/test';
 import { reg001, reg002, reg003, reg004 } from './sm/registration';
-import { createRenewalDraft, createUpdateDraft, declareAppl, supplierOfAppl } from './sm/application';
+import { cancelMof, createRenewalDraft, createUpdateDraft, declareAppl, supplierOfAppl } from './sm/application';
 import { loadAccounts } from '../mof/accounts';
 import { activateAccess, decideAccess, submitAccessApplication } from './pm/access';
-import { approveTask, completeAndSubmit, createDraft, QT_SIT } from './qt/stages';
+import { approveTask, completeAndSubmit, createDraft, QT_SIT, reviseTask } from './qt/stages';
 import { prepareSpec } from './qt/spec';
 import { bpkApprove, prepareDocuments } from './qt/docprep';
 import { submitProposal, techAction } from './qt/supplier';
@@ -100,6 +100,8 @@ export const MODULE_STEPS: Record<string, ModuleStep> = {
   // Update MOF Profile of our registered supplier (support/modules/sm/application.ts)
   'SM-022': { selfLogin: true, run: async (ctx) => { const c = { page: ctx.page, env: ctx.env, evidence: ctx.evidence }; const ap = await createUpdateDraft(c); return { outputs: { AP: ap }, messages: [`Update MOF Profile ${ap} drafted`] }; } },
   'SM-004': { selfLogin: true, run: async (ctx) => ({ messages: [await declareAppl({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, need(ctx, 'AP'))] }) },
+  'SM-031': { selfLogin: true, run: async (ctx) => { const kc = await cancelMof({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }); return { outputs: { AP: kc }, messages: [`Cancel MOF Account ${kc} submitted`] }; } },
+  'SM-032': { selfLogin: true, run: smOfficer },
   'SM-024': { selfLogin: true, run: async (ctx) => { const ap = await createRenewalDraft({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }); return { outputs: { AP: ap }, messages: [`Renewal ${ap} drafted`] }; } },
   'SM-012': {
     selfLogin: true,
@@ -147,9 +149,12 @@ export const MODULE_STEPS: Record<string, ModuleStep> = {
     },
   },
   'QT-007': { loginAs: QT_SIT.users.DESK_OFFICER, run: async (ctx) => prepareDocuments(ctx, need(ctx, 'QT')) },
-  'QT-107': { loginAs: QT_SIT.users.DESK_OFFICER, run: async (ctx) => prepareDocuments(ctx, need(ctx, 'QT')) },
+  // No BPK: Open For = Bumiputera (SC_QT.OPEN_FOR = B, as QT260000000004373) instead of All (A → BPK approval 60030)
+  'QT-107': { loginAs: QT_SIT.users.DESK_OFFICER, run: async (ctx) => prepareDocuments(ctx, need(ctx, 'QT'), { openFor: /Bumi/i }) },
   'QT-008': { loginAs: QT_SIT.users.BPK_APPROVER, run: async (ctx) => bpkApprove(ctx, need(ctx, 'QT')) },
   'QT-009': { loginAs: QT_SIT.users.PUBLICATION_APPROVER, run: async (ctx) => approveTask(ctx, need(ctx, 'QT')) },
+  'QT-108': { loginAs: QT_SIT.users.BPK_APPROVER, run: async (ctx) => bpkApprove(ctx, need(ctx, 'QT'), /Revis|Kaji Semula|Return/i) },
+  'QT-109': { loginAs: QT_SIT.users.PUBLICATION_APPROVER, run: async (ctx) => reviseTask(ctx, need(ctx, 'QT')) },
   // 60007 → 60009: Technical Support publishes the notice now (instead of waiting for the publish date)
   'QT-010': { loginAs: QT_SIT.users.TECH_SUPPORT, run: async (ctx) => techAction(ctx, need(ctx, 'QT'), 'Publish') },
   // 60009 → 60022: the QT suppliers submit proposals, then Technical Support closes the QT

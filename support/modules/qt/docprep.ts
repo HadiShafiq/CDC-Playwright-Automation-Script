@@ -60,7 +60,7 @@ async function setProposalValidity(page: Page, days: string) {
   return `validity ${(await box.inputValue()).replace(/_/g, '')} days`;
 }
 
-async function setQualificationScope(page: Page, categoryCode: string, openFor = 'All', localityCoverage = 'State') {
+async function setQualificationScope(page: Page, categoryCode: string, openForWanted: string | RegExp = 'All', localityCoverage = 'State') {
   await openTab(page, 'Supplier Qualification Criteria');
   const out: string[] = [];
   const codes = () =>
@@ -90,6 +90,11 @@ async function setQualificationScope(page: Page, categoryCode: string, openFor =
     await pfIdle(page);
     out.push(`removed ${others.join(', ')}`);
   }
+  // "Open For" decides BPK: All (SC_QT.OPEN_FOR = A) needs BPK approval (60030); the no-BPK path (QT260000000004373,
+  // 60004 → 60005) has OPEN_FOR = B. A RegExp picks the option by label (read from the row) or fails listing them.
+  const openForLabels = await page.evaluate(() => [...document.querySelectorAll('tr')].filter((tr) => /Open For/.test((tr as HTMLElement).innerText) && tr.querySelector('input[type=radio]')).flatMap((tr) => [...tr.querySelectorAll('label')].map((l) => (l as HTMLElement).innerText.trim()).filter(Boolean)).slice(0, 12));
+  const openFor = typeof openForWanted === 'string' ? openForWanted : openForLabels.find((l) => openForWanted.test(l));
+  if (!openFor) throw new Error(`No "Open For" option matching ${openForWanted} (options: ${openForLabels.join(' | ')})`);
   const checked = await page.evaluate(() => [...document.querySelectorAll('input[type=radio]')].filter((r) => (r as HTMLInputElement).checked && /Open For/.test((r.closest('tr') as HTMLElement | null)?.innerText || '')).map((r) => (r.closest('td') as HTMLElement | null)?.innerText.trim() || '')[0] || '');
   if (!checked.includes(openFor)) {
     await page.locator(`xpath=//tr[.//*[contains(normalize-space(), "Open For")]]//label[normalize-space()="${openFor}"]`).first().click();
@@ -149,7 +154,7 @@ async function ensureContactPerson(page: Page) {
   return 'contact person row added';
 }
 
-export async function prepareDocuments(ctx: StageCtx, qt: string): Promise<{ messages: string[] }> {
+export async function prepareDocuments(ctx: StageCtx, qt: string, { openFor = 'All' as string | RegExp } = {}): Promise<{ messages: string[] }> {
   const { page, log } = ctx;
   const tier = sitQuery(`select evaluation_type from ngep_sit.sc_qt where qt_no = '${qt}'`)[0]?.[0];
   await openTask(page, ctx.baseURL, qt, log);
@@ -164,7 +169,7 @@ export async function prepareDocuments(ctx: StageCtx, qt: string): Promise<{ mes
   for (const [tab, key] of tabs) for (const [i, ic] of QT_SIT.committees[key].entries()) log(`${tab}: ${await addCommitteeMember(page, ic, ROLES[i], tab)}`);
   log(`publication approver: ${await selectApprover(page, QT_SIT.publicationApprover, 'Publication Approval')}`);
   log(`validity: ${await setProposalValidity(page, '90')}`);
-  log(`scope: ${await setQualificationScope(page, QT_SIT.categoryCode)}`);
+  log(`scope: ${await setQualificationScope(page, QT_SIT.categoryCode, openFor)}`);
   log(`schedule: ${await setPublishDate(page, 1)}`);
   log(`contact: ${await ensureContactPerson(page)}`);
   await clickButton(page, 'Save');
@@ -175,7 +180,8 @@ export async function prepareDocuments(ctx: StageCtx, qt: string): Promise<{ mes
   return { messages: msgs };
 }
 
-export async function bpkApprove(ctx: StageCtx, qt: string): Promise<{ messages: string[] }> {
+/** BPK decision on every document row: Approve (QT-008) or a revision decision (QT-108, /Revis|Kaji Semula/). */
+export async function bpkApprove(ctx: StageCtx, qt: string, decision: RegExp = /^Approve/i): Promise<{ messages: string[] }> {
   const { page, log } = ctx;
   await openTask(page, ctx.baseURL, qt, log);
   const claim = page.getByRole('button', { name: 'Claim', exact: true });
@@ -188,8 +194,8 @@ export async function bpkApprove(ctx: StageCtx, qt: string): Promise<{ messages:
   }
   const sels = await settledEval(page, () => [...document.querySelectorAll('select')].filter((s) => /Decision/.test((s.closest('table') as HTMLTableElement | null)?.tHead?.innerText || '')).map((s) => ({ id: s.id.replace(/_input$/, ''), opts: [...s.options].map((o) => o.text.trim()) })), undefined);
   for (const s of sels) {
-    const opt = s.opts.find((o) => /^Approve/i.test(o));
-    if (!opt) throw new Error(`No Approve decision offered: ${s.opts.join(' | ')}`);
+    const opt = s.opts.find((o) => decision.test(o));
+    if (!opt) throw new Error(`No decision matching ${decision} offered: ${s.opts.join(' | ')}`);
     await pfSelect(page, s.id, opt);
   }
   await page.waitForTimeout(2000);
@@ -198,8 +204,8 @@ export async function bpkApprove(ctx: StageCtx, qt: string): Promise<{ messages:
       t.value = r;
       t.dispatchEvent(new Event('change', { bubbles: true }));
     }
-  }), 'Approved (QA automation)');
+  }), /Approve/i.test(decision.source) ? 'Approved (QA automation)' : 'Please revise (QA automation)');
   const msgs = await pressAndConfirm(page, 'Submit', log);
-  if (!msgs.some((m) => /success|approved|submitted/i.test(m))) throw new Error(`BPK submit: ${msgs.join(' | ') || 'no message'}`);
+  if (!msgs.some((m) => /success|approved|submitted|revis/i.test(m))) throw new Error(`BPK submit: ${msgs.join(' | ') || 'no message'}`);
   return { messages: msgs };
 }

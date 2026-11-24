@@ -231,3 +231,27 @@ export async function approveTask(ctx: StageCtx, qt: string, { button = 'Approve
   if (!msgs.some((m) => /success|is approved|is verified|submitted|endorsed|signed off|published/i.test(m))) throw new Error(`${button} not confirmed: ${msgs.join(' | ') || 'no message'}`);
   return { messages: msgs };
 }
+
+/**
+ * QT-109: the Publication Approver sends the documents back (60005 → 60006). The button label is not known from SIT yet:
+ * the first visible one of the candidates is pressed; none → fail BEFORE any click, listing the buttons on the form.
+ */
+export async function reviseTask(ctx: StageCtx, qt: string, candidates = ['Revise', 'Send for Revision', 'Return for Revision', 'Kaji Semula', 'Return']): Promise<{ messages: string[] }> {
+  const { page, log } = ctx;
+  await openTask(page, ctx.baseURL, qt, log);
+  const visible = (await page.locator('button:visible').allInnerTexts()).map((t) => t.trim()).filter(Boolean);
+  const button = candidates.find((c) => visible.includes(c));
+  if (!button) throw new Error(`No revise button on ${qt} (nothing pressed). Buttons: ${visible.join(' | ')}`);
+  await page.evaluate((remark) => {
+    for (const t of document.querySelectorAll('textarea')) {
+      const ta = t as HTMLTextAreaElement;
+      if (ta.offsetWidth && !ta.readOnly && !ta.disabled && !ta.value && !ta.closest('.ui-dialog')) {
+        ta.value = remark;
+        ta.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    }
+  }, 'Please revise (QA automation)');
+  const msgs = await pressAndConfirm(page, button, log);
+  if (!msgs.some((m) => /success|revis|returned|sent back|submitted/i.test(m))) throw new Error(`${button} not confirmed: ${msgs.join(' | ') || 'no message'}`);
+  return { messages: msgs };
+}
