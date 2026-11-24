@@ -637,8 +637,8 @@
       "id": "qt-to-recommendation-no-bpk",
       "submodule": "quotation-tender",
       "title": "Quotation / Tender without BPK to Pending Recommendation",
-      "verification": "documentation",
-      "notes": "As qt-to-recommendation, documents go straight to publication approval (60005).",
+      "verification": "execution",
+      "notes": "As qt-to-recommendation, documents go straight to publication approval (60005). Verified on SIT 2026-11-25: QT260000000004539 → 60023 (run qt-to-recommendation-no-bpk_20261125-041338, 14/14).",
       "steps": [
         "QT-001",
         "QT-002",

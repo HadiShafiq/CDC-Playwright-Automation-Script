@@ -1,29 +1,25 @@
 {
   "module": "SC",
-  "at": "2026-11-24T18:26:18+08:00",
+  "at": "2026-11-25T05:11:40+08:00",
   "dry": false,
   "sandbox": {
-    "BPK": "QT260000000004524",
-    "CMT": "QT260000000004524",
+    "BPK": "QT260000000004537",
+    "CMT": "QT260000000004539",
     "DAR": null,
     "EC": null,
     "EPV": null,
-    "FEC": "QT260000000004524",
-    "LA": "LA260000000004238",
+    "FEC": "QT260000000004539",
     "LI": null,
-    "OC": "QT260000000004524",
     "PCB": null,
     "PD": null,
     "PI": "PI260000000000804",
     "PTJ": null,
     "QC": null,
     "QDR": null,
-    "QT": "QT260000000004524",
-    "RN": "RN260000000004918",
+    "RN": "RN260000000004925",
     "SE": null,
     "SF": null,
-    "SQ": "SQ260000000002371",
-    "TEC": "QT260000000004524"
+    "SQ": "SQ260000000002371"
   },
   "results": [
     {
@@ -32,13 +28,6 @@
       "en": "Pending BPK Approval",
       "doc": "QT260000000004524",
       "result": "OK; restored to 60151"
-    },
-    {
-      "wf": "BPK",
-      "status": 60151,
-      "en": "BPK Approval Approved",
-      "doc": "QT260000000004524",
-      "result": "already there (real status)"
     },
     {
       "wf": "BPK",
@@ -74,13 +63,6 @@
       "en": "Pending Committee Formation Approval",
       "doc": "QT260000000004524",
       "result": "OK; restored to 60202"
-    },
-    {
-      "wf": "CMT",
-      "status": 60202,
-      "en": "Committee Formation Completed",
-      "doc": "QT260000000004524",
-      "result": "already there (real status)"
     },
     {
       "wf": "CMT",
@@ -167,132 +149,6 @@
       "result": "OK; restored to 60202"
     },
     {
-      "wf": "DAR",
-      "status": 63557,
-      "en": "Pending Desk Officer Assistant Update Approval",
-      "result": "no sandbox QT with a DAR workflow row"
-    },
-    {
-      "wf": "DAR",
-      "status": 63558,
-      "en": "Desk Officer Assistant Update Approval Completed",
-      "result": "no sandbox QT with a DAR workflow row"
-    },
-    {
-      "wf": "DAR",
-      "status": 63559,
-      "en": "Desk Officer Assistant Update Rejected",
-      "result": "no sandbox QT with a DAR workflow row"
-    },
-    {
-      "wf": "DAR",
-      "status": 63560,
-      "en": "Pending Desk Officer Assistant Update (Revision)",
-      "result": "no sandbox QT with a DAR workflow row"
-    },
-    {
-      "wf": "DAR",
-      "status": 63561,
-      "en": "Pending Desk Officer Assistant Update Approval (Revision)",
-      "result": "no sandbox QT with a DAR workflow row"
-    },
-    {
-      "wf": "DAR",
-      "status": 63562,
-      "en": "Desk Officer Assistant's update is cancelled.",
-      "result": "no sandbox QT with a DAR workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62050,
-      "en": "Pending Confirmation Evaluation Committee",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62051,
-      "en": "Pending Document Compliance and Proposal Evaluation",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62053,
-      "en": "Pending Proposal Evaluation Endorsement",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62054,
-      "en": "Pending Proposal Evaluation Sign Off",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62055,
-      "en": "Proposal Evaluation Completed",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62058,
-      "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EC",
-      "status": 62059,
-      "en": "Pending Document Compliance and Proposal Evaluation (Revision)",
-      "result": "no sandbox QT with a EC workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60350,
-      "en": "Pending Approval",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60351,
-      "en": "Approved",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60352,
-      "en": "Rejected",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60353,
-      "en": "Pending Supplier Acceptance",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60354,
-      "en": "Accepted",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60355,
-      "en": "Cancel Due To Ministry Restructuring",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60356,
-      "en": "Proceed Manual Due To Ministry Restructuring",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
-      "wf": "EPV",
-      "status": 60357,
-      "en": "Revised",
-      "result": "no sandbox QT with a EPV workflow row"
-    },
-    {
       "wf": "FEC",
       "status": 62150,
       "en": "Pending Confirmation Financial Evaluation Committee",
@@ -319,13 +175,6 @@
       "en": "Pending Financial Proposal Evaluation Sign Off",
       "doc": "QT260000000004524",
       "result": "OK; restored to 62154"
-    },
-    {
-      "wf": "FEC",
-      "status": 62154,
-      "en": "Financial Proposal Evaluation Completed",
-      "doc": "QT260000000004524",
-      "result": "already there (real status)"
     },
     {
       "wf": "FEC",
@@ -482,90 +331,6 @@
       "result": "OK; restored to 62506"
     },
     {
-      "wf": "LI",
-      "status": 62400,
-      "en": "Pending Letter Of Intent Submission",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62401,
-      "en": "Pending Letter Of Intent Approval",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62402,
-      "en": "Pending Letter Of Intent Revision",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62403,
-      "en": "Pending Supplier Acknowledgement",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62404,
-      "en": "Pending Letter Of Intent Negotiation",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62405,
-      "en": "Letter Of Intent Completed",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62406,
-      "en": "Letter of Intent Rejected",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62407,
-      "en": "Pending Letter Of Intent Revision Approval",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62408,
-      "en": "Cancelled",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62409,
-      "en": "Proceed Manual Due To Ministry Restructuring",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62411,
-      "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62412,
-      "en": "QT Cancellation Request From User Approved By BPK,MoF",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62413,
-      "en": "Quotation/Tender Closed by Agency Due To Validity Period Expired/Special Approval",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
-      "wf": "LI",
-      "status": 62414,
-      "en": "Cancelled (Not agree with extension validity period)",
-      "result": "no sandbox QT with a LI workflow row"
-    },
-    {
       "wf": "OC",
       "status": 62000,
       "en": "Pending Confirmation Opening Committee",
@@ -615,144 +380,6 @@
       "result": "OK; restored to 62004"
     },
     {
-      "wf": "PCB",
-      "status": 60250,
-      "en": "Pending Procurement Board Approval",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60251,
-      "en": "Procurement Board Approval Approved",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60252,
-      "en": "Procurement Board Approval Rejected",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60253,
-      "en": "Pending Procurement Board Revision",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60254,
-      "en": "Pending Supplier Acceptance",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60255,
-      "en": "Pending Procurement Board Revision Approval",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60256,
-      "en": "Accepted",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PCB",
-      "status": 60257,
-      "en": "Cancel Due To Ministry Restructuring",
-      "result": "no sandbox QT with a PCB workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60800,
-      "en": "Pending Submission",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60801,
-      "en": "Pending Verification",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60802,
-      "en": "Pending Approval",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60803,
-      "en": "Pending Request Note Creation",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60804,
-      "en": "Completed",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60805,
-      "en": "Rejected",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60806,
-      "en": "Pending Simple Quote Creation",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60807,
-      "en": "Purchase in Default Validity Period Expired",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60808,
-      "en": "Cancel Due To Ministry Restructuring",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60810,
-      "en": "Pending Supplier Response for Request to Reduce Minimum Order Quantity",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60811,
-      "en": "Pending Verification of Supplier Response",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60812,
-      "en": "Pending Revision",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60813,
-      "en": "Pending Revision Verification",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60814,
-      "en": "Pending Revision Approval",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
-      "wf": "PD",
-      "status": 60815,
-      "en": "Cancelled",
-      "result": "no sandbox PD with a PD workflow row"
-    },
-    {
       "wf": "PI",
       "status": 60750,
       "en": "Pending Submission",
@@ -765,13 +392,6 @@
       "en": "Pending Request Note Creation",
       "doc": "PI260000000000804",
       "result": "OK; restored to 60753"
-    },
-    {
-      "wf": "PI",
-      "status": 60753,
-      "en": "Completed",
-      "doc": "PI260000000000804",
-      "result": "already there (real status)"
     },
     {
       "wf": "PI",
@@ -793,114 +413,6 @@
       "en": "Cancel Due To Ministry Restructuring",
       "doc": "PI260000000000804",
       "result": "OK; restored to 60753"
-    },
-    {
-      "wf": "PTJ",
-      "status": 60300,
-      "en": "Pending Approval",
-      "result": "no sandbox QT with a PTJ workflow row"
-    },
-    {
-      "wf": "PTJ",
-      "status": 60301,
-      "en": "Approved",
-      "result": "no sandbox QT with a PTJ workflow row"
-    },
-    {
-      "wf": "PTJ",
-      "status": 60302,
-      "en": "Rejected",
-      "result": "no sandbox QT with a PTJ workflow row"
-    },
-    {
-      "wf": "PTJ",
-      "status": 60303,
-      "en": "Pending Revision",
-      "result": "no sandbox QT with a PTJ workflow row"
-    },
-    {
-      "wf": "PTJ",
-      "status": 60304,
-      "en": "Cancel Due To Ministry Restructuring",
-      "result": "no sandbox QT with a PTJ workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 12340,
-      "en": "Rejected: Test Only",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 12341,
-      "en": "Approved: Test Only",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 12342,
-      "en": "Pending: Test Only",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 63450,
-      "en": "Pending Cancellation",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 63451,
-      "en": "Cancelation Rejected",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 63452,
-      "en": "Cancellation Approved",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 63453,
-      "en": "Cancel Due To Ministry Restructuring",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QC",
-      "status": 63454,
-      "en": "Proceed Manual Due To Ministry Restructuring",
-      "result": "no sandbox QT with a QC workflow row"
-    },
-    {
-      "wf": "QDR",
-      "status": 63460,
-      "en": "Pending Desk Officer Maintenance Approval",
-      "result": "no sandbox QT with a QDR workflow row"
-    },
-    {
-      "wf": "QDR",
-      "status": 63461,
-      "en": "Desk Officer Maintenance Approved",
-      "result": "no sandbox QT with a QDR workflow row"
-    },
-    {
-      "wf": "QDR",
-      "status": 63462,
-      "en": "Desk Officer Maintenance Rejected",
-      "result": "no sandbox QT with a QDR workflow row"
-    },
-    {
-      "wf": "QDR",
-      "status": 63463,
-      "en": "Cancel Due To Ministry Restructuring",
-      "result": "no sandbox QT with a QDR workflow row"
-    },
-    {
-      "wf": "QDR",
-      "status": 63464,
-      "en": "Proceed Manual Due To Ministry Restructuring",
-      "result": "no sandbox QT with a QDR workflow row"
     },
     {
       "wf": "QT",
@@ -1184,13 +696,6 @@
     },
     {
       "wf": "RN",
-      "status": 60703,
-      "en": "Completed",
-      "doc": "RN260000000004918",
-      "result": "already there (real status)"
-    },
-    {
-      "wf": "RN",
       "status": 60704,
       "en": "Cancelled",
       "doc": "RN260000000004918",
@@ -1258,6 +763,665 @@
       "en": "Request Note Approved",
       "doc": "RN260000000004918",
       "result": "OK; restored to 60703"
+    },
+    {
+      "wf": "SQ",
+      "status": 60850,
+      "en": "Pending Submission",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60853,
+      "en": "Completed",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60854,
+      "en": "Cancelled",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60855,
+      "en": "Cancelled due to Purchase in Default validity period is expired (60 days).",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60856,
+      "en": "Response Submitted",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60857,
+      "en": "Pending Item Code Assignment",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60858,
+      "en": "Cancel Due To Ministry Restructuring",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60860,
+      "en": "Simple Quote Validity Period Expired",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "SQ",
+      "status": 60861,
+      "en": "Cancelled due to Simple Quote validity period is expired (60 days)",
+      "doc": "SQ260000000002371",
+      "result": "OK; restored to 60852"
+    },
+    {
+      "wf": "TEC",
+      "status": 62100,
+      "en": "Pending Confirmation Technical Evaluation Committee",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62101,
+      "en": "Pending Technical Proposal Evaluation",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62103,
+      "en": "Pending Technical Proposal Evaluation Endorsement",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62104,
+      "en": "Pending Technical Proposal Evaluation Sign Off",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62106,
+      "en": "Cancel Due To Ministry Restructuring",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62108,
+      "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62109,
+      "en": "Pending Technical Proposal Evaluation (Revision)",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62110,
+      "en": "Pending Technical Proposal Evaluation (Presentation / Demonstration)",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62111,
+      "en": "Pending Technical Proposal Evaluation Endorsement (Presentation / Demonstration)",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62112,
+      "en": "Pending Technical Proposal Evaluation Sign Off (Presentation / Demonstration)",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62113,
+      "en": "Pending Technical Proposal Evaluation (Presentation / Demonstration - Revision)",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62114,
+      "en": "Cancelled Due To No Supplier Passed Technical Evaluation And Qualified For Presentation/Demonstration.",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62115,
+      "en": "Pending Cancellation",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62116,
+      "en": "Cancellation Approved",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "TEC",
+      "status": 62117,
+      "en": "Cancellation Rejected",
+      "doc": "QT260000000004524",
+      "result": "OK; restored to 62105"
+    },
+    {
+      "wf": "BPK",
+      "status": 60151,
+      "en": "BPK Approval Approved",
+      "doc": "QT260000000004537",
+      "result": "OK; restored to 60153"
+    },
+    {
+      "wf": "CMT",
+      "status": 60202,
+      "en": "Committee Formation Completed",
+      "doc": "QT260000000004539",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "DAR",
+      "status": 63557,
+      "en": "Pending Desk Officer Assistant Update Approval",
+      "result": "no sandbox QT with a DAR workflow row"
+    },
+    {
+      "wf": "DAR",
+      "status": 63558,
+      "en": "Desk Officer Assistant Update Approval Completed",
+      "result": "no sandbox QT with a DAR workflow row"
+    },
+    {
+      "wf": "DAR",
+      "status": 63559,
+      "en": "Desk Officer Assistant Update Rejected",
+      "result": "no sandbox QT with a DAR workflow row"
+    },
+    {
+      "wf": "DAR",
+      "status": 63560,
+      "en": "Pending Desk Officer Assistant Update (Revision)",
+      "result": "no sandbox QT with a DAR workflow row"
+    },
+    {
+      "wf": "DAR",
+      "status": 63561,
+      "en": "Pending Desk Officer Assistant Update Approval (Revision)",
+      "result": "no sandbox QT with a DAR workflow row"
+    },
+    {
+      "wf": "DAR",
+      "status": 63562,
+      "en": "Desk Officer Assistant's update is cancelled.",
+      "result": "no sandbox QT with a DAR workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62050,
+      "en": "Pending Confirmation Evaluation Committee",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62051,
+      "en": "Pending Document Compliance and Proposal Evaluation",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62053,
+      "en": "Pending Proposal Evaluation Endorsement",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62054,
+      "en": "Pending Proposal Evaluation Sign Off",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62055,
+      "en": "Proposal Evaluation Completed",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62058,
+      "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EC",
+      "status": 62059,
+      "en": "Pending Document Compliance and Proposal Evaluation (Revision)",
+      "result": "no sandbox QT with a EC workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60350,
+      "en": "Pending Approval",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60351,
+      "en": "Approved",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60352,
+      "en": "Rejected",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60353,
+      "en": "Pending Supplier Acceptance",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60354,
+      "en": "Accepted",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60355,
+      "en": "Cancel Due To Ministry Restructuring",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60356,
+      "en": "Proceed Manual Due To Ministry Restructuring",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "EPV",
+      "status": 60357,
+      "en": "Revised",
+      "result": "no sandbox QT with a EPV workflow row"
+    },
+    {
+      "wf": "FEC",
+      "status": 62154,
+      "en": "Financial Proposal Evaluation Completed",
+      "doc": "QT260000000004539",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "LI",
+      "status": 62400,
+      "en": "Pending Letter Of Intent Submission",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62401,
+      "en": "Pending Letter Of Intent Approval",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62402,
+      "en": "Pending Letter Of Intent Revision",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62403,
+      "en": "Pending Supplier Acknowledgement",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62404,
+      "en": "Pending Letter Of Intent Negotiation",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62405,
+      "en": "Letter Of Intent Completed",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62406,
+      "en": "Letter of Intent Rejected",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62407,
+      "en": "Pending Letter Of Intent Revision Approval",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62408,
+      "en": "Cancelled",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62409,
+      "en": "Proceed Manual Due To Ministry Restructuring",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62411,
+      "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62412,
+      "en": "QT Cancellation Request From User Approved By BPK,MoF",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62413,
+      "en": "Quotation/Tender Closed by Agency Due To Validity Period Expired/Special Approval",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "LI",
+      "status": 62414,
+      "en": "Cancelled (Not agree with extension validity period)",
+      "result": "no sandbox QT with a LI workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60250,
+      "en": "Pending Procurement Board Approval",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60251,
+      "en": "Procurement Board Approval Approved",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60252,
+      "en": "Procurement Board Approval Rejected",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60253,
+      "en": "Pending Procurement Board Revision",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60254,
+      "en": "Pending Supplier Acceptance",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60255,
+      "en": "Pending Procurement Board Revision Approval",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60256,
+      "en": "Accepted",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PCB",
+      "status": 60257,
+      "en": "Cancel Due To Ministry Restructuring",
+      "result": "no sandbox QT with a PCB workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60800,
+      "en": "Pending Submission",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60801,
+      "en": "Pending Verification",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60802,
+      "en": "Pending Approval",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60803,
+      "en": "Pending Request Note Creation",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60804,
+      "en": "Completed",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60805,
+      "en": "Rejected",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60806,
+      "en": "Pending Simple Quote Creation",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60807,
+      "en": "Purchase in Default Validity Period Expired",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60808,
+      "en": "Cancel Due To Ministry Restructuring",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60810,
+      "en": "Pending Supplier Response for Request to Reduce Minimum Order Quantity",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60811,
+      "en": "Pending Verification of Supplier Response",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60812,
+      "en": "Pending Revision",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60813,
+      "en": "Pending Revision Verification",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60814,
+      "en": "Pending Revision Approval",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PD",
+      "status": 60815,
+      "en": "Cancelled",
+      "result": "no sandbox PD with a PD workflow row"
+    },
+    {
+      "wf": "PI",
+      "status": 60753,
+      "en": "Completed",
+      "doc": "PI260000000000804",
+      "result": "already there (real status)"
+    },
+    {
+      "wf": "PTJ",
+      "status": 60300,
+      "en": "Pending Approval",
+      "result": "no sandbox QT with a PTJ workflow row"
+    },
+    {
+      "wf": "PTJ",
+      "status": 60301,
+      "en": "Approved",
+      "result": "no sandbox QT with a PTJ workflow row"
+    },
+    {
+      "wf": "PTJ",
+      "status": 60302,
+      "en": "Rejected",
+      "result": "no sandbox QT with a PTJ workflow row"
+    },
+    {
+      "wf": "PTJ",
+      "status": 60303,
+      "en": "Pending Revision",
+      "result": "no sandbox QT with a PTJ workflow row"
+    },
+    {
+      "wf": "PTJ",
+      "status": 60304,
+      "en": "Cancel Due To Ministry Restructuring",
+      "result": "no sandbox QT with a PTJ workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 12340,
+      "en": "Rejected: Test Only",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 12341,
+      "en": "Approved: Test Only",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 12342,
+      "en": "Pending: Test Only",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 63450,
+      "en": "Pending Cancellation",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 63451,
+      "en": "Cancelation Rejected",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 63452,
+      "en": "Cancellation Approved",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 63453,
+      "en": "Cancel Due To Ministry Restructuring",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QC",
+      "status": 63454,
+      "en": "Proceed Manual Due To Ministry Restructuring",
+      "result": "no sandbox QT with a QC workflow row"
+    },
+    {
+      "wf": "QDR",
+      "status": 63460,
+      "en": "Pending Desk Officer Maintenance Approval",
+      "result": "no sandbox QT with a QDR workflow row"
+    },
+    {
+      "wf": "QDR",
+      "status": 63461,
+      "en": "Desk Officer Maintenance Approved",
+      "result": "no sandbox QT with a QDR workflow row"
+    },
+    {
+      "wf": "QDR",
+      "status": 63462,
+      "en": "Desk Officer Maintenance Rejected",
+      "result": "no sandbox QT with a QDR workflow row"
+    },
+    {
+      "wf": "QDR",
+      "status": 63463,
+      "en": "Cancel Due To Ministry Restructuring",
+      "result": "no sandbox QT with a QDR workflow row"
+    },
+    {
+      "wf": "QDR",
+      "status": 63464,
+      "en": "Proceed Manual Due To Ministry Restructuring",
+      "result": "no sandbox QT with a QDR workflow row"
+    },
+    {
+      "wf": "RN",
+      "status": 60703,
+      "en": "Completed",
+      "doc": "RN260000000004925",
+      "result": "OK; restored to 60708"
     },
     {
       "wf": "SE",
@@ -1489,178 +1653,10 @@
     },
     {
       "wf": "SQ",
-      "status": 60850,
-      "en": "Pending Submission",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
       "status": 60852,
       "en": "Pending Request Note Creation",
       "doc": "SQ260000000002371",
-      "result": "already there (real status)"
-    },
-    {
-      "wf": "SQ",
-      "status": 60853,
-      "en": "Completed",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60854,
-      "en": "Cancelled",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60855,
-      "en": "Cancelled due to Purchase in Default validity period is expired (60 days).",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60856,
-      "en": "Response Submitted",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60857,
-      "en": "Pending Item Code Assignment",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60858,
-      "en": "Cancel Due To Ministry Restructuring",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60860,
-      "en": "Simple Quote Validity Period Expired",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "SQ",
-      "status": 60861,
-      "en": "Cancelled due to Simple Quote validity period is expired (60 days)",
-      "doc": "SQ260000000002371",
-      "result": "OK; restored to 60852"
-    },
-    {
-      "wf": "TEC",
-      "status": 62100,
-      "en": "Pending Confirmation Technical Evaluation Committee",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62101,
-      "en": "Pending Technical Proposal Evaluation",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62103,
-      "en": "Pending Technical Proposal Evaluation Endorsement",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62104,
-      "en": "Pending Technical Proposal Evaluation Sign Off",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62106,
-      "en": "Cancel Due To Ministry Restructuring",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62108,
-      "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62109,
-      "en": "Pending Technical Proposal Evaluation (Revision)",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62110,
-      "en": "Pending Technical Proposal Evaluation (Presentation / Demonstration)",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62111,
-      "en": "Pending Technical Proposal Evaluation Endorsement (Presentation / Demonstration)",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62112,
-      "en": "Pending Technical Proposal Evaluation Sign Off (Presentation / Demonstration)",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62113,
-      "en": "Pending Technical Proposal Evaluation (Presentation / Demonstration - Revision)",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62114,
-      "en": "Cancelled Due To No Supplier Passed Technical Evaluation And Qualified For Presentation/Demonstration.",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62115,
-      "en": "Pending Cancellation",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62116,
-      "en": "Cancellation Approved",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
-    },
-    {
-      "wf": "TEC",
-      "status": 62117,
-      "en": "Cancellation Rejected",
-      "doc": "QT260000000004524",
-      "result": "OK; restored to 62105"
+      "result": "OK; restored to 60853"
     }
   ]
 }

@@ -1,0 +1,33 @@
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 01 KAT-021 Create Simple Quote - Services @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/01_KAT-021 @KAT-021
+  -   2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/02_SQ_START_SQL @gate-SQ_START_SQL
+  -   3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/03_KAT-022 @KAT-022
+  -   4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/04_SQ_END_SQL @gate-SQ_END_SQL
+[04:58:28] dp-sq-pr/05_KAT-023: KAT-023 Prepare Request Note from a closed Simple Quote — role Requisitioner, login: account of KAT-021
+[04:58:28] dp-sq-pr/05_KAT-023: Test data corrected (support/katalon/data-overrides.json): Document_Number, preparedBy: Prepare RN from our Services (Schedule) Simple Quote SQ260000000002309 (KAT-021, BASICFLROS3 replied 2026-11-11 18:16, END 18:30) as the requisitioner who created it (draft RN260000000004702 exists); its line has no PR/LOA Prepared By, so pick officer 710527085562 (given by the user)
+[04:58:28] dp-sq-pr/05_KAT-023: Using the login of KAT-021 (support/katalon/data-overrides.json)
+[04:58:28] dp-sq-pr/05_KAT-023: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[04:58:28] dp-sq-pr/05_KAT-023: Flow inputs: Document_Number=SQ260000000002371
+[04:58:28] dp-sq-pr/05_KAT-023: Flow login: the account of KAT-021
+[04:58:32] dp-sq-pr/05_KAT-023: Closed the TERKINI announcement
+[04:58:35] dp-sq-pr/05_KAT-023: Closed the TERKINI announcement
+[04:59:00] dp-sq-pr/05_KAT-023: SQ260000000002371 is already in My Task (no claim needed)
+[04:59:29] dp-sq-pr/05_KAT-023: Message: Request Note RN260000000004925 is successfully submitted.
+[04:59:29] dp-sq-pr/05_KAT-023: ✅ Captured RN No: RN260000000004925
+[04:59:29] dp-sq-pr/05_KAT-023: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_2026.xlsx
+[04:59:29] dp-sq-pr/05_KAT-023: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_2026.xlsx
+[04:59:30] dp-sq-pr/05_KAT-023: Closed the TERKINI announcement
+[04:59:30] dp-sq-pr/05_KAT-023: closeBrowser (the fixture closes the browser at the end of the test)
+[04:59:31] dp-sq-pr/05_KAT-023: DB status RN RN260000000004925: 60701 Pending Approval / Menunggu Kelulusan (expected 60701, OK)
+[04:59:32] dp-sq-pr/05_KAT-023: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/05_KAT-023 @KAT-023 (1.1m)
+  -   6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 06 KAT-024 Approve Request Note (SQ route) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/06_KAT-024 @KAT-024
+  -   7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 07 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/07_KAT-033 @KAT-033
+  -   8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 08 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/08_KAT-034 @KAT-034
+  -   9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 09 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/09_PO_LOOKUP @gate-PO_LOOKUP
+  -  10 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 10 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/10_KAT-035 @KAT-035
+
+  9 skipped
+  1 passed (1.2m)

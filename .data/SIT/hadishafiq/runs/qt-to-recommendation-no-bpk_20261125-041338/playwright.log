@@ -1,0 +1,290 @@
+
+Running 14 tests using 1 worker
+
+[04:13:45] qt-to-recommendation-no-bpk/01_QT-001: QT-001 Create the Quotation / Tender draft (General Information, Save) — role Desk Officer, login: Katalon default account of the step
+[04:13:45] qt-to-recommendation-no-bpk/01_QT-001: QT-001: login 881204115188 (role user)
+[04:13:49] qt-to-recommendation-no-bpk/01_QT-001: QT-001: Logged in as 881204115188
+[04:14:07] qt-to-recommendation-no-bpk/01_QT-001: QT-001: QT draft saved: QT260000000004539
+[04:14:10] qt-to-recommendation-no-bpk/01_QT-001: Closed the TERKINI announcement
+[04:14:11] qt-to-recommendation-no-bpk/01_QT-001: DB status QT QT260000000004539: 60002 Pending Quotation / Tender Submission / Menunggu Penyerahan Sebut Harga / Tender (expected 60002, OK)
+[04:14:11] qt-to-recommendation-no-bpk/01_QT-001: Signed out (SSO logout)
+  ✓   1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 01 QT-001 Create the Quotation / Tender draft (General Information, Save) @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/01_QT-001 @QT-001 (26.7s)
+[04:14:13] qt-to-recommendation-no-bpk/02_QT-002: QT-002 Complete the QT tabs and Submit — role Desk Officer, login: officer 881204115188: BPM task "Submit Quotation Tender" of QT260000000004539 is ASSIGNED to 881204115188 (SIT WFTASK)
+[04:14:13] qt-to-recommendation-no-bpk/02_QT-002: QT-002: login 881204115188 (BPM assignee)
+[04:14:17] qt-to-recommendation-no-bpk/02_QT-002: QT-002: Logged in as 881204115188
+[04:14:28] qt-to-recommendation-no-bpk/02_QT-002: QT-002: category: added
+[04:14:36] qt-to-recommendation-no-bpk/02_QT-002: QT-002: committee: 711105085487 added as Chairperson
+[04:14:41] qt-to-recommendation-no-bpk/02_QT-002: QT-002: committee: 810626015517 added as Secretary
+[04:14:46] qt-to-recommendation-no-bpk/02_QT-002: QT-002: committee: 770614135921 added as Member
+[04:14:51] qt-to-recommendation-no-bpk/02_QT-002: QT-002: committee: 770614135925 added as Member
+[04:14:58] qt-to-recommendation-no-bpk/02_QT-002: QT-002: approver: Hashmuddin selected
+[04:15:05] qt-to-recommendation-no-bpk/02_QT-002: QT-002: save: Quotation/Tender QT260000000004539 has been successfully saved.
+[04:15:06] qt-to-recommendation-no-bpk/02_QT-002: QT-002: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[04:15:14] qt-to-recommendation-no-bpk/02_QT-002: Closed the TERKINI announcement
+[04:15:15] qt-to-recommendation-no-bpk/02_QT-002: DB status QT QT260000000004539: 60024 Pending Quotation / Tender Approval / Menunggu Kelulusan Sebut Harga / Tender (expected 60024, OK)
+[04:15:16] qt-to-recommendation-no-bpk/02_QT-002: Signed out (SSO logout)
+  ✓   2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 02 QT-002 Complete the QT tabs and Submit @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/02_QT-002 @QT-002 (1.1m)
+[04:15:18] qt-to-recommendation-no-bpk/03_QT-003: QT-003 Approve the QT and its committee formation — role Committee Approver, login: officer 580401035583: BPM task "Approve Committee" of QT260000000004539 is ASSIGNED to 580401035583 (SIT WFTASK)
+[04:15:18] qt-to-recommendation-no-bpk/03_QT-003: QT-003: login 580401035583 (BPM assignee)
+[04:15:21] qt-to-recommendation-no-bpk/03_QT-003: QT-003: Logged in as 580401035583
+[04:15:33] qt-to-recommendation-no-bpk/03_QT-003: QT-003: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:15:39] qt-to-recommendation-no-bpk/03_QT-003: Closed the TERKINI announcement
+[04:15:40] qt-to-recommendation-no-bpk/03_QT-003: DB status QT QT260000000004539: 60003 Pending Specification Preparation / Menunggu Penyediaan Spesifikasi (expected 60003, OK)
+[04:15:41] qt-to-recommendation-no-bpk/03_QT-003: Signed out (SSO logout)
+  ✓   3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 03 QT-003 Approve the QT and its committee formation @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/03_QT-003 @QT-003 (24.9s)
+[04:15:42] qt-to-recommendation-no-bpk/04_QT-004: BPM task "Finalize Scoring" of QT260000000004539 is open (assigned to 810626015517)
+[04:15:43] qt-to-recommendation-no-bpk/04_QT-004: QT-004 Prepare the specification — role SC Secretary, login: officer 810626015517: BPM task "Finalize Scoring" of QT260000000004539 is ASSIGNED to 810626015517 (SIT WFTASK)
+[04:15:43] qt-to-recommendation-no-bpk/04_QT-004: QT-004: login 810626015517 (BPM assignee)
+[04:15:47] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Logged in as 810626015517
+[04:16:00] qt-to-recommendation-no-bpk/04_QT-004: QT-004: qtContractDuration = 12
+[04:16:00] qt-to-recommendation-no-bpk/04_QT-004: QT-004: justificationProcValueId_2 = QA automation test data.
+[04:16:07] qt-to-recommendation-no-bpk/04_QT-004: QT-004: save: Specification Details for QT260000000004539 is successfully saved.
+[04:16:38] qt-to-recommendation-no-bpk/04_QT-004: QT-004: template save: Template Specification is successfully saved.
+[04:17:03] qt-to-recommendation-no-bpk/04_QT-004: QT-004: template: template completed
+[04:17:43] qt-to-recommendation-no-bpk/04_QT-004: QT-004: price: price completed
+[04:17:48] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Technical Checklist: Bilangan Kakitangan: unticked
+[04:17:56] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Financial Checklist: Penyata bank untuk tiga bulan: unticked; Aset dan Liabiliti (Dari Kunci Kira-kira): unticked; Kemudahan Kredit (Overdraf, Pinjaman Bank): unticked; Pengalaman Syarikat Dengan Kerajaan Persekutuan: unticked; Pengalaman Syarikat Dengan Bukan Kerajaan Persekutuan: unticked
+[04:18:05] qt-to-recommendation-no-bpk/04_QT-004: QT-004: delivery: first PTJ address added
+[04:18:09] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Technical Checklist uploads: none pending
+[04:18:16] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Financial Checklist uploads: DOCUMENT NAME PNA BI
+[04:18:43] qt-to-recommendation-no-bpk/04_QT-004: QT-004: forms: Bilangan Kakitangan: Scores is successfully saved.; bank statement: Scores is successfully saved.; Pengalaman Syarikat Dengan Kerajaan: Scores is successfully saved.; Pengalaman Syarikat Dengan Bukan: Scores is successfully saved.
+[04:18:48] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Technical Scoring schema: schema uploaded
+[04:18:51] qt-to-recommendation-no-bpk/04_QT-004: QT-004: Financial Scoring schema: schema uploaded
+[04:18:57] qt-to-recommendation-no-bpk/04_QT-004: QT-004: save: Specification Details for QT260000000004539 is successfully saved.
+[04:19:01] qt-to-recommendation-no-bpk/04_QT-004: QT-004: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[04:19:14] qt-to-recommendation-no-bpk/04_QT-004: Closed the TERKINI announcement
+[04:19:15] qt-to-recommendation-no-bpk/04_QT-004: DB status QT QT260000000004539: 60025 Pending Specification Endorsement / Menunggu Pengesahan Spesifikasi (expected 60025, OK)
+[04:19:15] qt-to-recommendation-no-bpk/04_QT-004: Signed out (SSO logout)
+  ✓   4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 04 QT-004 Prepare the specification @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/04_QT-004 @QT-004 (3.6m)
+[04:19:17] qt-to-recommendation-no-bpk/05_QT-005: Assigned officer not found in BPM: several or group BPM tasks are open for QT260000000004539: "Endorse Scoring" → 770614135921; "Endorse Scoring" → ?; "Endorse Scoring" → 770614135925
+[04:19:17] qt-to-recommendation-no-bpk/05_QT-005: QT-005 Every Specification Committee member endorses — role SC Member, login: officer 770614135921 (QT role user from ngep-runner's SIT presets; BPM did not name a single assignee)
+[04:19:17] qt-to-recommendation-no-bpk/05_QT-005: QT-005: login 770614135921 (BPM assignee)
+[04:19:21] qt-to-recommendation-no-bpk/05_QT-005: QT-005: Logged in as 770614135921
+[04:19:44] qt-to-recommendation-no-bpk/05_QT-005: Closed the TERKINI announcement
+[04:19:44] qt-to-recommendation-no-bpk/05_QT-005: QT-005: login 770614135925 (switch)
+[04:19:46] qt-to-recommendation-no-bpk/05_QT-005: QT-005: Logged in as 770614135925
+[04:20:07] qt-to-recommendation-no-bpk/05_QT-005: DB status QT QT260000000004539: 60026 Pending Specification Sign Off / Menunggu Perakuan Spesifikasi (expected 60026, OK)
+[04:20:07] qt-to-recommendation-no-bpk/05_QT-005: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 05 QT-005 Every Specification Committee member endorses @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/05_QT-005 @QT-005 (51.7s)
+[04:20:09] qt-to-recommendation-no-bpk/06_QT-006: QT-006 Specification Committee chair signs off — role SC Chair, login: officer 711105085487: BPM task "SignOff Scoring" of QT260000000004539 is ASSIGNED to 711105085487 (SIT WFTASK)
+[04:20:09] qt-to-recommendation-no-bpk/06_QT-006: QT-006: login 711105085487 (BPM assignee)
+[04:20:12] qt-to-recommendation-no-bpk/06_QT-006: QT-006: Logged in as 711105085487
+[04:20:25] qt-to-recommendation-no-bpk/06_QT-006: QT-006: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:20:35] qt-to-recommendation-no-bpk/06_QT-006: Closed the TERKINI announcement
+[04:20:36] qt-to-recommendation-no-bpk/06_QT-006: DB status QT QT260000000004539: 60004 Pending Document Preparation / Menunggu Penyediaan Dokumen (expected 60004, OK)
+[04:20:36] qt-to-recommendation-no-bpk/06_QT-006: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 06 QT-006 Specification Committee chair signs off @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/06_QT-006 @QT-006 (29.1s)
+[04:20:38] qt-to-recommendation-no-bpk/07_QT-107: QT-107 Prepare the QT documents and submit (no BPK needed) — role Desk Officer, login: officer 881204115188: BPM task "Prepare QT Schedule" of QT260000000004539 is ASSIGNED to 881204115188 (SIT WFTASK)
+[04:20:38] qt-to-recommendation-no-bpk/07_QT-107: QT-107: login 881204115188 (BPM assignee)
+[04:20:41] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Logged in as 881204115188
+[04:21:00] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Opening Committee: 780513015364 added as Chairperson
+[04:21:05] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Opening Committee: 840404085154 added as Secretary
+[04:21:10] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Opening Committee: 770614135921 added as Member
+[04:21:15] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Opening Committee: 840506145824 added as Member
+[04:21:21] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Technical Evaluation Committee: 661027035165 added as Chairperson
+[04:21:26] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Technical Evaluation Committee: 840202015713 added as Secretary
+[04:21:31] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Technical Evaluation Committee: 760901017398 added as Member
+[04:21:37] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Technical Evaluation Committee: 770614135921 added as Member
+[04:21:43] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Financial Evaluation Committee: 740217035890 added as Chairperson
+[04:21:48] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Financial Evaluation Committee: 780517025690 added as Secretary
+[04:21:53] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Financial Evaluation Committee: 770714025664 added as Member
+[04:21:58] qt-to-recommendation-no-bpk/07_QT-107: QT-107: Financial Evaluation Committee: 770714025666 added as Member
+[04:22:01] qt-to-recommendation-no-bpk/07_QT-107: QT-107: publication approver: Hashmuddin selected
+[04:22:07] qt-to-recommendation-no-bpk/07_QT-107: QT-107: validity: validity 90 days
+[04:22:15] qt-to-recommendation-no-bpk/07_QT-107: QT-107: scope: open for Bumiputra, locality State, all locations, save: Quotation/Tender QT260000000004539 has been successfully saved.
+[04:22:17] qt-to-recommendation-no-bpk/07_QT-107: QT-107: schedule: publish 26/11/2026, closing 03/12/2026 12:00 PM
+[04:22:17] qt-to-recommendation-no-bpk/07_QT-107: QT-107: contact: contact person present
+[04:22:19] qt-to-recommendation-no-bpk/07_QT-107: QT-107: save: Quotation/Tender QT260000000004539 has been successfully saved.
+[04:22:20] qt-to-recommendation-no-bpk/07_QT-107: QT-107: dialog: "Confirmation to submit Are you sure every details entered before submit for approval? Yes No" -> Yes
+[04:22:32] qt-to-recommendation-no-bpk/07_QT-107: Closed the TERKINI announcement
+[04:22:33] qt-to-recommendation-no-bpk/07_QT-107: DB status QT QT260000000004539: 60005 Pending Document Approval for Publication / Menunggu Kelulusan Dokumen untuk Pengiklanan (expected 60005, OK)
+[04:22:34] qt-to-recommendation-no-bpk/07_QT-107: Signed out (SSO logout)
+  ✓   7 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 07 QT-107 Prepare the QT documents and submit (no BPK needed) @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/07_QT-107 @QT-107 (2.0m)
+[04:22:36] qt-to-recommendation-no-bpk/08_QT-009: QT-009 Approve the documents for publication — role Publication Approver, login: officer 580401035583: BPM task "Approve Publication" of QT260000000004539 is ASSIGNED to 580401035583 (SIT WFTASK)
+[04:22:36] qt-to-recommendation-no-bpk/08_QT-009: QT-009: login 580401035583 (BPM assignee)
+[04:22:38] qt-to-recommendation-no-bpk/08_QT-009: QT-009: Logged in as 580401035583
+[04:22:50] qt-to-recommendation-no-bpk/08_QT-009: QT-009: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:22:59] qt-to-recommendation-no-bpk/08_QT-009: Closed the TERKINI announcement
+[04:23:00] qt-to-recommendation-no-bpk/08_QT-009: DB status QT QT260000000004539: 60007 Pending Notice Publishing / Menunggu Notis Pengiklanan (expected 60007, OK)
+[04:23:01] qt-to-recommendation-no-bpk/08_QT-009: Signed out (SSO logout)
+  ✓   8 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 08 QT-009 Approve the documents for publication @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/08_QT-009 @QT-009 (27.4s)
+[04:23:04] qt-to-recommendation-no-bpk/09_QT-010: QT-010 Publish the notice — role Tech Support, login: Katalon default account of the step
+[04:23:04] qt-to-recommendation-no-bpk/09_QT-010: QT-010: login 830830112233 (role user)
+[04:23:08] qt-to-recommendation-no-bpk/09_QT-010: QT-010: Logged in as 830830112233
+[04:23:22] qt-to-recommendation-no-bpk/09_QT-010: QT-010: technical support Publish: Pending Notice Publishing → Pending Proposal Preparation QT260000000004539 Publishing Started. Please wait a while for QT publishing.
+[04:23:25] qt-to-recommendation-no-bpk/09_QT-010: Closed the TERKINI announcement
+[04:23:26] qt-to-recommendation-no-bpk/09_QT-010: DB status QT QT260000000004539: 60009 Pending Proposal Preparation / Menunggu Penyediaan Cadangan (expected 60009, OK)
+[04:23:26] qt-to-recommendation-no-bpk/09_QT-010: Signed out (SSO logout)
+  ✓   9 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 09 QT-010 Publish the notice @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/09_QT-010 @QT-010 (25.3s)
+[04:23:28] qt-to-recommendation-no-bpk/10_QT-011: QT-011 Suppliers submit proposals; the QT closes — role Supplier / Tech Support, login: Katalon default account of the step
+[04:23:28] qt-to-recommendation-no-bpk/10_QT-011: QT-011: login firstallied1234 (role user)
+[04:23:34] qt-to-recommendation-no-bpk/10_QT-011: QT-011: Logged in as firstallied1234
+[04:24:34] qt-to-recommendation-no-bpk/10_QT-011: QT-011: technical: QA AUTO SPEC ALATULIS Click "P: ; Bilangan Kakitangan Click "Pre: ; Jadual Pelaksanaan Click the a: uploaded
+[04:26:22] qt-to-recommendation-no-bpk/10_QT-011: QT-011: financial: QA AUTO SPEC ALATULIS Click "P: done; Penyata bank untuk tiga bulan : done; Aset dan Liabiliti (Dari Kunci: done; Kemudahan Kredit (Overdraf, Pi: done; Pengesahan dari Institusi Kewa: uploaded
+[04:26:26] qt-to-recommendation-no-bpk/10_QT-011: QT-011: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[04:26:29] qt-to-recommendation-no-bpk/10_QT-011: QT-011: supplier firstallied1234 submitted
+[04:26:31] qt-to-recommendation-no-bpk/10_QT-011: Closed the TERKINI announcement
+[04:26:31] qt-to-recommendation-no-bpk/10_QT-011: QT-011: login mahmood84 (switch)
+[04:26:35] qt-to-recommendation-no-bpk/10_QT-011: QT-011: Logged in as mahmood84
+[04:27:31] qt-to-recommendation-no-bpk/10_QT-011: QT-011: technical: QA AUTO SPEC ALATULIS Click "P: ; Bilangan Kakitangan Click "Pre: ; Jadual Pelaksanaan Click the a: uploaded
+[04:29:17] qt-to-recommendation-no-bpk/10_QT-011: QT-011: financial: QA AUTO SPEC ALATULIS Click "P: done; Penyata bank untuk tiga bulan : done; Aset dan Liabiliti (Dari Kunci: done; Kemudahan Kredit (Overdraf, Pi: done; Pengesahan dari Institusi Kewa: uploaded
+[04:29:22] qt-to-recommendation-no-bpk/10_QT-011: QT-011: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[04:29:24] qt-to-recommendation-no-bpk/10_QT-011: QT-011: supplier mahmood84 submitted
+[04:29:25] qt-to-recommendation-no-bpk/10_QT-011: QT-011: login 830830112233 (switch)
+[04:29:28] qt-to-recommendation-no-bpk/10_QT-011: QT-011: Logged in as 830830112233
+[04:29:37] qt-to-recommendation-no-bpk/10_QT-011: QT-011: technical support Close: Pending Proposal Preparation → Quotation / Tender Closed QT260000000004539 Closing Started. Please wait a while for QT closing.
+[04:29:38] qt-to-recommendation-no-bpk/10_QT-011: Closed the TERKINI announcement
+[04:29:39] qt-to-recommendation-no-bpk/10_QT-011: DB status QT QT260000000004539: 60022 Quotation / Tender Closed / Sebut Harga / Tender Ditutup (expected 60022, OK)
+[04:29:39] qt-to-recommendation-no-bpk/10_QT-011: Signed out (SSO logout)
+  ✓  10 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 10 QT-011 Suppliers submit proposals; the QT closes @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/10_QT-011 @QT-011 (6.2m)
+[04:29:41] qt-to-recommendation-no-bpk/11_QT-012: QT-012 Opening committee formed and approved — role Desk Officer / Committee Approver, login: Katalon default account of the step
+[04:29:41] qt-to-recommendation-no-bpk/11_QT-012: QT-012: login 881204115188 (role user)
+[04:29:44] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Logged in as 881204115188
+[04:29:46] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Assign EC/OC Committee -> 881204115188
+[04:29:48] qt-to-recommendation-no-bpk/11_QT-012: Closed the TERKINI announcement
+[04:29:48] qt-to-recommendation-no-bpk/11_QT-012: QT-012: login 881204115188 (switch)
+[04:29:50] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Logged in as 881204115188
+[04:29:59] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Technical Evaluation Committee: 661027035165 already in committee
+[04:29:59] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Technical Evaluation Committee: 840202015713 already in committee
+[04:29:59] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Technical Evaluation Committee: 760901017398 already in committee
+[04:29:59] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Technical Evaluation Committee: 770614135921 already in committee
+[04:30:00] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Financial Evaluation Committee: 740217035890 already in committee
+[04:30:00] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Financial Evaluation Committee: 780517025690 already in committee
+[04:30:00] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Financial Evaluation Committee: 770714025664 already in committee
+[04:30:00] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Financial Evaluation Committee: 770714025666 already in committee
+[04:30:01] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Opening Committee: 780513015364 already in committee
+[04:30:01] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Opening Committee: 840404085154 already in committee
+[04:30:01] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Opening Committee: 770614135921 already in committee
+[04:30:01] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Opening Committee: 840506145824 already in committee
+[04:30:06] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Approve Committee -> 580401035583
+[04:30:07] qt-to-recommendation-no-bpk/11_QT-012: QT-012: login 580401035583 (switch)
+[04:30:08] qt-to-recommendation-no-bpk/11_QT-012: QT-012: Logged in as 580401035583
+[04:30:20] qt-to-recommendation-no-bpk/11_QT-012: QT-012: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:35:35] qt-to-recommendation-no-bpk/11_QT-012: DB status QT QT260000000004539: 60010 Pending Proposal Evaluation / Menunggu Penilaian Cadangan (expected 60010, OK)
+[04:35:36] qt-to-recommendation-no-bpk/11_QT-012: Signed out (SSO logout)
+  ✓  11 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 11 QT-012 Opening committee formed and approved @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/11_QT-012 @QT-012 (5.9m)
+[04:35:38] qt-to-recommendation-no-bpk/12_QT-013: QT-013 Opening committee: compliance verification, endorse, sign off — role OC Chair / Members, login: Katalon default account of the step
+[04:35:38] qt-to-recommendation-no-bpk/12_QT-013: QT-013: login 840404085154 (role user)
+[04:35:42] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Logged in as 840404085154
+[04:35:44] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Coordinate OC Meeting -> 840404085154
+[04:35:46] qt-to-recommendation-no-bpk/12_QT-013: Closed the TERKINI announcement
+[04:35:47] qt-to-recommendation-no-bpk/12_QT-013: QT-013: login 840404085154 (switch)
+[04:35:48] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Logged in as 840404085154
+[04:36:00] qt-to-recommendation-no-bpk/12_QT-013: QT-013: dialog: "Confirmation Are you sure to send the meeting invitation for document compliance review/proposal evaluation to the appoi" -> Yes
+[04:36:06] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Finalize OC Evaluation -> 840404085154
+[04:36:17] qt-to-recommendation-no-bpk/12_QT-013: QT-013: attendance: Proposal Evaluation QT260000000004539 is successfully saved.
+[04:36:21] qt-to-recommendation-no-bpk/12_QT-013: QT-013: meeting: Proposal Evaluation QT260000000004539 is successfully saved.
+[04:36:26] qt-to-recommendation-no-bpk/12_QT-013: QT-013: technical compliance: 1 saved
+[04:36:37] qt-to-recommendation-no-bpk/12_QT-013: QT-013: financial compliance: 6 saved
+[04:37:17] qt-to-recommendation-no-bpk/12_QT-013: QT-013: compliance summary: summary 2/2
+[04:37:20] qt-to-recommendation-no-bpk/12_QT-013: QT-013: dialog: "Confirmation Have the committee members been updated based on attendance? Yes No" -> Yes
+[04:37:25] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Endorse OC Evaluation -> 770614135921
+[04:37:26] qt-to-recommendation-no-bpk/12_QT-013: QT-013: login 770614135921 (switch)
+[04:37:27] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Logged in as 770614135921
+[04:37:38] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Endorse OC Evaluation: no user assignee yet (none), waiting
+[04:37:38] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Endorse OC Evaluation -> 840506145824
+[04:37:39] qt-to-recommendation-no-bpk/12_QT-013: QT-013: login 840506145824 (switch)
+[04:37:41] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Logged in as 840506145824
+[04:37:56] qt-to-recommendation-no-bpk/12_QT-013: QT-013: SignOff OC Evaluation -> 780513015364
+[04:37:57] qt-to-recommendation-no-bpk/12_QT-013: Closed the TERKINI announcement
+[04:37:57] qt-to-recommendation-no-bpk/12_QT-013: QT-013: login 780513015364 (switch)
+[04:37:59] qt-to-recommendation-no-bpk/12_QT-013: QT-013: Logged in as 780513015364
+[04:38:08] qt-to-recommendation-no-bpk/12_QT-013: QT-013: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:38:12] qt-to-recommendation-no-bpk/12_QT-013: Closed the TERKINI announcement
+[04:38:13] qt-to-recommendation-no-bpk/12_QT-013: DB status QT:OC QT260000000004539: 62004 Compliance Verification Completed / Pengesahan Pematuhan Telah Selesai (expected 62004, OK)
+[04:38:13] qt-to-recommendation-no-bpk/12_QT-013: Signed out (SSO logout)
+  ✓  12 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 12 QT-013 Opening committee: compliance verification, endorse, sign off @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/12_QT-013 @QT-013 (2.6m)
+[04:38:15] qt-to-recommendation-no-bpk/13_QT-014: QT-014 Technical evaluation committee: evaluate, endorse, sign off — role TEC Chair / Members, login: Katalon default account of the step
+[04:38:15] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 661027035165 (role user)
+[04:38:20] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 661027035165
+[04:38:22] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Assign TEC Committee -> 881204115188
+[04:38:24] qt-to-recommendation-no-bpk/13_QT-014: Closed the TERKINI announcement
+[04:38:24] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 881204115188 (switch)
+[04:38:26] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 881204115188
+[04:38:34] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Technical Evaluation Committee: 661027035165 already in committee
+[04:38:34] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Technical Evaluation Committee: 840202015713 already in committee
+[04:38:34] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Technical Evaluation Committee: 760901017398 already in committee
+[04:38:34] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Technical Evaluation Committee: 770614135921 already in committee
+[04:38:35] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Financial Evaluation Committee: 740217035890 already in committee
+[04:38:35] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Financial Evaluation Committee: 780517025690 already in committee
+[04:38:35] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Financial Evaluation Committee: 770714025664 already in committee
+[04:38:35] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Financial Evaluation Committee: 770714025666 already in committee
+[04:38:41] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Approve Committee -> 580401035583
+[04:38:41] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 580401035583 (switch)
+[04:38:42] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 580401035583
+[04:38:53] qt-to-recommendation-no-bpk/13_QT-014: QT-014: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:44:07] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Coordinate TEC Meeting -> 840202015713
+[04:44:08] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 840202015713 (switch)
+[04:44:09] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 840202015713
+[04:44:19] qt-to-recommendation-no-bpk/13_QT-014: QT-014: dialog: "Confirmation Are you sure to send the meeting invitation for document compliance review/proposal evaluation to the appoi" -> Yes
+[04:44:23] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Finalize TEC Evaluation -> 840202015713
+[04:44:33] qt-to-recommendation-no-bpk/13_QT-014: QT-014: attendance: Proposal Evaluation QT260000000004539 is successfully saved.
+[04:44:37] qt-to-recommendation-no-bpk/13_QT-014: QT-014: meeting: Proposal Evaluation QT260000000004539 is successfully saved.
+[04:45:33] qt-to-recommendation-no-bpk/13_QT-014: QT-014: technical scores: Proposal Evaluation Scores is successfully saved.; Proposal Evaluation Scores is successfully saved.
+[04:46:59] qt-to-recommendation-no-bpk/13_QT-014: QT-014: technical summary: PENSEL KAYU 2B BERPEMADAM 2/2; PEN BOLA (BALL POINT) DAK 2/2
+[04:47:14] qt-to-recommendation-no-bpk/13_QT-014: QT-014: dialog: "Confirmation Have the committee members been updated based on attendance? Yes No" -> Yes
+[04:47:18] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Endorse TEC Evaluation -> 760901017398
+[04:47:19] qt-to-recommendation-no-bpk/13_QT-014: Closed the TERKINI announcement
+[04:47:19] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 760901017398 (switch)
+[04:47:20] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 760901017398
+[04:47:36] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Endorse TEC Evaluation: no user assignee yet (none), waiting
+[04:47:36] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Endorse TEC Evaluation -> 770614135921
+[04:47:37] qt-to-recommendation-no-bpk/13_QT-014: Closed the TERKINI announcement
+[04:47:37] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 770614135921 (switch)
+[04:47:39] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 770614135921
+[04:47:53] qt-to-recommendation-no-bpk/13_QT-014: QT-014: SignOff TEC Evaluation -> 661027035165
+[04:47:53] qt-to-recommendation-no-bpk/13_QT-014: Closed the TERKINI announcement
+[04:47:53] qt-to-recommendation-no-bpk/13_QT-014: QT-014: login 661027035165 (switch)
+[04:47:54] qt-to-recommendation-no-bpk/13_QT-014: QT-014: Logged in as 661027035165
+[04:48:05] qt-to-recommendation-no-bpk/13_QT-014: QT-014: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:48:08] qt-to-recommendation-no-bpk/13_QT-014: Closed the TERKINI announcement
+[04:48:09] qt-to-recommendation-no-bpk/13_QT-014: DB status QT:TEC QT260000000004539: 62105 Technical Proposal Evaluation Completed / Penilaian Cadangan Teknikal Telah Selesai (expected 62105, OK)
+[04:48:10] qt-to-recommendation-no-bpk/13_QT-014: Signed out (SSO logout)
+  ✓  13 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 13 QT-014 Technical evaluation committee: evaluate, endorse, sign off @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/13_QT-014 @QT-014 (9.9m)
+[04:48:12] qt-to-recommendation-no-bpk/14_QT-015: QT-015 Financial evaluation committee: evaluate, endorse, sign off — role FEC Chair / Members, login: Katalon default account of the step
+[04:48:12] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 740217035890 (role user)
+[04:48:15] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 740217035890
+[04:48:17] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Assign FEC Committee -> 881204115188
+[04:48:19] qt-to-recommendation-no-bpk/14_QT-015: Closed the TERKINI announcement
+[04:48:19] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 881204115188 (switch)
+[04:48:21] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 881204115188
+[04:48:30] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Financial Evaluation Committee: 740217035890 already in committee
+[04:48:30] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Financial Evaluation Committee: 780517025690 already in committee
+[04:48:30] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Financial Evaluation Committee: 770714025664 already in committee
+[04:48:30] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Financial Evaluation Committee: 770714025666 already in committee
+[04:48:36] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Approve Committee -> 580401035583
+[04:48:36] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 580401035583 (switch)
+[04:48:37] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 580401035583
+[04:48:49] qt-to-recommendation-no-bpk/14_QT-015: QT-015: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:54:02] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Coordinate FEC Meeting -> 780517025690
+[04:54:03] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 780517025690 (switch)
+[04:54:05] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 780517025690
+[04:54:13] qt-to-recommendation-no-bpk/14_QT-015: QT-015: dialog: "Confirmation Are you sure to send the meeting invitation for document compliance review/proposal evaluation to the appoi" -> Yes
+[04:54:17] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Finalize FEC Evaluation -> 780517025690
+[04:54:27] qt-to-recommendation-no-bpk/14_QT-015: QT-015: attendance: Proposal Evaluation QT260000000004539 is successfully saved.
+[04:54:31] qt-to-recommendation-no-bpk/14_QT-015: QT-015: meeting: Proposal Evaluation QT260000000004539 is successfully saved.
+[04:54:36] qt-to-recommendation-no-bpk/14_QT-015: QT-015: financial scores: all already saved (DB), skipped
+[04:55:42] qt-to-recommendation-no-bpk/14_QT-015: QT-015: financial summary: PENSEL KAYU 2B BERPEMADAM 2/2; PEN BOLA (BALL POINT) DAK 2/2
+[04:55:54] qt-to-recommendation-no-bpk/14_QT-015: QT-015: dialog: "Confirmation Have the committee members been updated based on attendance? Yes No" -> Yes
+[04:55:58] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Endorse FEC Evaluation -> 770714025664
+[04:55:59] qt-to-recommendation-no-bpk/14_QT-015: Closed the TERKINI announcement
+[04:55:59] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 770714025664 (switch)
+[04:56:01] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 770714025664
+[04:56:13] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Endorse FEC Evaluation: no user assignee yet (none), waiting
+[04:56:13] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Endorse FEC Evaluation -> 770714025666
+[04:56:14] qt-to-recommendation-no-bpk/14_QT-015: Closed the TERKINI announcement
+[04:56:14] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 770714025666 (switch)
+[04:56:16] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 770714025666
+[04:56:30] qt-to-recommendation-no-bpk/14_QT-015: QT-015: SignOff FEC Evaluation -> 740217035890
+[04:56:31] qt-to-recommendation-no-bpk/14_QT-015: Closed the TERKINI announcement
+[04:56:31] qt-to-recommendation-no-bpk/14_QT-015: QT-015: login 740217035890 (switch)
+[04:56:32] qt-to-recommendation-no-bpk/14_QT-015: QT-015: Logged in as 740217035890
+[04:56:44] qt-to-recommendation-no-bpk/14_QT-015: QT-015: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[04:56:47] qt-to-recommendation-no-bpk/14_QT-015: Closed the TERKINI announcement
+[04:56:48] qt-to-recommendation-no-bpk/14_QT-015: DB status QT QT260000000004539: 60023 Pending Recommendation / Menunggu Pengesyoran (expected 60023, OK)
+[04:56:49] qt-to-recommendation-no-bpk/14_QT-015: Signed out (SSO logout)
+  ✓  14 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-to-recommendation-no-bpk [EN] Quotation / Tender without BPK to Pending Recommendation › 14 QT-015 Financial evaluation committee: evaluate, endorse, sign off @flow-qt-to-recommendation-no-bpk @module-qt @lang-en @FLOW @qt-to-recommendation-no-bpk/14_QT-015 @QT-015 (8.6m)
+
+  Slow test file: [flows] › tests\flows\en\qt.flow.spec.ts (43.1m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  14 passed (43.2m)

@@ -1,0 +1,72 @@
+
+Running 2 tests using 1 worker
+
+[05:15:22] dp-assign-code/01_KAT-038: KAT-038 Assign Code - Product (Request Note lines without item code) — role Codifier, login: account of KAT-035 (nurulainmof) — self-heal: the open BPM task "Codify Purchase Request" is assigned to nurulainmof, 880801029878, 880801235445, not to NURULAINMOF
+[05:15:22] dp-assign-code/01_KAT-038: Test data corrected (support/katalon/data-overrides.json): Document_Number: Assign Code on our RN260000000004701 (KAT-023 from SQ260000000002308: product + service lines without item code, AINHALIM priced all lines); Task Status shows Codify Purchase Request ASSIGNED to nurulainmof (AINHALIM, the KAT-030 login) and 2 officers
+[05:15:22] dp-assign-code/01_KAT-038: Using the login of KAT-030 (support/katalon/data-overrides.json)
+[05:15:22] dp-assign-code/01_KAT-038: Flow inputs: Document_Number=RN260000000004925
+[05:15:22] dp-assign-code/01_KAT-038: Flow login: the account of KAT-035
+[05:15:28] dp-assign-code/01_KAT-038: Closed the TERKINI announcement
+[05:15:31] dp-assign-code/01_KAT-038: Closed the TERKINI announcement
+[05:15:53] dp-assign-code/01_KAT-038: Claimed group task RN260000000004925 (moved to My Task)
+[05:15:54] dp-assign-code/01_KAT-038: RN260000000004925 is already in My Task (no claim needed)
+[05:15:57] dp-assign-code/01_KAT-038: Total Assign buttons found: 4
+[05:15:57] dp-assign-code/01_KAT-038: Click Assign button #0
+[05:16:44] dp-assign-code/01_KAT-038: Click Assign button #1
+[05:17:30] dp-assign-code/01_KAT-038: Click Assign button #2
+[05:18:16] dp-assign-code/01_KAT-038: Click Assign button #3
+[05:19:06] dp-assign-code/01_KAT-038: Message: Request Note RN260000000004925 is successfully submitted.
+[05:19:06] dp-assign-code/01_KAT-038: ✅ Captured RN No: RN260000000004925
+[05:19:07] dp-assign-code/01_KAT-038: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Submitted_2026.xlsx
+[05:19:07] dp-assign-code/01_KAT-038: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Submitted_2026.xlsx
+[05:19:08] dp-assign-code/01_KAT-038: Closed the TERKINI announcement
+[05:19:08] dp-assign-code/01_KAT-038: closeBrowser (the fixture closes the browser at the end of the test)
+[05:19:08] dp-assign-code/01_KAT-038: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 01 KAT-038 Assign Code - Product (Request Note lines without item code) @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/01_KAT-038 @KAT-038 (3.8m)
+[05:19:10] dp-assign-code/02_KAT-039: KAT-039 Assign Code - Service — role Codifier, login: account of KAT-030
+[05:19:10] dp-assign-code/02_KAT-039: Test data corrected (support/katalon/data-overrides.json): Document_Number: Assign Code (service) on RN260000000004511 (KAT-023 from SQ260000000002273, approved 2026-11-04), which sits in the Group Task of nurulainmof (AINHALIM, the KAT-030 login) as Pending Assign Item Code; RN260000000004701 was done by KAT-038
+[05:19:10] dp-assign-code/02_KAT-039: Using the login of KAT-030 (support/katalon/data-overrides.json)
+[05:19:10] dp-assign-code/02_KAT-039: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[05:19:10] dp-assign-code/02_KAT-039: Flow inputs: Document_Number=RN260000000004925
+[05:19:10] dp-assign-code/02_KAT-039: Flow login: the account of KAT-030
+[05:19:13] dp-assign-code/02_KAT-039: Closed the TERKINI announcement
+[05:19:16] dp-assign-code/02_KAT-039: Closed the TERKINI announcement
+[05:19:43] dp-assign-code/02_KAT-039: RN260000000004925 is not in Group Task (nothing to claim)
+[05:19:59] dp-assign-code/02_KAT-039: RN260000000004925 is not in Group Task (nothing to claim)
+[05:20:52] dp-assign-code/02_KAT-039: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 (1.7m)
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 
+
+    Error: RN260000000004925 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-039.ts:290:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:769:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_051515\flows-en-dp.flow-dp-assign-48cf2-T-039-Assign-Code---Service-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_051515\flows-en-dp.flow-dp-assign-48cf2-T-039-Assign-Code---Service-flows\error-context.md
+
+  Slow test file: [flows] › tests\flows\en\dp.flow.spec.ts (5.5m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 
+  1 passed (5.6m)

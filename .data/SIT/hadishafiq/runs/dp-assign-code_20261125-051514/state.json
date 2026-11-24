@@ -1,0 +1,70 @@
+{
+  "flowRunId": "dp-assign-code_20261125-051514",
+  "flowId": "dp-assign-code",
+  "module": "dp",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T05:15:14+08:00",
+  "updatedAt": "2026-11-25T05:21:14+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "RN": "RN260000000004925"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-038": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_051515",
+          "startedAt": "2026-11-25T05:15:22+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-assign-code\\01_KAT-038\\2026-11-25_051515",
+          "endedAt": "2026-11-25T05:19:08+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004925 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004925"
+      },
+      "login": "account of KAT-035 (nurulainmof) — self-heal: the open BPM task \"Codify Purchase Request\" is assigned to nurulainmof, 880801029878, 880801235445, not to NURULAINMOF",
+      "checkpoint": "RN_CODE_ASSIGNED"
+    },
+    "KAT-039": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_051515",
+          "startedAt": "2026-11-25T05:19:10+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-assign-code\\02_KAT-039\\2026-11-25_051515",
+          "endedAt": "2026-11-25T05:20:50+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "RN260000000004925 is not in this account's My Task (no result)",
+          "reconciled": {
+            "by": "hadishafiq",
+            "at": "2026-11-25T05:21:14+08:00",
+            "decision": "did not go through"
+          }
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-030"
+    }
+  },
+  "allowRerun": [
+    "KAT-039"
+  ],
+  "vars": {},
+  "status": "in-progress"
+}

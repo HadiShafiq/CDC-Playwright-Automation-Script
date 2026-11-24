@@ -3563,7 +3563,7 @@
   "SC|OC|62004": {
    "spec": "tests/data-prep/en/by-status/sc/OC/62004-Compliance-Verification-Completed.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-013",
    "manual": false
   },
@@ -3956,7 +3956,7 @@
   "SC|QT|60005": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60005-Pending-Document-Approval-for-Publication.spec.ts",
    "method": "flow",
-   "flow": "qt-doc-revision",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-107",
    "manual": false
   },
@@ -3970,7 +3970,7 @@
   "SC|QT|60007": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60007-Pending-Notice-Publishing.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-009",
    "manual": false
   },
@@ -3984,14 +3984,14 @@
   "SC|QT|60009": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60009-Pending-Proposal-Preparation.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-010",
    "manual": false
   },
   "SC|QT|60010": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60010-Pending-Proposal-Evaluation.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-012",
    "manual": false
   },
@@ -4054,14 +4054,14 @@
   "SC|QT|60022": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60022-Quotation-Tender-Closed.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-011",
    "manual": false
   },
   "SC|QT|60023": {
    "spec": "tests/data-prep/en/by-status/sc/QT/60023-Pending-Recommendation.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-015",
    "manual": false
   },
@@ -4788,7 +4788,7 @@
   "SC|TEC|62105": {
    "spec": "tests/data-prep/en/by-status/sc/TEC/62105-Technical-Proposal-Evaluation-Completed.spec.ts",
    "method": "flow",
-   "flow": "qt-to-recommendation",
+   "flow": "qt-to-recommendation-no-bpk",
    "upTo": "QT-014",
    "manual": false
   },

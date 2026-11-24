@@ -1198,18 +1198,18 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "sq",
-    "checkpoint": "SQ_SUPPLIER_RESPONDED",
+    "checkpoint": "RN_SUBMITTED",
     "verification": "verified",
     "createdBy": {
       "flowRunId": "sq-product-services_20261124-131239",
       "stepId": "KAT-037"
     },
     "lastStep": {
-      "flowRunId": "sq-product-services_20261124-131239",
-      "stepId": "KAT-022"
+      "flowRunId": "dp-sq-pr_20261125-045819",
+      "stepId": "KAT-023"
     },
     "createdAt": "2026-11-24T13:16:17+08:00",
-    "lastVerifiedAt": "2026-11-24T13:32:22+08:00",
+    "lastVerifiedAt": "2026-11-25T04:59:31+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,
@@ -1537,6 +1537,54 @@
     "createdAt": "2026-11-25T04:04:02+08:00",
     "lastVerifiedAt": "2026-11-25T04:12:52+08:00",
     "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "QT260000000004539",
+    "docType": "QT",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "qt",
+    "checkpoint": "PENDING_RECOMMENDATION",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "qt-to-recommendation-no-bpk_20261125-041338",
+      "stepId": "QT-001"
+    },
+    "lastStep": {
+      "flowRunId": "qt-to-recommendation-no-bpk_20261125-041338",
+      "stepId": "QT-015"
+    },
+    "createdAt": "2026-11-25T04:14:11+08:00",
+    "lastVerifiedAt": "2026-11-25T04:56:48+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "RN260000000004925",
+    "docType": "RN",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "dp",
+    "checkpoint": "RN_CODE_ASSIGNED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "dp-sq-pr_20261125-045819",
+      "stepId": "KAT-023"
+    },
+    "lastStep": {
+      "flowRunId": "dp-assign-code_20261125-051514",
+      "stepId": "KAT-038"
+    },
+    "createdAt": "2026-11-25T04:59:31+08:00",
+    "lastVerifiedAt": "2026-11-25T05:19:08+08:00",
+    "parents": [
+      "SQ260000000002371"
+    ],
     "reuse": "available",
     "cr": null,
     "notes": []

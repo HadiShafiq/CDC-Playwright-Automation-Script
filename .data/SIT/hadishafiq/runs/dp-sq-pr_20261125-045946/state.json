@@ -1,0 +1,78 @@
+{
+  "flowRunId": "dp-sq-pr_20261125-045946",
+  "flowId": "dp-sq-pr",
+  "module": "dp",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T04:59:46+08:00",
+  "updatedAt": "2026-11-25T05:02:57+08:00",
+  "from": "KAT-024",
+  "to": "KAT-024",
+  "docs": {
+    "RN": "RN260000000004925"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-024": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_045947",
+          "startedAt": "2026-11-25T04:59:52+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-sq-pr\\06_KAT-024\\2026-11-25_045947",
+          "dbBefore": {
+            "kind": "RN",
+            "docNo": "RN260000000004925",
+            "statusId": 60701
+          },
+          "endedAt": "2026-11-25T05:01:02+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "RN260000000004925 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-25_050207",
+          "startedAt": "2026-11-25T05:02:13+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-sq-pr\\06_KAT-024\\2026-11-25_050207",
+          "dbBefore": {
+            "kind": "RN",
+            "docNo": "RN260000000004925",
+            "statusId": 60701
+          },
+          "selfHeal": "the attempt failed before opening the document (RN260000000004925 is not in this account's My Task (no result)), so nothing was submitted",
+          "endedAt": "2026-11-25T05:02:57+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004925 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004925"
+      },
+      "login": "officer 690127065209: BPM task \"Review Direct Purchase\" of RN260000000004925 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "RN_APPROVED",
+      "db": {
+        "kind": "RN",
+        "docNo": "RN260000000004925",
+        "expected": 60701,
+        "statusId": 60701,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 04:59:27",
+        "ok": true,
+        "checkedAt": "2026-11-25T05:02:57+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

@@ -1,0 +1,58 @@
+{
+  "flowRunId": "dp-sq-pr_20261125-045819",
+  "flowId": "dp-sq-pr",
+  "module": "dp",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T04:58:19+08:00",
+  "updatedAt": "2026-11-25T04:59:31+08:00",
+  "from": "KAT-023",
+  "to": "KAT-023",
+  "docs": {
+    "SQ": "SQ260000000002371",
+    "RN": "RN260000000004925"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "KAT-023": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_045820",
+          "startedAt": "2026-11-25T04:58:28+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-sq-pr\\05_KAT-023\\2026-11-25_045820",
+          "endedAt": "2026-11-25T04:59:31+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Request Note RN260000000004925 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "RN": "RN260000000004925"
+      },
+      "login": "account of KAT-021",
+      "checkpoint": "RN_SUBMITTED",
+      "db": {
+        "kind": "RN",
+        "docNo": "RN260000000004925",
+        "expected": 60701,
+        "statusId": 60701,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 04:59:27",
+        "ok": true,
+        "checkedAt": "2026-11-25T04:59:31+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

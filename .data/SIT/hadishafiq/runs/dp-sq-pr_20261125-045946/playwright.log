@@ -1,0 +1,90 @@
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 01 KAT-021 Create Simple Quote - Services @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/01_KAT-021 @KAT-021
+  -   2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/02_SQ_START_SQL @gate-SQ_START_SQL
+  -   3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/03_KAT-022 @KAT-022
+  -   4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/04_SQ_END_SQL @gate-SQ_END_SQL
+  -   5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/05_KAT-023 @KAT-023
+[04:59:52] dp-sq-pr/06_KAT-024: KAT-024 Approve Request Note (SQ route) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004925 is ASSIGNED to 690127065209 (SIT WFTASK)
+[04:59:52] dp-sq-pr/06_KAT-024: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our RN RN260000000004702 (KAT-023 from Services Schedule SQ260000000002309); Review Direct Purchase ASSIGNED to officer 690127065209 (Task Status Search)
+[04:59:52] dp-sq-pr/06_KAT-024: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[04:59:52] dp-sq-pr/06_KAT-024: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[04:59:53] dp-sq-pr/06_KAT-024: Flow inputs: Document_Number=RN260000000004925
+[04:59:53] dp-sq-pr/06_KAT-024: Flow login: officer 690127065209 (shared officer password)
+[04:59:55] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[04:59:58] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[05:00:40] dp-sq-pr/06_KAT-024: RN260000000004925 is not in Group Task (nothing to claim)
+[05:01:05] dp-sq-pr/06_KAT-024: Signed out (SSO logout)
+  ✘   6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 06 KAT-024 Approve Request Note (SQ route) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/06_KAT-024 @KAT-024 (1.2m)
+  -   7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 07 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/07_KAT-033 @KAT-033
+  -   8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 08 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/08_KAT-034 @KAT-034
+  -   9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 09 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/09_PO_LOOKUP @gate-PO_LOOKUP
+  -  10 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 10 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/10_KAT-035 @KAT-035
+
+
+  1) [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 06 KAT-024 Approve Request Note (SQ route) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/06_KAT-024 @KAT-024 
+
+    Error: RN260000000004925 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-024.ts:300:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:769:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\dp.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_045947\flows-en-dp.flow-dp-sq-pr--2f712-rove-Request-Note-SQ-route--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_045947\flows-en-dp.flow-dp-sq-pr--2f712-rove-Request-Note-SQ-route--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 06 KAT-024 Approve Request Note (SQ route) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/06_KAT-024 @KAT-024 
+  5 skipped
+  4 did not run
+
+Running 10 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 01 KAT-021 Create Simple Quote - Services @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/01_KAT-021 @KAT-021
+  -   2 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 02 GATE SQ_START_SQL Open the Simple Quote at the next quarter hour (START_DATE) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/02_SQ_START_SQL @gate-SQ_START_SQL
+  -   3 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 03 KAT-022 Supplier responds to the Simple Quote (prices every line) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/03_KAT-022 @KAT-022
+  -   4 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 04 GATE SQ_END_SQL Close the Simple Quote at the next quarter hour (END_DATE) — only after the supplier replied @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/04_SQ_END_SQL @gate-SQ_END_SQL
+  -   5 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 05 KAT-023 Prepare Request Note from a closed Simple Quote @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/05_KAT-023 @KAT-023
+[05:02:12] dp-sq-pr/06_KAT-024: SELF-HEAL KAT-024: retry once — the attempt failed before opening the document (RN260000000004925 is not in this account's My Task (no result)), so nothing was submitted
+[05:02:14] dp-sq-pr/06_KAT-024: KAT-024 Approve Request Note (SQ route) — role Approver, login: officer 690127065209: BPM task "Review Direct Purchase" of RN260000000004925 is ASSIGNED to 690127065209 (SIT WFTASK)
+[05:02:14] dp-sq-pr/06_KAT-024: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our RN RN260000000004702 (KAT-023 from Services Schedule SQ260000000002309); Review Direct Purchase ASSIGNED to officer 690127065209 (Task Status Search)
+[05:02:14] dp-sq-pr/06_KAT-024: Using officer 690127065209 with the shared officer password (support/katalon/data-overrides.json)
+[05:02:14] dp-sq-pr/06_KAT-024: Data file "1_FL FOR RN.xlsx" (Data Files/Akta_882_RU/3- NEW RN) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[05:02:14] dp-sq-pr/06_KAT-024: Flow inputs: Document_Number=RN260000000004925
+[05:02:14] dp-sq-pr/06_KAT-024: Flow login: officer 690127065209 (shared officer password)
+[05:02:16] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[05:02:20] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[05:02:36] dp-sq-pr/06_KAT-024: RN260000000004925 is already in My Task (no claim needed)
+[05:02:54] dp-sq-pr/06_KAT-024: Message: Request Note RN260000000004925 is approved.
+[05:02:54] dp-sq-pr/06_KAT-024: ✅ Captured RN No: RN260000000004925
+[05:02:54] dp-sq-pr/06_KAT-024: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[05:02:54] dp-sq-pr/06_KAT-024: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/DLOA_RN_NO_Approve_2026.xlsx
+[05:02:56] dp-sq-pr/06_KAT-024: Closed the TERKINI announcement
+[05:02:56] dp-sq-pr/06_KAT-024: closeBrowser (the fixture closes the browser at the end of the test)
+[05:02:57] dp-sq-pr/06_KAT-024: DB status RN RN260000000004925: 60701 Pending Approval / Menunggu Kelulusan (expected 60701, OK)
+[05:02:57] dp-sq-pr/06_KAT-024: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 06 KAT-024 Approve Request Note (SQ route) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/06_KAT-024 @KAT-024 (46.2s)
+  -   7 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 07 KAT-033 Submit Purchase Request from the approved Request Note @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/07_KAT-033 @KAT-033
+  -   8 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 08 KAT-034 Approve Purchase Request (sent to iGFMAS) @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/08_KAT-034 @KAT-034
+  -   9 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 09 GATE PO_LOOKUP Purchase Order number after iGFMAS verification @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/09_PO_LOOKUP @gate-PO_LOOKUP
+  -  10 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-sq-pr [EN] DP from Simple Quote, Purchase Request route (One Off / product) › 10 KAT-035 Supplier acknowledges the Purchase Order @flow-dp-sq-pr @module-dp @lang-en @FLOW @dp-sq-pr/10_KAT-035 @KAT-035
+
+  9 skipped
+  1 passed (51.4s)

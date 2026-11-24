@@ -347,8 +347,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-038 waits for 'is successfully submitted.'; task 'Codify Purchase Request' in the Group Task of the KAT-030 account (2026-11-13)"
+        "verification": "execution",
+        "evidence": "SIT run dp-assign-code_20261125-051514: RN260000000004925 (from SQ260000000002371, 60708 Pending Assign Item Code) → \"is successfully submitted\" → RN 60703 Completed; ONE Codify Purchase Request task covered the product and service lines"
       }
     },
     "KAT-039": {
@@ -453,7 +453,7 @@
       "id": "dp-assign-code",
       "title": "Assign Code on a Request Note (product, then service)",
       "verification": "unverified",
-      "notes": "Needs an RN whose lines have no item code (e.g. from sq-product-services). Give the RN with --input RN=…",
+      "notes": "Needs an RN whose lines have no item code (e.g. from sq-product-services). Give the RN with --input RN=… 2026-11-25: KAT-038 VERIFIED on RN260000000004925 (60708 → 60703); KAT-039 found no task afterwards (the single codify task already covered the service line). RN source: dp-sq-pr --from KAT-023 --to KAT-024 on a product+services SQ.",
       "steps": [
         "KAT-038",
         "KAT-039"
