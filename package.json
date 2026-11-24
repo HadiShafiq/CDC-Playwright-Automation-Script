@@ -20,11 +20,13 @@
     "typecheck": "tsc --noEmit",
     "browser:sit": "cross-env TEST_ENV=SIT node scripts/browser-server.mjs --detached",
     "browser:uat": "cross-env TEST_ENV=UAT node scripts/browser-server.mjs --detached",
-    "mof:sit": "cross-env TEST_ENV=SIT CDP_URL=http://127.0.0.1:9333 playwright test tests/mof --project=flows --workers=1",
+    "mof:sit": "cross-env TEST_ENV=SIT CDP_URL=http://127.0.0.1:9333 playwright test tests/sm/update-profile --project=flows --workers=1",
     "browsers:mem": "node scripts/browser-memory.mjs",
     "browsers:kill": "node scripts/browser-memory.mjs --kill",
-    "mofreg:sit": "cross-env TEST_ENV=SIT playwright test tests/mof-registration --project=flows --workers=1",
-    "status:gen": "node scripts/gen-status.mjs"
+    "mofreg:sit": "cross-env TEST_ENV=SIT playwright test tests/sm/registration tests/sm/catalogue tests/sm/soft-cert --project=flows --workers=1",
+    "suites:gen": "node scripts/gen-suites.mjs && node scripts/gen-status-specs.mjs && node scripts/status-coverage.mjs",
+    "status:gen": "node scripts/gen-suites.mjs && node scripts/gen-status-specs.mjs && node scripts/status-coverage.mjs",
+    "sm:sit": "cross-env TEST_ENV=SIT playwright test tests/sm/registration tests/sm/catalogue tests/sm/soft-cert --project=flows --workers=1"
   },
   "devDependencies": {
     "@faker-js/faker": "^10.6.0",

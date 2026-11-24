@@ -27,8 +27,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-046 waits for 'is successfully submitted.'; Submit PR task appears a few minutes after RN approval; passed SIT 2026-11-16_112140"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: PR260000000005074 40010 after KAT-046 (dp-add-to-cart → non-contract)",
+        "db": {
+          "kind": "PR",
+          "statusId": 40010,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-24: PR260000000005074 40010 after KAT-046 (dp-add-to-cart → non-contract)"
+        }
       }
     },
     "KAT-047": {
@@ -55,8 +62,19 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-047 waits for 'is approved and has been sent to iGFMAS for verification.'; passed SIT 2026-11-16_112351"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: PR260000000005074 40300 after KAT-047; PO260000000007218 created at once",
+        "db": {
+          "kind": "PR",
+          "statusId": 40300,
+          "en": "Purchase Request Approved",
+          "bm": "Permintaan Pembelian Diluluskan",
+          "via": [
+            40100,
+            40110
+          ],
+          "evidence": "SIT DB 2026-11-24: PR260000000005074 40300 after KAT-047; PO260000000007218 created at once"
+        }
       }
     },
     "KAT-048": {
@@ -113,8 +131,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script (it reads DO… text); a delivery amount above the PO total makes a debit note later (memory debit-credit-note-procedure); passed SIT 2026-11-16_123253"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): DO 01309H005M2600504 42000 after KAT-049",
+        "db": {
+          "kind": "DO",
+          "statusId": 42000,
+          "en": "Pending Acknowledgement",
+          "bm": "Menunggu Pengesahan",
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): DO 01309H005M2600504 42000 after KAT-049"
+        }
       }
     },
     "KAT-050": {
@@ -141,8 +166,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script (it reads FN…); DO number from the receiving officer Group Task; passed SIT 2026-11-16_123454"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): FN260000000005812 43002 after KAT-050 (DO 42005)",
+        "db": {
+          "kind": "FN",
+          "statusId": 43002,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): FN260000000005812 43002 after KAT-050 (DO 42005)"
+        }
       }
     },
     "KAT-051": {
@@ -164,8 +196,18 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script; officer from Task Status Search (180220145443 on 2026-11-16); passed SIT 2026-11-16_123622"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): FN260000000005812 43002 → 43100 → 43010 after KAT-051",
+        "db": {
+          "kind": "FN",
+          "statusId": 43010,
+          "en": "Approved",
+          "bm": "Diluluskan",
+          "via": [
+            43100
+          ],
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): FN260000000005812 43002 → 43100 → 43010 after KAT-051"
+        }
       }
     },
     "KAT-052": {
@@ -194,8 +236,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "Needed when the PO shows Pending Partial Fulfilment, so the Create Invoice task is released (memory debit-credit-note-procedure); passed SIT 2026-11-16_125047"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): SD260000000002802 47005 after KAT-052",
+        "db": {
+          "kind": "SD",
+          "statusId": 47005,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): SD260000000002802 47005 after KAT-052"
+        }
       }
     },
     "KAT-053": {
@@ -217,8 +266,18 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script; officer 690127065209 on 2026-11-16; passed SIT 2026-11-16_125421"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): SD260000000002802 47005 → 47100 → 47800 after KAT-053 (PO 41010 → 41015)",
+        "db": {
+          "kind": "SD",
+          "statusId": 47800,
+          "en": "Approved",
+          "bm": "Diluluskan",
+          "via": [
+            47100
+          ],
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): SD260000000002802 47005 → 47100 → 47800 after KAT-053 (PO 41010 → 41015)"
+        }
       }
     },
     "KAT-054": {
@@ -275,8 +334,19 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "Match Payment is a group task of this account group; passed SIT 2026-11-02_174635"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): PA260000000006414 46100 → 46001 after KAT-055 (iGFMAS answer; may differ)",
+        "db": {
+          "kind": "PA",
+          "statusId": 46001,
+          "en": "Pending Payment Instruction Query from iGFMAS",
+          "bm": "Menunggu Semakan Kuiri Arahan Pembayaran dari iGFMAS",
+          "via": [
+            46100
+          ],
+          "observeOnly": true,
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): PA260000000006414 46100 → 46001 after KAT-055 (iGFMAS answer; may differ)"
+        }
       }
     },
     "KAT-056": {
@@ -298,8 +368,18 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "Task Review DAN; officer 690127065209 on 2026-11-16; passed SIT 2026-11-16_125842"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): DN260000000004802 45000 → 45100 → 45300 after KAT-056 (CO 41520 → 41525)",
+        "db": {
+          "kind": "DN",
+          "statusId": 45300,
+          "en": "Approved",
+          "bm": "Diluluskan",
+          "via": [
+            45100
+          ],
+          "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): DN260000000004802 45000 → 45100 → 45300 after KAT-056 (CO 41520 → 41525)"
+        }
       }
     },
     "KAT-057": {
@@ -327,7 +407,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run fl-contract_20261123-170117 2026-11-23 17:02:55: \"Contract Request CR260000000006053 is successfully submitted.\" (contract of LA260000000004216 / CT260000000002293; 17:02:39 \"Selected Charge Line Items updated.\")"
+        "evidence": "SIT flow run fl-contract_20261123-170117 2026-11-23 17:02:55: \"Contract Request CR260000000006053 is successfully submitted.\" (contract of LA260000000004216 / CT260000000002293; 17:02:39 \"Selected Charge Line Items updated.\")",
+        "db": {
+          "kind": "CR",
+          "statusId": 40510,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-23: CR260000000006053 after KAT-057"
+        }
       }
     },
     "KAT-058": {
@@ -355,7 +442,18 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run fl-contract_20261123-170117 2026-11-23 17:03:32: \"Contract Request CR260000000006053 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status…\""
+        "evidence": "SIT flow run fl-contract_20261123-170117 2026-11-23 17:03:32: \"Contract Request CR260000000006053 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status…\"",
+        "db": {
+          "kind": "CR",
+          "statusId": 40800,
+          "en": "Contract Request Approved",
+          "bm": "Permintaan Kontrak Diluluskan",
+          "via": [
+            40600,
+            40610
+          ],
+          "evidence": "SIT DB 2026-11-23: CR260000000006053: 40510 → 40600 Awaiting iGFMAS Response → 40610 Pending CR Review from iGFMAS → 40800 within 41 s after KAT-058"
+        }
       }
     },
     "KAT-059": {
@@ -384,8 +482,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-059 waits for 'is acknowledged.'; the CO supplier was the KAT-008 account on 2026-11-02; passed SIT 2026-11-02_154038"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): CO260000000006653 41500 → 41505 after KAT-059",
+        "db": {
+          "kind": "CO",
+          "statusId": 41505,
+          "en": "Pending Fulfilment",
+          "bm": "Menunggu Pemenuhan",
+          "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): CO260000000006653 41500 → 41505 after KAT-059"
+        }
       }
     },
     "KAT-060": {
@@ -414,8 +519,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "No success message in the script; passed SIT 2026-11-02_160423"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): DO 01400K003S2600003 42000 after KAT-060",
+        "db": {
+          "kind": "DO",
+          "statusId": 42000,
+          "en": "Pending Acknowledgement",
+          "bm": "Menunggu Pengesahan",
+          "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): DO 01400K003S2600003 42000 after KAT-060"
+        }
       }
     },
     "KAT-061": {
@@ -442,8 +554,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "Create FRN task assigned to an officer no test case logs in as (831221115096 on 2026-11-02); passed SIT 2026-11-02_173646"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): FN260000000005811 43002 after KAT-061",
+        "db": {
+          "kind": "FN",
+          "statusId": 43002,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): FN260000000005811 43002 after KAT-061"
+        }
       }
     },
     "KAT-062": {
@@ -465,8 +584,18 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "Officer 180220145443 on 2026-11-02; passed SIT 2026-11-02_173919"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): FN260000000005811 43002 → 43100 → 43010 after KAT-062 (DO 42005, CO 41515)",
+        "db": {
+          "kind": "FN",
+          "statusId": 43010,
+          "en": "Approved",
+          "bm": "Diluluskan",
+          "via": [
+            43100
+          ],
+          "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): FN260000000005811 43002 → 43100 → 43010 after KAT-062 (DO 42005, CO 41515)"
+        }
       }
     },
     "KAT-063": {
@@ -523,8 +652,391 @@
           "en": null,
           "bm": null
         },
-        "verification": "unverified",
-        "evidence": "Group task of this account group; passed SIT 2026-11-02_174526"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): PA260000000006413 46100 → 46001 right after KAT-064 (iGFMAS answer; may differ)",
+        "db": {
+          "kind": "PA",
+          "statusId": 46001,
+          "en": "Pending Payment Instruction Query from iGFMAS",
+          "bm": "Menunggu Semakan Kuiri Arahan Pembayaran dari iGFMAS",
+          "via": [
+            46100
+          ],
+          "observeOnly": true,
+          "evidence": "SIT DB 2026-11-24 (runs fl-contract_20261124 + fl-contract-debit-note): PA260000000006413 46100 → 46001 right after KAT-064 (iGFMAS answer; may differ)"
+        }
+      }
+    },
+    "FL-101": {
+      "title": "Supplier updates the Delivery Order (Fulfilment Maintenance)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py do_update → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "Supplier: Fulfilment Maintenance, transaction type P1 (PO) or P2 (CO), Update, change the DO reference. Only while the DO is 42000 Pending Acknowledgement.",
+      "inputs": [
+        {
+          "var": "doNo",
+          "doc": "DO"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DO_MODIFY_REQUESTED",
+        "description": "DO modification pending approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "DO",
+          "statusId": 42010,
+          "en": "Pending Modification Approval",
+          "bm": "Menunggu Kelulusan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-102": {
+      "title": "FL Approver approves the DO modification",
+      "role": "FL Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py approve_do_update → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "FL Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "doNo",
+          "doc": "DO"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DO_MODIFIED",
+        "description": "DO modified, back to Pending Acknowledgement",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "DO",
+          "statusId": 42000,
+          "en": "Pending Acknowledgement",
+          "bm": "Menunggu Pengesahan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-103": {
+      "title": "Supplier cancels the Delivery Order",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py do_cancel → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "Supplier: Fulfilment Maintenance, Cancel (also at 42005 until the FRN is with iGFMAS).",
+      "inputs": [
+        {
+          "var": "doNo",
+          "doc": "DO"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DO_CANCEL_REQUESTED",
+        "description": "DO cancellation pending approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "DO",
+          "statusId": 42015,
+          "en": "Pending Cancellation Approval",
+          "bm": "Menunggu Kelulusan Pembatalan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-104": {
+      "title": "FL Approver approves the DO cancellation",
+      "role": "FL Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py approve_do_cancel → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "FL Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "doNo",
+          "doc": "DO"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DO_CANCELLED",
+        "description": "DO cancelled; order back to Pending Fulfilment",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "DO",
+          "statusId": 42900,
+          "en": "Cancelled",
+          "bm": "Dibatalkan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-111": {
+      "title": "Supplier updates the invoice (Fulfilment Maintenance)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py inv_update → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "Supplier: Fulfilment Maintenance, Update the invoice reference.",
+      "inputs": [
+        {
+          "var": "inNo",
+          "doc": "IN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "INVOICE_MODIFY_REQUESTED",
+        "description": "Invoice modification pending approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "IN",
+          "statusId": 44015,
+          "en": "Pending Modification Approval",
+          "bm": "Menunggu Kelulusan Kemaskini",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-112": {
+      "title": "FL Approver approves the invoice modification",
+      "role": "FL Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py approve_inv_update → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "FL Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "inNo",
+          "doc": "IN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "INVOICE_MODIFIED",
+        "description": "Invoice modified (Submitted)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "IN",
+          "statusId": 44005,
+          "en": "Submitted",
+          "bm": "Diserahkan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-113": {
+      "title": "Supplier cancels the invoice",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-048"
+      },
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py inv_cancel → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "Supplier: Fulfilment Maintenance, Cancel.",
+      "inputs": [
+        {
+          "var": "inNo",
+          "doc": "IN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "INVOICE_CANCEL_REQUESTED",
+        "description": "Invoice cancellation pending approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "IN",
+          "statusId": 44010,
+          "en": "Pending Cancellation Approval",
+          "bm": "Menunggu Kelulusan Pembatalan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-114": {
+      "title": "FL Approver approves the invoice cancellation",
+      "role": "FL Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) steps.py approve_inv_cancel → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "FL Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "inNo",
+          "doc": "IN"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "INVOICE_CANCELLED",
+        "description": "Invoice cancelled; order back to Pending Invoice",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "IN",
+          "statusId": 44900,
+          "en": "Cancelled",
+          "bm": "Dibatalkan",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
+        }
+      }
+    },
+    "FL-121": {
+      "title": "Payment match with an iGFMAS query (description ends MM516FAIL)",
+      "role": "Finance",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-055"
+      },
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) flow pay_query → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "Payment match with the payment description ending MM516FAIL (no OSB change needed).",
+      "inputs": [
+        {
+          "var": "poNo",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PA",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "PAYMENT_QUERY",
+        "description": "Pending Payment Instruction Query Verification",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "PA",
+          "statusId": 46002,
+          "en": "Pending Payment Instruction Query Verification",
+          "bm": "Menunggu Semakan Kuiri Arahan Pembayaran",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+          "waitSec": 900,
+          "via": [
+            46001,
+            46100
+          ]
+        }
+      }
+    },
+    "FL-122": {
+      "title": "Payment match with an iGFMAS IDD failure (description ends MM506FAIL)",
+      "role": "Finance",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-055"
+      },
+      "automation": "module",
+      "source": "fl-data (FL fullfilment and PM.zip) flow pay_idd_fail → ported to support/modules/fl/maintenance.ts (2026-11-24)",
+      "instructions": "Payment match with the payment description ending MM506FAIL.",
+      "inputs": [
+        {
+          "var": "poNo",
+          "doc": "PO"
+        }
+      ],
+      "outputs": [
+        {
+          "doc": "PA",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "PAYMENT_IDD_FAIL",
+        "description": "Back to Pending Payment Match",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "db": {
+          "kind": "PA",
+          "statusId": 46000,
+          "en": "Pending Payment Match",
+          "bm": "Menunggu Padanan Bayaran",
+          "observeOnly": true,
+          "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+          "waitSec": 900,
+          "via": [
+            46001,
+            46100
+          ]
+        }
       }
     }
   },
@@ -549,13 +1061,14 @@
         "KAT-051",
         "KAT-054",
         "KAT-055"
-      ]
+      ],
+      "submodule": "non-contract"
     },
     {
       "id": "fl-noncontract-partial-debit-note",
       "title": "Non-contract, partial delivery above the order: stop delivery, invoice, debit note approval",
       "verification": "execution",
-      "notes": "Memory debit-credit-note-procedure (verified 2026-11-16): services PO, delivery amount above the ordered amount; give --input PO=… of an acknowledged services PO.",
+      "notes": "Memory debit-credit-note-procedure (verified 2026-11-16): services PO, delivery amount above the ordered amount; give --input PO=… of an acknowledged services PO. 2026-11-24: + DN_LOOKUP (read from FL_ADJUSTMENT) and KAT-055 payment match, so the flow ends at payment. A partial delivery leaves the PO at 41010 Pending Partial Fulfilment (no Create Invoice task) until the stop delivery instruction is approved.",
       "steps": [
         "KAT-049",
         {
@@ -566,8 +1079,13 @@
         "KAT-052",
         "KAT-053",
         "KAT-054",
-        "KAT-056"
-      ]
+        {
+          "gate": "DN_LOOKUP"
+        },
+        "KAT-056",
+        "KAT-055"
+      ],
+      "submodule": "non-contract"
     },
     {
       "id": "fl-contract",
@@ -591,6 +1109,187 @@
         "KAT-061",
         "KAT-062",
         "KAT-063",
+        "KAT-064"
+      ],
+      "submodule": "contract"
+    },
+    {
+      "id": "fl-noncontract-do-maint",
+      "submodule": "maintenance",
+      "title": "Non-contract: DO update and cancel (Fulfilment Maintenance)",
+      "verification": "documentation",
+      "notes": "fl-data do_maint (DEV): DO 42010 → 42000, then 42015 → 42900; PO back to 41005. Needs --input RN.",
+      "steps": [
+        "KAT-046",
+        "KAT-047",
+        {
+          "gate": "PO_LOOKUP"
+        },
+        "KAT-048",
+        "KAT-049",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "FL-101",
+        "FL-102",
+        "FL-103",
+        "FL-104"
+      ]
+    },
+    {
+      "id": "fl-noncontract-inv-maint",
+      "submodule": "maintenance",
+      "title": "Non-contract: invoice update and cancel (Fulfilment Maintenance)",
+      "verification": "documentation",
+      "notes": "fl-data inv_maint (DEV): IN 44015 → 44005, then 44010 → 44900; PO back to 41015.",
+      "steps": [
+        "KAT-046",
+        "KAT-047",
+        {
+          "gate": "PO_LOOKUP"
+        },
+        "KAT-048",
+        "KAT-049",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-050",
+        "KAT-051",
+        "KAT-054",
+        "FL-111",
+        "FL-112",
+        "FL-113",
+        "FL-114"
+      ]
+    },
+    {
+      "id": "fl-contract-do-maint",
+      "submodule": "maintenance",
+      "title": "Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order)",
+      "verification": "documentation",
+      "notes": "fl-data cr_do_maint (DEV); CO back to 41505.",
+      "steps": [
+        {
+          "gate": "CT_LOOKUP"
+        },
+        "KAT-057",
+        "KAT-058",
+        {
+          "gate": "CO_LOOKUP"
+        },
+        "KAT-059",
+        "KAT-060",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "FL-101",
+        "FL-102",
+        "FL-103",
+        "FL-104"
+      ]
+    },
+    {
+      "id": "fl-contract-inv-maint",
+      "submodule": "maintenance",
+      "title": "Contract: invoice update and cancel",
+      "verification": "documentation",
+      "notes": "fl-data cr_inv_maint (DEV); CO back to 41515.",
+      "steps": [
+        {
+          "gate": "CT_LOOKUP"
+        },
+        "KAT-057",
+        "KAT-058",
+        {
+          "gate": "CO_LOOKUP"
+        },
+        "KAT-059",
+        "KAT-060",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-061",
+        "KAT-062",
+        "KAT-063",
+        "FL-111",
+        "FL-112",
+        "FL-113",
+        "FL-114"
+      ]
+    },
+    {
+      "id": "fl-noncontract-pay-query",
+      "submodule": "payment-failure",
+      "title": "Non-contract: payment with an iGFMAS query (MM516FAIL)",
+      "verification": "documentation",
+      "notes": "fl-data pay_query (DEV): PA 46100 → 46002, PO 41027.",
+      "steps": [
+        "KAT-046",
+        "KAT-047",
+        {
+          "gate": "PO_LOOKUP"
+        },
+        "KAT-048",
+        "KAT-049",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-050",
+        "KAT-051",
+        "KAT-054",
+        "FL-121"
+      ]
+    },
+    {
+      "id": "fl-noncontract-pay-idd-fail",
+      "submodule": "payment-failure",
+      "title": "Non-contract: payment IDD failure (MM506FAIL)",
+      "verification": "documentation",
+      "notes": "fl-data pay_idd_fail (DEV): PA 46100 → back to 46000, PO stays 41025.",
+      "steps": [
+        "KAT-046",
+        "KAT-047",
+        {
+          "gate": "PO_LOOKUP"
+        },
+        "KAT-048",
+        "KAT-049",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-050",
+        "KAT-051",
+        "KAT-054",
+        "FL-122"
+      ]
+    },
+    {
+      "id": "fl-contract-debit-note",
+      "submodule": "contract",
+      "title": "Contract fulfilment with a debit note: invoice above the order → DN approval → payment",
+      "verification": "execution",
+      "notes": "SIT 2026-11-24 (fl-contract run): invoice above CO260000000006653 made DN260000000004802; CO 41520 Pending Debit Note Approval; payment match opens the DN until it is approved.",
+      "steps": [
+        {
+          "gate": "CT_LOOKUP"
+        },
+        "KAT-057",
+        "KAT-058",
+        {
+          "gate": "CO_LOOKUP"
+        },
+        "KAT-059",
+        "KAT-060",
+        {
+          "gate": "DO_LOOKUP"
+        },
+        "KAT-061",
+        "KAT-062",
+        "KAT-063",
+        {
+          "gate": "DN_LOOKUP"
+        },
+        "KAT-056",
         "KAT-064"
       ]
     }

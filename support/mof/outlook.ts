@@ -67,11 +67,34 @@ async function openInbox(browser: Browser, box: Mailbox, log: (m: string) => voi
   const context = await browser.newContext(fs.existsSync(file) ? { storageState: file } : {});
   const page = await context.newPage();
   await page.goto('https://outlook.office.com/mail/', { waitUntil: 'domcontentloaded', timeout: 60_000 });
-  await page.waitForTimeout(3000);
-  if (/login\.microsoftonline|login\.live/.test(page.url())) await signIn(page, box, log);
-  await page.locator('div[role=option]').first().waitFor({ timeout: 60_000 }).catch(() => {});
+  await ensureInbox(page, box, log);
   await context.storageState({ path: file });
   return { context, page };
+}
+
+const onLogin = (page: Page) => /login\.microsoftonline|login\.live/.test(page.url());
+
+/**
+ * Wait until the page is either the inbox or the Microsoft sign-in page (the redirect can take well over 3 s), sign in
+ * when it is the sign-in page, and fail at once if the inbox never shows. Never poll a sign-in page as an "empty inbox"
+ * (2026-11-24: newsupplier002's expired session made the run count "0 mails" for 20 minutes).
+ */
+async function ensureInbox(page: Page, box: Mailbox, log: (m: string) => void) {
+  const inbox = page.locator('div[role=option], div[role=listbox]').first();
+  const login = page.locator('input[type=email], input[name=loginfmt]').first();
+  for (let i = 0; i < 2; i++) {
+    await Promise.race([inbox.waitFor({ timeout: 60_000 }), login.waitFor({ timeout: 60_000 })]).catch(() => {});
+    if (onLogin(page) || (await login.isVisible().catch(() => false))) {
+      await signIn(page, box, log);
+      await page.waitForURL(/outlook\.office\.com\/mail/, { timeout: 60_000 }).catch(() => {});
+      continue;
+    }
+    if (await inbox.isVisible().catch(() => false)) return;
+  }
+  if (onLogin(page) || !(await inbox.isVisible().catch(() => false))) {
+    const text = clean(await page.locator('body').innerText().catch(() => '')).slice(0, 200);
+    throw new Error(`Outlook ${box.email}: could not reach the inbox (at ${page.url().slice(0, 80)}: ${text})`);
+  }
 }
 
 /**
@@ -114,7 +137,7 @@ export async function readOutlook(
       log(`Outlook ${box.email}: check ${attempt}, no mail matching ${subject} + ${mustContain} among ${n} [${seen.slice(0, 3).join(' | ')}]; next check in ${pollMs / 1000}s`);
       await page.waitForTimeout(pollMs);
       await page.reload({ waitUntil: 'domcontentloaded' }).catch(() => {});
-      await page.locator('div[role=option]').first().waitFor({ timeout: 60_000 }).catch(() => {});
+      await ensureInbox(page, box, log);
     }
     await page.screenshot({ path: `test-results/outlook_${box.email.split('@')[0]}_timeout.png` }).catch(() => {});
     throw new Error(`Outlook ${box.email}: no mail matching ${subject} + ${mustContain} after ${Math.round(timeoutMs / 60_000)} min`);

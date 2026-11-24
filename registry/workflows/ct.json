@@ -28,7 +28,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:56:13: \"Fulfilment Details Creation CT260000000002293 is successfully submitted to Contract Approver.\" from LA260000000004216 (Direct LOA). Needs a contract of ~6+ months (failed on a 2-month DP-route LOA, run ct-fd-agreement_20261123-162306)"
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:56:13: \"Fulfilment Details Creation CT260000000002293 is successfully submitted to Contract Approver.\" from LA260000000004216 (Direct LOA). Needs a contract of ~6+ months (failed on a 2-month DP-route LOA, run ct-fd-agreement_20261123-162306)",
+        "db": {
+          "kind": "CT:FD",
+          "statusId": 50150,
+          "en": "Pending Fulfilment Details Approval",
+          "bm": "Menunggu Kelulusan Maklumat Pemenuhan",
+          "evidence": "SIT DB 2026-11-23: CT260000000002293 FD after KAT-040"
+        }
       }
     },
     "KAT-041": {
@@ -56,7 +63,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:56:58: \"Fulfilment Details Creation CT260000000002293 is approved.\" — My Task filter takes the CT number (verified)"
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:56:58: \"Fulfilment Details Creation CT260000000002293 is approved.\" — My Task filter takes the CT number (verified)",
+        "db": {
+          "kind": "CT:FD",
+          "statusId": 50300,
+          "en": "Fulfilment Details Approved",
+          "bm": "Maklumat Pemenuhan Diluluskan",
+          "evidence": "SIT DB 2026-11-23: CT260000000002293 FD after KAT-041"
+        }
       }
     },
     "KAT-042": {
@@ -84,7 +98,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:58:15: \"Agreement CT260000000002293 is successfully submitted to Contract Approver.\" (input: the LA number)"
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:58:15: \"Agreement CT260000000002293 is successfully submitted to Contract Approver.\" (input: the LA number)",
+        "db": {
+          "kind": "CT:AC",
+          "statusId": 56800,
+          "en": "Pending Agreement Approval",
+          "bm": "Menunggu Kelulusan Perjanjian",
+          "evidence": "SIT DB 2026-11-23: CT260000000002293 AC after KAT-042"
+        }
       }
     },
     "KAT-043": {
@@ -112,7 +133,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:59:01: \"Agreement CT260000000002293 is approved.\""
+        "evidence": "SIT flow run ct-fd-agreement_20261123-165421 2026-11-23 16:59:01: \"Agreement CT260000000002293 is approved.\"",
+        "db": {
+          "kind": "CT:AC",
+          "statusId": 56600,
+          "en": "Agreement Completed",
+          "bm": "Perjanjian Selesai",
+          "evidence": "SIT DB 2026-11-23: CT260000000002293 AC after KAT-043"
+        }
       }
     },
     "KAT-044": {
@@ -179,7 +207,8 @@
         "KAT-042",
         "KAT-043",
         "KAT-045"
-      ]
+      ],
+      "submodule": "fd-agreement"
     },
     {
       "id": "ct-claim-group-task",
@@ -188,7 +217,8 @@
       "notes": "Give the document with --input PI=…",
       "steps": [
         "KAT-044"
-      ]
+      ],
+      "submodule": "group-task"
     }
   ]
 }

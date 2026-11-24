@@ -68,8 +68,8 @@ export default defineConfig({
     { name: 'auth', testMatch: /auth\.setup\.ts/, use: { ...devices['Desktop Chrome'], viewport: { width: 1600, height: 900 } } },
     {
       name: 'chromium',
-      // Phase 1 flows and status preparations change SIT data in long chains: they run only in the "flows" project.
-      testIgnore: [/auth\.setup\.ts/, /[\\/]tests[\\/](flows|status)[\\/]/],
+      // Phase 1 flows, data prep and CR suites change SIT data in long chains: they run only in the "flows" project.
+      testIgnore: [/auth\.setup\.ts/, /[\\/]tests[\\/](flows|data-prep|cr-suites|tools|sm)[\\/]/],
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1600, height: 900 },
@@ -77,11 +77,17 @@ export default defineConfig({
       },
     },
     {
-      // Flows (tests/flows) and "prepare to a status" specs (tests/status). Select explicitly: --project=flows
-      // (the QA CLI does). Each step logs in by itself, so no saved session.
+      // Flows (tests/flows), data prep to a status (tests/data-prep) and CR suites (tests/cr-suites/<CR>/{data-prep,execution}).
+      // Select explicitly: --project=flows (the QA CLI does). Each step logs in by itself, so no saved session.
       name: 'flows',
-      testMatch: /[\\/]tests[\\/](flows|status)[\\/].*\.spec\.ts$/,
+      // tests/sm: the automated MOF chain (registration, catalogue, soft cert, update profile); it changes SIT data too.
+      testMatch: /[\\/]tests[\\/](flows|data-prep|cr-suites|sm)[\\/].*\.spec\.ts$/,
       use: { ...devices['Desktop Chrome'], viewport: { width: 1600, height: 900 } },
+    },
+    {
+      // Read-only SIT database tools behind the CLI (qa doc-status, qa db-catalog). No browser is opened.
+      name: 'tools',
+      testMatch: /[\\/]tests[\\/]tools[\\/].*\.tool\.spec\.ts$/,
     },
   ],
 });

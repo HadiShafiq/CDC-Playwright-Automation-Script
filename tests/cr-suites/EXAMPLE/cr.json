@@ -1,0 +1,42 @@
+{
+  "cr": "EXAMPLE",
+  "title": "Example CR suite: Direct LOA, DP to LOA and Quotation/Tender (structure demo, not a real CR)",
+  "language": "EN",
+  "notes": "Shows how a CR suite is built: each scenario names a registry flow, where DATA PREP stops (prepare.until: a step ID or a status) and where EXECUTION ends (execute.until). Copy tests/cr-suites/_TEMPLATE to tests/cr-suites/<CR no>/ for a real CR, then npm run suites:gen.",
+  "scenarios": [
+    {
+      "id": "S01",
+      "title": "Desk Officer verifies a Direct LOA (one-off services)",
+      "flow": "dloa-oneoff-services",
+      "prepare": { "until": "LA_ACKNOWLEDGED" },
+      "execute": { "until": "LA_VERIFIED" },
+      "expected": "LOA completed: DB LA 62506 Letter of Acceptance Completed / Surat Setuju Terima Telah Selesai",
+      "manual": "Log in as the Desk Officer the Verify Manual LOA task is assigned to (npm run qa -- doc-status shows it), open the LOA from My Task, verify it."
+    },
+    {
+      "id": "S02",
+      "title": "Supplier acknowledges a Direct LOA (one-off product)",
+      "flow": "dloa-oneoff-product",
+      "prepare": { "until": "LA_SUBMITTED" },
+      "execute": { "until": "LA_ACKNOWLEDGED" },
+      "expected": "DB LA 62505 Pending Verification of Acknowledgement Receipt's Letter Of Acceptance"
+    },
+    {
+      "id": "S03",
+      "title": "Prepare the LOA from an approved DP Request Note, supplier accepts, DO verifies",
+      "flow": "dloa-from-dp-rn",
+      "prepare": { "until": "RN_APPROVED" },
+      "execute": { "until": "LA_VERIFIED" },
+      "expected": "DB LA 62506; the SQ goes to 60853 and the RN to 60703 Completed"
+    },
+    {
+      "id": "S04",
+      "title": "Quotation/Tender: Desk Officer prepares the documents after the specification sign-off",
+      "flow": "qt-to-recommendation",
+      "prepare": { "until": "SPEC_SIGNED_OFF" },
+      "execute": { "until": "DOCS_PREPARED" },
+      "expected": "DB QT 60030 Pending BPK Approval (or 60005 when no BPK approval is needed)",
+      "manual": "QT steps are manual for now: the run stops at each with instructions; reconcile it as done and resume, and the SIT database confirms the status."
+    }
+  ]
+}

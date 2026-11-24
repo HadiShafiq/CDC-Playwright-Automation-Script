@@ -421,7 +421,13 @@ export const WebUI = {
    */
   async setText(obj: TestObject, text: any, fh?: FH) {
     return step(`setText ${name(obj)}`, fh, undefined, async () => {
-      if (obj instanceof TestObject && obj.getObjectId() === TASK_DOC_INPUT) taskSearchDoc.set(cur().page, String(text ?? '').trim());
+      if (obj instanceof TestObject && obj.getObjectId() === TASK_DOC_INPUT) {
+        const doc = String(text ?? '').trim();
+        taskSearchDoc.set(cur().page, doc);
+        // SELF-HEAL: a task shared by several users (supplier admins, officer groups) waits in Group Task; claim it so
+        // the My Task search finds it (2026-11-23: PI…804 Response To Inquiry, PO…7216 Acknowledge PO). No-op otherwise.
+        if (doc && process.env.QA_SELF_HEAL !== '0') await claimGroupTaskIfAny(doc).catch(() => false);
+      }
       const l = loc(obj);
       await l.fill('', { timeout: DEFAULT_TIMEOUT * 1000 });
       await l.pressSequentially(text == null ? '' : String(text));
@@ -565,12 +571,20 @@ export async function claimGroupTaskIfAny(docNo: any) {
   }
   const groupBody = page.locator('tbody[id*="taskListGroupId_data"]').first();
   if (!(await groupBody.count())) return false;
+  // Wait for the lazily loaded Group Task rows: right after the Task List opens the table can still be empty
+  // (2026-11-24: PO260000000007216 was on page 1 of a fresh load, but the helper saw no rows and claimed nothing).
+  await groupBody.locator('tr').first().waitFor({ state: 'attached', timeout: 15_000 }).catch(() => {});
+  await settle();
   // Newest tasks are listed first, so a few pages are enough. Paging the Group Task table and leaving it on a
   // later page breaks the My Task search that follows (it then returns nothing), so always go back to page 1.
   const pageLink = (n: number) => page.locator(`xpath=(//span[contains(@class,'ui-paginator-pages')])[1]/span[normalize-space()='${n}']`);
   let claimed = false;
   let pageNo = 1;
-  for (; pageNo <= 1; pageNo++) {
+  // SELF-HEAL 2026-11-24: a supplier's Group Task can have 20 pages (PO260000000007216 was not on page 1): page with
+  // the group table's own "next" arrow up to QA_GROUP_TASK_PAGES (default 20), then always return to page 1.
+  const maxPages = Number(process.env.QA_GROUP_TASK_PAGES ?? 20);
+  const groupNext = page.locator("xpath=(//span[contains(@class,'ui-paginator-next')])[1]");
+  for (; pageNo <= maxPages; pageNo++) {
     const row = groupBody.locator('tr').filter({ has: page.locator(`td`, { hasText: docInCell }) });
     if (await row.count()) {
       await row.first().locator('button', { hasText: 'Claim' }).first().click();
@@ -579,16 +593,81 @@ export async function claimGroupTaskIfAny(docNo: any) {
       claimed = true;
       break;
     }
-    if (pageNo === 1 || !(await pageLink(pageNo + 1).count())) break;
-    await pageLink(pageNo + 1).click();
+    if (!(await groupNext.count()) || /ui-state-disabled/.test((await groupNext.getAttribute('class')) ?? '')) break;
+    await groupNext.click();
     await settle();
   }
-  if (pageNo > 1 && !claimed && (await pageLink(1).count())) {
+  if (pageNo > 1 && (await pageLink(1).count())) {
     await pageLink(1).click();
+    await settle();
+  }
+  // After a claim the task list redraws and its search box can be hidden (2026-11-24 KAT-035): reload it clean.
+  if (claimed && /task-list/.test(page.url())) {
+    await page.goto(page.url().replace(/#.*$/, ''));
     await settle();
   }
   cur().log(claimed ? `Claimed group task ${doc} (moved to My Task)` : `${doc} is not in Group Task (nothing to claim)`);
   return claimed;
+}
+
+/**
+ * Schedule month picker (FD Payment Schedule fromMonth/toMonth): the list only offers the months of the contract
+ * period, so a fixed Katalon index (Startmonth 5) fails on a short contract (2026-11-23: CT260000000002292, …2301).
+ * Live-dates rule: pick from what is offered — 'first' or 'last' month (the "Select One" placeholder is skipped).
+ */
+export async function selectScheduleMonth(obj: any, which: any) {
+  const page = cur().page;
+  const label = loc(obj);
+  await label.waitFor({ state: 'visible', timeout: 20_000 });
+  // Same open-panel lookup as WebHelper.openPFDropdown / clickPFOptionByIndex: the panel floats at the end of <body>.
+  const panel = page.locator("xpath=//div[contains(@class,'ui-selectonemenu-panel') and contains(@style,'display: block')]");
+  await label.click();
+  if (!(await panel.first().isVisible().catch(() => false))) {
+    await page.waitForTimeout(300);
+    if (!(await panel.first().isVisible().catch(() => false))) await label.click();
+  }
+  const items = panel.first().locator('li.ui-selectonemenu-item');
+  await items.first().waitFor({ state: 'visible', timeout: 10_000 });
+  const texts = (await items.allInnerTexts()).map((t) => t.trim());
+  const months = texts.map((t, i) => ({ t, i })).filter((x) => x.t && !/select one/i.test(x.t));
+  if (!months.length) throw new Error(`selectScheduleMonth: ${name(obj)} offers no month (${texts.join(', ')})`);
+  const pick = String(which) === 'last' ? months.at(-1)! : months[0];
+  await items.nth(pick.i).click();
+  await settle();
+  cur().log(`Schedule month ${name(obj)}: "${pick.t}" (${which} of ${months.map((m) => m.t).join(', ')})`);
+}
+
+/** FD Payment Schedule rows on the page (an FD draft keeps rows added by earlier attempts). */
+export async function scheduleRowCount() {
+  return cur().page.locator('select[id*="payScheduleTableId:"][id$=":fromMonth_input"]').count();
+}
+
+/**
+ * Delete FD Payment Schedule rows whose start month is still "- Select One -" (left by earlier attempts; they make
+ * Submit fail with ERR-100022 "Frequency Schedule Start Period is mandatory", 2026-11-24 CT260000000002301).
+ */
+export async function deleteEmptyScheduleRows() {
+  const page = cur().page;
+  await settle();
+  const sels = page.locator('select[id*="payScheduleTableId:"][id$=":fromMonth_input"]');
+  const n = await sels.count();
+  let ticked = 0;
+  for (let i = 0; i < n; i++) {
+    if ((await sels.nth(i).inputValue().catch(() => 'x')) !== '') continue;
+    const row = page.locator('tr', { has: sels.nth(i) }).first();
+    await row.locator('.ui-chkbox-box').first().click();
+    ticked++;
+  }
+  if (!ticked) return 0;
+  await page.getByRole('button', { name: 'Delete', exact: true }).first().click();
+  await settle();
+  const yes = page.locator("xpath=//div[contains(@class,'ui-dialog') and @aria-hidden='false']//button[.//span[normalize-space()='Yes' or normalize-space()='Ya' or normalize-space()='OK']]");
+  if (await yes.first().isVisible().catch(() => false)) {
+    await yes.first().click();
+    await settle();
+  }
+  cur().log(`Deleted ${ticked} empty schedule row(s) left by an earlier attempt (${await scheduleRowCount()} remain)`);
+  return ticked;
 }
 
 export const KeywordUtil = {

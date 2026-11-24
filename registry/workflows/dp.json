@@ -30,7 +30,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:17:55: \"Request Note RN260000000004908 is successfully submitted.\" (from SQ260000000002363, as the KAT-021 account)"
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:17:55: \"Request Note RN260000000004908 is successfully submitted.\" (from SQ260000000002363, as the KAT-021 account)",
+        "db": {
+          "kind": "RN",
+          "statusId": 60701,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-23: RN260000000004908 after KAT-023 (dloa-from-dp-rn_20261123-155431)"
+        }
       }
     },
     "KAT-024": {
@@ -58,7 +65,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:18:40: \"Request Note RN260000000004908 is approved.\" as officer 690127065209"
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:18:40: \"Request Note RN260000000004908 is approved.\" as officer 690127065209",
+        "db": {
+          "kind": "RN",
+          "statusId": 60701,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-23: RN260000000004908 stays 60701 after approval (checked before KAT-025 started 16:18:48); 60703 Completed only after the LOA is verified"
+        }
       }
     },
     "KAT-028": {
@@ -104,7 +118,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-029 waits for 'is successfully submitted.'; passed SIT 2026-11-13_174251"
+        "evidence": "KAT-029 waits for 'is successfully submitted.'; passed SIT 2026-11-13_174251",
+        "db": {
+          "kind": "PI",
+          "statusId": 60751,
+          "en": "Pending Supplier Response",
+          "bm": "Menunggu Maklumbalas Pembekal",
+          "evidence": "SIT DB 2026-11-23: PI260000000000804 after KAT-029 (run dp-compare_20261123-204543)"
+        }
       }
     },
     "KAT-030": {
@@ -215,8 +236,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-033 waits for 'is successfully submitted.'; Submit PR task ASSIGNED to the officer in Task Status Search (710527085562 on 2026-11-11)"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): PR260000000005072 40000 → 40010 after KAT-033",
+        "db": {
+          "kind": "PR",
+          "statusId": 40010,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): PR260000000005072 40000 → 40010 after KAT-033"
+        }
       }
     },
     "KAT-034": {
@@ -243,8 +271,19 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-034 waits for 'is approved and has been sent to iGFMAS for verification.'"
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): PR260000000005072 40010 → 40100 → 40110 → 40300 after KAT-034 (PO260000000007216 created at once)",
+        "db": {
+          "kind": "PR",
+          "statusId": 40300,
+          "en": "Purchase Request Approved",
+          "bm": "Permintaan Pembelian Diluluskan",
+          "via": [
+            40100,
+            40110
+          ],
+          "evidence": "SIT DB 2026-11-24 (dp-compare_20261123-204543, fl-noncontract + fl-noncontract-partial-debit-note runs): PR260000000005072 40010 → 40100 → 40110 → 40300 after KAT-034 (PO260000000007216 created at once)"
+        }
       }
     },
     "KAT-035": {
@@ -271,8 +310,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "source",
-        "evidence": "KAT-035 waits for 'is acknowledged.'; the account must be the PO supplier (data-overrides used the KAT-022 account)"
+        "verification": "execution",
+        "evidence": "KAT-035 waits for 'is acknowledged.'; the account must be the PO supplier (data-overrides used the KAT-022 account)",
+        "db": {
+          "kind": "PO",
+          "statusId": 41005,
+          "en": "Pending Fulfilment",
+          "bm": "Menunggu Pemenuhan",
+          "evidence": "SIT DB 2026-11-24: PO260000000007216 41000 → 41005 after KAT-035 (run dp-compare_20261123-204543)"
+        }
       }
     },
     "KAT-038": {
@@ -340,7 +386,7 @@
     {
       "id": "dp-sq-pr",
       "title": "DP from Simple Quote, Purchase Request route (One Off / product)",
-      "verification": "documentation",
+      "verification": "execution",
       "notes": "Route rule from memory dp-loa-route-rule: product items or One Off services go to PR. Example SQ260000000002305 → RN260000000004698 → PR260000000004856 (2026-11-11).",
       "steps": [
         "KAT-021",
@@ -364,7 +410,8 @@
         "KAT-021": {
           "Fulfilmenttype": 1
         }
-      }
+      },
+      "submodule": "simple-quote-route"
     },
     {
       "id": "dp-add-to-cart",
@@ -379,15 +426,17 @@
         {
           "gate": "PO_LOOKUP"
         }
-      ]
+      ],
+      "submodule": "add-to-cart"
     },
     {
       "id": "dp-compare",
       "title": "DP Compare (Item Inquiry) to Purchase Order acknowledgement",
-      "verification": "documentation",
-      "notes": "2026-11-13/16 Compare chain: PI260000000000764 → RN (KAT-031) → approve (KAT-032). PO260000000006602 came from Compare PR260000000004659.",
+      "verification": "execution",
+      "notes": "2026-11-13/16 Compare chain: PI260000000000764 → RN (KAT-031) → approve (KAT-032). PO260000000006602 came from Compare PR260000000004659. 2026-11-23: the Item Inquiry response is a group task for every invited supplier (PI260000000000804 → 880801029878, 880801235445, nurulainmof, ind-mof001): KAT-044 claims it before KAT-030. 2026-11-24: VERIFIED end to end (PI…804 → RN…4916 → PR…5072 → PO…7216 41005), self-healed task waits, logins and group-task claims.",
       "steps": [
         "KAT-029",
+        "KAT-044",
         "KAT-030",
         "KAT-031",
         "KAT-032",
@@ -397,7 +446,8 @@
           "gate": "PO_LOOKUP"
         },
         "KAT-035"
-      ]
+      ],
+      "submodule": "compare"
     },
     {
       "id": "dp-assign-code",
@@ -407,7 +457,8 @@
       "steps": [
         "KAT-038",
         "KAT-039"
-      ]
+      ],
+      "submodule": "assign-code"
     }
   ]
 }

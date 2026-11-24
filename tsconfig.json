@@ -10,7 +10,10 @@
     "types": [
       "node"
     ],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true
   },
   "include": [
     "**/*.ts"

@@ -1,0 +1,17 @@
+{
+  "cr": "CR-NUMBER",
+  "title": "Title of the CR (from Redmine)",
+  "language": "EN",
+  "notes": "Copy this folder to tests/cr-suites/<CR number>/ (folder name without the leading underscore), fill the scenarios, then: npm run suites:gen. Folders starting with _ are not generated. Fields: flow = a registry flow (npm run qa -- list-flows); prepare.until = the step ID or status where data prep stops (omit: the execution starts from scratch); execute.until = where the execution ends (omit execute: the tester executes by hand on the prepared data); expected = the approved expected result (never invent it); manual = how to execute by hand.",
+  "scenarios": [
+    {
+      "id": "S01",
+      "title": "What the scenario tests",
+      "flow": "dloa-oneoff-services",
+      "prepare": { "until": "LA_ACKNOWLEDGED" },
+      "execute": { "until": "LA_VERIFIED" },
+      "expected": "Approved expected result",
+      "manual": "Steps for the tester when executing by hand"
+    }
+  ]
+}

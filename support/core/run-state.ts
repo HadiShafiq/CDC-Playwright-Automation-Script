@@ -26,6 +26,10 @@ export interface Attempt {
   classification?: string;
   messages?: { severity: string; text: string }[];
   evidenceDir?: string;
+  /** SIT DB status of the checkpoint's document before the attempt (self-heal proof). */
+  dbBefore?: { kind: string; docNo: string; statusId: number | null };
+  /** Set when the attempt was an automatic self-heal retry, or a self-heal resolved it. */
+  selfHeal?: string;
 }
 
 export interface StepRecord {
@@ -34,6 +38,21 @@ export interface StepRecord {
   outputs: Partial<Record<DocType, string>>;
   checkpoint?: string;
   login?: string;
+  /** SIT database status read after the step (expected = registry checkpoint.db.statusId; null when only observed). */
+  db?: DbResult;
+}
+
+export interface DbResult {
+  kind: string;
+  docNo: string;
+  expected: number | null;
+  statusId: number | null;
+  en: string;
+  bm: string;
+  at: string;
+  ok: boolean;
+  checkedAt: string;
+  observeOnly?: boolean;
 }
 
 export interface RunState {
@@ -53,8 +72,10 @@ export interface RunState {
   docs: Partial<Record<DocType, string>>;
   /** Officer to log in as for an 'assignedOfficer' step, set by the person (gate command). */
   officers: Record<string, string>;
-  gates: Record<string, { done: boolean; by: string; at: string; values?: Record<string, string> }>;
+  gates: Record<string, { done: boolean; by: string; at: string; values?: Record<string, string>; db?: DbResult }>;
   steps: Record<string, StepRecord>;
+  /** Items not needed in this run (e.g. no debit note was created → its approval is skipped), with the reason. */
+  skipItems?: Record<string, string>;
   /** Steps the person allowed to run again (after a failure or a reconciled UNCERTAIN). Consumed when used. */
   allowRerun: string[];
   /** Variables per step for this run only (from --var KAT-021.Fulfilmenttype=2). */

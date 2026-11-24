@@ -8,7 +8,7 @@ import { nowMy, runDir } from './context';
  */
 export type EventType =
   | 'flow-start' | 'step-start' | 'step-end' | 'step-skip' | 'gate-blocked' | 'gate-passed'
-  | 'login' | 'message' | 'document' | 'evidence' | 'failure' | 'flow-end' | 'note';
+  | 'login' | 'message' | 'document' | 'evidence' | 'failure' | 'flow-end' | 'note' | 'db-status';
 
 export interface FlowEvent {
   t: string;

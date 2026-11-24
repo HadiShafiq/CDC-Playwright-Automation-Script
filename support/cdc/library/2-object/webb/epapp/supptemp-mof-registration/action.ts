@@ -586,8 +586,9 @@ async uploadAllMissingMandatoryDocuments(page: Page): Promise<void> {
     
     // Get the document name cell (4th column) - check if already uploaded
     const docNameCell = row.locator('td:nth-child(4)');
+    // an empty row has no link: read the cell (textContent() on a missing link would wait 30 s and throw)
     const docNameLink = docNameCell.locator('a').first();
-    const docNameText = await docNameLink.textContent();
+    const docNameText = (await docNameLink.count()) ? await docNameLink.textContent() : (await docNameCell.innerText()).trim();
     
     // Check if document is already uploaded (has filename text)
     const hasDocument = docNameText && docNameText.trim().length > 0 && docNameText.trim() !== '';
@@ -709,8 +710,9 @@ async getEmptyDocumentRows(page: Page): Promise<{ dataRi: string; description: s
     const dataRi = await row.getAttribute('data-ri');
     
     const docNameCell = row.locator('td:nth-child(4)');
+    // an empty row has no link: read the cell (textContent() on a missing link would wait 30 s and throw)
     const docNameLink = docNameCell.locator('a').first();
-    const docNameText = await docNameLink.textContent();
+    const docNameText = (await docNameLink.count()) ? await docNameLink.textContent() : (await docNameCell.innerText()).trim();
     
     const hasDocument = docNameText && docNameText.trim().length > 0 && docNameText.trim() !== '';
     
@@ -1560,10 +1562,26 @@ async selectCategoryCodes(
   const subBidangEl = popup.locator('[id$="catCodeLvl2"]');
   const pecahanEl = popup.locator('[id$="catCodeLvl3"]');
 
-  // Level 1
-  await pfSelectOneMenu(this.page, this.mrPage.bidangId, bidang);
-
-  await this.waitDropdownPopulated(subBidangEl);
+  // Level 1. The popup can still be loading when the first pick is made, so the AJAX that fills level 2 never fires
+  // (SIT 2026-11-24, KN-24112026-0035): pick again — via another option so the change event really fires — up to 3 times.
+  await popup.first().waitFor({ state: 'visible', timeout: 30_000 }).catch(() => {});
+  await this.page.waitForLoadState('networkidle').catch(() => {});
+  for (let attempt = 1; ; attempt++) {
+    if (attempt > 1) {
+      const other = (await popup.locator('[id$="catCodeLvl1"] option').allTextContents())
+        .map((o) => o.trim())
+        .find((o) => o && o !== bidang && !/Select/i.test(o));
+      if (other) await pfSelectOneMenu(this.page, this.mrPage.bidangId, other).catch(() => {});
+      await this.page.waitForLoadState('networkidle').catch(() => {});
+    }
+    await pfSelectOneMenu(this.page, this.mrPage.bidangId, bidang);
+    try {
+      await this.waitDropdownPopulated(subBidangEl);
+      break;
+    } catch (e) {
+      if (attempt >= 3) throw e;
+    }
+  }
 
   // Level 2
   await pfSelectOneMenu(this.page, this.mrPage.subBidangId, subBidang);

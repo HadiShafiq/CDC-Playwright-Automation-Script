@@ -1,0 +1,1103 @@
+{
+  "module": "sm",
+  "name": "Supplier Management (MOF)",
+  "description": "Supplier registration and MOF applications by a registered supplier: new MOF (contractor/consultant), add category (with site visits), update profile, bumiputera, renewal, cancel MOF account, delete pending application, rejections. Status = SM_WORKFLOW_STATUS (type SR) of the application number (AP, e.g. KN-06112026-0058). Steps are MANUAL in the flow runner; the new-MOF chain itself is automated in tests/sm/registration (REG-001..004), catalogue (CAT-001) and soft cert (SC-001..004).",
+  "steps": {
+    "SM-001": {
+      "title": "Register the supplier and start the MOF application (draft)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no> → REG chain (support/modules/sm/registration.ts, passed SIT 2026-11-18: KN-18112026-0006 → 357-0002294532), module step 2026-11-24",
+      "instructions": "Register a new supplier (guest), activate, create the MOF registration application and save it.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AP",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "APPL_DRAFT",
+        "description": "MOF application saved, not declared",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20100 Pending Application Declaration after SM-001 (run sm-mof-new_20261124-155404)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20100,
+          "en": "Pending Application Declaration",
+          "bm": "Menunggu Pengisytiharan Permohonan",
+          "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20100 Pending Application Declaration after SM-001 (run sm-mof-new_20261124-155404)"
+        }
+      }
+    },
+    "SM-002": {
+      "title": "Declare the application and pay the processing fee",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no> → REG chain (support/modules/sm/registration.ts, passed SIT 2026-11-18: KN-18112026-0006 → 357-0002294532), module step 2026-11-24",
+      "instructions": "Declare the application (new MOF / renewal).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "PROCESSING_FEE_PAID",
+        "description": "Declared and processing fee paid (REG-002 does both in one sitting: the fee page opens from the Declare banner)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20101 Pending Supporting Document Verification after SM-002 (run sm-mof-new_20261124-155404)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20101,
+          "en": "Pending Supporting Document Verification",
+          "bm": "Menunggu Pengesahan Dokumen Sokongan",
+          "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20101 Pending Supporting Document Verification after SM-002 (run sm-mof-new_20261124-155404)",
+          "via": [
+            20114
+          ],
+          "waitSec": 180
+        }
+      }
+    },
+    "SM-003": {
+      "title": "Pay the processing fee",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no>",
+      "instructions": "Pay the processing fee (SIT payment bypass).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "PROCESSING_FEE_PAID",
+        "description": "Processing fee paid; supporting documents to verify",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20101,
+          "en": "Pending Supporting Document Verification",
+          "bm": "Menunggu Pengesahan Dokumen Sokongan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-004": {
+      "title": "Declare the application (no fee)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/add-category.spec.ts, mof-update.spec.ts, bumi-status.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Declare the application (add category / update profile / bumiputera have no processing fee).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "APPL_DECLARED",
+        "description": "Declared; supporting documents to verify",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20101,
+          "en": "Pending Supporting Document Verification",
+          "bm": "Menunggu Pengesahan Dokumen Sokongan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-005": {
+      "title": "SDO verifies the supporting documents",
+      "role": "SDO",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no>; unit_test (kapitan) tests/supplier-appl/sdo-verify.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md → REG chain (support/modules/sm/registration.ts, passed SIT 2026-11-18: KN-18112026-0006 → 357-0002294532), module step 2026-11-24",
+      "instructions": "SDO: My Task, verify the supporting documents, submit.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DOCS_VERIFIED",
+        "description": "Supporting documents verified; Processing Officer to review",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20104 Pending Review Application after SM-005 (run sm-mof-new_20261124-155404)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20104,
+          "en": "Pending Review Application",
+          "bm": "Menunggu Semakan Permohonan",
+          "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20104 Pending Review Application after SM-005 (run sm-mof-new_20261124-155404)",
+          "waitSec": 180
+        }
+      }
+    },
+    "SM-006": {
+      "title": "Processing Officer reviews and recommends",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no>; unit_test (kapitan) tests/supplier-appl/po-review.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md → REG chain (support/modules/sm/registration.ts, passed SIT 2026-11-18: KN-18112026-0006 → 357-0002294532), module step 2026-11-24",
+      "instructions": "PO: My Task, review, recommend approval.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "PO_REVIEWED",
+        "description": "Reviewed; approver to decide",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20108 Pending Application Approval after SM-006 (run sm-mof-new_20261124-155404)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20108,
+          "en": "Pending Application Approval",
+          "bm": "Menunggu Kelulusan Permohonan",
+          "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20108 Pending Application Approval after SM-006 (run sm-mof-new_20261124-155404)",
+          "waitSec": 180
+        }
+      }
+    },
+    "SM-007": {
+      "title": "Processing Officer recommends a site visit before approval",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/po-review.spec.ts (site visit) — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "PO: My Task, recommend a site visit (tick HQ and Facility Information).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SV_RECOMMENDED",
+        "description": "Site visit before approval recommended",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20110,
+          "en": "Pending Site Visit Assignment - Before Approval",
+          "bm": "Menunggu Tugasan Lawatan Tapak - Sebelum Diluluskan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-008": {
+      "title": "Site Visit Coordinator assigns the visit (before approval)",
+      "role": "SVC",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/svc-assign.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "SVC: My Task, assign the site visit officer.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SV_ASSIGNED",
+        "description": "Site visit assigned",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20105,
+          "en": "Pending Site Visit",
+          "bm": "Menunggu Lawatan Tapak",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-009": {
+      "title": "Site Visit Officer files the report (before approval)",
+      "role": "SVO",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/svo-visit.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "SVO: My Task, fill the site visit report, submit.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SV_REPORTED",
+        "description": "Site visit report filed; to review",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20103,
+          "en": "Pending Review Site Visit Report - Before Approval",
+          "bm": "Menunggu Laporan Lawatan Tapak - Sebelum Diluluskan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-010": {
+      "title": "Processing Officer reviews the site visit report",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/po-sv-review.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "PO: My Task, review the site visit report.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SV_REVIEWED",
+        "description": "Site visit report reviewed; approver to decide",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20108,
+          "en": "Pending Application Approval",
+          "bm": "Menunggu Kelulusan Permohonan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-011": {
+      "title": "Approver approves (registration fee to pay)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no>; unit_test (kapitan) tests/supplier-create/approver.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md → REG chain (support/modules/sm/registration.ts, passed SIT 2026-11-18: KN-18112026-0006 → 357-0002294532), module step 2026-11-24",
+      "instructions": "Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "APPROVED_FEE",
+        "description": "Approved; registration fee due",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20251 Pending Payment Registration Fee after SM-011 (run sm-mof-new_20261124-155404)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20251,
+          "en": "Pending Payment Registration Fee",
+          "bm": "Menunggu Bayaran Pendaftaran",
+          "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20251 Pending Payment Registration Fee after SM-011 (run sm-mof-new_20261124-155404)",
+          "waitSec": 180
+        }
+      }
+    },
+    "SM-012": {
+      "title": "Pay the registration fee",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "this repo: tests/sm/registration/mof-registration.spec.ts (REG-001..004, SIT 2026-11-18) — run it, then reconcile this step with AP=<application no> → REG chain (support/modules/sm/registration.ts, passed SIT 2026-11-18: KN-18112026-0006 → 357-0002294532), module step 2026-11-24",
+      "instructions": "Pay the registration fee (SIT bypass); the virtual certificate follows.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "REGISTERED",
+        "description": "Registered (MOF account active)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20199 Registered after SM-012 (run sm-mof-new_20261124-155404)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20199,
+          "en": "Registered",
+          "bm": "Berdaftar",
+          "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20199 Registered after SM-012 (run sm-mof-new_20261124-155404)",
+          "waitSec": 600
+        }
+      }
+    },
+    "SM-013": {
+      "title": "Approver approves (no fee)",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/approver.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "REGISTERED",
+        "description": "Approved and registered",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20199,
+          "en": "Registered",
+          "bm": "Berdaftar",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-014": {
+      "title": "Approver approves with a site visit after approval",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/approver.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Approver: My Task, approve with site visit after approval.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "APPROVED_SV_AFTER",
+        "description": "Approved; site visit after approval to assign",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20117,
+          "en": "Pending Site Visit Assignment - After Approval",
+          "bm": "Menunggu Tugasan Lawatan Tapak - Selepas Diluluskan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-015": {
+      "title": "Site Visit Coordinator assigns the visit (after approval)",
+      "role": "SVC",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/svc-assign.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "SVC: My Task, assign (one task per code).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SV_ASSIGNED_AFTER",
+        "description": "Site visit (after approval) assigned",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20105,
+          "en": "Pending Site Visit",
+          "bm": "Menunggu Lawatan Tapak",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-016": {
+      "title": "Site Visit Officer files the report (after approval)",
+      "role": "SVO",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/svo-visit.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "SVO: My Task, report, submit.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SV_REPORTED_AFTER",
+        "description": "Report filed; to review",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20116,
+          "en": "Pending Review Site Visit Report - After Approval",
+          "bm": "Menunggu Laporan Lawatan Tapak - Selepas Diluluskan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-017": {
+      "title": "Report reviewed (after approval)",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/approver-sv-review.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "On SIT the application's PO reviews the report (kapitan note 6 Nov).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "REGISTERED",
+        "description": "Report reviewed; registered",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20199,
+          "en": "Registered",
+          "bm": "Berdaftar",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-021": {
+      "title": "Create the Add Category application (draft)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/add-category.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "MOF supplier: Add Category, pick the codes (facility form for special codes), save.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AP",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "APPL_DRAFT",
+        "description": "Add Category application saved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20100,
+          "en": "Pending Application Declaration",
+          "bm": "Menunggu Pengisytiharan Permohonan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-022": {
+      "title": "Create the Update MOF Profile application (draft)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/mof-update.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "MOF supplier: Update MOF Profile, change a field, save.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AP",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "APPL_DRAFT",
+        "description": "Update application saved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20100,
+          "en": "Pending Application Declaration",
+          "bm": "Menunggu Pengisytiharan Permohonan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-023": {
+      "title": "Create the Bumiputera Status application (draft)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/bumi-status.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "MOF contractor (not yet Bumi): Bumiputera Status, save.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AP",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "APPL_DRAFT",
+        "description": "Bumiputera application saved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20100,
+          "en": "Pending Application Declaration",
+          "bm": "Menunggu Pengisytiharan Permohonan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-024": {
+      "title": "Create the Renewal MOF Account application (draft)",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/renewal.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Only within 3 months of MOF expiry (move the dates first: a gate for the tester).",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AP",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "APPL_DRAFT",
+        "description": "Renewal application saved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20100,
+          "en": "Pending Application Declaration",
+          "bm": "Menunggu Pengisytiharan Permohonan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-031": {
+      "title": "Submit the MOF account cancellation",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/cancel-mof-tracking-diary.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Revoke the soft cert, submit Cancel MOF Account.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AP",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "CANCEL_SUBMITTED",
+        "description": "Cancellation submitted; to review",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20104,
+          "en": "Pending Review Application",
+          "bm": "Menunggu Semakan Permohonan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-032": {
+      "title": "Approve the MOF account cancellation",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/cancel-mof-approve.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Officer: approve the cancellation (supplier, MOF account and certs → record_status 9).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "MOF_CANCELLED",
+        "description": "MOF account cancelled by the contractor",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20191,
+          "en": "MOF Account Cancelled by Contractor",
+          "bm": "Akaun MOF Dibatalkan oleh Kontraktor",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-041": {
+      "title": "Supplier deletes the pending application",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/delete-pending-appl.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "Delete Pending Application (SIT: reason Others + remark).",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DELETE_REQUESTED",
+        "description": "Pending review cancellation",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20301,
+          "en": "Pending Review Cancellation",
+          "bm": "Menunggu Semakan Pembatalan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-042": {
+      "title": "Processing Officer approves the deletion",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/delete-pending-appl.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "PO: Review Cancellation, approve.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DELETE_APPROVED",
+        "description": "Cancellation approved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "db": {
+          "kind": "AP",
+          "statusId": 20399,
+          "en": "Cancellation Approved",
+          "bm": "Permohonan Pembatalan Diluluskan",
+          "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)"
+        }
+      }
+    },
+    "SM-043": {
+      "title": "Processing Officer rejects the deletion",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "unit_test (kapitan) tests/supplier-appl/delete-pending-appl.spec.ts (EP_DECISION=reject) — spec code not in the zip; inventory in kapitan TESTER.md",
+      "instructions": "PO: Review Cancellation, reject.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DELETE_REJECTED",
+        "description": "Deletion rejected: back to the status before (Pending Review Application on the observed path)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "kapitan TESTER.md: reject → back to the status before; not observed on SIT",
+        "db": {
+          "kind": "AP",
+          "statusId": 20104,
+          "en": "Pending Review Application",
+          "bm": "Menunggu Semakan Permohonan",
+          "observeOnly": true,
+          "evidence": "kapitan TESTER.md: reject → back to the status before; not observed on SIT"
+        }
+      }
+    },
+    "SM-051": {
+      "title": "Processing Officer rejects the application",
+      "role": "Processing Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "not automated anywhere yet",
+      "instructions": "PO: My Task, reject with a reason.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "REJECTED_BY_PO",
+        "description": "Rejected by Processing Officer",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "Status in SIT catalogue (27579 rows); path not observed with our data",
+        "db": {
+          "kind": "AP",
+          "statusId": 20112,
+          "en": "Rejected by Processing Officer",
+          "bm": "Ditolak oleh Pegawai Pemproses",
+          "observeOnly": true,
+          "evidence": "Status in SIT catalogue (27579 rows); path not observed with our data"
+        }
+      }
+    },
+    "SM-052": {
+      "title": "Approver rejects the application",
+      "role": "Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "not automated anywhere yet",
+      "instructions": "Approver: My Task, reject with a reason.",
+      "inputs": [
+        {
+          "var": "apNo",
+          "doc": "AP"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "REJECTED_BY_APPROVER",
+        "description": "Rejected by Approver",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "Status in SIT catalogue (2703 rows); path not observed with our data",
+        "db": {
+          "kind": "AP",
+          "statusId": 20113,
+          "en": "Rejected by Approver",
+          "bm": "Ditolak oleh Pelulus",
+          "observeOnly": true,
+          "evidence": "Status in SIT catalogue (2703 rows); path not observed with our data"
+        }
+      }
+    }
+  },
+  "flows": [
+    {
+      "id": "sm-mof-new",
+      "submodule": "registration",
+      "title": "New MOF supplier (contractor or consultant) to Registered",
+      "verification": "execution",
+      "notes": "VERIFIED end to end on SIT 2026-11-24: KN-24112026-0035 20100 → 20114 → 20101 → 20104 → 20108 → 20251 → 20199 Registered. Path of KN-06112026-0058 / JN-06112026-0006. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one. Automated 2026-11-24 with the REG chain stages; SM-002 = Declare + processing fee (SM-003 stays for flows that pay later).",
+      "steps": [
+        "SM-001",
+        "SM-002",
+        "SM-005",
+        "SM-006",
+        "SM-011",
+        "SM-012"
+      ]
+    },
+    {
+      "id": "sm-add-category-sv-before",
+      "submodule": "add-category",
+      "title": "Add Category with a site visit before approval",
+      "verification": "documentation",
+      "notes": "Path of KA-06112026-0015 (factory). Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-021",
+        "SM-004",
+        "SM-005",
+        "SM-007",
+        "SM-008",
+        "SM-009",
+        "SM-010",
+        "SM-013"
+      ]
+    },
+    {
+      "id": "sm-add-category-sv-after",
+      "submodule": "add-category",
+      "title": "Add Category with a site visit after approval",
+      "verification": "documentation",
+      "notes": "Path of KA-06112026-0016 (workshop). Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-021",
+        "SM-004",
+        "SM-005",
+        "SM-006",
+        "SM-014",
+        "SM-015",
+        "SM-016",
+        "SM-017"
+      ]
+    },
+    {
+      "id": "sm-update-profile",
+      "submodule": "update-profile",
+      "title": "Update MOF Profile to approved",
+      "verification": "documentation",
+      "notes": "Path of KU-06112026-0014 / JU-06112026-0002. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-022",
+        "SM-004",
+        "SM-005",
+        "SM-006",
+        "SM-013"
+      ]
+    },
+    {
+      "id": "sm-bumi-status",
+      "submodule": "bumiputera",
+      "title": "Bumiputera Status to approved",
+      "verification": "documentation",
+      "notes": "Path of KB-06112026-0006. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-023",
+        "SM-004",
+        "SM-005",
+        "SM-006",
+        "SM-013"
+      ]
+    },
+    {
+      "id": "sm-renewal",
+      "submodule": "renewal",
+      "title": "Renewal MOF Account to Registered",
+      "verification": "documentation",
+      "notes": "Path of KR-06112026-0003; opens only within 3 months of expiry. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-024",
+        "SM-002",
+        "SM-003",
+        "SM-005",
+        "SM-006",
+        "SM-011",
+        "SM-012"
+      ]
+    },
+    {
+      "id": "sm-cancel-mof",
+      "submodule": "cancel",
+      "title": "Cancel MOF Account (contractor)",
+      "verification": "documentation",
+      "notes": "Path of KC-06112026-0001. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-031",
+        "SM-032"
+      ]
+    },
+    {
+      "id": "sm-delete-pending",
+      "submodule": "cancel",
+      "title": "Delete a pending application, PO approves",
+      "verification": "documentation",
+      "notes": "Path of KU-06112026-0016. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-022",
+        "SM-004",
+        "SM-005",
+        "SM-041",
+        "SM-042"
+      ]
+    },
+    {
+      "id": "sm-delete-pending-reject",
+      "submodule": "reject",
+      "title": "Delete a pending application, PO rejects",
+      "verification": "documentation",
+      "notes": "Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-022",
+        "SM-004",
+        "SM-005",
+        "SM-041",
+        "SM-043"
+      ]
+    },
+    {
+      "id": "sm-reject-by-po",
+      "submodule": "reject",
+      "title": "Application rejected by the Processing Officer",
+      "verification": "documentation",
+      "notes": "Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-022",
+        "SM-004",
+        "SM-005",
+        "SM-051"
+      ]
+    },
+    {
+      "id": "sm-reject-by-approver",
+      "submodule": "reject",
+      "title": "Application rejected by the Approver",
+      "verification": "documentation",
+      "notes": "Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "steps": [
+        "SM-022",
+        "SM-004",
+        "SM-005",
+        "SM-006",
+        "SM-052"
+      ]
+    }
+  ]
+}

@@ -6,7 +6,9 @@
       "SQ"
     ],
     "instructions": "In DBeaver (SIT connection only), the user's SQL with START_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('{NEXT_QUARTER}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('{SQ}');  Do NOT change END_DATE yet. Then wait until {SQ} shows in the supplier's Simple Quote Respond list. Time rule (user, 2026-11-23): always the nearest upcoming quarter hour (:00, :15, :30, :45), e.g. 16:04 → 16:15; SIT processes SQ dates on the quarter (CHANGED_DATE = END_DATE + 1 min for SQ…2305/2309).",
-    "source": "User SQL template (2026-11-23: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE/END_DATE = TO_DATE(..) WHERE mp.QUOTE_NO IN (..)) + memory sq-date-sql-procedure (START first, END after the reply)"
+    "source": "User SQL template (2026-11-23: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE/END_DATE = TO_DATE(..) WHERE mp.QUOTE_NO IN (..)) + memory sq-date-sql-procedure (START first, END after the reply)",
+    "sql": "UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE = TO_DATE('{NEXT_QUARTER}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}')",
+    "waitUntilTime": true
   },
   "SQ_END_SQL": {
     "type": "sql",
@@ -15,7 +17,17 @@
       "SQ"
     ],
     "instructions": "Only after the supplier replied. In DBeaver (SIT connection only), the user's SQL with END_DATE only: UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('{NEXT_QUARTER}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}'); COMMIT;  --Check: SELECT mp.QUOTE_NO, mp.START_DATE, mp.END_DATE FROM NGEP_SIT.SC_QUOTE mp WHERE mp.QUOTE_NO IN ('{SQ}');  Then wait until the Prepare Request Note task for {SQ} appears in the requisitioner's My Task. Time rule (user, 2026-11-23): always the nearest upcoming quarter hour (:00, :15, :30, :45), e.g. 16:04 → 16:15; SIT processes SQ dates on the quarter (CHANGED_DATE = END_DATE + 1 min for SQ…2305/2309).",
-    "source": "User SQL template (2026-11-23: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE/END_DATE = TO_DATE(..) WHERE mp.QUOTE_NO IN (..)) + memory sq-date-sql-procedure (START first, END after the reply)"
+    "source": "User SQL template (2026-11-23: UPDATE NGEP_SIT.SC_QUOTE mp SET START_DATE/END_DATE = TO_DATE(..) WHERE mp.QUOTE_NO IN (..)) + memory sq-date-sql-procedure (START first, END after the reply)",
+    "db": {
+      "kind": "SQ",
+      "statusId": 60852,
+      "en": "Pending Request Note Creation",
+      "bm": "Menunggu Ciptaan Nota Minta",
+      "waitSec": 1200,
+      "evidence": "SIT DB 2026-11-23: SQ260000000002363 moved 60851 → 60852 at 16:16:00, the END_DATE quarter hour"
+    },
+    "sql": "UPDATE NGEP_SIT.SC_QUOTE mp SET END_DATE = TO_DATE('{NEXT_QUARTER}', 'YYYY-MM-DD HH24:MI:SS') WHERE mp.QUOTE_NO IN ('{SQ}')",
+    "waitUntilTime": true
   },
   "PO_LOOKUP": {
     "type": "lookup",
@@ -70,5 +82,17 @@
     ],
     "instructions": "KAT-057 picks the contract by its LOA number (ContractList). Give the LA of a contract whose FD and agreement are approved: npm run qa -- gate --run {RUN} --gate CT_LOOKUP --set LA=LA26…",
     "source": "data-overrides KAT-057 (ContractList=LA260000000004032, FD CT260000000002209 approved)"
+  },
+  "DN_LOOKUP": {
+    "type": "lookup",
+    "title": "Debit Note created by SIT for an invoice above the order",
+    "needs": [
+      "PO|CO"
+    ],
+    "provides": [
+      "DN"
+    ],
+    "instructions": "SIT creates a Debit Note when the invoice amount is above the order ({PO|CO}); the runner reads it from FL_ADJUSTMENT. By hand: npm run qa -- gate --run {RUN} --gate DN_LOOKUP --set DN=DN26…",
+    "source": "SIT 2026-11-24: CO260000000006653 → DN260000000004802, CO status 41520 Pending Debit Note Approval (run fl-contract_20261124)"
   }
 }

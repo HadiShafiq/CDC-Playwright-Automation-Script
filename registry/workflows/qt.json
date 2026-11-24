@@ -1,0 +1,694 @@
+{
+  "module": "qt",
+  "name": "Quotation / Tender",
+  "description": "Quotation/Tender from draft through specification, documents, BPK, publication, proposals and the opening/technical/financial evaluation to Pending Recommendation (60023). Steps are MANUAL for now: the run stops at each one, the tester does it in the application and records it, and the SIT database status confirms it. The logic can be ported from ngep-runner stages/ once SIT QT accounts are confirmed.",
+  "steps": {
+    "QT-001": {
+      "title": "Create the Quotation / Tender draft (General Information, Save)",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner stages/create.mjs#createDraft → ported to support/modules/qt/stages.ts (2026-11-24)",
+      "instructions": "Create Quotation / Tender (/create-quotation-tender): General Information, Save. Record the QT number.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "QT",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "QT_DRAFT",
+        "description": "QT draft saved",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60002 Pending Quotation / Tender Submission after QT-001 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60002,
+          "en": "Pending Quotation / Tender Submission",
+          "bm": "Menunggu Penyerahan Sebut Harga / Tender",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-002": {
+      "title": "Complete the QT tabs and Submit",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/submit.mjs#completeAndSubmit → ported to support/modules/qt/stages.ts (2026-11-24)",
+      "instructions": "Open the QT draft, fill every tab (items with a specification line each, committee), Submit.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_SUBMITTED",
+        "description": "QT submitted for approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60024 Pending Quotation / Tender Approval after QT-002 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60024,
+          "en": "Pending Quotation / Tender Approval",
+          "bm": "Menunggu Kelulusan Sebut Harga / Tender",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-003": {
+      "title": "Approve the QT and its committee formation",
+      "role": "Committee Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/approve.mjs#approveTask → ported to support/modules/qt/stages.ts (2026-11-24)",
+      "instructions": "My Task: approve the QT (task of the Committee Approver).",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_APPROVED",
+        "description": "QT approved; Specification Committee formed (CMT 60202)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60003 Pending Specification Preparation after QT-003 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60003,
+          "en": "Pending Specification Preparation",
+          "bm": "Menunggu Penyediaan Spesifikasi",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-004": {
+      "title": "Prepare the specification",
+      "role": "SC Secretary",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/spec.mjs#prepareSpec → ported to support/modules (2026-11-24)",
+      "instructions": "Specification Committee secretary prepares and submits the specification.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SPEC_PREPARED",
+        "description": "Specification prepared and submitted",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60025 Pending Specification Endorsement after QT-004 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60025,
+          "en": "Pending Specification Endorsement",
+          "bm": "Menunggu Pengesahan Spesifikasi",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      },
+      "bpmTask": "Finalize Scoring"
+    },
+    "QT-005": {
+      "title": "Every Specification Committee member endorses",
+      "role": "SC Member",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/index.mjs#endorseAll → ported to support/modules (2026-11-24)",
+      "instructions": "Each SC member: My Task, Endorsement.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SPEC_ENDORSED",
+        "description": "Specification endorsed by every member",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60026 Pending Specification Sign Off after QT-005 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60026,
+          "en": "Pending Specification Sign Off",
+          "bm": "Menunggu Perakuan Spesifikasi",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-006": {
+      "title": "Specification Committee chair signs off",
+      "role": "SC Chair",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/approve.mjs#approveTask (button Sign Off) → ported to support/modules (2026-11-24)",
+      "instructions": "SC chair: My Task, Sign Off.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SPEC_SIGNED_OFF",
+        "description": "Specification signed off",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60004 Pending Document Preparation after QT-006 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60004,
+          "en": "Pending Document Preparation",
+          "bm": "Menunggu Penyediaan Dokumen",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-007": {
+      "title": "Prepare the QT documents and submit",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/docprep.mjs#prepareDocuments → ported to support/modules (2026-11-24)",
+      "instructions": "Desk Officer prepares the QT documents and submits.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DOCS_PREPARED",
+        "description": "Documents prepared; sent to BPK (as on QT260000000004342; a QT that needs no BPK goes to 60005)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60030 Pending BPK Approval after QT-007 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60030,
+          "en": "Pending BPK Approval",
+          "bm": "Menunggu Kelulusan BPK",
+          "evidence": "SIT DB 2026-11-24: QT260000000004524 60004 → 60030 (this QT needs BPK approval); a QT without BPK goes to 60005 (QT-107)",
+          "via": []
+        }
+      }
+    },
+    "QT-008": {
+      "title": "BPK approves",
+      "role": "BPK Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/bpk.mjs#bpkApprove → ported to support/modules (2026-11-24)",
+      "instructions": "BPK Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "BPK_APPROVED",
+        "description": "BPK approval approved (BPK 60151)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60005 Pending Document Approval for Publication after QT-008 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60005,
+          "en": "Pending Document Approval for Publication",
+          "bm": "Menunggu Kelulusan Dokumen untuk Pengiklanan",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      },
+      "onlyIfStatus": {
+        "kind": "QT",
+        "statusId": 60030
+      }
+    },
+    "QT-009": {
+      "title": "Approve the documents for publication",
+      "role": "Publication Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/approve.mjs#approveTask → ported to support/modules (2026-11-24)",
+      "instructions": "Publication Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "PUBLICATION_APPROVED",
+        "description": "Documents approved for publication",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60007 Pending Notice Publishing after QT-009 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60007,
+          "en": "Pending Notice Publishing",
+          "bm": "Menunggu Notis Pengiklanan",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-010": {
+      "title": "Publish the notice",
+      "role": "Tech Support",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner lib/techsupport.mjs#techAction(Publish) → ported to support/modules (2026-11-24)",
+      "instructions": "Technical support publishes the notice.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "NOTICE_PUBLISHED",
+        "description": "Notice published; suppliers can submit proposals",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60009 Pending Proposal Preparation after QT-010 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60009,
+          "en": "Pending Proposal Preparation",
+          "bm": "Menunggu Penyediaan Cadangan",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-011": {
+      "title": "Suppliers submit proposals; the QT closes",
+      "role": "Supplier / Tech Support",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner stages/supplier.mjs#submitProposal + techAction(close) → ported to support/modules (2026-11-24)",
+      "instructions": "The planned suppliers submit a proposal (Sign), then the QT is closed.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_CLOSED",
+        "description": "Proposals in; QT closed",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60022 Quotation / Tender Closed after QT-011 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24); proposals PN260000000008225 (firstallied1234), PN260000000008226 (mahmood84), closed by Technical Support",
+        "db": {
+          "kind": "QT",
+          "statusId": 60022,
+          "en": "Quotation / Tender Closed",
+          "bm": "Sebut Harga / Tender Ditutup",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23"
+        }
+      }
+    },
+    "QT-012": {
+      "title": "Opening committee formed and approved",
+      "role": "Desk Officer / Committee Approver",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner stages/ecphase.mjs#ecPhase → ported to support/modules/qt/ecphase.ts (2026-11-24)",
+      "instructions": "Form the opening committee and approve it.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "OC_FORMED",
+        "description": "Opening committee formed (CMT 60202, OC 62000)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached 60010 Pending Proposal Evaluation after QT-012 (ported module step; runs qt-to-recommendation-to-QT-003, _spec_, _docs_, _pub_, _eval_ 2026-11-24)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60010,
+          "en": "Pending Proposal Evaluation",
+          "bm": "Menunggu Penilaian Cadangan",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23",
+          "waitSec": 300
+        }
+      }
+    },
+    "QT-013": {
+      "title": "Opening committee: compliance verification, endorse, sign off",
+      "role": "OC Chair / Members",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner stages/ecphase.mjs#ecPhase → ported to support/modules/qt/ecphase.ts (2026-11-24)",
+      "instructions": "OC: confirm, verify compliance, endorse, sign off.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "OC_COMPLETED",
+        "description": "Compliance verification completed",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached QT:OC 62004 Compliance Verification Completed after QT-013 (ported evaluation phase, run qt-to-recommendation_eval_20261124-044738)",
+        "db": {
+          "kind": "QT:OC",
+          "statusId": 62004,
+          "en": "Compliance Verification Completed",
+          "bm": "Pengesahan Pematuhan Telah Selesai",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23",
+          "waitSec": 300
+        }
+      }
+    },
+    "QT-014": {
+      "title": "Technical evaluation committee: evaluate, endorse, sign off",
+      "role": "TEC Chair / Members",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner stages/ecphase.mjs#ecPhase → ported to support/modules/qt/ecphase.ts (2026-11-24)",
+      "instructions": "Form the TEC, confirm, evaluate the technical proposals, endorse, sign off (2 Tier).",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "TEC_COMPLETED",
+        "description": "Technical evaluation completed",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached QT:TEC 62105 Technical Proposal Evaluation Completed after QT-014 (ported evaluation phase, run qt-to-recommendation_eval_20261124-044738)",
+        "db": {
+          "kind": "QT:TEC",
+          "statusId": 62105,
+          "en": "Technical Proposal Evaluation Completed",
+          "bm": "Penilaian Cadangan Teknikal Telah Selesai",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23",
+          "waitSec": 300
+        }
+      }
+    },
+    "QT-015": {
+      "title": "Financial evaluation committee: evaluate, endorse, sign off",
+      "role": "FEC Chair / Members",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "ngep-runner stages/ecphase.mjs#ecPhase → ported to support/modules/qt/ecphase.ts (2026-11-24)",
+      "instructions": "Form the FEC, confirm, evaluate the financial proposals (Summary tab), endorse, sign off.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "PENDING_RECOMMENDATION",
+        "description": "Financial evaluation completed (FEC 62154); QT at Pending Recommendation",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT DB 2026-11-24: QT260000000004524 reached QT 60023 Pending Recommendation after QT-015 (ported evaluation phase, run qt-to-recommendation_eval_20261124-044738)",
+        "db": {
+          "kind": "QT",
+          "statusId": 60023,
+          "en": "Pending Recommendation",
+          "bm": "Menunggu Pengesyoran",
+          "evidence": "SIT DB QT260000000004342 path (2026-11-04), read 2026-11-23",
+          "waitSec": 300
+        }
+      }
+    },
+    "QT-107": {
+      "title": "Prepare the QT documents and submit (no BPK needed)",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "source": "ngep-runner stages/docprep.mjs#prepareDocuments → ported to support/modules (2026-11-24)",
+      "instructions": "As QT-007, for a QT that does not need BPK approval.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DOCS_PREPARED_NO_BPK",
+        "description": "Documents prepared; publication approval (no BPK)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026",
+        "db": {
+          "kind": "QT",
+          "statusId": 60005,
+          "en": "Pending Document Approval for Publication",
+          "bm": "Menunggu Kelulusan Dokumen untuk Pengiklanan",
+          "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026"
+        }
+      }
+    },
+    "QT-109": {
+      "title": "Publication Approver sends the documents back for revision",
+      "role": "Publication Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "kapitan qt-create recipe \"docrev\"",
+      "instructions": "Publication Approver: My Task, Revise.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "DOC_REVISION",
+        "description": "Pending Document Revision",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026",
+        "db": {
+          "kind": "QT",
+          "statusId": 60006,
+          "en": "Pending Document Revision",
+          "bm": "Menunggu Kaji Semula Dokumen",
+          "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026"
+        }
+      }
+    },
+    "QT-108": {
+      "title": "BPK sends the documents back for revision",
+      "role": "BPK Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "manual",
+      "source": "kapitan qt-create recipe \"docrevbpk\"",
+      "instructions": "BPK Approver: My Task, Revise.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "BPK_REVISION",
+        "description": "Pending Document Revision (BPK)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026",
+        "db": {
+          "kind": "QT:BPK",
+          "statusId": 60153,
+          "en": "Pending Document Revision (BPK)",
+          "bm": "Menunggu Kaji Semula Dokumen (BPK)",
+          "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026"
+        }
+      }
+    }
+  },
+  "flows": [
+    {
+      "id": "qt-to-recommendation",
+      "title": "Quotation / Tender (2 Tier, BPK) to Pending Recommendation",
+      "verification": "execution",
+      "notes": "VERIFIED end to end on SIT 2026-11-24 with the ported module steps: QT260000000004524 60002 → … → 60023 (about 1 h of run time). Path of SIT QT260000000004342. Every step is manual for now: npm run qa -- reconcile --env sit --run <id> --step QT-0xx --done (QT=QT26... for QT-001), then resume; the run checks the QT status in the SIT database. A QT without BPK goes 60004 to 60005 directly.",
+      "steps": [
+        "QT-001",
+        "QT-002",
+        "QT-003",
+        "QT-004",
+        "QT-005",
+        "QT-006",
+        "QT-007",
+        "QT-008",
+        "QT-009",
+        "QT-010",
+        "QT-011",
+        "QT-012",
+        "QT-013",
+        "QT-014",
+        "QT-015"
+      ],
+      "submodule": "quotation-tender"
+    },
+    {
+      "id": "qt-to-recommendation-no-bpk",
+      "submodule": "quotation-tender",
+      "title": "Quotation / Tender without BPK to Pending Recommendation",
+      "verification": "documentation",
+      "notes": "As qt-to-recommendation, documents go straight to publication approval (60005).",
+      "steps": [
+        "QT-001",
+        "QT-002",
+        "QT-003",
+        "QT-004",
+        "QT-005",
+        "QT-006",
+        "QT-107",
+        "QT-009",
+        "QT-010",
+        "QT-011",
+        "QT-012",
+        "QT-013",
+        "QT-014",
+        "QT-015"
+      ]
+    },
+    {
+      "id": "qt-doc-revision",
+      "submodule": "revision",
+      "title": "QT documents sent back for revision by the Publication Approver",
+      "verification": "documentation",
+      "notes": "Path of QT260000000004373.",
+      "steps": [
+        "QT-001",
+        "QT-002",
+        "QT-003",
+        "QT-004",
+        "QT-005",
+        "QT-006",
+        "QT-107",
+        "QT-109"
+      ]
+    },
+    {
+      "id": "qt-bpk-revision",
+      "submodule": "revision",
+      "title": "QT documents sent back for revision by BPK",
+      "verification": "documentation",
+      "notes": "Path of QT260000000004374.",
+      "steps": [
+        "QT-001",
+        "QT-002",
+        "QT-003",
+        "QT-004",
+        "QT-005",
+        "QT-006",
+        "QT-007",
+        "QT-108"
+      ]
+    }
+  ]
+}

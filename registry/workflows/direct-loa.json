@@ -23,7 +23,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-001 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-11-11_154409"
+        "evidence": "KAT-001 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-11-11_154409",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004217 after KAT-001"
+        }
       }
     },
     "KAT-002": {
@@ -46,7 +53,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:51:02: \"Letter of Acceptance (LOA) LA260000000004216 is successfully submitted.\" (attempt 2; attempt 1 failed on signer selection timing, nothing saved)"
+        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:51:02: \"Letter of Acceptance (LOA) LA260000000004216 is successfully submitted.\" (attempt 2; attempt 1 failed on signer selection timing, nothing saved)",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004216 after KAT-002"
+        }
       }
     },
     "KAT-003": {
@@ -69,7 +83,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-003 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_123329"
+        "evidence": "KAT-003 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_123329",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004222 after KAT-003"
+        }
       }
     },
     "KAT-004": {
@@ -115,7 +136,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-005 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_134751"
+        "evidence": "KAT-005 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_134751",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004225 after KAT-005"
+        }
       }
     },
     "KAT-006": {
@@ -138,7 +166,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-006 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_130321"
+        "evidence": "KAT-006 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_130321",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004224 after KAT-006"
+        }
       }
     },
     "KAT-011": {
@@ -161,7 +196,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-011 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_135403"
+        "evidence": "KAT-011 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_135403",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004226 after KAT-011"
+        }
       }
     },
     "KAT-012": {
@@ -184,7 +226,14 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-012 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_140102"
+        "evidence": "KAT-012 waits for 'is successfully submitted' and reads LAd+; passed SIT 2026-10-30_140102",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004227 after KAT-012"
+        }
       }
     },
     "KAT-013": {
@@ -396,8 +445,16 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-007 waits for 'is acknowledged'; passed SIT 2026-10-30_153952"
-      }
+        "evidence": "KAT-007 waits for 'is acknowledged'; passed SIT 2026-10-30_153952",
+        "db": {
+          "kind": "LA",
+          "statusId": 62505,
+          "en": "Pending Verification of Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004217/4226 after KAT-007"
+        }
+      },
+      "bpmTask": "Accept Manual LOA"
     },
     "KAT-008": {
       "title": "Supplier acknowledges Direct LOA - Services",
@@ -424,8 +481,16 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:52:13: \"Letter of Acceptance (LOA) LA260000000004216 is acknowledged.\""
-      }
+        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:52:13: \"Letter of Acceptance (LOA) LA260000000004216 is acknowledged.\"",
+        "db": {
+          "kind": "LA",
+          "statusId": 62505,
+          "en": "Pending Verification of Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004216/4225/4227 after KAT-008"
+        }
+      },
+      "bpmTask": "Accept Manual LOA"
     },
     "KAT-009": {
       "title": "Supplier acknowledges Direct LOA - Global (product + services)",
@@ -452,8 +517,16 @@
           "bm": null
         },
         "verification": "source",
-        "evidence": "KAT-009 waits for 'is acknowledged'; passed SIT 2026-10-30_143034"
-      }
+        "evidence": "KAT-009 waits for 'is acknowledged'; passed SIT 2026-10-30_143034",
+        "db": {
+          "kind": "LA",
+          "statusId": 62505,
+          "en": "Pending Verification of Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004222/4224 after KAT-009"
+        }
+      },
+      "bpmTask": "Accept Manual LOA"
     },
     "KAT-010": {
       "title": "Desk Officer verifies the LOA",
@@ -480,8 +553,16 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:53:48: \"Letter of Acceptance (LOA) LA260000000004216 is completed.\" as the KAT-010 default Desk Officer"
-      }
+        "evidence": "SIT flow run dloa-oneoff-services_20261123-163647 2026-11-23 16:53:48: \"Letter of Acceptance (LOA) LA260000000004216 is completed.\" as the KAT-010 default Desk Officer",
+        "db": {
+          "kind": "LA",
+          "statusId": 62506,
+          "en": "Letter of Acceptance Completed",
+          "bm": "Surat Setuju Terima Telah Selesai",
+          "evidence": "SIT DB 2026-11-23: LA260000000004216/4217/4222/4225/4226 after KAT-010"
+        }
+      },
+      "bpmTask": "Verify Manual LOA"
     },
     "KAT-025": {
       "title": "Prepare LOA from an approved Request Note (DP-LOA route)",
@@ -508,7 +589,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:19:39: \"Letter of Acceptance (LOA) LA260000000004215 is submitted successfully.\" as officer 710527085562"
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:19:39: \"Letter of Acceptance (LOA) LA260000000004215 is submitted successfully.\" as officer 710527085562",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004215 after KAT-025"
+        }
       }
     },
     "KAT-026": {
@@ -538,7 +626,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:20:35: \"Letter Of Acceptance LA260000000004215 is accepted successfully.\" as the KAT-022 supplier account"
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:20:35: \"Letter Of Acceptance LA260000000004215 is accepted successfully.\" as the KAT-022 supplier account",
+        "db": {
+          "kind": "LA",
+          "statusId": 62505,
+          "en": "Pending Verification of Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengesahan Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-23: LA260000000004215 after KAT-026"
+        }
       }
     },
     "KAT-027": {
@@ -566,7 +661,51 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:22:07: \"Letter of Acceptance (LOA) LA260000000004215 is completed.\" as officer 710527085562"
+        "evidence": "SIT flow run dloa-from-dp-rn_20261123-155431 2026-11-23 16:22:07: \"Letter of Acceptance (LOA) LA260000000004215 is completed.\" as officer 710527085562",
+        "db": {
+          "kind": "LA",
+          "statusId": 62506,
+          "en": "Letter of Acceptance Completed",
+          "bm": "Surat Setuju Terima Telah Selesai",
+          "evidence": "SIT DB 2026-11-23: LA260000000004215 after KAT-027"
+        }
+      }
+    },
+    "LA-APPROVE": {
+      "title": "Approve the Direct LOA (only when SIT asks for approval)",
+      "role": "LOA Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "bpmTask": "Approve Manual LOA",
+      "onlyIfStatus": {
+        "kind": "LA",
+        "statusId": 62501
+      },
+      "source": "ngep-runner stages/directloa.mjs (Approve Manual LOA via approveTask) → support/modules (generic approve, 2026-11-24)",
+      "inputs": [
+        {
+          "var": "laNo",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LA_APPROVED",
+        "description": "LOA approved; supplier to acknowledge",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-24: LA260000000004238 (zonal schedule services, KAT-020) went to 62501 Pending Letter Of Acceptance Approval with \"Approve Manual LOA\" ASSIGNED to 770912129890; the other 15 variants went straight to 62504",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "evidence": "SIT DB 2026-11-24: LA260000000004238 62501 → 62504 after LA-APPROVE (run dloa-zonal-schedule-services_20261124-035953)"
+        }
       }
     }
   },
@@ -578,9 +717,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-001 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-001",
+        "LA-APPROVE",
         "KAT-007",
         "KAT-010"
-      ]
+      ],
+      "submodule": "one-off"
     },
     {
       "id": "dloa-oneoff-services",
@@ -589,9 +730,11 @@
       "notes": "Verified by Phase 1 run dloa-oneoff-services_20261123-163647 (2026-11-23): LA260000000004216 submitted, acknowledged, completed. Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-002 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-002",
+        "LA-APPROVE",
         "KAT-008",
         "KAT-010"
-      ]
+      ],
+      "submodule": "one-off"
     },
     {
       "id": "dloa-oneoff-product-services",
@@ -600,9 +743,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-003 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-003",
+        "LA-APPROVE",
         "KAT-009",
         "KAT-010"
-      ]
+      ],
+      "submodule": "one-off"
     },
     {
       "id": "dloa-schedule-product",
@@ -611,9 +756,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-004 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-004",
+        "LA-APPROVE",
         "KAT-007",
         "KAT-010"
-      ]
+      ],
+      "submodule": "schedule"
     },
     {
       "id": "dloa-schedule-services",
@@ -622,9 +769,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-005 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-005",
+        "LA-APPROVE",
         "KAT-008",
         "KAT-010"
-      ]
+      ],
+      "submodule": "schedule"
     },
     {
       "id": "dloa-schedule-product-services",
@@ -633,9 +782,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-006 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-006",
+        "LA-APPROVE",
         "KAT-009",
         "KAT-010"
-      ]
+      ],
+      "submodule": "schedule"
     },
     {
       "id": "dloa-open-oneoff-product",
@@ -644,9 +795,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-011 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-011",
+        "LA-APPROVE",
         "KAT-007",
         "KAT-010"
-      ]
+      ],
+      "submodule": "open"
     },
     {
       "id": "dloa-open-oneoff-services",
@@ -655,9 +808,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-012 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-012",
+        "LA-APPROVE",
         "KAT-008",
         "KAT-010"
-      ]
+      ],
+      "submodule": "open"
     },
     {
       "id": "dloa-open-oneoff-product-services",
@@ -666,9 +821,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-013 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-013",
+        "LA-APPROVE",
         "KAT-009",
         "KAT-010"
-      ]
+      ],
+      "submodule": "open"
     },
     {
       "id": "dloa-open-schedule-product",
@@ -677,9 +834,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-014 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-014",
+        "LA-APPROVE",
         "KAT-007",
         "KAT-010"
-      ]
+      ],
+      "submodule": "open"
     },
     {
       "id": "dloa-open-schedule-services",
@@ -688,9 +847,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-015 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-015",
+        "LA-APPROVE",
         "KAT-008",
         "KAT-010"
-      ]
+      ],
+      "submodule": "open"
     },
     {
       "id": "dloa-open-schedule-product-services",
@@ -699,9 +860,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-016 = company of the KAT-009 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-016",
+        "LA-APPROVE",
         "KAT-009",
         "KAT-010"
-      ]
+      ],
+      "submodule": "open"
     },
     {
       "id": "dloa-zonal-oneoff-product",
@@ -710,9 +873,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-017 = company of the KAT-007 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-017",
+        "LA-APPROVE",
         "KAT-007",
         "KAT-010"
-      ]
+      ],
+      "submodule": "zonal"
     },
     {
       "id": "dloa-zonal-oneoff-services",
@@ -721,9 +886,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-018 = company of the KAT-008 account). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-018",
+        "LA-APPROVE",
         "KAT-008",
         "KAT-010"
-      ]
+      ],
+      "submodule": "zonal"
     },
     {
       "id": "dloa-zonal-schedule-product",
@@ -732,9 +899,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-019 = company of the KAT-007 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-019",
+        "LA-APPROVE",
         "KAT-007",
         "KAT-010"
-      ]
+      ],
+      "submodule": "zonal"
     },
     {
       "id": "dloa-zonal-schedule-services",
@@ -743,9 +912,11 @@
       "notes": "Supplier pairing from support/katalon/data-overrides.json (supplier of KAT-020 = company of the KAT-008 account); PerformanceBond 2 workaround for DEF-1 (ERR-770222). KAT-010 runs with its default Desk Officer account.",
       "steps": [
         "KAT-020",
+        "LA-APPROVE",
         "KAT-008",
         "KAT-010"
-      ]
+      ],
+      "submodule": "zonal"
     },
     {
       "id": "dloa-from-dp-rn",
@@ -764,6 +935,7 @@
         "KAT-023",
         "KAT-024",
         "KAT-025",
+        "LA-APPROVE",
         "KAT-026",
         "KAT-027"
       ],
@@ -771,7 +943,8 @@
         "KAT-021": {
           "Fulfilmenttype": 2
         }
-      }
+      },
+      "submodule": "from-dp"
     }
   ]
 }

@@ -340,7 +340,7 @@ export class OnlineRegistrationAction {
         await this.regPage.gstRegNoId.fill(regNo);
     }
 
-    async fillGstEffectiveDate(date: string) {
+    async fillGstEffectiveDate(_date: string) { // NOTE: the date argument is never used (the field is only unlocked + change event): latent bug kept as found
         const field = this.regPage.gstRegEffDate;
         await field.evaluate((el: HTMLElement) => el.removeAttribute("readonly"));
         await field.evaluate((el: HTMLElement) => el.dispatchEvent(new Event("change", { bubbles: true })));

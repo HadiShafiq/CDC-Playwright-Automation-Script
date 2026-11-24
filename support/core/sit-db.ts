@@ -79,3 +79,50 @@ export function sitDbAvailable(): boolean {
     return false;
   }
 }
+
+/**
+ * WRITE access, for the data changes the user allowed (2026-11-24: "for sql u can run it i give u permission"):
+ * the Simple Quote date gates and status simulations only. Every statement must match the allow-list below; all run
+ * in ONE transaction (any error → rollback) on SIT only, and each call is logged in knowledge/data-change-audit.md.
+ * Turned on per run with QA_AUTO_SQL=1 (runner) or `qa simulate … --run` / `qa sql` (CLI).
+ */
+const WRITE_ALLOWED: RegExp[] = [
+  /^UPDATE NGEP_SIT\.SC_QUOTE mp SET (START_DATE|END_DATE) = TO_DATE\('\d{4}-\d\d-\d\d \d\d:\d\d:\d\d', 'YYYY-MM-DD HH24:MI:SS'\) WHERE mp\.QUOTE_NO IN \('SQ\d{12,15}'\)$/i,
+  /^UPDATE ngep_sit\.(sc|ct|fl|sm|cm|pm|pp)_workflow_status SET is_current = 0, changed_by = \d+, changed_date = systimestamp WHERE doc_type = '[A-Z0-9]{1,4}' AND doc_id = \d+ AND is_current = 1$/i,
+  /^INSERT INTO ngep_sit\.(sc|ct|fl|sm|cm|pm|pp)_workflow_status \(workflow_status_id, doc_type, doc_id, is_current, status_id, record_status, created_by, created_date\) VALUES \(ngep_sit\.(SC|CT|FL|SM|CM|PM|PP)_WORKFLOW_STATUS_SEQ\.nextval, '[A-Z0-9]{1,4}', \d+, 1, \d+, 1, \d+, systimestamp\)$/i,
+  /^UPDATE ngep_sit\.sm_appl SET status_id = \d+ WHERE appl_id = \d+$/i,
+  /^DELETE FROM ngep_sit\.(sc|ct|fl|sm|cm|pm|pp)_workflow_status WHERE doc_type = '[A-Z0-9]{1,4}' AND doc_id = \d+ AND is_current = 1 AND status_id = \d+$/i,
+  /^UPDATE ngep_sit\.(sc|ct|fl|sm|cm|pm|pp)_workflow_status SET is_current = 1 WHERE workflow_status_id = \d+$/i,
+];
+
+/** Picks the executable statements out of a script (comments and COMMIT removed). */
+export function dmlStatements(script: string): string[] {
+  return script
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith('--') && !/^COMMIT;?$/i.test(l))
+    .map((l) => l.replace(/;\s*$/, ''));
+}
+
+export function sitExecute(statements: string[], who: string, what: string): void {
+  if (getEnv().name !== 'SIT') throw new Error('sit-db: data changes run only on SIT');
+  if (!statements.length) throw new Error('sit-db: nothing to run');
+  for (const s of statements)
+    if (!WRITE_ALLOWED.some((re) => re.test(s.trim()))) throw new Error(`sit-db: statement not allowed (only SQ dates and status simulation): ${s.slice(0, 160)}`);
+  const { user, password } = sitLogin();
+  const script = [
+    'WHENEVER SQLERROR EXIT FAILURE ROLLBACK',
+    `CONNECT ${user}/"${password}"@"(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=${SIT_HOST})(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=${SIT_SERVICE})))"`,
+    'SET FEEDBACK ON',
+    ...statements.map((s) => `${s.trim()};`),
+    'COMMIT;',
+    'EXIT',
+  ].join('\n');
+  const r = spawnSync(SQLPLUS, ['-S', '/nolog'], { input: script, encoding: 'utf8', timeout: 60_000, windowsHide: true });
+  const out = (r.stdout ?? '').split(password).join('***');
+  if (r.status !== 0) throw new Error(`sit-db: data change failed and was rolled back: ${out.trim().split('\n').slice(-3).join(' ').slice(0, 300)}`);
+  const rows = (out.match(/(\d+) rows? (updated|created|deleted)/gi) ?? []).join(', ');
+  const audit = path.join(__dirname, '..', '..', 'knowledge', 'data-change-audit.md');
+  const at = new Date(Date.now() + 8 * 3600_000).toISOString().slice(0, 16).replace('T', ' ');
+  fs.appendFileSync(audit, `| ${at} | SIT | User permission 2026-11-24 ("for sql u can run it"); run by ${who} | ${what} | ${statements.map((s) => s.replace(/\|/g, '/')).join('; ')} | SQL*Plus via the DBeaver SIT connection (${rows || 'ok'}) | Rollback SQL kept with the plan (.data/…) | No |\n`);
+}

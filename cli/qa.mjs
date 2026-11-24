@@ -11,8 +11,8 @@ import readline from 'node:readline/promises';
 import { spawn } from 'node:child_process';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const MODULES = ['sq', 'dp', 'direct-loa', 'ct', 'fl'];
-const DOC_TYPES = ['SQ', 'PI', 'RN', 'PR', 'PO', 'LA', 'CT', 'CR', 'CO', 'DO', 'FN', 'SD', 'IN', 'DN', 'PA'];
+const MODULES = ['pm', 'sm', 'qt', 'sq', 'dp', 'direct-loa', 'ct', 'fl'];
+const DOC_TYPES = ['AA', 'AP', 'PD', 'PL', 'TC', 'CX', 'RC', 'QT', 'SQ', 'PI', 'RN', 'PR', 'PO', 'LA', 'CT', 'CR', 'CO', 'DO', 'FN', 'SD', 'IN', 'DN', 'CN', 'PA'];
 const ENVS = { SIT: 'http://ngepsit.eperolehan.com.my', UAT: 'http://ngepuat.eperolehan.com.my' };
 const tty = process.stdout.isTTY;
 const c = (code) => (s) => (tty ? `\x1b[${code}m${s}\x1b[0m` : String(s));
@@ -65,7 +65,7 @@ function loadRegistry() {
       if (steps[id]) problems.push(`${id} owned by ${steps[id].module} and ${m}`);
       steps[id] = { id, module: m, ...s };
       for (const x of [...s.inputs, ...s.outputs]) if (!DOC_TYPES.includes(x.doc)) problems.push(`${id}: unknown document type ${x.doc}`);
-      if (!fs.existsSync(path.join(ROOT, 'support', 'katalon', 'steps', `${id}.ts`))) problems.push(`${id}: no step function support/katalon/steps/${id}.ts`);
+      if (!['manual', 'module'].includes(s.automation) && !fs.existsSync(path.join(ROOT, 'support', 'katalon', 'steps', `${id}.ts`))) problems.push(`${id}: no step function support/katalon/steps/${id}.ts`);
     }
     for (const f of d.flows) flows[f.id] = { ...f, module: m };
   }
@@ -143,7 +143,8 @@ function parsePairs(list, what) {
   }
   return out;
 }
-const DOC_RE = (t) => (t === 'DO' ? /^\d{5}[A-Z]\d{3}[A-Z]\d{7}$/ : new RegExp(`^${t}\\d{12,15}$`));
+const DOC_RE = (t) =>
+  t === 'DO' ? /^\d{5}[A-Z]\d{3}[A-Z]\d{7}$/ : t === 'AP' ? /^[A-Z]{2}-\d{8}-\d{4}$/ : t === 'AA' ? /^AP\d{15}$/ : t === 'PL' ? /^P[PE]\d{15}$/ : t === 'TC' ? /^(CQ|PQ|PM)\d{13,15}$/ : t === 'RC' ? /^RN[CE]\d{6}-\d{4}$/ : t === 'CN' ? /^(CN\d{12,15}|C\d{16})$/ : new RegExp(`^${t}\\d{12,15}$`);
 function checkDocs(pairs) {
   for (const [k, v] of Object.entries(pairs)) {
     if (!DOC_TYPES.includes(k)) die(`Unknown document type ${k} (${DOC_TYPES.join(', ')})`);
@@ -241,6 +242,28 @@ function statusCandidates(reg, status, { module, flow } = {}) {
 
 /** Prepare a transaction at a status for manual testing: run the best flow up to the step that reaches it, then stop. */
 async function cmdPrepare(args) {
+  // --status-id: the by-status spec of one active status (tests/data-prep/en/by-status/<module>/<doc type>/<id>-*.spec.ts)
+  if (args['status-id'] && args['status-id'] !== true) {
+    const env = envOf(args);
+    const idx = readJson(path.join(ROOT, 'registry', 'status-specs.json'), { index: {} }).index;
+    const hits = Object.entries(idx).filter(([k]) => {
+      const [m, t, id] = k.split('|');
+      return id === String(args['status-id']) && (!args['doc-type'] || t === String(args['doc-type'])) && (!args.module || m === String(args.module).toUpperCase());
+    });
+    if (!hits.length) die(`No active status ${args['status-id']}${args['doc-type'] ? ' / ' + args['doc-type'] : ''} (docs/status-coverage.md)`);
+    if (hits.length > 1) die(`Status ${args['status-id']} exists for several doc types: ${hits.map(([k]) => k).join(', ')} — add --doc-type`);
+    const [key, x] = hits[0];
+    console.log(`${bold('Prepare')} ${key} · method ${x.method}${x.flow ? ` · flow ${x.flow} up to ${x.upTo}` : ''}
+  ${dim(x.spec)}`);
+    if (args.plan) return console.log(dim('Plan only (--plan): nothing started.'));
+    if (x.method === 'unmapped' || x.method === 'never-used-type') die(`${key}: ${x.method === 'unmapped' ? 'doc type not mapped to a table yet' : 'no document on SIT has ever been in this workflow'} (see the spec header)`);
+    const pwArgs = [path.join(ROOT, 'node_modules', '@playwright', 'test', 'cli.js'), 'test', x.spec, '--project=flows', '--workers=1', ...(args.headed ? ['--headed'] : [])];
+    const input = parsePairs(args.input, 'input');
+    checkDocs(input);
+    const child = spawn(process.execPath, pwArgs, { cwd: ROOT, stdio: 'inherit', env: { ...process.env, TEST_ENV: env, ...(Object.keys(input).length ? { QA_INPUT: Object.entries(input).map(([k, v]) => `${k}=${v}`).join(',') } : {}) } });
+    process.exitCode = await new Promise((r) => child.on('exit', r));
+    return;
+  }
   const reg = loadRegistry();
   if (!args.status || args.status === true) {
     console.log('Give --status <STATUS>. Statuses:');
@@ -288,19 +311,24 @@ function listRuns(env) {
 }
 
 /** Runs Playwright for one flow and shows live progress from the run's events.jsonl. */
-async function execute(env, f, flowRunId, args) {
+async function execute(env, f, flowRunId, args, spec) {
   const dir = runDirOf(env, flowRunId);
   const lock = path.join(stateDir(env), 'active-run.json');
   const active = readJson(lock, null);
   if (active && isAlive(active.pid)) die(`Another run is active (${active.flowRunId}, pid ${active.pid}). One run at a time per tester: accounts and data are shared.`);
   writeJson(lock, { pid: process.pid, flowRunId, startedAt: nowMy() });
 
-  const lang = readJson(path.join(dir, 'state.json')).language.toLowerCase();
-  const pwArgs = ['playwright', 'test', `tests/flows/${lang}/${f.module}.flow.spec.ts`, '--project=flows', '--workers=1', '--grep', `@flow-${f.id}(\\s|$)`];
+  // spec: a CR-suite spec (its run ID is fixed by RUN_ID; the spec writes the state itself)
+  const lang = (spec?.lang ?? readJson(path.join(dir, 'state.json')).language).toLowerCase();
+  const pwArgs = spec
+    ? ['playwright', 'test', spec.path, '--project=flows', '--workers=1']
+    : ['playwright', 'test', `tests/flows/${lang}/${f.module}.flow.spec.ts`, '--project=flows', '--workers=1', '--grep', `@flow-${f.id}(\\s|$)`];
   if (args.headed) pwArgs.push('--headed');
   const env2 = { ...process.env, TEST_ENV: env, QA_FLOW: f.id, QA_FLOW_RUN: flowRunId, QA_LANG: lang.toUpperCase(), RUN_ID: undefined };
   if (args.cr) env2.QA_CR = String(args.cr);
   delete env2.RUN_ID;
+  if (spec?.runId) env2.RUN_ID = spec.runId;
+  if (spec?.input) env2.QA_INPUT = spec.input;
   const log = fs.openSync(path.join(dir, 'playwright.log'), 'a');
   console.log(dim(`\n$ npx ${pwArgs.join(' ')}\n  log: ${path.relative(ROOT, path.join(dir, 'playwright.log'))}\n  Ctrl+C once = stop after the current step; twice = abort now (the step becomes UNCERTAIN)\n`));
   const started = Date.now();
@@ -319,7 +347,8 @@ async function execute(env, f, flowRunId, args) {
   await new Promise((r) => setTimeout(r, 700));
   stopWatch();
   fs.rmSync(lock, { force: true });
-  const st = readJson(path.join(dir, 'state.json'));
+  const st = readJson(path.join(dir, 'state.json'), null);
+  if (!st) { console.log(red(`\nNo run state was written (playwright exit ${code}); see ${path.relative(ROOT, path.join(dir, 'playwright.log'))}`)); process.exitCode = 1; return; }
   console.log(`\n${bold('Result')} ${statusColor(st.status)} · ${Math.round((Date.now() - started) / 1000)} s · playwright exit ${code}`);
   if (Object.keys(st.docs).length) console.log(`  documents: ${Object.entries(st.docs).map(([k, v]) => `${k} ${v}`).join(', ')}`);
   if (st.blockedReason) console.log(yellow(`  next: ${st.blockedReason}`));
@@ -327,6 +356,13 @@ async function execute(env, f, flowRunId, args) {
   writeReport(env, flowRunId);
   console.log(dim(`  report: ${path.relative(ROOT, path.join(dir, 'report.md'))}`));
   process.exitCode = st.status === 'completed' || st.status === 'blocked' ? 0 : 1;
+  // Self-heal on a fresh failure: resume once after a minute (SIT task lists lag behind BPM). The runner's selfHeal
+  // decides from the SIT DB whether the failed step may run again; without evidence it stays failed for a person.
+  if (st.status === 'failed' && !spec && !args._healed && process.env.QA_SELF_HEAL !== '0') {
+    console.log(yellow('\n↻ Self-heal: resuming once in 60 s; the failed step runs again only if the SIT DB proves nothing was changed.'));
+    await new Promise((r) => setTimeout(r, 60_000));
+    await execute(env, f, flowRunId, { ...args, _healed: true }, spec);
+  }
 }
 const statusColor = (s) => (s === 'completed' ? green(s.toUpperCase()) : s === 'blocked' ? yellow('BLOCKED (waiting for you)') : red(s.toUpperCase()));
 function isAlive(pid) {
@@ -363,6 +399,7 @@ function watchEvents(env, flowRunId, f, started) {
       else if (e.type === 'step-skip') console.log(`${t} ${dim(`· skip ${e.item}: ${e.why}`)}`);
       else if (e.type === 'flow-start') console.log(`${t} ${bold(e.resumed ? 'resumed' : 'started')} ${e.flowId} (${e.language})`);
       else if (e.type === 'flow-end') console.log(`${t} ${bold('flow ended')} ${statusColor(e.status)}`);
+      else if (e.type === 'db-status') console.log(`${t}   ${e.expected == null || e.statusId === e.expected ? green('DB') : red('DB')} ${e.kind} ${e.docNo ?? ''} ${e.statusId ?? '-'} ${e.en ?? ''}${e.expected != null ? dim(` (expected ${e.expected})`) : ''}${e.when ? dim(` ${e.when}`) : ''}`);
       else if (e.type === 'note') console.log(`${t} ${yellow('…')} ${e.item ?? ''} ${e.text ?? ''}`);
     }
   };
@@ -496,6 +533,170 @@ function cmdWatch(args) {
   const { st } = loadRun(env, args.run);
   console.log(dim(`Watching ${st.flowRunId} (Ctrl+C to leave; the run continues)`));
   watchEvents(env, st.flowRunId, flowOrDie(reg, st.flowId), Date.now());
+}
+
+/* ---------- SIT database tools (read-only; run through the Playwright "tools" project, which has the TS reader) ---------- */
+function runTool(env, toolEnv) {
+  if (env !== 'SIT') die('Database checks run only on SIT.');
+  const pwCli = path.join(ROOT, 'node_modules', '@playwright', 'test', 'cli.js');
+  return new Promise((resolve) => {
+    const child = spawn(process.execPath, [pwCli, 'test', 'tests/tools', '--project=tools', '--workers=1', '--reporter=list'], {
+      cwd: ROOT, env: { ...process.env, TEST_ENV: env, ...toolEnv }, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true,
+    });
+    let out = '';
+    child.stdout.on('data', (d) => (out += d));
+    child.stderr.on('data', (d) => (out += d));
+    child.on('exit', (code) => {
+      // show the tool's own output, not Playwright's list lines
+      const lines = out.split(/\r?\n/).filter((l) => !/^\s*(Running \d+ test|[✓✘-]\s+\d+|\d+ (passed|skipped|failed)|Slow test|\[tools\])/.test(l));
+      console.log(lines.join('\n').trim());
+      if (/skipped/.test(out) && !/passed/.test(out)) console.log(yellow('Skipped: no DBeaver "SIT" connection or SQL*Plus on this machine.'));
+      process.exitCode = code;
+      resolve(code);
+    });
+  });
+}
+async function cmdDocStatus(args) {
+  const env = envOf(args);
+  const no = String(args.doc ?? '');
+  if (!DOC_TYPES.some((t) => DOC_RE(t).test(no))) die('Give --doc <document number>, e.g. --doc LA260000000004216');
+  await runTool(env, { QA_TOOL: 'doc-status', QA_DOC: no });
+}
+/** Simulate a backend-only status on one document: prints the data patch (tester runs it), --check confirms + logs it. */
+async function cmdSimulate(args) {
+  const env = envOf(args);
+  const no = String(args.doc ?? '');
+  if (!DOC_TYPES.some((t) => DOC_RE(t).test(no)) || !args.status || args.status === true) die('Give --doc <number> --status <status id> [--type <workflow doc type, e.g. OC, FA, CP>]   (statuses: docs/status-coverage.md)');
+  const toolEnv = { QA_DOC: no, QA_STATUS: String(args.status), ...(args.type && args.type !== true ? { QA_TYPE: String(args.type) } : {}), QA_TESTER: tester() };
+  if (args.check) return runTool(env, { QA_TOOL: 'simulate-check', ...toolEnv });
+  if (args.run) return runTool(env, { QA_TOOL: 'simulate-run', ...toolEnv });
+  await runTool(env, { QA_TOOL: 'simulate-plan', ...toolEnv });
+  console.log(yellow('\nRun the SQL above in DBeaver (SIT connection only), then: npm run qa -- simulate --env sit --doc ' + no + ' --status ' + args.status + (args.type ? ' --type ' + args.type : '') + ' --check'));
+}
+async function cmdDbUsage(args) {
+  const env = envOf(args);
+  await runTool(env, { QA_TOOL: 'db-usage' });
+  if (!process.exitCode) await new Promise((r) => spawn(process.execPath, [path.join(ROOT, 'scripts', 'status-coverage.mjs')], { cwd: ROOT, stdio: 'inherit' }).on('exit', r));
+}
+async function cmdDbCatalog(args) {
+  const env = envOf(args);
+  await runTool(env, { QA_TOOL: 'db-catalog', QA_DAYS: String(args.days ?? 3650) });
+  if (!process.exitCode) {
+    await new Promise((r) => spawn(process.execPath, [path.join(ROOT, 'scripts', 'gen-suites.mjs')], { cwd: ROOT, stdio: 'inherit' }).on('exit', r));
+  }
+}
+
+/* ---------- CR suites: tests/cr-suites/<CR>/{cr.json,data-prep,execution} ---------- */
+const CR_ROOT = path.join(ROOT, 'tests', 'cr-suites');
+function crSuites() {
+  if (!fs.existsSync(CR_ROOT)) return [];
+  return fs.readdirSync(CR_ROOT).filter((d) => !d.startsWith('_') && fs.existsSync(path.join(CR_ROOT, d, 'cr.json'))).map((d) => ({ dir: d, ...readJson(path.join(CR_ROOT, d, 'cr.json')) }));
+}
+function crSpec(dir, kind, sid) {
+  const d = path.join(CR_ROOT, dir, kind);
+  const f = fs.existsSync(d) ? fs.readdirSync(d).find((x) => x.startsWith(`${sid}-`) && x.endsWith('.spec.ts')) : undefined;
+  return f ? path.join(d, f) : undefined;
+}
+/**
+ * Pick and choose a CR scenario: module → sub-module → flow → where data prep stops → where execution ends.
+ * Appends it to tests/cr-suites/<CR>/cr.json (created when new) and regenerates the specs.
+ * Non-interactive: cr add --cr 123 --flow dloa-oneoff-services --prepare LA_ACKNOWLEDGED --execute LA_VERIFIED --title "…" [--expected "…"]
+ */
+async function cmdCrAdd(args) {
+  const reg = loadRegistry();
+  if (!args.cr || args.cr === true) die('Give --cr <CR number>');
+  const cr = String(args.cr);
+  if (!/^[\w.-]+$/.test(cr)) die('CR number: letters, digits, - and . only');
+  const dir = path.join(CR_ROOT, cr);
+  const file = path.join(dir, 'cr.json');
+  const def = readJson(file, null) ?? { cr, title: args['cr-title'] ? String(args['cr-title']) : `CR ${cr}`, language: 'EN', notes: '', scenarios: [] };
+  const interactive = !args.flow && process.stdin.isTTY;
+  let rl;
+  const ask = async (q, d = '') => (await rl.question(`${q}${d ? dim(` [${d}]`) : ''}: `)).trim() || d;
+  const pick = async (title, options) => {
+    console.log(`\n${bold(title)}`);
+    options.forEach((o, i) => console.log(`  ${String(i + 1).padStart(2)}. ${o.label}`));
+    const n = Number(await ask('Choose', '1'));
+    return options[n - 1]?.value ?? die('No such option');
+  };
+  let flowId = args.flow, prepare = args.prepare, execute = args.execute, title = args.title, expected = args.expected;
+  if (interactive) {
+    rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+    const module = await pick('Module', reg.modules.map((m) => ({ label: `${m.id} — ${m.name}`, value: m.id })));
+    const flowsOfM = Object.values(reg.flows).filter((f) => f.module === module);
+    const subs = [...new Set(flowsOfM.map((f) => f.submodule ?? 'main'))];
+    const sub = await pick(`Sub-module of ${module}`, subs.map((s) => ({ label: `${s} ${dim(`(${flowsOfM.filter((f) => (f.submodule ?? 'main') === s).length} flows)`)}`, value: s })));
+    flowId = await pick('Flow', flowsOfM.filter((f) => (f.submodule ?? 'main') === sub).map((f) => ({ label: `${f.id} ${dim(f.title)}`, value: f.id })));
+  }
+  const f = flowOrDie(reg, flowId);
+  const items = f.steps.map((r, i) => {
+    if (typeof r === 'object') return { key: r.gate, label: `GATE ${r.gate}`, status: `GATE ${r.gate}`, i };
+    const s = reg.steps[r];
+    const db = s.checkpoint.db ? ` · DB ${s.checkpoint.db.kind} ${s.checkpoint.db.statusId ?? '-'} ${s.checkpoint.db.en ?? ''}` : '';
+    return { key: r, status: s.checkpoint.id, label: `${s.checkpoint.id} ${dim(`after ${r} ${s.title}${s.automation === 'manual' ? ' (manual)' : ''}${db}`)}`, i };
+  });
+  if (interactive) {
+    prepare = await pick('Data prep stops at (start status of the scenario)', [{ label: dim('— none: the execution starts from scratch'), value: '' }, ...items.filter((x) => !x.key.includes('_LOOKUP') && !x.label.startsWith('GATE')).map((x) => ({ label: x.label, value: x.key }))]);
+    const from = prepare ? items.find((x) => x.key === prepare).i : -1;
+    execute = await pick('Execution ends at', [{ label: dim('— none: the tester executes by hand'), value: '' }, ...items.filter((x) => x.i > from && !x.label.startsWith('GATE')).map((x) => ({ label: x.label, value: x.key }))]);
+    title = await ask('Scenario title', title || f.title);
+    expected = await ask('Approved expected result (leave empty if not given yet)', expected || '');
+    rl.close();
+  }
+  const resolve = (v) => {
+    if (!v || v === true) return undefined;
+    const hit = items.find((x) => x.key === v) ?? items.filter((x) => x.status === v);
+    if (Array.isArray(hit)) { if (hit.length !== 1) die(`${v}: ${hit.length ? 'occurs several times, give the step ID' : `not in ${f.id}`} (${items.map((x) => x.key).join(', ')})`); return hit[0].key; }
+    return hit.key;
+  };
+  const sc = {
+    id: `S${String(def.scenarios.length + 1).padStart(2, '0')}`,
+    title: String(title || f.title),
+    flow: f.id,
+    ...(resolve(prepare) ? { prepare: { until: resolve(prepare) } } : {}),
+    ...(resolve(execute) ? { execute: { until: resolve(execute) } } : {}),
+    ...(expected ? { expected: String(expected) } : {}),
+  };
+  def.scenarios.push(sc);
+  writeJson(file, def);
+  console.log(green(`✔ ${cr} ${sc.id} added: ${f.id} · data prep → ${sc.prepare?.until ?? '(none)'} · execution → ${sc.execute?.until ?? 'manual'}`));
+  await new Promise((r) => spawn(process.execPath, [path.join(ROOT, 'scripts', 'gen-suites.mjs')], { cwd: ROOT, stdio: 'inherit' }).on('exit', r));
+  console.log(dim(`See tests/cr-suites/${cr}/README.md`));
+}
+
+async function cmdCr(args) {
+  if (args._[1] === 'add') return cmdCrAdd(args);
+  const suites = crSuites();
+  if (!args.cr || args.cr === true) {
+    if (!suites.length) return console.log(dim('No CR suites yet. Copy tests/cr-suites/_TEMPLATE to tests/cr-suites/<CR>/, edit cr.json, npm run suites:gen.'));
+    for (const s of suites) {
+      console.log(`${bold(`CR ${s.cr}`)} ${s.title}  ${dim(`tests/cr-suites/${s.dir}/README.md`)}`);
+      for (const sc of s.scenarios)
+        console.log(`  ${bold(sc.id)} ${sc.title}\n     ${dim(`flow ${sc.flow} · data prep → ${sc.prepare?.until ?? '(none)'} · execution → ${sc.execute ? sc.execute.until ?? 'end' : 'manual'}`)}`);
+    }
+    return console.log(dim('\nRun: npm run qa -- cr --env sit --cr <CR> --scenario S01 --prep   (then --exec)   [--headed] [--input LA=LA26…]'));
+  }
+  const env = envOf(args);
+  const s = suites.find((x) => x.cr === String(args.cr) || x.dir === String(args.cr));
+  if (!s) die(`No CR suite "${args.cr}" (npm run qa -- cr)`);
+  const sc = s.scenarios.find((x) => x.id === String(args.scenario));
+  if (!sc) die(`Give --scenario: ${s.scenarios.map((x) => x.id).join(', ')}`);
+  const kind = args.exec ? 'execution' : args.prep ? 'data-prep' : die('Say --prep (data prep) or --exec (execution)');
+  const file = crSpec(s.dir, kind, sc.id);
+  if (!file) die(`No ${kind} spec for ${sc.id}; run: npm run suites:gen`);
+  const reg = loadRegistry();
+  const f = flowOrDie(reg, sc.flow);
+  const runStamp = new Date(Date.now() + 8 * 3600_000).toISOString().slice(0, 19).replace('T', '_').replace(/:/g, '');
+  const flowRunId = `CR-${s.cr}_${sc.id}_${kind === 'execution' ? 'exec' : 'prep'}_${runStamp}`;
+  const input = parsePairs(args.input, 'input');
+  checkDocs(input);
+  console.log(`\n${bold(`CR ${s.cr} ${sc.id}`)} ${sc.title}\n  ${kind.toUpperCase()} · flow ${f.id} · ${path.relative(ROOT, file)}\n  run ${flowRunId}${Object.keys(input).length ? ` · input ${Object.entries(input).map(([k, v]) => `${k}=${v}`).join(', ')}` : ''}`);
+  if (!args.yes && !(await confirm(`\nStart on ${env}? It changes SIT data. [Y/n] `))) die('Not started.');
+  fs.mkdirSync(runDirOf(env, flowRunId), { recursive: true });
+  await execute(env, f, flowRunId, { ...args, cr: s.cr }, {
+    path: path.relative(ROOT, file).split(path.sep).join('/'), lang: s.language ?? 'en', runId: runStamp,
+    input: Object.entries(input).map(([k, v]) => `${k}=${v}`).join(',') || undefined,
+  });
 }
 
 /* ---------- doctor ---------- */
@@ -668,12 +869,31 @@ ${bold('Run')} ${dim('(--env is always required; SIT only for now)')}
   plan   --env sit --flow <id> [run options]     Dry run: show what would run
   run    --env sit --flow <id> [--from KAT-023] [--to KAT-024] [--input SQ=SQ26…] [--var KAT-021.Fulfilmenttype=2]
          [--officer KAT-024=<id>] [--cr CR-12345] [--lang en] [--headed] [--yes]
+  prepare --env sit --status-id 62509 [--doc-type LA] [--input LA=LA26…] [--headed] [--plan]
+                                                 Bring a document to ANY active status (by-status spec: flow, or flow + simulation)
   prepare --env sit --status LA_VERIFIED [--flow <id>] [--module dp] [--input …] [--headed] [--plan]
                                                  Make a transaction at that status for manual testing, then stop
-                                                 (catalogue: docs/status-catalog.md; specs: tests/status/en/<module>/<flow>/)
+                                                 (catalogue: docs/status-catalog.md; specs: tests/data-prep/en/<module>/<flow>/)
   resume --env sit [--run <id>] [--headed] [--yes]     Continue a run; finished steps are skipped
   stop   --env sit [--run <id>]                  Stop after the current step
   watch  --env sit [--run <id>]                  Live view of a run started elsewhere
+
+${bold('CR suites')} ${dim('(tests/cr-suites/<CR>/: cr.json → data-prep/ + execution/ specs + README.md)')}
+  cr                                             List CR suites and their scenarios
+  cr add --cr <CR>                               Pick and choose a scenario: module → sub-module → flow → start status → end status
+  cr add --cr <CR> --flow <id> --prepare <STATUS|step> --execute <STATUS|step> --title "…" [--expected "…"]
+  cr --env sit --cr <CR> --scenario S01 --prep   Data prep: run to the scenario's start status, then stop
+  cr --env sit --cr <CR> --scenario S01 --exec   Execution: from the prepared data (DB-checked) to the end status
+                                                 [--input LA=LA26…] instead of the latest data-prep run · [--headed]
+
+${bold('SIT database')} ${dim('(read-only, via your DBeaver SIT connection)')}
+  doc-status --env sit --doc LA260000000004216   Status history EN/BM (whole path) + BPM tasks and who they are assigned to
+  db-usage   --env sit                          Every status SIT ever wrote → registry/db-usage.json + docs/status-coverage.md (vs the active list)
+  simulate   --env sit --doc <no> --status <id> [--type OC]   Data patch to put one document at a backend-only status (tester runs it)
+  simulate   --env sit --doc <no> --status <id> --check       Confirm it in the DB and log it in knowledge/data-change-audit.md
+  simulate   --env sit --doc <no> --status <id> --run         Run the patch itself (allowed SQL only, one transaction, audited)
+  db-catalog --env sit [--days 3650]              Every status per document type → registry/db-statuses.json + docs/status-catalog.md
+                                                 (DBeaver queries for each document type: sql/status/<DOC>.sql)
 
 ${bold('Decisions')} ${dim('(only a person records these)')}
   gate      --env sit --run <id> --gate SQ_START_SQL --done
@@ -681,6 +901,7 @@ ${bold('Decisions')} ${dim('(only a person records these)')}
   gate      --env sit --run <id> --officer KAT-024=<login ID>
   reconcile --env sit --run <id> --step KAT-023 --done RN=RN26…   (an interrupted step went through)
   reconcile --env sit --run <id> --step KAT-023 --redo            (it did not; run it again)
+  reconcile --env sit --run <id> --step QT-001 --done QT=QT26…     (a MANUAL step you did in the application)
   retry     --env sit --run <id> --step KAT-023                   (allow one more attempt after a failure)
 
 ${bold('Results')}
@@ -700,7 +921,7 @@ const cmd = args._[0] ?? 'help';
 const COMMANDS = {
   help: () => console.log(HELP), 'list-modules': cmdListModules, 'list-flows': cmdListFlows, 'show-flow': cmdShowFlow, 'list-statuses': cmdListStatuses,
   doctor: cmdDoctor, plan: cmdPlan, run: cmdRun, prepare: cmdPrepare, resume: cmdResume, stop: cmdStop, watch: cmdWatch,
-  gate: cmdGate, reconcile: cmdReconcile, retry: cmdRetry, runs: cmdRuns, status: cmdStatus, report: cmdReport, data: cmdData, clean: cmdClean, menu: cmdMenu,
+  gate: cmdGate, reconcile: cmdReconcile, 'doc-status': cmdDocStatus, 'db-catalog': cmdDbCatalog, 'db-usage': cmdDbUsage, simulate: cmdSimulate, cr: cmdCr, retry: cmdRetry, runs: cmdRuns, status: cmdStatus, report: cmdReport, data: cmdData, clean: cmdClean, menu: cmdMenu,
 };
 if (!COMMANDS[cmd]) die(`Unknown command "${cmd}". npm run qa -- help`);
 await COMMANDS[cmd](args);

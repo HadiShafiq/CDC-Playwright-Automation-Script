@@ -1,0 +1,419 @@
+{
+  "_about": "Where each document's status lives in the SIT database (NGEP_SIT), read-only. Used by support/core/doc-status.ts, the flow runner's DB status check, the generated SQL in sql/status/ and `npm run qa -- doc-status`. verified=true only when a document of ours showed a matching history (evidence). Status names: PM_STATUS_DESC (language_code 'en' / 'ms'). BPM tasks: SIT01_SOAINFRA.WFTASK over the database link SITSOA (CUSTOMATTRIBUTESTRING1 = document number), verified 2026-11-23 with LA260000000004227 (Verify Manual LOA ASSIGNED 710527085562). NGEP_SIT.MV_WFTASK is stale (last refresh 2022, newest row 2019): never use it.",
+  "statusNames": "ngep_sit.pm_status_desc",
+  "bpmTasks": "SIT01_SOAINFRA.wftask@SITSOA",
+  "documents": {
+    "QT": {
+      "name": "Quotation / Tender",
+      "table": "sc_qt",
+      "no": "qt_no",
+      "id": "qt_id",
+      "workflow": "sc_workflow_status",
+      "wfTypes": [
+        "QT",
+        "CMT",
+        "BPK",
+        "OC",
+        "TEC",
+        "FEC",
+        "EC",
+        "LI",
+        "SF",
+        "SE",
+        "PCB",
+        "DAR",
+        "QC",
+        "PTJ",
+        "QDR",
+        "EPV"
+      ],
+      "verified": true,
+      "evidence": "SIT QT260000000004342 (ngep-runner, 2026-11-04): QT, CMT, BPK, OC, TEC, FEC rows share doc_id = qt_id; read 2026-11-23. EC/LI/SF share it by assumption (not yet seen). 2026-11-24: SE 681/681, PCB 28/28, DAR 152/152, QC 345/345, PTJ 222/222 doc ids are QTs that reached the matching stage first; QDR 203/208, EPV 757/768 (≈98%). BSA (127/361) NOT mapped",
+      "wfNames": {
+        "SE": "Specification (committee)",
+        "PCB": "Procurement Board approval",
+        "DAR": "Desk Officer Assistant update",
+        "QC": "QT clone/test (QC)",
+        "PTJ": "PTJ special approval",
+        "QDR": "Desk Officer maintenance",
+        "EPV": "EPV approval"
+      }
+    },
+    "SQ": {
+      "name": "Simple Quote",
+      "table": "sc_quote",
+      "no": "quote_no",
+      "id": "quote_id",
+      "workflow": "sc_workflow_status",
+      "wfTypes": [
+        "SQ"
+      ],
+      "verified": true,
+      "evidence": "SQ260000000002363: 60851 → 60852 → 60853 (2026-11-23)"
+    },
+    "RN": {
+      "name": "Request Note",
+      "table": "sc_request_note",
+      "no": "request_note_no",
+      "id": "request_note_id",
+      "workflow": "sc_workflow_status",
+      "wfTypes": [
+        "RN"
+      ],
+      "verified": true,
+      "evidence": "RN260000000004908: 60701 → 60703 (2026-11-23)"
+    },
+    "PI": {
+      "name": "Item Inquiry (Compare)",
+      "table": "sc_purchase_inquiry",
+      "no": "purchase_inquiry_no",
+      "id": "purchase_inquiry_id",
+      "workflow": "sc_workflow_status",
+      "wfTypes": [
+        "PI"
+      ],
+      "verified": false,
+      "evidence": "same pattern as SQ/RN; no document of ours read yet"
+    },
+    "LA": {
+      "name": "Letter of Acceptance",
+      "table": "sc_loa",
+      "no": "loa_no",
+      "id": "loa_id",
+      "workflow": "sc_workflow_status",
+      "wfTypes": [
+        "LA"
+      ],
+      "verified": true,
+      "evidence": "LA260000000004216: 62504 → 62505 → 62506 (2026-11-23)"
+    },
+    "CT": {
+      "name": "Contract",
+      "table": "ct_contract",
+      "no": "contract_no",
+      "id": "contract_id",
+      "workflow": "ct_workflow_status",
+      "wfTypes": [
+        "FD",
+        "AC",
+        "SA",
+        "FU",
+        "FA",
+        "NT",
+        "FW",
+        "FS",
+        "FT",
+        "RA",
+        "XA",
+        "COM",
+        "CB",
+        "UF",
+        "RF",
+        "XF"
+      ],
+      "subIds": {
+        "FD": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}'",
+        "AC": "select a.agreement_id from ngep_sit.ct_agreement a join ngep_sit.ct_contract c on c.contract_id = a.contract_id where c.contract_no = '{NO}'",
+        "SA": "select a.agreement_id from ngep_sit.ct_agreement a join ngep_sit.ct_contract c on c.contract_id = a.contract_id where c.contract_no = '{NO}'",
+        "FU": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'FU'",
+        "FA": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'FA'",
+        "NT": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'NT'",
+        "FW": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'FW'",
+        "FS": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'FS'",
+        "FT": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'FT'",
+        "RA": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'RA'",
+        "XA": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'XA'",
+        "COM": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'COM'",
+        "CB": "select v.contract_ver_id from ngep_sit.ct_contract_ver v join ngep_sit.ct_contract c on c.contract_id = v.contract_id where c.contract_no = '{NO}' and v.doc_type = 'CB'",
+        "UF": "select f.factoring_id from ngep_sit.ct_factoring f join ngep_sit.ct_contract c on c.contract_id = f.contract_id where c.contract_no = '{NO}'",
+        "RF": "select f.factoring_id from ngep_sit.ct_factoring f join ngep_sit.ct_contract c on c.contract_id = f.contract_id where c.contract_no = '{NO}'",
+        "XF": "select f.factoring_id from ngep_sit.ct_factoring f join ngep_sit.ct_contract c on c.contract_id = f.contract_id where c.contract_no = '{NO}'"
+      },
+      "verified": true,
+      "evidence": "FD/AC: CT260000000002293 histories (2026-11-23). Others mapped 2026-11-23 by SIT joins: FU, FA, NT, FW, FS, FT, RA, XA, COM, CB are CT_CONTRACT_VER rows with the same DOC_TYPE (≈99-100% of workflow rows match); SA = CT_AGREEMENT (1463/1473); UF/RF/XF = CT_FACTORING (≈97-99%). Names from each type's statuses. No document of ours read yet for these.",
+      "wfNames": {
+        "FD": "Fulfilment Details",
+        "AC": "Agreement",
+        "SA": "Supplemental Agreement",
+        "FU": "Contract update (FU)",
+        "FA": "Amendment with Supplemental (FA)",
+        "NT": "Amendment with Supplemental (NT)",
+        "FW": "FW (contract version, first status seen: Cancelled due to Disciplinary Action)",
+        "FS": "Suspension",
+        "FT": "Termination",
+        "RA": "Designation of Contract Administrator",
+        "XA": "Remove Designation of Contract Administrator",
+        "COM": "Contract Owner",
+        "CB": "Bank Information Update",
+        "UF": "Factoring (UF)",
+        "RF": "Factoring (RF)",
+        "XF": "Remove Factoring"
+      }
+    },
+    "CR": {
+      "name": "Contract Request",
+      "table": "fl_fulfilment_request",
+      "no": "doc_no",
+      "id": "fulfilment_req_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "CR"
+      ],
+      "verified": true,
+      "evidence": "CR260000000006053: 40510 → 40600 → 40610 → 40800 (2026-11-23)"
+    },
+    "PR": {
+      "name": "Purchase Request",
+      "table": "fl_fulfilment_request",
+      "no": "doc_no",
+      "id": "fulfilment_req_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "PR"
+      ],
+      "verified": false,
+      "evidence": "same table as CR"
+    },
+    "CO": {
+      "name": "Contract Order",
+      "table": "fl_fulfilment_order",
+      "no": "doc_no",
+      "id": "fulfilment_order_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "CO"
+      ],
+      "verified": true,
+      "evidence": "CO260000000006651: 41500 (2026-11-23)"
+    },
+    "PO": {
+      "name": "Purchase Order",
+      "table": "fl_fulfilment_order",
+      "no": "doc_no",
+      "id": "fulfilment_order_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "PO"
+      ],
+      "verified": false,
+      "evidence": "same table as CO"
+    },
+    "DO": {
+      "name": "Delivery Order",
+      "table": "fl_delivery_order",
+      "no": "delivery_order_no",
+      "id": "delivery_order_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "DO"
+      ],
+      "verified": false,
+      "evidence": "pattern of the FL tables"
+    },
+    "FN": {
+      "name": "Fulfilment Received Note",
+      "table": "fl_fulfilment_note",
+      "no": "fulfilment_note_no",
+      "id": "fulfilment_note_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "FN"
+      ],
+      "verified": false,
+      "evidence": "pattern of the FL tables"
+    },
+    "IN": {
+      "name": "Invoice",
+      "table": "fl_invoice",
+      "no": "invoice_no",
+      "id": "invoice_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "IN"
+      ],
+      "verified": false,
+      "evidence": "pattern of the FL tables"
+    },
+    "PA": {
+      "name": "Payment",
+      "table": "fl_payment_advice",
+      "no": "payment_advice_no",
+      "id": "payment_advice_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "PA"
+      ],
+      "verified": false,
+      "evidence": "pattern of the FL tables"
+    },
+    "SD": {
+      "name": "Stop Delivery",
+      "table": "fl_stop_instr",
+      "no": "stop_instr_no",
+      "id": "stop_instr_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "SD"
+      ],
+      "verified": false,
+      "evidence": "pattern of the FL tables"
+    },
+    "DN": {
+      "name": "Debit Note",
+      "table": "fl_adjustment",
+      "no": "doc_no",
+      "id": "adjustment_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "DN"
+      ],
+      "verified": false,
+      "evidence": "pattern of the FL tables"
+    },
+    "CN": {
+      "name": "Credit Note",
+      "table": "fl_adjustment",
+      "no": "doc_no",
+      "id": "adjustment_id",
+      "workflow": "fl_workflow_status",
+      "wfTypes": [
+        "CN"
+      ],
+      "verified": false,
+      "evidence": "SIT 2026-11-23: every CN workflow row matches FL_ADJUSTMENT (162281/162281); numbers look like C0251152801170008 or CN26…. No document of ours read yet"
+    },
+    "AP": {
+      "name": "Supplier application (SM: registration, add category, update, renewal, cancel …)",
+      "table": "sm_appl",
+      "no": "appl_no",
+      "id": "appl_id",
+      "workflow": "sm_workflow_status",
+      "wfTypes": [
+        "SR"
+      ],
+      "verified": true,
+      "evidence": "SIT 2026-11-23: SM_WORKFLOW_STATUS has only doc_type SR, doc_id = SM_APPL.APPL_ID; KN-06112026-0050 → 20100, 20101, 20104, 20105, 20108. Prefixes: KN/JN new, KA/JA add category, KU/JU update, KB bumiputera, KR/JR renewal, KC/JC cancel (K = contractor, J = consultant)"
+    },
+    "AA": {
+      "name": "Access application (PM: Company Profile / Market Research access)",
+      "table": "pm_access_appl",
+      "no": "appl_no",
+      "id": "access_appl_id",
+      "workflow": "pm_workflow_status",
+      "wfTypes": [
+        "CP",
+        "MR"
+      ],
+      "subIds": {
+        "CP": "select access_appl_id from ngep_sit.pm_access_appl where appl_no = '{NO}'",
+        "MR": "select access_appl_id from ngep_sit.pm_access_appl where appl_no = '{NO}'"
+      },
+      "wfNames": {
+        "CP": "Company Profile access",
+        "MR": "Market Research access"
+      },
+      "verified": true,
+      "evidence": "SIT 2026-11-23: PM_WORKFLOW_STATUS CP/MR doc_id = PM_ACCESS_APPL.ACCESS_APPL_ID (230/233, 270/273); AP180116000000162 → CP 75005, MR 75000. Flow: claude-skills memory reference-pm-access-application-flow"
+    },
+    "PD": {
+      "name": "PID (price indication document)",
+      "table": "sc_pid",
+      "no": "pid_no",
+      "id": "pid_id",
+      "workflow": "sc_workflow_status",
+      "wfTypes": [
+        "PD"
+      ],
+      "verified": true,
+      "evidence": "SIT 2026-11-24: 1221/1226 PD workflow doc ids are SC_PID.PID_ID (0 are QTs at document stages); numbers PD190000000000024"
+    },
+    "PL": {
+      "name": "Procurement plan",
+      "table": "pp_plan",
+      "no": "plan_no",
+      "id": "plan_id",
+      "workflow": "pp_workflow_status",
+      "wfTypes": [
+        "PP",
+        "PE"
+      ],
+      "subIds": {
+        "PP": "select plan_id from ngep_sit.pp_plan where plan_no = '{NO}'",
+        "PE": "select plan_id from ngep_sit.pp_plan where plan_no = '{NO}'"
+      },
+      "wfNames": {
+        "PP": "Procurement plan (PP…)",
+        "PE": "Procurement plan (PE…)"
+      },
+      "verified": true,
+      "evidence": "SIT 2026-11-24: PP 385/395, PE 243/250 doc ids are PP_PLAN.PLAN_ID; plan numbers PP260000000000245 / PE260000000000009"
+    },
+    "TC": {
+      "name": "Treasury circular (PP) central / central panel contract",
+      "table": "ct_circular",
+      "no": "circular_no",
+      "id": "circular_id",
+      "workflow": "ct_workflow_status",
+      "wfTypes": [
+        "CQ",
+        "PQ"
+      ],
+      "subIds": {
+        "CQ": "select distinct w.doc_id from ngep_sit.ct_workflow_status w where w.doc_type = 'CQ' and w.is_current = 1 and w.doc_id in (select v.circular_ver_id from ngep_sit.ct_circular_ver v join ngep_sit.ct_circular c on c.circular_id = v.circular_id where c.circular_no = '{NO}')",
+        "PQ": "select distinct w.doc_id from ngep_sit.ct_workflow_status w where w.doc_type = 'PQ' and w.is_current = 1 and w.doc_id in (select v.circular_ver_id from ngep_sit.ct_circular_ver v join ngep_sit.ct_circular c on c.circular_id = v.circular_id where c.circular_no = '{NO}')"
+      },
+      "wfNames": {
+        "CQ": "Central contract circular",
+        "PQ": "Central panel contract circular"
+      },
+      "verified": true,
+      "evidence": "SIT 2026-11-24: CQ 1010/1011, PQ 1226/1227 doc ids are CT_CIRCULAR_VER.CIRCULAR_VER_ID (the version whose row is current is used); numbers CQ260000000000669"
+    },
+    "CX": {
+      "name": "Treasury circular cancellation request",
+      "table": "ct_cancel_circular_req",
+      "no": "cancel_circular_req_no",
+      "id": "cancel_circular_req_id",
+      "workflow": "ct_workflow_status",
+      "wfTypes": [
+        "RC"
+      ],
+      "verified": true,
+      "evidence": "SIT 2026-11-24: RC 270/270 doc ids are CT_CANCEL_CIRCULAR_REQ ids; numbers CX200000000000007"
+    },
+    "RC": {
+      "name": "Code request (item code / extension code)",
+      "table": "cm_request_code",
+      "no": "doc_no",
+      "id": "request_id",
+      "workflow": "cm_workflow_status",
+      "wfTypes": [
+        "CU",
+        "CE"
+      ],
+      "subIds": {
+        "CU": "select request_id from ngep_sit.cm_request_code where doc_no = '{NO}'",
+        "CE": "select request_id from ngep_sit.cm_request_code where doc_no = '{NO}'"
+      },
+      "wfNames": {
+        "CU": "Item code request (RNC…)",
+        "CE": "Extension code request (RNE…)"
+      },
+      "verified": true,
+      "evidence": "SIT 2026-11-24: CU 19897/19956, CE 9862/9883 doc ids are CM_REQUEST_CODE.REQUEST_ID; numbers RNC120118-1159 (CU) / RNE… (CE)"
+    }
+  },
+  "catalogOnly": {
+    "_about": "Workflow types listed in the status catalogue only (no document lookup mapped yet).",
+    "sc_workflow_status": [
+      "BSA"
+    ],
+    "ct_workflow_status": [],
+    "fl_workflow_status": [
+      "FC"
+    ],
+    "cm_workflow_status": [],
+    "pm_workflow_status": [],
+    "pp_workflow_status": []
+  }
+}

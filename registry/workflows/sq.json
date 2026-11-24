@@ -23,7 +23,14 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "KAT-021 waits for an info message containing 'Simple Quote' and 'is successfully submitted' and reads SQ\\d+ from it; passed on SIT 2026-11-11_180957; flow run dloa-from-dp-rn_20261123-155431 2026-11-23 15:57:43 \"Simple Quote SQ260000000002363 is successfully submitted.\" (ERR-760430 \"Maximum period allowed is not more than 3 days\" shown twice on the way and handled by the script)"
+        "evidence": "KAT-021 waits for an info message containing 'Simple Quote' and 'is successfully submitted' and reads SQ\\d+ from it; passed on SIT 2026-11-11_180957; flow run dloa-from-dp-rn_20261123-155431 2026-11-23 15:57:43 \"Simple Quote SQ260000000002363 is successfully submitted.\" (ERR-760430 \"Maximum period allowed is not more than 3 days\" shown twice on the way and handled by the script)",
+        "db": {
+          "kind": "SQ",
+          "statusId": 60851,
+          "en": "Pending Supplier Response",
+          "bm": "Menunggu Maklumbalas Pembekal",
+          "evidence": "SIT DB 2026-11-23: SQ260000000002363 after KAT-021 (run dloa-from-dp-rn_20261123-155431)"
+        }
       }
     },
     "KAT-036": {
@@ -97,7 +104,15 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT run dloa-from-dp-rn_20261123-155431 (2026-11-23 16:05:25): info message \"Simple Quote SQ260000000002363 is successfully submitted.\" after the supplier reply"
+        "evidence": "SIT run dloa-from-dp-rn_20261123-155431 (2026-11-23 16:05:25): info message \"Simple Quote SQ260000000002363 is successfully submitted.\" after the supplier reply | 2026-11-24: the reply does not change the SQ status; proof = SC_QUOTE_SUPPLIER.IS_SUBMITTED = 1 (SQ260000000002364: 1)",
+        "db": {
+          "kind": "SQ",
+          "statusId": 60851,
+          "en": "Pending Supplier Response",
+          "bm": "Menunggu Maklumbalas Pembekal",
+          "evidence": "SIT DB 2026-11-23: SQ260000000002363 stays 60851 after the supplier reply; it moves to 60852 only when END_DATE passes (SQ_END_SQL)"
+        },
+        "proofSql": "select count(*) from ngep_sit.sc_quote q join ngep_sit.sc_quote_supplier s on s.quote_id = q.quote_id where q.quote_no = '{SQ}' and s.is_submitted = 1"
       }
     }
   },
@@ -116,7 +131,8 @@
         {
           "gate": "SQ_END_SQL"
         }
-      ]
+      ],
+      "submodule": "simple-quote"
     },
     {
       "id": "sq-product",
@@ -132,7 +148,8 @@
         {
           "gate": "SQ_END_SQL"
         }
-      ]
+      ],
+      "submodule": "simple-quote"
     },
     {
       "id": "sq-product-services",
@@ -148,7 +165,8 @@
         {
           "gate": "SQ_END_SQL"
         }
-      ]
+      ],
+      "submodule": "simple-quote"
     }
   ]
 }

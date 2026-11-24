@@ -1,0 +1,333 @@
+{
+  "module": "pm",
+  "name": "Profile Management (PM)",
+  "description": "PM Access Application (Permohonan Akses): a non-federal agency user applies for Company Profile (CP) and/or Market Research (MR) access; one application (AA, e.g. AP200204000000835) runs two status tracks in PM_WORKFLOW_STATUS. 75030 Cancelled by System is set by the scheduler (PmAccessApplJob, rule PMACT days): simulate it (npm run qa -- simulate). PM user/role/group administration (claude-skills pm-admin) is test SETUP, not a status flow: it changes shared master data, so it is not automated here.",
+  "steps": {
+    "PM-001": {
+      "title": "Agency user submits an Access Application for Company Profile access",
+      "role": "Applicant (non-federal agency user)",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "portlet pmAccessApplication / AccessApplSO (claude-skills note) → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Portlet pmAccessApplication: tick Company Profile, attach documents, submit. One pending application per IC (ERROR_776045).",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AA",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "CP_SUBMITTED",
+        "description": "Company Profile access pending approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:CP",
+          "statusId": 75005,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-002": {
+      "title": "Agency user submits an Access Application for Market Research access",
+      "role": "Applicant (non-federal agency user)",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "portlet pmAccessApplication → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Portlet pmAccessApplication: tick Market Research, submit.",
+      "inputs": [],
+      "outputs": [
+        {
+          "doc": "AA",
+          "message": null
+        }
+      ],
+      "checkpoint": {
+        "id": "MR_SUBMITTED",
+        "description": "Market Research access pending approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:MR",
+          "statusId": 75000,
+          "en": "Pending Approval",
+          "bm": "Menunggu Kelulusan",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-011": {
+      "title": "UPS Approver approves the Company Profile access (new IC)",
+      "role": "UPS Approver",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "accessApplicationDtl → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Approver: My Task, approve. An IC that already has a PM user goes straight to 75010 Completed.",
+      "inputs": [
+        {
+          "var": "applNo",
+          "doc": "AA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "CP_APPROVED_PENDING_ACTIVATION",
+        "description": "Approved; the applicant must activate (IC has no PM user yet)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:CP",
+          "statusId": 75020,
+          "en": "Pending Activation",
+          "bm": "Menunggu Pengaktifan",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-012": {
+      "title": "Market Research Approver approves the Market Research access (new IC)",
+      "role": "EP_ADMIN_2 / MARKET_RESEARCH_APVR",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "accessApplicationDtl → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Approver: My Task, approve.",
+      "inputs": [
+        {
+          "var": "applNo",
+          "doc": "AA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "MR_APPROVED_PENDING_ACTIVATION",
+        "description": "Approved; pending activation",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:MR",
+          "statusId": 75020,
+          "en": "Pending Activation",
+          "bm": "Menunggu Pengaktifan",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-021": {
+      "title": "Applicant activates the Company Profile access (email link)",
+      "role": "Applicant",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "accessApplicationActivation → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Open the activation link from the e-mail (accessApplicationActivation).",
+      "inputs": [
+        {
+          "var": "applNo",
+          "doc": "AA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "CP_COMPLETED",
+        "description": "Activated: PM user + role COMPANY_PROFILE",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:CP",
+          "statusId": 75010,
+          "en": "Completed",
+          "bm": "Selesai",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-022": {
+      "title": "Applicant activates the Market Research access (email link)",
+      "role": "Applicant",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "accessApplicationActivation → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Open the activation link from the e-mail.",
+      "inputs": [
+        {
+          "var": "applNo",
+          "doc": "AA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "MR_COMPLETED",
+        "description": "Activated: role MARKET_RESEARCH",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:MR",
+          "statusId": 75010,
+          "en": "Completed",
+          "bm": "Selesai",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-031": {
+      "title": "UPS Approver rejects the Company Profile access",
+      "role": "UPS Approver",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "accessApplicationDtl → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Approver: My Task, reject with remarks.",
+      "inputs": [
+        {
+          "var": "applNo",
+          "doc": "AA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "CP_REJECTED",
+        "description": "Rejected (remark CP_REMARK required)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:CP",
+          "statusId": 75015,
+          "en": "Rejected",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    },
+    "PM-032": {
+      "title": "Market Research Approver rejects the Market Research access",
+      "role": "EP_ADMIN_2 / MARKET_RESEARCH_APVR",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "accessApplicationDtl → support/modules/pm/access.ts (built from the SIT screens 2026-11-24)",
+      "instructions": "Approver: My Task, reject with remarks.",
+      "inputs": [
+        {
+          "var": "applNo",
+          "doc": "AA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "MR_REJECTED",
+        "description": "Rejected (remark MR_REMARK required)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "db": {
+          "kind": "AA:MR",
+          "statusId": 75015,
+          "en": "Rejected",
+          "observeOnly": true,
+          "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+          "waitSec": 120
+        }
+      }
+    }
+  },
+  "flows": [
+    {
+      "id": "pm-access-cp",
+      "submodule": "access-application",
+      "title": "Company Profile access: submit, approve, activate",
+      "verification": "documentation",
+      "notes": "New IC path (75005 → 75020 → 75010). Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "steps": [
+        "PM-001",
+        "PM-011",
+        "PM-021"
+      ]
+    },
+    {
+      "id": "pm-access-mr",
+      "submodule": "access-application",
+      "title": "Market Research access: submit, approve, activate",
+      "verification": "documentation",
+      "notes": "New IC path (75000 → 75020 → 75010). Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "steps": [
+        "PM-002",
+        "PM-012",
+        "PM-022"
+      ]
+    },
+    {
+      "id": "pm-access-cp-reject",
+      "submodule": "reject",
+      "title": "Company Profile access rejected",
+      "verification": "documentation",
+      "notes": "75005 → 75015. Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "steps": [
+        "PM-001",
+        "PM-031"
+      ]
+    },
+    {
+      "id": "pm-access-mr-reject",
+      "submodule": "reject",
+      "title": "Market Research access rejected",
+      "verification": "documentation",
+      "notes": "75000 → 75015. Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "steps": [
+        "PM-002",
+        "PM-032"
+      ]
+    }
+  ]
+}

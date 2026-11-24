@@ -11,6 +11,11 @@ import { run } from '../../../../support/katalon/steps/KAT-040';
  *          also suite "Fulfilment Details - FD/Submit_FD" → Data Files/Fulfillment - FD/Submit_FD
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
+ * Katalon step repaired: FD schedule rows: delete empty rows left by earlier attempts and click Add only when row i does not exist yet (2026-11-24: 4 rows, 2 empty → ERR-100022 "Frequency Schedule Start Period is mandatory").
+ * Katalon step repaired: FD schedule start year: pick the first year the list offers instead of the fixed index Startyear (0), which can be the "- Select One -" placeholder (2026-11-23 ERR-100022 "Frequency Schedule Start Period is mandatory" with months filled).
+ * Katalon step repaired: FD schedule end year: first year the list offers instead of the fixed index Endyear.
+ * Katalon step repaired: FD schedule start month: pick the first (schedule 1) / last (schedule 2) month the list offers instead of the fixed index Startmonth (5), which does not exist for contracts shorter than 5 months (2026-11-23 CT260000000002292, CT260000000002301; live-dates rule).
+ * Katalon step repaired: FD schedule end month: same month as the start of that schedule (first / last offered) instead of the fixed index Endmonth (5).
  * Katalon step repaired: ENHANCEMENT: before searching My Task, claim the document from Group Task if it is a group task (e.g. Submit FD is assigned to 7 officers); same steps as WebHelper.claimDocument.
  * Katalon step repaired: "submitBtn" was used for the final Submit but its definition was commented out; un-commented (the object exists in the Object Repository).
  * Katalon step repaired: ENHANCEMENT: Task List search is clicked again when no result appears within 10 s (the first click sometimes renders no My Task table).

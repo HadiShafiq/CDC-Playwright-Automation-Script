@@ -36,7 +36,7 @@ For automatic login, fill in the yellow Username and Password cells of `.auth/cr
 - `knowledge/`: application map, repair log, defect register, data-change audit
 
 ## Katalon test cases (tests/katalon)
-All 64 Katalon test cases are converted into `tests/katalon/<Katalon test case path>.spec.ts`, tagged `@KAT-0xx` (as in the coverage matrix) and `@katalon`. The 65th, Update MOF Profile, is the hand-written `tests/mof/update-mof-profile.spec.ts`. Each spec is its Katalon script translated line by line: same steps, same Object Repository XPaths, same delays and data columns. They run on `support/katalon/runtime.ts`, a layer that does what Katalon's `WebUI`, `findTestObject` and `TestObject` do, but with Playwright. **None of them has been run yet.** Nearly all of them change data on SIT/UAT.
+All 64 Katalon test cases are converted into `tests/katalon/<Katalon test case path>.spec.ts`, tagged `@KAT-0xx` (as in the coverage matrix) and `@katalon`. The 65th, Update MOF Profile, is the hand-written `tests/sm/update-profile/update-mof-profile.spec.ts`. Each spec is its Katalon script translated line by line: same steps, same Object Repository XPaths, same delays and data columns. They run on `support/katalon/runtime.ts`, a layer that does what Katalon's `WebUI`, `findTestObject` and `TestObject` do, but with Playwright. **None of them has been run yet.** Nearly all of them change data on SIT/UAT.
 
 | Command | What it does |
 |---|---|

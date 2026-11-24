@@ -20,7 +20,7 @@ const katalonRoot = process.env.KATALON_DIR ?? path.resolve(root, '..', 'CDC-Kat
 const outDir = path.join(root, 'tests', 'katalon');
 // Step functions: the converted scripts, run by the Katalon specs and by the Phase 1 flows (tests/flows).
 const stepsDir = path.join(root, 'support', 'katalon', 'steps');
-const SKIP = new Set(['Update MOF Profile']); // already converted by hand: tests/mof/update-mof-profile.spec.ts
+const SKIP = new Set(['Update MOF Profile']); // already converted by hand: tests/sm/update-profile/update-mof-profile.spec.ts
 
 const read = (f) => fs.readFileSync(f, 'utf8');
 const walk = (d, ext) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) =>
@@ -124,9 +124,9 @@ for (const f of walk(path.join(katalonRoot, 'Test Suites'), '.ts')) {
 const RUNTIME_EXPORTS = ['WebUI', 'findTestObject', 'TestObject', 'ConditionType', 'FailureHandling', 'Keys', 'WebUiCommonHelper',
   'WebElement', 'By', 'DriverFactory', 'KeywordUtil', 'println', 'gAssert', 'groovyMatcher', 'groovyFullMatch', 'Arrays', 'System',
   'Thread', 'SimpleDateFormat', 'LocalDate', 'DateTimeFormatter', 'File', 'Paths', 'Files', 'FileInputStream', 'FileOutputStream',
-  'XSSFWorkbook', 'katalonMissing', 'binding', 'claimGroupTaskIfAny'];
+  'XSSFWorkbook', 'katalonMissing', 'binding', 'claimGroupTaskIfAny', 'selectScheduleMonth', 'scheduleRowCount', 'deleteEmptyScheduleRows'];
 /** Runtime functions that REPAIRS call from Groovy; they are async, so calls get `await`. */
-const RUNTIME_ASYNC = ['claimGroupTaskIfAny'];
+const RUNTIME_ASYNC = ['claimGroupTaskIfAny', 'selectScheduleMonth', 'scheduleRowCount', 'deleteEmptyScheduleRows'];
 const WEB_HELPER_SRC = path.join(katalonRoot, 'Keywords', 'common', 'WebHelper.groovy');
 const WEB_HELPER_NAMES = [...read(WEB_HELPER_SRC).matchAll(/^\s*static\s+\S+\s+(\w+)\s*\(/gm)].map((m) => m[1]);
 /**
@@ -135,6 +135,34 @@ const WEB_HELPER_NAMES = [...read(WEB_HELPER_SRC).matchAll(/^\s*static\s+\S+\s+(
  */
 const SELECT_SUPPLIER = "c(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 20)";
 const REPAIRS = [
+  {
+    // FD Payment Schedule rows: an FD draft keeps rows from earlier attempts; add a row only when it is missing and remove empty ones
+    find: /c\(findTestObject\(\s*'Object Repository\/FD and Agreement\/FD Application\/Schedule\/Schedule Add Button'\s*\)\)/,
+    replace: "if (i == 0) deleteEmptyScheduleRows()\n\t\tif (scheduleRowCount() <= i) c(findTestObject('Object Repository/FD and Agreement/FD Application/Schedule/Schedule Add Button'))",
+    note: 'FD schedule rows: delete empty rows left by earlier attempts and click Add only when row i does not exist yet (2026-11-24: 4 rows, 2 empty → ERR-100022 "Frequency Schedule Start Period is mandatory")',
+  },
+  {
+    // FD Payment Schedule year: same live-date pick as the month (the fixed index Startyear 0 may be the placeholder)
+    find: 'selectDropdownByIndex(fromYear, Startyear)',
+    replace: "selectScheduleMonth(fromYear, 'first')",
+    note: 'FD schedule start year: pick the first year the list offers instead of the fixed index Startyear (0), which can be the "- Select One -" placeholder (2026-11-23 ERR-100022 "Frequency Schedule Start Period is mandatory" with months filled)',
+  },
+  {
+    find: 'selectDropdownByIndex(toYear, Endyear)',
+    replace: "selectScheduleMonth(toYear, 'first')",
+    note: 'FD schedule end year: first year the list offers instead of the fixed index Endyear',
+  },
+  {
+    // FD Payment Schedule: the month lists only offer the contract period's months; a fixed index fails on short contracts.
+    find: 'selectDropdownByIndex(fromMonth, Startmonth)',
+    replace: "selectScheduleMonth(fromMonth, i == 0 ? 'first' : 'last')",
+    note: 'FD schedule start month: pick the first (schedule 1) / last (schedule 2) month the list offers instead of the fixed index Startmonth (5), which does not exist for contracts shorter than 5 months (2026-11-23 CT260000000002292, CT260000000002301; live-dates rule)',
+  },
+  {
+    find: 'selectDropdownByIndex(toMonth, Endmonth)',
+    replace: "selectScheduleMonth(toMonth, i == 0 ? 'first' : 'last')",
+    note: 'FD schedule end month: same month as the start of that schedule (first / last offered) instead of the fixed index Endmonth (5)',
+  },
   {
     find: SELECT_SUPPLIER,
     replace: `if (!WebUI.waitForElementNotVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 10, FailureHandling.OPTIONAL) && WebUI.verifyElementVisible(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), FailureHandling.OPTIONAL)) WebUI.click(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), FailureHandling.OPTIONAL)`,

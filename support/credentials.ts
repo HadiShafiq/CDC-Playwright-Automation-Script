@@ -64,3 +64,25 @@ export async function loadCredentials(env: EnvName): Promise<Credentials | undef
   }
   return undefined;
 }
+
+/**
+ * Password of one login: its own row in .auth/credentials.xlsx (e.g. the QT suppliers firstallied1234 / mahmood84),
+ * else the shared officer password ("*" row). Never logged.
+ */
+export async function loadPasswordFor(env: EnvName, username: string): Promise<string | undefined> {
+  if (fs.existsSync(CREDENTIALS_XLSX)) {
+    const wb = new ExcelJS.Workbook();
+    await wb.xlsx.readFile(CREDENTIALS_XLSX);
+    const ws = wb.getWorksheet('Credentials');
+    if (ws) {
+      const header = (ws.getRow(1).values as ExcelJS.CellValue[]).map(text);
+      const [envCol, userCol, passCol] = ['Environment', 'Username', 'Password'].map((n) => header.indexOf(n));
+      for (let r = 2; r <= ws.rowCount; r++) {
+        const row = ws.getRow(r);
+        if (text(row.getCell(envCol).value).toUpperCase() === env && text(row.getCell(userCol).value).toLowerCase() === username.toLowerCase())
+          return text(row.getCell(passCol).value) || undefined;
+      }
+    }
+  }
+  return loadSharedOfficerPassword(env);
+}

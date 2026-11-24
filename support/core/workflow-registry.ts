@@ -3,7 +3,7 @@ import path from 'node:path';
 import { ROOT } from './context';
 import { isDocType, type DocType } from './documents';
 
-export const MODULES = ['sq', 'dp', 'direct-loa', 'ct', 'fl'] as const;
+export const MODULES = ['pm', 'sm', 'qt', 'sq', 'dp', 'direct-loa', 'ct', 'fl'] as const;
 export type ModuleId = (typeof MODULES)[number];
 export type Verification = 'execution' | 'source' | 'documentation' | 'unverified';
 
@@ -18,13 +18,46 @@ export interface StepDef {
   login: StepLogin;
   inputs: { var: string; doc: DocType }[];
   outputs: { doc: DocType; message: string | null }[];
+  /**
+   * How the step runs: 'katalon' (default) = support/katalon/steps/<id>.ts; 'manual' = not automated yet: the run stops
+   * there, the tester does it in the application and records it (qa reconcile … --done); the DB status check then
+   * confirms the checkpoint. 'source' says where the logic can be ported from.
+   */
+  automation?: 'katalon' | 'manual' | 'module';
+  source?: string;
+  instructions?: string;
+  /** Run only when the SIT DB shows this status (e.g. BPK approval only when the QT is at 60030); else skipped as not needed. */
+  onlyIfStatus?: { kind: string; statusId: number };
+  /** BPM task (SIT WFTASK activity name) the step works on; used to find the assigned officer and to wait for it. */
+  bpmTask?: string;
   checkpoint: {
     id: string;
     description: string;
     displayedStatus: { en: string | null; bm: string | null };
     verification: Verification;
     evidence: string;
+    /** Expected status in the SIT database after the step (registry/db-schema.json kinds); null statusId = the step does not change it. */
+    db?: DbCheck;
+    /**
+     * Exact proof that the step happened when the status alone cannot show it (e.g. a supplier reply leaves the SQ at
+     * 60851): one SELECT returning a number, > 0 = done. {SQ}, {LA}, … are filled from the run's documents.
+     */
+    proofSql?: string;
   };
+}
+
+export interface DbCheck {
+  kind: string; // 'LA', 'CT:FD', 'QT', 'QT:OC', …
+  statusId: number | null;
+  en?: string;
+  bm?: string;
+  /** In-between statuses that are normal while SIT finishes the move (e.g. iGFMAS 40600/40610 before 40800): keep waiting. */
+  via?: number[];
+  /** How long to wait for the status (default 120 s; with via, 600 s). */
+  waitSec?: number;
+  /** Expectation not yet seen on SIT (e.g. from DEV): a different status is reported, not failed. */
+  observeOnly?: boolean;
+  evidence: string;
 }
 
 export interface GateDef {
@@ -35,6 +68,12 @@ export interface GateDef {
   provides?: DocType[];
   instructions: string;
   source: string;
+  /** Expected SIT database status once the person has done the gate (checked when the run passes it). */
+  db?: DbCheck;
+  /** Allow-listed SQL the runner may run itself when QA_AUTO_SQL=1 (user permission); {SQ}, {NEXT_QUARTER} are filled. */
+  sql?: string;
+  /** After the SQL, wait until the date/time it sets has passed (+90 s). */
+  waitUntilTime?: boolean;
 }
 
 export type FlowItem = { kind: 'step'; step: StepDef } | { kind: 'gate'; gate: GateDef };
@@ -42,6 +81,8 @@ export type FlowItem = { kind: 'step'; step: StepDef } | { kind: 'gate'; gate: G
 export interface FlowDef {
   id: string;
   module: ModuleId;
+  /** Sub-module (folder under the module in tests/data-prep), e.g. direct-loa/one-off, fl/maintenance. */
+  submodule: string;
   title: string;
   verification: Verification;
   notes: string;
@@ -54,7 +95,7 @@ interface ModuleFile {
   name: string;
   description: string;
   steps: Record<string, Omit<StepDef, 'id' | 'module'>>;
-  flows: { id: string; title: string; verification: Verification; notes: string; steps: (string | { gate: string })[]; variables?: Record<string, Record<string, unknown>> }[];
+  flows: { id: string; submodule?: string; title: string; verification: Verification; notes: string; steps: (string | { gate: string })[]; variables?: Record<string, Record<string, unknown>> }[];
 }
 
 export interface Registry {
@@ -100,7 +141,7 @@ export function loadRegistry(): Registry {
         }
       }
       // Every step input must come from an earlier output, a gate, or --input.
-      flows.set(fl.id, { id: fl.id, module: f.module, title: fl.title, verification: fl.verification, notes: fl.notes, items, variables: fl.variables ?? {} });
+      flows.set(fl.id, { id: fl.id, module: f.module, submodule: fl.submodule ?? 'main', title: fl.title, verification: fl.verification, notes: fl.notes, items, variables: fl.variables ?? {} });
     }
   }
   if (problems.length) throw new Error(`registry/ is invalid:\n- ${problems.join('\n- ')}`);
