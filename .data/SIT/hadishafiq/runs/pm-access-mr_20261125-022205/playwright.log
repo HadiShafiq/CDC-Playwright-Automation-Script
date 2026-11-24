@@ -1,0 +1,142 @@
+
+Running 3 tests using 1 worker
+
+[02:22:08] pm-access-mr/01_PM-002: PM-002 Agency user submits an Access Application for Market Research access — role Applicant (non-federal agency user), login: Katalon default account of the step
+[02:22:08] pm-access-mr/01_PM-002: PM-002: applicant QA AUTO PEMOHON 4686, IC 900172661953, e-mail newsupplier001@commercedc.com.my, Market Research
+[02:22:13] pm-access-mr/01_PM-002: PM-002: district BATU PAHAT, city AYER HITAM
+[02:22:14] pm-access-mr/01_PM-002: PM-002: attached File_pdf_for_testing.pdf to "*Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan"
+[02:22:15] pm-access-mr/01_PM-002: PM-002: attached File_pdf_for_testing.pdf to "*Surat Pengesahan oleh Ketua Jabatan"
+[02:22:16] pm-access-mr/01_PM-002: PM-002: dialog: "Confirmation Message Are you sure to submit this application? Yes No" -> Yes
+[02:22:20] pm-access-mr/01_PM-002: Closed the TERKINI announcement
+[02:22:21] pm-access-mr/01_PM-002: DB status AA:MR AP261125000001580: 75000 Pending Approval / Menunggu Kelulusan (expected 75000, OK)
+[02:22:22] pm-access-mr/01_PM-002: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 01 PM-002 Agency user submits an Access Application for Market Research access @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/01_PM-002 @PM-002 (13.9s)
+[02:22:24] pm-access-mr/02_PM-012: PM-012 Market Research Approver approves the Market Research access (new IC) — role EP_ADMIN_2 / MARKET_RESEARCH_APVR, login: Katalon default account of the step
+[02:22:24] pm-access-mr/02_PM-012: PM-012: Approve Market Research: pool of 14, using 201810011210
+[02:22:28] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:22:28] pm-access-mr/02_PM-012: PM-012: login 201810011210
+[02:23:33] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:23:36] pm-access-mr/02_PM-012: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 (1.2m)
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 03 PM-022 Applicant activates the Market Research access (email link) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/03_PM-022 @PM-022
+
+
+  1) [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 
+
+    Error: Login as 201810011210 failed: still on the SSO page (wrong password, or the account is not active yet)
+
+       at ..\support\mof\sso.ts:25
+
+      23 |     await page.getByRole('button', { name: /^(Log Masuk|Login)$/ }).click();
+      24 |     const ok = await page.waitForURL((u) => !onLogin(u, env), { timeout: 60_000 }).then(() => true, () => false);
+    > 25 |     if (!ok) throw new Error(`Login as ${username} failed: still on the SSO page (wrong password, or the account is not active yet)`);
+         |                    ^
+      26 |     await waitForAjaxIdle(page);
+      27 |     await closeAnnouncement(page);
+      28 |     if (/^\/web\/epapp\//.test(new URL(page.url()).pathname)) {
+        at ssoLogin (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\mof\sso.ts:25:20)
+        at Object.as (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:725:13)
+        at decideAccess (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:172:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\pm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_022205\flows-en-pm.flow-pm-access-c1301-ket-Research-access-new-IC--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_022205\flows-en-pm.flow-pm-access-c1301-ket-Research-access-new-IC--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 
+  1 did not run
+  1 passed (1.5m)
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 01 PM-002 Agency user submits an Access Application for Market Research access @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/01_PM-002 @PM-002
+[02:24:41] pm-access-mr/02_PM-012: SELF-HEAL PM-012: retry once — the SIT DB still shows AP261125000001580 at 75000 Pending Approval, as before the attempt
+[02:24:43] pm-access-mr/02_PM-012: PM-012 Market Research Approver approves the Market Research access (new IC) — role EP_ADMIN_2 / MARKET_RESEARCH_APVR, login: Katalon default account of the step
+[02:24:44] pm-access-mr/02_PM-012: PM-012: Approve Market Research: pool of 14, using 201810011210
+[02:24:46] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:24:46] pm-access-mr/02_PM-012: PM-012: login 201810011210
+[02:25:51] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:25:54] pm-access-mr/02_PM-012: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 (1.2m)
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 03 PM-022 Applicant activates the Market Research access (email link) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/03_PM-022 @PM-022
+
+
+  1) [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 
+
+    Error: Login as 201810011210 failed: still on the SSO page (wrong password, or the account is not active yet)
+
+       at ..\support\mof\sso.ts:25
+
+      23 |     await page.getByRole('button', { name: /^(Log Masuk|Login)$/ }).click();
+      24 |     const ok = await page.waitForURL((u) => !onLogin(u, env), { timeout: 60_000 }).then(() => true, () => false);
+    > 25 |     if (!ok) throw new Error(`Login as ${username} failed: still on the SSO page (wrong password, or the account is not active yet)`);
+         |                    ^
+      26 |     await waitForAjaxIdle(page);
+      27 |     await closeAnnouncement(page);
+      28 |     if (/^\/web\/epapp\//.test(new URL(page.url()).pathname)) {
+        at ssoLogin (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\mof\sso.ts:25:20)
+        at Object.as (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:725:13)
+        at decideAccess (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\pm\access.ts:172:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\pm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_022437\flows-en-pm.flow-pm-access-c1301-ket-Research-access-new-IC--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_022437\flows-en-pm.flow-pm-access-c1301-ket-Research-access-new-IC--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 
+  1 skipped
+  1 did not run
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 01 PM-002 Agency user submits an Access Application for Market Research access @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/01_PM-002 @PM-002
+[02:26:58] pm-access-mr/02_PM-012: PM-012 Market Research Approver approves the Market Research access (new IC) — role EP_ADMIN_2 / MARKET_RESEARCH_APVR, login: Katalon default account of the step
+[02:26:59] pm-access-mr/02_PM-012: PM-012: Approve Market Research: pool of 14
+[02:26:59] pm-access-mr/02_PM-012: PM-012: Approve Market Research: using 201810011210
+[02:27:02] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:27:02] pm-access-mr/02_PM-012: PM-012: login 201810011210
+[02:28:04] pm-access-mr/02_PM-012: PM-012: login as 201810011210 failed, trying the next pool user
+[02:28:04] pm-access-mr/02_PM-012: PM-012: Approve Market Research: using 650911025765
+[02:28:06] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:28:06] pm-access-mr/02_PM-012: PM-012: login 650911025765
+[02:29:06] pm-access-mr/02_PM-012: PM-012: login as 650911025765 failed, trying the next pool user
+[02:29:06] pm-access-mr/02_PM-012: PM-012: Approve Market Research: using 250000991001
+[02:29:07] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:29:07] pm-access-mr/02_PM-012: PM-012: login 250000991001
+[02:29:10] pm-access-mr/02_PM-012: PM-012: Logged in as 250000991001
+[02:29:16] pm-access-mr/02_PM-012: PM-012: claimed AP261125000001580: now in My Task
+[02:29:18] pm-access-mr/02_PM-012: PM-012: dialog: "Confirmation Message Are you sure to approve this application? Yes No" -> Yes
+[02:29:21] pm-access-mr/02_PM-012: Closed the TERKINI announcement
+[02:29:22] pm-access-mr/02_PM-012: DB status AA:MR AP261125000001580: 75020 Pending Activation / Menunggu Pengaktifan (expected 75020, OK)
+[02:29:22] pm-access-mr/02_PM-012: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 02 PM-012 Market Research Approver approves the Market Research access (new IC) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/02_PM-012 @PM-012 (2.4m)
+[02:29:24] pm-access-mr/03_PM-022: PM-022 Applicant activates the Market Research access (email link) — role Applicant, login: Katalon default account of the step
+[02:29:30] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: "noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian Pa" is for another registration (Tuan/Puan, No. Permohonan: AP261124000001579 Permohonan anda untuk mengakses perkara dibawah telah diproses: ☑ Profil Sy…)
+[02:29:30] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 1, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First Tim | noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian Pa | N External noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 M]; next check in 20s
+[02:29:53] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 2, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [N noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First T |  noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian  | N External noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 M]; next check in 20s
+[02:30:17] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 3, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [N noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First T |  noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian  | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N]; next check in 20s
+[02:30:40] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 4, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [N noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First T |  noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian  | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N]; next check in 20s
+[02:31:03] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 5, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [N noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First T |  noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian  | N noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 Ministry N]; next check in 20s
+[02:31:26] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 6, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [N noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First T |  noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian  | N External noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 M]; next check in 20s
+[02:31:49] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: check 7, no mail matching /Akses|Access|Pengaktifan|Activation/i + /AP261125000001580/ among 18 [N noreply@eperolehan.gov.my Sistem ePerolehan ( Log Masuk Kali Pertama / First T |  noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian  | N External noreply@eperolehan.com.my Invitation to Quotation QT260000000004518 M]; next check in 20s
+[02:32:12] pm-access-mr/03_PM-022: PM-022: Outlook newsupplier001@commercedc.com.my: found "N noreply@eperolehan.com.my Application for Company Profile/Market Research Access Dear Sir/Madam, Application No.: AP26"
+[02:32:12] pm-access-mr/03_PM-022: PM-022: activation link http://ngepsit.eperolehan.com.my/web/guest/access-application-activation?ap=2836&sp=…&kp=…, key read from the e-mail
+[02:32:21] pm-access-mr/03_PM-022: Closed the TERKINI announcement
+[02:32:22] pm-access-mr/03_PM-022: DB status AA:MR AP261125000001580: 75010 Completed / Selesai (expected 75010, OK)
+[02:32:22] pm-access-mr/03_PM-022: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr [EN] Market Research access: submit, approve, activate › 03 PM-022 Applicant activates the Market Research access (email link) @flow-pm-access-mr @module-pm @lang-en @FLOW @pm-access-mr/03_PM-022 @PM-022 (3.0m)
+
+  Slow test file: [flows] › tests\flows\en\pm.flow.spec.ts (5.4m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 skipped
+  2 passed (5.5m)

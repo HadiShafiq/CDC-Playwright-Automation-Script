@@ -1,0 +1,165 @@
+{
+  "flowRunId": "pm-access-mr_20261125-022205",
+  "flowId": "pm-access-mr",
+  "module": "pm",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T02:22:05+08:00",
+  "updatedAt": "2026-11-25T02:32:22+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "AA": "AP261125000001580"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "PM-002": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_022205",
+          "startedAt": "2026-11-25T02:22:08+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-mr\\01_PM-002\\2026-11-25_022205",
+          "endedAt": "2026-11-25T02:22:21+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Your application to access Market Research information AP261125000001580 has been successfully submitted to approver. You will be notified via email by Ministry of Finance after the application has been processed. Please check your email within 14 days for notification related to the application. For any inquiries, please contact: Tel: +603 7985 7777/7888 Email: bantuan@eperolehan.gov.my"
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "AA": "AP261125000001580"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "MR_SUBMITTED",
+      "db": {
+        "kind": "AA:MR",
+        "docNo": "AP261125000001580",
+        "expected": 75000,
+        "statusId": 75000,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 02:22:17",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:22:21+08:00",
+        "observeOnly": true
+      }
+    },
+    "PM-012": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_022205",
+          "startedAt": "2026-11-25T02:22:23+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-mr\\02_PM-012\\2026-11-25_022205",
+          "dbBefore": {
+            "kind": "AA:MR",
+            "docNo": "AP261125000001580",
+            "statusId": 75000
+          },
+          "endedAt": "2026-11-25T02:23:33+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Login as 201810011210 failed: still on the SSO page (wrong password, or the account is not active yet)"
+        },
+        {
+          "runId": "2026-11-25_022437",
+          "startedAt": "2026-11-25T02:24:42+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-mr\\02_PM-012\\2026-11-25_022437",
+          "dbBefore": {
+            "kind": "AA:MR",
+            "docNo": "AP261125000001580",
+            "statusId": 75000
+          },
+          "selfHeal": "the SIT DB still shows AP261125000001580 at 75000 Pending Approval, as before the attempt",
+          "endedAt": "2026-11-25T02:25:51+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Login as 201810011210 failed: still on the SSO page (wrong password, or the account is not active yet)"
+        },
+        {
+          "runId": "2026-11-25_022650",
+          "startedAt": "2026-11-25T02:26:57+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-mr\\02_PM-012\\2026-11-25_022650",
+          "dbBefore": {
+            "kind": "AA:MR",
+            "docNo": "AP261125000001580",
+            "statusId": 75000
+          },
+          "endedAt": "2026-11-25T02:29:22+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Application AP261125000001580 for Market Research Information Access is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "MR_APPROVED_PENDING_ACTIVATION",
+      "db": {
+        "kind": "AA:MR",
+        "docNo": "AP261125000001580",
+        "expected": 75020,
+        "statusId": 75020,
+        "en": "Pending Activation",
+        "bm": "Menunggu Pengaktifan",
+        "at": "2026-11-25 02:29:19",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:29:22+08:00",
+        "observeOnly": true
+      }
+    },
+    "PM-022": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_022650",
+          "startedAt": "2026-11-25T02:29:24+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-mr\\03_PM-022\\2026-11-25_022650",
+          "dbBefore": {
+            "kind": "AA:MR",
+            "docNo": "AP261125000001580",
+            "statusId": 75020
+          },
+          "endedAt": "2026-11-25T02:32:22+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Thank You. Your account has been activated. You will receive your login information in the next email."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "MR_COMPLETED",
+      "db": {
+        "kind": "AA:MR",
+        "docNo": "AP261125000001580",
+        "expected": 75010,
+        "statusId": 75010,
+        "en": "Completed",
+        "bm": "Selesai",
+        "at": "2026-11-25 02:32:14",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:32:22+08:00",
+        "observeOnly": true
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

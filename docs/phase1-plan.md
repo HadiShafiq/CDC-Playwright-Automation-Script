@@ -91,10 +91,7 @@ Pending, in order:
    at 2026-11-24 18:28. When they reach 40300: `qa resume --run fl-noncontract-inv-maint_20261124-135602` and
    `fl-noncontract-do-maint_20261124-153540`; then run fl-contract-do-maint, fl-contract-inv-maint,
    fl-noncontract-pay-query, fl-noncontract-pay-idd-fail. (Run state lives in `.data/` — copy it from the old PC.)
-2. **PM:** switch public pages to English first (on `/home` select `[id="_82_languageId"]` = `en_US`), re-probe the EN
-   labels before changing `PM_SIT` in `support/modules/pm/access.ts`. PM-021/022 `activateAccess` must read the
-   **Kod Pengaktifan** from the activation e-mail (like `extractActivationKey`), fill it, submit. Then resume
-   `pm-access-cp_20261124-164952` from PM-021, run pm-access-mr and the reject flows.
+2. ~~PM~~ **DONE 2026-11-25 (EN):** pm-access-cp (AP261124000001579 → 75010), pm-access-mr (AP261125000001580 → 75010), pm-access-cp-reject (…1581 → 75015), pm-access-mr-reject (…1582 → 75015). Public pages in English via GUEST_LANGUAGE_ID=en_US; activation key read from the e-mail ("Kunci Pengaktifan"); approver falls back to the next pool user when a login fails (SIT: 201810011210 locked, 650911025765 cannot log in). Suspected app defect: one submit made AP…1578 + AP…1579 (knowledge/defects.md). iGFMAS: no PR on SIT passed 40110→40300 since 2026-11-24 ~05:00 (checked 2026-11-25 02:15).
 3. 329 statuses have no sandbox (CT 176, SC 114, FL 9, CM/PP 30): user supplies document numbers, or build flows
    (CT amendments, QT sub-workflows, RC/PL). 98 never-used doc types, 7 unmapped.
 4. Remaining SM application flows (add category, update profile, cancel, delete, reject); user's reject/revise list; BM later (ask).

@@ -7,7 +7,7 @@
   "language": "EN",
   "cr": null,
   "createdAt": "2026-11-24T16:49:52+08:00",
-  "updatedAt": "2026-11-24T17:09:57+08:00",
+  "updatedAt": "2026-11-25T02:21:40+08:00",
   "from": null,
   "to": null,
   "docs": {
@@ -119,7 +119,7 @@
       }
     },
     "PM-021": {
-      "state": "failed",
+      "state": "verified",
       "attempts": [
         {
           "runId": "2026-11-24_170518",
@@ -151,13 +151,44 @@
           "messages": [],
           "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
           "error": "Activation not confirmed: Skip to Content Log Masuk Portal dikemaskini kali terakhir pada 6 November 2026 04:54:51 PM UTAMA MENGENAI eP PENGGUNA eP PERKHIDMATAN TAMBAHAN BANTUAN DAN RUJUKAN MUAT TURUN PAUTAN SEGERA CARIAN UTAMA/Pengaktifan Akaun Pengaktifan Akaun Sila masukkan maklumat berikut untuk mengaktifkan akaun anda N"
+        },
+        {
+          "runId": "2026-11-25_022116",
+          "startedAt": "2026-11-25T02:21:23+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp\\03_PM-021\\2026-11-25_022116",
+          "dbBefore": {
+            "kind": "AA:CP",
+            "docNo": "AP261124000001579",
+            "statusId": 75020
+          },
+          "endedAt": "2026-11-25T02:21:40+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Thank You. Your account has been activated. You will receive your login information in the next email."
+            }
+          ]
         }
       ],
       "outputs": {},
-      "login": "Katalon default account of the step"
+      "login": "Katalon default account of the step",
+      "checkpoint": "CP_COMPLETED",
+      "db": {
+        "kind": "AA:CP",
+        "docNo": "AP261124000001579",
+        "expected": 75010,
+        "statusId": 75010,
+        "en": "Completed",
+        "bm": "Selesai",
+        "at": "2026-11-25 02:21:32",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:21:40+08:00",
+        "observeOnly": true
+      }
     }
   },
   "allowRerun": [],
   "vars": {},
-  "status": "failed"
+  "status": "completed"
 }

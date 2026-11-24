@@ -17,9 +17,18 @@ export interface AccessKinds {
   companyProfile: boolean;
   marketResearch: boolean;
 }
+/**
+ * English first (user rule): the public pages follow Liferay's GUEST_LANGUAGE_ID cookie, which the /home language
+ * select (_82_languageId = en_US) sets. Labels below were read on the English pages (SIT 2026-11-25).
+ */
+export async function useEnglish(page: Page, baseURL: string) {
+  const { hostname } = new URL(baseURL);
+  await page.context().addCookies([{ name: 'GUEST_LANGUAGE_ID', value: 'en_US', domain: hostname, path: '/' }]);
+}
+
 export const PM_SIT = {
   url: '/company-profile-market-research',
-  orgType: 'Badan Berkanun Persekutuan',
+  orgType: 'Federal Statutory Body', // BM: Badan Berkanun Persekutuan
   orgName: 'Agensi Kelayakan Malaysia', // used by earlier SIT applications (AP260716000001558/1559)
   salutation: 'Cik',
   state: 'JOHOR',
@@ -58,6 +67,7 @@ export async function submitAccessApplication(page: Page, baseURL: string, kinds
   const ic = `9001${digits(8)}`;
   const name = `QA AUTO PEMOHON ${digits(4)}`;
   log(`applicant ${name}, IC ${ic}, e-mail ${box.email}, ${kinds.companyProfile ? 'Company Profile' : ''}${kinds.companyProfile && kinds.marketResearch ? ' + ' : ''}${kinds.marketResearch ? 'Market Research' : ''}`);
+  await useEnglish(page, baseURL);
   await page.goto(`${baseURL}${PM_SIT.url}`, { waitUntil: 'networkidle' });
   await page.locator('.ui-chkbox-box').first().click(); // terms and conditions
   await page.getByRole('button', { name: /^(Seterusnya|Next)$/ }).first().click();
@@ -67,7 +77,7 @@ export async function submitAccessApplication(page: Page, baseURL: string, kinds
   await pfSelect(page, await menuId(page, 'somAccessApplOrgType'), PM_SIT.orgType);
   await pfIdle(page);
   await byIdEnd(page, 'lovOrglov').locator('xpath=following::a[1]').click();
-  const dlg = page.locator('.ui-dialog:visible').filter({ hasText: /Organisasi|Organization/ }).last();
+  const dlg = page.locator('.ui-dialog:visible').filter({ hasText: /Organisasi|Organi[sz]ation/ }).last();
   await dlg.getByText(PM_SIT.orgName, { exact: true }).first().click();
   await dlg.getByRole('button', { name: /^(Pilih|Select)$/ }).click();
   await pfIdle(page);
@@ -95,7 +105,7 @@ export async function submitAccessApplication(page: Page, baseURL: string, kinds
   await uploadAttachments(page, log);
   await tick(page, 'isDeclChkBox');
 
-  const msgs = await pressAndConfirm(page, 'Serah', log);
+  const msgs = await pressAndConfirm(page, 'Submit', log); // BM: Serah
   const all = [...msgs, ...(await pageMessages(page)), (await page.locator('body').innerText()).slice(0, 3000)].join(' ');
   const appl = all.match(/\bAP\d{15}\b/)?.[0];
   if (!appl) throw new Error(`Access application not confirmed: ${msgs.join(' | ') || 'no message'}`);
@@ -120,7 +130,7 @@ async function uploadAttachments(page: Page, log: (m: string) => void) {
     if ((await cell().innerText()).trim()) continue; // already attached
     await row().locator('a').last().click();
     await pfIdle(page);
-    const dlg = page.locator('.ui-dialog:visible').filter({ hasText: 'Pilih Fail' });
+    const dlg = page.locator('.ui-dialog:visible').filter({ hasText: /Pilih Fail|Choose Files/ }); // EN title "Choose Files"
     await dlg.waitFor({ timeout: 15_000 });
     const chooser = page.waitForEvent('filechooser', { timeout: 15_000 });
     await dlg.locator('label.fileinput-button').click();
@@ -156,10 +166,24 @@ export async function decideAccess(
     task = openTasks(appl, TASK[track])[0];
   }
   if (!task) throw new Error(`no open "${TASK[track]}" task for ${appl} (SIT WFTASK)`);
-  const user = task.claimedBy || task.assignees[0];
-  if (!user) throw new Error(`"${TASK[track]}" of ${appl} has no user in its pool (${task.groupAssignees.join(', ') || 'none'})`);
-  log(`${TASK[track]}: pool of ${task.assignees.length}, using ${user}`);
-  await ctx.as(user);
+  // A pool user can be locked or inactive on SIT (2026-11-25: 201810011210 "Your account is locked"). A failed login
+  // changes nothing, so try the next pool users (max 4, to avoid locking more accounts with failed attempts).
+  const pool = task.claimedBy ? [task.claimedBy] : task.assignees;
+  if (!pool.length) throw new Error(`"${TASK[track]}" of ${appl} has no user in its pool (${task.groupAssignees.join(', ') || 'none'})`);
+  log(`${TASK[track]}: pool of ${pool.length}`);
+  const failed: string[] = [];
+  for (const user of pool.slice(0, 4)) {
+    try {
+      log(`${TASK[track]}: using ${user}`);
+      await ctx.as(user);
+      failed.length = 0;
+      break;
+    } catch (e) {
+      failed.push(`${user}: ${(e as Error).message.slice(0, 120)}`);
+      log(`login as ${user} failed, trying the next pool user`);
+    }
+  }
+  if (failed.length) throw new Error(`no usable "${TASK[track]}" pool user for ${appl}: ${failed.join(' | ')}`);
   await openTask(page, baseURL, appl, log);
   const remark = page.locator('textarea:visible:enabled').last();
   if (decision === 'reject' || (await remark.count())) await remark.fill(decision === 'reject' ? 'Ditolak oleh ujian automasi QA' : 'Diluluskan oleh ujian automasi QA').catch(() => {});
@@ -183,11 +207,19 @@ export async function activateAccess(page: Page, appl: string, log: (m: string) 
   const mail = await readOutlook(box, /Akses|Access|Pengaktifan|Activation/i, log, { mustContain: new RegExp(appl) });
   const link = mail.html.match(/href="([^"]*(activation|aktif)[^"]*)"/i)?.[1]?.replace(/&amp;/g, '&');
   if (!link) throw new Error(`No activation link in the e-mail "${mail.subject.slice(0, 80)}"`);
-  log(`activation link ${link.slice(0, 90)}…`);
+  // The page (access-application-activation?ap=…) shows name/IC/login ID and asks for the key the same e-mail gives:
+  // BM "Kunci Pengaktifan: xxx" (SIT 2026-11-25), EN "Activation Key: xxx". One text field + Serah/Submit.
+  const key = mail.text.match(/(?:(?:Kunci|Kod)\s*Pengaktifan|Activation\s*Key)\s*:\s*([A-Za-z0-9]+)/i)?.[1];
+  if (!key) throw new Error(`No activation key (Kunci Pengaktifan / Activation Key) in the e-mail "${mail.subject.slice(0, 80)}"`);
+  log(`activation link ${link.replace(/([?&][^=]+=)[^&]{6,}/g, '$1…').slice(0, 90)}, key read from the e-mail`);
+  await useEnglish(page, link);
   await page.goto(link, { waitUntil: 'networkidle' });
   await pfIdle(page);
-  const confirm = page.getByRole('button', { name: /^(Aktif|Aktifkan|Activate|Hantar|Submit|Ya|Yes)$/ }).first();
-  const msgs = (await confirm.isVisible().catch(() => false)) ? await pressAndConfirm(page, (await confirm.innerText()).trim(), log) : await pageMessages(page);
+  const field = page.locator('[id^="_accessApplicationActivation"] input[type=text]:visible').first();
+  await field.waitFor({ timeout: 30_000 });
+  await field.fill(key);
+  const btn = (await page.getByRole('button', { name: 'Submit', exact: true }).locator('visible=true').count()) ? 'Submit' : 'Serah';
+  const msgs = await pressAndConfirm(page, btn, log);
   const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
   if (![...msgs, text].some((m) => /berjaya|success|diaktifkan|activated/i.test(m))) throw new Error(`Activation not confirmed: ${(msgs.join(' | ') || text).slice(0, 300)}`);
   return { messages: msgs.length ? msgs : [text.slice(0, 200)] };

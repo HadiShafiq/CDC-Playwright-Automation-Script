@@ -1,0 +1,96 @@
+{
+  "flowRunId": "pm-access-cp-reject_20261125-023239",
+  "flowId": "pm-access-cp-reject",
+  "module": "pm",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T02:32:39+08:00",
+  "updatedAt": "2026-11-25T02:33:25+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "AA": "AP261125000001581"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "PM-001": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_023240",
+          "startedAt": "2026-11-25T02:32:46+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp-reject\\01_PM-001\\2026-11-25_023240",
+          "endedAt": "2026-11-25T02:32:58+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Your application to access Company Profile Information AP261125000001581 has been successfully submitted to approver. You will be notified via email by Ministry of Finance after the application has been processed. Please check your email within 14 days for notification related to the application. For any inquiries, please contact: Tel: +603 7985 7777/7888 Email: bantuan@eperolehan.gov.my"
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "AA": "AP261125000001581"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "CP_SUBMITTED",
+      "db": {
+        "kind": "AA:CP",
+        "docNo": "AP261125000001581",
+        "expected": 75005,
+        "statusId": 75005,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 02:32:54",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:32:58+08:00",
+        "observeOnly": true
+      }
+    },
+    "PM-031": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_023240",
+          "startedAt": "2026-11-25T02:33:00+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\pm-access-cp-reject\\02_PM-031\\2026-11-25_023240",
+          "dbBefore": {
+            "kind": "AA:CP",
+            "docNo": "AP261125000001581",
+            "statusId": 75005
+          },
+          "endedAt": "2026-11-25T02:33:25+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Application AP261125000001581 for Company Profile Information Access is rejected."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "CP_REJECTED",
+      "db": {
+        "kind": "AA:CP",
+        "docNo": "AP261125000001581",
+        "expected": 75015,
+        "statusId": 75015,
+        "en": "Rejected",
+        "bm": "Ditolak",
+        "at": "2026-11-25 02:33:20",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:33:25+08:00",
+        "observeOnly": true
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

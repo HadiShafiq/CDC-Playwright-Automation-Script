@@ -206,3 +206,27 @@ Running 3 tests using 1 worker
   1 failed
     [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 
   2 skipped
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+[02:20:23] pm-access-cp/03_PM-021: BLOCKED: PM-021 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run pm-access-cp_20261124-164952 --step PM-021
+  -  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021
+
+  3 skipped
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/01_PM-001 @PM-001
+  -  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 02 PM-011 UPS Approver approves the Company Profile access (new IC) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/02_PM-011 @PM-011
+[02:21:24] pm-access-cp/03_PM-021: PM-021 Applicant activates the Company Profile access (email link) — role Applicant, login: Katalon default account of the step
+[02:21:30] pm-access-cp/03_PM-021: PM-021: Outlook newsupplier001@commercedc.com.my: found "noreply@eperolehan.com.my Permohonan untuk mengakses Profil Syarikat / Kajian Pasaran Tuan/Puan, No. Permohonan: AP26112"
+[02:21:30] pm-access-cp/03_PM-021: PM-021: activation link http://ngepsit.eperolehan.com.my/web/guest/access-application-activation?ap=2835&sp=…&kp=…, key read from the e-mail
+[02:21:40] pm-access-cp/03_PM-021: Closed the TERKINI announcement
+[02:21:40] pm-access-cp/03_PM-021: DB status AA:CP AP261124000001579: 75010 Completed / Selesai (expected 75010, OK)
+[02:21:41] pm-access-cp/03_PM-021: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp [EN] Company Profile access: submit, approve, activate › 03 PM-021 Applicant activates the Company Profile access (email link) @flow-pm-access-cp @module-pm @lang-en @FLOW @pm-access-cp/03_PM-021 @PM-021 (18.6s)
+
+  2 skipped
+  1 passed (25.5s)

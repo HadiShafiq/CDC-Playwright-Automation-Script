@@ -8,8 +8,8 @@
 | Tester | hadishafiq |
 | Language | EN |
 | CR | - |
-| Status | **FAILED** |
-| Started / updated | 2026-11-24T16:49:52+08:00 / 2026-11-24T17:09:57+08:00 |
+| Status | **COMPLETED** |
+| Started / updated | 2026-11-24T16:49:52+08:00 / 2026-11-25T02:21:40+08:00 |
 | Documents | AA AP261124000001579 |
 
 ## Items
@@ -18,7 +18,7 @@
 |---|---|---|---|---|---|---|
 | 1 | PM-001 Agency user submits an Access Application for Company Profile access | VERIFIED (3 attempts) | CP_SUBMITTED | AA AP261124000001579 | Katalon default account of the step |   |
 | 2 | PM-011 UPS Approver approves the Company Profile access (new IC) | VERIFIED | CP_APPROVED_PENDING_ACTIVATION |  | Katalon default account of the step |   |
-| 3 | PM-021 Applicant activates the Company Profile access (email link) | FAILED (2 attempts) |  |  | Katalon default account of the step | UNKNOWN (low): no rule matched; read the error, screenshot and trace <br>Activation not confirmed: Skip to Content Log Masuk Portal dikemaskini kali terakhir pada 6 November 2026 04:54:51 PM UTAMA MENGENAI eP PENGGUNA eP PERKHIDMATAN TAMBAHAN BANTUAN DAN RUJUKAN MUAT TURUN PAUTAN SEGERA CARIAN UTAMA/Pengaktifan Akaun Pengaktifan Akaun Sila masukkan maklumat berikut untuk |
+| 3 | PM-021 Applicant activates the Company Profile access (email link) | VERIFIED (3 attempts) | CP_COMPLETED |  | Katalon default account of the step |   |
 
 ## Application messages per step
 
@@ -37,4 +37,7 @@
 **PM-021** attempt 2026-11-24T17:06:09+08:00 → failed · evidence `evidence\SIT\FLOW\pm-access-cp\03_PM-021\2026-11-24_170518`
 
 **PM-021** attempt 2026-11-24T17:09:43+08:00 → failed · evidence `evidence\SIT\FLOW\pm-access-cp\03_PM-021\2026-11-24_170937`
+
+**PM-021** attempt 2026-11-25T02:21:23+08:00 → verified · evidence `evidence\SIT\FLOW\pm-access-cp\03_PM-021\2026-11-25_022116`
+- info: Thank You. Your account has been activated. You will receive your login information in the next email.
 

@@ -21,7 +21,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | CM | 28 | 0 | 0 | 13 | 1 | 14 |
 | CT | 210 | 4 | 0 | 172 | 11 | 23 |
 | FL | 165 | 12 | 18 | 65 | 44 | 26 |
-| PM | 2 | 0 | 2 | 0 | 0 | 0 |
+| PM | 2 | 2 | 0 | 0 | 0 | 0 |
 | PP | 14 | 0 | 0 | 14 | 0 | 0 |
 | SC | 308 | 22 | 2 | 167 | 53 | 64 |
 | SM | 74 | 6 | 11 | 11 | 11 | 35 |
@@ -456,8 +456,8 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 
 | Doc type | Status | EN | BM | SIT rows (last) | Class | Data prep spec (method) |
 |---|---|---|---|---|---|---|
-| CP | 75005 | Pending Approval | Menunggu Kelulusan | 234 (2026-09-15) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/pm/CP/75005-Pending-Approval.spec.ts) |
-| MR | 75000 | Pending Approval | Menunggu Kelulusan | 274 (2026-09-15) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/pm/MR/75000-Pending-Approval.spec.ts) |
+| CP | 75005 | Pending Approval | Menunggu Kelulusan | 234 (2026-09-15) | FLOW | [flow](../tests/data-prep/en/by-status/pm/CP/75005-Pending-Approval.spec.ts) |
+| MR | 75000 | Pending Approval | Menunggu Kelulusan | 274 (2026-09-15) | FLOW | [flow](../tests/data-prep/en/by-status/pm/MR/75000-Pending-Approval.spec.ts) |
 
 ## PP
 
@@ -967,21 +967,3 @@ Statuses the workflow tables contain that PM_STATUS does not list as active (REC
 | FL | PR | 60807 | 1 | 2020-07-21 |
 | FL | CO | 41400 | 1 | 2018-11-08 |
 | FL | PR | 41100 | 1 | 2018-06-25 |
-
-## Simulation check, all modules (SIT, 2026-11-24)
-
-Every "simulate" status was patched onto one of our own sandbox documents, confirmed in the SIT DB and restored at once
-(`QA_TOOL=simulate-module QA_MODULE=<M>`, results in `.data/SIT/simulate/module-<M>.json`, every change audited in
-`knowledge/data-change-audit.md`). The patch moves only the status row (no BPM task).
-
-| Module | Simulated OK + restored | Already at the status | No sandbox document of that workflow type |
-|---|---|---|---|
-| CT | 25 | 0 | 176 (CT amendments / extensions / termination: FA, SA, CQ, PQ, …) |
-| SM | 33 | 0 | 0 |
-| FL | 105 | 4 | 9 (CN, IN) |
-| SC | 130 | 6 | 114 (QT sub-workflows SF, PD, LI, EC, DAR, …) |
-| CM / PP | 0 | 0 | 30 (no RC / PL document of ours) |
-
-**804 active statuses:** 44 confirmed by real flow runs + 303 proven by simulation = **347 (43%)**; 23 flow statuses of
-flows not yet passed; 329 need a document of their workflow type first; 98 belong to document types never used on SIT;
-7 unmapped.

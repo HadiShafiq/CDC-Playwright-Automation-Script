@@ -1340,7 +1340,7 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "pm",
-    "checkpoint": "CP_APPROVED_PENDING_ACTIVATION",
+    "checkpoint": "CP_COMPLETED",
     "verification": "verified",
     "createdBy": {
       "flowRunId": "pm-access-cp_20261124-164952",
@@ -1348,10 +1348,79 @@
     },
     "lastStep": {
       "flowRunId": "pm-access-cp_20261124-164952",
-      "stepId": "PM-011"
+      "stepId": "PM-021"
     },
     "createdAt": "2026-11-24T17:05:40+08:00",
-    "lastVerifiedAt": "2026-11-24T17:06:07+08:00",
+    "lastVerifiedAt": "2026-11-25T02:21:40+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "AP261125000001580",
+    "docType": "AA",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "pm",
+    "checkpoint": "MR_COMPLETED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "pm-access-mr_20261125-022205",
+      "stepId": "PM-002"
+    },
+    "lastStep": {
+      "flowRunId": "pm-access-mr_20261125-022205",
+      "stepId": "PM-022"
+    },
+    "createdAt": "2026-11-25T02:22:21+08:00",
+    "lastVerifiedAt": "2026-11-25T02:32:22+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "AP261125000001581",
+    "docType": "AA",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "pm",
+    "checkpoint": "CP_REJECTED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "pm-access-cp-reject_20261125-023239",
+      "stepId": "PM-001"
+    },
+    "lastStep": {
+      "flowRunId": "pm-access-cp-reject_20261125-023239",
+      "stepId": "PM-031"
+    },
+    "createdAt": "2026-11-25T02:32:58+08:00",
+    "lastVerifiedAt": "2026-11-25T02:33:25+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "AP261125000001582",
+    "docType": "AA",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "pm",
+    "checkpoint": "MR_REJECTED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "pm-access-mr-reject_20261125-023329",
+      "stepId": "PM-002"
+    },
+    "lastStep": {
+      "flowRunId": "pm-access-mr-reject_20261125-023329",
+      "stepId": "PM-032"
+    },
+    "createdAt": "2026-11-25T02:33:45+08:00",
+    "lastVerifiedAt": "2026-11-25T02:36:09+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,

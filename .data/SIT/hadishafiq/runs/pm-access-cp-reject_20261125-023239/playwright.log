@@ -1,0 +1,27 @@
+
+Running 2 tests using 1 worker
+
+[02:32:46] pm-access-cp-reject/01_PM-001: PM-001 Agency user submits an Access Application for Company Profile access — role Applicant (non-federal agency user), login: Katalon default account of the step
+[02:32:46] pm-access-cp-reject/01_PM-001: PM-001: applicant QA AUTO PEMOHON 1873, IC 900169881340, e-mail newsupplier001@commercedc.com.my, Company Profile
+[02:32:51] pm-access-cp-reject/01_PM-001: PM-001: district BATU PAHAT, city AYER HITAM
+[02:32:52] pm-access-cp-reject/01_PM-001: PM-001: attached File_pdf_for_testing.pdf to "*Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan"
+[02:32:53] pm-access-cp-reject/01_PM-001: PM-001: attached File_pdf_for_testing.pdf to "*Surat Pengesahan oleh Ketua Jabatan"
+[02:32:53] pm-access-cp-reject/01_PM-001: PM-001: dialog: "Confirmation Message Are you sure to submit this application? Yes No" -> Yes
+[02:32:58] pm-access-cp-reject/01_PM-001: Closed the TERKINI announcement
+[02:32:58] pm-access-cp-reject/01_PM-001: DB status AA:CP AP261125000001581: 75005 Pending Approval / Menunggu Kelulusan (expected 75005, OK)
+[02:32:59] pm-access-cp-reject/01_PM-001: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp-reject [EN] Company Profile access rejected › 01 PM-001 Agency user submits an Access Application for Company Profile access @flow-pm-access-cp-reject @module-pm @lang-en @FLOW @pm-access-cp-reject/01_PM-001 @PM-001 (13.6s)
+[02:33:01] pm-access-cp-reject/02_PM-031: PM-031 UPS Approver rejects the Company Profile access — role UPS Approver, login: Katalon default account of the step
+[02:33:02] pm-access-cp-reject/02_PM-031: PM-031: Approve Company Profile: pool of 13
+[02:33:02] pm-access-cp-reject/02_PM-031: PM-031: Approve Company Profile: using 660000000003
+[02:33:04] pm-access-cp-reject/02_PM-031: Closed the TERKINI announcement
+[02:33:04] pm-access-cp-reject/02_PM-031: PM-031: login 660000000003
+[02:33:07] pm-access-cp-reject/02_PM-031: PM-031: Logged in as 660000000003
+[02:33:17] pm-access-cp-reject/02_PM-031: PM-031: claimed AP261125000001581: now in My Task
+[02:33:19] pm-access-cp-reject/02_PM-031: PM-031: dialog: "Confirmation Message Are you sure to reject this application? Yes No" -> Yes
+[02:33:24] pm-access-cp-reject/02_PM-031: Closed the TERKINI announcement
+[02:33:25] pm-access-cp-reject/02_PM-031: DB status AA:CP AP261125000001581: 75015 Rejected / Ditolak (expected 75015, OK)
+[02:33:25] pm-access-cp-reject/02_PM-031: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-cp-reject [EN] Company Profile access rejected › 02 PM-031 UPS Approver rejects the Company Profile access @flow-pm-access-cp-reject @module-pm @lang-en @FLOW @pm-access-cp-reject/02_PM-031 @PM-031 (26.2s)
+
+  2 passed (45.6s)

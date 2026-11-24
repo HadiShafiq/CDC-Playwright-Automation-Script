@@ -25,14 +25,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261124000001579 75005 (pm-access-cp_20261124-164952); AP261125000001581 (pm-access-cp-reject_20261125)",
         "db": {
           "kind": "AA:CP",
           "statusId": 75005,
           "en": "Pending Approval",
           "bm": "Menunggu Kelulusan",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -60,14 +59,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261125000001580 75000 (pm-access-mr_20261125-022205)",
         "db": {
           "kind": "AA:MR",
           "statusId": 75000,
           "en": "Pending Approval",
           "bm": "Menunggu Kelulusan",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -95,14 +93,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261124000001579 75005→75020 (pm-access-cp_20261124-164952)",
         "db": {
           "kind": "AA:CP",
           "statusId": 75020,
           "en": "Pending Activation",
           "bm": "Menunggu Pengaktifan",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -130,14 +127,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261125000001580 75000→75020 (pm-access-mr_20261125-022205)",
         "db": {
           "kind": "AA:MR",
           "statusId": 75020,
           "en": "Pending Activation",
           "bm": "Menunggu Pengaktifan",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -165,14 +161,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261124000001579 75020→75010 (pm-access-cp_20261124-164952, 2026-11-25)",
         "db": {
           "kind": "AA:CP",
           "statusId": 75010,
           "en": "Completed",
           "bm": "Selesai",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -200,14 +195,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261125000001580 75020→75010 (pm-access-mr_20261125-022205)",
         "db": {
           "kind": "AA:MR",
           "statusId": 75010,
           "en": "Completed",
           "bm": "Selesai",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -235,13 +229,12 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261125000001581 75005→75015 (pm-access-cp-reject, 2026-11-25)",
         "db": {
           "kind": "AA:CP",
           "statusId": 75015,
           "en": "Rejected",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -269,13 +262,12 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
+        "verification": "execution",
+        "evidence": "SIT run (EN): AP261125000001582 75000→75015 (pm-access-mr-reject, 2026-11-25)",
         "db": {
           "kind": "AA:MR",
           "statusId": 75015,
           "en": "Rejected",
-          "observeOnly": true,
           "evidence": "claude-skills memory reference-pm-access-application-flow (FL fullfilment and PM.zip) + SIT DB 2026-11-23: PM_WORKFLOW_STATUS CP/MR on PM_ACCESS_APPL (statuses 75000/75005/75010/75015/75020/75030 all in use). No document of ours yet",
           "waitSec": 120
         }
@@ -287,8 +279,8 @@
       "id": "pm-access-cp",
       "submodule": "access-application",
       "title": "Company Profile access: submit, approve, activate",
-      "verification": "documentation",
-      "notes": "New IC path (75005 → 75020 → 75010). Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "verification": "execution",
+      "notes": "New IC path (75005 → 75020 → 75010). Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it. Verified on SIT 2026-11-25 (EN).",
       "steps": [
         "PM-001",
         "PM-011",
@@ -299,8 +291,8 @@
       "id": "pm-access-mr",
       "submodule": "access-application",
       "title": "Market Research access: submit, approve, activate",
-      "verification": "documentation",
-      "notes": "New IC path (75000 → 75020 → 75010). Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "verification": "execution",
+      "notes": "New IC path (75000 → 75020 → 75010). Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it. Verified on SIT 2026-11-25 (EN).",
       "steps": [
         "PM-002",
         "PM-012",
@@ -311,8 +303,8 @@
       "id": "pm-access-cp-reject",
       "submodule": "reject",
       "title": "Company Profile access rejected",
-      "verification": "documentation",
-      "notes": "75005 → 75015. Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "verification": "execution",
+      "notes": "75005 → 75015. Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it. Verified on SIT 2026-11-25 (EN).",
       "steps": [
         "PM-001",
         "PM-031"
@@ -322,8 +314,8 @@
       "id": "pm-access-mr-reject",
       "submodule": "reject",
       "title": "Market Research access rejected",
-      "verification": "documentation",
-      "notes": "75000 → 75015. Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it.",
+      "verification": "execution",
+      "notes": "75000 → 75015. Manual steps: reconcile each with AA=<application no> for the first, then resume; the SIT DB status (PM_WORKFLOW_STATUS) confirms it. Verified on SIT 2026-11-25 (EN).",
       "steps": [
         "PM-002",
         "PM-032"

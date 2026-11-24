@@ -2719,14 +2719,14 @@
    "method": "flow",
    "flow": "pm-access-cp",
    "upTo": "PM-001",
-   "manual": true
+   "manual": false
   },
   "PM|MR|75000": {
    "spec": "tests/data-prep/en/by-status/pm/MR/75000-Pending-Approval.spec.ts",
    "method": "flow",
    "flow": "pm-access-mr",
    "upTo": "PM-002",
-   "manual": true
+   "manual": false
   },
   "PP|PE|30006": {
    "spec": "tests/data-prep/en/by-status/pp/PE/30006-Pending-Submission.spec.ts",

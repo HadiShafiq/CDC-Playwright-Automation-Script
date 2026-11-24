@@ -1,0 +1,35 @@
+
+Running 2 tests using 1 worker
+
+[02:33:32] pm-access-mr-reject/01_PM-002: PM-002 Agency user submits an Access Application for Market Research access — role Applicant (non-federal agency user), login: Katalon default account of the step
+[02:33:32] pm-access-mr-reject/01_PM-002: PM-002: applicant QA AUTO PEMOHON 2836, IC 900174956917, e-mail newsupplier001@commercedc.com.my, Market Research
+[02:33:37] pm-access-mr-reject/01_PM-002: PM-002: district BATU PAHAT, city AYER HITAM
+[02:33:39] pm-access-mr-reject/01_PM-002: PM-002: attached File_pdf_for_testing.pdf to "*Salinan Kad Pengenalan yang disahkan oleh Ketua Jabatan"
+[02:33:39] pm-access-mr-reject/01_PM-002: PM-002: attached File_pdf_for_testing.pdf to "*Surat Pengesahan oleh Ketua Jabatan"
+[02:33:40] pm-access-mr-reject/01_PM-002: PM-002: dialog: "Confirmation Message Are you sure to submit this application? Yes No" -> Yes
+[02:33:44] pm-access-mr-reject/01_PM-002: Closed the TERKINI announcement
+[02:33:45] pm-access-mr-reject/01_PM-002: DB status AA:MR AP261125000001582: 75000 Pending Approval / Menunggu Kelulusan (expected 75000, OK)
+[02:33:46] pm-access-mr-reject/01_PM-002: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr-reject [EN] Market Research access rejected › 01 PM-002 Agency user submits an Access Application for Market Research access @flow-pm-access-mr-reject @module-pm @lang-en @FLOW @pm-access-mr-reject/01_PM-002 @PM-002 (13.7s)
+[02:33:47] pm-access-mr-reject/02_PM-032: PM-032 Market Research Approver rejects the Market Research access — role EP_ADMIN_2 / MARKET_RESEARCH_APVR, login: Katalon default account of the step
+[02:33:48] pm-access-mr-reject/02_PM-032: PM-032: Approve Market Research: pool of 14
+[02:33:48] pm-access-mr-reject/02_PM-032: PM-032: Approve Market Research: using 201810011210
+[02:33:51] pm-access-mr-reject/02_PM-032: Closed the TERKINI announcement
+[02:33:51] pm-access-mr-reject/02_PM-032: PM-032: login 201810011210
+[02:34:52] pm-access-mr-reject/02_PM-032: PM-032: login as 201810011210 failed, trying the next pool user
+[02:34:52] pm-access-mr-reject/02_PM-032: PM-032: Approve Market Research: using 650911025765
+[02:34:53] pm-access-mr-reject/02_PM-032: Closed the TERKINI announcement
+[02:34:53] pm-access-mr-reject/02_PM-032: PM-032: login 650911025765
+[02:35:54] pm-access-mr-reject/02_PM-032: PM-032: login as 650911025765 failed, trying the next pool user
+[02:35:54] pm-access-mr-reject/02_PM-032: PM-032: Approve Market Research: using 250000991001
+[02:35:55] pm-access-mr-reject/02_PM-032: Closed the TERKINI announcement
+[02:35:55] pm-access-mr-reject/02_PM-032: PM-032: login 250000991001
+[02:35:57] pm-access-mr-reject/02_PM-032: PM-032: Logged in as 250000991001
+[02:36:02] pm-access-mr-reject/02_PM-032: PM-032: claimed AP261125000001582: now in My Task
+[02:36:04] pm-access-mr-reject/02_PM-032: PM-032: dialog: "Confirmation Message Are you sure to reject this application? Yes No" -> Yes
+[02:36:09] pm-access-mr-reject/02_PM-032: Closed the TERKINI announcement
+[02:36:09] pm-access-mr-reject/02_PM-032: DB status AA:MR AP261125000001582: 75015 Rejected / Ditolak (expected 75015, OK)
+[02:36:10] pm-access-mr-reject/02_PM-032: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\pm.flow.spec.ts:12:11 › pm-access-mr-reject [EN] Market Research access rejected › 02 PM-032 Market Research Approver rejects the Market Research access @flow-pm-access-mr-reject @module-pm @lang-en @FLOW @pm-access-mr-reject/02_PM-032 @PM-032 (2.4m)
+
+  2 passed (2.7m)

@@ -47,3 +47,11 @@ Mark each defect **Confirmed** (reproduced, evidence attached) or **Suspected** 
 - Evidence: test-results/SIT/2026-11-02_165610/ (test-failed-1.png)
 - Workaround in use: MOF-006 is marked skipped with this message when ERR-722554 is shown; Register Category, Supporting Documents and Declaration are opened directly from the left menu.
 - Needs: SIT team to add the individual shareholders (total RM600,000) for this company, or another MOF supplier account with consistent equity data registered over 6 months ago.
+
+## SIT: one confirmed Access Application submit creates two applications (suspected, 2026-11-24)
+- Where: public page /company-profile-market-research (PM Access Application), Serah -> "Adakah anda pasti untuk menghantar permohonan ini?" -> Ya
+- Steps: run pm-access-cp_20261124-164952, PM-001 attempt 17:05:24; the log shows ONE "Ya" click (playwright.log line 111)
+- Expected result: one application
+- Actual result: two applications for the same applicant, 2 s apart: AP261124000001578 (17:05:33, CP 75005, left pending) and AP261124000001579 (17:05:35, used by the flow); both numbers in the success message
+- Evidence: SIT DB pm_access_appl / pm_workflow_status; .data/SIT/hadishafiq/runs/pm-access-cp_20261124-164952/events.jsonl
+- Needs: SIT team to check whether the Serah action is bound twice. AP…1578 is a stray test record (do not use)
