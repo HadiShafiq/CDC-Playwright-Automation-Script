@@ -7,7 +7,7 @@
   "language": "EN",
   "cr": null,
   "createdAt": "2026-11-25T05:15:14+08:00",
-  "updatedAt": "2026-11-25T05:21:14+08:00",
+  "updatedAt": "2026-11-25T05:22:02+08:00",
   "from": null,
   "to": null,
   "docs": {
@@ -40,7 +40,7 @@
       "checkpoint": "RN_CODE_ASSIGNED"
     },
     "KAT-039": {
-      "state": "failed",
+      "state": "running",
       "attempts": [
         {
           "runId": "2026-11-25_051515",
@@ -56,15 +56,19 @@
             "at": "2026-11-25T05:21:14+08:00",
             "decision": "did not go through"
           }
+        },
+        {
+          "runId": "2026-11-25_052154",
+          "startedAt": "2026-11-25T05:22:02+08:00",
+          "result": "running",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\dp-assign-code\\02_KAT-039\\2026-11-25_052154"
         }
       ],
       "outputs": {},
-      "login": "account of KAT-030"
+      "login": "account of KAT-001 (710527085562) — self-heal: the open BPM task \"Submit PR\" is assigned to 710527085562, not to NURULAINMOF"
     }
   },
-  "allowRerun": [
-    "KAT-039"
-  ],
+  "allowRerun": [],
   "vars": {},
   "status": "in-progress"
 }

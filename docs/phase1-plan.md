@@ -101,6 +101,8 @@ Pending, in order:
 
 **Update 2026-11-25 05:30 (autonomous run):** coverage **351/804 = 43.7%** (101 statuses reached by our own documents' DB history + 250 by simulation; PM 2/2, FL 122/165, SM 39/74, SC 159/308, CT 29/210, CM/PP/CD 0). Verified today: PM ×4 (EN), sm-renewal, qt-doc-revision, qt-bpk-revision, qt-to-recommendation-no-bpk (14/14), KAT-038 assign code; 18 earlier flows marked verified from completed runs. Blocked: FL (iGFMAS, no PR passed 40110→40300 on SIT since 2026-11-24 05:02), sm-update-profile family (supplier data), sm-cancel-mof (expired soft cert defect), ~130 SC statuses of QT sub-workflows (SF/LI/PCB/EC/PD… no flow creates them), CT amendments (KAT-045 decision). QT260000000004536 left at 60030 (spare for BPK steps).
 
+**Next (after the SIT 06:00-07:00 restart window):** `npm run qa -- run --env sit --flow qt-supplier-finalization --input QT=QT260000000004539` (new QT-016, Supplier Finalization SF 622xx; "Consolidate Report" form not mapped yet → the step stops before acting and lists the task: map it, then rerun). Then LOI (LI 624xx). Re-check FL PRs 5075/5076 (iGFMAS).
+
 New-PC setup: `npm ci`, `npx playwright install chromium`; copy `.auth/` and `.data/` from the old PC (never via git);
 DBeaver workspace `EP` with the "SIT" connection (sit-db reads `%APPDATA%\DBeaverData\workspace6\EP\.dbeaver`);
 Oracle client sqlplus at `C:\oracle\product\10.2.0\client_1\bin\sqlplus.exe` (or env `SQLPLUS_PATH`); network/VPN to SIT;

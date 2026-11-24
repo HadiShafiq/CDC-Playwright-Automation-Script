@@ -70,3 +70,18 @@ Running 2 tests using 1 worker
   1 failed
     [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 02 KAT-039 Assign Code - Service @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/02_KAT-039 @KAT-039 
   1 passed (5.6m)
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\dp.flow.spec.ts:12:11 › dp-assign-code [EN] Assign Code on a Request Note (product, then service) › 01 KAT-038 Assign Code - Product (Request Note lines without item code) @flow-dp-assign-code @module-dp @lang-en @FLOW @dp-assign-code/01_KAT-038 @KAT-038
+[05:22:02] dp-assign-code/02_KAT-039: KAT-039 Assign Code - Service — role Codifier, login: account of KAT-001 (710527085562) — self-heal: the open BPM task "Submit PR" is assigned to 710527085562, not to NURULAINMOF
+[05:22:02] dp-assign-code/02_KAT-039: Test data corrected (support/katalon/data-overrides.json): Document_Number: Assign Code (service) on RN260000000004511 (KAT-023 from SQ260000000002273, approved 2026-11-04), which sits in the Group Task of nurulainmof (AINHALIM, the KAT-030 login) as Pending Assign Item Code; RN260000000004701 was done by KAT-038
+[05:22:02] dp-assign-code/02_KAT-039: Using the login of KAT-030 (support/katalon/data-overrides.json)
+[05:22:02] dp-assign-code/02_KAT-039: Data file "1. Request Notes.xlsx" (Data Files/Akta_882_RU/1- Request Note (RN)) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[05:22:02] dp-assign-code/02_KAT-039: Flow inputs: Document_Number=RN260000000004925
+[05:22:02] dp-assign-code/02_KAT-039: Flow login: the account of KAT-001
+[05:22:05] dp-assign-code/02_KAT-039: Closed the TERKINI announcement
+[05:22:09] dp-assign-code/02_KAT-039: Closed the TERKINI announcement
+[05:22:26] dp-assign-code/02_KAT-039: RN260000000004925 is already in My Task (no claim needed)
+[05:22:26] dp-assign-code/02_KAT-039: RN260000000004925 is already in My Task (no claim needed)
+[05:22:50] dp-assign-code/02_KAT-039: Total Assign buttons found: 0

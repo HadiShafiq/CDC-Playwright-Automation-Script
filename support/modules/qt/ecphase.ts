@@ -304,13 +304,15 @@ async function approveCommittee(ctx: EcCtx, qt: string) {
 const HANDLERS: [RegExp, (ctx: EcCtx, qt: string) => Promise<void>][] = [
   [/Assign (EC\/OC|TEC|FEC) Committee|Committee Formation Submission/i, assignCommittee],
   [/Approve Committee/i, approveCommittee],
-  [/Coordinate (EC|OC|TEC|FEC) Meeting/i, coordinateMeeting],
-  [/Finalize (EC|OC|TEC|FEC) Evaluation/i, finalizeEvaluation],
-  [/Endorse (EC|OC|TEC|FEC) Evaluation/i, (c, q) => endorseEvaluation(c, q, 'Endorsement')],
-  [/SignOff (EC|OC|TEC|FEC) Evaluation/i, (c, q) => endorseEvaluation(c, q, 'Sign Off')],
+  // FC = Finalization Committee (Supplier Finalization, SF 622xx, after 60023): same task shapes, "Selection" instead of
+  // "Evaluation" (SIT QT260000000003654, read 2026-11-25). Not run on SIT yet: the forms may differ.
+  [/Coordinate (EC|OC|TEC|FEC|FC) Meeting/i, coordinateMeeting],
+  [/Finalize (EC|OC|TEC|FEC) Evaluation|Finalize FC Selection/i, finalizeEvaluation],
+  [/Endorse (EC|OC|TEC|FEC) Evaluation|Endorse FC Selection/i, (c, q) => endorseEvaluation(c, q, 'Endorsement')],
+  [/SignOff (EC|OC|TEC|FEC) Evaluation|SignOff FC Selection/i, (c, q) => endorseEvaluation(c, q, 'Sign Off')],
 ];
 // members' Update/View tasks are withdrawn once the secretary finalizes; Handle Error is a parked BPM fault
-const SKIP = /Update (EC|OC|TEC|FEC) Evaluation|View Evaluation|Update Scoring|View Scoring|Handle Error/i;
+const SKIP = /Update (EC|OC|TEC|FEC) Evaluation|Update FC Selection|View Evaluation|Update Scoring|View Scoring|Handle Error/i;
 
 /** Act on the QT's open evaluation tasks until the SIT DB shows `target` (kind 'QT' or 'QT:OC' …). */
 export async function ecPhase(ctx: EcCtx, qt: string, target: { kind: string; statusId: number }, maxMinutes = 90): Promise<{ messages: string[] }> {

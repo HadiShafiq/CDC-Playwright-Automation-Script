@@ -185,5 +185,7 @@ export const MODULE_STEPS: Record<string, ModuleStep> = {
   'QT-013': { loginAs: QT_SIT.users.OC_SECRETARY, run: async (ctx) => ecPhase(ctx, need(ctx, 'QT'), { kind: 'QT:OC', statusId: 62004 }) },
   'QT-014': { loginAs: QT_SIT.users.TEC_CHAIR, run: async (ctx) => ecPhase(ctx, need(ctx, 'QT'), { kind: 'QT:TEC', statusId: 62105 }) },
   'QT-015': { loginAs: QT_SIT.users.FEC_CHAIR, run: async (ctx) => ecPhase(ctx, need(ctx, 'QT'), { kind: 'QT', statusId: 60023 }) },
+  // Supplier Finalization (SF): Consolidate Report → FC meeting → finalize → endorse ×n → sign off → 62213 Pending LOI Preparation
+  'QT-016': { loginAs: QT_SIT.users.FEC_CHAIR, run: async (ctx) => ecPhase(ctx, need(ctx, 'QT'), { kind: 'QT:SF', statusId: 62213 }) },
   'QT-006': { loginAs: QT_SIT.users.SC_CHAIR, run: async (ctx) => approveTask(ctx, need(ctx, 'QT'), { button: 'Sign Off', remark: 'Signed off (QA automation)' }) },
 };

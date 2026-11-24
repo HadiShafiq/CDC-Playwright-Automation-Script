@@ -606,6 +606,41 @@
           "evidence": "SIT DB paths read 2026-11-23: QT260000000004373 (…60004 → 60005 → 60006 Pending Document Revision), QT260000000004374 (…60030, BPK 60150 → 60153 Pending Document Revision (BPK)) — both made by unit_test (kapitan) 11 Nov 2026"
         }
       }
+    },
+    "QT-016": {
+      "title": "Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off",
+      "role": "Desk Officer / FC Chair / Members",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/ecphase.ts (FC handlers added 2026-11-25 from the SIT task names of QT260000000003654; Consolidate Report not mapped yet)",
+      "instructions": "After 60023: Consolidate Report, Coordinate FC Meeting, Finalize FC Selection, Endorse FC Selection (each member), SignOff FC Selection.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SF_LOI_PREPARATION",
+        "description": "Supplier Finalization signed off; LOI to prepare",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT DB QT260000000003654 (2026-10-02): SF 62200 → 62201 → 62210 → 62211 → 62213 → 62203; BPM tasks Consolidate Report, Coordinate FC Meeting, Finalize/Endorse/SignOff FC Selection, Prepare LOI/LOA",
+        "db": {
+          "kind": "QT:SF",
+          "statusId": 62213,
+          "en": "Pending LOI Preparation / Acknowledgement or Negotiation",
+          "bm": null,
+          "evidence": "SIT QT260000000003654 read 2026-11-25",
+          "waitSec": 300,
+          "observeOnly": true
+        }
+      }
     }
   },
   "flows": [
@@ -688,6 +723,16 @@
         "QT-006",
         "QT-007",
         "QT-108"
+      ]
+    },
+    {
+      "id": "qt-supplier-finalization",
+      "submodule": "award",
+      "title": "QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213)",
+      "verification": "unverified",
+      "notes": "Built 2026-11-25 (not run yet). Give a QT at 60023 with --input QT=… (e.g. QT260000000004539 or QT260000000004524). Path of SIT QT260000000003654.",
+      "steps": [
+        "QT-016"
       ]
     }
   ]
