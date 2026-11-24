@@ -4,7 +4,7 @@
 // Module:    sm / bumiputera · flow sm-bumi-status
 // Stops at:  APPL_DECLARED — Declared; supporting documents to verify (after SM-004, Supplier)
 // DB status: AP 20101 Pending Supporting Document Verification
-// Path:      SM-023 (manual) → SM-004 (manual)
+// Path:      SM-023 (manual) → SM-004
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/bumiputera/sm-bumi-status/02-APPL_DECLARED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-bumi-status --status APPL_DECLARED

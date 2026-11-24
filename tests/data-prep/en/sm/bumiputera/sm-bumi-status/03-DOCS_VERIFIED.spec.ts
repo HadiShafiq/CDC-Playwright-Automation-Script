@@ -4,7 +4,7 @@
 // Module:    sm / bumiputera · flow sm-bumi-status
 // Stops at:  DOCS_VERIFIED — Supporting documents verified; Processing Officer to review (after SM-005, SDO)
 // DB status: AP 20104 Pending Review Application
-// Path:      SM-023 (manual) → SM-004 (manual) → SM-005
+// Path:      SM-023 (manual) → SM-004 → SM-005
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/bumiputera/sm-bumi-status/03-DOCS_VERIFIED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-bumi-status --status DOCS_VERIFIED

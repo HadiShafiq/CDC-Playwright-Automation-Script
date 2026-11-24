@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-before
 // Stops at:  REGISTERED — Approved and registered (after SM-013, Approver)
 // DB status: AP 20199 Registered
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-007 (manual) → SM-008 (manual) → SM-009 (manual) → SM-010 (manual) → SM-013 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-007 (manual) → SM-008 (manual) → SM-009 (manual) → SM-010 (manual) → SM-013
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-before/08-REGISTERED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-before --status REGISTERED

@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-reject-by-approver
 // Stops at:  DOCS_VERIFIED — Supporting documents verified; Processing Officer to review (after SM-005, SDO)
 // DB status: AP 20104 Pending Review Application
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005
+// Path:      SM-022 → SM-004 → SM-005
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-reject-by-approver/03-DOCS_VERIFIED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-reject-by-approver --status DOCS_VERIFIED

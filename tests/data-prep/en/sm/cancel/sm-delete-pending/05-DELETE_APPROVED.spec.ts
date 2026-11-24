@@ -4,7 +4,7 @@
 // Module:    sm / cancel · flow sm-delete-pending
 // Stops at:  DELETE_APPROVED — Cancellation approved (after SM-042, Processing Officer)
 // DB status: AP 20399 Cancellation Approved
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-041 (manual) → SM-042 (manual)
+// Path:      SM-022 → SM-004 → SM-005 → SM-041 (manual) → SM-042 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/cancel/sm-delete-pending/05-DELETE_APPROVED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-delete-pending --status DELETE_APPROVED

@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-after
 // Stops at:  APPROVED_SV_AFTER — Approved; site visit after approval to assign (after SM-014, Approver)
 // DB status: AP 20117 Pending Site Visit Assignment - After Approval
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-006 → SM-014 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-006 → SM-014 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-after/05-APPROVED_SV_AFTER.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-after --status APPROVED_SV_AFTER

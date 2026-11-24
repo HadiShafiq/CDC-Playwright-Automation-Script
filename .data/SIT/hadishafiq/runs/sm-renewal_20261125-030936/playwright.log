@@ -1,0 +1,280 @@
+
+Running 6 tests using 1 worker
+
+[03:09:43] sm-renewal/01_SM-024: SM-024 Create the Renewal MOF Account application (draft) — role Supplier, login: Katalon default account of the step
+[03:09:47] sm-renewal/01_SM-024: Logged in as 900101010815
+[03:10:09] sm-renewal/01_SM-024: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 (25.8s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 06 SM-012 Pay the registration fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /MOF Application|Update MOF Profile Application/
+    Received string:  "Renewal MOF Account Application - ePerolehan"
+    Timeout: 15000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 15000ms
+        32 × locator resolved to <html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" class="aui ltr yui3-js-enabled webkit ltr js chrome chrome156 chrome156-0 win">…</html>
+           - unexpected value "Renewal MOF Account Application - ePerolehan"
+
+
+       at ..\pages\MofApplicationPage.ts:168
+
+      166 |   async expectOnApplication() {
+      167 |     // Existing draft: "MOF Application"; new, unsaved application: "Update MOF Profile Application".
+    > 168 |     await expect(this.page).toHaveTitle(/MOF Application|Update MOF Profile Application/);
+          |                             ^
+      169 |     await expect(this.sectionTab('Company Basic Information')).toBeVisible();
+      170 |   }
+      171 |
+        at MofApplicationPage.expectOnApplication (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\pages\MofApplicationPage.ts:168:29)
+        at createRenewalDraft (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:232:38)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:103:65)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_030936\flows-en-sm.flow-sm-renewa-f7c9b--Account-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_030936\flows-en-sm.flow-sm-renewa-f7c9b--Account-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 
+  5 did not run
+
+Running 6 tests using 1 worker
+
+[03:11:17] sm-renewal/01_SM-024: BLOCKED: SM-024 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-renewal_20261125-030936 --step SM-024
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 06 SM-012 Pay the registration fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/06_SM-012 @SM-012
+
+  6 skipped
+
+Running 6 tests using 1 worker
+
+[03:12:03] sm-renewal/01_SM-024: SM-024 Create the Renewal MOF Account application (draft) — role Supplier, login: Katalon default account of the step
+[03:12:07] sm-renewal/01_SM-024: Logged in as 900101010815
+[03:12:29] sm-renewal/01_SM-024: Renewal Save: Please click HERE or navigate to Task List Menu in order to proceed with Renew MOF Account KR-25112026-0001.
+[03:12:32] sm-renewal/01_SM-024: Closed the TERKINI announcement
+[03:12:33] sm-renewal/01_SM-024: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 (30.4s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 06 SM-012 Pay the registration fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 
+
+    Error: Renewal draft not confirmed: Please click HERE or navigate to Task List Menu in order to proceed with Renew MOF Account KR-25112026-0001.
+
+       at ..\support\modules\sm\application.ts:238
+
+      236 |   evidence.log(`Renewal Save: ${saved}`);
+      237 |   await evidence.capture('renewal_draft', { step: 'Renewal MOF Account: Save', expected: 'KR number', actual: saved });
+    > 238 |   if (!ap) throw new Error(`Renewal draft not confirmed: ${saved || 'no message'}`);
+          |                  ^
+      239 |   audit(env.name, WHO, `SM-024 Renewal MOF Account of ${acct.username}`, `**Draft ${ap} saved**`, 'Save', 'Declare + processing fee');
+      240 |   await ssoLogout(page, env);
+      241 |   return ap;
+        at createRenewalDraft (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:238:18)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:103:65)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_031154\flows-en-sm.flow-sm-renewa-f7c9b--Account-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_031154\flows-en-sm.flow-sm-renewa-f7c9b--Account-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 
+  5 did not run
+
+Running 6 tests using 1 worker
+
+[03:13:41] sm-renewal/01_SM-024: BLOCKED: SM-024 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-renewal_20261125-030936 --step SM-024
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/02_SM-002 @SM-002
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 06 SM-012 Pay the registration fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/06_SM-012 @SM-012
+
+  6 skipped
+
+Running 6 tests using 1 worker
+
+[03:14:51] sm-renewal/01_SM-024: SM-024 Create the Renewal MOF Account application (draft) — role Supplier, login: Katalon default account of the step
+[03:14:55] sm-renewal/01_SM-024: Logged in as 900101010815
+[03:14:57] sm-renewal/01_SM-024: Renewal draft already exists: KR-25112026-0001
+[03:15:00] sm-renewal/01_SM-024: Closed the TERKINI announcement
+[03:15:01] sm-renewal/01_SM-024: Closed the TERKINI announcement
+[03:15:01] sm-renewal/01_SM-024: DB status AP KR-25112026-0001: 20100 Pending Application Declaration / Menunggu Pengisytiharan Permohonan (expected 20100, OK)
+[03:15:02] sm-renewal/01_SM-024: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024 (11.0s)
+[03:15:04] sm-renewal/02_SM-002: SM-002 Declare the application and pay the processing fee — role Supplier, login: Katalon default account of the step
+[03:15:09] sm-renewal/02_SM-002: Logged in as 900101010815
+[03:15:10] sm-renewal/02_SM-002: My Task: KR-25112026-0001 Supplier Application Renew MOF draft application ( Test Company 01167338 ) 25/11/2026 03:12 25/11/2027 03:12 Pending Applic
+[03:15:14] sm-renewal/02_SM-002: Uploaded "BORANG PENGISYTIHARAN MOF"
+[03:15:14] sm-renewal/02_SM-002: Uploaded "SURAT AKUAN SYARIKAT - LAMPIRAN 11"
+[03:15:15] sm-renewal/02_SM-002: Uploaded "UNDANG-UNDANG TUBUH/ PERLEMBAGAAN PERTUBUHAN"
+[03:15:15] sm-renewal/02_SM-002: Uploaded "MINIT MESYUARAT AGUNG TAHUNAN PERTUBUHAN TERKINI"
+[03:15:15] sm-renewal/02_SM-002: Supporting documents: uploaded 4; Save: Renew MOF Account : KR-25112026-0001 has been successfully saved
+[03:15:17] sm-renewal/02_SM-002: Bank Information: all 0 branch(es) already linked to the bank account
+[03:15:23] sm-renewal/02_SM-002: Declare → Proceed: Your page has expired! Please reload again. (ERR-100056) | Your Renew MOF Account (KR-25112026-0001) has been successfully declared. Please pay RM50.00 processing fee within 365 days to avoid your application being cancelled automatically by the system. Please click HERE or go Task List menu to do payment.
+[03:15:27] sm-renewal/02_SM-002: Processing fee → Proceed: Processing fee was successful made. Your application has been submitted to the Unit Pendaftaran Syarikat, BPK, Ministry of Finance for processing. You can check the application status via e-mail or in ePerolehan System.
+[03:15:29] sm-renewal/02_SM-002: Closed the TERKINI announcement
+[03:15:30] sm-renewal/02_SM-002: Closed the TERKINI announcement
+[03:16:06] sm-renewal/02_SM-002: DB status AP KR-25112026-0001: 20101 Pending Supporting Document Verification / Menunggu Pengesahan Dokumen Sokongan (expected 20101, OK)
+[03:16:07] sm-renewal/02_SM-002: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/02_SM-002 @SM-002 (1.1m)
+[03:16:09] sm-renewal/03_SM-005: SM-005 SDO verifies the supporting documents — role SDO, login: Katalon default account of the step
+[03:16:14] sm-renewal/03_SM-005: Logged in as 900101010815
+[03:16:22] sm-renewal/03_SM-005: Round 1 Task Status of KR-25112026-0001:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [780729035858, 920302095001, 910727015792, 880000000001, 070820252007, 880519565015, 851221145103, 660000000004, 810901075224, 881017045401, 771227145503, 880730055010, 870906435078, 770617105197, 224422111234, 100000000068, 871023146138, 701012105670, 789078907890, 800101085644, 800611125052, 880314086440, 810309115434, 820219035835, 781126145411, 970112055215, 565656565656] ASSIGNED
+[03:16:25] sm-renewal/03_SM-005: Closed the TERKINI announcement
+[03:16:25] sm-renewal/03_SM-005: Pending: "Verify Supporting Documents" assigned to 780729035858, 920302095001, 910727015792, 880000000001, 070820252007, 880519565015, 851221145103, 660000000004, 810901075224, 881017045401, 771227145503, 880730055010, 870906435078, 770617105197, 224422111234, 100000000068, 871023146138, 701012105670, 789078907890, 800101085644, 800611125052, 880314086440, 810309115434, 820219035835, 781126145411, 970112055215, 565656565656 → logging in as 780729035858
+[03:16:27] sm-renewal/03_SM-005: Logged in as 780729035858
+[03:17:08] sm-renewal/03_SM-005: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005 (1.0m)
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/05_SM-011 @SM-011
+  -  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 06 SM-012 Pay the registration fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/06_SM-012 @SM-012
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005 
+
+    Error: My Task row for Test Company 01167338
+
+    expect(locator).toBeVisible() failed
+
+    Locator: locator('tbody[id*="taskListMyTaskId_data"] tr').filter({ hasText: /Test Company 01167338/i }).first()
+    Expected: visible
+    Timeout: 20000ms
+    Error: element(s) not found
+
+    Call log:
+      - My Task row for Test Company 01167338 locator('tbody[id*="taskListMyTaskId_data"] tr').filter({ hasText: /Test Company 01167338/i }).first() with timeout 20000ms
+      - waiting for locator('tbody[id*="taskListMyTaskId_data"] tr').filter({ hasText: /Test Company 01167338/i }).first()
+
+
+       at ..\support\modules\sm\registration.ts:587
+
+      585 |   }
+      586 |   const myRow = page.locator('tbody[id*="taskListMyTaskId_data"] tr').filter({ hasText: company }).first();
+    > 587 |   await expect(myRow, `My Task row for ${companyName}`).toBeVisible({ timeout: 20_000 });
+          |                                                         ^
+      588 |   const title = clean(await myRow.innerText());
+      589 |   log(`Opening My Task "${title.slice(0, 140)}"`);
+      590 |   await myRow.locator('a').first().click();
+        at openOfficerTask (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:587:57)
+        at reg003 (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\registration.ts:643:21)
+        at Object.smOfficer (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:48:22)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_031441\flows-en-sm.flow-sm-renewa-d7a0c-es-the-supporting-documents-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_031441\flows-en-sm.flow-sm-renewa-d7a0c-es-the-supporting-documents-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005 
+  3 did not run
+  2 passed (2.4m)
+
+Running 6 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 01 SM-024 Create the Renewal MOF Account application (draft) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/01_SM-024 @SM-024
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 02 SM-002 Declare the application and pay the processing fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/02_SM-002 @SM-002
+[03:18:17] sm-renewal/03_SM-005: SELF-HEAL SM-005: retry once — the SIT DB still shows KR-25112026-0001 at 20101 Pending Supporting Document Verification, as before the attempt
+[03:18:19] sm-renewal/03_SM-005: SM-005 SDO verifies the supporting documents — role SDO, login: Katalon default account of the step
+[03:18:23] sm-renewal/03_SM-005: Logged in as 900101010815
+[03:18:30] sm-renewal/03_SM-005: Round 1 Task Status of KR-25112026-0001:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [780729035858, 920302095001, 910727015792, 880000000001, 070820252007, 880519565015, 851221145103, 660000000004, 810901075224, 881017045401, 771227145503, 880730055010, 870906435078, 770617105197, 224422111234, 100000000068, 871023146138, 701012105670, 789078907890, 800101085644, 800611125052, 880314086440, 810309115434, 820219035835, 781126145411, 970112055215, 565656565656] ASSIGNED
+[03:18:32] sm-renewal/03_SM-005: Closed the TERKINI announcement
+[03:18:32] sm-renewal/03_SM-005: Pending: "Verify Supporting Documents" assigned to 780729035858, 920302095001, 910727015792, 880000000001, 070820252007, 880519565015, 851221145103, 660000000004, 810901075224, 881017045401, 771227145503, 880730055010, 870906435078, 770617105197, 224422111234, 100000000068, 871023146138, 701012105670, 789078907890, 800101085644, 800611125052, 880314086440, 810309115434, 820219035835, 781126145411, 970112055215, 565656565656 → logging in as 780729035858
+[03:18:34] sm-renewal/03_SM-005: Logged in as 780729035858
+[03:18:40] sm-renewal/03_SM-005: Group Task has it: claiming "KR-25112026-0001 Supplier Application Renew MOF application - verify supporting documents ( Test Company 01167338 ) 25/1"
+[03:18:44] sm-renewal/03_SM-005: Opening My Task "KR-25112026-0001 Supplier Application Renew MOF application - verify supporting documents ( Test Company 01167338 ) 25/11/2026 03:16 Pending"
+[03:18:56] sm-renewal/03_SM-005: 780729035858 did "verify supporting documents": Application No. KR-25112026-0001 is successfully sent to the Processing Officer(PO TEST CR28775 (C)) for approval
+[03:18:58] sm-renewal/03_SM-005: Closed the TERKINI announcement
+[03:18:58] sm-renewal/03_SM-005: DB status AP KR-25112026-0001: 20104 Pending Review Application / Menunggu Semakan Permohonan (expected 20104, OK)
+[03:18:59] sm-renewal/03_SM-005: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 03 SM-005 SDO verifies the supporting documents @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/03_SM-005 @SM-005 (42.8s)
+[03:19:01] sm-renewal/04_SM-006: SM-006 Processing Officer reviews and recommends — role Processing Officer, login: Katalon default account of the step
+[03:19:05] sm-renewal/04_SM-006: Logged in as 900101010815
+[03:19:11] sm-renewal/04_SM-006: Round 1 Task Status of KR-25112026-0001:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [] COMPLETED
+   Review Application [871112086003] ASSIGNED
+[03:19:14] sm-renewal/04_SM-006: Closed the TERKINI announcement
+[03:19:14] sm-renewal/04_SM-006: Pending: "Review Application" assigned to 871112086003 → logging in as 871112086003
+[03:19:15] sm-renewal/04_SM-006: Logged in as 871112086003
+[03:19:24] sm-renewal/04_SM-006: Opening My Task "KR-25112026-0001 Supplier Application Review Renew MOF application ( Test Company 01167338 ) 25/11/2026 03:18 25/11/2026 04/12/2026 03:18 ( "
+[03:19:30] sm-renewal/04_SM-006: Category codes: Approve All (no banner)
+[03:19:44] sm-renewal/04_SM-006: 871112086003 did "review → category codes Approve All → All Valid → Recommend to Approve": Application No. (KR-25112026-0001) is recommended for approval and has been sent to 1) Ku Harmizan Bin Ku Haron 2) Mohd Alif Aziz 3) Shafiza binti Arshad 4) Massliana Binti Mohamed Mansor 5) Wan Mohd Asri Bin Wan Yusof 6) Nor Haffezul Bin Shafie 7) Do Not Use By Mmz - Processing Officer 8) Othman Bin Semail
+[03:19:46] sm-renewal/04_SM-006: Closed the TERKINI announcement
+[03:19:47] sm-renewal/04_SM-006: DB status AP KR-25112026-0001: 20108 Pending Application Approval / Menunggu Kelulusan Permohonan (expected 20108, OK)
+[03:19:48] sm-renewal/04_SM-006: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 04 SM-006 Processing Officer reviews and recommends @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/04_SM-006 @SM-006 (48.8s)
+[03:19:50] sm-renewal/05_SM-011: SM-011 Approver approves (registration fee to pay) — role Approver, login: Katalon default account of the step
+[03:19:54] sm-renewal/05_SM-011: Logged in as 900101010815
+[03:20:03] sm-renewal/05_SM-011: Round 1 Task Status of KR-25112026-0001:
+   Register Account [] COMPLETED
+   Draft Register Account [] COMPLETED
+   Processing Fee [] COMPLETED
+   Verify Supporting Documents [] COMPLETED
+   Review Application [] COMPLETED
+   Review Application (Escalated) [761028025717, 761120035467, 258502022000, 820205086172, 610320045549, 780801086757, 660000000003, 810720075698] ASSIGNED
+[03:20:06] sm-renewal/05_SM-011: Closed the TERKINI announcement
+[03:20:06] sm-renewal/05_SM-011: Pending: "Review Application (Escalated)" assigned to 761028025717, 761120035467, 258502022000, 820205086172, 610320045549, 780801086757, 660000000003, 810720075698 → logging in as 761028025717
+[03:20:08] sm-renewal/05_SM-011: Logged in as 761028025717
+[03:20:19] sm-renewal/05_SM-011: Group Task has it: claiming "KR-25112026-0001 Supplier Application Review escalated Renew MOF application ( Test Company 01167338 ) 25/11/2026 03:19 "
+[03:20:24] sm-renewal/05_SM-011: Opening My Task "KR-25112026-0001 Supplier Application Review escalated Renew MOF application ( Test Company 01167338 ) 25/11/2026 03:19 04/12/2026 03:18 ( 7"
+[03:20:39] sm-renewal/05_SM-011: 761028025717 did "approver decision → Approve": Application No.KR-25112026-0001 has been approved.
+[03:20:40] sm-renewal/05_SM-011: Closed the TERKINI announcement
+[03:20:41] sm-renewal/05_SM-011: DB status AP KR-25112026-0001: 20251 Pending Payment Registration Fee / Menunggu Bayaran Pendaftaran (expected 20251, OK)
+[03:20:42] sm-renewal/05_SM-011: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 05 SM-011 Approver approves (registration fee to pay) @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/05_SM-011 @SM-011 (54.0s)
+[03:20:44] sm-renewal/06_SM-012: SM-012 Pay the registration fee — role Supplier, login: Katalon default account of the step
+[03:20:48] sm-renewal/06_SM-012: Logged in as 900101010815
+[03:20:52] sm-renewal/06_SM-012: My Task: KR-25112026-0001 Supplier Application Renew MOF application - Make payment ( Test Company 01167338 ) 25/11/2026 03:20 25/11/2027 03:20 Pending Payment
+[03:20:59] sm-renewal/06_SM-012: Registration fee: Your registration fee has been successfully made. Please click HERE or go to the Overview menu to retrieve the MOF Accounts Virtual Certificate of your company.
+[03:21:02] sm-renewal/06_SM-012: Followed HERE → /web/epapp/view-virtual-certification
+[03:21:35] sm-renewal/06_SM-012: Certificate page: eP App/My Application/Supplier Management/View Virtual Certification Virtual Certificate Virtual Certificate ANSWER QUESTIONNAIRE CUSTOMER SATISFACTION FEEDBACK FORM MALAYSIAN MINISTRY OF FINANCE (SUPPLY AND SERVICE COMPANY) This feedback takes only 2-3 minutes, we request your cooperation to participate. Your cooperation is greatly appreciated and your valuable feedback will be used in improving the quality of registration service for MOF Contractors/Consultants. All information provided will b
+[03:21:39] sm-renewal/06_SM-012: Closed the TERKINI announcement
+[03:21:40] sm-renewal/06_SM-012: DB status AP KR-25112026-0001: 20199 Registered / Berdaftar (expected 20199, OK)
+[03:21:41] sm-renewal/06_SM-012: Signed out (SSO logout)
+  ✓  6 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-renewal [EN] Renewal MOF Account to Registered › 06 SM-012 Pay the registration fee @flow-sm-renewal @module-sm @lang-en @FLOW @sm-renewal/06_SM-012 @SM-012 (59.2s)
+
+  2 skipped
+  4 passed (3.5m)

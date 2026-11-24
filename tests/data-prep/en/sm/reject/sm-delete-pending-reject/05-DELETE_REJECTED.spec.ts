@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-delete-pending-reject
 // Stops at:  DELETE_REJECTED — Deletion rejected: back to the status before (Pending Review Application on the observed path) (after SM-043, Processing Officer)
 // DB status: AP 20104 Pending Review Application
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-041 (manual) → SM-043 (manual)
+// Path:      SM-022 → SM-004 → SM-005 → SM-041 (manual) → SM-043 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-delete-pending-reject/05-DELETE_REJECTED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-delete-pending-reject --status DELETE_REJECTED

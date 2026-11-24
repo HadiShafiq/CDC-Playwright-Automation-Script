@@ -3,6 +3,7 @@ import type { DocType } from '../core/documents';
 import type { EnvConfig } from '../../config/environments';
 import type { Evidence } from '../../fixtures/test';
 import { reg001, reg002, reg003, reg004 } from './sm/registration';
+import { createRenewalDraft, createUpdateDraft, declareAppl, supplierOfAppl } from './sm/application';
 import { loadAccounts } from '../mof/accounts';
 import { activateAccess, decideAccess, submitAccessApplication } from './pm/access';
 import { approveTask, completeAndSubmit, createDraft, QT_SIT } from './qt/stages';
@@ -40,6 +41,13 @@ export interface ModuleStep {
   run: (ctx: ModuleCtx) => Promise<ModuleResult>;
 }
 
+/** SM officer stage on the flow's application: new registrations (KN/JN) belong to our latest supplier, others to the update supplier. */
+const smOfficer = async (ctx: ModuleCtx) => {
+  const ap = ctx.inputs.AP;
+  const supplier = ap && !/^[KJ]N-/.test(ap) ? await supplierOfAppl(ctx.env, ap) : undefined;
+  return { messages: await reg003({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, { once: true, docNo: ap, supplier }) };
+};
+
 const need = (ctx: ModuleCtx, d: DocType) => {
   const v = ctx.inputs[d];
   if (!v) throw new Error(`needs a ${d} number`);
@@ -76,11 +84,31 @@ export const MODULE_STEPS: Record<string, ModuleStep> = {
       return { outputs: { AP: ap }, messages: [`Application ${ap} saved (draft)`] };
     },
   },
-  'SM-002': { selfLogin: true, run: async (ctx) => ({ messages: [`Application ${await reg002({ page: ctx.page, env: ctx.env, evidence: ctx.evidence })} declared, processing fee paid`] }) },
-  'SM-005': { selfLogin: true, run: async (ctx) => ({ messages: await reg003({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, { once: true }) }) },
-  'SM-006': { selfLogin: true, run: async (ctx) => ({ messages: await reg003({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, { once: true }) }) },
-  'SM-011': { selfLogin: true, run: async (ctx) => ({ messages: await reg003({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, { once: true }) }) },
-  'SM-012': { selfLogin: true, run: async (ctx) => ({ messages: [`Virtual certificate ${(await reg004({ page: ctx.page, env: ctx.env, evidence: ctx.evidence })) || 'shown'}`] }) },
+  'SM-002': {
+    selfLogin: true,
+    run: async (ctx) => {
+      const c = { page: ctx.page, env: ctx.env, evidence: ctx.evidence };
+      // A renewal (KR/JR) declares its own draft and pays the processing fee; a new registration runs REG-002
+      if (ctx.inputs.AP && /^[KJ]R-/.test(ctx.inputs.AP)) return { messages: [await declareAppl(c, ctx.inputs.AP, { payFee: true })] };
+      return { messages: [`Application ${await reg002(c)} declared, processing fee paid`] };
+    },
+  },
+  'SM-005': { selfLogin: true, run: smOfficer },
+  'SM-006': { selfLogin: true, run: smOfficer },
+  'SM-011': { selfLogin: true, run: smOfficer },
+  'SM-013': { selfLogin: true, run: smOfficer },
+  // Update MOF Profile of our registered supplier (support/modules/sm/application.ts)
+  'SM-022': { selfLogin: true, run: async (ctx) => { const c = { page: ctx.page, env: ctx.env, evidence: ctx.evidence }; const ap = await createUpdateDraft(c); return { outputs: { AP: ap }, messages: [`Update MOF Profile ${ap} drafted`] }; } },
+  'SM-004': { selfLogin: true, run: async (ctx) => ({ messages: [await declareAppl({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, need(ctx, 'AP'))] }) },
+  'SM-024': { selfLogin: true, run: async (ctx) => { const ap = await createRenewalDraft({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }); return { outputs: { AP: ap }, messages: [`Renewal ${ap} drafted`] }; } },
+  'SM-012': {
+    selfLogin: true,
+    run: async (ctx) => {
+      const ap = ctx.inputs.AP;
+      const supplier = ap && !/^[KJ]N-/.test(ap) ? await supplierOfAppl(ctx.env, ap) : undefined;
+      return { messages: [`Virtual certificate ${(await reg004({ page: ctx.page, env: ctx.env, evidence: ctx.evidence }, { docNo: ap, supplier })) || 'shown'}`] };
+    },
+  },
   // PM Access Application (public form, BPM approver pool, e-mail activation) — built from the SIT screens 2026-11-24
   'PM-001': { selfLogin: true, run: async (ctx) => { const r = await submitAccessApplication(ctx.page, ctx.baseURL, { companyProfile: true, marketResearch: false }, ctx.log); return { outputs: { AA: r.appl }, messages: r.messages }; } },
   'PM-002': { selfLogin: true, run: async (ctx) => { const r = await submitAccessApplication(ctx.page, ctx.baseURL, { companyProfile: false, marketResearch: true }, ctx.log); return { outputs: { AA: r.appl }, messages: r.messages }; } },

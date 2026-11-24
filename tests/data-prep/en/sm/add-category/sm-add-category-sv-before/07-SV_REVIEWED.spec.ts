@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-before
 // Stops at:  SV_REVIEWED — Site visit report reviewed; approver to decide (after SM-010, Processing Officer)
 // DB status: AP 20108 Pending Application Approval
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-007 (manual) → SM-008 (manual) → SM-009 (manual) → SM-010 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-007 (manual) → SM-008 (manual) → SM-009 (manual) → SM-010 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-before/07-SV_REVIEWED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-before --status SV_REVIEWED

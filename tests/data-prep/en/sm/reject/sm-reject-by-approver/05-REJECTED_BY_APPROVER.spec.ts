@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-reject-by-approver
 // Stops at:  REJECTED_BY_APPROVER — Rejected by Approver (after SM-052, Approver)
 // DB status: AP 20113 Rejected by Approver
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-006 → SM-052 (manual)
+// Path:      SM-022 → SM-004 → SM-005 → SM-006 → SM-052 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-reject-by-approver/05-REJECTED_BY_APPROVER.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-reject-by-approver --status REJECTED_BY_APPROVER

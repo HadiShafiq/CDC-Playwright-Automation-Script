@@ -1,0 +1,172 @@
+{
+  "flowRunId": "sm-update-profile_20261125-025110",
+  "flowId": "sm-update-profile",
+  "module": "sm",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T02:51:10+08:00",
+  "updatedAt": "2026-11-25T03:05:53+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "AP": "KU-02112026-0021"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "SM-022": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_025111",
+          "startedAt": "2026-11-25T02:51:18+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-update-profile\\01_SM-022\\2026-11-25_025111",
+          "endedAt": "2026-11-25T02:51:58+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_025656",
+          "startedAt": "2026-11-25T02:57:06+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-update-profile\\01_SM-022\\2026-11-25_025656",
+          "endedAt": "2026-11-25T02:57:24+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "This application cannot continue because the same application already existed with \"Pending\" status. Please check this application in your Task List or Application Status menu. (ERR-722542)"
+            },
+            {
+              "severity": "info",
+              "text": "Update MOF Profile : KU-02112026-0021 has been successfully saved"
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "AP": "KU-02112026-0021"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "APPL_DRAFT",
+      "db": {
+        "kind": "AP",
+        "docNo": "KU-02112026-0021",
+        "expected": 20100,
+        "statusId": 20100,
+        "en": "Pending Application Declaration",
+        "bm": "Menunggu Pengisytiharan Permohonan",
+        "at": "2026-11-02 16:47:44",
+        "ok": true,
+        "checkedAt": "2026-11-25T02:57:24+08:00"
+      }
+    },
+    "SM-004": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_025656",
+          "startedAt": "2026-11-25T02:57:25+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-update-profile\\02_SM-004\\2026-11-25_025656",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KU-02112026-0021",
+            "statusId": 20100
+          },
+          "endedAt": "2026-11-25T02:57:43+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-722654: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)",
+          "error": "Declare refused: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)"
+        },
+        {
+          "runId": "2026-11-25_025847",
+          "startedAt": "2026-11-25T02:58:55+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-update-profile\\02_SM-004\\2026-11-25_025847",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KU-02112026-0021",
+            "statusId": 20100
+          },
+          "selfHeal": "the SIT DB still shows KU-02112026-0021 at 20100 Pending Application Declaration, as before the attempt",
+          "endedAt": "2026-11-25T02:59:11+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-722654: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)",
+          "error": "Declare refused: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)"
+        },
+        {
+          "runId": "2026-11-25_030004",
+          "startedAt": "2026-11-25T03:00:13+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-update-profile\\02_SM-004\\2026-11-25_030004",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KU-02112026-0021",
+            "statusId": 20100
+          },
+          "endedAt": "2026-11-25T03:00:33+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Overlap category: Please provide justification and upload the necessary supporting document in order to proceed application (ERR-722661)"
+            },
+            {
+              "severity": "error",
+              "text": "Branch SELANGOR does not have any bank account for payment purpose. Please assigned bank account for this branch at Bank Information Section. (ERR-722622)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-722661: Overlap category: Please provide justification and upload the necessary supporting document in order to proceed application (ERR-722661)",
+          "error": "Declare refused: Branch SELANGOR does not have any bank account for payment purpose. Please assigned bank account for this branch at Bank Information Section. (ERR-722622)"
+        },
+        {
+          "runId": "2026-11-25_030407",
+          "startedAt": "2026-11-25T03:04:16+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-update-profile\\02_SM-004\\2026-11-25_030407",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KU-02112026-0021",
+            "statusId": 20100
+          },
+          "endedAt": "2026-11-25T03:04:41+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Bank Name and Account Number are not allowed to be updated because this information is still tied to active contracts belonging to this company. Check on Supplier’s Contract Maintenance."
+            },
+            {
+              "severity": "info",
+              "text": "Update MOF Profile : KU-02112026-0021 has been successfully saved"
+            },
+            {
+              "severity": "error",
+              "text": "Minimum 2 equity holding entities combination (i.e. company or personnel combination) is required for this supplier.Please satisfy any of the following scenario : 1. Add at least 2 equity owners 2. Add at least 2 equity companies 3. Add at least 1 equity owner and 1 equity company. (ERR-722592)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-722592: Bank Name and Account Number are not allowed to be updated because this information is still tied to active contracts belonging to this company. Check on Supplier’s Contract Maintenance.",
+          "error": "Declare refused: Minimum 2 equity holding entities combination (i.e. company or personnel combination) is required for this supplier.Please satisfy any of the following scenario : 1. Add at least 2 equity owners 2. Add at least 2 equity companies 3. Add at least 1 equity owner and 1 equity company. (ERR-722592)"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "blocked",
+  "blockedReason": "SM-004 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-722592: Bank Name and Account Number are not allowed to be updated because this information is still tied to active contracts belonging to this company. Check on Supplier’s Contract Maintenance.). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-update-profile_20261125-025110 --step SM-004"
+}

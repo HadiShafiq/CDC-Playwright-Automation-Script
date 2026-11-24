@@ -1425,5 +1425,51 @@
     "reuse": "available",
     "cr": null,
     "notes": []
+  },
+  {
+    "ref": "KU-02112026-0021",
+    "docType": "AP",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "sm",
+    "checkpoint": "APPL_DRAFT",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "sm-update-profile_20261125-025110",
+      "stepId": "SM-022"
+    },
+    "lastStep": {
+      "flowRunId": "sm-update-profile_20261125-025110",
+      "stepId": "SM-022"
+    },
+    "createdAt": "2026-11-25T02:57:24+08:00",
+    "lastVerifiedAt": "2026-11-25T02:57:24+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "KR-25112026-0001",
+    "docType": "AP",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "sm",
+    "checkpoint": "REGISTERED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "sm-renewal_20261125-030936",
+      "stepId": "SM-024"
+    },
+    "lastStep": {
+      "flowRunId": "sm-renewal_20261125-030936",
+      "stepId": "SM-012"
+    },
+    "createdAt": "2026-11-25T03:15:01+08:00",
+    "lastVerifiedAt": "2026-11-25T03:21:40+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
   }
 ]

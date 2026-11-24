@@ -594,9 +594,14 @@ async function openOfficerTask(page: Page, env: EnvConfig, companyName: string, 
 }
 
 /** `once`: complete only the next pending officer task (one SM step), else all of them. Returns what was done. */
-export async function reg003({ page, env, evidence }: RegCtx, opts: { once?: boolean } = {}): Promise<string[]> {
-    const acct = currentAccount(env.name);
-    const docNo = acct.applicationNo;
+export async function reg003(
+  { page, env, evidence }: RegCtx,
+  opts: { once?: boolean; docNo?: string; supplier?: { username: string; password: string; companyName: string } } = {},
+): Promise<string[]> {
+    // opts.supplier: another supplier than the latest registered one (e.g. MOFCTOO16 for Update MOF Profile, 2026-11-25)
+    const acct = opts.supplier ? { ...currentAccount(env.name), ...opts.supplier } : currentAccount(env.name);
+    // Any SM application of the current supplier (new KN, update KU, add category KA …); default: its registration.
+    const docNo = opts.docNo ?? acct.applicationNo;
     if (!docNo) throw new Error(`Account ${acct.username} has no application number yet: run REG-002 first`);
     const pwd = await officerPassword(env);
     const ma = new MofAppAction(page, 'en');
@@ -622,7 +627,7 @@ export async function reg003({ page, env, evidence }: RegCtx, opts: { once?: boo
       // After approval the next task is the supplier's "Make Payment" (registration fee): REG-004's job.
       if (pending.assignees.includes(acct.username) && /Make Payment|Registration Fee/i.test(pending.taskName)) {
         evidence.log(`Officer stages done; "${pending.taskName}" is now with the supplier (REG-004)`);
-        noteAccount(acct, `${docNo} approved; ${pending.taskName} pending`);
+        if (!opts.supplier) noteAccount(acct, `${docNo} approved; ${pending.taskName} pending`);
         break;
       }
       if (pending.assignees.includes(acct.username) && /Fee/i.test(pending.taskName)) {
@@ -686,7 +691,7 @@ export async function reg003({ page, env, evidence }: RegCtx, opts: { once?: boo
       evidence.log(`${officer} did "${flow}": ${msg || '(no banner)'}`);
       await evidence.capture(`task_${round}_done`, { step: `${pending.taskName}: ${flow}`, expected: 'Task completed', actual: msg });
       audit(env.name, WHO, `REG-003 ${pending.taskName} on ${docNo} as officer ${officer}`, `**${flow}** (${msg.slice(0, 120)})`, flow, 'next officer task');
-      noteAccount(acct, `${pending.taskName} by ${officer}: ${flow}`);
+      if (!opts.supplier) noteAccount(acct, `${pending.taskName} by ${officer}: ${flow}`);
       done.push(`${pending.taskName} (${officer})`);
       await ssoLogout(page, env);
       if (opts.once) break;
@@ -698,8 +703,14 @@ export async function reg003({ page, env, evidence }: RegCtx, opts: { once?: boo
 // ----------------------------------------------------------------------------------------------
 // REG-004  Registration fee and virtual certificate
 // ----------------------------------------------------------------------------------------------
-export async function reg004({ page, env, evidence }: RegCtx) {
-    const acct = currentAccount(env.name);
+export async function reg004(
+  { page, env, evidence }: RegCtx,
+  opts: { docNo?: string; supplier?: { username: string; password: string; companyName: string } } = {},
+) {
+    // opts: another application/supplier (e.g. a renewal KR-… of 900101010815, 2026-11-25); notes only for our latest account
+    const base = currentAccount(env.name);
+    const acct = opts.supplier ? { ...base, ...opts.supplier, applicationNo: opts.docNo } : { ...base, applicationNo: opts.docNo ?? base.applicationNo };
+    const note = (a: typeof acct, m: string) => { if (!opts.supplier) noteAccount(base, m); void a; };
     await ssoLogin(page, env, acct.username, acct.password, evidence.log);
     await evidence.capture('supplier_dashboard', { step: 'Supplier dashboard after approval', expected: 'Registration fee / certificate menus' });
 
@@ -725,7 +736,7 @@ export async function reg004({ page, env, evidence }: RegCtx) {
       evidence.log(`Registration fee: ${msg}`);
       await evidence.capture('registration_fee_done', { step: 'Registration fee → Proceed', expected: 'Fee paid', actual: msg.slice(0, 200) });
       audit(env.name, WHO, `REG-004 registration fee of ${acct.applicationNo}`, `**Registration fee step done** (${msg.slice(0, 120)})`, 'Proceed', 'Certificate');
-      noteAccount(acct, `registration fee: ${msg.slice(0, 160)}`);
+      note(acct, `registration fee: ${msg.slice(0, 160)}`);
     } else {
       evidence.log('No "Make payment" task in My Task (registration fee already paid?)');
     }
@@ -795,7 +806,7 @@ export async function reg004({ page, env, evidence }: RegCtx) {
     evidence.log(`Certificate page: ${certText.slice(0, 500)}`);
     await evidence.capture('virtual_certificate', { step: 'View Virtual Certificate', expected: 'MOF certificate shown', actual: certText.slice(0, 200) });
     const certNo = certText.match(/\b(?:No\.?\s*(?:Sijil|Certificate)[^A-Z0-9]*)?([A-Z]{1,4}-?\d{6,}[A-Z0-9-]*)/)?.[1] ?? '';
-    noteAccount(acct, `certificate viewed${certNo ? ` (${certNo})` : ''}`);
+    note(acct, `certificate viewed${certNo ? ` (${certNo})` : ''}`);
     audit(env.name, WHO, `REG-004 virtual certificate of ${acct.applicationNo}`, `**Virtual certificate viewed** ${certNo}`, 'View', 'done');
     evidence.actual(`Virtual certificate shown${certNo ? `: ${certNo}` : ''}`);
     await ssoLogout(page, env);

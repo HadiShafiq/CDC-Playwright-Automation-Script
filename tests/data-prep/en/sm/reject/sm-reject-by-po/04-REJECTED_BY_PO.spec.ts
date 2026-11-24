@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-reject-by-po
 // Stops at:  REJECTED_BY_PO — Rejected by Processing Officer (after SM-051, Processing Officer)
 // DB status: AP 20112 Rejected by Processing Officer
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-051 (manual)
+// Path:      SM-022 → SM-004 → SM-005 → SM-051 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-reject-by-po/04-REJECTED_BY_PO.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-reject-by-po --status REJECTED_BY_PO

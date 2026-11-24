@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-after
 // Stops at:  SV_REPORTED_AFTER — Report filed; to review (after SM-016, SVO)
 // DB status: AP 20116 Pending Review Site Visit Report - After Approval
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-006 → SM-014 (manual) → SM-015 (manual) → SM-016 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-006 → SM-014 (manual) → SM-015 (manual) → SM-016 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-after/07-SV_REPORTED_AFTER.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-after --status SV_REPORTED_AFTER

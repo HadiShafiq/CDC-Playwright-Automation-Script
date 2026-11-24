@@ -4,7 +4,7 @@
 // Module:    sm / renewal · flow sm-renewal
 // Stops at:  APPL_DRAFT — Renewal application saved (after SM-024, Supplier)
 // DB status: AP 20100 Pending Application Declaration
-// Path:      SM-024 (manual)
+// Path:      SM-024
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/renewal/sm-renewal/01-APPL_DRAFT.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-renewal --status APPL_DRAFT

@@ -2,12 +2,12 @@
 //
 // DATA PREP: Renewal MOF Account to Registered
 // Module:    sm / renewal · flow sm-renewal
-// Stops at:  PROCESSING_FEE_PAID — Processing fee paid; supporting documents to verify (after SM-003, Supplier)
-// DB status: AP 20101 Pending Supporting Document Verification
-// Path:      SM-024 (manual) → SM-002 → SM-003 (manual)
+// Stops at:  DOCS_VERIFIED — Supporting documents verified; Processing Officer to review (after SM-005, SDO)
+// DB status: AP 20104 Pending Review Application
+// Path:      SM-024 → SM-002 → SM-005
 //
-// Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/renewal/sm-renewal/03-PROCESSING_FEE_PAID.spec.ts" --project=flows --headed
-//   or: npm run qa -- prepare --env sit --flow sm-renewal --status PROCESSING_FEE_PAID
+// Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/renewal/sm-renewal/03-DOCS_VERIFIED.spec.ts" --project=flows --headed
+//   or: npm run qa -- prepare --env sit --flow sm-renewal --status DOCS_VERIFIED
 // Documents created: the run report, npm run qa -- data --env sit, or npm run qa -- doc-status --env sit --doc <number>
 import { test } from '../../../../../../fixtures/flow';
 import { flowItems, flowTags, runItem, setupFlow } from '../../../../../../support/core/flow-runner';
@@ -16,8 +16,8 @@ import { loadRegistry } from '../../../../../../support/core/workflow-registry';
 const LANG = 'EN';
 const flow = loadRegistry().flows.get('sm-renewal')!;
 
-test.describe(`data-prep ${flow.id} → PROCESSING_FEE_PAID`, { tag: [...flowTags(flow, LANG), '@status-PROCESSING_FEE_PAID', '@data-prep'] }, () => {
-  const runId = setupFlow(flow, LANG, { to: 'SM-003' });
+test.describe(`data-prep ${flow.id} → DOCS_VERIFIED`, { tag: [...flowTags(flow, LANG), '@status-DOCS_VERIFIED', '@data-prep'] }, () => {
+  const runId = setupFlow(flow, LANG, { to: 'SM-005' });
   for (const { item, index, title, details } of flowItems(flow).slice(0, 3)) {
     test(title, details, async ({ page, appMessages, evidence }, testInfo) => {
       await runItem(flow, item, index, runId(), { page, appMessages, evidence }, testInfo);

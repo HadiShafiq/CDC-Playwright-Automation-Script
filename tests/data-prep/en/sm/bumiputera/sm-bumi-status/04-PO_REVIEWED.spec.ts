@@ -4,7 +4,7 @@
 // Module:    sm / bumiputera · flow sm-bumi-status
 // Stops at:  PO_REVIEWED — Reviewed; approver to decide (after SM-006, Processing Officer)
 // DB status: AP 20108 Pending Application Approval
-// Path:      SM-023 (manual) → SM-004 (manual) → SM-005 → SM-006
+// Path:      SM-023 (manual) → SM-004 → SM-005 → SM-006
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/bumiputera/sm-bumi-status/04-PO_REVIEWED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-bumi-status --status PO_REVIEWED

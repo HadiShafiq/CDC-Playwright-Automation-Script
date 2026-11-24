@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-before
 // Stops at:  SV_REPORTED — Site visit report filed; to review (after SM-009, SVO)
 // DB status: AP 20103 Pending Review Site Visit Report - Before Approval
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-007 (manual) → SM-008 (manual) → SM-009 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-007 (manual) → SM-008 (manual) → SM-009 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-before/06-SV_REPORTED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-before --status SV_REPORTED

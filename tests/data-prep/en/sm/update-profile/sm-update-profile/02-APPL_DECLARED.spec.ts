@@ -4,7 +4,7 @@
 // Module:    sm / update-profile · flow sm-update-profile
 // Stops at:  APPL_DECLARED — Declared; supporting documents to verify (after SM-004, Supplier)
 // DB status: AP 20101 Pending Supporting Document Verification
-// Path:      SM-022 (manual) → SM-004 (manual)
+// Path:      SM-022 → SM-004
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/update-profile/sm-update-profile/02-APPL_DECLARED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-update-profile --status APPL_DECLARED

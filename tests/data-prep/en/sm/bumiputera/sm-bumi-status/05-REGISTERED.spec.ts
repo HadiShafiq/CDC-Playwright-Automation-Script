@@ -4,7 +4,7 @@
 // Module:    sm / bumiputera · flow sm-bumi-status
 // Stops at:  REGISTERED — Approved and registered (after SM-013, Approver)
 // DB status: AP 20199 Registered
-// Path:      SM-023 (manual) → SM-004 (manual) → SM-005 → SM-006 → SM-013 (manual)
+// Path:      SM-023 (manual) → SM-004 → SM-005 → SM-006 → SM-013
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/bumiputera/sm-bumi-status/05-REGISTERED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-bumi-status --status REGISTERED

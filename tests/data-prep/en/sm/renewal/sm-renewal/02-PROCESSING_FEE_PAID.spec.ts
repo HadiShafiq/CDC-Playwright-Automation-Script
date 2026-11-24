@@ -4,7 +4,7 @@
 // Module:    sm / renewal · flow sm-renewal
 // Stops at:  PROCESSING_FEE_PAID — Declared and processing fee paid (REG-002 does both in one sitting: the fee page opens from the Declare banner) (after SM-002, Supplier)
 // DB status: AP 20101 Pending Supporting Document Verification
-// Path:      SM-024 (manual) → SM-002
+// Path:      SM-024 → SM-002
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/renewal/sm-renewal/02-PROCESSING_FEE_PAID.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-renewal --status PROCESSING_FEE_PAID

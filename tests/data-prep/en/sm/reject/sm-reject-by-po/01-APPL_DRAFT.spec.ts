@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-reject-by-po
 // Stops at:  APPL_DRAFT — Update application saved (after SM-022, Supplier)
 // DB status: AP 20100 Pending Application Declaration
-// Path:      SM-022 (manual)
+// Path:      SM-022
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-reject-by-po/01-APPL_DRAFT.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-reject-by-po --status APPL_DRAFT

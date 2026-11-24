@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-reject-by-approver
 // Stops at:  PO_REVIEWED — Reviewed; approver to decide (after SM-006, Processing Officer)
 // DB status: AP 20108 Pending Application Approval
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-006
+// Path:      SM-022 → SM-004 → SM-005 → SM-006
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-reject-by-approver/04-PO_REVIEWED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-reject-by-approver --status PO_REVIEWED

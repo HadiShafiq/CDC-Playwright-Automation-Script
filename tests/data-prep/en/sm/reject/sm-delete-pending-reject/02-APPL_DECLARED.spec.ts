@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-delete-pending-reject
 // Stops at:  APPL_DECLARED — Declared; supporting documents to verify (after SM-004, Supplier)
 // DB status: AP 20101 Pending Supporting Document Verification
-// Path:      SM-022 (manual) → SM-004 (manual)
+// Path:      SM-022 → SM-004
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-delete-pending-reject/02-APPL_DECLARED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-delete-pending-reject --status APPL_DECLARED

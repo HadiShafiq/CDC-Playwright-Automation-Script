@@ -59,7 +59,7 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20101 Pending Supporting Document Verification after SM-002 (run sm-mof-new_20261124-155404)",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20101 Pending Supporting Document Verification after SM-002 (run sm-mof-new_20261124-155404); SIT run sm-renewal_20261125-030936 (EN): KR-25112026-0001 20100→20114→20101 (renewal, processing fee)",
         "db": {
           "kind": "AP",
           "statusId": 20101,
@@ -111,8 +111,8 @@
       "role": "Supplier",
       "stateChanging": true,
       "login": "default",
-      "automation": "manual",
-      "source": "unit_test (kapitan) tests/supplier-appl/add-category.spec.ts, mof-update.spec.ts, bumi-status.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "automation": "module",
+      "source": "support/modules/sm/application.ts declareAppl — built 2026-11-25",
       "instructions": "Declare the application (add category / update profile / bumiputera have no processing fee).",
       "inputs": [
         {
@@ -162,7 +162,7 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20104 Pending Review Application after SM-005 (run sm-mof-new_20261124-155404)",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20104 Pending Review Application after SM-005 (run sm-mof-new_20261124-155404); SIT run sm-renewal_20261125-030936 (EN): KR-25112026-0001 20101→20104",
         "db": {
           "kind": "AP",
           "statusId": 20104,
@@ -196,7 +196,7 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20108 Pending Application Approval after SM-006 (run sm-mof-new_20261124-155404)",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20108 Pending Application Approval after SM-006 (run sm-mof-new_20261124-155404); SIT run sm-renewal_20261125-030936 (EN): KR-25112026-0001 20104→20108",
         "db": {
           "kind": "AP",
           "statusId": 20108,
@@ -362,7 +362,7 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20251 Pending Payment Registration Fee after SM-011 (run sm-mof-new_20261124-155404)",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20251 Pending Payment Registration Fee after SM-011 (run sm-mof-new_20261124-155404); SIT run sm-renewal_20261125-030936 (EN): KR-25112026-0001 20108→20251",
         "db": {
           "kind": "AP",
           "statusId": 20251,
@@ -396,7 +396,7 @@
           "bm": null
         },
         "verification": "execution",
-        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20199 Registered after SM-012 (run sm-mof-new_20261124-155404)",
+        "evidence": "SIT DB 2026-11-24: KN-24112026-0035 (Test Company 84803828, login 900101921645) reached 20199 Registered after SM-012 (run sm-mof-new_20261124-155404); SIT run sm-renewal_20261125-030936 (EN): KR-25112026-0001 20251→20199",
         "db": {
           "kind": "AP",
           "statusId": 20199,
@@ -411,9 +411,9 @@
       "title": "Approver approves (no fee)",
       "role": "Approver",
       "stateChanging": true,
-      "login": "assignedOfficer",
-      "automation": "manual",
-      "source": "unit_test (kapitan) tests/supplier-appl/approver.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/sm/registration.ts reg003 (officer loop, any application no) — built 2026-11-25; unit_test (kapitan) tests/supplier-appl/approver.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
       "instructions": "Approver: My Task, approve.",
       "inputs": [
         {
@@ -610,8 +610,8 @@
       "role": "Supplier",
       "stateChanging": true,
       "login": "default",
-      "automation": "manual",
-      "source": "unit_test (kapitan) tests/supplier-appl/mof-update.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "automation": "module",
+      "source": "support/modules/sm/application.ts — built 2026-11-25; unit_test (kapitan) tests/supplier-appl/mof-update.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
       "instructions": "MOF supplier: Update MOF Profile, change a field, save.",
       "inputs": [],
       "outputs": [
@@ -676,8 +676,8 @@
       "role": "Supplier",
       "stateChanging": true,
       "login": "default",
-      "automation": "manual",
-      "source": "unit_test (kapitan) tests/supplier-appl/renewal.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
+      "automation": "module",
+      "source": "support/modules/sm/application.ts createRenewalDraft — built 2026-11-25; unit_test (kapitan) tests/supplier-appl/renewal.spec.ts — spec code not in the zip; inventory in kapitan TESTER.md",
       "instructions": "Only within 3 months of MOF expiry (move the dates first: a gate for the tester).",
       "inputs": [],
       "outputs": [
@@ -693,8 +693,8 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "SIT DB status paths of SM applications made by the unit_test (kapitan) runs on 2026-11-06, read 2026-11-23: KN-06112026-0058, JN-06112026-0006 (new MOF), KA-06112026-0015/0016 (add category, site visit before/after approval), KU-06112026-0014, JU-06112026-0002 (update), KB-06112026-0006 (bumiputera), KR-06112026-0003 (renewal), KC-06112026-0001 (cancel), KU-06112026-0016 (delete pending → 20399)",
+        "verification": "execution",
+        "evidence": "SIT run sm-renewal_20261125-030936 (EN): KR-25112026-0001 20100",
         "db": {
           "kind": "AP",
           "statusId": 20100,
@@ -1021,12 +1021,11 @@
       "id": "sm-renewal",
       "submodule": "renewal",
       "title": "Renewal MOF Account to Registered",
-      "verification": "documentation",
-      "notes": "Path of KR-06112026-0003; opens only within 3 months of expiry. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one.",
+      "verification": "execution",
+      "notes": "Path of KR-06112026-0003; opens only within 3 months of expiry. Steps are manual: do each in the application, then npm run qa -- reconcile --env sit --run <id> --step SM-0xx --done (AP=<application no> for the first), resume; the SIT DB status confirms each one. 2026-11-25: SM-003 dropped, SM-002 (declareAppl payFee) pays the processing fee like sm-mof-new. Supplier: our 900101010815 (SM_RENEWAL_ACCOUNT).",
       "steps": [
         "SM-024",
         "SM-002",
-        "SM-003",
         "SM-005",
         "SM-006",
         "SM-011",

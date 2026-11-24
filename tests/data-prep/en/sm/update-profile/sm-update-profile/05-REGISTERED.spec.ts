@@ -4,7 +4,7 @@
 // Module:    sm / update-profile · flow sm-update-profile
 // Stops at:  REGISTERED — Approved and registered (after SM-013, Approver)
 // DB status: AP 20199 Registered
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-006 → SM-013 (manual)
+// Path:      SM-022 → SM-004 → SM-005 → SM-006 → SM-013
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/update-profile/sm-update-profile/05-REGISTERED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-update-profile --status REGISTERED

@@ -1,0 +1,275 @@
+
+Running 5 tests using 1 worker
+
+[02:51:18] sm-update-profile/01_SM-022: SM-022 Create the Update MOF Profile application (draft) — role Supplier, login: Katalon default account of the step
+[02:51:25] sm-update-profile/01_SM-022: Logged in as 900101921645
+[02:51:58] sm-update-profile/01_SM-022: Closed the TERKINI announcement
+[02:51:59] sm-update-profile/01_SM-022: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022 (41.9s)
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /^Update MOF Profile Application/ })
+
+
+       at ..\pages\MofApplicationPage.ts:54
+
+      52 |     // The "Ai" badge <img alt="icon"> follows the text with no space, so the accessible name is
+      53 |     // "Update MOF Profile Applicationicon": match the prefix only.
+    > 54 |     await this.page.getByRole('link', { name: /^Update MOF Profile Application/ }).click();
+         |                                                                                    ^
+      55 |     await waitForAjaxIdle(this.page);
+      56 |     await expect(this.page).toHaveTitle(/Update MOF Profile Application/);
+      57 |     await this.page.getByRole('row', { name: /I Accept the Terms and Conditions/ }).locator('.ui-chkbox-box').click();
+        at MofApplicationPage.open (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\pages\MofApplicationPage.ts:54:84)
+        at createUpdateDraft (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:37:34)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:86:133)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_025111\flows-en-sm.flow-sm-update-8a204--Profile-application-draft--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_025111\flows-en-sm.flow-sm-update-8a204--Profile-application-draft--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022 
+  4 did not run
+
+Running 5 tests using 1 worker
+
+[02:53:07] sm-update-profile/01_SM-022: BLOCKED: SM-022 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-update-profile_20261125-025110 --step SM-022
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+  5 skipped
+
+Running 5 tests using 1 worker
+
+[02:57:06] sm-update-profile/01_SM-022: SM-022 Create the Update MOF Profile application (draft) — role Supplier, login: Katalon default account of the step
+[02:57:10] sm-update-profile/01_SM-022: Logged in as MOFCTOO16
+[02:57:12] sm-update-profile/01_SM-022: Application says: This application cannot continue because the same application already existed with "Pending" status. Please check this application in your Task List or Application Status menu. (ERR-722542)
+[02:57:12] sm-update-profile/01_SM-022: Opening existing draft from Task List → My Task
+[02:57:17] sm-update-profile/01_SM-022: Update MOF Profile KU-02112026-0021 (existing-draft)
+[02:57:19] sm-update-profile/01_SM-022: "BORANG PENGISYTIHARAN MOF" already has a document, skipped
+[02:57:19] sm-update-profile/01_SM-022: "SIJIL PENDAFTARAN PERKONGSIAN LIABILITI TERHAD DARI SSM" already has a document, skipped
+[02:57:20] sm-update-profile/01_SM-022: Supporting documents: uploaded 0; Save: Update MOF Profile : KU-02112026-0021 has been successfully saved
+[02:57:22] sm-update-profile/01_SM-022: Closed the TERKINI announcement
+[02:57:23] sm-update-profile/01_SM-022: Closed the TERKINI announcement
+[02:57:24] sm-update-profile/01_SM-022: DB status AP KU-02112026-0021: 20100 Pending Application Declaration / Menunggu Pengisytiharan Permohonan (expected 20100, OK)
+[02:57:24] sm-update-profile/01_SM-022: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022 (18.3s)
+[02:57:26] sm-update-profile/02_SM-004: SM-004 Declare the application (no fee) — role Supplier, login: Katalon default account of the step
+[02:57:29] sm-update-profile/02_SM-004: Logged in as MOFCTOO16
+[02:57:29] sm-update-profile/02_SM-004: Opening existing draft from Task List → My Task
+[02:57:38] sm-update-profile/02_SM-004: Declare → Proceed: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)
+[02:57:43] sm-update-profile/02_SM-004: Closed the TERKINI announcement
+[02:57:45] sm-update-profile/02_SM-004: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 (20.8s)
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+
+    Error: Declare refused: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)
+
+       at ..\support\modules\sm\application.ts:96
+
+      94 |   await evidence.capture('declared', { step: 'Declare → Proceed', expected: 'Declared', actual: msg });
+      95 |   audit(env.name, WHO, `SM-004 Declare ${apNo}`, `**${apNo} DECLARED** (${msg.slice(0, 120)})`, 'Declare + Proceed', 'SDO verification');
+    > 96 |   if (/ERR-\d+/.test(msg) && !/success/i.test(msg)) throw new Error(`Declare refused: ${msg}`);
+         |                                                           ^
+      97 |   await ssoLogout(page, env);
+      98 |   return msg;
+      99 | }
+        at declareNoFee (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:96:59)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:94:66)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_025656\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_025656\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+  3 did not run
+  1 passed (49.2s)
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022
+[02:58:54] sm-update-profile/02_SM-004: SELF-HEAL SM-004: retry once — the SIT DB still shows KU-02112026-0021 at 20100 Pending Application Declaration, as before the attempt
+[02:58:56] sm-update-profile/02_SM-004: SM-004 Declare the application (no fee) — role Supplier, login: Katalon default account of the step
+[02:58:59] sm-update-profile/02_SM-004: Logged in as MOFCTOO16
+[02:58:59] sm-update-profile/02_SM-004: Opening existing draft from Task List → My Task
+[02:59:07] sm-update-profile/02_SM-004: Declare → Proceed: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)
+[02:59:11] sm-update-profile/02_SM-004: Closed the TERKINI announcement
+[02:59:14] sm-update-profile/02_SM-004: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 (20.9s)
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+
+    Error: Declare refused: Please provide justification and upload the necessary supporting document using company letterhead in category code section first before submit application (ERR-722654)
+
+       at ..\support\modules\sm\application.ts:96
+
+      94 |   await evidence.capture('declared', { step: 'Declare → Proceed', expected: 'Declared', actual: msg });
+      95 |   audit(env.name, WHO, `SM-004 Declare ${apNo}`, `**${apNo} DECLARED** (${msg.slice(0, 120)})`, 'Declare + Proceed', 'SDO verification');
+    > 96 |   if (/ERR-\d+/.test(msg) && !/success/i.test(msg)) throw new Error(`Declare refused: ${msg}`);
+         |                                                           ^
+      97 |   await ssoLogout(page, env);
+      98 |   return msg;
+      99 | }
+        at declareNoFee (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:96:59)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:94:66)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_025847\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_025847\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+  1 skipped
+  3 did not run
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022
+[03:00:14] sm-update-profile/02_SM-004: SM-004 Declare the application (no fee) — role Supplier, login: Katalon default account of the step
+[03:00:18] sm-update-profile/02_SM-004: Logged in as MOFCTOO16
+[03:00:18] sm-update-profile/02_SM-004: Opening existing draft from Task List → My Task
+[03:00:23] sm-update-profile/02_SM-004: Overlap justification on 1 row(s) + letter uploaded; Save: Overlap category: Please provide justification and upload the necessary supporting document in order to proceed application (ERR-722661)
+[03:00:28] sm-update-profile/02_SM-004: Declare → Proceed: Branch SELANGOR does not have any bank account for payment purpose. Please assigned bank account for this branch at Bank Information Section. (ERR-722622)
+[03:00:33] sm-update-profile/02_SM-004: Closed the TERKINI announcement
+[03:00:35] sm-update-profile/02_SM-004: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 (23.5s)
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+
+    Error: Declare refused: Branch SELANGOR does not have any bank account for payment purpose. Please assigned bank account for this branch at Bank Information Section. (ERR-722622)
+
+       at ..\support\modules\sm\application.ts:107
+
+      105 |   await evidence.capture('declared', { step: 'Declare → Proceed', expected: 'Declared', actual: msg });
+      106 |   audit(env.name, WHO, `SM-004 Declare ${apNo}`, `**${apNo} DECLARED** (${msg.slice(0, 120)})`, 'Declare + Proceed', 'SDO verification');
+    > 107 |   if (/ERR-\d+/.test(msg) && !/success/i.test(msg)) throw new Error(`Declare refused: ${msg}`);
+          |                                                           ^
+      108 |   await ssoLogout(page, env);
+      109 |   return msg;
+      110 | }
+        at declareNoFee (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:107:59)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:94:66)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_030004\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_030004\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+  1 skipped
+  3 did not run
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022
+[03:01:44] sm-update-profile/02_SM-004: BLOCKED: SM-004 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-722661: Overlap category: Please provide justification and upload the necessary supporting document in order to proceed application (ERR-722661)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-update-profile_20261125-025110 --step SM-004
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+  5 skipped
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022
+[03:04:16] sm-update-profile/02_SM-004: SM-004 Declare the application (no fee) — role Supplier, login: Katalon default account of the step
+[03:04:20] sm-update-profile/02_SM-004: Logged in as MOFCTOO16
+[03:04:20] sm-update-profile/02_SM-004: Opening existing draft from Task List → My Task
+[03:04:30] sm-update-profile/02_SM-004: Bank Information: linked branch(es) SELANGOR to the bank account; saved 
+[03:04:32] sm-update-profile/02_SM-004: Overlap justification on 1 row(s) + letter uploaded; Save: Update MOF Profile : KU-02112026-0021 has been successfully saved
+[03:04:37] sm-update-profile/02_SM-004: Declare → Proceed: Minimum 2 equity holding entities combination (i.e. company or personnel combination) is required for this supplier.Please satisfy any of the following scenario : 1. Add at least 2 equity owners 2. Add at least 2 equity companies 3. Add at least 1 equity owner and 1 equity company. (ERR-722592)
+[03:04:41] sm-update-profile/02_SM-004: Closed the TERKINI announcement
+[03:04:44] sm-update-profile/02_SM-004: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 (29.4s)
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+
+  1) [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+
+    Error: Declare refused: Minimum 2 equity holding entities combination (i.e. company or personnel combination) is required for this supplier.Please satisfy any of the following scenario : 1. Add at least 2 equity owners 2. Add at least 2 equity companies 3. Add at least 1 equity owner and 1 equity company. (ERR-722592)
+
+       at ..\support\modules\sm\application.ts:148
+
+      146 |   await evidence.capture('declared', { step: 'Declare → Proceed', expected: 'Declared', actual: msg });
+      147 |   audit(env.name, WHO, `SM-004 Declare ${apNo}`, `**${apNo} DECLARED** (${msg.slice(0, 120)})`, 'Declare + Proceed', 'SDO verification');
+    > 148 |   if (/ERR-\d+/.test(msg) && !/success/i.test(msg)) throw new Error(`Declare refused: ${msg}`);
+          |                                                           ^
+      149 |   await ssoLogout(page, env);
+      150 |   return msg;
+      151 | }
+        at declareNoFee (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\sm\application.ts:148:59)
+        at Object.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\index.ts:94:66)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\sm.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_030407\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_030407\flows-en-sm.flow-sm-update-173b5-are-the-application-no-fee--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004 
+  1 skipped
+  3 did not run
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 01 SM-022 Create the Update MOF Profile application (draft) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/01_SM-022 @SM-022
+[03:05:53] sm-update-profile/02_SM-004: BLOCKED: SM-004 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-722592: Bank Name and Account Number are not allowed to be updated because this information is still tied to active contracts belonging to this company. Check on Supplier’s Contract Maintenance.). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run sm-update-profile_20261125-025110 --step SM-004
+  -  2 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 02 SM-004 Declare the application (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/02_SM-004 @SM-004
+  -  3 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 03 SM-005 SDO verifies the supporting documents @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/03_SM-005 @SM-005
+  -  4 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 04 SM-006 Processing Officer reviews and recommends @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/04_SM-006 @SM-006
+  -  5 [flows] › tests\flows\en\sm.flow.spec.ts:12:11 › sm-update-profile [EN] Update MOF Profile to approved › 05 SM-013 Approver approves (no fee) @flow-sm-update-profile @module-sm @lang-en @FLOW @sm-update-profile/05_SM-013 @SM-013
+
+  5 skipped

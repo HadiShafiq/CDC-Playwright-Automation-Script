@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-before
 // Stops at:  SV_ASSIGNED — Site visit assigned (after SM-008, SVC)
 // DB status: AP 20105 Pending Site Visit
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-007 (manual) → SM-008 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-007 (manual) → SM-008 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-before/05-SV_ASSIGNED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-before --status SV_ASSIGNED

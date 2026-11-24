@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-before
 // Stops at:  SV_RECOMMENDED — Site visit before approval recommended (after SM-007, Processing Officer)
 // DB status: AP 20110 Pending Site Visit Assignment - Before Approval
-// Path:      SM-021 (manual) → SM-004 (manual) → SM-005 → SM-007 (manual)
+// Path:      SM-021 (manual) → SM-004 → SM-005 → SM-007 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-before/04-SV_RECOMMENDED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-before --status SV_RECOMMENDED

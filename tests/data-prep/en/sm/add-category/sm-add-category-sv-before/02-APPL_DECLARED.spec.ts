@@ -4,7 +4,7 @@
 // Module:    sm / add-category · flow sm-add-category-sv-before
 // Stops at:  APPL_DECLARED — Declared; supporting documents to verify (after SM-004, Supplier)
 // DB status: AP 20101 Pending Supporting Document Verification
-// Path:      SM-021 (manual) → SM-004 (manual)
+// Path:      SM-021 (manual) → SM-004
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/add-category/sm-add-category-sv-before/02-APPL_DECLARED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-add-category-sv-before --status APPL_DECLARED

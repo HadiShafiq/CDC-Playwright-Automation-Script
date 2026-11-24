@@ -1,0 +1,295 @@
+{
+  "flowRunId": "sm-renewal_20261125-030936",
+  "flowId": "sm-renewal",
+  "module": "sm",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T03:09:36+08:00",
+  "updatedAt": "2026-11-25T03:21:40+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "AP": "KR-25112026-0001"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "SM-024": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_030936",
+          "startedAt": "2026-11-25T03:09:43+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\01_SM-024\\2026-11-25_030936",
+          "endedAt": "2026-11-25T03:10:06+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "\u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+        },
+        {
+          "runId": "2026-11-25_031154",
+          "startedAt": "2026-11-25T03:12:03+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\01_SM-024\\2026-11-25_031154",
+          "endedAt": "2026-11-25T03:12:32+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Please click HERE or navigate to Task List Menu in order to proceed with Renew MOF Account KR-25112026-0001."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Renewal draft not confirmed: Please click HERE or navigate to Task List Menu in order to proceed with Renew MOF Account KR-25112026-0001."
+        },
+        {
+          "runId": "2026-11-25_031441",
+          "startedAt": "2026-11-25T03:14:51+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\01_SM-024\\2026-11-25_031441",
+          "endedAt": "2026-11-25T03:15:01+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "This application cannot continue because the same application already existed with \"Pending\" status. Please check this application in your Task List or Application Status menu. (ERR-722542)"
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "AP": "KR-25112026-0001"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "APPL_DRAFT",
+      "db": {
+        "kind": "AP",
+        "docNo": "KR-25112026-0001",
+        "expected": 20100,
+        "statusId": 20100,
+        "en": "Pending Application Declaration",
+        "bm": "Menunggu Pengisytiharan Permohonan",
+        "at": "2026-11-25 03:12:25",
+        "ok": true,
+        "checkedAt": "2026-11-25T03:15:01+08:00"
+      }
+    },
+    "SM-002": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_031441",
+          "startedAt": "2026-11-25T03:15:03+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\02_SM-002\\2026-11-25_031441",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KR-25112026-0001",
+            "statusId": 20100
+          },
+          "endedAt": "2026-11-25T03:16:06+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Renew MOF Account : KR-25112026-0001 has been successfully saved"
+            },
+            {
+              "severity": "error",
+              "text": "Your page has expired! Please reload again. (ERR-100056)"
+            },
+            {
+              "severity": "info",
+              "text": "Your Renew MOF Account (KR-25112026-0001) has been successfully declared. Please pay RM50.00 processing fee within 365 days to avoid your application being cancelled automatically by the system. Please click HERE or go Task List menu to do payment."
+            },
+            {
+              "severity": "info",
+              "text": "Processing fee was successful made. Your application has been submitted to the Unit Pendaftaran Syarikat, BPK, Ministry of Finance for processing. You can check the application status via e-mail or in ePerolehan System."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "PROCESSING_FEE_PAID",
+      "db": {
+        "kind": "AP",
+        "docNo": "KR-25112026-0001",
+        "expected": 20101,
+        "statusId": 20101,
+        "en": "Pending Supporting Document Verification",
+        "bm": "Menunggu Pengesahan Dokumen Sokongan",
+        "at": "2026-11-25 03:16:02",
+        "ok": true,
+        "checkedAt": "2026-11-25T03:16:06+08:00"
+      }
+    },
+    "SM-005": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_031441",
+          "startedAt": "2026-11-25T03:16:08+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\03_SM-005\\2026-11-25_031441",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KR-25112026-0001",
+            "statusId": 20101
+          },
+          "endedAt": "2026-11-25T03:17:05+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "My Task row for Test Company 01167338"
+        },
+        {
+          "runId": "2026-11-25_031809",
+          "startedAt": "2026-11-25T03:18:18+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\03_SM-005\\2026-11-25_031809",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KR-25112026-0001",
+            "statusId": 20101
+          },
+          "selfHeal": "the SIT DB still shows KR-25112026-0001 at 20101 Pending Supporting Document Verification, as before the attempt",
+          "endedAt": "2026-11-25T03:18:58+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Application No. KR-25112026-0001 is successfully sent to the Processing Officer(PO TEST CR28775 (C)) for approval"
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "DOCS_VERIFIED",
+      "db": {
+        "kind": "AP",
+        "docNo": "KR-25112026-0001",
+        "expected": 20104,
+        "statusId": 20104,
+        "en": "Pending Review Application",
+        "bm": "Menunggu Semakan Permohonan",
+        "at": "2026-11-25 03:18:53",
+        "ok": true,
+        "checkedAt": "2026-11-25T03:18:58+08:00"
+      }
+    },
+    "SM-006": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_031809",
+          "startedAt": "2026-11-25T03:19:00+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\04_SM-006\\2026-11-25_031809",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KR-25112026-0001",
+            "statusId": 20104
+          },
+          "endedAt": "2026-11-25T03:19:47+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Application No. (KR-25112026-0001) is recommended for approval and has been sent to 1) Ku Harmizan Bin Ku Haron 2) Mohd Alif Aziz 3) Shafiza binti Arshad 4) Massliana Binti Mohamed Mansor 5) Wan Mohd Asri Bin Wan Yusof 6) Nor Haffezul Bin Shafie 7) Do Not Use By Mmz - Processing Officer 8) Othman Bin Semail"
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "PO_REVIEWED",
+      "db": {
+        "kind": "AP",
+        "docNo": "KR-25112026-0001",
+        "expected": 20108,
+        "statusId": 20108,
+        "en": "Pending Application Approval",
+        "bm": "Menunggu Kelulusan Permohonan",
+        "at": "2026-11-25 03:19:41",
+        "ok": true,
+        "checkedAt": "2026-11-25T03:19:47+08:00"
+      }
+    },
+    "SM-011": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_031809",
+          "startedAt": "2026-11-25T03:19:49+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\05_SM-011\\2026-11-25_031809",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KR-25112026-0001",
+            "statusId": 20108
+          },
+          "endedAt": "2026-11-25T03:20:41+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Application No.KR-25112026-0001 has been approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "APPROVED_FEE",
+      "db": {
+        "kind": "AP",
+        "docNo": "KR-25112026-0001",
+        "expected": 20251,
+        "statusId": 20251,
+        "en": "Pending Payment Registration Fee",
+        "bm": "Menunggu Bayaran Pendaftaran",
+        "at": "2026-11-25 03:20:36",
+        "ok": true,
+        "checkedAt": "2026-11-25T03:20:41+08:00"
+      }
+    },
+    "SM-012": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_031809",
+          "startedAt": "2026-11-25T03:20:43+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\sm-renewal\\06_SM-012\\2026-11-25_031809",
+          "dbBefore": {
+            "kind": "AP",
+            "docNo": "KR-25112026-0001",
+            "statusId": 20251
+          },
+          "endedAt": "2026-11-25T03:21:40+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Your registration fee has been successfully made. Please click HERE or go to the Overview menu to retrieve the MOF Accounts Virtual Certificate of your company."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "REGISTERED",
+      "db": {
+        "kind": "AP",
+        "docNo": "KR-25112026-0001",
+        "expected": 20199,
+        "statusId": 20199,
+        "en": "Registered",
+        "bm": "Berdaftar",
+        "at": "2026-11-25 03:21:01",
+        "ok": true,
+        "checkedAt": "2026-11-25T03:21:40+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

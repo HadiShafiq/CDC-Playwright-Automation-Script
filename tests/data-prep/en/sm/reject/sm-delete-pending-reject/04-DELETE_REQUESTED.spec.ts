@@ -4,7 +4,7 @@
 // Module:    sm / reject · flow sm-delete-pending-reject
 // Stops at:  DELETE_REQUESTED — Pending review cancellation (after SM-041, Supplier)
 // DB status: AP 20301 Pending Review Cancellation
-// Path:      SM-022 (manual) → SM-004 (manual) → SM-005 → SM-041 (manual)
+// Path:      SM-022 → SM-004 → SM-005 → SM-041 (manual)
 //
 // Run:  npx cross-env TEST_ENV=SIT playwright test "tests/data-prep/en/sm/reject/sm-delete-pending-reject/04-DELETE_REQUESTED.spec.ts" --project=flows --headed
 //   or: npm run qa -- prepare --env sit --flow sm-delete-pending-reject --status DELETE_REQUESTED
