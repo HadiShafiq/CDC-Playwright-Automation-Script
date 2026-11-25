@@ -898,7 +898,9 @@ async function selfHeal(ctx: ItemCtx, step: StepDef, rec: StepRecord, s: RunStat
   if (!notOpened && !unchanged) return undefined;
   const why = notOpened
     ? `the attempt failed before opening the document (${(last?.error ?? '').split('\n')[0].slice(0, 120)}), so nothing was submitted`
-    : `the SIT DB still shows ${last!.dbBefore!.docNo} at ${cur!.statusId} ${cur!.en}, as before the attempt`;
+    : last?.dbBefore && cur
+      ? `the SIT DB still shows ${last.dbBefore.docNo} at ${cur.statusId} ${cur.en}, as before the attempt`
+      : `the step's proof query finds nothing in the SIT DB (${(step.checkpoint.proofSql ?? '').slice(0, 80)}…)`; // proofSql-only step (no checkpoint.db), 2026-11-25
   await updateRunState(ctx.flowRunId, (x) => {
     x.steps[step.id].state = 'failed';
     x.allowRerun = [...new Set([...x.allowRerun, step.id])];

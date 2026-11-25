@@ -1,0 +1,74 @@
+
+Running 1 test using 1 worker
+
+[10:56:03] qt-loi/01_QT-017: QT-017 Prepare the Letter of Intent and submit it for approval — role Desk Officer, login: Katalon default account of the step
+[10:56:03] qt-loi/01_QT-017: QT-017: login 881204115188 (role user)
+[10:56:05] qt-loi/01_QT-017: QT-017: Logged in as 881204115188
+[10:56:09] qt-loi/01_QT-017: QT-017: LOI required = Yes; save: Quotation/Tender QT260000000004539 is saved.
+[10:56:12] qt-loi/01_QT-017: QT-017: Letter Of Intent: branch = TERENGGANU
+[10:56:12] qt-loi/01_QT-017: QT-017: Letter Of Intent: contractSigner = A test 24022026
+[10:56:13] qt-loi/01_QT-017: QT-017: Verification And Approval: loiApprover = APPROVERTESTER1
+[10:56:14] qt-loi/01_QT-017: QT-017: Verification And Approval: j_idt431 filled
+[10:56:17] qt-loi/01_QT-017: QT-017: LOI save: Letter of Intent (LOI) LI260000000000781 is successfully saved.
+[10:56:25] qt-loi/01_QT-017: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 (23.0s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+    Error: LOI submit: Please add at least one Negotiation Term. (ERR-760289)
+
+       at ..\support\modules\qt\loi.ts:74
+
+      72 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+      73 |   const all = [saved, ...msgs].join(' | ');
+    > 74 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`LOI submit: ${msgs.join(' | ') || 'no message'}`);
+         |                                                              ^
+      75 |   const li = all.match(/\bLI\d{15}\b/)?.[0] ?? loiOf(qt);
+      76 |   return { messages: [...msgs, `LOI ${li || '(number not shown)'}`] };
+      77 | }
+        at prepareLoi (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loi.ts:74:62)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_105548\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_105548\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+Running 1 test using 1 worker
+
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 (1.1s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+    TypeError: Cannot read properties of undefined (reading 'docNo')
+
+       at ..\support\core\flow-runner.ts:901
+
+      899 |   const why = notOpened
+      900 |     ? `the attempt failed before opening the document (${(last?.error ?? '').split('\n')[0].slice(0, 120)}), so nothing was submitted`
+    > 901 |     : `the SIT DB still shows ${last!.dbBefore!.docNo} at ${cur!.statusId} ${cur!.en}, as before the attempt`;
+          |                                                 ^
+      902 |   await updateRunState(ctx.flowRunId, (x) => {
+      903 |     x.steps[step.id].state = 'failed';
+      904 |     x.allowRerun = [...new Set([...x.allowRerun, step.id])];
+        at selfHeal (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:901:49)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:541:24)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:14)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_105727\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_105727\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 

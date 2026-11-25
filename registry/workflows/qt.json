@@ -640,6 +640,33 @@
           "waitSec": 300
         }
       }
+    },
+    "QT-017": {
+      "title": "Prepare the Letter of Intent and submit it for approval",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loi.ts prepareLoi — mapped on SIT 2026-11-25 (QT260000000004539)",
+      "instructions": "Prepare LOI task: LOI Required = Yes, Save, Prepare Letter Of Intent; fill Letter Of Intent (title, online verification Yes, signer), Zone / Item, Negotiation Terms, Verification And Approval; Save; Submit.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LOI_SUBMITTED",
+        "description": "LOI (LI) at 62401 Pending Letter Of Intent Approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "documentation",
+        "evidence": "SIT LI260000000000724 (2026-11-06): 62400 → 62401 → 62403 → 62404 → 62405",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62401 and q.qt_no = '{QT}'"
+      }
     }
   },
   "flows": [
@@ -732,6 +759,16 @@
       "notes": "Built 2026-11-25 (not run yet). Give a QT at 60023 with --input QT=… (e.g. QT260000000004539 or QT260000000004524). Path of SIT QT260000000003654. VERIFIED 2026-11-25 on QT260000000004539 (→ SF 62213).",
       "steps": [
         "QT-016"
+      ]
+    },
+    {
+      "id": "qt-loi",
+      "submodule": "award",
+      "title": "QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401)",
+      "verification": "unverified",
+      "notes": "Built 2026-11-25. Give a QT at SF 62213 with --input QT=… (QT260000000004539). Next steps (Approve LOI, supplier Accept LOI, Negotiate LOI) to be built.",
+      "steps": [
+        "QT-017"
       ]
     }
   ]

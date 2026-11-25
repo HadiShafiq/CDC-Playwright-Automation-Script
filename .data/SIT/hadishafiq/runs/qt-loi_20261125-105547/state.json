@@ -1,0 +1,53 @@
+{
+  "flowRunId": "qt-loi_20261125-105547",
+  "flowId": "qt-loi",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T10:55:47+08:00",
+  "updatedAt": "2026-11-25T10:57:37+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004539"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-017": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_105548",
+          "startedAt": "2026-11-25T10:56:03+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loi\\01_QT-017\\2026-11-25_105548",
+          "endedAt": "2026-11-25T10:56:21+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004539 is saved."
+            },
+            {
+              "severity": "info",
+              "text": "Letter of Intent (LOI) LI260000000000781 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "Please add at least one Negotiation Term. (ERR-760289)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760289: Please add at least one Negotiation Term. (ERR-760289)",
+          "error": "LOI submit: Please add at least one Negotiation Term. (ERR-760289)"
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "in-progress"
+}
