@@ -1,3 +1,4 @@
+import path from 'node:path';
 import type { Page } from '@playwright/test';
 import { openTasks } from '../../core/bpm-tasks';
 import { currentStatus } from '../../core/doc-status';
@@ -7,6 +8,7 @@ import { addCommitteeMember, QT_SIT, type StageCtx } from './stages';
 import { openTask } from './tasklist';
 
 const clean = (t: string) => t.replace(/\s+/g, ' ').trim();
+const ENDORSEMENT_PDF = path.resolve(__dirname, '..', '..', '..', 'fixtures', 'files', 'File_pdf_for_testing.pdf');
 
 /**
  * QT-012..015 (60022 → 60010 → OC/TEC/FEC → 60023): driven by the open BPM tasks, not the QT status, because several
@@ -422,6 +424,28 @@ async function finalizeFcSelection(ctx: EcCtx, qt: string) {
   await clickButton(page, 'Save');
   log(`decision Supplier Finalization / Award / rank-1 supplier; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
   await fillBriefing(page, log);
+  await clickButton(page, 'Save');
+  // Endorsement Report tab (ERR-770271 "Please upload the endorsement report signed by the committee members"):
+  // With Conditions stays No (default), Supplier Selection Justification, upload the signed Kertas Keputusan (PDF)
+  // through endorseReportUploadBtnId → "Choose Files" dialog (file input) → Close. SIT 2026-11-25.
+  await openTab(page, 'Endorsement Report');
+  await pfIdle(page);
+  await selectWith('Lowest offered price');
+  await page.locator('[id$="endorseReportUploadBtnIdBtn"]').click();
+  await pfIdle(page).catch(() => {});
+  const up = page.locator('.ui-dialog:visible').filter({ has: page.locator('input[type=file]') }).last();
+  await up.waitFor({ timeout: 20_000 });
+  await up.locator('input[type=file]').setInputFiles(ENDORSEMENT_PDF);
+  // the file is only listed (name, size, start + cancel icons); the start icon uploads it (as the PM "Pilih Fail" dialog)
+  const start = up.locator('td.start button, button.start, .ui-fileupload-upload').or(up.locator('table.files button').first()).first();
+  await start.waitFor({ timeout: 15_000 });
+  await start.click();
+  await pfIdle(page).catch(() => {});
+  for (let i = 0; i < 30 && (await up.isVisible().catch(() => false)) && (await up.locator('td.start button').count()); i++) await page.waitForTimeout(500);
+  await page.waitForTimeout(2000);
+  if (await up.isVisible().catch(() => false)) await up.getByRole('button', { name: 'Close', exact: true }).click().catch(() => {});
+  await pfIdle(page).catch(() => {});
+  log(`endorsement report: justification "Lowest offered price", signed report uploaded; ${(await pageMessages(page)).join(' | ') || 'no message'}`);
   await clickButton(page, 'Save');
   const msgs = await pressAndConfirm(page, 'Submit', log);
   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Finalize FC Selection submit: ${msgs.join(' | ') || 'no message'}`);

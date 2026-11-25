@@ -118,7 +118,7 @@ Quotation/Tender from draft through specification, documents, BPK, publication, 
 | **DOCS_PREPARED_NO_BPK** | Documents prepared; publication approval (no BPK) | QT-107 Prepare the QT documents and submit (no BPK needed) (Desk Officer) | QT **60005** Pending Document Approval for Publication / Menunggu Kelulusan Dokumen untuk Pengiklanan | execution | quotation-tender / `qt-to-recommendation-no-bpk` (7 items)<br>revision / `qt-doc-revision` (7 items) |
 | **DOC_REVISION** | Pending Document Revision | QT-109 Publication Approver sends the documents back for revision (Publication Approver) | QT **60006** Pending Document Revision / Menunggu Kaji Semula Dokumen | execution | revision / `qt-doc-revision` (8 items) |
 | **BPK_REVISION** | Pending Document Revision (BPK) | QT-108 BPK sends the documents back for revision (BPK Approver) | QT:BPK **60153** Pending Document Revision (BPK) / Menunggu Kaji Semula Dokumen (BPK) | execution | revision / `qt-bpk-revision` (8 items) |
-| **SF_LOI_PREPARATION** | Supplier Finalization signed off; LOI to prepare | QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off (Desk Officer / FC Chair / Members) | QT:SF **62213** Pending LOI Preparation / Acknowledgement or Negotiation /  *(expected, not yet seen on SIT)* | documentation | award / `qt-supplier-finalization` (1 items) |
+| **SF_LOI_PREPARATION** | Supplier Finalization signed off; LOI to prepare | QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off (Desk Officer / FC Chair / Members) | QT:SF **62213** Pending LOI Preparation / Acknowledgement or Negotiation /  | execution | award / `qt-supplier-finalization` (1 items) |
 
 ## sq — Simple Quote
 

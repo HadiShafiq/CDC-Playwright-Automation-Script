@@ -7,7 +7,7 @@
   "language": "EN",
   "cr": null,
   "createdAt": "2026-11-25T05:25:12+08:00",
-  "updatedAt": "2026-11-25T05:57:50+08:00",
+  "updatedAt": "2026-11-25T10:45:49+08:00",
   "from": null,
   "to": null,
   "docs": {
@@ -17,7 +17,7 @@
   "gates": {},
   "steps": {
     "QT-016": {
-      "state": "failed",
+      "state": "verified",
       "attempts": [
         {
           "runId": "2026-11-25_052512",
@@ -213,14 +213,80 @@
           ],
           "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)",
           "error": "Finalize FC Selection submit: Please upload the endorsement report signed by the committee members. (ERR-770271)"
+        },
+        {
+          "runId": "2026-11-25_103927",
+          "startedAt": "2026-11-25T10:39:36+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_103927",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": 62201
+          },
+          "endedAt": "2026-11-25T10:40:25+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "Please upload the endorsement report signed by the committee members. (ERR-770271)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)",
+          "error": "Finalize FC Selection submit: Please upload the endorsement report signed by the committee members. (ERR-770271)"
+        },
+        {
+          "runId": "2026-11-25_104256",
+          "startedAt": "2026-11-25T10:43:08+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-25_104256",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004539",
+            "statusId": 62201
+          },
+          "endedAt": "2026-11-25T10:45:49+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully finalized and submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully endorsed."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004539 is successfully signed off."
+            }
+          ]
         }
       ],
       "outputs": {},
-      "login": "Katalon default account of the step"
+      "login": "Katalon default account of the step",
+      "checkpoint": "SF_LOI_PREPARATION",
+      "db": {
+        "kind": "QT:SF",
+        "docNo": "QT260000000004539",
+        "expected": 62213,
+        "statusId": 62213,
+        "en": "Pending LOI Preparation / Acknowledgement or Negotiation",
+        "bm": "Menunggu Penyediaan / Maklumbalas Surat Niat atau Rundingan",
+        "at": "2026-11-25 10:45:46",
+        "ok": true,
+        "checkedAt": "2026-11-25T10:45:49+08:00",
+        "observeOnly": true
+      }
     }
   },
   "allowRerun": [],
   "vars": {},
-  "status": "blocked",
-  "blockedReason": "QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016"
+  "status": "completed"
 }

@@ -1547,18 +1547,18 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "qt",
-    "checkpoint": "PENDING_RECOMMENDATION",
+    "checkpoint": "SF_LOI_PREPARATION",
     "verification": "verified",
     "createdBy": {
       "flowRunId": "qt-to-recommendation-no-bpk_20261125-041338",
       "stepId": "QT-001"
     },
     "lastStep": {
-      "flowRunId": "qt-to-recommendation-no-bpk_20261125-041338",
-      "stepId": "QT-015"
+      "flowRunId": "qt-supplier-finalization_20261125-052512",
+      "stepId": "QT-016"
     },
     "createdAt": "2026-11-25T04:14:11+08:00",
-    "lastVerifiedAt": "2026-11-25T04:56:48+08:00",
+    "lastVerifiedAt": "2026-11-25T10:45:49+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,

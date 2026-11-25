@@ -1,6 +1,6 @@
 # Diagnosis QT-016 — Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off
 
-Run qt-supplier-finalization_20261125-052512 · 2026-11-25T05:56:43+08:00
+Run qt-supplier-finalization_20261125-052512 · 2026-11-25T10:40:25+08:00
 
 ## Error
 ```
@@ -18,23 +18,10 @@ Finalize FC Selection submit: Please upload the endorsement report signed by the
 ```yaml
 - link "Skip to Content":
   - /url: "#main-content"
-- menubar "Dockbar"
-- menubar "Dockbar":
-  - listitem:
-    - link "W3C":
-      - /url: /web/guest/w3c
-      - img "W3C"
-  - listitem:
-    - img "Red"
-  - listitem:
-    - img "Green"
-  - listitem:
-    - img "Blue"
-  - menuitem " Login"
 - banner:
   - heading "ePerolehan" [level=1]:
     - link "ePerolehan":
-      - /url: http://ngepsit.eperolehan.com.my/home?p_p_auth=Kx9Frqge&p_p_id=49&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_49_struts_action=%2Fmy_sites%2Fview&_49_groupId=10184&_49_privateLayout=false
+      - /url: http://ngepsit.eperolehan.com.my/home?p_p_auth=0iIb2yIH&p_p_id=49&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_49_struts_action=%2Fmy_sites%2Fview&_49_groupId=10184&_49_privateLayout=false
       - img "ePerolehan"
   - emphasis: Portal last updated on 6 November 2026 04:54:51 PM
   - navigation:
@@ -277,22 +264,30 @@ Finalize FC Selection submit: Please upload the endorsement report signed by the
         - link "Announcement on 10/10/2024":
           - /url: http://ngepsit.eperolehan.com.my/announcement?p_p_id=announcementdetail_WAR_NGePRevampMainPortletportlet&p_p_lifecycle=0&p_p_col_id=column-6&p_p_col_pos=1&p_p_col_count=8&_announcementdetail_WAR_NGePRevampMainPortletportlet_jspPage=%2Fhtml%2Fannouncementdetail%2Farticle.jsp&_announcementdetail_WAR_NGePRevampMainPortletportlet_announcementArticleId=100000001306932&_announcementdetail_WAR_NGePRevampMainPortletportlet_announcementGroupId=10184&_announcementdetail_WAR_NGePRevampMainPortletportlet_announcementTitle=Announcement+on+10%2F10%2F2024&_announcementdetail_WAR_NGePRevampMainPortletportlet_announcementLatestVersion=1.0
   - link "» More Announcements":
-    - /url: http://ngepsit.eperolehan.com.my/announcement?p_p_id=announcementdetail_WAR_NGePRevampMainPortletportlet&p_p_lifecycle=0&p_p_state=normal&p_p_col_id=column-6&p_p_col_pos=1&p_p_
+    - /url: http://ngepsit.eperolehan.com.my/announcement?p_p_id=announcementdetail_WAR_NGePRevampMainPortletportlet&p_p_lifecycle=0&p_p_state=normal&p_p_col_id=column-6&p_p_col_pos=1&p_p_col_count=8&_announcementdetail_WAR_NGePRevampMainPortletportlet_tabs1=Current
+  - heading "Tag Cloud Tag Cloud" [level=1]
+  - list:
+    - link " Options":
+      - /url: javascript:;
+  - list:
+    - listitem:
+      - link "charter":
+  
 ```
 
 ## Form values (what the page would submit)
 ```
-input/hidden _82_formDate = 1795557402768
+input/hidden _82_formDate = 1795574424923
 select/select-one _82_languageId = en_US [English]
-input/hidden _59_INSTANCE_ElITwXGPEXon_formDate = 1795557402796
+input/hidden _59_INSTANCE_ElITwXGPEXon_formDate = 1795574424947
 input/hidden _59_INSTANCE_ElITwXGPEXon_cmd = vote
 input/hidden _59_INSTANCE_ElITwXGPEXon_redirect = http://ngepsit.eperolehan.com.my/home?p_p_id=59_INSTANCE_ElITwXGPEXon&p_p_lifecy
 input/hidden _59_INSTANCE_ElITwXGPEXon_questionId = 40302
 input/hidden _59_INSTANCE_ElITwXGPEXon_successMessage = Thank you for your vote.
-input/radio _59_INSTANCE_ElITwXGPEXon_fhii = false
-input/radio _59_INSTANCE_ElITwXGPEXon_pwqd = false
-input/radio _59_INSTANCE_ElITwXGPEXon_vtgp = false
-input/radio _59_INSTANCE_ElITwXGPEXon_txxb = false
+input/radio _59_INSTANCE_ElITwXGPEXon_jdmq = false
+input/radio _59_INSTANCE_ElITwXGPEXon_jybn = false
+input/radio _59_INSTANCE_ElITwXGPEXon_sqez = false
+input/radio _59_INSTANCE_ElITwXGPEXon_ambh = false
 ```
 
 ## SIT database

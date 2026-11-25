@@ -613,7 +613,7 @@
       "stateChanging": true,
       "login": "default",
       "automation": "module",
-      "source": "support/modules/qt/ecphase.ts (FC handlers added 2026-11-25 from the SIT task names of QT260000000003654; Consolidate Report not mapped yet)",
+      "source": "support/modules/qt/ecphase.ts (consolidateReport, assignFcSecretary, coordinateMeeting, finalizeFcSelection, endorse/sign off) — mapped on SIT 2026-11-25",
       "instructions": "After 60023: Consolidate Report, Coordinate FC Meeting, Finalize FC Selection, Endorse FC Selection (each member), SignOff FC Selection.",
       "inputs": [
         {
@@ -629,16 +629,15 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "SIT DB QT260000000003654 (2026-10-02): SF 62200 → 62201 → 62210 → 62211 → 62213 → 62203; BPM tasks Consolidate Report, Coordinate FC Meeting, Finalize/Endorse/SignOff FC Selection, Prepare LOI/LOA",
+        "verification": "execution",
+        "evidence": "SIT run qt-supplier-finalization_20261125-052512: QT260000000004539 60023 → Consolidate Report (60011) → Assign FC Secretary → FC meeting → Meeting Decision + endorsement report upload → endorse ×2 → sign off → SF 62213",
         "db": {
           "kind": "QT:SF",
           "statusId": 62213,
           "en": "Pending LOI Preparation / Acknowledgement or Negotiation",
           "bm": null,
           "evidence": "SIT QT260000000003654 read 2026-11-25",
-          "waitSec": 300,
-          "observeOnly": true
+          "waitSec": 300
         }
       }
     }
@@ -729,8 +728,8 @@
       "id": "qt-supplier-finalization",
       "submodule": "award",
       "title": "QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213)",
-      "verification": "unverified",
-      "notes": "Built 2026-11-25 (not run yet). Give a QT at 60023 with --input QT=… (e.g. QT260000000004539 or QT260000000004524). Path of SIT QT260000000003654.",
+      "verification": "execution",
+      "notes": "Built 2026-11-25 (not run yet). Give a QT at 60023 with --input QT=… (e.g. QT260000000004539 or QT260000000004524). Path of SIT QT260000000003654. VERIFIED 2026-11-25 on QT260000000004539 (→ SF 62213).",
       "steps": [
         "QT-016"
       ]

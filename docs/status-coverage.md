@@ -23,7 +23,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | FL | 165 | 12 | 18 | 65 | 44 | 26 |
 | PM | 2 | 2 | 0 | 0 | 0 | 0 |
 | PP | 14 | 0 | 0 | 14 | 0 | 0 |
-| SC | 308 | 24 | 1 | 166 | 53 | 64 |
+| SC | 308 | 25 | 0 | 166 | 53 | 64 |
 | SM | 74 | 7 | 10 | 11 | 11 | 35 |
 
 ## CD
@@ -739,7 +739,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | SF | 62209 | Pending Multiple LOI Recommendation | Menunggu Pengesyoran Lebih Dari Satu Surat Niat | 372 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/SF/62209-Pending-Multiple-LOI-Recommendation.spec.ts) |
 | SF | 62210 | Pending Supplier Finalization Endorsement | Menunggu Pengesahan Pemilihan Akhir Pembekal | 6534 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/SF/62210-Pending-Supplier-Finalization-Endorsement.spec.ts) |
 | SF | 62211 | Pending Supplier Finalization Sign Off | Menunggu Perakuan Pemilihan Akhir Pembekal | 4981 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/sc/SF/62211-Pending-Supplier-Finalization-Sign-Off.spec.ts) |
-| SF | 62213 | Pending LOI Preparation / Acknowledgement or Negotiation | Menunggu Penyediaan / Maklumbalas Surat Niat atau Rundingan | 4465 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/sc/SF/62213-Pending-LOI-Preparation-Acknowledgement-or-Negotiation.spec.ts) |
+| SF | 62213 | Pending LOI Preparation / Acknowledgement or Negotiation | Menunggu Penyediaan / Maklumbalas Surat Niat atau Rundingan | 4465 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/sc/SF/62213-Pending-LOI-Preparation-Acknowledgement-or-Negotiation.spec.ts) |
 | SF | 62214 | Proceed Manual Due To Ministry Restructuring | Diteruskan Secara Manual Disebabkan Penyusunan Semula Kementerian | 9 (2018-09-30) | SYSTEM | [simulate](../tests/data-prep/en/by-status/sc/SF/62214-Proceed-Manual-Due-To-Ministry-Restructuring.spec.ts) |
 | SF | 62215 | Proceed Manual Due To PTJ Code Changed | Diteruskan Secara Manual Disebabkan Perubahan Kod PTJ | 0 | NEVER_USED | [simulate](../tests/data-prep/en/by-status/sc/SF/62215-Proceed-Manual-Due-To-PTJ-Code-Changed.spec.ts) |
 | SF | 62216 | Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any) | Sebutharga Telah Dibatalkan Disebabkan Tamat Tempoh Sahlaku. Kelulusan Daripada Mof Perlu Diperolehi Sekiranya Perlu Tindakan Selanjutnya | 229 (2026-08-03) | SYSTEM | [simulate](../tests/data-prep/en/by-status/sc/SF/62216-Quotation-Has-Been-Cancelled-Due-To-Proposal-Validity-Expire.spec.ts) |

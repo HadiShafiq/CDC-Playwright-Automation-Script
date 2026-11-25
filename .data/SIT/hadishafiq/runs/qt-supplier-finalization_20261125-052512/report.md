@@ -8,17 +8,15 @@
 | Tester | hadishafiq |
 | Language | EN |
 | CR | - |
-| Status | **BLOCKED** |
-| Started / updated | 2026-11-25T05:25:12+08:00 / 2026-11-25T05:57:50+08:00 |
+| Status | **COMPLETED** |
+| Started / updated | 2026-11-25T05:25:12+08:00 / 2026-11-25T10:45:49+08:00 |
 | Documents | QT QT260000000004539 |
-
-**Waiting for:** QT-016 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-supplier-finalization_20261125-052512 --step QT-016
 
 ## Items
 
 | # | Item | Result | Checkpoint | Documents | Login | Classification / note |
 |---|---|---|---|---|---|---|
-| 1 | QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off | FAILED (9 attempts) |  |  | Katalon default account of the step | APPLICATION_VALIDATION (medium): the application showed ERR-770271: Please upload the endorsement report signed by the committee members. (ERR-770271) <br>Finalize FC Selection submit: Please upload the endorsement report signed by the committee members. (ERR-770271) |
+| 1 | QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off | VERIFIED (11 attempts) | SF_LOI_PREPARATION |  | Katalon default account of the step |   |
 
 ## Application messages per step
 
@@ -52,4 +50,14 @@
 **QT-016** attempt 2026-11-25T05:56:02+08:00 → failed · evidence `evidence\SIT\FLOW\qt-supplier-finalization\01_QT-016\2026-11-25_055555`
 - info: Supplier Finalization QT260000000004539 is successfully saved.
 - error: Please upload the endorsement report signed by the committee members. (ERR-770271)
+
+**QT-016** attempt 2026-11-25T10:39:36+08:00 → failed · evidence `evidence\SIT\FLOW\qt-supplier-finalization\01_QT-016\2026-11-25_103927`
+- info: Supplier Finalization QT260000000004539 is successfully saved.
+- error: Please upload the endorsement report signed by the committee members. (ERR-770271)
+
+**QT-016** attempt 2026-11-25T10:43:08+08:00 → verified · evidence `evidence\SIT\FLOW\qt-supplier-finalization\01_QT-016\2026-11-25_104256`
+- info: Supplier Finalization QT260000000004539 is successfully saved.
+- info: Supplier Finalization QT260000000004539 is successfully finalized and submitted.
+- info: Supplier Finalization QT260000000004539 is successfully endorsed.
+- info: Supplier Finalization QT260000000004539 is successfully signed off.
 
