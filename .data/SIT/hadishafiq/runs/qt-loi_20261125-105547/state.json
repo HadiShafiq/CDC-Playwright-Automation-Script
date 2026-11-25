@@ -7,7 +7,7 @@
   "language": "EN",
   "cr": null,
   "createdAt": "2026-11-25T10:55:47+08:00",
-  "updatedAt": "2026-11-25T10:57:37+08:00",
+  "updatedAt": "2026-11-25T11:29:40+08:00",
   "from": null,
   "to": null,
   "docs": {
@@ -17,7 +17,7 @@
   "gates": {},
   "steps": {
     "QT-017": {
-      "state": "failed",
+      "state": "completed-unverified",
       "attempts": [
         {
           "runId": "2026-11-25_105548",
@@ -41,6 +41,62 @@
           ],
           "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760289: Please add at least one Negotiation Term. (ERR-760289)",
           "error": "LOI submit: Please add at least one Negotiation Term. (ERR-760289)"
+        },
+        {
+          "runId": "2026-11-25_112226",
+          "startedAt": "2026-11-25T11:22:36+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loi\\01_QT-017\\2026-11-25_112226",
+          "endedAt": "2026-11-25T11:23:36+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Date Minute is mandatory."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Tab \"Verification And Approval\" did not open: Date Minute is mandatory."
+        },
+        {
+          "runId": "2026-11-25_112440",
+          "startedAt": "2026-11-25T11:24:52+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loi\\01_QT-017\\2026-11-25_112440",
+          "selfHeal": "the step's proof query finds nothing in the SIT DB (select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.l…)",
+          "endedAt": "2026-11-25T11:25:52+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Date Minute is mandatory."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Tab \"Verification And Approval\" did not open: Date Minute is mandatory."
+        },
+        {
+          "runId": "2026-11-25_112626",
+          "startedAt": "2026-11-25T11:26:40+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loi\\01_QT-017\\2026-11-25_112626",
+          "endedAt": "2026-11-25T11:27:00+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Intent (LOI) LI260000000000781 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Letter of Intent (LOI) LI260000000000781 is submitted successfully."
+            }
+          ],
+          "classification": "BUSINESS_ASSERTION (high): the step finished but its proof query is not satisfied",
+          "error": "Expected outcome not in the database for QT-017: its proof query found nothing (select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62401 and q.qt_no = '{QT}')",
+          "reconciled": {
+            "by": "hadishafiq",
+            "at": "2026-11-25T11:29:06+08:00",
+            "decision": "went through",
+            "values": {}
+          }
         }
       ],
       "outputs": {},

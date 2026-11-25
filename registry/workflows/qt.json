@@ -663,9 +663,90 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "SIT LI260000000000724 (2026-11-06): 62400 → 62401 → 62403 → 62404 → 62405",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LI260000000000781 (QT260000000004539) 62400 → 62401 Pending Letter Of Intent Approval, \"submitted successfully\" (run qt-loi_20261125-105547, reconciled: proof checked 1 s early)",
         "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62401 and q.qt_no = '{QT}'"
+      }
+    },
+    "QT-018": {
+      "title": "LOI approver approves the Letter of Intent",
+      "role": "LOI Approver",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loi.ts approveLoi — built 2026-11-25",
+      "instructions": "BPM task \"Approve LOI\" (keyed on the LI number): open from My Task, Approve.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LOI_APPROVED",
+        "description": "LOI at 62403 Pending Supplier Acknowledgement",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LI260000000000781 62401 → 62403 (\"is approved\", Sign W/O GPKI, approver 770912129890)",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62403 and q.qt_no = '{QT}'"
+      }
+    },
+    "QT-019": {
+      "title": "Supplier accepts the Letter of Intent",
+      "role": "Supplier",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loi.ts acceptLoi — built 2026-11-25",
+      "instructions": "Supplier: My Task \"Accept LOI\" (Letter Of Intent Acknowledgement) → remarks → Accept.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LOI_ACCEPTED",
+        "description": "LOI at 62404 Pending Letter Of Intent Negotiation",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LI260000000000781 62403 → 62404 (\"accepted successfully\", supplier firstallied1234, soft cert Sign)",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62404 and q.qt_no = '{QT}'"
+      }
+    },
+    "QT-020": {
+      "title": "Desk Officer records the LOI negotiation result",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loi.ts negotiateLoi — built 2026-11-25",
+      "instructions": "My Task \"Negotiate LOI\" (Review / Request LOI) → Result of Negotiation: location + date, result per term → Save → Submit.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LOI_COMPLETED",
+        "description": "LOI at 62405 Letter Of Intent Completed",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LI260000000000781 62404 → 62405 (\"is completed\")",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62405 and q.qt_no = '{QT}'"
       }
     }
   },
@@ -764,11 +845,14 @@
     {
       "id": "qt-loi",
       "submodule": "award",
-      "title": "QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401)",
-      "verification": "unverified",
-      "notes": "Built 2026-11-25. Give a QT at SF 62213 with --input QT=… (QT260000000004539). Next steps (Approve LOI, supplier Accept LOI, Negotiate LOI) to be built.",
+      "title": "QT at SF 62213 to Letter of Intent completed (LI 62405)",
+      "verification": "execution",
+      "notes": "VERIFIED on SIT 2026-11-25: QT260000000004539 / LI260000000000781 62400 → 62401 → 62403 → 62404 → 62405 (QT-017 reopens a saved draft via the supplier row; negotiation location + terms; approver signs W/O GPKI; supplier firstallied1234 accepts with soft cert).",
       "steps": [
-        "QT-017"
+        "QT-017",
+        "QT-018",
+        "QT-019",
+        "QT-020"
       ]
     }
   ]

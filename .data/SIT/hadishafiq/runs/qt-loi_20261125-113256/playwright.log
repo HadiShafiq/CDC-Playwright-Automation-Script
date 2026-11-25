@@ -1,0 +1,18 @@
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to LOI accepted by the supplier (LI 62404) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017
+  -  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to LOI accepted by the supplier (LI 62404) › 02 QT-018 LOI approver approves the Letter of Intent @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/02_QT-018 @QT-018
+[11:33:07] qt-loi/03_QT-019: QT-019 Supplier accepts the Letter of Intent — role Supplier, login: Katalon default account of the step
+[11:33:08] qt-loi/03_QT-019: QT-019: Accept LOI LI260000000000781 -> supplier firstallied1234
+[11:33:11] qt-loi/03_QT-019: Closed the TERKINI announcement
+[11:33:11] qt-loi/03_QT-019: QT-019: login firstallied1234
+[11:33:13] qt-loi/03_QT-019: QT-019: Logged in as firstallied1234
+[11:33:16] qt-loi/03_QT-019: QT-019: dialog: "Confirmation Are you sure to accept this Letter of Intent? If accepted, LOA will issuing based on negotiation result of " -> Yes
+[11:33:16] qt-loi/03_QT-019: QT-019: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[11:33:20] qt-loi/03_QT-019: Closed the TERKINI announcement
+[11:33:21] qt-loi/03_QT-019: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to LOI accepted by the supplier (LI 62404) › 03 QT-019 Supplier accepts the Letter of Intent @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/03_QT-019 @QT-019 (16.0s)
+
+  2 skipped
+  1 passed (24.9s)

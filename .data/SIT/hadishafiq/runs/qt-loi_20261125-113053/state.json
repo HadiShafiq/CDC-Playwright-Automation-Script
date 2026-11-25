@@ -1,0 +1,44 @@
+{
+  "flowRunId": "qt-loi_20261125-113053",
+  "flowId": "qt-loi",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T11:30:53+08:00",
+  "updatedAt": "2026-11-25T11:31:25+08:00",
+  "from": "QT-018",
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004539"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-018": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_113054",
+          "startedAt": "2026-11-25T11:31:08+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loi\\02_QT-018\\2026-11-25_113054",
+          "endedAt": "2026-11-25T11:31:25+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Intent (LOI) LI260000000000781 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "LOI_APPROVED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

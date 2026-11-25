@@ -1,0 +1,19 @@
+
+Running 4 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to Letter of Intent completed (LI 62405) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017
+  -  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to Letter of Intent completed (LI 62405) › 02 QT-018 LOI approver approves the Letter of Intent @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/02_QT-018 @QT-018
+  -  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to Letter of Intent completed (LI 62405) › 03 QT-019 Supplier accepts the Letter of Intent @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/03_QT-019 @QT-019
+[11:35:34] qt-loi/04_QT-020: QT-020 Desk Officer records the LOI negotiation result — role Desk Officer, login: Katalon default account of the step
+[11:35:35] qt-loi/04_QT-020: QT-020: Negotiate LOI LI260000000000781 -> 881204115188
+[11:35:37] qt-loi/04_QT-020: Closed the TERKINI announcement
+[11:35:37] qt-loi/04_QT-020: QT-020: login 881204115188
+[11:35:40] qt-loi/04_QT-020: QT-020: Logged in as 881204115188
+[11:35:47] qt-loi/04_QT-020: QT-020: negotiation: location row 1, 4 term checkbox(es) ticked
+[11:35:47] qt-loi/04_QT-020: QT-020: negotiation result: 4 term(s)
+[11:35:50] qt-loi/04_QT-020: QT-020: save: Letter of Intent (LOI) LI260000000000781 is successfully saved.
+[11:37:53] qt-loi/04_QT-020: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to Letter of Intent completed (LI 62405) › 04 QT-020 Desk Officer records the LOI negotiation result @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/04_QT-020 @QT-020 (2.3m)
+
+  3 skipped
+  1 passed (2.5m)

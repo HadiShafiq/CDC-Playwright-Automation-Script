@@ -1,0 +1,16 @@
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to LOI approved (LI 62403 Pending Supplier Acknowledgement) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017
+[11:31:08] qt-loi/02_QT-018: QT-018 LOI approver approves the Letter of Intent — role LOI Approver, login: Katalon default account of the step
+[11:31:10] qt-loi/02_QT-018: QT-018: Approve LOI LI260000000000781 -> 770912129890
+[11:31:13] qt-loi/02_QT-018: Closed the TERKINI announcement
+[11:31:13] qt-loi/02_QT-018: QT-018: login 770912129890
+[11:31:15] qt-loi/02_QT-018: QT-018: Logged in as 770912129890
+[11:31:20] qt-loi/02_QT-018: QT-018: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[11:31:24] qt-loi/02_QT-018: Closed the TERKINI announcement
+[11:31:25] qt-loi/02_QT-018: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 to LOI approved (LI 62403 Pending Supplier Acknowledgement) › 02 QT-018 LOI approver approves the Letter of Intent @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/02_QT-018 @QT-018 (17.9s)
+
+  1 skipped
+  1 passed (31.8s)

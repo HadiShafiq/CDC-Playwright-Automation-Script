@@ -72,3 +72,139 @@ Running 1 test using 1 worker
 
   1 failed
     [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+Running 1 test using 1 worker
+
+[11:22:36] qt-loi/01_QT-017: QT-017 Prepare the Letter of Intent and submit it for approval — role Desk Officer, login: Katalon default account of the step
+[11:22:36] qt-loi/01_QT-017: QT-017: login 881204115188 (role user)
+[11:22:38] qt-loi/01_QT-017: QT-017: Logged in as 881204115188
+[11:22:41] qt-loi/01_QT-017: QT-017: reopening the LOI draft LI260000000000781
+[11:22:48] qt-loi/01_QT-017: QT-017: negotiation: location row 1, 8 term checkbox(es) ticked
+[11:22:48] qt-loi/01_QT-017: QT-017: Negotiation Terms: negLocId filled
+[11:22:48] qt-loi/01_QT-017: QT-017: Negotiation Terms: remarksId filled
+[11:23:38] qt-loi/01_QT-017: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 (1.1m)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+    Error: Tab "Verification And Approval" did not open: Date Minute is mandatory.
+
+       at ..\support\modules\qt\pf.ts:196
+
+      194 |         return openTab(page, label, false);
+      195 |       }
+    > 196 |       throw new Error(`Tab "${label}" did not open${(await pageMessages(page)).length ? `: ${(await pageMessages(page)).join(' | ')}` : ''}`);
+          |             ^
+      197 |     }
+      198 |   }
+      199 | }
+        at openTab (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:196:13)
+        at prepareLoi (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loi.ts:120:5)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_112226\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_112226\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+Running 1 test using 1 worker
+
+[11:24:51] qt-loi/01_QT-017: SELF-HEAL QT-017: retry once — the step's proof query finds nothing in the SIT DB (select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.l…)
+[11:24:52] qt-loi/01_QT-017: QT-017 Prepare the Letter of Intent and submit it for approval — role Desk Officer, login: Katalon default account of the step
+[11:24:52] qt-loi/01_QT-017: QT-017: login 881204115188 (role user)
+[11:24:53] qt-loi/01_QT-017: QT-017: Logged in as 881204115188
+[11:24:57] qt-loi/01_QT-017: QT-017: reopening the LOI draft LI260000000000781
+[11:25:04] qt-loi/01_QT-017: QT-017: negotiation: location row 1, 8 term checkbox(es) ticked
+[11:25:04] qt-loi/01_QT-017: QT-017: Negotiation Terms: negLocId filled
+[11:25:04] qt-loi/01_QT-017: QT-017: Negotiation Terms: remarksId filled
+[11:25:54] qt-loi/01_QT-017: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 (1.1m)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+    Error: Tab "Verification And Approval" did not open: Date Minute is mandatory.
+
+       at ..\support\modules\qt\pf.ts:196
+
+      194 |         return openTab(page, label, false);
+      195 |       }
+    > 196 |       throw new Error(`Tab "${label}" did not open${(await pageMessages(page)).length ? `: ${(await pageMessages(page)).join(' | ')}` : ''}`);
+          |             ^
+      197 |     }
+      198 |   }
+      199 | }
+        at openTab (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:196:13)
+        at prepareLoi (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loi.ts:120:5)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_112440\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_112440\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+Running 1 test using 1 worker
+
+[11:26:40] qt-loi/01_QT-017: QT-017 Prepare the Letter of Intent and submit it for approval — role Desk Officer, login: Katalon default account of the step
+[11:26:41] qt-loi/01_QT-017: QT-017: login 881204115188 (role user)
+[11:26:42] qt-loi/01_QT-017: QT-017: Logged in as 881204115188
+[11:26:46] qt-loi/01_QT-017: QT-017: reopening the LOI draft LI260000000000781
+[11:26:52] qt-loi/01_QT-017: QT-017: negotiation: location row 1, 8 term checkbox(es) ticked
+[11:26:52] qt-loi/01_QT-017: QT-017: Negotiation Terms: negLocId filled
+[11:26:53] qt-loi/01_QT-017: QT-017: Negotiation Terms: remarksId filled
+[11:26:56] qt-loi/01_QT-017: QT-017: LOI save: Letter of Intent (LOI) LI260000000000781 is successfully saved.
+[11:27:02] qt-loi/01_QT-017: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 (22.8s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+    Error: Expected outcome not in the database for QT-017: its proof query found nothing (select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62401 and q.qt_no = '{QT}')
+
+       at ..\support\core\flow-runner.ts:831
+
+      829 |     await endStep(ctx, step, 'failed', outputs, messages, 'BUSINESS_ASSERTION (high): the step finished but its proof query is not satisfied', text);
+      830 |     emit(ctx.flowRunId, ctx.flow.id, 'failure', { item: step.id, class: 'BUSINESS_ASSERTION', error: text });
+    > 831 |     throw new Error(text);
+          |           ^
+      832 |   }
+      833 |   const dbConfirms = (!!dbr?.ok && dbr.expected != null && (dbr.expected !== (attemptDbBefore ?? -1) || proof === true)) || proof === true;
+      834 |   const verified = (allObserved || dbConfirms) && step.checkpoint.verification !== 'unverified';
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:831:11)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_112626\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_112626\flows-en-qt.flow-qt-loi-EN-65501--and-submit-it-for-approval-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017 
+
+Running 1 test using 1 worker
+
+[11:28:18] qt-loi/01_QT-017: BLOCKED: QT-017 failed in an earlier attempt (BUSINESS_ASSERTION (high): the step finished but its proof query is not satisfied). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run qt-loi_20261125-105547 --step QT-017
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017
+
+  1 skipped
+
+Running 1 test using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loi [EN] QT at SF 62213 (Pending LOI Preparation) to LOI submitted (LI 62401) › 01 QT-017 Prepare the Letter of Intent and submit it for approval @flow-qt-loi @module-qt @lang-en @FLOW @qt-loi/01_QT-017 @QT-017
+
+  1 skipped

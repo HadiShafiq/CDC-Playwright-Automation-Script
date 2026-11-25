@@ -1,0 +1,9 @@
+{"t":"2026-11-25T11:35:32+08:00","type":"flow-start","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","resumed":false,"module":"qt","language":"EN","items":["QT-017","QT-018","QT-019","QT-020"]}
+{"t":"2026-11-25T11:35:32+08:00","type":"step-skip","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-017","why":"Outside the selected range (QT-020 → end)"}
+{"t":"2026-11-25T11:35:32+08:00","type":"step-skip","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-018","why":"Outside the selected range (QT-020 → end)"}
+{"t":"2026-11-25T11:35:33+08:00","type":"step-skip","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-019","why":"Outside the selected range (QT-020 → end)"}
+{"t":"2026-11-25T11:35:34+08:00","type":"step-start","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-020","title":"Desk Officer records the LOI negotiation result","role":"Desk Officer","login":"Katalon default account of the step","inputs":{"qtNo":"QT260000000004539"},"checkpoint":"LOI_COMPLETED"}
+{"t":"2026-11-25T11:35:50+08:00","type":"message","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-020","severity":"info","text":"Letter of Intent (LOI) LI260000000000781 is successfully saved."}
+{"t":"2026-11-25T11:35:50+08:00","type":"message","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-020","severity":"info","text":"Letter of Intent (LOI) LI260000000000781 is completed."}
+{"t":"2026-11-25T11:37:52+08:00","type":"step-end","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","item":"QT-020","state":"verified","outputs":{},"checkpoint":"LOI_COMPLETED"}
+{"t":"2026-11-25T11:37:52+08:00","type":"flow-end","flowRunId":"qt-loi_20261125-113523","flowId":"qt-loi","status":"completed","docs":{"QT":"QT260000000004539"}}

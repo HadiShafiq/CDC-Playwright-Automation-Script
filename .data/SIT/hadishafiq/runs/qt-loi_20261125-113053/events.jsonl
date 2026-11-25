@@ -1,0 +1,6 @@
+{"t":"2026-11-25T11:31:07+08:00","type":"flow-start","flowRunId":"qt-loi_20261125-113053","flowId":"qt-loi","resumed":false,"module":"qt","language":"EN","items":["QT-017","QT-018"]}
+{"t":"2026-11-25T11:31:07+08:00","type":"step-skip","flowRunId":"qt-loi_20261125-113053","flowId":"qt-loi","item":"QT-017","why":"Outside the selected range (QT-018 → end)"}
+{"t":"2026-11-25T11:31:08+08:00","type":"step-start","flowRunId":"qt-loi_20261125-113053","flowId":"qt-loi","item":"QT-018","title":"LOI approver approves the Letter of Intent","role":"LOI Approver","login":"Katalon default account of the step","inputs":{"qtNo":"QT260000000004539"},"checkpoint":"LOI_APPROVED"}
+{"t":"2026-11-25T11:31:21+08:00","type":"message","flowRunId":"qt-loi_20261125-113053","flowId":"qt-loi","item":"QT-018","severity":"info","text":"Letter of Intent (LOI) LI260000000000781 is approved."}
+{"t":"2026-11-25T11:31:25+08:00","type":"step-end","flowRunId":"qt-loi_20261125-113053","flowId":"qt-loi","item":"QT-018","state":"verified","outputs":{},"checkpoint":"LOI_APPROVED"}
+{"t":"2026-11-25T11:31:25+08:00","type":"flow-end","flowRunId":"qt-loi_20261125-113053","flowId":"qt-loi","status":"completed","docs":{"QT":"QT260000000004539"}}

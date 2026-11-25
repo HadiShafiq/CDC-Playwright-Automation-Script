@@ -1,0 +1,7 @@
+{"t":"2026-11-25T11:33:05+08:00","type":"flow-start","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","resumed":false,"module":"qt","language":"EN","items":["QT-017","QT-018","QT-019"]}
+{"t":"2026-11-25T11:33:05+08:00","type":"step-skip","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","item":"QT-017","why":"Outside the selected range (QT-019 → end)"}
+{"t":"2026-11-25T11:33:06+08:00","type":"step-skip","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","item":"QT-018","why":"Outside the selected range (QT-019 → end)"}
+{"t":"2026-11-25T11:33:07+08:00","type":"step-start","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","item":"QT-019","title":"Supplier accepts the Letter of Intent","role":"Supplier","login":"Katalon default account of the step","inputs":{"qtNo":"QT260000000004539"},"checkpoint":"LOI_ACCEPTED"}
+{"t":"2026-11-25T11:33:17+08:00","type":"message","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","item":"QT-019","severity":"info","text":"Letter Of Intent LI260000000000781 is accepted successfully."}
+{"t":"2026-11-25T11:33:21+08:00","type":"step-end","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","item":"QT-019","state":"verified","outputs":{},"checkpoint":"LOI_ACCEPTED"}
+{"t":"2026-11-25T11:33:21+08:00","type":"flow-end","flowRunId":"qt-loi_20261125-113256","flowId":"qt-loi","status":"completed","docs":{"QT":"QT260000000004539"}}

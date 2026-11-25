@@ -11,7 +11,8 @@ import { prepareSpec } from './qt/spec';
 import { bpkApprove, prepareDocuments } from './qt/docprep';
 import { submitProposal, techAction } from './qt/supplier';
 import { ecPhase } from './qt/ecphase';
-import { prepareLoi } from './qt/loi';
+import { acceptLoi, approveLoi, negotiateLoi, prepareLoi } from './qt/loi';
+import { loadPasswordFor } from '../credentials';
 import { approveMaintenance, maintain, paymentMatchWith } from './fl/maintenance';
 
 /**
@@ -189,5 +190,8 @@ export const MODULE_STEPS: Record<string, ModuleStep> = {
   // Supplier Finalization (SF): Consolidate Report → FC meeting → finalize → endorse ×n → sign off → 62213 Pending LOI Preparation
   'QT-016': { loginAs: QT_SIT.users.FEC_CHAIR, run: async (ctx) => ecPhase(ctx, need(ctx, 'QT'), { kind: 'QT:SF', statusId: 62213 }) },
   'QT-017': { loginAs: QT_SIT.users.DESK_OFFICER, run: async (ctx) => prepareLoi(ctx, need(ctx, 'QT')) },
+  'QT-018': { selfLogin: true, run: async (ctx) => approveLoi(ctx, need(ctx, 'QT')) },
+  'QT-019': { selfLogin: true, run: async (ctx) => acceptLoi(ctx, need(ctx, 'QT'), async (u) => !!(await loadPasswordFor(ctx.env.name, u))) },
+  'QT-020': { selfLogin: true, run: async (ctx) => negotiateLoi(ctx, need(ctx, 'QT')) },
   'QT-006': { loginAs: QT_SIT.users.SC_CHAIR, run: async (ctx) => approveTask(ctx, need(ctx, 'QT'), { button: 'Sign Off', remark: 'Signed off (QA automation)' }) },
 };

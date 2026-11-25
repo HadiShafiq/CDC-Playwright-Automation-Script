@@ -1,16 +1,14 @@
 # Diagnosis QT-017 — Prepare the Letter of Intent and submit it for approval
 
-Run qt-loi_20261125-105547 · 2026-11-25T10:56:21+08:00
+Run qt-loi_20261125-105547 · 2026-11-25T11:25:52+08:00
 
 ## Error
 ```
-LOI submit: Please add at least one Negotiation Term. (ERR-760289)
+Tab "Verification And Approval" did not open: Date Minute is mandatory.
 ```
 
 ## Application messages
-- info: Quotation/Tender QT260000000004539 is saved.
-- info: Letter of Intent (LOI) LI260000000000781 is successfully saved.
-- error: Please add at least one Negotiation Term. (ERR-760289)
+- error: Date Minute is mandatory.
 
 ## Page
 - URL: http://ngepsit.eperolehan.com.my/home
@@ -22,7 +20,7 @@ LOI submit: Please add at least one Negotiation Term. (ERR-760289)
 - banner:
   - heading "ePerolehan" [level=1]:
     - link "ePerolehan":
-      - /url: http://ngepsit.eperolehan.com.my/home?p_p_auth=yUe6uxE4&p_p_id=49&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_49_struts_action=%2Fmy_sites%2Fview&_49_groupId=10184&_49_privateLayout=false
+      - /url: http://ngepsit.eperolehan.com.my/home?p_p_auth=CzoZR5V4&p_p_id=49&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_49_struts_action=%2Fmy_sites%2Fview&_49_groupId=10184&_49_privateLayout=false
       - img "ePerolehan"
   - emphasis: Portal last updated on 6 November 2026 04:54:51 PM
   - navigation:
@@ -278,17 +276,17 @@ LOI submit: Please add at least one Negotiation Term. (ERR-760289)
 
 ## Form values (what the page would submit)
 ```
-input/hidden _82_formDate = 1795575380955
+input/hidden _82_formDate = 1795577152040
 select/select-one _82_languageId = en_US [English]
-input/hidden _59_INSTANCE_ElITwXGPEXon_formDate = 1795575380986
+input/hidden _59_INSTANCE_ElITwXGPEXon_formDate = 1795577152068
 input/hidden _59_INSTANCE_ElITwXGPEXon_cmd = vote
 input/hidden _59_INSTANCE_ElITwXGPEXon_redirect = http://ngepsit.eperolehan.com.my/home?p_p_id=59_INSTANCE_ElITwXGPEXon&p_p_lifecy
 input/hidden _59_INSTANCE_ElITwXGPEXon_questionId = 40302
 input/hidden _59_INSTANCE_ElITwXGPEXon_successMessage = Thank you for your vote.
-input/radio _59_INSTANCE_ElITwXGPEXon_qyrp = false
-input/radio _59_INSTANCE_ElITwXGPEXon_lxai = false
-input/radio _59_INSTANCE_ElITwXGPEXon_yajc = false
-input/radio _59_INSTANCE_ElITwXGPEXon_ihoe = false
+input/radio _59_INSTANCE_ElITwXGPEXon_iigc = false
+input/radio _59_INSTANCE_ElITwXGPEXon_zzhz = false
+input/radio _59_INSTANCE_ElITwXGPEXon_tjwr = false
+input/radio _59_INSTANCE_ElITwXGPEXon_nxde = false
 ```
 
 ## SIT database
