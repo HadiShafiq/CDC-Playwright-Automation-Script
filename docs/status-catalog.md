@@ -27,7 +27,7 @@ database status it shows, and how to prepare a transaction there for **manual te
 | sm | reject | `sm-delete-pending-reject` (5), `sm-reject-by-po` (4), `sm-reject-by-approver` (5) |
 | qt | quotation-tender | `qt-to-recommendation` (15), `qt-to-recommendation-no-bpk` (14) |
 | qt | revision | `qt-doc-revision` (8), `qt-bpk-revision` (8) |
-| qt | award | `qt-supplier-finalization` (1), `qt-loi` (4) |
+| qt | award | `qt-supplier-finalization` (1), `qt-loi` (4), `qt-loa` (3) |
 | sq | simple-quote | `sq-services` (2), `sq-product` (2), `sq-product-services` (2) |
 | dp | simple-quote-route | `dp-sq-pr` (7) |
 | dp | add-to-cart | `dp-add-to-cart` (4) |
@@ -123,6 +123,9 @@ Quotation/Tender from draft through specification, documents, BPK, publication, 
 | **LOI_APPROVED** | LOI at 62403 Pending Supplier Acknowledgement | QT-018 LOI approver approves the Letter of Intent (LOI Approver) | — | execution | award / `qt-loi` (2 items) |
 | **LOI_ACCEPTED** | LOI at 62404 Pending Letter Of Intent Negotiation | QT-019 Supplier accepts the Letter of Intent (Supplier) | — | execution | award / `qt-loi` (3 items) |
 | **LOI_COMPLETED** | LOI at 62405 Letter Of Intent Completed | QT-020 Desk Officer records the LOI negotiation result (Desk Officer) | — | execution | award / `qt-loi` (4 items) |
+| **QT_LOA_SUBMITTED** | LA submitted (62501 pending approval or 62504) | QT-021 Prepare the Letter of Acceptance and submit it (Desk Officer) | — | execution | award / `qt-loa` (1 items) |
+| **QT_LOA_ACCEPTED** | LA at 62505 (acknowledged by the supplier) | QT-022 Supplier accepts the Letter of Acceptance (Supplier (company admin)) | — | execution | award / `qt-loa` (2 items) |
+| **QT_LOA_VERIFIED** | LA at 62506 (verified) | QT-023 Desk Officer verifies the accepted Letter of Acceptance (Desk Officer) | — | execution | award / `qt-loa` (3 items) |
 
 ## sq — Simple Quote
 

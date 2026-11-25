@@ -748,6 +748,87 @@
         "evidence": "SIT 2026-11-25: LI260000000000781 62404 → 62405 (\"is completed\")",
         "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loi l on l.loi_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = l.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LI' and w.status_id = 62405 and q.qt_no = '{QT}'"
       }
+    },
+    "QT-021": {
+      "title": "Prepare the Letter of Acceptance and submit it",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loa.ts prepareLoa — built 2026-11-25 (in progress)",
+      "instructions": "Prepare LOA task → Prepare Letter Of Acceptance → General Information (file reference, contract effective date) … → Save → Submit.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_LOA_SUBMITTED",
+        "description": "LA submitted (62501 pending approval or 62504)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LA260000000004240 (QT260000000004539) 62500 → 62504 (\"submitted successfully\"; approval not required)",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loa a on a.loa_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = a.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LA' and w.status_id in (62501, 62504) and q.qt_no = '{QT}'"
+      }
+    },
+    "QT-022": {
+      "title": "Supplier accepts the Letter of Acceptance",
+      "role": "Supplier (company admin)",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loa.ts acceptLoa — built 2026-11-25",
+      "instructions": "Supplier admin (WFTASK assignee): My Task \"Accept LOA\" → Accept.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_LOA_ACCEPTED",
+        "description": "LA at 62505 (acknowledged by the supplier)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LA260000000004240 62504 → 62505 (firstallied123: item code 44121703, 3 uploads, date, bank, witness, Accept + soft cert Sign)",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loa a on a.loa_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = a.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LA' and w.status_id in (62505) and q.qt_no = '{QT}'"
+      }
+    },
+    "QT-023": {
+      "title": "Desk Officer verifies the accepted Letter of Acceptance",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loa.ts verifyLoa (ngep-runner verifyLoa) — built 2026-11-25",
+      "instructions": "Download All And Print (enables Verify) → Verification And Approval → Verify.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_LOA_VERIFIED",
+        "description": "LA at 62506 (verified)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: LA260000000004240 62505 → 62506 (\"is completed\"; the 62506 row came ~2 min later)",
+        "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loa a on a.loa_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = a.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LA' and w.status_id in (62506) and q.qt_no = '{QT}'"
+      }
     }
   },
   "flows": [
@@ -853,6 +934,18 @@
         "QT-018",
         "QT-019",
         "QT-020"
+      ]
+    },
+    {
+      "id": "qt-loa",
+      "submodule": "award",
+      "title": "QT with LOI completed (62405) to Letter of Acceptance verified (LA 62506)",
+      "verification": "execution",
+      "notes": "VERIFIED on SIT 2026-11-25: QT260000000004539 → LA260000000004240 62500 → 62504 → 62505 → 62506.",
+      "steps": [
+        "QT-021",
+        "QT-022",
+        "QT-023"
       ]
     }
   ]

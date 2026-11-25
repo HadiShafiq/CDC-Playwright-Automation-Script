@@ -1,0 +1,95 @@
+
+Running 1 test using 1 worker
+
+[11:43:51] qt-loa/01_QT-021: QT-021 Prepare the Letter of Acceptance and submit it — role Desk Officer, login: Katalon default account of the step
+[11:43:51] qt-loa/01_QT-021: QT-021: login 881204115188 (role user)
+[11:43:53] qt-loa/01_QT-021: QT-021: Logged in as 881204115188
+[11:44:02] qt-loa/01_QT-021: QT-021: LOA save: Letter of Acceptance (LOA) LA260000000004240 has been successfully saved. Further action needs to be taken through Task List.
+[11:44:05] qt-loa/01_QT-021: Closed the TERKINI announcement
+[11:44:08] qt-loa/01_QT-021: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 (17.3s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 
+
+    Error: Button "Submit" not found
+
+       at ..\support\modules\qt\pf.ts:106
+
+      104 |     { label, inDialog },
+      105 |   );
+    > 106 |   if (!ok) throw new Error(`Button "${label}" not found${inDialog ? ` in ${inDialog}` : ''}`);
+          |                  ^
+      107 |   await page.locator('[data-pw-target="1"]').click();
+      108 |   await pfIdle(page);
+      109 | }
+        at clickButton (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:106:18)
+        at pressAndConfirm (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:114:3)
+        at prepareLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:50:16)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_114340\flows-en-qt.flow-qt-loa-EN-3aef4-of-Acceptance-and-submit-it-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_114340\flows-en-qt.flow-qt-loa-EN-3aef4-of-Acceptance-and-submit-it-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 
+
+Running 1 test using 1 worker
+
+[11:45:41] qt-loa/01_QT-021: QT-021 Prepare the Letter of Acceptance and submit it — role Desk Officer, login: Katalon default account of the step
+[11:45:41] qt-loa/01_QT-021: QT-021: login 881204115188 (role user)
+[11:45:42] qt-loa/01_QT-021: QT-021: Logged in as 881204115188
+[11:45:46] qt-loa/01_QT-021: QT-021: reopening the LOA draft LA260000000004240
+[11:45:52] qt-loa/01_QT-021: QT-021: LOA save: Letter of Acceptance (LOA) LA260000000004240 is successfully saved.
+[11:45:57] qt-loa/01_QT-021: Closed the TERKINI announcement
+[11:45:59] qt-loa/01_QT-021: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 (18.7s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 
+
+    Error: LOA submit: Surat Setuju Terima (Termasuk Lampiran A) is mandatory to upload. (ERR-760441)
+
+       at ..\support\modules\qt\loa.ts:65
+
+      63 |   }
+      64 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+    > 65 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`LOA submit: ${msgs.join(' | ') || 'no message'}`);
+         |                                                              ^
+      66 |   return { messages: [...msgs, `LOA ${loaOf(qt) || '(number not found)'}`] };
+      67 | }
+      68 |
+        at prepareLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:65:62)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:756:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_114534\flows-en-qt.flow-qt-loa-EN-3aef4-of-Acceptance-and-submit-it-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_114534\flows-en-qt.flow-qt-loa-EN-3aef4-of-Acceptance-and-submit-it-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 
+
+Running 1 test using 1 worker
+
+[11:48:14] qt-loa/01_QT-021: QT-021 Prepare the Letter of Acceptance and submit it — role Desk Officer, login: Katalon default account of the step
+[11:48:14] qt-loa/01_QT-021: QT-021: login 881204115188 (role user)
+[11:48:16] qt-loa/01_QT-021: QT-021: Logged in as 881204115188
+[11:48:19] qt-loa/01_QT-021: QT-021: reopening the LOA draft LA260000000004240
+[11:48:26] qt-loa/01_QT-021: QT-021: LOA save: Letter of Acceptance (LOA) LA260000000004240 is successfully saved.
+[11:48:28] qt-loa/01_QT-021: QT-021: LOA signer: A Test 24022026 (pendidik)
+[11:48:30] qt-loa/01_QT-021: QT-021: Surat Setuju Terima uploaded: Surat Setuju Terima (termasuk Lampiran A) * ui-button File_pdf_for_testing.pdf
+[11:48:33] qt-loa/01_QT-021: QT-021: LOA save (signer + letter): Letter of Acceptance (LOA) LA260000000004240 is successfully saved.
+[11:48:38] qt-loa/01_QT-021: Closed the TERKINI announcement
+[11:48:39] qt-loa/01_QT-021: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021 (25.5s)
+
+  1 passed (32.4s)

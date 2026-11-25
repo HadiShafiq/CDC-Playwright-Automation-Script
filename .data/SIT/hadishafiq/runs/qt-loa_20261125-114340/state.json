@@ -1,0 +1,82 @@
+{
+  "flowRunId": "qt-loa_20261125-114340",
+  "flowId": "qt-loa",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T11:43:40+08:00",
+  "updatedAt": "2026-11-25T11:48:39+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004539"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-021": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_114340",
+          "startedAt": "2026-11-25T11:43:51+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\01_QT-021\\2026-11-25_114340",
+          "endedAt": "2026-11-25T11:44:05+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004240 has been successfully saved. Further action needs to be taken through Task List."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Button \"Submit\" not found"
+        },
+        {
+          "runId": "2026-11-25_114534",
+          "startedAt": "2026-11-25T11:45:41+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\01_QT-021\\2026-11-25_114534",
+          "endedAt": "2026-11-25T11:45:57+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004240 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "Surat Setuju Terima (Termasuk Lampiran A) is mandatory to upload. (ERR-760441)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760441: Surat Setuju Terima (Termasuk Lampiran A) is mandatory to upload. (ERR-760441)",
+          "error": "LOA submit: Surat Setuju Terima (Termasuk Lampiran A) is mandatory to upload. (ERR-760441)"
+        },
+        {
+          "runId": "2026-11-25_114807",
+          "startedAt": "2026-11-25T11:48:14+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\01_QT-021\\2026-11-25_114807",
+          "endedAt": "2026-11-25T11:48:39+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004240 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004240 is submitted successfully."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "QT_LOA_SUBMITTED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

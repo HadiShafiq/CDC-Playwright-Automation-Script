@@ -1,0 +1,132 @@
+{
+  "flowRunId": "qt-loa_20261125-115125",
+  "flowId": "qt-loa",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T11:51:25+08:00",
+  "updatedAt": "2026-11-25T12:00:51+08:00",
+  "from": "QT-022",
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004539"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-022": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_115125",
+          "startedAt": "2026-11-25T11:51:38+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\02_QT-022\\2026-11-25_115125",
+          "endedAt": "2026-11-25T11:51:53+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "LOA Signing Date By Supplier is required. (ERR-760400)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760400: LOA Signing Date By Supplier is required. (ERR-760400)",
+          "error": "Accept LOA not confirmed: LOA Signing Date By Supplier is required. (ERR-760400)"
+        },
+        {
+          "runId": "2026-11-25_115227",
+          "startedAt": "2026-11-25T11:52:38+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\02_QT-022\\2026-11-25_115227",
+          "endedAt": "2026-11-25T11:52:54+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Account No. is required. (ERR-760400)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760400: Account No. is required. (ERR-760400)",
+          "error": "Accept LOA not confirmed: Account No. is required. (ERR-760400)"
+        },
+        {
+          "runId": "2026-11-25_115402",
+          "startedAt": "2026-11-25T11:54:14+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\02_QT-022\\2026-11-25_115402",
+          "endedAt": "2026-11-25T11:54:29+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Fax No. is required. (ERR-760400)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760400: Fax No. is required. (ERR-760400)",
+          "error": "Accept LOA not confirmed: Fax No. is required. (ERR-760400)"
+        },
+        {
+          "runId": "2026-11-25_115457",
+          "startedAt": "2026-11-25T11:55:07+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\02_QT-022\\2026-11-25_115457",
+          "endedAt": "2026-11-25T11:55:22+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "That is item without item code, please make sure all item been assign with item code before accept the Letter Of Acceptance. (ERR-760436)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-760436: That is item without item code, please make sure all item been assign with item code before accept the Letter Of Acceptance. (ERR-760436)",
+          "error": "Accept LOA not confirmed: That is item without item code, please make sure all item been assign with item code before accept the Letter Of Acceptance. (ERR-760436)"
+        },
+        {
+          "runId": "2026-11-25_115702",
+          "startedAt": "2026-11-25T11:57:09+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\02_QT-022\\2026-11-25_115702",
+          "endedAt": "2026-11-25T11:57:57+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter Of Acceptance LA260000000004240 is accepted successfully."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "QT_LOA_ACCEPTED"
+    },
+    "QT-023": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_115702",
+          "startedAt": "2026-11-25T11:57:58+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-loa\\03_QT-023\\2026-11-25_115702",
+          "endedAt": "2026-11-25T11:58:20+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Letter of Acceptance (LOA) LA260000000004240 is completed."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Verify LOA not confirmed: Letter of Acceptance (LOA) LA260000000004240 is completed.",
+          "reconciled": {
+            "by": "hadishafiq",
+            "at": "2026-11-25T12:00:51+08:00",
+            "decision": "went through",
+            "values": {}
+          }
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "in-progress"
+}

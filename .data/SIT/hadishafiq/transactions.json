@@ -1547,18 +1547,18 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "qt",
-    "checkpoint": "LOI_COMPLETED",
+    "checkpoint": "QT_LOA_ACCEPTED",
     "verification": "verified",
     "createdBy": {
       "flowRunId": "qt-to-recommendation-no-bpk_20261125-041338",
       "stepId": "QT-001"
     },
     "lastStep": {
-      "flowRunId": "qt-loi_20261125-113523",
-      "stepId": "QT-020"
+      "flowRunId": "qt-loa_20261125-115125",
+      "stepId": "QT-022"
     },
     "createdAt": "2026-11-25T04:14:11+08:00",
-    "lastVerifiedAt": "2026-11-25T11:37:52+08:00",
+    "lastVerifiedAt": "2026-11-25T11:57:57+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,

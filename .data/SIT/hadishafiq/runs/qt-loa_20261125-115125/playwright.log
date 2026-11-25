@@ -1,0 +1,229 @@
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021
+[11:51:38] qt-loa/02_QT-022: QT-022 Supplier accepts the Letter of Acceptance — role Supplier (company admin), login: Katalon default account of the step
+[11:51:39] qt-loa/02_QT-022: QT-022: Accept LOA LA260000000004240 -> firstallied123
+[11:51:41] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:51:41] qt-loa/02_QT-022: QT-022: login firstallied123
+[11:51:45] qt-loa/02_QT-022: QT-022: Logged in as firstallied123
+[11:51:49] qt-loa/02_QT-022: QT-022: Accept LOA form: Letter Of Acceptance Acknowledgement - ePerolehan | buttons: View LOA, Save, Accept, Reject, ui-button, ui-button
+[11:51:55] qt-loa/02_QT-022: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 (17.5s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+
+    Error: Accept LOA not confirmed: LOA Signing Date By Supplier is required. (ERR-760400)
+
+       at ..\support\modules\qt\loa.ts:147
+
+      145 |   });
+      146 |   const msgs = await pressAndConfirm(page, 'Accept', log);
+    > 147 |   if (!msgs.some((m) => /success|accepted|acknowledg/i.test(m))) throw new Error(`Accept LOA not confirmed: ${msgs.join(' | ') || 'no message'}`);
+          |                                                                        ^
+      148 |   return { messages: msgs };
+      149 | }
+      150 |
+        at acceptLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:147:72)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_115125\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_115125\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+  1 skipped
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021
+[11:52:38] qt-loa/02_QT-022: QT-022 Supplier accepts the Letter of Acceptance — role Supplier (company admin), login: Katalon default account of the step
+[11:52:39] qt-loa/02_QT-022: QT-022: Accept LOA LA260000000004240 -> firstallied123
+[11:52:41] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:52:41] qt-loa/02_QT-022: QT-022: login firstallied123
+[11:52:46] qt-loa/02_QT-022: QT-022: Logged in as firstallied123
+[11:52:49] qt-loa/02_QT-022: QT-022: Accept LOA form: Letter Of Acceptance Acknowledgement - ePerolehan | buttons: View LOA, Save, Accept, Reject, ui-button, ui-button
+[11:52:49] qt-loa/02_QT-022: QT-022: supplier dates filled: 1
+[11:52:54] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:52:56] qt-loa/02_QT-022: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 (18.4s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+
+    Error: Accept LOA not confirmed: Account No. is required. (ERR-760400)
+
+       at ..\support\modules\qt\loa.ts:151
+
+      149 |   });
+      150 |   const msgs = await pressAndConfirm(page, 'Accept', log);
+    > 151 |   if (!msgs.some((m) => /success|accepted|acknowledg/i.test(m))) throw new Error(`Accept LOA not confirmed: ${msgs.join(' | ') || 'no message'}`);
+          |                                                                        ^
+      152 |   return { messages: msgs };
+      153 | }
+      154 |
+        at acceptLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:151:72)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_115227\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_115227\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+  1 skipped
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021
+[11:54:14] qt-loa/02_QT-022: QT-022 Supplier accepts the Letter of Acceptance — role Supplier (company admin), login: Katalon default account of the step
+[11:54:15] qt-loa/02_QT-022: QT-022: Accept LOA LA260000000004240 -> firstallied123
+[11:54:17] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:54:17] qt-loa/02_QT-022: QT-022: login firstallied123
+[11:54:21] qt-loa/02_QT-022: QT-022: Logged in as firstallied123
+[11:54:23] qt-loa/02_QT-022: QT-022: Accept LOA form: Letter Of Acceptance Acknowledgement - ePerolehan | buttons: View LOA, Save, Accept, Reject, ui-button, ui-button
+[11:54:24] qt-loa/02_QT-022: QT-022: supplier dates filled: 1
+[11:54:24] qt-loa/02_QT-022: QT-022: accountNoId: 564548117277 / MALAYAN BANKING BERHAD
+[11:54:29] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:54:31] qt-loa/02_QT-022: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 (17.0s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+
+    Error: Accept LOA not confirmed: Fax No. is required. (ERR-760400)
+
+       at ..\support\modules\qt\loa.ts:169
+
+      167 |   });
+      168 |   const msgs = await pressAndConfirm(page, 'Accept', log);
+    > 169 |   if (!msgs.some((m) => /success|accepted|acknowledg/i.test(m))) throw new Error(`Accept LOA not confirmed: ${msgs.join(' | ') || 'no message'}`);
+          |                                                                        ^
+      170 |   return { messages: msgs };
+      171 | }
+      172 |
+        at acceptLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:169:72)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_115402\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_115402\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+  1 skipped
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021
+[11:55:07] qt-loa/02_QT-022: QT-022 Supplier accepts the Letter of Acceptance — role Supplier (company admin), login: Katalon default account of the step
+[11:55:08] qt-loa/02_QT-022: QT-022: Accept LOA LA260000000004240 -> firstallied123
+[11:55:11] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:55:11] qt-loa/02_QT-022: QT-022: login firstallied123
+[11:55:15] qt-loa/02_QT-022: QT-022: Logged in as firstallied123
+[11:55:18] qt-loa/02_QT-022: QT-022: Accept LOA form: Letter Of Acceptance Acknowledgement - ePerolehan | buttons: View LOA, Save, Accept, Reject, ui-button, ui-button
+[11:55:18] qt-loa/02_QT-022: QT-022: supplier dates filled: 1
+[11:55:19] qt-loa/02_QT-022: QT-022: accountNoId: 564548117277 / MALAYAN BANKING BERHAD
+[11:55:24] qt-loa/02_QT-022: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 (17.6s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+
+    Error: Accept LOA not confirmed: That is item without item code, please make sure all item been assign with item code before accept the Letter Of Acceptance. (ERR-760436)
+
+       at ..\support\modules\qt\loa.ts:169
+
+      167 |   });
+      168 |   const msgs = await pressAndConfirm(page, 'Accept', log);
+    > 169 |   if (!msgs.some((m) => /success|accepted|acknowledg/i.test(m))) throw new Error(`Accept LOA not confirmed: ${msgs.join(' | ') || 'no message'}`);
+          |                                                                        ^
+      170 |   return { messages: msgs };
+      171 | }
+      172 |
+        at acceptLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:169:72)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_115457\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_115457\flows-en-qt.flow-qt-loa-EN-13958-ts-the-Letter-of-Acceptance-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance submitted › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 
+  1 skipped
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance verified (LA 62506) › 01 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/01_QT-021 @QT-021
+[11:57:09] qt-loa/02_QT-022: QT-022 Supplier accepts the Letter of Acceptance — role Supplier (company admin), login: Katalon default account of the step
+[11:57:11] qt-loa/02_QT-022: QT-022: Accept LOA LA260000000004240 -> firstallied123
+[11:57:13] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:57:13] qt-loa/02_QT-022: QT-022: login firstallied123
+[11:57:20] qt-loa/02_QT-022: QT-022: Logged in as firstallied123
+[11:57:23] qt-loa/02_QT-022: QT-022: Accept LOA form: Letter Of Acceptance Acknowledgement - ePerolehan | buttons: View LOA, Save, Accept, Reject, ui-button, ui-button
+[11:57:36] qt-loa/02_QT-022: QT-022: item codes assigned: 441217030000000500 - PEN DAKWAT MM; 441217030000000500 - PEN DAKWAT MM
+[11:57:40] qt-loa/02_QT-022: QT-022: Perakuan Penerimaan: uploaded
+[11:57:42] qt-loa/02_QT-022: QT-022: Lampiran 7: uploaded
+[11:57:45] qt-loa/02_QT-022: QT-022: Lampiran C: uploaded
+[11:57:52] qt-loa/02_QT-022: QT-022: supplier dates filled: 1
+[11:57:52] qt-loa/02_QT-022: QT-022: accountNoId: 564548117277 / MALAYAN BANKING BERHAD
+[11:57:52] qt-loa/02_QT-022: QT-022: dialog: "Confirmation Are you sure to accept this Letter of Acceptance? Yes No" -> Yes
+[11:57:53] qt-loa/02_QT-022: QT-022: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[11:57:57] qt-loa/02_QT-022: Closed the TERKINI announcement
+[11:57:58] qt-loa/02_QT-022: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance verified (LA 62506) › 02 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/02_QT-022 @QT-022 (48.6s)
+[11:57:58] qt-loa/03_QT-023: QT-023 Desk Officer verifies the accepted Letter of Acceptance — role Desk Officer, login: Katalon default account of the step
+[11:57:59] qt-loa/03_QT-023: QT-023: Verify LOA LA260000000004240 -> 881204115188
+[11:58:01] qt-loa/03_QT-023: Closed the TERKINI announcement
+[11:58:01] qt-loa/03_QT-023: QT-023: login 881204115188
+[11:58:05] qt-loa/03_QT-023: QT-023: Logged in as 881204115188
+[11:58:22] qt-loa/03_QT-023: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance verified (LA 62506) › 03 QT-023 Desk Officer verifies the accepted Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/03_QT-023 @QT-023 (24.4s)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance verified (LA 62506) › 03 QT-023 Desk Officer verifies the accepted Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/03_QT-023 @QT-023 
+
+    Error: Verify LOA not confirmed: Letter of Acceptance (LOA) LA260000000004240 is completed.
+
+       at ..\support\modules\qt\loa.ts:283
+
+      281 |   }, 'Verified (QA automation)');
+      282 |   const msgs = await pressAndConfirm(page, 'Verify', log);
+    > 283 |   if (!msgs.some((m) => /success|verified/i.test(m))) throw new Error(`Verify LOA not confirmed: ${msgs.join(' | ') || 'no message'}`);
+          |                                                             ^
+      284 |   return { messages: msgs };
+      285 | }
+      286 |
+        at verifyLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:283:61)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:728:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_115702\flows-en-qt.flow-qt-loa-EN-ec6c7-cepted-Letter-of-Acceptance-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_115702\flows-en-qt.flow-qt-loa-EN-ec6c7-cepted-Letter-of-Acceptance-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa [EN] QT with LOI completed (62405) to Letter of Acceptance verified (LA 62506) › 03 QT-023 Desk Officer verifies the accepted Letter of Acceptance @flow-qt-loa @module-qt @lang-en @FLOW @qt-loa/03_QT-023 @QT-023 
+  1 skipped
+  1 passed (1.3m)
