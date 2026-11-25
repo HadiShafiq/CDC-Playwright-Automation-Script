@@ -8,6 +8,8 @@ import { pfIdle, settledEval } from './pf';
 interface Row {
   section: string;
   docNo: string;
+  /** second column: e.g. the DO number when the first column is its order (CO/PO), SIT 2026-11-25 */
+  refNo: string;
   status: string;
   linkId: string | null;
   claimId: string | null;
@@ -17,7 +19,7 @@ async function readRows(page: Page): Promise<Row[]> {
   return settledEval(
     page,
     () => {
-      const out: { section: string; docNo: string; status: string; linkId: string | null; claimId: string | null }[] = [];
+      const out: { section: string; docNo: string; refNo: string; status: string; linkId: string | null; claimId: string | null }[] = [];
       for (const t of document.querySelectorAll('table')) {
         if (!(t as HTMLElement).offsetWidth || !/Document No|No Dokumen/.test(t.tHead?.innerText || '')) continue;
         const head = [...document.querySelectorAll('*')]
@@ -29,7 +31,7 @@ async function readRows(page: Page): Promise<Row[]> {
           if (c.length < 6) continue;
           const a = r.cells[2]?.querySelector('a');
           const claim = [...r.querySelectorAll('button')].find((b) => /^\s*(Claim|Tuntut)\s*$/i.test((b as HTMLElement).innerText));
-          out.push({ section: (head?.textContent ?? '').trim(), docNo: c[0], status: c[5], linkId: a?.id || null, claimId: claim?.id || null });
+          out.push({ section: (head?.textContent ?? '').trim(), docNo: c[0], refNo: c[1] ?? '', status: c[5], linkId: a?.id || null, claimId: claim?.id || null });
         }
       }
       return out;
@@ -42,7 +44,10 @@ export async function findTask(page: Page, baseURL: string, docNo: string, maxPa
   await page.goto(`${baseURL}/web/epapp/task-list`);
   await pfIdle(page);
   for (let p = 0; p < maxPages; p++) {
-    const hit = (await readRows(page)).find((r) => r.docNo === docNo);
+    // the number can share the first cell with its order ("CO260000000006663\n60000730212600002" for a DO, SIT
+    // 2026-11-25) or sit in the second cell: exact first, then any whole word of the first two cells
+    const rows = await readRows(page);
+    const hit = rows.find((r) => r.docNo === docNo) ?? rows.find((r) => `${r.docNo} ${r.refNo}`.split(/\s+/).includes(docNo));
     if (hit) return hit;
     const nexts = page.locator('.ui-paginator-next:not(.ui-state-disabled)');
     if (!(await nexts.count())) return null;

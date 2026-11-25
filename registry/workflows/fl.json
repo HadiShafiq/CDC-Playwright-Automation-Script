@@ -691,14 +691,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: DO 60000730212600002 42000→42010 (fl-contract-do-maint_20261125-160242)",
         "db": {
           "kind": "DO",
           "statusId": 42010,
           "en": "Pending Modification Approval",
           "bm": "Menunggu Kelulusan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -725,14 +724,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: DO 60000730212600002 42010→42000 (fl-contract-do-maint_20261125-160242)",
         "db": {
           "kind": "DO",
           "statusId": 42000,
           "en": "Pending Acknowledgement",
           "bm": "Menunggu Pengesahan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -761,14 +759,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: DO 60000730212600002 42000→42015 (fl-contract-do-maint_20261125-160242)",
         "db": {
           "kind": "DO",
           "statusId": 42015,
           "en": "Pending Cancellation Approval",
           "bm": "Menunggu Kelulusan Pembatalan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -795,14 +792,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: DO 60000730212600002 42015→42900 (fl-contract-do-maint_20261125-160242)",
         "db": {
           "kind": "DO",
           "statusId": 42900,
           "en": "Cancelled",
           "bm": "Dibatalkan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -1166,8 +1162,8 @@
       "id": "fl-contract-do-maint",
       "submodule": "maintenance",
       "title": "Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order)",
-      "verification": "documentation",
-      "notes": "fl-data cr_do_maint (DEV); CO back to 41505.",
+      "verification": "execution",
+      "notes": "fl-data cr_do_maint (DEV); CO back to 41505. VERIFIED on SIT 2026-11-25 on the QT contract CT260000000002315 schedule 2: CR260000000006065 (iGFMAS 40800) → CO260000000006663 → DO 60000730212600002 42010 → 42000 → 42015 → 42900 (run fl-contract-do-maint_20261125-160242). A PTJ may request each schedule once (ERR-740031): --var KAT-057.ScheduleNo=N.",
       "steps": [
         {
           "gate": "CT_LOOKUP"

@@ -124,7 +124,7 @@ for (const f of walk(path.join(katalonRoot, 'Test Suites'), '.ts')) {
 const RUNTIME_EXPORTS = ['WebUI', 'findTestObject', 'TestObject', 'ConditionType', 'FailureHandling', 'Keys', 'WebUiCommonHelper',
   'WebElement', 'By', 'DriverFactory', 'KeywordUtil', 'println', 'gAssert', 'groovyMatcher', 'groovyFullMatch', 'Arrays', 'System',
   'Thread', 'SimpleDateFormat', 'LocalDate', 'DateTimeFormatter', 'File', 'Paths', 'Files', 'FileInputStream', 'FileOutputStream',
-  'XSSFWorkbook', 'katalonMissing', 'binding', 'claimGroupTaskIfAny', 'selectScheduleMonth', 'scheduleRowCount', 'deleteEmptyScheduleRows'];
+  'XSSFWorkbook', 'katalonMissing', 'binding', 'claimGroupTaskIfAny', 'selectScheduleMonth', 'scheduleRowCount', 'deleteEmptyScheduleRows', 'flowVar'];
 /** Runtime functions that REPAIRS call from Groovy; they are async, so calls get `await`. */
 const RUNTIME_ASYNC = ['claimGroupTaskIfAny', 'selectScheduleMonth', 'scheduleRowCount', 'deleteEmptyScheduleRows'];
 const WEB_HELPER_SRC = path.join(katalonRoot, 'Keywords', 'common', 'WebHelper.groovy');
@@ -135,6 +135,13 @@ const WEB_HELPER_NAMES = [...read(WEB_HELPER_SRC).matchAll(/^\s*static\s+\S+\s+(
  */
 const SELECT_SUPPLIER = "c(findTestObject('Object Repository/Direct LOA/1. Direct LOA Requistioner/Search Supplier From Requistioner/Select Supplier'), 20)";
 const REPAIRS = [
+  {
+    // KAT-057 Prepare CR: the schedule of a periodic contract is a fixed index ("Boleh tukar"); a PTJ may request each
+    // schedule once (ERR-740031 "The PTJ has utilized the Schedule No. 1"), so a second CR needs --var KAT-057.ScheduleNo=2
+    find: 'int i = 1 //Boleh tukar based on nak click which one',
+    replace: "int i = flowVar('ScheduleNo', 1) //Boleh tukar based on nak click which one",
+    note: 'KAT-057 schedule index from the run (--var KAT-057.ScheduleNo=N, default 1): ERR-740031 on a second CR of the same schedule (2026-11-25, CT260000000002315)',
+  },
   {
     // FD Payment Schedule rows: an FD draft keeps rows from earlier attempts; add a row only when it is missing and remove empty ones
     find: /c\(findTestObject\(\s*'Object Repository\/FD and Agreement\/FD Application\/Schedule\/Schedule Add Button'\s*\)\)/,

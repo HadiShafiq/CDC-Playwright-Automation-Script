@@ -9,6 +9,7 @@ import { run } from '../../../../support/katalon/steps/KAT-057';
  * Data:    suite "Akta_882_DLOA/4- Prepare CR" → Data Files/Akta_882_RU/2- DLOA (2. DLOA.xlsx, sheet "3- VerifyLOA (2)")
  *
  * DATA-CHANGING on SIT/UAT unless the script only reads.
+ * Katalon step repaired: KAT-057 schedule index from the run (--var KAT-057.ScheduleNo=N, default 1): ERR-740031 on a second CR of the same schedule (2026-11-25, CT260000000002315).
  * Katalon step repaired: Contract Request: the add-item steps run only when an "Add" button is visible; contracts that copy their items in automatically have none (the first "Add" in the page is the closed popup's button).
  */
 test.describe('KAT-057 1. Requisitioner - Prepare Contract Request (CR)', () => {

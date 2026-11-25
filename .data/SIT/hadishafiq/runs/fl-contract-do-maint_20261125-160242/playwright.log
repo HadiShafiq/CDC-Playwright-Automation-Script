@@ -1,0 +1,374 @@
+
+Running 11 tests using 1 worker
+
+[16:02:51] fl-contract-do-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T16:02:51+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/01_CT_LOOKUP @gate-CT_LOOKUP (414ms)
+[16:02:52] fl-contract-do-maint/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: officer 131020145098 (given for this run)
+[16:02:52] fl-contract-do-maint/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[16:02:52] fl-contract-do-maint/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:02:52] fl-contract-do-maint/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[16:02:52] fl-contract-do-maint/02_KAT-057: Flow inputs: ScheduleNo=2, ddItemType=1, ItemCode=44121703, Address_Input=Address Name 1234, ContractList=LA260000000004240
+[16:02:52] fl-contract-do-maint/02_KAT-057: Flow login: officer 131020145098 (shared officer password)
+[16:02:54] fl-contract-do-maint/02_KAT-057: Closed the TERKINI announcement
+[16:02:59] fl-contract-do-maint/02_KAT-057: Closed the TERKINI announcement
+[16:03:45] fl-contract-do-maint/02_KAT-057: Tick row #1
+[16:04:00] fl-contract-do-maint/02_KAT-057: Final Description Search = B0
+[16:05:00] fl-contract-do-maint/02_KAT-057: Message: Contract Request CR260000000006065 is successfully submitted.
+[16:05:00] fl-contract-do-maint/02_KAT-057: ✅ Captured CR No: CR260000000006065
+[16:05:00] fl-contract-do-maint/02_KAT-057: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[16:05:00] fl-contract-do-maint/02_KAT-057: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[16:05:01] fl-contract-do-maint/02_KAT-057: Closed the TERKINI announcement
+[16:05:01] fl-contract-do-maint/02_KAT-057: closeBrowser (the fixture closes the browser at the end of the test)
+[16:05:02] fl-contract-do-maint/02_KAT-057: DB status CR CR260000000006065: 40510 Pending Approval / Menunggu Kelulusan (expected 40510, OK)
+[16:05:03] fl-contract-do-maint/02_KAT-057: Signed out (SSO logout)
+  ✓   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/02_KAT-057 @KAT-057 (2.2m)
+[16:05:05] fl-contract-do-maint/03_KAT-058: KAT-058 Approve Contract Request (sent to iGFMAS) — role Approver, login: Katalon default account of the step
+[16:05:05] fl-contract-do-maint/03_KAT-058: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[16:05:05] fl-contract-do-maint/03_KAT-058: Flow inputs: Document_Number=CR260000000006065
+[16:05:07] fl-contract-do-maint/03_KAT-058: Closed the TERKINI announcement
+[16:05:12] fl-contract-do-maint/03_KAT-058: Closed the TERKINI announcement
+[16:05:28] fl-contract-do-maint/03_KAT-058: CR260000000006065 is already in My Task (no claim needed)
+[16:05:28] fl-contract-do-maint/03_KAT-058: CR260000000006065 is already in My Task (no claim needed)
+[16:05:38] fl-contract-do-maint/03_KAT-058: Message: Contract Request CR260000000006065 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[16:05:38] fl-contract-do-maint/03_KAT-058: ✅ Captured CR No: CR260000000006065
+[16:05:38] fl-contract-do-maint/03_KAT-058: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[16:05:38] fl-contract-do-maint/03_KAT-058: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[16:05:39] fl-contract-do-maint/03_KAT-058: Closed the TERKINI announcement
+[16:05:39] fl-contract-do-maint/03_KAT-058: closeBrowser (the fixture closes the browser at the end of the test)
+[16:06:19] fl-contract-do-maint/03_KAT-058: DB status CR CR260000000006065: 40800 Contract Request Approved / Permintaan Kontrak Diluluskan (expected 40800, OK)
+[16:06:21] fl-contract-do-maint/03_KAT-058: Signed out (SSO logout)
+  ✓   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/03_KAT-058 @KAT-058 (1.3m)
+[16:06:22] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP: found in the SIT database: CO CO260000000006663
+[16:06:22] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:06:22+08:00 (CO=CO260000000006663)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/04_CO_LOOKUP @gate-CO_LOOKUP (1.0s)
+[16:06:23] fl-contract-do-maint/05_KAT-059: KAT-059 Supplier acknowledges the Contract Order — role Supplier, login: officer firstallied1234 (given for this run)
+[16:06:23] fl-contract-do-maint/05_KAT-059: Test data corrected (support/katalon/data-overrides.json): Document_Number: CO260000000005848 was created from our CR260000000005449 (KAT-057/058, process instance 15973526); its Acknowledge CO task is assigned to mofflros_6, the KAT-008 supplier account
+[16:06:23] fl-contract-do-maint/05_KAT-059: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[16:06:23] fl-contract-do-maint/05_KAT-059: Flow inputs: Document_Number=CO260000000006663
+[16:06:23] fl-contract-do-maint/05_KAT-059: Flow login: officer firstallied1234 (shared officer password)
+[16:06:26] fl-contract-do-maint/05_KAT-059: Closed the TERKINI announcement
+[16:06:30] fl-contract-do-maint/05_KAT-059: Closed the TERKINI announcement
+[16:06:56] fl-contract-do-maint/05_KAT-059: Claimed group task CO260000000006663 (moved to My Task)
+[16:06:57] fl-contract-do-maint/05_KAT-059: CO260000000006663 is already in My Task (no claim needed)
+[16:07:17] fl-contract-do-maint/05_KAT-059: Message: Purchase Order CO260000000006663 is acknowledged.
+[16:07:17] fl-contract-do-maint/05_KAT-059: ✅ Captured CO No: CO260000000006663
+[16:07:17] fl-contract-do-maint/05_KAT-059: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Acknowledge_Contract_Order_BySupplier_2026.xlsx
+[16:07:17] fl-contract-do-maint/05_KAT-059: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Acknowledge_Contract_Order_BySupplier_2026.xlsx
+[16:07:19] fl-contract-do-maint/05_KAT-059: Closed the TERKINI announcement
+[16:07:19] fl-contract-do-maint/05_KAT-059: closeBrowser (the fixture closes the browser at the end of the test)
+[16:07:19] fl-contract-do-maint/05_KAT-059: DB status CO CO260000000006663: 41505 Pending Fulfilment / Menunggu Pemenuhan (expected 41505, OK)
+[16:07:20] fl-contract-do-maint/05_KAT-059: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/05_KAT-059 @KAT-059 (58.5s)
+[16:07:20] fl-contract-do-maint/06_KAT-060: KAT-060 Supplier submits delivery against the Contract Order — role Supplier, login: officer firstallied1234 (given for this run)
+[16:07:21] fl-contract-do-maint/06_KAT-060: Test data corrected (support/katalon/data-overrides.json): Purchase_Number, dateValue, DeliveryAmount: Deliver against our CO260000000005848 (acknowledged by KAT-059 as the KAT-008 supplier account, which owns the CO); default date 2026-06-23 is in the past, use today (delivery window 30/10/2026-29/12/2026); full order 10 x RM30,000 = RM300,000
+[16:07:21] fl-contract-do-maint/06_KAT-060: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[16:07:21] fl-contract-do-maint/06_KAT-060: Live dates: dateValue=2026-11-25
+[16:07:21] fl-contract-do-maint/06_KAT-060: Flow inputs: Purchase_Number=CO260000000006663
+[16:07:21] fl-contract-do-maint/06_KAT-060: Flow login: officer firstallied1234 (shared officer password)
+[16:07:25] fl-contract-do-maint/06_KAT-060: Closed the TERKINI announcement
+[16:07:28] fl-contract-do-maint/06_KAT-060: Closed the TERKINI announcement
+[16:08:15] fl-contract-do-maint/06_KAT-060: Purchase Order No = CO260000000006663
+[16:08:21] fl-contract-do-maint/06_KAT-060: Element tak wujud, skip isi amount
+[16:08:32] fl-contract-do-maint/06_KAT-060: Message: Delivery Order DO-CO260000000006663 is successfully submitted for acknowledgment. View Delivery Order
+[16:08:32] fl-contract-do-maint/06_KAT-060: ✅ Captured DO No: DO-CO260000000006663
+[16:08:32] fl-contract-do-maint/06_KAT-060: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery_Contract_List.xlsx
+[16:08:32] fl-contract-do-maint/06_KAT-060: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery_Contract_List.xlsx
+[16:08:33] fl-contract-do-maint/06_KAT-060: Closed the TERKINI announcement
+[16:08:33] fl-contract-do-maint/06_KAT-060: closeBrowser (the fixture closes the browser at the end of the test)
+[16:08:34] fl-contract-do-maint/06_KAT-060: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/06_KAT-060 @KAT-060 (1.2m)
+[16:08:35] fl-contract-do-maint/07_DO_LOOKUP: Gate DO_LOOKUP: found in the SIT database: DO 60000730212600002
+[16:08:35] fl-contract-do-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:08:35+08:00 (DO=60000730212600002)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/07_DO_LOOKUP @gate-DO_LOOKUP (1.3s)
+[16:08:37] fl-contract-do-maint/08_FL-101: FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) — role Supplier, login: officer firstallied1234 (given for this run)
+[16:08:37] fl-contract-do-maint/08_FL-101: FL-101: login firstallied1234 (BPM assignee)
+[16:08:41] fl-contract-do-maint/08_FL-101: FL-101: Logged in as firstallied1234
+[16:09:02] fl-contract-do-maint/08_FL-101: Closed the TERKINI announcement
+[16:09:02] fl-contract-do-maint/08_FL-101: DB status DO 60000730212600002: 42010 Pending Modification Approval / Menunggu Kelulusan (expected 42010, OK)
+[16:09:03] fl-contract-do-maint/08_FL-101: Signed out (SSO logout)
+  ✓   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 08 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/08_FL-101 @FL-101 (27.7s)
+[16:09:05] fl-contract-do-maint/09_FL-102: FL-102 FL Approver approves the DO modification — role FL Approver, login: officer 690127065209: BPM task "ACK Modified DO" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)
+[16:09:05] fl-contract-do-maint/09_FL-102: FL-102: login 690127065209 (BPM assignee)
+[16:09:07] fl-contract-do-maint/09_FL-102: FL-102: Logged in as 690127065209
+[16:09:41] fl-contract-do-maint/09_FL-102: FL-102: 60000730212600002 not on this user's task list yet: waiting up to 8 min
+[16:30:03] fl-contract-do-maint/09_FL-102: Signed out (SSO logout)
+  ✘   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 (21.0m)
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 11 FL-104 FL Approver approves the DO cancellation @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/11_FL-104 @FL-104
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 
+
+    Error: 60000730212600002 is not in this account's My Task (no result)
+
+       at ..\support\modules\qt\tasklist.ts:63
+
+      61 |     hit = await findTask(page, baseURL, docNo);
+      62 |   }
+    > 63 |   if (!hit?.linkId) throw new Error(`${docNo} is not in this account's My Task (no result)`);
+         |                           ^
+      64 |   for (let i = 0; hit?.claimId && i < 3; i++) {
+      65 |     await settledEval(page, (id: string) => (document.getElementById(id) as HTMLElement).click(), hit.claimId);
+      66 |     await pfIdle(page);
+        at openTask (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\tasklist.ts:63:27)
+        at approveMaintenance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:89:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:761:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_160242\flows-en-fl.flow-fl-contra-254eb-pproves-the-DO-modification-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_160242\flows-en-fl.flow-fl-contra-254eb-pproves-the-DO-modification-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 
+  2 did not run
+  8 passed (27.3m)
+
+Running 11 tests using 1 worker
+
+[16:31:13] fl-contract-do-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T16:02:51+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/01_CT_LOOKUP @gate-CT_LOOKUP (424ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/03_KAT-058 @KAT-058
+[16:31:14] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:06:22+08:00 (CO=CO260000000006663)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/04_CO_LOOKUP @gate-CO_LOOKUP (304ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/05_KAT-059 @KAT-059
+[16:33:16] fl-contract-do-maint/06_KAT-060: DB status DO 60000730212600002: 42010 Pending Modification Approval / Menunggu Kelulusan (expected 42000, MISMATCH)
+[16:33:16] fl-contract-do-maint/06_KAT-060: BLOCKED: KAT-060 is recorded as done, but 60000730212600002 is at 42010 Pending Modification Approval, not 42000 Pending Acknowledgement (DELIVERY_SUBMITTED). Finish it in the application, then: npm run qa -- resume --env sit --run fl-contract-do-maint_20261125-160242
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 08 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/08_FL-101 @FL-101
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 11 FL-104 FL Approver approves the DO cancellation @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/11_FL-104 @FL-104
+
+  9 skipped
+  2 passed (2.2m)
+
+Running 11 tests using 1 worker
+
+[16:37:29] fl-contract-do-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T16:02:51+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/01_CT_LOOKUP @gate-CT_LOOKUP (384ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/03_KAT-058 @KAT-058
+[16:37:29] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:06:22+08:00 (CO=CO260000000006663)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/04_CO_LOOKUP @gate-CO_LOOKUP (262ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/05_KAT-059 @KAT-059
+[16:39:34] fl-contract-do-maint/06_KAT-060: DB status DO 60000730212600002: 42010 Pending Modification Approval / Menunggu Kelulusan (expected 42000, MISMATCH)
+[16:39:34] fl-contract-do-maint/06_KAT-060: KAT-060: 60000730212600002 passed 42000 earlier (DB history), now at 42010; checkpoint accepted
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/06_KAT-060 @KAT-060 (2.1m)
+[16:39:35] fl-contract-do-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:08:35+08:00 (DO=60000730212600002)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/07_DO_LOOKUP @gate-DO_LOOKUP (340ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 08 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/08_FL-101 @FL-101
+[16:39:36] fl-contract-do-maint/09_FL-102: FL-102 FL Approver approves the DO modification — role FL Approver, login: officer 690127065209: BPM task "ACK Modified DO" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)
+[16:39:36] fl-contract-do-maint/09_FL-102: FL-102: login 690127065209 (BPM assignee)
+[16:39:44] fl-contract-do-maint/09_FL-102: FL-102: Logged in as 690127065209
+[16:40:15] fl-contract-do-maint/09_FL-102: FL-102: 60000730212600002 not on this user's task list yet: waiting up to 8 min
+[17:00:21] fl-contract-do-maint/09_FL-102: Signed out (SSO logout)
+  ✘   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 (20.8m)
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 11 FL-104 FL Approver approves the DO cancellation @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/11_FL-104 @FL-104
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 
+
+    Error: 60000730212600002 is not in this account's My Task (no result)
+
+       at ..\support\modules\qt\tasklist.ts:65
+
+      63 |     hit = await findTask(page, baseURL, docNo);
+      64 |   }
+    > 65 |   if (!hit?.linkId) throw new Error(`${docNo} is not in this account's My Task (no result)`);
+         |                           ^
+      66 |   for (let i = 0; hit?.claimId && i < 3; i++) {
+      67 |     await settledEval(page, (id: string) => (document.getElementById(id) as HTMLElement).click(), hit.claimId);
+      68 |     await pfIdle(page);
+        at openTask (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\tasklist.ts:65:27)
+        at approveMaintenance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:89:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:771:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_163720\flows-en-fl.flow-fl-contra-254eb-pproves-the-DO-modification-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_163720\flows-en-fl.flow-fl-contra-254eb-pproves-the-DO-modification-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 
+  4 skipped
+  2 did not run
+  4 passed (23.0m)
+
+Running 11 tests using 1 worker
+
+[17:01:32] fl-contract-do-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T16:02:51+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/01_CT_LOOKUP @gate-CT_LOOKUP (391ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/03_KAT-058 @KAT-058
+[17:01:33] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:06:22+08:00 (CO=CO260000000006663)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/04_CO_LOOKUP @gate-CO_LOOKUP (259ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/06_KAT-060 @KAT-060
+[17:01:33] fl-contract-do-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:08:35+08:00 (DO=60000730212600002)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/07_DO_LOOKUP @gate-DO_LOOKUP (244ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 08 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/08_FL-101 @FL-101
+[17:01:34] fl-contract-do-maint/09_FL-102: SELF-HEAL FL-102: retry once — the attempt failed before opening the document (60000730212600002 is not in this account's My Task (no result)), so nothing was submitted
+[17:01:36] fl-contract-do-maint/09_FL-102: FL-102 FL Approver approves the DO modification — role FL Approver, login: officer 690127065209: BPM task "ACK Modified DO" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)
+[17:01:36] fl-contract-do-maint/09_FL-102: FL-102: login 690127065209 (BPM assignee)
+[17:01:38] fl-contract-do-maint/09_FL-102: FL-102: Logged in as 690127065209
+[17:02:06] fl-contract-do-maint/09_FL-102: FL-102: 60000730212600002 not on this user's task list yet: waiting up to 8 min
+[17:22:03] fl-contract-do-maint/09_FL-102: Signed out (SSO logout)
+  ✘   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 (20.5m)
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 11 FL-104 FL Approver approves the DO cancellation @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/11_FL-104 @FL-104
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 
+
+    Error: 60000730212600002 is not in this account's My Task (no result)
+
+       at ..\support\modules\qt\tasklist.ts:65
+
+      63 |     hit = await findTask(page, baseURL, docNo);
+      64 |   }
+    > 65 |   if (!hit?.linkId) throw new Error(`${docNo} is not in this account's My Task (no result)`);
+         |                           ^
+      66 |   for (let i = 0; hit?.claimId && i < 3; i++) {
+      67 |     await settledEval(page, (id: string) => (document.getElementById(id) as HTMLElement).click(), hit.claimId);
+      68 |     await pfIdle(page);
+        at openTask (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\tasklist.ts:65:27)
+        at approveMaintenance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:89:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:771:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_170124\flows-en-fl.flow-fl-contra-254eb-pproves-the-DO-modification-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_170124\flows-en-fl.flow-fl-contra-254eb-pproves-the-DO-modification-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 
+  5 skipped
+  2 did not run
+  3 passed (20.7m)
+
+Running 11 tests using 1 worker
+
+[18:44:22] fl-contract-do-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T16:02:51+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/01_CT_LOOKUP @gate-CT_LOOKUP (757ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/03_KAT-058 @KAT-058
+[18:44:24] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:06:22+08:00 (CO=CO260000000006663)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/04_CO_LOOKUP @gate-CO_LOOKUP (534ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/06_KAT-060 @KAT-060
+[18:44:25] fl-contract-do-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:08:35+08:00 (DO=60000730212600002)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/07_DO_LOOKUP @gate-DO_LOOKUP (590ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 08 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/08_FL-101 @FL-101
+[18:44:29] fl-contract-do-maint/09_FL-102: FL-102 FL Approver approves the DO modification — role FL Approver, login: officer 690127065209: BPM task "ACK Modified DO" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)
+[18:44:29] fl-contract-do-maint/09_FL-102: FL-102: login 690127065209 (BPM assignee)
+[18:44:31] fl-contract-do-maint/09_FL-102: FL-102: Logged in as 690127065209
+[18:44:36] fl-contract-do-maint/09_FL-102: FL-102: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[18:44:43] fl-contract-do-maint/09_FL-102: DB status DO 60000730212600002: 42000 Pending Acknowledgement / Menunggu Pengesahan (expected 42000, OK)
+[18:44:44] fl-contract-do-maint/09_FL-102: Signed out (SSO logout)
+  ✓   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102 (18.0s)
+[18:44:46] fl-contract-do-maint/10_FL-103: FL-103 Supplier cancels the Delivery Order — role Supplier, login: officer firstallied1234 (given for this run)
+[18:44:46] fl-contract-do-maint/10_FL-103: FL-103: login firstallied1234 (BPM assignee)
+[18:44:49] fl-contract-do-maint/10_FL-103: FL-103: Logged in as firstallied1234
+[18:45:53] fl-contract-do-maint/10_FL-103: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103 (1.2m)
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 11 FL-104 FL Approver approves the DO cancellation @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/11_FL-104 @FL-104
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103 
+
+    TimeoutError: locator.fill: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('textarea:visible:not([readonly])').last()
+        - waiting for "http://ngepsit.eperolehan.com.my/web/epapp/fulfilment-maintenance?p_auth=CJ34xdwZ&p_p_id=flDocumentMaintenance_WAR_NGePportlet&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_c…" navigation to finish...
+        - navigated to "http://ngepsit.eperolehan.com.my/web/epapp/fulfilment-maintenance?p_auth=CJ34xdwZ&p_p_id=flDocumentMaintenance_WAR_NGePportlet&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_c…"
+        - locator resolved to <textarea rows="6" cols="53" disabled="disabled" id="_flDocumentMaintenance_WAR_NGePportlet_:form:j_idt208" name="_flDocumentMaintenance_WAR_NGePportlet_:form:j_idt208" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-state-disabled">1-6-29 JALAN SEMARAK API 1/50, ↵BLOCK C OFF JALAN…</textarea>
+        - fill("QA automation: cancel DO 60000730212600002")
+      - attempting fill action
+        2 × waiting for element to be visible, enabled and editable
+          - element is not enabled
+        - retrying fill action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and editable
+          - element is not enabled
+        - retrying fill action
+          - waiting 100ms
+        57 × waiting for element to be visible, enabled and editable
+           - element is not enabled
+         - retrying fill action
+           - waiting 500ms
+
+
+       at ..\support\modules\fl\maintenance.ts:78
+
+      76 |     notes.push(`${LABEL[kind].ref}: ${old} → ${next}`);
+      77 |   }
+    > 78 |   await page.locator('textarea:visible:not([readonly])').last().fill(`QA automation: ${action.toLowerCase()} ${kind} ${docNo}`);
+         |                                                                 ^
+      79 |   const msgs = await pressAndConfirm(page, action, log);
+      80 |   const errors = await page.locator('.ui-messages-error:visible, .ui-message-error:visible').allInnerTexts();
+      81 |   if (errors.length) throw new Error(`rejected: ${errors.join(' | ').slice(0, 300)}`);
+        at maintain (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:78:65)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:771:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_184409\flows-en-fl.flow-fl-contra-0b4b0--cancels-the-Delivery-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_184409\flows-en-fl.flow-fl-contra-0b4b0--cancels-the-Delivery-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103 
+  5 skipped
+  1 did not run
+  4 passed (1.8m)
+
+Running 11 tests using 1 worker
+
+[18:47:05] fl-contract-do-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T16:02:51+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/01_CT_LOOKUP @gate-CT_LOOKUP (615ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/03_KAT-058 @KAT-058
+[18:47:05] fl-contract-do-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:06:22+08:00 (CO=CO260000000006663)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/04_CO_LOOKUP @gate-CO_LOOKUP (257ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/06_KAT-060 @KAT-060
+[18:47:06] fl-contract-do-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T16:08:35+08:00 (DO=60000730212600002)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/07_DO_LOOKUP @gate-DO_LOOKUP (273ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 08 FL-101 Supplier updates the Delivery Order (Fulfilment Maintenance) @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/08_FL-101 @FL-101
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 09 FL-102 FL Approver approves the DO modification @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/09_FL-102 @FL-102
+[18:47:08] fl-contract-do-maint/10_FL-103: SELF-HEAL FL-103: retry once — the SIT DB still shows 60000730212600002 at 42000 Pending Acknowledgement, as before the attempt
+[18:47:08] fl-contract-do-maint/10_FL-103: FL-103 Supplier cancels the Delivery Order — role Supplier, login: officer firstallied1234 (given for this run)
+[18:47:08] fl-contract-do-maint/10_FL-103: FL-103: login firstallied1234 (BPM assignee)
+[18:47:10] fl-contract-do-maint/10_FL-103: FL-103: Logged in as firstallied1234
+[18:47:16] fl-contract-do-maint/10_FL-103: FL-103: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[18:47:25] fl-contract-do-maint/10_FL-103: Closed the TERKINI announcement
+[18:47:26] fl-contract-do-maint/10_FL-103: DB status DO 60000730212600002: 42015 Pending Cancellation Approval / Menunggu Kelulusan Pembatalan (expected 42015, OK)
+[18:47:26] fl-contract-do-maint/10_FL-103: Signed out (SSO logout)
+  ✓  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 10 FL-103 Supplier cancels the Delivery Order @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/10_FL-103 @FL-103 (19.7s)
+[18:47:28] fl-contract-do-maint/11_FL-104: FL-104 FL Approver approves the DO cancellation — role FL Approver, login: officer 690127065209: BPM task "Review Cancel DO" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)
+[18:47:28] fl-contract-do-maint/11_FL-104: FL-104: login 690127065209 (BPM assignee)
+[18:47:30] fl-contract-do-maint/11_FL-104: FL-104: Logged in as 690127065209
+[18:47:34] fl-contract-do-maint/11_FL-104: FL-104: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[18:47:39] fl-contract-do-maint/11_FL-104: Closed the TERKINI announcement
+[18:47:39] fl-contract-do-maint/11_FL-104: DB status DO 60000730212600002: 42900 Cancelled / Dibatalkan (expected 42900, OK)
+[18:47:40] fl-contract-do-maint/11_FL-104: Signed out (SSO logout)
+  ✓  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-do-maint [EN] Contract: DO update and cancel (Fulfilment Maintenance, P2 Contract Order) › 11 FL-104 FL Approver approves the DO cancellation @flow-fl-contract-do-maint @module-fl @lang-en @FLOW @fl-contract-do-maint/11_FL-104 @FL-104 (13.3s)
+
+  6 skipped
+  5 passed (43.9s)

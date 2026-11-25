@@ -1999,14 +1999,14 @@
   "FL|DO|42010": {
    "spec": "tests/data-prep/en/by-status/fl/DO/42010-Pending-Modification-Approval.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-do-maint",
+   "flow": "fl-contract-do-maint",
    "upTo": "FL-101",
    "manual": false
   },
   "FL|DO|42015": {
    "spec": "tests/data-prep/en/by-status/fl/DO/42015-Pending-Cancellation-Approval.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-do-maint",
+   "flow": "fl-contract-do-maint",
    "upTo": "FL-103",
    "manual": false
   },
@@ -2027,7 +2027,7 @@
   "FL|DO|42900": {
    "spec": "tests/data-prep/en/by-status/fl/DO/42900-Cancelled.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-do-maint",
+   "flow": "fl-contract-do-maint",
    "upTo": "FL-104",
    "manual": false
   },

@@ -1,0 +1,68 @@
+{
+  "flowRunId": "fl-contract-do-maint_20261125-155547",
+  "flowId": "fl-contract-do-maint",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T15:55:47+08:00",
+  "updatedAt": "2026-11-25T15:59:53+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004240",
+    "CT": "CT260000000002315"
+  },
+  "officers": {
+    "KAT-057": "131020145098",
+    "KAT-059": "firstallied1234",
+    "KAT-060": "firstallied1234",
+    "FL-101": "firstallied1234",
+    "FL-103": "firstallied1234"
+  },
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-25T15:55:57+08:00",
+      "values": {
+        "LA": "LA260000000004240"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_155548",
+          "startedAt": "2026-11-25T15:56:27+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\02_KAT-057\\2026-11-25_155548",
+          "endedAt": "2026-11-25T15:58:43+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "The PTJ has utilized the Schedule No. 1 of this Periodic Contract with Schedule. (ERR-740031)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-740031: The PTJ has utilized the Schedule No. 1 of this Periodic Contract with Schedule. (ERR-740031)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "officer 131020145098 (given for this run)"
+    }
+  },
+  "allowRerun": [],
+  "vars": {
+    "KAT-057": {
+      "ddItemType": "1",
+      "ItemCode": "44121703",
+      "Address_Input": "Address Name 1234"
+    }
+  },
+  "status": "blocked",
+  "blockedReason": "KAT-057 failed in an earlier attempt (APPLICATION_VALIDATION (medium): the application showed ERR-740031: The PTJ has utilized the Schedule No. 1 of this Periodic Contract with Schedule. (ERR-740031)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract-do-maint_20261125-155547 --step KAT-057"
+}

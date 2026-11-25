@@ -48,6 +48,17 @@ export interface FlowInputs {
   login?: FlowLogin;
 }
 const flowInputs = new Map<string, FlowInputs>();
+/** Flow variables of the step that is running (qa run --var KAT-0xx.Name=value). */
+let activeFlowVars: Record<string, unknown> = {};
+/**
+ * A value given for this run with --var KAT-0xx.Name=value, else the default. Used by converter REPAIRS for numbers
+ * the Katalon scripts hard-code (e.g. the schedule index of KAT-057: a PTJ may use each schedule only once, ERR-740031).
+ */
+export function flowVar(name: string, dflt: number | string): any {
+  const v = activeFlowVars[name];
+  if (v === undefined || v === '') return dflt;
+  return typeof dflt === 'number' ? Number(v) : v;
+}
 export function setFlowInputs(caseId: string, inputs: FlowInputs | undefined) {
   if (inputs) flowInputs.set(caseId, inputs);
   else flowInputs.delete(caseId);
@@ -1022,6 +1033,7 @@ export async function katalonVariables(caseId: string, defaults: Record<string, 
   if (liveKeys.length) cur().log(`Live dates: ${liveKeys.map((k) => `${k}=${vars[k]}`).join(', ')}`);
 
   const flow = flowInputs.get(caseId);
+  activeFlowVars = flow?.vars ?? {};
   if (flow) {
     Object.assign(vars, flow.vars);
     const shown = Object.entries(flow.vars).filter(([k]) => !/^(username|password)$/i.test(k)).map(([k, v]) => `${k}=${v}`);

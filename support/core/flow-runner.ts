@@ -10,7 +10,7 @@ import { getEnv } from '../../config/environments';
 import { assignedOfficer, invitedSupplierLogins, openTasks, waitForTask } from './bpm-tasks';
 import { language, nowMy, runDir, stateDir, type Lang } from './context';
 import { recordTransaction } from './data-registry';
-import { adjustmentsOf, contractOfLoa, currentStatus, deliveryOrdersOf, ordersOfRequest, parseKind, statusKinds } from './doc-status';
+import { adjustmentsOf, contractOfLoa, currentStatus, deliveryOrdersOf, ordersOfRequest, parseKind, statusHistory, statusKinds } from './doc-status';
 import { docName, findDocs, isDocType, looksLike, type DocType } from './documents';
 import { emit } from './events';
 import { newRunState, readRunState, stateFile, updateRunState, type Attempt, type DbResult, type RunState, type StepRecord, type StepState } from './run-state';
@@ -521,6 +521,16 @@ async function runStep(ctx: ItemCtx, step: StepDef) {
     const db = step.checkpoint.db;
     if (db && db.statusId != null && !rec.db?.ok) {
       const r = await checkDb(ctx, db, s.docs);
+      // a later step may already have moved the document on (KAT-060 DO 42000 → FL-101 42010, 2026-11-25): the
+      // checkpoint status in the document's DB history proves the step went through
+      if (r && !r.ok && r.docNo) {
+        try {
+          if (statusHistory(db.kind, r.docNo).some((h) => h.statusId === db.statusId)) {
+            ctx.evidence.log(`${step.id}: ${r.docNo} passed ${db.statusId} earlier (DB history), now at ${r.statusId}; checkpoint accepted`);
+            r.ok = true;
+          }
+        } catch { /* kind without history: keep the result */ }
+      }
       if (r) {
         await updateRunState(ctx.flowRunId, (x) => {
           x.steps[step.id].db = r;

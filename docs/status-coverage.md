@@ -20,7 +20,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | CD | 3 | 0 | 0 | 0 | 0 | 3 |
 | CM | 28 | 0 | 0 | 13 | 1 | 14 |
 | CT | 210 | 4 | 0 | 172 | 11 | 23 |
-| FL | 165 | 12 | 18 | 65 | 44 | 26 |
+| FL | 165 | 15 | 15 | 65 | 44 | 26 |
 | PM | 2 | 2 | 0 | 0 | 0 | 0 |
 | PP | 14 | 0 | 0 | 14 | 0 | 0 |
 | SC | 308 | 25 | 0 | 166 | 53 | 64 |
@@ -339,11 +339,11 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | DN | 45410 | Cancelled by Year End Process | Dibatalkan oleh Proses Akhir Tahun | 11 (2021-10-26) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/DN/45410-Cancelled-by-Year-End-Process.spec.ts) |
 | DO | 42000 | Pending Acknowledgement | Menunggu Pengesahan | 5584 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/DO/42000-Pending-Acknowledgement.spec.ts) |
 | DO | 42005 | Acknowledged | Diperakui | 4406 (2026-11-23) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/fl/DO/42005-Acknowledged.spec.ts) |
-| DO | 42010 | Pending Modification Approval | Menunggu Kelulusan | 75 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/DO/42010-Pending-Modification-Approval.spec.ts) |
-| DO | 42015 | Pending Cancellation Approval | Menunggu Kelulusan Pembatalan | 198 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/DO/42015-Pending-Cancellation-Approval.spec.ts) |
+| DO | 42010 | Pending Modification Approval | Menunggu Kelulusan | 75 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/DO/42010-Pending-Modification-Approval.spec.ts) |
+| DO | 42015 | Pending Cancellation Approval | Menunggu Kelulusan Pembatalan | 198 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/DO/42015-Pending-Cancellation-Approval.spec.ts) |
 | DO | 42030 | Pending Cancellation Submission | Menunggu Penyerahan Pembatalan | 9 (2024-01-29) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/fl/DO/42030-Pending-Cancellation-Submission.spec.ts) |
 | DO | 42810 | Rejected | Ditolak | 497 (2026-09-18) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/fl/DO/42810-Rejected.spec.ts) |
-| DO | 42900 | Cancelled | Dibatalkan | 69626 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/DO/42900-Cancelled.spec.ts) |
+| DO | 42900 | Cancelled | Dibatalkan | 69626 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/DO/42900-Cancelled.spec.ts) |
 | DO | 42910 | Cancelled by Year End Process | Dibatalkan oleh Proses Akhir Tahun | 116 (2025-08-13) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/DO/42910-Cancelled-by-Year-End-Process.spec.ts) |
 | DO | 42911 | Closed Due To AP59 | Ditutup disebabkan AP59 | 44 (2026-10-16) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/DO/42911-Closed-Due-To-AP59.spec.ts) |
 | DO | 42912 | Cancelled Due To Ministry Restructuring | Dibatalkan Disebabkan Penyusunan Semula Kementerian | 43 (2018-09-28) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/DO/42912-Cancelled-Due-To-Ministry-Restructuring.spec.ts) |

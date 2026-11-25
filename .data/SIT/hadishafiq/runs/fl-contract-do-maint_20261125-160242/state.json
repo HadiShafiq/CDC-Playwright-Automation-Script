@@ -1,0 +1,427 @@
+{
+  "flowRunId": "fl-contract-do-maint_20261125-160242",
+  "flowId": "fl-contract-do-maint",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T16:02:42+08:00",
+  "updatedAt": "2026-11-25T18:47:39+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004240",
+    "CT": "CT260000000002315",
+    "CR": "CR260000000006065",
+    "CO": "CO260000000006663",
+    "DO": "60000730212600002"
+  },
+  "officers": {
+    "KAT-057": "131020145098",
+    "KAT-059": "firstallied1234",
+    "KAT-060": "firstallied1234",
+    "FL-101": "firstallied1234",
+    "FL-103": "firstallied1234"
+  },
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-25T16:02:51+08:00",
+      "values": {
+        "LA": "LA260000000004240"
+      }
+    },
+    "CO_LOOKUP": {
+      "done": true,
+      "by": "SIT database (automatic lookup)",
+      "at": "2026-11-25T16:06:22+08:00",
+      "values": {
+        "CO": "CO260000000006663"
+      }
+    },
+    "DO_LOOKUP": {
+      "done": true,
+      "by": "SIT database (automatic lookup)",
+      "at": "2026-11-25T16:08:35+08:00",
+      "values": {
+        "DO": "60000730212600002"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_160242",
+          "startedAt": "2026-11-25T16:02:52+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\02_KAT-057\\2026-11-25_160242",
+          "endedAt": "2026-11-25T16:05:02+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Selected Charge Line Items updated."
+            },
+            {
+              "severity": "info",
+              "text": "Contract Request CR260000000006065 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CR": "CR260000000006065"
+      },
+      "login": "officer 131020145098 (given for this run)",
+      "checkpoint": "CR_SUBMITTED",
+      "db": {
+        "kind": "CR",
+        "docNo": "CR260000000006065",
+        "expected": 40510,
+        "statusId": 40510,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 16:04:54",
+        "ok": true,
+        "checkedAt": "2026-11-25T16:05:02+08:00"
+      }
+    },
+    "KAT-058": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_160242",
+          "startedAt": "2026-11-25T16:05:04+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\03_KAT-058\\2026-11-25_160242",
+          "dbBefore": {
+            "kind": "CR",
+            "docNo": "CR260000000006065",
+            "statusId": 40510
+          },
+          "endedAt": "2026-11-25T16:06:19+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Contract Request CR260000000006065 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Purchase Order document."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CR": "CR260000000006065"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "CR_APPROVED",
+      "db": {
+        "kind": "CR",
+        "docNo": "CR260000000006065",
+        "expected": 40800,
+        "statusId": 40800,
+        "en": "Contract Request Approved",
+        "bm": "Permintaan Kontrak Diluluskan",
+        "at": "2026-11-25 16:06:15",
+        "ok": true,
+        "checkedAt": "2026-11-25T16:06:19+08:00"
+      }
+    },
+    "KAT-059": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_160242",
+          "startedAt": "2026-11-25T16:06:22+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\05_KAT-059\\2026-11-25_160242",
+          "dbBefore": {
+            "kind": "CO",
+            "docNo": "CO260000000006663",
+            "statusId": 41500
+          },
+          "endedAt": "2026-11-25T16:07:19+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Purchase Order CO260000000006663 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CO": "CO260000000006663"
+      },
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "CO_ACKNOWLEDGED",
+      "db": {
+        "kind": "CO",
+        "docNo": "CO260000000006663",
+        "expected": 41505,
+        "statusId": 41505,
+        "en": "Pending Fulfilment",
+        "bm": "Menunggu Pemenuhan",
+        "at": "2026-11-25 16:07:13",
+        "ok": true,
+        "checkedAt": "2026-11-25T16:07:19+08:00"
+      }
+    },
+    "KAT-060": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_160242",
+          "startedAt": "2026-11-25T16:07:20+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\06_KAT-060\\2026-11-25_160242",
+          "endedAt": "2026-11-25T16:08:33+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Delivery Order DO-CO260000000006663 is successfully submitted for acknowledgment. View Delivery Order"
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "DELIVERY_SUBMITTED",
+      "db": {
+        "kind": "DO",
+        "docNo": "60000730212600002",
+        "expected": 42000,
+        "statusId": 42010,
+        "en": "Pending Modification Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 16:08:52",
+        "ok": true,
+        "checkedAt": "2026-11-25T16:39:34+08:00"
+      }
+    },
+    "FL-101": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_160242",
+          "startedAt": "2026-11-25T16:08:35+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\08_FL-101\\2026-11-25_160242",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42000
+          },
+          "endedAt": "2026-11-25T16:09:02+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Update for Delivery Order DO-CO260000000006663-M978 is successfully submitted for acknowledgment."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "DO_MODIFY_REQUESTED",
+      "db": {
+        "kind": "DO",
+        "docNo": "60000730212600002",
+        "expected": 42010,
+        "statusId": 42010,
+        "en": "Pending Modification Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 16:08:52",
+        "ok": true,
+        "checkedAt": "2026-11-25T16:09:02+08:00",
+        "observeOnly": true
+      }
+    },
+    "FL-102": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_160242",
+          "startedAt": "2026-11-25T16:09:04+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\09_FL-102\\2026-11-25_160242",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42010
+          },
+          "endedAt": "2026-11-25T16:29:53+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "60000730212600002 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-25_163720",
+          "startedAt": "2026-11-25T16:39:36+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\09_FL-102\\2026-11-25_163720",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42010
+          },
+          "endedAt": "2026-11-25T17:00:13+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "60000730212600002 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-25_170124",
+          "startedAt": "2026-11-25T17:01:35+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\09_FL-102\\2026-11-25_170124",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42010
+          },
+          "selfHeal": "the attempt failed before opening the document (60000730212600002 is not in this account's My Task (no result)), so nothing was submitted",
+          "endedAt": "2026-11-25T17:21:54+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "60000730212600002 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-25_184409",
+          "startedAt": "2026-11-25T18:44:28+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\09_FL-102\\2026-11-25_184409",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42010
+          },
+          "endedAt": "2026-11-25T18:44:43+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Update for Delivery Order DO-CO260000000006663-M978 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 690127065209: BPM task \"ACK Modified DO\" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "DO_MODIFIED",
+      "db": {
+        "kind": "DO",
+        "docNo": "60000730212600002",
+        "expected": 42000,
+        "statusId": 42000,
+        "en": "Pending Acknowledgement",
+        "bm": "Menunggu Pengesahan",
+        "at": "2026-11-25 18:44:37",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:44:43+08:00",
+        "observeOnly": true
+      }
+    },
+    "FL-103": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_184409",
+          "startedAt": "2026-11-25T18:44:45+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\10_FL-103\\2026-11-25_184409",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42000
+          },
+          "endedAt": "2026-11-25T18:45:38+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.fill: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_184656",
+          "startedAt": "2026-11-25T18:47:08+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\10_FL-103\\2026-11-25_184656",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42000
+          },
+          "selfHeal": "the SIT DB still shows 60000730212600002 at 42000 Pending Acknowledgement, as before the attempt",
+          "endedAt": "2026-11-25T18:47:26+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Cancellation for Delivery Order DO-CO260000000006663-M978 is successfully submitted for approval."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "DO_CANCEL_REQUESTED",
+      "db": {
+        "kind": "DO",
+        "docNo": "60000730212600002",
+        "expected": 42015,
+        "statusId": 42015,
+        "en": "Pending Cancellation Approval",
+        "bm": "Menunggu Kelulusan Pembatalan",
+        "at": "2026-11-25 18:47:21",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:47:26+08:00",
+        "observeOnly": true
+      }
+    },
+    "FL-104": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_184656",
+          "startedAt": "2026-11-25T18:47:27+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract-do-maint\\11_FL-104\\2026-11-25_184656",
+          "dbBefore": {
+            "kind": "DO",
+            "docNo": "60000730212600002",
+            "statusId": 42015
+          },
+          "endedAt": "2026-11-25T18:47:39+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Cancellation for Delivery Order DO-CO260000000006663-M978 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 690127065209: BPM task \"Review Cancel DO\" of 60000730212600002 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "DO_CANCELLED",
+      "db": {
+        "kind": "DO",
+        "docNo": "60000730212600002",
+        "expected": 42900,
+        "statusId": 42900,
+        "en": "Cancelled",
+        "bm": "Dibatalkan",
+        "at": "2026-11-25 18:47:36",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:47:39+08:00",
+        "observeOnly": true
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {
+    "KAT-057": {
+      "ScheduleNo": "2",
+      "ddItemType": "1",
+      "ItemCode": "44121703",
+      "Address_Input": "Address Name 1234"
+    }
+  },
+  "status": "completed"
+}
