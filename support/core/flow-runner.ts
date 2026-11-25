@@ -613,11 +613,17 @@ async function runStep(ctx: ItemCtx, step: StepDef) {
   // (given for this run > the BPM task's assignee in SIT > data-overrides.json from an earlier run).
   let login: FlowLogin | undefined;
   let loginNote = 'Katalon default account of the step';
-  if (s.officers[step.id] && step.login !== 'assignedOfficer') {
+  const given = s.officers[step.id];
+  if (given && /^account:KAT-\d{3}$/.test(given)) {
+    // --officer FL-111=account:KAT-008: log in with another Katalon step's account (its own password), e.g. the
+    // supplier that created the invoice when the step's default account is another supplier (2026-11-25)
+    login = { accountOf: given.slice('account:'.length) };
+    loginNote = `account of ${login.accountOf} (given for this run)`;
+  } else if (given && step.login !== 'assignedOfficer') {
     // an officer given for this run (qa gate --officer) wins for any step, e.g. a requisitioner of the contract's own
     // PTJ when the step's Katalon account belongs to another PTJ (KAT-057 on a QT contract, 2026-11-25)
-    login = { officer: s.officers[step.id] };
-    loginNote = `officer ${s.officers[step.id]} (given for this run)`;
+    login = { officer: given };
+    loginNote = `officer ${given} (given for this run)`;
   } else if (step.login === 'assignedOfficer') {
     let officer = s.officers[step.id];
     loginNote = `officer ${officer} (given for this run)`;

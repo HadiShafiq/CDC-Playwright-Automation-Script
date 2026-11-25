@@ -457,15 +457,15 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "fl",
-    "checkpoint": "FRN_CREATED",
-    "verification": "completed-unverified",
+    "checkpoint": "INVOICE_CANCELLED",
+    "verification": "verified",
     "createdBy": null,
     "lastStep": {
-      "flowRunId": "fl-contract_20261124-011733",
-      "stepId": "KAT-061"
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "FL-114"
     },
     "createdAt": "2026-11-24T01:22:37+08:00",
-    "lastVerifiedAt": "2026-11-24T01:22:37+08:00",
+    "lastVerifiedAt": "2026-11-25T19:13:57+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,
@@ -845,18 +845,18 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "direct-loa",
-    "checkpoint": "LA_VERIFIED",
+    "checkpoint": "CR_SUBMITTED",
     "verification": "verified",
     "createdBy": {
       "flowRunId": "dloa-open-schedule-services_20261124-032517",
       "stepId": "KAT-015"
     },
     "lastStep": {
-      "flowRunId": "dloa-open-schedule-services_20261124-032517",
-      "stepId": "KAT-010"
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-057"
     },
     "createdAt": "2026-11-24T03:27:47+08:00",
-    "lastVerifiedAt": "2026-11-24T03:30:36+08:00",
+    "lastVerifiedAt": "2026-11-25T18:54:17+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,
@@ -1816,6 +1816,123 @@
     "lastVerifiedAt": "2026-11-25T18:47:39+08:00",
     "parents": [
       "CO260000000006663"
+    ],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "CT260000000002308",
+    "docType": "CT",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "ct",
+    "checkpoint": "AGREEMENT_APPROVED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "ct-fd-agreement_20261125-184833",
+      "stepId": "KAT-040"
+    },
+    "lastStep": {
+      "flowRunId": "ct-fd-agreement_20261125-184833",
+      "stepId": "KAT-043"
+    },
+    "createdAt": "2026-11-25T18:50:13+08:00",
+    "lastVerifiedAt": "2026-11-25T18:52:31+08:00",
+    "parents": [
+      "LA260000000004233"
+    ],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "CR260000000006066",
+    "docType": "CR",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "fl",
+    "checkpoint": "CR_APPROVED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-057"
+    },
+    "lastStep": {
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-058"
+    },
+    "createdAt": "2026-11-25T18:54:17+08:00",
+    "lastVerifiedAt": "2026-11-25T18:55:31+08:00",
+    "parents": [
+      "LA260000000004233"
+    ],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "CO260000000006664",
+    "docType": "CO",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "fl",
+    "checkpoint": "DELIVERY_SUBMITTED",
+    "verification": "verified",
+    "createdBy": null,
+    "lastStep": {
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-060"
+    },
+    "createdAt": "2026-11-25T18:59:18+08:00",
+    "lastVerifiedAt": "2026-11-25T19:04:54+08:00",
+    "parents": [],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "FN260000000005822",
+    "docType": "FN",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "fl",
+    "checkpoint": "FRN_APPROVED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-061"
+    },
+    "lastStep": {
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-062"
+    },
+    "createdAt": "2026-11-25T19:00:38+08:00",
+    "lastVerifiedAt": "2026-11-25T19:01:11+08:00",
+    "parents": [
+      "01400K003S2600004"
+    ],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "01400K003S2600004",
+    "docType": "DO",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "fl",
+    "checkpoint": "DELIVERY_SUBMITTED",
+    "verification": "verified",
+    "createdBy": null,
+    "lastStep": {
+      "flowRunId": "fl-contract-inv-maint_20261125-185249",
+      "stepId": "KAT-060"
+    },
+    "createdAt": "2026-11-25T19:00:38+08:00",
+    "lastVerifiedAt": "2026-11-25T19:04:54+08:00",
+    "parents": [
+      "CO260000000006664"
     ],
     "reuse": "available",
     "cr": null,

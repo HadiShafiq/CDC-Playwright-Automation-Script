@@ -1,0 +1,482 @@
+
+Running 14 tests using 1 worker
+
+[18:52:53] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (367ms)
+[18:52:54] fl-contract-inv-maint/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: Katalon default account of the step
+[18:52:54] fl-contract-inv-maint/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[18:52:54] fl-contract-inv-maint/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:52:54] fl-contract-inv-maint/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[18:52:54] fl-contract-inv-maint/02_KAT-057: Flow inputs: ContractList=LA260000000004233
+[18:52:56] fl-contract-inv-maint/02_KAT-057: Closed the TERKINI announcement
+[18:53:00] fl-contract-inv-maint/02_KAT-057: Closed the TERKINI announcement
+[18:53:36] fl-contract-inv-maint/02_KAT-057: Tick row #1
+[18:53:50] fl-contract-inv-maint/02_KAT-057: Final Description Search = B0
+[18:54:16] fl-contract-inv-maint/02_KAT-057: Message: Contract Request CR260000000006066 is successfully submitted.
+[18:54:16] fl-contract-inv-maint/02_KAT-057: ✅ Captured CR No: CR260000000006066
+[18:54:16] fl-contract-inv-maint/02_KAT-057: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[18:54:16] fl-contract-inv-maint/02_KAT-057: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[18:54:17] fl-contract-inv-maint/02_KAT-057: Closed the TERKINI announcement
+[18:54:17] fl-contract-inv-maint/02_KAT-057: closeBrowser (the fixture closes the browser at the end of the test)
+[18:54:17] fl-contract-inv-maint/02_KAT-057: DB status CR CR260000000006066: 40510 Pending Approval / Menunggu Kelulusan (expected 40510, OK)
+[18:54:18] fl-contract-inv-maint/02_KAT-057: Signed out (SSO logout)
+  ✓   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057 (1.4m)
+[18:54:19] fl-contract-inv-maint/03_KAT-058: KAT-058 Approve Contract Request (sent to iGFMAS) — role Approver, login: Katalon default account of the step
+[18:54:20] fl-contract-inv-maint/03_KAT-058: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:54:20] fl-contract-inv-maint/03_KAT-058: Flow inputs: Document_Number=CR260000000006066
+[18:54:22] fl-contract-inv-maint/03_KAT-058: Closed the TERKINI announcement
+[18:54:25] fl-contract-inv-maint/03_KAT-058: Closed the TERKINI announcement
+[18:54:39] fl-contract-inv-maint/03_KAT-058: CR260000000006066 is already in My Task (no claim needed)
+[18:54:39] fl-contract-inv-maint/03_KAT-058: CR260000000006066 is already in My Task (no claim needed)
+[18:54:50] fl-contract-inv-maint/03_KAT-058: Message: Contract Request CR260000000006066 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[18:54:50] fl-contract-inv-maint/03_KAT-058: ✅ Captured CR No: CR260000000006066
+[18:54:50] fl-contract-inv-maint/03_KAT-058: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[18:54:50] fl-contract-inv-maint/03_KAT-058: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[18:54:51] fl-contract-inv-maint/03_KAT-058: Closed the TERKINI announcement
+[18:54:51] fl-contract-inv-maint/03_KAT-058: closeBrowser (the fixture closes the browser at the end of the test)
+[18:55:31] fl-contract-inv-maint/03_KAT-058: DB status CR CR260000000006066: 40800 Contract Request Approved / Permintaan Kontrak Diluluskan (expected 40800, OK)
+[18:55:31] fl-contract-inv-maint/03_KAT-058: Signed out (SSO logout)
+  ✓   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058 (1.2m)
+[18:55:32] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP: found in the SIT database: CO CO260000000006664
+[18:55:32] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (814ms)
+[18:55:33] fl-contract-inv-maint/05_KAT-059: BPM task assigned to mofflros_6; no step account matches (this step uses MOFFLROS_6)
+[18:55:33] fl-contract-inv-maint/05_KAT-059: KAT-059 Supplier acknowledges the Contract Order — role Supplier, login: account of KAT-008
+[18:55:33] fl-contract-inv-maint/05_KAT-059: Test data corrected (support/katalon/data-overrides.json): Document_Number: CO260000000005848 was created from our CR260000000005449 (KAT-057/058, process instance 15973526); its Acknowledge CO task is assigned to mofflros_6, the KAT-008 supplier account
+[18:55:33] fl-contract-inv-maint/05_KAT-059: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[18:55:33] fl-contract-inv-maint/05_KAT-059: Flow inputs: Document_Number=CO260000000006664
+[18:55:33] fl-contract-inv-maint/05_KAT-059: Flow login: the account of KAT-008
+[18:55:35] fl-contract-inv-maint/05_KAT-059: Closed the TERKINI announcement
+[18:55:39] fl-contract-inv-maint/05_KAT-059: Closed the TERKINI announcement
+[18:55:54] fl-contract-inv-maint/05_KAT-059: CO260000000006664 is already in My Task (no claim needed)
+[18:55:54] fl-contract-inv-maint/05_KAT-059: CO260000000006664 is already in My Task (no claim needed)
+[18:57:32] fl-contract-inv-maint/05_KAT-059: Message: 
+[18:57:36] fl-contract-inv-maint/05_KAT-059: Application message on failure: Record has already been updated by other user. Please retrieve the information again (ERR-100048) Soft Cert PIN Number * Sign Change Challenge Questions
+[18:57:36] fl-contract-inv-maint/05_KAT-059: Application message on failure: Record has already been updated by other user. Please retrieve the information again (ERR-100048)
+[18:57:36] fl-contract-inv-maint/05_KAT-059: Signed out (SSO logout)
+  ✘   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059 (2.1m)
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059 
+
+    Error: ❌ CO number not found. Message was: 
+
+       at ..\support\katalon\runtime.ts:707
+
+      705 | /** Groovy `assert cond : message`. */
+      706 | export function gAssert(cond: any, message?: any): asserts cond {
+    > 707 |   if (!cond) throw new Error(message == null ? 'Assertion failed' : String(message));
+          |                    ^
+      708 | }
+      709 |
+      710 | /** Groovy `text =~ /re/`: a java.util.regex.Matcher with find()/group(). */
+        at gAssert (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:707:20)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-059.ts:358:11)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:784:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_185250\flows-en-fl.flow-fl-contra-8d096-owledges-the-Contract-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_185250\flows-en-fl.flow-fl-contra-8d096-owledges-the-Contract-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059 
+  9 did not run
+  4 passed (4.8m)
+
+Running 14 tests using 1 worker
+
+[18:58:46] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (401ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[18:58:46] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (270ms)
+[18:58:47] fl-contract-inv-maint/05_KAT-059: SELF-HEAL KAT-059: retry once — the SIT DB still shows CO260000000006664 at 41500 Pending Supplier Acknowledgement, as before the attempt
+[18:58:48] fl-contract-inv-maint/05_KAT-059: BPM task assigned to mofflros_6; no step account matches (this step uses MOFFLROS_6)
+[18:58:48] fl-contract-inv-maint/05_KAT-059: KAT-059 Supplier acknowledges the Contract Order — role Supplier, login: account of KAT-008
+[18:58:48] fl-contract-inv-maint/05_KAT-059: Test data corrected (support/katalon/data-overrides.json): Document_Number: CO260000000005848 was created from our CR260000000005449 (KAT-057/058, process instance 15973526); its Acknowledge CO task is assigned to mofflros_6, the KAT-008 supplier account
+[18:58:48] fl-contract-inv-maint/05_KAT-059: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[18:58:48] fl-contract-inv-maint/05_KAT-059: Flow inputs: Document_Number=CO260000000006664
+[18:58:48] fl-contract-inv-maint/05_KAT-059: Flow login: the account of KAT-008
+[18:58:51] fl-contract-inv-maint/05_KAT-059: Closed the TERKINI announcement
+[18:58:54] fl-contract-inv-maint/05_KAT-059: Closed the TERKINI announcement
+[18:59:07] fl-contract-inv-maint/05_KAT-059: CO260000000006664 is already in My Task (no claim needed)
+[18:59:08] fl-contract-inv-maint/05_KAT-059: CO260000000006664 is already in My Task (no claim needed)
+[18:59:17] fl-contract-inv-maint/05_KAT-059: Message: Purchase Order CO260000000006664 is acknowledged.
+[18:59:17] fl-contract-inv-maint/05_KAT-059: ✅ Captured CO No: CO260000000006664
+[18:59:17] fl-contract-inv-maint/05_KAT-059: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Acknowledge_Contract_Order_BySupplier_2026.xlsx
+[18:59:17] fl-contract-inv-maint/05_KAT-059: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Acknowledge_Contract_Order_BySupplier_2026.xlsx
+[18:59:18] fl-contract-inv-maint/05_KAT-059: Closed the TERKINI announcement
+[18:59:18] fl-contract-inv-maint/05_KAT-059: closeBrowser (the fixture closes the browser at the end of the test)
+[18:59:18] fl-contract-inv-maint/05_KAT-059: DB status CO CO260000000006664: 41505 Pending Fulfilment / Menunggu Pemenuhan (expected 41505, OK)
+[18:59:19] fl-contract-inv-maint/05_KAT-059: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059 (32.7s)
+[18:59:20] fl-contract-inv-maint/06_KAT-060: KAT-060 Supplier submits delivery against the Contract Order — role Supplier, login: account of KAT-008
+[18:59:20] fl-contract-inv-maint/06_KAT-060: Test data corrected (support/katalon/data-overrides.json): Purchase_Number, dateValue, DeliveryAmount: Deliver against our CO260000000005848 (acknowledged by KAT-059 as the KAT-008 supplier account, which owns the CO); default date 2026-06-23 is in the past, use today (delivery window 30/10/2026-29/12/2026); full order 10 x RM30,000 = RM300,000
+[18:59:20] fl-contract-inv-maint/06_KAT-060: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[18:59:20] fl-contract-inv-maint/06_KAT-060: Live dates: dateValue=2026-11-25
+[18:59:20] fl-contract-inv-maint/06_KAT-060: Flow inputs: Purchase_Number=CO260000000006664
+[18:59:20] fl-contract-inv-maint/06_KAT-060: Flow login: the account of KAT-008
+[18:59:22] fl-contract-inv-maint/06_KAT-060: Closed the TERKINI announcement
+[18:59:25] fl-contract-inv-maint/06_KAT-060: Closed the TERKINI announcement
+[18:59:44] fl-contract-inv-maint/06_KAT-060: Purchase Order No = CO260000000006664
+[18:59:58] fl-contract-inv-maint/06_KAT-060: Message: Delivery Order DO-CO260000000006664 is successfully submitted for acknowledgment. View Delivery Order
+[18:59:58] fl-contract-inv-maint/06_KAT-060: ✅ Captured DO No: DO-CO260000000006664
+[18:59:58] fl-contract-inv-maint/06_KAT-060: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery_Contract_List.xlsx
+[18:59:58] fl-contract-inv-maint/06_KAT-060: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery_Contract_List.xlsx
+[18:59:59] fl-contract-inv-maint/06_KAT-060: Closed the TERKINI announcement
+[18:59:59] fl-contract-inv-maint/06_KAT-060: closeBrowser (the fixture closes the browser at the end of the test)
+[18:59:59] fl-contract-inv-maint/06_KAT-060: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060 (40.3s)
+[19:00:00] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP: found in the SIT database: DO 01400K003S2600004
+[19:00:00] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (871ms)
+[19:00:01] fl-contract-inv-maint/08_KAT-061: KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) — role Receiving Officer, login: officer 831221115096: BPM task "Create FRN" of 01400K003S2600004 is ASSIGNED to 831221115096 (SIT WFTASK)
+[19:00:01] fl-contract-inv-maint/08_KAT-061: Test data corrected (support/katalon/data-overrides.json): Document_Number: Receive our contract delivery DO-CO260000000005848 = DO 01400K003S2600002 (found by the user in SIT DB); its Create FRN task is assigned to officer 831221115096, which none of the test cases log in as
+[19:00:01] fl-contract-inv-maint/08_KAT-061: Using officer 831221115096 with the shared officer password (support/katalon/data-overrides.json)
+[19:00:01] fl-contract-inv-maint/08_KAT-061: Flow inputs: Document_Number=01400K003S2600004
+[19:00:01] fl-contract-inv-maint/08_KAT-061: Flow login: officer 831221115096 (shared officer password)
+[19:00:03] fl-contract-inv-maint/08_KAT-061: Closed the TERKINI announcement
+[19:00:06] fl-contract-inv-maint/08_KAT-061: Closed the TERKINI announcement
+[19:00:21] fl-contract-inv-maint/08_KAT-061: 01400K003S2600004 is already in My Task (no claim needed)
+[19:00:21] fl-contract-inv-maint/08_KAT-061: 01400K003S2600004 is already in My Task (no claim needed)
+[19:00:36] fl-contract-inv-maint/08_KAT-061: Message: Fulfilment Received Note for Products / Services FN260000000005822 is successfully submitted for approval.
+[19:00:36] fl-contract-inv-maint/08_KAT-061: ✅ Captured FN No: FN260000000005822
+[19:00:36] fl-contract-inv-maint/08_KAT-061: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Fulfillment_Received_Note.xlsx
+[19:00:36] fl-contract-inv-maint/08_KAT-061: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Fulfillment_Received_Note.xlsx
+[19:00:37] fl-contract-inv-maint/08_KAT-061: Closed the TERKINI announcement
+[19:00:37] fl-contract-inv-maint/08_KAT-061: closeBrowser (the fixture closes the browser at the end of the test)
+[19:00:38] fl-contract-inv-maint/08_KAT-061: DB status FN FN260000000005822: 43002 Pending Approval / Menunggu Kelulusan (expected 43002, OK)
+[19:00:38] fl-contract-inv-maint/08_KAT-061: Signed out (SSO logout)
+  ✓   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061 (38.0s)
+[19:00:40] fl-contract-inv-maint/09_KAT-062: KAT-062 Acknowledge Officer approves the contract FRN — role Acknowledge Officer, login: officer 180220145443: BPM task "Approve FRN" of FN260000000005822 is ASSIGNED to 180220145443 (SIT WFTASK)
+[19:00:40] fl-contract-inv-maint/09_KAT-062: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our contract FRN FN260000000005203 (from KAT-061); its Approve FRN task is assigned to officer 180220145443, which none of the test cases log in as
+[19:00:40] fl-contract-inv-maint/09_KAT-062: Using officer 180220145443 with the shared officer password (support/katalon/data-overrides.json)
+[19:00:40] fl-contract-inv-maint/09_KAT-062: Flow inputs: Document_Number=FN260000000005822
+[19:00:40] fl-contract-inv-maint/09_KAT-062: Flow login: officer 180220145443 (shared officer password)
+[19:00:42] fl-contract-inv-maint/09_KAT-062: Closed the TERKINI announcement
+[19:00:45] fl-contract-inv-maint/09_KAT-062: Closed the TERKINI announcement
+[19:01:00] fl-contract-inv-maint/09_KAT-062: FN260000000005822 is already in My Task (no claim needed)
+[19:01:01] fl-contract-inv-maint/09_KAT-062: FN260000000005822 is already in My Task (no claim needed)
+[19:01:09] fl-contract-inv-maint/09_KAT-062: Message: Fulfilment Received Note for Products / Services FN260000000005822 is acknowledged and has been sent for posting at iGFMAS.
+     Please click Alert/Notification to print the Fulfilment Received Note/Service and CoGSTR (if any).
+[19:01:09] fl-contract-inv-maint/09_KAT-062: ✅ Captured FN No: FN260000000005822
+[19:01:09] fl-contract-inv-maint/09_KAT-062: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Fulfillment_Received_Note.xlsx
+[19:01:09] fl-contract-inv-maint/09_KAT-062: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Fulfillment_Received_Note.xlsx
+[19:01:10] fl-contract-inv-maint/09_KAT-062: Closed the TERKINI announcement
+[19:01:10] fl-contract-inv-maint/09_KAT-062: closeBrowser (the fixture closes the browser at the end of the test)
+[19:01:11] fl-contract-inv-maint/09_KAT-062: DB status FN FN260000000005822: 43010 Approved / Diluluskan (expected 43010, OK)
+[19:01:12] fl-contract-inv-maint/09_KAT-062: Signed out (SSO logout)
+  ✓   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062 (33.4s)
+[19:01:13] fl-contract-inv-maint/10_KAT-063: BPM task assigned to mofflros_6; no step account matches (this step uses MOFFLROS_6)
+[19:01:13] fl-contract-inv-maint/10_KAT-063: KAT-063 Supplier creates the contract invoice — role Supplier, login: account of KAT-008
+[19:01:13] fl-contract-inv-maint/10_KAT-063: Test data corrected (support/katalon/data-overrides.json): Document_Number: Invoice our CO260000000005848 (delivered by KAT-060, FRN FN260000000005203); the invoice is raised by the CO's supplier mofflros_6, the KAT-008 account
+[19:01:13] fl-contract-inv-maint/10_KAT-063: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[19:01:13] fl-contract-inv-maint/10_KAT-063: Flow inputs: Document_Number=CO260000000006664
+[19:01:13] fl-contract-inv-maint/10_KAT-063: Flow login: the account of KAT-008
+[19:01:15] fl-contract-inv-maint/10_KAT-063: Closed the TERKINI announcement
+[19:01:18] fl-contract-inv-maint/10_KAT-063: Closed the TERKINI announcement
+[19:01:32] fl-contract-inv-maint/10_KAT-063: CO260000000006664 is already in My Task (no claim needed)
+[19:01:32] fl-contract-inv-maint/10_KAT-063: CO260000000006664 is already in My Task (no claim needed)
+[19:01:36] fl-contract-inv-maint/10_KAT-063: Purchase Order No = CO260000000006664
+[19:01:43] fl-contract-inv-maint/10_KAT-063: Message: Invoice IN-CO260000000006664 is successfully submitted.
+[19:01:43] fl-contract-inv-maint/10_KAT-063: ✅ Captured IN No: IN-CO260000000006664
+[19:01:43] fl-contract-inv-maint/10_KAT-063: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Create_Invoice_BySupplier.xlsx
+[19:01:43] fl-contract-inv-maint/10_KAT-063: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Create_Invoice_BySupplier.xlsx
+[19:01:45] fl-contract-inv-maint/10_KAT-063: Closed the TERKINI announcement
+[19:01:45] fl-contract-inv-maint/10_KAT-063: closeBrowser (the fixture closes the browser at the end of the test)
+[19:01:45] fl-contract-inv-maint/10_KAT-063: Signed out (SSO logout)
+  ✓  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063 (33.6s)
+[19:01:46] fl-contract-inv-maint/11_FL-111: BLOCKED: FL-111 needs a Invoice (IN) and this run has none. Run the earlier steps, or start with --input IN=<number>.
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+  6 skipped
+  8 passed (3.1m)
+
+Running 14 tests using 1 worker
+
+[19:02:49] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (503ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[19:02:50] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (228ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059
+[19:04:53] fl-contract-inv-maint/06_KAT-060: DB status DO 01400K003S2600004: 42005 Acknowledged / Diperakui (expected 42000, MISMATCH)
+[19:04:54] fl-contract-inv-maint/06_KAT-060: KAT-060: 01400K003S2600004 passed 42000 earlier (DB history), now at 42005; checkpoint accepted
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060 (2.1m)
+[19:04:54] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (265ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+[19:04:55] fl-contract-inv-maint/11_FL-111: BLOCKED: FL-111 needs a Invoice (IN) and this run has none. Run the earlier steps, or start with --input IN=<number>.
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+  10 skipped
+  4 passed (2.2m)
+
+Running 14 tests using 1 worker
+
+[19:05:20] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (399ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[19:05:21] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (220ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060
+[19:05:22] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (312ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+[19:05:24] fl-contract-inv-maint/11_FL-111: FL-111 Supplier updates the invoice (Fulfilment Maintenance) — role Supplier, login: account of KAT-048
+[19:05:24] fl-contract-inv-maint/11_FL-111: FL-111: login NURULAINMOF (account of KAT-048)
+[19:05:26] fl-contract-inv-maint/11_FL-111: FL-111: Logged in as NURULAINMOF
+[19:06:18] fl-contract-inv-maint/11_FL-111: Signed out (SSO logout)
+  ✘  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 (55.9s)
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 
+
+    Error: 01400K003S2600003 not found in Fulfilment Maintenance (status 44005 Submitted)
+
+       at ..\support\modules\fl\maintenance.ts:55
+
+      53 |   const row = page.locator('tr', { hasText: docNo }).locator('visible=true').last();
+      54 |   await row.waitFor({ timeout: 30_000 }).catch(() => {
+    > 55 |     throw new Error(`${docNo} not found in Fulfilment Maintenance (status ${statusText(kind, docNo)})`);
+         |           ^
+      56 |   });
+      57 |   await row.getByRole('button').last().click();
+      58 |   const menu = page.locator('.ui-menuitem-link:visible');
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:55:11
+        at openMaintenance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:54:3)
+        at maintain (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:69:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:771:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_190517\flows-en-fl.flow-fl-contra-8dbb6-ice-Fulfilment-Maintenance--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_190517\flows-en-fl.flow-fl-contra-8dbb6-ice-Fulfilment-Maintenance--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 
+  7 skipped
+  3 did not run
+  3 passed (1.0m)
+
+Running 14 tests using 1 worker
+
+[19:07:23] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (389ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[19:07:24] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (243ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060
+[19:07:24] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (263ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+[19:07:26] fl-contract-inv-maint/11_FL-111: SELF-HEAL FL-111: retry once — the SIT DB still shows 01400K003S2600003 at 44005 Submitted, as before the attempt
+[19:07:27] fl-contract-inv-maint/11_FL-111: FL-111 Supplier updates the invoice (Fulfilment Maintenance) — role Supplier, login: account of KAT-048
+[19:07:27] fl-contract-inv-maint/11_FL-111: FL-111: login NURULAINMOF (account of KAT-048)
+[19:07:29] fl-contract-inv-maint/11_FL-111: FL-111: Logged in as NURULAINMOF
+[19:08:20] fl-contract-inv-maint/11_FL-111: Signed out (SSO logout)
+  ✘  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 (55.1s)
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 
+
+    Error: 01400K003S2600003 not found in Fulfilment Maintenance (status 44005 Submitted)
+
+       at ..\support\modules\fl\maintenance.ts:55
+
+      53 |   const row = page.locator('tr', { hasText: docNo }).locator('visible=true').last();
+      54 |   await row.waitFor({ timeout: 30_000 }).catch(() => {
+    > 55 |     throw new Error(`${docNo} not found in Fulfilment Maintenance (status ${statusText(kind, docNo)})`);
+         |           ^
+      56 |   });
+      57 |   await row.getByRole('button').last().click();
+      58 |   const menu = page.locator('.ui-menuitem-link:visible');
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:55:11
+        at openMaintenance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:54:3)
+        at maintain (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:69:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:771:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_190720\flows-en-fl.flow-fl-contra-8dbb6-ice-Fulfilment-Maintenance--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_190720\flows-en-fl.flow-fl-contra-8dbb6-ice-Fulfilment-Maintenance--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 
+  7 skipped
+  3 did not run
+  3 passed (1.0m)
+
+Running 14 tests using 1 worker
+
+[19:09:32] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (404ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[19:09:32] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (282ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060
+[19:09:33] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (224ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+[19:09:37] fl-contract-inv-maint/11_FL-111: FL-111 Supplier updates the invoice (Fulfilment Maintenance) — role Supplier, login: account of KAT-048
+[19:09:37] fl-contract-inv-maint/11_FL-111: FL-111: login NURULAINMOF (account of KAT-048)
+[19:09:40] fl-contract-inv-maint/11_FL-111: FL-111: Logged in as NURULAINMOF
+[19:10:32] fl-contract-inv-maint/11_FL-111: Signed out (SSO logout)
+  ✘  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 (58.3s)
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 
+
+    Error: 01400K003S2600003 not found in Fulfilment Maintenance (status 44005 Submitted)
+
+       at ..\support\modules\fl\maintenance.ts:55
+
+      53 |   const row = page.locator('tr', { hasText: docNo }).locator('visible=true').last();
+      54 |   await row.waitFor({ timeout: 30_000 }).catch(() => {
+    > 55 |     throw new Error(`${docNo} not found in Fulfilment Maintenance (status ${statusText(kind, docNo)})`);
+         |           ^
+      56 |   });
+      57 |   await row.getByRole('button').last().click();
+      58 |   const menu = page.locator('.ui-menuitem-link:visible');
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:55:11
+        at openMaintenance (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:54:3)
+        at maintain (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\fl\maintenance.ts:69:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_190925\flows-en-fl.flow-fl-contra-8dbb6-ice-Fulfilment-Maintenance--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_190925\flows-en-fl.flow-fl-contra-8dbb6-ice-Fulfilment-Maintenance--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 
+  7 skipped
+  3 did not run
+  3 passed (1.1m)
+
+Running 14 tests using 1 worker
+
+[19:11:37] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (405ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[19:11:38] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (244ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060
+[19:11:38] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (299ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+[19:11:40] fl-contract-inv-maint/11_FL-111: BLOCKED: FL-111 failed in an earlier attempt (UNKNOWN (low): no rule matched; read the error, screenshot and trace). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract-inv-maint_20261125-185249 --step FL-111
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111
+  -  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112
+  -  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113
+  -  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114
+
+  11 skipped
+  3 passed (7.3s)
+
+Running 14 tests using 1 worker
+
+[19:12:53] fl-contract-inv-maint/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:52:53+08:00 (LA=LA260000000004233)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/01_CT_LOOKUP @gate-CT_LOOKUP (402ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/03_KAT-058 @KAT-058
+[19:12:54] fl-contract-inv-maint/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T18:55:32+08:00 (CO=CO260000000006664)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/04_CO_LOOKUP @gate-CO_LOOKUP (226ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/06_KAT-060 @KAT-060
+[19:12:55] fl-contract-inv-maint/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T19:00:00+08:00 (DO=01400K003S2600004)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/07_DO_LOOKUP @gate-DO_LOOKUP (254ms)
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/10_KAT-063 @KAT-063
+[19:12:57] fl-contract-inv-maint/11_FL-111: FL-111 Supplier updates the invoice (Fulfilment Maintenance) — role Supplier, login: account of KAT-008 (given for this run)
+[19:12:57] fl-contract-inv-maint/11_FL-111: FL-111: login MOFFLROS_6 (account of KAT-008)
+[19:12:58] fl-contract-inv-maint/11_FL-111: FL-111: Logged in as MOFFLROS_6
+[19:13:13] fl-contract-inv-maint/11_FL-111: Closed the TERKINI announcement
+[19:13:14] fl-contract-inv-maint/11_FL-111: DB status IN 01400K003S2600003: 44015 Pending Modification Approval / Menunggu Kelulusan Kemaskini (expected 44015, OK)
+[19:13:14] fl-contract-inv-maint/11_FL-111: Signed out (SSO logout)
+  ✓  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 11 FL-111 Supplier updates the invoice (Fulfilment Maintenance) @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/11_FL-111 @FL-111 (18.4s)
+[19:13:16] fl-contract-inv-maint/12_FL-112: FL-112 FL Approver approves the invoice modification — role FL Approver, login: officer 690127065209: BPM task "ACK Modified Invoice" of 01400K003S2600003 is ASSIGNED to 690127065209 (SIT WFTASK)
+[19:13:16] fl-contract-inv-maint/12_FL-112: FL-112: login 690127065209 (BPM assignee)
+[19:13:17] fl-contract-inv-maint/12_FL-112: FL-112: Logged in as 690127065209
+[19:13:21] fl-contract-inv-maint/12_FL-112: FL-112: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[19:13:27] fl-contract-inv-maint/12_FL-112: Closed the TERKINI announcement
+[19:13:27] fl-contract-inv-maint/12_FL-112: DB status IN 01400K003S2600003: 44005 Submitted / Diserahkan (expected 44005, OK)
+[19:13:28] fl-contract-inv-maint/12_FL-112: Signed out (SSO logout)
+  ✓  12 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 12 FL-112 FL Approver approves the invoice modification @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/12_FL-112 @FL-112 (13.8s)
+[19:13:29] fl-contract-inv-maint/13_FL-113: FL-113 Supplier cancels the invoice — role Supplier, login: account of KAT-008 (given for this run)
+[19:13:29] fl-contract-inv-maint/13_FL-113: FL-113: login MOFFLROS_6 (account of KAT-008)
+[19:13:30] fl-contract-inv-maint/13_FL-113: FL-113: Logged in as MOFFLROS_6
+[19:13:35] fl-contract-inv-maint/13_FL-113: FL-113: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[19:13:44] fl-contract-inv-maint/13_FL-113: DB status IN 01400K003S2600003: 44010 Pending Cancellation Approval / Menunggu Kelulusan Pembatalan (expected 44010, OK)
+[19:13:45] fl-contract-inv-maint/13_FL-113: Signed out (SSO logout)
+  ✓  13 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 13 FL-113 Supplier cancels the invoice @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/13_FL-113 @FL-113 (16.7s)
+[19:13:46] fl-contract-inv-maint/14_FL-114: FL-114 FL Approver approves the invoice cancellation — role FL Approver, login: officer 690127065209: BPM task "Review Cancel Invoice" of 01400K003S2600003 is ASSIGNED to 690127065209 (SIT WFTASK)
+[19:13:46] fl-contract-inv-maint/14_FL-114: FL-114: login 690127065209 (BPM assignee)
+[19:13:47] fl-contract-inv-maint/14_FL-114: FL-114: Logged in as 690127065209
+[19:13:51] fl-contract-inv-maint/14_FL-114: FL-114: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[19:13:56] fl-contract-inv-maint/14_FL-114: Closed the TERKINI announcement
+[19:13:57] fl-contract-inv-maint/14_FL-114: DB status IN 01400K003S2600003: 44900 Cancelled / Dibatalkan (expected 44900, OK)
+[19:13:57] fl-contract-inv-maint/14_FL-114: Signed out (SSO logout)
+  ✓  14 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract-inv-maint [EN] Contract: invoice update and cancel › 14 FL-114 FL Approver approves the invoice cancellation @flow-fl-contract-inv-maint @module-fl @lang-en @FLOW @fl-contract-inv-maint/14_FL-114 @FL-114 (12.6s)
+
+  7 skipped
+  7 passed (1.1m)

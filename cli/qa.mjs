@@ -417,9 +417,10 @@ function cmdGate(args) {
   checkDocs(values);
   for (const [k, v] of Object.entries(officers)) {
     if (!reg.steps[k]) die(`Unknown step ${k}`);
-    if (!/^[\w.]+$/.test(v)) die(`Officer login ID "${v}" looks wrong`);
+    // a login ID, or account:KAT-0xx = log in with that Katalon step's account (its own password), 2026-11-25
+    if (!/^[\w.]+$/.test(v) && !/^account:KAT-\d{3}$/.test(v)) die(`Officer login ID "${v}" looks wrong (a login ID, or account:KAT-0xx)`);
     st.officers[k] = v;
-    console.log(green(`✔ ${k} will log in as officer ${v}`));
+    console.log(green(`✔ ${k} will log in as ${v.startsWith('account:') ? `the ${v.slice(8)} account` : `officer ${v}`}`));
   }
   if (args.gate) {
     const g = reg.gates[args.gate];

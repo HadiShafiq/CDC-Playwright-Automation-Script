@@ -20,7 +20,7 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | CD | 3 | 0 | 0 | 0 | 0 | 3 |
 | CM | 28 | 0 | 0 | 13 | 1 | 14 |
 | CT | 210 | 4 | 0 | 172 | 11 | 23 |
-| FL | 165 | 15 | 15 | 65 | 44 | 26 |
+| FL | 165 | 19 | 11 | 65 | 44 | 26 |
 | PM | 2 | 2 | 0 | 0 | 0 | 0 |
 | PP | 14 | 0 | 0 | 14 | 0 | 0 |
 | SC | 308 | 25 | 0 | 166 | 53 | 64 |
@@ -364,13 +364,13 @@ Every status has a spec in `tests/data-prep/en/by-status/<module>/<doc type>/<st
 | FN | 43911 | Closed Due To AP59 | Ditutup disebabkan AP59 | 44 (2026-10-16) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/FN/43911-Closed-Due-To-AP59.spec.ts) |
 | FN | 43912 | Cancelled Due To Ministry Restructuring | Dibatalkan Disebabkan Penyusunan Semula Kementerian | 20 (2018-09-27) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/FN/43912-Cancelled-Due-To-Ministry-Restructuring.spec.ts) |
 | IN | 44000 | Pending Invoice Creation | Menunggu Penciptaan Invois | 841 (2026-10-16) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/fl/IN/44000-Pending-Invoice-Creation.spec.ts) |
-| IN | 44005 | Submitted | Diserahkan | 3664 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/IN/44005-Submitted.spec.ts) |
-| IN | 44010 | Pending Cancellation Approval | Menunggu Kelulusan Pembatalan | 159 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/IN/44010-Pending-Cancellation-Approval.spec.ts) |
-| IN | 44015 | Pending Modification Approval | Menunggu Kelulusan Kemaskini | 96 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/IN/44015-Pending-Modification-Approval.spec.ts) |
+| IN | 44005 | Submitted | Diserahkan | 3664 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/IN/44005-Submitted.spec.ts) |
+| IN | 44010 | Pending Cancellation Approval | Menunggu Kelulusan Pembatalan | 159 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/IN/44010-Pending-Cancellation-Approval.spec.ts) |
+| IN | 44015 | Pending Modification Approval | Menunggu Kelulusan Kemaskini | 96 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/IN/44015-Pending-Modification-Approval.spec.ts) |
 | IN | 44017 | Pending Revision (Invoice Cancellation) | Menunggu Kaji Semula (Pembatalan Invois) | 299 (2026-10-15) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/fl/IN/44017-Pending-Revision-Invoice-Cancellation.spec.ts) |
 | IN | 44100 | Awaiting iGFMAS Response | Menunggu antaramuka dengan iGFMAS | 0 | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/IN/44100-Awaiting-iGFMAS-Response.spec.ts) |
 | IN | 44130 | Pending Cancellation Submission | Menunggu Penyerahan Pembatalan | 11 (2026-03-26) | UI_NO_FLOW | [simulate](../tests/data-prep/en/by-status/fl/IN/44130-Pending-Cancellation-Submission.spec.ts) |
-| IN | 44900 | Cancelled | Dibatalkan | 16371 (2026-11-23) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/IN/44900-Cancelled.spec.ts) |
+| IN | 44900 | Cancelled | Dibatalkan | 16371 (2026-11-23) | FLOW | [flow](../tests/data-prep/en/by-status/fl/IN/44900-Cancelled.spec.ts) |
 | IN | 44910 | Closed Due To AP59 | Ditutup disebabkan AP59 | 87 (2026-10-16) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/IN/44910-Closed-Due-To-AP59.spec.ts) |
 | IN | 44911 | Cancelled by Year End Process | Dibatalkan oleh Proses Akhir Tahun | 36 (2021-10-26) | SYSTEM | [simulate](../tests/data-prep/en/by-status/fl/IN/44911-Cancelled-by-Year-End-Process.spec.ts) |
 | PA | 46000 | Pending Payment Match | Menunggu Padanan Bayaran | 653 (2026-10-15) | FLOW_MANUAL | [flow](../tests/data-prep/en/by-status/fl/PA/46000-Pending-Payment-Match.spec.ts) |

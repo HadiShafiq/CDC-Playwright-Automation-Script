@@ -29,6 +29,8 @@ export function docPattern(t: DocType): RegExp {
   if (t === 'RC') return /\bRN[CE]\d{6}-\d{4}\b/g;
   // Credit notes: CN26… or the iGFMAS form C0251152801170008 (SIT FL_ADJUSTMENT.DOC_NO)
   if (t === 'CN') return /\b(?:CN\d{12,15}|C\d{16})\b/g;
+  // Invoices: IN26… or the supplier's own number in the DO shape (01400K003S2600003, SIT FL_INVOICE.INVOICE_NO 2026-11-25)
+  if (t === 'IN') return /\b(?:IN\d{12,15}|\d{5}[A-Z]\d{3}[A-Z]\d{7}|\d{17})\b/g;
   return new RegExp(`\\b${t}\\d{12,15}\\b`, 'g');
 }
 

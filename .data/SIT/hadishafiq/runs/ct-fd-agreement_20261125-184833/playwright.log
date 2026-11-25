@@ -1,0 +1,96 @@
+
+Running 6 tests using 1 worker
+
+[18:48:40] ct-fd-agreement/01_LA_LOOKUP: Gate LA_LOOKUP done by hadishafiq (--input) at 2026-11-25T18:48:40+08:00 (LA=LA260000000004233)
+  ✓  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 01 GATE LA_LOOKUP Letter of Acceptance to build on @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/01_LA_LOOKUP @gate-LA_LOOKUP (326ms)
+[18:48:42] ct-fd-agreement/02_KAT-040: KAT-040 Submit Fulfilment Details (FD) for a verified LOA — role Contract Administrator, login: Katalon default account of the step
+[18:48:42] ct-fd-agreement/02_KAT-040: Test data corrected (support/katalon/data-overrides.json): dateValue, tickPerformanceBond: Performance Bond dates 2026-06-15 are in the past (datepicker does not offer them); use 180 days from the run date; tickPerformanceBond 2: with 1 the script ticks Performance Bond Deferment but adds no deferment history, so Approve FD fails (ERR-750071)
+[18:48:42] ct-fd-agreement/02_KAT-040: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:48:42] ct-fd-agreement/02_KAT-040: Live dates: dateValue=2027-05-24
+[18:48:42] ct-fd-agreement/02_KAT-040: Flow inputs: Document_Number=LA260000000004233
+[18:48:44] ct-fd-agreement/02_KAT-040: Closed the TERKINI announcement
+[18:48:47] ct-fd-agreement/02_KAT-040: Closed the TERKINI announcement
+[18:49:05] ct-fd-agreement/02_KAT-040: Claimed group task LA260000000004233 (moved to My Task)
+[18:49:08] ct-fd-agreement/02_KAT-040: LA260000000004233 is already in My Task (no claim needed)
+[18:49:13] ct-fd-agreement/02_KAT-040: Contract No = CT260000000002308
+[18:49:13] ct-fd-agreement/02_KAT-040: Physical Contract No field = textarea
+[18:49:14] ct-fd-agreement/02_KAT-040: Using dperiod field
+[18:49:31] ct-fd-agreement/02_KAT-040: Loop 1 Final PTJ Code = 42240201
+[18:49:36] ct-fd-agreement/02_KAT-040: Total Agency checkbox found = 5
+[18:49:36] ct-fd-agreement/02_KAT-040: Checkbox row 0 | isSelected = false | checked = null | aria-checked = null
+[18:49:36] ct-fd-agreement/02_KAT-040: Checkbox row 1 | isSelected = false | checked = null | aria-checked = null
+[18:49:36] ct-fd-agreement/02_KAT-040: Checkbox row 2 | isSelected = false | checked = null | aria-checked = null
+[18:49:36] ct-fd-agreement/02_KAT-040: Checkbox row 3 | isSelected = false | checked = null | aria-checked = null
+[18:49:36] ct-fd-agreement/02_KAT-040: Checkbox row 4 | isSelected = true | checked = checked | aria-checked = null
+[18:49:36] ct-fd-agreement/02_KAT-040: Ticked checkbox found at row 4
+[18:49:36] ct-fd-agreement/02_KAT-040: Agency checkbox ticked = true
+[18:49:36] ct-fd-agreement/02_KAT-040: File Ref Agency = File Ref CT260000000002308
+[18:49:43] ct-fd-agreement/02_KAT-040: Amount No = 96,000.00
+[18:49:43] ct-fd-agreement/02_KAT-040: 96,000.00
+[18:50:03] ct-fd-agreement/02_KAT-040: Skip: menu not available -> Object Repository/FD and Agreement/Side Menu/FD Application/Schedule Side Menu
+[18:50:05] ct-fd-agreement/02_KAT-040: Approver successfully selected: Shamsul Azri Bin Abu Bakar
+[18:50:11] ct-fd-agreement/02_KAT-040: Message: Fulfilment Details Creation CT260000000002308 is successfully submitted to Contract Approver.
+[18:50:11] ct-fd-agreement/02_KAT-040: ✅ Captured CT No: CT260000000002308
+[18:50:11] ct-fd-agreement/02_KAT-040: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Submission__DLOA_AP_201_2026.xlsx
+[18:50:11] ct-fd-agreement/02_KAT-040: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Submission__DLOA_AP_201_2026.xlsx
+[18:50:12] ct-fd-agreement/02_KAT-040: Closed the TERKINI announcement
+[18:50:12] ct-fd-agreement/02_KAT-040: closeBrowser (the fixture closes the browser at the end of the test)
+[18:50:13] ct-fd-agreement/02_KAT-040: DB status CT:FD CT260000000002308: 50150 Pending Fulfilment Details Approval / Menunggu Kelulusan Maklumat Pemenuhan (expected 50150, OK)
+[18:50:13] ct-fd-agreement/02_KAT-040: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 02 KAT-040 Submit Fulfilment Details (FD) for a verified LOA @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/02_KAT-040 @KAT-040 (1.6m)
+[18:50:15] ct-fd-agreement/03_KAT-041: KAT-041 Approve Fulfilment Details — role Contract Approver, login: Katalon default account of the step
+[18:50:15] ct-fd-agreement/03_KAT-041: Data file "Approve_FD.xlsx" (Data Files/Fulfillment - FD/Approval_FD) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:50:15] ct-fd-agreement/03_KAT-041: Flow inputs: Document_Number=CT260000000002308
+[18:50:17] ct-fd-agreement/03_KAT-041: Closed the TERKINI announcement
+[18:50:20] ct-fd-agreement/03_KAT-041: Closed the TERKINI announcement
+[18:50:34] ct-fd-agreement/03_KAT-041: CT260000000002308 is already in My Task (no claim needed)
+[18:50:37] ct-fd-agreement/03_KAT-041: CT260000000002308 is already in My Task (no claim needed)
+[18:50:48] ct-fd-agreement/03_KAT-041: Message: Fulfilment Details Creation CT260000000002308 is approved.
+[18:50:48] ct-fd-agreement/03_KAT-041: ✅ Captured CT No: CT260000000002308
+[18:50:48] ct-fd-agreement/03_KAT-041: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Approver_201_2026.xlsx
+[18:50:48] ct-fd-agreement/03_KAT-041: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Approver_201_2026.xlsx
+[18:50:49] ct-fd-agreement/03_KAT-041: Closed the TERKINI announcement
+[18:50:49] ct-fd-agreement/03_KAT-041: closeBrowser (the fixture closes the browser at the end of the test)
+[18:50:50] ct-fd-agreement/03_KAT-041: DB status CT:FD CT260000000002308: 50300 Fulfilment Details Approved / Maklumat Pemenuhan Diluluskan (expected 50300, OK)
+[18:50:50] ct-fd-agreement/03_KAT-041: Signed out (SSO logout)
+  ✓  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 03 KAT-041 Approve Fulfilment Details @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/03_KAT-041 @KAT-041 (37.1s)
+[18:50:52] ct-fd-agreement/04_KAT-042: KAT-042 Submit Agreement — role Contract Administrator, login: Katalon default account of the step
+[18:50:52] ct-fd-agreement/04_KAT-042: Test data corrected (support/katalon/data-overrides.json): dateValue: Agreement date 2026-10-14 is not selectable (before the LOA date); use the run date
+[18:50:52] ct-fd-agreement/04_KAT-042: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:50:52] ct-fd-agreement/04_KAT-042: Live dates: dateValue=2026-11-25
+[18:50:52] ct-fd-agreement/04_KAT-042: Flow inputs: Document_Number=LA260000000004233
+[18:50:54] ct-fd-agreement/04_KAT-042: Closed the TERKINI announcement
+[18:50:57] ct-fd-agreement/04_KAT-042: Closed the TERKINI announcement
+[18:51:11] ct-fd-agreement/04_KAT-042: LA260000000004233 is already in My Task (no claim needed)
+[18:51:13] ct-fd-agreement/04_KAT-042: LA260000000004233 is already in My Task (no claim needed)
+[18:51:18] ct-fd-agreement/04_KAT-042: Contract No = CT260000000002308
+[18:51:18] ct-fd-agreement/04_KAT-042: Physical Contract No field = textarea
+[18:51:51] ct-fd-agreement/04_KAT-042: Message: Agreement CT260000000002308 is successfully submitted to Contract Approver.
+[18:51:51] ct-fd-agreement/04_KAT-042: ✅ Captured CT No: CT260000000002308
+[18:51:52] ct-fd-agreement/04_KAT-042: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Submission_Agreement_AP_201_2026.xlsx
+[18:51:52] ct-fd-agreement/04_KAT-042: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Submission_Agreement_AP_201_2026.xlsx
+[18:51:53] ct-fd-agreement/04_KAT-042: Closed the TERKINI announcement
+[18:51:53] ct-fd-agreement/04_KAT-042: closeBrowser (the fixture closes the browser at the end of the test)
+[18:51:53] ct-fd-agreement/04_KAT-042: DB status CT:AC CT260000000002308: 56800 Pending Agreement Approval / Menunggu Kelulusan Perjanjian (expected 56800, OK)
+[18:51:54] ct-fd-agreement/04_KAT-042: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 04 KAT-042 Submit Agreement @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/04_KAT-042 @KAT-042 (1.1m)
+[18:51:55] ct-fd-agreement/05_KAT-043: KAT-043 Approve Agreement — role Contract Approver, login: Katalon default account of the step
+[18:51:55] ct-fd-agreement/05_KAT-043: Data file "Agreement_Approval.xlsx" (Data Files/Agreement/Approval_Agreement) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[18:51:55] ct-fd-agreement/05_KAT-043: Flow inputs: Document_Number=CT260000000002308
+[18:51:57] ct-fd-agreement/05_KAT-043: Closed the TERKINI announcement
+[18:52:00] ct-fd-agreement/05_KAT-043: Closed the TERKINI announcement
+[18:52:14] ct-fd-agreement/05_KAT-043: CT260000000002308 is already in My Task (no claim needed)
+[18:52:17] ct-fd-agreement/05_KAT-043: CT260000000002308 is already in My Task (no claim needed)
+[18:52:30] ct-fd-agreement/05_KAT-043: Message: Agreement CT260000000002308 is approved.
+[18:52:30] ct-fd-agreement/05_KAT-043: ✅ Captured CT No: CT260000000002308
+[18:52:30] ct-fd-agreement/05_KAT-043: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Agreement_Approver_201_2026.xlsx
+[18:52:30] ct-fd-agreement/05_KAT-043: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/FD_Agreement_Approver_201_2026.xlsx
+[18:52:31] ct-fd-agreement/05_KAT-043: Closed the TERKINI announcement
+[18:52:31] ct-fd-agreement/05_KAT-043: closeBrowser (the fixture closes the browser at the end of the test)
+[18:52:31] ct-fd-agreement/05_KAT-043: DB status CT:AC CT260000000002308: 56600 Agreement Completed / Perjanjian Selesai (expected 56600, OK)
+[18:52:32] ct-fd-agreement/05_KAT-043: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 05 KAT-043 Approve Agreement @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/05_KAT-043 @KAT-043 (38.1s)
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-fd-agreement [EN] Contract from a verified LOA: FD submit/approve, Agreement submit/approve, Amendment › 06 KAT-045 Contract Amendment with Supplement: fill the form (the Katalon script never submits) @flow-ct-fd-agreement @module-ct @lang-en @FLOW @ct-fd-agreement/06_KAT-045 @KAT-045
+
+  1 skipped
+  5 passed (4.0m)

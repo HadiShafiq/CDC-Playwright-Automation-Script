@@ -1,0 +1,189 @@
+{
+  "flowRunId": "ct-fd-agreement_20261125-184833",
+  "flowId": "ct-fd-agreement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T18:48:33+08:00",
+  "updatedAt": "2026-11-25T18:52:31+08:00",
+  "from": null,
+  "to": "KAT-043",
+  "docs": {
+    "LA": "LA260000000004233",
+    "CT": "CT260000000002308"
+  },
+  "officers": {},
+  "gates": {
+    "LA_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-25T18:48:40+08:00",
+      "values": {
+        "LA": "LA260000000004233"
+      }
+    }
+  },
+  "steps": {
+    "KAT-040": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_184833",
+          "startedAt": "2026-11-25T18:48:41+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-25_184833",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002308",
+            "statusId": 50050
+          },
+          "endedAt": "2026-11-25T18:50:13+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Details Creation CT260000000002308 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002308"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "FD_SUBMITTED",
+      "db": {
+        "kind": "CT:FD",
+        "docNo": "CT260000000002308",
+        "expected": 50150,
+        "statusId": 50150,
+        "en": "Pending Fulfilment Details Approval",
+        "bm": "Menunggu Kelulusan Maklumat Pemenuhan",
+        "at": "2026-11-25 18:50:07",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:50:13+08:00"
+      }
+    },
+    "KAT-041": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_184833",
+          "startedAt": "2026-11-25T18:50:14+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\03_KAT-041\\2026-11-25_184833",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002308",
+            "statusId": 50150
+          },
+          "endedAt": "2026-11-25T18:50:50+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Details Creation CT260000000002308 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002308"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "FD_APPROVED",
+      "db": {
+        "kind": "CT:FD",
+        "docNo": "CT260000000002308",
+        "expected": 50300,
+        "statusId": 50300,
+        "en": "Fulfilment Details Approved",
+        "bm": "Maklumat Pemenuhan Diluluskan",
+        "at": "2026-11-25 18:50:45",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:50:50+08:00"
+      }
+    },
+    "KAT-042": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_184833",
+          "startedAt": "2026-11-25T18:50:51+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\04_KAT-042\\2026-11-25_184833",
+          "dbBefore": {
+            "kind": "CT:AC",
+            "docNo": "CT260000000002308",
+            "statusId": 56750
+          },
+          "endedAt": "2026-11-25T18:51:53+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agreement CT260000000002308 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002308"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "AGREEMENT_SUBMITTED",
+      "db": {
+        "kind": "CT:AC",
+        "docNo": "CT260000000002308",
+        "expected": 56800,
+        "statusId": 56800,
+        "en": "Pending Agreement Approval",
+        "bm": "Menunggu Kelulusan Perjanjian",
+        "at": "2026-11-25 18:51:47",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:51:53+08:00"
+      }
+    },
+    "KAT-043": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_184833",
+          "startedAt": "2026-11-25T18:51:55+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\05_KAT-043\\2026-11-25_184833",
+          "dbBefore": {
+            "kind": "CT:AC",
+            "docNo": "CT260000000002308",
+            "statusId": 56800
+          },
+          "endedAt": "2026-11-25T18:52:31+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agreement CT260000000002308 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002308"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "AGREEMENT_APPROVED",
+      "db": {
+        "kind": "CT:AC",
+        "docNo": "CT260000000002308",
+        "expected": 56600,
+        "statusId": 56600,
+        "en": "Agreement Completed",
+        "bm": "Perjanjian Selesai",
+        "at": "2026-11-25 18:52:25",
+        "ok": true,
+        "checkedAt": "2026-11-25T18:52:31+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

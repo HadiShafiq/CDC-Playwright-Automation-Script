@@ -2165,21 +2165,21 @@
   "FL|IN|44005": {
    "spec": "tests/data-prep/en/by-status/fl/IN/44005-Submitted.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-inv-maint",
+   "flow": "fl-contract-inv-maint",
    "upTo": "FL-112",
    "manual": false
   },
   "FL|IN|44010": {
    "spec": "tests/data-prep/en/by-status/fl/IN/44010-Pending-Cancellation-Approval.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-inv-maint",
+   "flow": "fl-contract-inv-maint",
    "upTo": "FL-113",
    "manual": false
   },
   "FL|IN|44015": {
    "spec": "tests/data-prep/en/by-status/fl/IN/44015-Pending-Modification-Approval.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-inv-maint",
+   "flow": "fl-contract-inv-maint",
    "upTo": "FL-111",
    "manual": false
   },
@@ -2207,7 +2207,7 @@
   "FL|IN|44900": {
    "spec": "tests/data-prep/en/by-status/fl/IN/44900-Cancelled.spec.ts",
    "method": "flow",
-   "flow": "fl-noncontract-inv-maint",
+   "flow": "fl-contract-inv-maint",
    "upTo": "FL-114",
    "manual": false
   },

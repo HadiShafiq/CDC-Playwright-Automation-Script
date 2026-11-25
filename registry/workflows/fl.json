@@ -827,14 +827,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: invoice 01400K003S2600003 44005→44015 (fl-contract-inv-maint_20261125-185249)",
         "db": {
           "kind": "IN",
           "statusId": 44015,
           "en": "Pending Modification Approval",
           "bm": "Menunggu Kelulusan Kemaskini",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -861,14 +860,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: invoice 01400K003S2600003 44015→44005 (fl-contract-inv-maint_20261125-185249)",
         "db": {
           "kind": "IN",
           "statusId": 44005,
           "en": "Submitted",
           "bm": "Diserahkan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -897,14 +895,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: invoice 01400K003S2600003 44005→44010 (fl-contract-inv-maint_20261125-185249)",
         "db": {
           "kind": "IN",
           "statusId": 44010,
           "en": "Pending Cancellation Approval",
           "bm": "Menunggu Kelulusan Pembatalan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -931,14 +928,13 @@
           "en": null,
           "bm": null
         },
-        "verification": "documentation",
-        "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only",
+        "verification": "execution",
+        "evidence": "SIT 2026-11-25: invoice 01400K003S2600003 44010→44900 (fl-contract-inv-maint_20261125-185249)",
         "db": {
           "kind": "IN",
           "statusId": 44900,
           "en": "Cancelled",
           "bm": "Dibatalkan",
-          "observeOnly": true,
           "evidence": "fl-data skill (FL fullfilment and PM.zip), verified end to end on DEV 2026-11-17/19; the same status IDs exist on SIT (catalogue). Not yet observed on SIT with our data: observe-only"
         }
       }
@@ -1188,8 +1184,8 @@
       "id": "fl-contract-inv-maint",
       "submodule": "maintenance",
       "title": "Contract: invoice update and cancel",
-      "verification": "documentation",
-      "notes": "fl-data cr_inv_maint (DEV); CO back to 41515.",
+      "verification": "execution",
+      "notes": "fl-data cr_inv_maint (DEV); CO back to 41515. VERIFIED on SIT 2026-11-25 (fl-contract-inv-maint_20261125-185249): LA260000000004233 → CT260000000002308 → CR260000000006066 (iGFMAS 40800) → CO260000000006664 → DO 01400K003S2600004 → FN260000000005822 → invoice 01400K003S2600003 44015 → 44005 → 44010 → 44900. The invoice belongs to the LOA supplier: --officer FL-111/113=account:KAT-008; KAT-063 does not output the invoice number (from FL_INVOICE).",
       "steps": [
         {
           "gate": "CT_LOOKUP"
