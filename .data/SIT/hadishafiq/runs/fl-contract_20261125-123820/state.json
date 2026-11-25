@@ -1,0 +1,59 @@
+{
+  "flowRunId": "fl-contract_20261125-123820",
+  "flowId": "fl-contract",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T12:38:20+08:00",
+  "updatedAt": "2026-11-25T12:41:51+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004240",
+    "CT": "CT260000000002315"
+  },
+  "officers": {
+    "KAT-057": "131020145098"
+  },
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-25T12:38:29+08:00",
+      "values": {
+        "LA": "LA260000000004240"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_123821",
+          "startedAt": "2026-11-25T12:38:29+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-25_123821",
+          "endedAt": "2026-11-25T12:40:43+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "officer 131020145098 (given for this run)"
+    }
+  },
+  "allowRerun": [],
+  "vars": {
+    "KAT-057": {
+      "ddItemType": "1",
+      "ItemCode": "44121703",
+      "Address_Input": "KOMPLEKS KEM KEWANGAN"
+    }
+  },
+  "status": "blocked",
+  "blockedReason": "KAT-057 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract_20261125-123820 --step KAT-057"
+}

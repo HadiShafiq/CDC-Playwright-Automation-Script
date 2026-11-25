@@ -1,0 +1,338 @@
+
+Running 11 tests using 1 worker
+
+[12:45:17] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:45:17+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (407ms)
+[12:45:17] fl-contract/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: officer 131020145098 (given for this run)
+[12:45:17] fl-contract/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[12:45:17] fl-contract/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[12:45:17] fl-contract/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[12:45:17] fl-contract/02_KAT-057: Flow inputs: ddItemType=1, ItemCode=44121703, Address_Input=Address Name 1234, ContractList=LA260000000004240
+[12:45:17] fl-contract/02_KAT-057: Flow login: officer 131020145098 (shared officer password)
+[12:45:25] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:45:28] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:46:05] fl-contract/02_KAT-057: Tick row #1
+[12:46:19] fl-contract/02_KAT-057: Final Description Search = B0
+[12:46:44] fl-contract/02_KAT-057: Message: Contract Request CR260000000006060 is successfully submitted.
+[12:46:44] fl-contract/02_KAT-057: ✅ Captured CR No: CR260000000006060
+[12:46:44] fl-contract/02_KAT-057: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[12:46:44] fl-contract/02_KAT-057: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[12:46:45] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:46:45] fl-contract/02_KAT-057: closeBrowser (the fixture closes the browser at the end of the test)
+[12:46:46] fl-contract/02_KAT-057: DB status CR CR260000000006060: 40510 Pending Approval / Menunggu Kelulusan (expected 40510, OK)
+[12:46:46] fl-contract/02_KAT-057: Signed out (SSO logout)
+  ✓   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 (1.5m)
+[12:46:48] fl-contract/03_KAT-058: KAT-058 Approve Contract Request (sent to iGFMAS) — role Approver, login: Katalon default account of the step
+[12:46:48] fl-contract/03_KAT-058: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[12:46:48] fl-contract/03_KAT-058: Flow inputs: Document_Number=CR260000000006060
+[12:46:50] fl-contract/03_KAT-058: Closed the TERKINI announcement
+[12:47:02] fl-contract/03_KAT-058: Closed the TERKINI announcement
+[12:47:17] fl-contract/03_KAT-058: CR260000000006060 is already in My Task (no claim needed)
+[12:47:17] fl-contract/03_KAT-058: CR260000000006060 is already in My Task (no claim needed)
+[12:47:27] fl-contract/03_KAT-058: Message: Contract Request CR260000000006060 is approved and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Purchase Order document.
+[12:47:27] fl-contract/03_KAT-058: ✅ Captured CR No: CR260000000006060
+[12:47:27] fl-contract/03_KAT-058: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[12:47:27] fl-contract/03_KAT-058: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_For_Contract_List(Contract_Request).xlsx
+[12:47:28] fl-contract/03_KAT-058: Closed the TERKINI announcement
+[12:47:28] fl-contract/03_KAT-058: closeBrowser (the fixture closes the browser at the end of the test)
+[12:48:08] fl-contract/03_KAT-058: DB status CR CR260000000006060: 40800 Contract Request Approved / Permintaan Kontrak Diluluskan (expected 40800, OK)
+[12:48:09] fl-contract/03_KAT-058: Signed out (SSO logout)
+  ✓   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058 (1.4m)
+[12:48:09] fl-contract/04_CO_LOOKUP: Gate CO_LOOKUP: found in the SIT database: CO CO260000000006658
+[12:48:09] fl-contract/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T12:48:09+08:00 (CO=CO260000000006658)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP (847ms)
+[12:48:10] fl-contract/05_KAT-059: BPM task assigned to firstallied123, firstallied1234, firstallied123-001, 357-02088811-5469; no step account matches (this step uses MOFFLROS_6)
+[12:48:11] fl-contract/05_KAT-059: KAT-059 Supplier acknowledges the Contract Order — role Supplier, login: account of KAT-008
+[12:48:11] fl-contract/05_KAT-059: Test data corrected (support/katalon/data-overrides.json): Document_Number: CO260000000005848 was created from our CR260000000005449 (KAT-057/058, process instance 15973526); its Acknowledge CO task is assigned to mofflros_6, the KAT-008 supplier account
+[12:48:11] fl-contract/05_KAT-059: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[12:48:11] fl-contract/05_KAT-059: Flow inputs: Document_Number=CO260000000006658
+[12:48:11] fl-contract/05_KAT-059: Flow login: the account of KAT-008
+[12:48:13] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:48:16] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:48:50] fl-contract/05_KAT-059: CO260000000006658 is not in Group Task (nothing to claim)
+[12:49:05] fl-contract/05_KAT-059: CO260000000006658 is not in Group Task (nothing to claim)
+[12:50:02] fl-contract/05_KAT-059: Signed out (SSO logout)
+  ✘   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 (1.9m)
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 
+
+    Error: CO260000000006658 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-059.ts:308:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:774:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_124512\flows-en-fl.flow-fl-contra-045f4-owledges-the-Contract-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_124512\flows-en-fl.flow-fl-contra-045f4-owledges-the-Contract-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 
+  6 did not run
+  4 passed (4.8m)
+
+Running 11 tests using 1 worker
+
+[12:51:12] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:45:17+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (370ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+[12:51:13] fl-contract/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T12:48:09+08:00 (CO=CO260000000006658)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP (241ms)
+[12:51:14] fl-contract/05_KAT-059: SELF-HEAL KAT-059: retry once — the attempt failed before opening the document (CO260000000006658 is not in this account's My Task (no result)), so nothing was submitted
+[12:51:15] fl-contract/05_KAT-059: BPM task assigned to firstallied123, firstallied1234, firstallied123-001, 357-02088811-5469; no step account matches (this step uses MOFFLROS_6)
+[12:51:16] fl-contract/05_KAT-059: KAT-059 Supplier acknowledges the Contract Order — role Supplier, login: account of KAT-008
+[12:51:16] fl-contract/05_KAT-059: Test data corrected (support/katalon/data-overrides.json): Document_Number: CO260000000005848 was created from our CR260000000005449 (KAT-057/058, process instance 15973526); its Acknowledge CO task is assigned to mofflros_6, the KAT-008 supplier account
+[12:51:16] fl-contract/05_KAT-059: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[12:51:16] fl-contract/05_KAT-059: Flow inputs: Document_Number=CO260000000006658
+[12:51:16] fl-contract/05_KAT-059: Flow login: the account of KAT-008
+[12:51:18] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:51:23] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:52:02] fl-contract/05_KAT-059: CO260000000006658 is not in Group Task (nothing to claim)
+[12:52:17] fl-contract/05_KAT-059: CO260000000006658 is not in Group Task (nothing to claim)
+[12:53:14] fl-contract/05_KAT-059: Signed out (SSO logout)
+  ✘   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 (2.0m)
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 
+
+    Error: CO260000000006658 is not in this account's My Task (no result)
+
+       at ..\support\katalon\runtime.ts:312
+
+      310 |   const doc = taskSearchDoc.get(cur().page);
+      311 |   if (!doc) return;
+    > 312 |   if (!(await waitState(obj, 'attached', 10))) throw new Error(`${doc} is not in this account's My Task (no result)`);
+          |                                                      ^
+      313 |   const row = await loc(obj).locator('xpath=ancestor::tr[1]').innerText({ timeout: DEFAULT_TIMEOUT * 1000 });
+      314 |   if (!row.includes(doc))
+      315 |     throw new Error(`${doc} is not in this account's My Task (the first row is "${row.replace(/\s+/g, ' ').trim()}"); stopped instead of opening another task`);
+        at guardTaskRow (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:312:54)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:401:7
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-059.ts:308:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:774:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_125104\flows-en-fl.flow-fl-contra-045f4-owledges-the-Contract-Order-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_125104\flows-en-fl.flow-fl-contra-045f4-owledges-the-Contract-Order-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 
+  2 skipped
+  6 did not run
+  2 passed (2.2m)
+
+Running 11 tests using 1 worker
+
+[12:54:12] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:45:17+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (392ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+[12:54:12] fl-contract/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T12:48:09+08:00 (CO=CO260000000006658)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP (344ms)
+[12:54:13] fl-contract/05_KAT-059: KAT-059 Supplier acknowledges the Contract Order — role Supplier, login: officer firstallied1234 (given for this run)
+[12:54:13] fl-contract/05_KAT-059: Test data corrected (support/katalon/data-overrides.json): Document_Number: CO260000000005848 was created from our CR260000000005449 (KAT-057/058, process instance 15973526); its Acknowledge CO task is assigned to mofflros_6, the KAT-008 supplier account
+[12:54:13] fl-contract/05_KAT-059: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[12:54:13] fl-contract/05_KAT-059: Flow inputs: Document_Number=CO260000000006658
+[12:54:13] fl-contract/05_KAT-059: Flow login: officer firstallied1234 (shared officer password)
+[12:54:16] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:54:19] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:54:40] fl-contract/05_KAT-059: Claimed group task CO260000000006658 (moved to My Task)
+[12:54:40] fl-contract/05_KAT-059: CO260000000006658 is already in My Task (no claim needed)
+[12:54:49] fl-contract/05_KAT-059: Message: Purchase Order CO260000000006658 is acknowledged.
+[12:54:49] fl-contract/05_KAT-059: ✅ Captured CO No: CO260000000006658
+[12:54:49] fl-contract/05_KAT-059: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Acknowledge_Contract_Order_BySupplier_2026.xlsx
+[12:54:49] fl-contract/05_KAT-059: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Acknowledge_Contract_Order_BySupplier_2026.xlsx
+[12:54:50] fl-contract/05_KAT-059: Closed the TERKINI announcement
+[12:54:50] fl-contract/05_KAT-059: closeBrowser (the fixture closes the browser at the end of the test)
+[12:54:51] fl-contract/05_KAT-059: DB status CO CO260000000006658: 41505 Pending Fulfilment / Menunggu Pemenuhan (expected 41505, OK)
+[12:54:51] fl-contract/05_KAT-059: Signed out (SSO logout)
+  ✓   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059 (38.8s)
+[12:54:52] fl-contract/06_KAT-060: KAT-060 Supplier submits delivery against the Contract Order — role Supplier, login: officer firstallied1234 (given for this run)
+[12:54:52] fl-contract/06_KAT-060: Test data corrected (support/katalon/data-overrides.json): Purchase_Number, dateValue, DeliveryAmount: Deliver against our CO260000000005848 (acknowledged by KAT-059 as the KAT-008 supplier account, which owns the CO); default date 2026-06-23 is in the past, use today (delivery window 30/10/2026-29/12/2026); full order 10 x RM30,000 = RM300,000
+[12:54:52] fl-contract/06_KAT-060: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[12:54:52] fl-contract/06_KAT-060: Live dates: dateValue=2026-11-25
+[12:54:52] fl-contract/06_KAT-060: Flow inputs: Purchase_Number=CO260000000006658
+[12:54:52] fl-contract/06_KAT-060: Flow login: officer firstallied1234 (shared officer password)
+[12:54:57] fl-contract/06_KAT-060: Closed the TERKINI announcement
+[12:55:00] fl-contract/06_KAT-060: Closed the TERKINI announcement
+[12:55:22] fl-contract/06_KAT-060: Purchase Order No = CO260000000006658
+[12:55:28] fl-contract/06_KAT-060: Element tak wujud, skip isi amount
+[12:55:39] fl-contract/06_KAT-060: Message: Delivery Order DO-CO260000000006658 is successfully submitted for acknowledgment. View Delivery Order
+[12:55:39] fl-contract/06_KAT-060: ✅ Captured DO No: DO-CO260000000006658
+[12:55:40] fl-contract/06_KAT-060: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery_Contract_List.xlsx
+[12:55:40] fl-contract/06_KAT-060: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Pending_Delivery_Contract_List.xlsx
+[12:55:41] fl-contract/06_KAT-060: Closed the TERKINI announcement
+[12:55:41] fl-contract/06_KAT-060: closeBrowser (the fixture closes the browser at the end of the test)
+[12:55:41] fl-contract/06_KAT-060: Signed out (SSO logout)
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060 (50.0s)
+[12:55:42] fl-contract/07_DO_LOOKUP: Gate DO_LOOKUP: found in the SIT database: DO 60000730212600001
+[12:55:42] fl-contract/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T12:55:42+08:00 (DO=60000730212600001)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP (861ms)
+  ✘   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061 (416ms)
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061 
+
+    Error: bpm-tasks: "60000730212600001" is not a document number
+
+       at ..\support\core\bpm-tasks.ts:23
+
+      21 |
+      22 | function checkNo(no: string) {
+    > 23 |   if (!DOC_TYPES.some((t) => looksLike(t, no))) throw new Error(`bpm-tasks: "${no}" is not a document number`);
+         |                                                       ^
+      24 | }
+      25 |
+      26 | /** Every task of a document (oldest first), any state. */
+        at checkNo (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\bpm-tasks.ts:23:55)
+        at bpmTasks (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\bpm-tasks.ts:28:3)
+        at openTasks (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\bpm-tasks.ts:46:10)
+        at flatMap (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\bpm-tasks.ts:56:39)
+        at assignedOfficer (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\bpm-tasks.ts:56:23)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:616:30)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:14)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_125408\flows-en-fl.flow-fl-contra-3a12c-ontract-Delivery-Order-FRN--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_125408\flows-en-fl.flow-fl-contra-3a12c-ontract-Delivery-Order-FRN--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061 
+  2 skipped
+  3 did not run
+  5 passed (1.6m)
+
+Running 11 tests using 1 worker
+
+[15:31:51] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:45:17+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (473ms)
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+[15:31:52] fl-contract/04_CO_LOOKUP: Gate CO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T12:48:09+08:00 (CO=CO260000000006658)
+  ✓   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP (292ms)
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+[15:31:54] fl-contract/06_KAT-060: DB status DO 60000730212600001: 42000 Pending Acknowledgement / Menunggu Pengesahan (expected 42000, OK)
+  ✓   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060 (2.2s)
+[15:31:54] fl-contract/07_DO_LOOKUP: Gate DO_LOOKUP done by SIT database (automatic lookup) at 2026-11-25T12:55:42+08:00 (DO=60000730212600001)
+  ✓   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP (273ms)
+[15:31:56] fl-contract/08_KAT-061: Assigned officer not found in BPM: several or group BPM tasks are open for 60000730212600001: "Create FRN" → 831221115096/700131134422/810327115454/830109085558/900207024452
+[15:31:56] fl-contract/08_KAT-061: Waiting for memory before KAT-061: 1.0 GB free, need 1.2 GB
+[15:32:26] fl-contract/08_KAT-061: KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) — role Receiving Officer, login: officer 831221115096 from data-overrides.json (seen in an earlier run; not checked for this document)
+[15:32:26] fl-contract/08_KAT-061: Test data corrected (support/katalon/data-overrides.json): Document_Number: Receive our contract delivery DO-CO260000000005848 = DO 01400K003S2600002 (found by the user in SIT DB); its Create FRN task is assigned to officer 831221115096, which none of the test cases log in as
+[15:32:26] fl-contract/08_KAT-061: Using officer 831221115096 with the shared officer password (support/katalon/data-overrides.json)
+[15:32:26] fl-contract/08_KAT-061: Flow inputs: Document_Number=60000730212600001
+[15:32:26] fl-contract/08_KAT-061: Flow login: officer 831221115096 (shared officer password)
+[15:32:31] fl-contract/08_KAT-061: Closed the TERKINI announcement
+[15:32:36] fl-contract/08_KAT-061: Closed the TERKINI announcement
+[15:32:53] fl-contract/08_KAT-061: Claimed group task 60000730212600001 (moved to My Task)
+[15:32:54] fl-contract/08_KAT-061: 60000730212600001 is already in My Task (no claim needed)
+[15:33:09] fl-contract/08_KAT-061: Message: Fulfilment Received Note for Products / Services FN260000000005817 is successfully submitted for approval.
+[15:33:09] fl-contract/08_KAT-061: ✅ Captured FN No: FN260000000005817
+[15:33:09] fl-contract/08_KAT-061: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Fulfillment_Received_Note.xlsx
+[15:33:09] fl-contract/08_KAT-061: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Submit_Fulfillment_Received_Note.xlsx
+[15:33:10] fl-contract/08_KAT-061: Closed the TERKINI announcement
+[15:33:10] fl-contract/08_KAT-061: closeBrowser (the fixture closes the browser at the end of the test)
+[15:33:10] fl-contract/08_KAT-061: DB status FN FN260000000005817: 43002 Pending Approval / Menunggu Kelulusan (expected 43002, OK)
+[15:33:11] fl-contract/08_KAT-061: Signed out (SSO logout)
+  ✓   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061 (1.3m)
+[15:33:13] fl-contract/09_KAT-062: KAT-062 Acknowledge Officer approves the contract FRN — role Acknowledge Officer, login: officer 180220145443: BPM task "Approve FRN" of FN260000000005817 is ASSIGNED to 180220145443 (SIT WFTASK)
+[15:33:13] fl-contract/09_KAT-062: Test data corrected (support/katalon/data-overrides.json): Document_Number: Approve our contract FRN FN260000000005203 (from KAT-061); its Approve FRN task is assigned to officer 180220145443, which none of the test cases log in as
+[15:33:13] fl-contract/09_KAT-062: Using officer 180220145443 with the shared officer password (support/katalon/data-overrides.json)
+[15:33:13] fl-contract/09_KAT-062: Flow inputs: Document_Number=FN260000000005817
+[15:33:13] fl-contract/09_KAT-062: Flow login: officer 180220145443 (shared officer password)
+[15:33:15] fl-contract/09_KAT-062: Closed the TERKINI announcement
+[15:33:18] fl-contract/09_KAT-062: Closed the TERKINI announcement
+[15:33:33] fl-contract/09_KAT-062: FN260000000005817 is already in My Task (no claim needed)
+[15:33:33] fl-contract/09_KAT-062: FN260000000005817 is already in My Task (no claim needed)
+[15:33:41] fl-contract/09_KAT-062: Message: Fulfilment Received Note for Products / Services FN260000000005817 is acknowledged and has been sent for posting at iGFMAS.
+     Please click Alert/Notification to print the Fulfilment Received Note/Service and CoGSTR (if any).
+[15:33:41] fl-contract/09_KAT-062: ✅ Captured FN No: FN260000000005817
+[15:33:41] fl-contract/09_KAT-062: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Fulfillment_Received_Note.xlsx
+[15:33:41] fl-contract/09_KAT-062: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Approve_Fulfillment_Received_Note.xlsx
+[15:33:42] fl-contract/09_KAT-062: Closed the TERKINI announcement
+[15:33:42] fl-contract/09_KAT-062: closeBrowser (the fixture closes the browser at the end of the test)
+[15:33:48] fl-contract/09_KAT-062: DB status FN FN260000000005817: 43010 Approved / Diluluskan (expected 43010, OK)
+[15:33:49] fl-contract/09_KAT-062: Signed out (SSO logout)
+  ✓   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062 (38.1s)
+[15:33:49] fl-contract/10_KAT-063: KAT-063 Supplier creates the contract invoice — role Supplier, login: officer firstallied1234 (given for this run)
+[15:33:49] fl-contract/10_KAT-063: Test data corrected (support/katalon/data-overrides.json): Document_Number: Invoice our CO260000000005848 (delivered by KAT-060, FRN FN260000000005203); the invoice is raised by the CO's supplier mofflros_6, the KAT-008 account
+[15:33:49] fl-contract/10_KAT-063: Using the login of KAT-008 (support/katalon/data-overrides.json)
+[15:33:49] fl-contract/10_KAT-063: Flow inputs: Document_Number=CO260000000006658
+[15:33:49] fl-contract/10_KAT-063: Flow login: officer firstallied1234 (shared officer password)
+[15:33:52] fl-contract/10_KAT-063: Closed the TERKINI announcement
+[15:33:55] fl-contract/10_KAT-063: Closed the TERKINI announcement
+[15:34:12] fl-contract/10_KAT-063: Claimed group task CO260000000006658 (moved to My Task)
+[15:34:12] fl-contract/10_KAT-063: CO260000000006658 is already in My Task (no claim needed)
+[15:34:16] fl-contract/10_KAT-063: Purchase Order No = CO260000000006658
+[15:34:24] fl-contract/10_KAT-063: Message: Invoice IN-CO260000000006658 is successfully submitted.
+[15:34:24] fl-contract/10_KAT-063: ✅ Captured IN No: IN-CO260000000006658
+[15:34:24] fl-contract/10_KAT-063: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Create_Invoice_BySupplier.xlsx
+[15:34:24] fl-contract/10_KAT-063: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Create_Invoice_BySupplier.xlsx
+[15:34:25] fl-contract/10_KAT-063: Closed the TERKINI announcement
+[15:34:25] fl-contract/10_KAT-063: closeBrowser (the fixture closes the browser at the end of the test)
+[15:34:25] fl-contract/10_KAT-063: Signed out (SSO logout)
+  ✓  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063 (36.1s)
+[15:34:26] fl-contract/11_KAT-064: KAT-064 Payment match (contract) — role Finance, login: Katalon default account of the step
+[15:34:26] fl-contract/11_KAT-064: Test data corrected (support/katalon/data-overrides.json): Document_Number: Match payment for our CO260000000005848 (invoice IN-CO260000000005848 from KAT-063); Match Payment is a group task for this account's group
+[15:34:26] fl-contract/11_KAT-064: Flow inputs: Document_Number=CO260000000006658
+[15:34:28] fl-contract/11_KAT-064: Closed the TERKINI announcement
+[15:34:32] fl-contract/11_KAT-064: Closed the TERKINI announcement
+[15:34:54] fl-contract/11_KAT-064: Claimed group task CO260000000006658 (moved to My Task)
+[15:34:54] fl-contract/11_KAT-064: CO260000000006658 is already in My Task (no claim needed)
+[15:35:08] fl-contract/11_KAT-064: Purchase Order No = CO260000000006658
+[15:35:14] fl-contract/11_KAT-064: Message: Payment Advice PA260000000006421 is successfully submitted and has been sent to iGFMAS for verification.
+Please click Alert/Notification to review the status and print the Payment Match document.
+[15:35:14] fl-contract/11_KAT-064: ✅ Captured PA No: PA260000000006421
+[15:35:14] fl-contract/11_KAT-064: Result appended to C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Payment_Match.xlsx
+[15:35:14] fl-contract/11_KAT-064: ✅ Appended to Excel: C:\Users\hadishafiq\CDC-Playwright-Automation-Script\reports\katalon-home/Desktop/PrepDataFileNumber/Payment_Match.xlsx
+[15:35:15] fl-contract/11_KAT-064: Closed the TERKINI announcement
+[15:35:15] fl-contract/11_KAT-064: closeBrowser (the fixture closes the browser at the end of the test)
+[15:35:16] fl-contract/11_KAT-064: DB status PA PA260000000006421: 46001 Pending Payment Instruction Query from iGFMAS / Menunggu Semakan Kuiri Arahan Pembayaran dari iGFMAS (expected 46001, OK)
+[15:35:16] fl-contract/11_KAT-064: Signed out (SSO logout)
+  ✓  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064 (50.9s)
+
+  3 skipped
+  8 passed (3.7m)

@@ -14,7 +14,8 @@ export const docName = (t: DocType) => DOC_NAMES[t];
 
 /** Pattern of one document type. DO numbers have their own shape (e.g. 01309H005M2600503). */
 export function docPattern(t: DocType): RegExp {
-  if (t === 'DO') return /\b\d{5}[A-Z]\d{3}[A-Z]\d{7}\b/g;
+  // DO numbers have their own shape: 01309H005M2600503, or all digits for some PTJs (60000730212600001, SIT 2026-11-25)
+  if (t === 'DO') return /\b(?:\d{5}[A-Z]\d{3}[A-Z]\d{7}|\d{17})\b/g;
   // SM application numbers: KN-06112026-0050 (K contractor / J consultant; N new, A add category, U update, R renewal,
   // C cancel, B bumiputera) — SIT SM_APPL.APPL_NO
   if (t === 'AP') return /\b[A-Z]{2}-\d{8}-\d{4}\b/g;

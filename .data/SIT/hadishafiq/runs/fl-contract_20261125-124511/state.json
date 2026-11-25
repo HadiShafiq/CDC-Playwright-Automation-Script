@@ -1,0 +1,371 @@
+{
+  "flowRunId": "fl-contract_20261125-124511",
+  "flowId": "fl-contract",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T12:45:11+08:00",
+  "updatedAt": "2026-11-25T15:35:16+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004240",
+    "CT": "CT260000000002315",
+    "CR": "CR260000000006060",
+    "CO": "CO260000000006658",
+    "DO": "60000730212600001",
+    "FN": "FN260000000005817",
+    "PA": "PA260000000006421"
+  },
+  "officers": {
+    "KAT-057": "131020145098",
+    "KAT-059": "firstallied1234",
+    "KAT-060": "firstallied1234",
+    "KAT-063": "firstallied1234"
+  },
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-25T12:45:17+08:00",
+      "values": {
+        "LA": "LA260000000004240"
+      }
+    },
+    "CO_LOOKUP": {
+      "done": true,
+      "by": "SIT database (automatic lookup)",
+      "at": "2026-11-25T12:48:09+08:00",
+      "values": {
+        "CO": "CO260000000006658"
+      }
+    },
+    "DO_LOOKUP": {
+      "done": true,
+      "by": "SIT database (automatic lookup)",
+      "at": "2026-11-25T12:55:42+08:00",
+      "values": {
+        "DO": "60000730212600001"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_124512",
+          "startedAt": "2026-11-25T12:45:17+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-25_124512",
+          "endedAt": "2026-11-25T12:46:46+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Selected Charge Line Items updated."
+            },
+            {
+              "severity": "info",
+              "text": "Contract Request CR260000000006060 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CR": "CR260000000006060"
+      },
+      "login": "officer 131020145098 (given for this run)",
+      "checkpoint": "CR_SUBMITTED",
+      "db": {
+        "kind": "CR",
+        "docNo": "CR260000000006060",
+        "expected": 40510,
+        "statusId": 40510,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 12:46:39",
+        "ok": true,
+        "checkedAt": "2026-11-25T12:46:46+08:00"
+      }
+    },
+    "KAT-058": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_124512",
+          "startedAt": "2026-11-25T12:46:47+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\03_KAT-058\\2026-11-25_124512",
+          "dbBefore": {
+            "kind": "CR",
+            "docNo": "CR260000000006060",
+            "statusId": 40510
+          },
+          "endedAt": "2026-11-25T12:48:08+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Contract Request CR260000000006060 is approved and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Purchase Order document."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CR": "CR260000000006060"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "CR_APPROVED",
+      "db": {
+        "kind": "CR",
+        "docNo": "CR260000000006060",
+        "expected": 40800,
+        "statusId": 40800,
+        "en": "Contract Request Approved",
+        "bm": "Permintaan Kontrak Diluluskan",
+        "at": "2026-11-25 12:48:07",
+        "ok": true,
+        "checkedAt": "2026-11-25T12:48:08+08:00"
+      }
+    },
+    "KAT-059": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_124512",
+          "startedAt": "2026-11-25T12:48:10+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\05_KAT-059\\2026-11-25_124512",
+          "dbBefore": {
+            "kind": "CO",
+            "docNo": "CO260000000006658",
+            "statusId": 41500
+          },
+          "endedAt": "2026-11-25T12:49:57+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "CO260000000006658 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-25_125104",
+          "startedAt": "2026-11-25T12:51:15+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\05_KAT-059\\2026-11-25_125104",
+          "dbBefore": {
+            "kind": "CO",
+            "docNo": "CO260000000006658",
+            "statusId": 41500
+          },
+          "selfHeal": "the attempt failed before opening the document (CO260000000006658 is not in this account's My Task (no result)), so nothing was submitted",
+          "endedAt": "2026-11-25T12:53:09+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "CO260000000006658 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-25_125408",
+          "startedAt": "2026-11-25T12:54:13+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\05_KAT-059\\2026-11-25_125408",
+          "dbBefore": {
+            "kind": "CO",
+            "docNo": "CO260000000006658",
+            "statusId": 41500
+          },
+          "endedAt": "2026-11-25T12:54:51+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Purchase Order CO260000000006658 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CO": "CO260000000006658"
+      },
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "CO_ACKNOWLEDGED",
+      "db": {
+        "kind": "CO",
+        "docNo": "CO260000000006658",
+        "expected": 41505,
+        "statusId": 41505,
+        "en": "Pending Fulfilment",
+        "bm": "Menunggu Pemenuhan",
+        "at": "2026-11-25 12:54:44",
+        "ok": true,
+        "checkedAt": "2026-11-25T12:54:51+08:00"
+      }
+    },
+    "KAT-060": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_125408",
+          "startedAt": "2026-11-25T12:54:52+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\06_KAT-060\\2026-11-25_125408",
+          "endedAt": "2026-11-25T12:55:41+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Delivery Order DO-CO260000000006658 is successfully submitted for acknowledgment. View Delivery Order"
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "DELIVERY_SUBMITTED",
+      "db": {
+        "kind": "DO",
+        "docNo": "60000730212600001",
+        "expected": 42000,
+        "statusId": 42000,
+        "en": "Pending Acknowledgement",
+        "bm": "Menunggu Pengesahan",
+        "at": "2026-11-25 12:55:35",
+        "ok": true,
+        "checkedAt": "2026-11-25T15:31:54+08:00"
+      }
+    },
+    "KAT-061": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_153137",
+          "startedAt": "2026-11-25T15:32:26+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\08_KAT-061\\2026-11-25_153137",
+          "endedAt": "2026-11-25T15:33:10+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Received Note for Products / Services FN260000000005817 is successfully submitted for approval."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "FN": "FN260000000005817"
+      },
+      "login": "officer 831221115096 from data-overrides.json (seen in an earlier run; not checked for this document)",
+      "checkpoint": "FRN_CREATED",
+      "db": {
+        "kind": "FN",
+        "docNo": "FN260000000005817",
+        "expected": 43002,
+        "statusId": 43002,
+        "en": "Pending Approval",
+        "bm": "Menunggu Kelulusan",
+        "at": "2026-11-25 15:33:04",
+        "ok": true,
+        "checkedAt": "2026-11-25T15:33:10+08:00"
+      }
+    },
+    "KAT-062": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_153137",
+          "startedAt": "2026-11-25T15:33:12+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\09_KAT-062\\2026-11-25_153137",
+          "dbBefore": {
+            "kind": "FN",
+            "docNo": "FN260000000005817",
+            "statusId": 43002
+          },
+          "endedAt": "2026-11-25T15:33:48+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Received Note for Products / Services FN260000000005817 is acknowledged and has been sent for posting at iGFMAS. Please click Alert/Notification to print the Fulfilment Received Note/Service and CoGSTR (if any)."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 180220145443: BPM task \"Approve FRN\" of FN260000000005817 is ASSIGNED to 180220145443 (SIT WFTASK)",
+      "checkpoint": "FRN_APPROVED",
+      "db": {
+        "kind": "FN",
+        "docNo": "FN260000000005817",
+        "expected": 43010,
+        "statusId": 43010,
+        "en": "Approved",
+        "bm": "Diluluskan",
+        "at": "2026-11-25 15:33:48",
+        "ok": true,
+        "checkedAt": "2026-11-25T15:33:48+08:00"
+      }
+    },
+    "KAT-063": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_153137",
+          "startedAt": "2026-11-25T15:33:49+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\10_KAT-063\\2026-11-25_153137",
+          "endedAt": "2026-11-25T15:34:25+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Invoice IN-CO260000000006658 is successfully submitted."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer firstallied1234 (given for this run)",
+      "checkpoint": "INVOICE_CREATED"
+    },
+    "KAT-064": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-25_153137",
+          "startedAt": "2026-11-25T15:34:26+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\11_KAT-064\\2026-11-25_153137",
+          "endedAt": "2026-11-25T15:35:16+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Payment Advice PA260000000006421 is successfully submitted and has been sent to iGFMAS for verification. Please click Alert/Notification to review the status and print the Payment Match document."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "PA": "PA260000000006421"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "PAYMENT_MATCHED",
+      "db": {
+        "kind": "PA",
+        "docNo": "PA260000000006421",
+        "expected": 46001,
+        "statusId": 46001,
+        "en": "Pending Payment Instruction Query from iGFMAS",
+        "bm": "Menunggu Semakan Kuiri Arahan Pembayaran dari iGFMAS",
+        "at": "2026-11-25 15:35:11",
+        "ok": true,
+        "checkedAt": "2026-11-25T15:35:16+08:00",
+        "observeOnly": true
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {
+    "KAT-057": {
+      "ddItemType": "1",
+      "ItemCode": "44121703",
+      "Address_Input": "Address Name 1234"
+    }
+  },
+  "status": "completed"
+}

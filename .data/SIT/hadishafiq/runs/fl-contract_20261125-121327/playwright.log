@@ -1,0 +1,325 @@
+
+Running 11 tests using 1 worker
+
+[12:13:34] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (323ms)
+[12:13:35] fl-contract/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: Katalon default account of the step
+[12:13:35] fl-contract/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[12:13:35] fl-contract/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[12:13:35] fl-contract/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[12:13:35] fl-contract/02_KAT-057: Flow inputs: ContractList=LA260000000004240
+[12:13:37] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:13:40] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:15:56] fl-contract/02_KAT-057: Application message on failure: SEARCH Address Search Reset RESULT Address No records found Select Cancel
+[12:15:57] fl-contract/02_KAT-057: Signed out (SSO logout)
+  ✘   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 (2.4m)
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//*[contains(@id,\'lovTb2_data\')]/tr/td[1]/div').first()
+
+
+       at ..\support\katalon\runtime.ts:402
+
+      400 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      401 |       await guardTaskRow(obj);
+    > 402 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      403 |     });
+      404 |   },
+      405 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-057.ts:440:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:769:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_121328\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_121328\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+  9 did not run
+  1 passed (2.5m)
+
+Running 11 tests using 1 worker
+
+[12:17:02] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (331ms)
+[12:17:02] fl-contract/02_KAT-057: BLOCKED: KAT-057 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract_20261125-121327 --step KAT-057
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+  10 skipped
+  1 passed (5.8s)
+
+Running 11 tests using 1 worker
+
+[12:17:59] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (332ms)
+[12:17:59] fl-contract/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: Katalon default account of the step
+[12:18:00] fl-contract/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[12:18:00] fl-contract/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[12:18:00] fl-contract/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[12:18:00] fl-contract/02_KAT-057: Flow inputs: ContractList=LA260000000004240
+[12:18:02] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:18:05] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:20:14] fl-contract/02_KAT-057: Application message on failure: SEARCH Address Search Reset RESULT Address No records found Select Cancel
+[12:20:14] fl-contract/02_KAT-057: Signed out (SSO logout)
+  ✘   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 (2.2m)
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//*[contains(@id,\'lovTb2_data\')]/tr/td[1]/div').first()
+
+
+       at ..\support\katalon\runtime.ts:402
+
+      400 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      401 |       await guardTaskRow(obj);
+    > 402 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      403 |     });
+      404 |   },
+      405 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-057.ts:440:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:769:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_121756\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_121756\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+  9 did not run
+  1 passed (2.3m)
+
+Running 11 tests using 1 worker
+
+[12:21:23] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (354ms)
+[12:21:23] fl-contract/02_KAT-057: BLOCKED: KAT-057 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract_20261125-121327 --step KAT-057
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+  10 skipped
+  1 passed (9.3s)
+
+Running 11 tests using 1 worker
+
+[12:22:11] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (322ms)
+[12:22:11] fl-contract/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: officer 881204115188 (given for this run)
+[12:22:11] fl-contract/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[12:22:11] fl-contract/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[12:22:11] fl-contract/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[12:22:11] fl-contract/02_KAT-057: Flow inputs: ContractList=LA260000000004240
+[12:22:11] fl-contract/02_KAT-057: Flow login: officer 881204115188 (shared officer password)
+[12:22:13] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:22:16] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:24:09] fl-contract/02_KAT-057: Signed out (SSO logout)
+  ✘   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 (2.0m)
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//a[normalize-space()=\'Contract List\']').first()
+
+
+       at ..\support\katalon\runtime.ts:402
+
+      400 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      401 |       await guardTaskRow(obj);
+    > 402 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      403 |     });
+      404 |   },
+      405 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-057.ts:344:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:774:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_122204\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_122204\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+  9 did not run
+  1 passed (2.1m)
+
+Running 11 tests using 1 worker
+
+[12:25:14] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (308ms)
+[12:25:14] fl-contract/02_KAT-057: BLOCKED: KAT-057 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract_20261125-121327 --step KAT-057
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+  10 skipped
+  1 passed (5.8s)
+
+Running 11 tests using 1 worker
+
+[12:26:28] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (347ms)
+[12:26:29] fl-contract/02_KAT-057: KAT-057 Prepare Contract Request from a contract — role Requisitioner, login: officer 131020145098 (given for this run)
+[12:26:29] fl-contract/02_KAT-057: Test data corrected (support/katalon/data-overrides.json): ContractList, StartDate, EndDate, ddItemType, ItemCode: Use our contract from LA260000000004032 (FD CT260000000002209 approved, agreement approved; services contract, supplier item 72121004 from KAT-008); dates in the past are not selectable, so today and +7 days; item type 2 = Service; end date = start + 60 days, the date SIT pre-fills (Delivery/Service Period 60 days); the script picker only moves forward from that month
+[12:26:29] fl-contract/02_KAT-057: Data file "2. DLOA.xlsx" (Data Files/Akta_882_RU/2- DLOA) not found under C:\Users\hadishafiq\Desktop\Data Prep Excel AP 201; using test case defaults
+[12:26:29] fl-contract/02_KAT-057: Live dates: StartDate=2026-11-25, EndDate=2027-01-24
+[12:26:29] fl-contract/02_KAT-057: Flow inputs: ContractList=LA260000000004240
+[12:26:29] fl-contract/02_KAT-057: Flow login: officer 131020145098 (shared officer password)
+[12:26:31] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:26:35] fl-contract/02_KAT-057: Closed the TERKINI announcement
+[12:28:45] fl-contract/02_KAT-057: Application message on failure: SEARCH Address Search Reset RESULT Address No records found Select Cancel
+[12:28:45] fl-contract/02_KAT-057: Signed out (SSO logout)
+  ✘   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 (2.3m)
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+
+  1) [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//*[contains(@id,\'lovTb2_data\')]/tr/td[1]/div').first()
+
+
+       at ..\support\katalon\runtime.ts:402
+
+      400 |     return step(`click ${name(obj)}`, fh, undefined, async () => {
+      401 |       await guardTaskRow(obj);
+    > 402 |       await likeSelenium(() => loc(obj).click({ timeout: DEFAULT_TIMEOUT * 1000 }));
+          |                                         ^
+      403 |     });
+      404 |   },
+      405 |   async enhancedClick(obj: TestObject, fh?: FH) {
+        at action (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:41)
+        at likeSelenium (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:275:11)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:402:13
+        at step (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\runtime.ts:287:12)
+        at c (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\helpers.ts:46:2)
+        at Module.run (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\katalon\steps\KAT-057.ts:440:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:774:7)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\fl.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-25_122621\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-25_122621\flows-en-fl.flow-fl-contra-a8823-act-Request-from-a-contract-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057 
+  9 did not run
+  1 passed (2.4m)
+
+Running 11 tests using 1 worker
+
+[12:31:48] fl-contract/01_CT_LOOKUP: Gate CT_LOOKUP done by hadishafiq (--input) at 2026-11-25T12:13:34+08:00 (LA=LA260000000004240)
+  ✓   1 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 01 GATE CT_LOOKUP Contract (or its LOA) for a Contract Request @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/01_CT_LOOKUP @gate-CT_LOOKUP (452ms)
+[12:31:48] fl-contract/02_KAT-057: BLOCKED: KAT-057 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract_20261125-121327 --step KAT-057
+  -   2 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 02 KAT-057 Prepare Contract Request from a contract @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/02_KAT-057 @KAT-057
+  -   3 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 03 KAT-058 Approve Contract Request (sent to iGFMAS) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/03_KAT-058 @KAT-058
+  -   4 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 04 GATE CO_LOOKUP Contract Order number after iGFMAS verification @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/04_CO_LOOKUP @gate-CO_LOOKUP
+  -   5 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 05 KAT-059 Supplier acknowledges the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/05_KAT-059 @KAT-059
+  -   6 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 06 KAT-060 Supplier submits delivery against the Contract Order @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/06_KAT-060 @KAT-060
+  -   7 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 07 GATE DO_LOOKUP Delivery Order number in the receiving officer's Group Task @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/07_DO_LOOKUP @gate-DO_LOOKUP
+  -   8 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 08 KAT-061 Receiving Officer acknowledges the contract Delivery Order (FRN) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/08_KAT-061 @KAT-061
+  -   9 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 09 KAT-062 Acknowledge Officer approves the contract FRN @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/09_KAT-062 @KAT-062
+  -  10 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 10 KAT-063 Supplier creates the contract invoice @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/10_KAT-063 @KAT-063
+  -  11 [flows] › tests\flows\en\fl.flow.spec.ts:12:11 › fl-contract [EN] Contract fulfilment: CR → CO → delivery → FRN → invoice → payment › 11 KAT-064 Payment match (contract) @flow-fl-contract @module-fl @lang-en @FLOW @fl-contract/11_KAT-064 @KAT-064
+
+  10 skipped
+  1 passed (12.1s)

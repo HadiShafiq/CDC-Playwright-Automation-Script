@@ -103,6 +103,8 @@ Pending, in order:
 
 **Next:** QT Supplier Finalization VERIFIED (QT260000000004539 → SF 62213, 2026-11-25 10:45). LOI (QT-017, support/modules/qt/loi.ts) in progress: LI260000000000781 saved at 62400; needs a Negotiation Term (Negotiation Terms tab → Add, dialog not read yet) before Submit; the draft could not be reopened from the Prepare LOI screen afterwards (menu disabled, list empty) — find how to reopen it (task list / LOI search) before rerunning QT-017, to avoid a second LOI. Re-check FL PRs 5075/5076 (iGFMAS).
 
+**QT end to end VERIFIED 2026-11-25:** QT260000000004539 → SF 62213 → LI260000000000781 62405 → LA260000000004240 62506 → CT260000000002315 (FD 50300, agreement 56600) → CR260000000006060 (iGFMAS 40800) → CO260000000006658 → DO 60000730212600001 → FN260000000005817 → PA260000000006421 (46001). CR still passes iGFMAS on SIT; PRs do not. Contract run options: --officer KAT-057=131020145098 --var KAT-057.ddItemType=1 --var KAT-057.ItemCode=44121703 --var "KAT-057.Address_Input=Address Name 1234" + --officer KAT-059/060/063=firstallied1234.
+
 New-PC setup: `npm ci`, `npx playwright install chromium`; copy `.auth/` and `.data/` from the old PC (never via git);
 DBeaver workspace `EP` with the "SIT" connection (sit-db reads `%APPDATA%\DBeaverData\workspace6\EP\.dbeaver`);
 Oracle client sqlplus at `C:\oracle\product\10.2.0\client_1\bin\sqlplus.exe` (or env `SQLPLUS_PATH`); network/VPN to SIT;

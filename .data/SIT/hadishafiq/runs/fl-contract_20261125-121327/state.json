@@ -1,0 +1,83 @@
+{
+  "flowRunId": "fl-contract_20261125-121327",
+  "flowId": "fl-contract",
+  "module": "fl",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-25T12:13:27+08:00",
+  "updatedAt": "2026-11-25T12:31:48+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004240",
+    "CT": "CT260000000002315"
+  },
+  "officers": {
+    "KAT-057": "131020145098"
+  },
+  "gates": {
+    "CT_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-25T12:13:34+08:00",
+      "values": {
+        "LA": "LA260000000004240"
+      }
+    }
+  },
+  "steps": {
+    "KAT-057": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-25_121328",
+          "startedAt": "2026-11-25T12:13:35+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-25_121328",
+          "endedAt": "2026-11-25T12:15:54+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_121756",
+          "startedAt": "2026-11-25T12:17:59+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-25_121756",
+          "endedAt": "2026-11-25T12:20:11+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_122204",
+          "startedAt": "2026-11-25T12:22:11+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-25_122204",
+          "endedAt": "2026-11-25T12:24:07+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-25_122621",
+          "startedAt": "2026-11-25T12:26:29+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\fl-contract\\02_KAT-057\\2026-11-25_122621",
+          "endedAt": "2026-11-25T12:28:43+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "officer 131020145098 (given for this run)"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "blocked",
+  "blockedReason": "KAT-057 failed in an earlier attempt (LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)). It changes data, so it is not retried automatically. Check that nothing was submitted, then: npm run qa -- retry --run fl-contract_20261125-121327 --step KAT-057"
+}
