@@ -69,18 +69,4 @@ Read `docs/phase1-plan.md` first: it is the live plan (stage, done, open, blocke
 - Every failure: classify, record in `knowledge/repair-log.md`; suspected application defects in `knowledge/defects.md`.
 
 ## Commands
-```
-npm run qa -- doctor --env sit
-npm run qa -- list-flows
-npm run qa -- run --env sit --flow <id> [--input RN=…] [--from KAT-0xx] [--to KAT-0xx] [--headed]
-npm run qa -- gate --env sit --run <id> --gate SQ_START_SQL --done
-npm run qa -- resume --env sit --run <id>
-npm run qa -- cr add --cr <CR>                      # pick and choose: module → sub-module → flow → statuses
-npm run qa -- cr --env sit --cr <CR> --scenario S01 --prep|--exec
-npm run qa -- doc-status --env sit --doc LA26…      # DB status EN/BM + BPM tasks (read-only)
-npm run qa -- db-usage --env sit                    # refresh SIT usage + docs/status-coverage.md
-npm run qa -- simulate --env sit --doc <no> --status <id> [--type OC] [--check]   # backend-only status (tester runs SQL)
-npm run suites:gen                                 # data-prep specs, CR suites, sql/status, status catalogue
-npm run katalon:sit -- --grep @KAT-021      # original runner
-npm run typecheck
-```
+`npm run qa -- help` lists every CLI command. Original runner: `npm run katalon:sit -- --grep @KAT-021`.

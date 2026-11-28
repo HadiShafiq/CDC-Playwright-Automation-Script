@@ -105,6 +105,8 @@ Pending, in order:
 
 **QT end to end VERIFIED 2026-11-25:** QT260000000004539 → SF 62213 → LI260000000000781 62405 → LA260000000004240 62506 → CT260000000002315 (FD 50300, agreement 56600) → CR260000000006060 (iGFMAS 40800) → CO260000000006658 → DO 60000730212600001 → FN260000000005817 → PA260000000006421 (46001). CR still passes iGFMAS on SIT; PRs do not. Contract run options: --officer KAT-057=131020145098 --var KAT-057.ddItemType=1 --var KAT-057.ItemCode=44121703 --var "KAT-057.Address_Input=Address Name 1234" + --officer KAT-059/060/063=firstallied1234.
 
+**Latest (2026-11-25 19:15):** FL contract flows ALL VERIFIED: fl-contract (QT contract), fl-contract-do-maint (CT260000000002315 schedule 2, DO → 42900), fl-contract-inv-maint (LA260000000004233 → CT260000000002308, invoice → 44900). Still blocked: FL non-contract ×4 (PR5075/5076 at 40110, iGFMAS SIT passes CR but not PR), SM update-profile family (supplier data), sm-cancel-mof (soft cert defect). New run options: --officer STEP=account:KAT-0xx (another step's Katalon account), --var KAT-057.ScheduleNo=N (each periodic-contract schedule allows one CR per PTJ). Next candidates: QT LOA without LOI (LOI Required = No), QT reject/cancel paths, recount status coverage.
+
 New-PC setup: `npm ci`, `npx playwright install chromium`; copy `.auth/` and `.data/` from the old PC (never via git);
 DBeaver workspace `EP` with the "SIT" connection (sit-db reads `%APPDATA%\DBeaverData\workspace6\EP\.dbeaver`);
 Oracle client sqlplus at `C:\oracle\product\10.2.0\client_1\bin\sqlplus.exe` (or env `SQLPLUS_PATH`); network/VPN to SIT;
