@@ -1,0 +1,7241 @@
+{
+ "at": "2026-11-28T16:08:35+08:00",
+ "rows": [
+  {
+   "module": "CD",
+   "docType": "CAP",
+   "statusId": 15031,
+   "en": "Pending Assign UNSPSC",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CD",
+   "docType": "CAP",
+   "statusId": 15032,
+   "en": "In Progress",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CD",
+   "docType": "CAP",
+   "statusId": 15033,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CD",
+   "statusId": 15021,
+   "en": "Pending Extension Maintenance Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CD",
+   "statusId": 15022,
+   "en": "Pending Publish Extension Maintenance",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CD",
+   "statusId": 15023,
+   "en": "Extension Maintenance Rejection",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CD",
+   "statusId": 15024,
+   "en": "Extension Maintenance Completion",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CD",
+   "statusId": 15025,
+   "en": "Pending Extension Code Endorsement",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15001,
+   "en": "Pending Extension Code Review",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15002,
+   "en": "Extension Recommendation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15003,
+   "en": "Extension Code Request Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15004,
+   "en": "Pending Extension Code Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15005,
+   "en": "Item Code Request Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15007,
+   "en": "Extension Code Acknowledgement",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15008,
+   "en": "Pending Extension Code Review (Revise)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CE",
+   "statusId": 15009,
+   "en": "Extension Code Request Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11001,
+   "en": "Draft",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11002,
+   "en": "Pending Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11003,
+   "en": "Approved",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11004,
+   "en": "Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11005,
+   "en": "Published",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11006,
+   "en": "Expired",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CMF",
+   "statusId": 11007,
+   "en": "Direct Published",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15006,
+   "en": "Item Code Acknowledgement",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15011,
+   "en": "Pending Item Code Review",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15012,
+   "en": "UNSPSC Recommendation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15014,
+   "en": "Pending Item Code Creation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15015,
+   "en": "UNSPSC Completion",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15016,
+   "en": "Pending Item Code Creation (Revise)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15017,
+   "en": "Item Code Request Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CM",
+   "docType": "CU",
+   "statusId": 15018,
+   "en": "Pending Item Code Review (Revise)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56000,
+   "en": "Pending Draft Agreement Creation",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56050,
+   "en": "Pending Draft Agreement Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56100,
+   "en": "Pending Draft Agreement Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56150,
+   "en": "Pending Draft Agreement Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56250,
+   "en": "Pending Final Agreement Update",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56300,
+   "en": "Pending Final Agreement Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56350,
+   "en": "Pending Final Agreement Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56400,
+   "en": "Pending Final Agreement Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56600,
+   "en": "Agreement Completed",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002293"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56601,
+   "en": "Pending Contract Request Creation",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56700,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56750,
+   "en": "Pending Agreement Creation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002293"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56800,
+   "en": "Pending Agreement Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002293"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56850,
+   "en": "Pending Agreement Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56900,
+   "en": "Pending Agreement Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56950,
+   "en": "Pending Draft Agreement Creation Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56955,
+   "en": "Pending Draft Agreement Approval Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56960,
+   "en": "Pending Draft Agreement Revision Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56965,
+   "en": "Pending Draft Agreement Revision Approval Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56970,
+   "en": "Pending Final Agreement Update Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56975,
+   "en": "Pending Final Agreement Approval Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56980,
+   "en": "Pending Final Agreement Revision Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "AC",
+   "statusId": 56985,
+   "en": "Pending Final Agreement Revision Approval Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "CB",
+   "statusId": 55500,
+   "en": "Pending Update Bank Info Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CB",
+   "statusId": 55550,
+   "en": "Pending Confirmation Bank Information Update",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CB",
+   "statusId": 55600,
+   "en": "Update Bank Info Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CB",
+   "statusId": 55700,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "COM",
+   "statusId": 59000,
+   "en": "Pending Contract Owner Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "COM",
+   "statusId": 59200,
+   "en": "Contract Owner Management Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "COM",
+   "statusId": 59250,
+   "en": "Contract Owner Management Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58000,
+   "en": "Pending Treasury Circular (PP) Central Contract Creation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58005,
+   "en": "Pending Treasury Circular (PP) Central Contract Creation Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58010,
+   "en": "Pending Treasury Circular (PP) Central Contract Creation Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58015,
+   "en": "Pending Treasury Circular (PP) Central Contract Creation Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58020,
+   "en": "Treasury Circular (PP)  Central Contract Creation Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58025,
+   "en": "Treasury Circular (PP)  Central Contract Creation Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58030,
+   "en": "Treasury Circular (PP) Central Contract Creation Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58035,
+   "en": "Pending Treasury Circular (PP) Central Contract Update Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58040,
+   "en": "Pending Treasury Circular (PP) Central Contract Update Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58045,
+   "en": "Pending Treasury Circular (PP) Central Contract Update Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58050,
+   "en": "Pending Treasury Circular (PP) Central Contract Update Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58055,
+   "en": "Treasury Circular (PP) Central Contract Update Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58060,
+   "en": "Treasury Circular (PP) Central Contract Update Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58065,
+   "en": "Treasury Circular (PP) Central Contract Update Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58070,
+   "en": "Pending Cancellation Treasury Circular (PP) Central Contract Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58075,
+   "en": "Pending Cancellation Treasury Circular (PP) Central Contract Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58080,
+   "en": "Pending Cancellation Treasury Circular (PP) Central Contract Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58085,
+   "en": "Cancellation Treasury Circular (PP) Central Contract Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CQ",
+   "statusId": 58090,
+   "en": "Cancellation Treasury Circular (PP) Central Contract Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CRA",
+   "statusId": 97000,
+   "en": "Pending Contract Admin Administrative Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CRA",
+   "statusId": 97050,
+   "en": "Pending Contract Admin Administrative Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CRA",
+   "statusId": 97100,
+   "en": "Pending Contract Admin Administrative Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "CRA",
+   "statusId": 97150,
+   "en": "Pending Contract Admin Administrative Revision  Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51000,
+   "en": "Pending Amendment With Supplemental Submission",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51050,
+   "en": "Pending Amendment With Supplemental Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51100,
+   "en": "Pending Amendment With Supplemental Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51150,
+   "en": "Pending Amendment With Supplemental Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51200,
+   "en": "Pending Meeting Confirmation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51210,
+   "en": "Pending Meeting Confirmation Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51250,
+   "en": "Pending Decision by the Approving Authority at the Ministry / Jabatan Level",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51260,
+   "en": "Pending Decision by the Approving Authority at the Ministry / Jabatan Level Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51300,
+   "en": "Pending Verification",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51320,
+   "en": "Pending Chairperson Sign Off",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51400,
+   "en": "Pending Supplemental Contract Letter Submission",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51405,
+   "en": "Pending Supplemental Contract Letter Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51410,
+   "en": "Pending Supplemental Contract Letter Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51420,
+   "en": "Pending Supplemental Contract Letter Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51450,
+   "en": "Pending Supplemental Contract Letter Acknowledgement",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51500,
+   "en": "Pending Verification Acknowledgement of Supplemental Contract Letter",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51600,
+   "en": "Amendment With Supplemental Contract Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51650,
+   "en": "Amendment With Supplemental Contract Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51700,
+   "en": "Supplemental Contract Letter Completed",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51750,
+   "en": "Supplemental Contract Letter Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51800,
+   "en": "Pending Decision by the Approving Authority at the Ministry of Finance Level",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51850,
+   "en": "Pending Cancellation Acknowledgement Amendment With Supplemental Contract",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51900,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51950,
+   "en": "Pending Rejection Acknowledgement of Supplemental Contract Letter",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51960,
+   "en": "Cancelled due to Disciplinary Action",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51961,
+   "en": "Cancelled due to Bumiputera Status has been Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51970,
+   "en": "Rejected due to Disciplinary Action",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51971,
+   "en": "Rejected due to Bumiputera Status has been Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51980,
+   "en": "Revised due to Disciplinary Action",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51981,
+   "en": "Revised due to Bumiputera Status has been Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51990,
+   "en": "Pending Cancellation Acknowledgement due to Disciplinary Action",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FA",
+   "statusId": 51991,
+   "en": "Pending Cancellation Acknowledgement due to Bumiputera Status has been Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FD",
+   "statusId": 50050,
+   "en": "Pending Fulfilment Details Creation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002293"
+  },
+  {
+   "module": "CT",
+   "docType": "FD",
+   "statusId": 50150,
+   "en": "Pending Fulfilment Details Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002293"
+  },
+  {
+   "module": "CT",
+   "docType": "FD",
+   "statusId": 50200,
+   "en": "Pending Fulfilment Details Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "FD",
+   "statusId": 50250,
+   "en": "Pending Fulfilment Details Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "FD",
+   "statusId": 50300,
+   "en": "Fulfilment Details Approved",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002293"
+  },
+  {
+   "module": "CT",
+   "docType": "FD",
+   "statusId": 50400,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CT260000000002301"
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53000,
+   "en": "Pending Suspension Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53050,
+   "en": "Pending Suspension Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53100,
+   "en": "Pending Suspension Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53150,
+   "en": "Pending Suspension Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53200,
+   "en": "Contract Suspension Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53250,
+   "en": "Contract Suspension Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53300,
+   "en": "Contract Suspension Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FS",
+   "statusId": 53400,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52000,
+   "en": "Pending Termination Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52050,
+   "en": "Pending Termination Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52100,
+   "en": "Pending Termination Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52150,
+   "en": "Pending Termination Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52200,
+   "en": "Pending Termination Letter Printing",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52250,
+   "en": "Contract Termination Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52350,
+   "en": "Contract Termination Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FT",
+   "statusId": 52400,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54000,
+   "en": "Pending Fulfilment Details Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54050,
+   "en": "Pending Fulfilment Details Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54100,
+   "en": "Pending Fulfilment Details Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54150,
+   "en": "Pending Fulfilment Details Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54200,
+   "en": "Fulfilment Details Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54250,
+   "en": "Fulfilment Details Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FU",
+   "statusId": 54300,
+   "en": "Fulfilment Details Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54500,
+   "en": "Pending Amendment Without Supplemental Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54550,
+   "en": "Pending Amendment Without Supplemental Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54600,
+   "en": "Pending Amendment Without Supplemental Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54650,
+   "en": "Pending Amendment Without Supplemental Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54700,
+   "en": "Amendment Without Supplemental Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54750,
+   "en": "Amendment Without Supplemental Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54800,
+   "en": "Amendment Without Supplemental Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "FW",
+   "statusId": 54900,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "LA",
+   "statusId": 50301,
+   "en": "Letter of Acceptance Verified",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54850,
+   "en": "Pending Notification Setting Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54860,
+   "en": "Pending Notification Setting Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54870,
+   "en": "Pending Notification Setting Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54880,
+   "en": "Pending Notification Setting Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54910,
+   "en": "Notification Setting Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54950,
+   "en": "Notification Setting Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "NT",
+   "statusId": 54990,
+   "en": "Notification Setting Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58100,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58105,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58110,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58115,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Creation Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58120,
+   "en": "Treasury Circular (PP) Central Panel Contract Creation Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58125,
+   "en": "Treasury Circular (PP) Central Panel Contract Creation Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58130,
+   "en": "Treasury Circular (PP) Central Panel Contract Creation Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58135,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Update Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58140,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Update Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58145,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Update Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58150,
+   "en": "Pending Treasury Circular (PP) Central Panel Contract Update Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58155,
+   "en": "Treasury Circular (PP) Central Panel Contract Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58160,
+   "en": "Treasury Circular (PP) Central Panel Contract Update Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58165,
+   "en": "Treasury Circular (PP) Central Panel Contract Update Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58170,
+   "en": "Pending Cancellation Treasury Circular (PP) Central Panel Contract Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58175,
+   "en": "Pending Cancellation Treasury Circular (PP) Central Panel Contract Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58180,
+   "en": "Pending Cancellation Treasury Circular (PP) Central Panel Contract Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58185,
+   "en": "Cancellation Treasury Circular (PP) Central Panel Contract Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "PQ",
+   "statusId": 58190,
+   "en": "Cancellation Treasury Circular (PP) Central Panel Contract Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RA",
+   "statusId": 59100,
+   "en": "Pending Designation of Contract Administrator Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RA",
+   "statusId": 59150,
+   "en": "Pending Designation of Contract Administrator Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RA",
+   "statusId": 59300,
+   "en": "Contract Administrator Designation Application Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RA",
+   "statusId": 59301,
+   "en": "Contract Administrator Designation Application completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RA",
+   "statusId": 59350,
+   "en": "Contract Administrator Designation Application Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RA",
+   "statusId": 59400,
+   "en": "Contract Administrator Designation Application Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RC",
+   "statusId": 58600,
+   "en": "Pending Cancel Treasury Circular (PP) Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RC",
+   "statusId": 58650,
+   "en": "Pending Cancel Treasury Circular (PP) Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RC",
+   "statusId": 58700,
+   "en": "Pending Cancel Treasury Circular (PP) Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RC",
+   "statusId": 58750,
+   "en": "Pending Cancel Treasury Circular (PP) Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RC",
+   "statusId": 58800,
+   "en": "Cancel Treasury Circular (PP) Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RC",
+   "statusId": 58850,
+   "en": "Cancel Treasury Circular (PP) Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55000,
+   "en": "Pending Factoring Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55050,
+   "en": "Pending Factoring Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55060,
+   "en": "Factoring Acknowledgement Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55100,
+   "en": "Pending Factoring Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55110,
+   "en": "Factoring Request Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55150,
+   "en": "Factoring Request Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "RF",
+   "statusId": 55160,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57000,
+   "en": "Pending Draft Supplemental Agreement Creation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57050,
+   "en": "Pending Draft Supplemental Agreement Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57100,
+   "en": "Pending Draft Supplemental Agreement Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57150,
+   "en": "Pending Draft Supplemental Agreement Revision Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57250,
+   "en": "Pending Final Supplemental Agreement Update",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57300,
+   "en": "Pending Final Supplemental Agreement Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57350,
+   "en": "Pending Final Supplemental Agreement Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57400,
+   "en": "Pending Final Supplemental Agreement Revision Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57600,
+   "en": "Supplemental Agreement Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57700,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57750,
+   "en": "Pending Supplemental Agreement Creation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CT260000000002328"
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57800,
+   "en": "Pending Supplemental  Agreement Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57850,
+   "en": "Pending Supplemental Agreement Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57900,
+   "en": "Pending Supplemental Agreement Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57950,
+   "en": "Pending Draft Supplemental Agreement Creation Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57955,
+   "en": "Pending Draft Supplemental Agreement Approval Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57960,
+   "en": "Pending Draft Supplemental Agreement Revision Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57965,
+   "en": "Pending Draft Supplemental Agreement Revision Approval Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57970,
+   "en": "Pending Final Supplemental Agreement Update Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57975,
+   "en": "Pending Final Supplemental Agreement Approval Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57980,
+   "en": "Pending Final Supplemental Agreement Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "SA",
+   "statusId": 57985,
+   "en": "Pending Final Supplemental Agreement Revision Approval Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55800,
+   "en": "Pending Update Factoring Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55850,
+   "en": "Pending Update Factoring Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55860,
+   "en": "Update Factoring Acknowledgement Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55870,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55900,
+   "en": "Pending Update Factoring Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55910,
+   "en": "Update Factoring Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "UF",
+   "statusId": 55950,
+   "en": "Update Factoring Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XA",
+   "statusId": 59110,
+   "en": "Pending Remove Designation of Contract Administrator Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XA",
+   "statusId": 59160,
+   "en": "Pending Remove Designation of Contract Administrator Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XA",
+   "statusId": 59310,
+   "en": "Contract Administrator Designation Cancellation Application completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XA",
+   "statusId": 59311,
+   "en": "Contract Administrator Designation Cancellation Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XA",
+   "statusId": 59360,
+   "en": "Remove Designation of Contract Administrator Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XA",
+   "statusId": 59410,
+   "en": "Remove Designation of Contract Administrator Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55200,
+   "en": "Pending Remove Factoring Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55250,
+   "en": "Pending Remove Factoring Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55260,
+   "en": "Remove Factoring Acknowledgement Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55300,
+   "en": "Pending Remove Factoring Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55310,
+   "en": "Remove Factoring Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55350,
+   "en": "Remove Factoring Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "CT",
+   "docType": "XF",
+   "statusId": 55400,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "A59",
+   "statusId": 49000,
+   "en": "Pending AP59 Decision",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "A59",
+   "statusId": 49010,
+   "en": "Normal Payment",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "A59",
+   "statusId": 49020,
+   "en": "Payment Via AP59",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "CN",
+   "statusId": 45600,
+   "en": "Generated",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "CN",
+   "statusId": 45900,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "CN",
+   "statusId": 45910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41441,
+   "en": "Carry Forward",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41500,
+   "en": "Pending Supplier Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CO260000000006664"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41505,
+   "en": "Pending Fulfilment",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CO260000000006663"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41510,
+   "en": "Pending Partial Fulfilment",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41515,
+   "en": "Pending Invoice",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CO260000000006658"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41517,
+   "en": "Pending Revision (Invoice Cancellation)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41520,
+   "en": "Pending Debit Note Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41525,
+   "en": "Pending Payment Match",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CO260000000006664"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41526,
+   "en": "Pending Payment Instruction Query from iGFMAS",
+   "class": "SYSTEM",
+   "state": "RUN",
+   "evidence": "CO260000000006658"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41527,
+   "en": "Pending Payment Instruction Query Verification",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41530,
+   "en": "Pending Payment",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "CO260000000006658"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41535,
+   "en": "Closed",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41540,
+   "en": "Complete for Payment Process",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41600,
+   "en": "Awaiting iGFMAS Response",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41630,
+   "en": "Pending Cancellation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41640,
+   "en": "Pending AP59 Submission",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41900,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41920,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41930,
+   "en": "Closed - Manual Action By User",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41931,
+   "en": "Closed/Manual Payment",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41932,
+   "en": "Closed with manual payment at iGFMAS",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41940,
+   "en": "Cancelled Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CO",
+   "statusId": 41941,
+   "en": "Cancelled due to PTJ Code Changed",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "CO260000000006653"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40500,
+   "en": "Pending Contract Request Creation",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40501,
+   "en": "Pending MTO Creation",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40510,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CR260000000006053"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40515,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40520,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40600,
+   "en": "Awaiting iGFMAS Response",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "CR260000000006066"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40610,
+   "en": "Pending CR Review from iGFMAS",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "CR260000000006066"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40620,
+   "en": "Pending Query Verification",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40800,
+   "en": "Contract Request Approved",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "CR260000000006053"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40810,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40900,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40911,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40940,
+   "en": "Cancelled due to PID validity expired",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40950,
+   "en": "Rejected due to PID validity expired",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "CR",
+   "statusId": 40960,
+   "en": "Cancelled Due to Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "CR260000000006054"
+  },
+  {
+   "module": "FL",
+   "docType": "DN",
+   "statusId": 45000,
+   "en": "Pending Debit Note Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "DN260000000004802"
+  },
+  {
+   "module": "FL",
+   "docType": "DN",
+   "statusId": 45100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "FLOW_MANUAL",
+   "state": "SIMULATED",
+   "evidence": "DN260000000004802"
+  },
+  {
+   "module": "FL",
+   "docType": "DN",
+   "statusId": 45300,
+   "en": "Approved",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "DN260000000004802"
+  },
+  {
+   "module": "FL",
+   "docType": "DN",
+   "statusId": 45400,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "DN260000000004802"
+  },
+  {
+   "module": "FL",
+   "docType": "DN",
+   "statusId": 45410,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "DN260000000004802"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42000,
+   "en": "Pending Acknowledgement",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "01309H005M2600504"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42005,
+   "en": "Acknowledged",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "01400K003S2600004"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42010,
+   "en": "Pending Modification Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "60000730212600002"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42015,
+   "en": "Pending Cancellation Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "60000730212600002"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42030,
+   "en": "Pending Cancellation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "01309H005M2600504"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42810,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "01309H005M2600504"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42900,
+   "en": "Cancelled",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "60000730212600002"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "01309H005M2600504"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42911,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "01309H005M2600504"
+  },
+  {
+   "module": "FL",
+   "docType": "DO",
+   "statusId": 42912,
+   "en": "Cancelled Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "01309H005M2600504"
+  },
+  {
+   "module": "FL",
+   "docType": "FC",
+   "statusId": 49110,
+   "en": "Pending Factoring Company Verification",
+   "class": "UI_NO_FLOW",
+   "state": "CANNOT_UNMAPPED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "FC",
+   "statusId": 49120,
+   "en": "Acknowledged",
+   "class": "UI_NO_FLOW",
+   "state": "CANNOT_UNMAPPED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "FC",
+   "statusId": 49130,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "CANNOT_UNMAPPED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43000,
+   "en": "Pending Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43002,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43004,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43006,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43010,
+   "en": "Approved",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "FN260000000005811"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43020,
+   "en": "Pending Modification Submission",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43030,
+   "en": "Pending Cancellation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "FN260000000005811"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43810,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43900,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43911,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "FN",
+   "statusId": 43912,
+   "en": "Cancelled Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "FN260000000005812"
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44000,
+   "en": "Pending Invoice Creation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44005,
+   "en": "Submitted",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "01400K003S2600003"
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44010,
+   "en": "Pending Cancellation Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "01400K003S2600003"
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44015,
+   "en": "Pending Modification Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "01400K003S2600003"
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44017,
+   "en": "Pending Revision (Invoice Cancellation)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44130,
+   "en": "Pending Cancellation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44900,
+   "en": "Cancelled",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "01400K003S2600003"
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44910,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "IN",
+   "statusId": 44911,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46000,
+   "en": "Pending Payment Match",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46001,
+   "en": "Pending Payment Instruction Query from iGFMAS",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "PA260000000006413"
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46002,
+   "en": "Pending Payment Instruction Query Verification",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46003,
+   "en": "Pending Revision (Invoice Cancellation)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PA260000000006414"
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46005,
+   "en": "Payment Instruction Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PA260000000006413"
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "PA260000000006421"
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46900,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PA260000000006414"
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PA260000000006414"
+  },
+  {
+   "module": "FL",
+   "docType": "PA",
+   "statusId": 46913,
+   "en": "Closed with manual payment at iGFMAS",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PA260000000006414"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41000,
+   "en": "Pending Supplier Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PO260000000007216"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41002,
+   "en": "Pending Rejection Acknowledgement",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41005,
+   "en": "Pending Fulfilment",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "PO260000000007217"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41010,
+   "en": "Pending Partial Fulfilment",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PO260000000007216"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41015,
+   "en": "Pending Invoice",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PO260000000007216"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41017,
+   "en": "Pending Revision (Invoice Cancellation)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41020,
+   "en": "Pending Debit Note Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41025,
+   "en": "Pending Payment Match",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PO260000000007216"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41026,
+   "en": "Pending Payment Instruction Query from iGFMAS",
+   "class": "SYSTEM",
+   "state": "RUN",
+   "evidence": "PO260000000007216"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41027,
+   "en": "Pending Payment Instruction Query Verification",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41030,
+   "en": "Pending Payment",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PO260000000007216"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41035,
+   "en": "Closed",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41040,
+   "en": "Complete for Payment Process",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41130,
+   "en": "Pending Cancellation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41310,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41400,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41410,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41420,
+   "en": "Closed - Manual Action By User",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41421,
+   "en": "Closed/Manual Payment",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41422,
+   "en": "Closed with manual payment at iGFMAS",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41430,
+   "en": "Cancelled by System",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41440,
+   "en": "Cancelled Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 41442,
+   "en": "Cancelled due to PTJ Code Changed",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PO",
+   "statusId": 96708,
+   "en": "Both",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "PO260000000007218"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40000,
+   "en": "Pending Purchase Request Creation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PR260000000005073"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40010,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "PR260000000005072"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40015,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40020,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "PR260000000005075"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40110,
+   "en": "Pending PR Review from iGFMAS",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "PR260000000005076"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40120,
+   "en": "Pending Query Verification",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40300,
+   "en": "Purchase Request Approved",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "PR260000000005073"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40310,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40400,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40401,
+   "en": "Cancelled due to Simple Quote validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40402,
+   "en": "Rejected due to Simple Quote validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40410,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40430,
+   "en": "Cancelled by System",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40440,
+   "en": "Cancelled due to Purchase in Default validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40450,
+   "en": "Rejected due to Purchase in Default validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PR",
+   "statusId": 40460,
+   "en": "Cancelled Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PR260000000005074"
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49300,
+   "en": "Pending Supplier Acknowledgement",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49301,
+   "en": "Pending Invoice",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49302,
+   "en": "Pending Fulfillment",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49303,
+   "en": "Pending Partial Fulfillment",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49304,
+   "en": "Pending Debit Note Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49305,
+   "en": "Pending Payment Match",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49312,
+   "en": "Pending Payment Instruction Query Verification",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "PY",
+   "statusId": 49313,
+   "en": "Pending Revision (Invoice Cancellation)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "RS",
+   "statusId": 49210,
+   "en": "Approved",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "RS",
+   "statusId": 49220,
+   "en": "Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "RS",
+   "statusId": 49221,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47000,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47005,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47100,
+   "en": "Awaiting iGFMAS Response",
+   "class": "FLOW_MANUAL",
+   "state": "SIMULATED",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47800,
+   "en": "Approved",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47810,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47900,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47910,
+   "en": "Cancelled by Year End Process",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SD",
+   "statusId": 47911,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "SD260000000002802"
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48000,
+   "en": "Pending Shipping Instruction Creation",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48005,
+   "en": "Pending Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48010,
+   "en": "Pending Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48015,
+   "en": "Pending Revision Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48800,
+   "en": "Approved",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48810,
+   "en": "Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48900,
+   "en": "Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "FL",
+   "docType": "SI",
+   "statusId": 48911,
+   "en": "Closed Due To AP59",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "PM",
+   "docType": "CP",
+   "statusId": 75005,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "AP261124000001579"
+  },
+  {
+   "module": "PM",
+   "docType": "MR",
+   "statusId": 75000,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "AP261125000001580"
+  },
+  {
+   "module": "PP",
+   "docType": "PE",
+   "statusId": 30006,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PE",
+   "statusId": 30007,
+   "en": "Pending Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PE",
+   "statusId": 30008,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PE",
+   "statusId": 30009,
+   "en": "Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PE",
+   "statusId": 30012,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PE",
+   "statusId": 30014,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30001,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30002,
+   "en": "Pending Verification",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30003,
+   "en": "Pending Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30004,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30005,
+   "en": "Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30010,
+   "en": "Pending Revision Verification",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30011,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "PP",
+   "docType": "PP",
+   "statusId": 30013,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "A1",
+   "statusId": 62600,
+   "en": "Pending Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "A2",
+   "statusId": 62601,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63350,
+   "en": "Pending Online Bidding",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63351,
+   "en": "Online Bidding Started",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63352,
+   "en": "Online Bidding Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63353,
+   "en": "Online Bidding Paused",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63354,
+   "en": "Online Bidding Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63355,
+   "en": "Pending Reschedule Bidding",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BD",
+   "statusId": 63357,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BGT",
+   "statusId": 60100,
+   "en": "Pending Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BGT",
+   "statusId": 60101,
+   "en": "Approved",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BGT",
+   "statusId": 60102,
+   "en": "Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BGT",
+   "statusId": 60103,
+   "en": "Pending Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BPK",
+   "statusId": 60150,
+   "en": "Pending BPK Approval",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004536"
+  },
+  {
+   "module": "SC",
+   "docType": "BPK",
+   "statusId": 60151,
+   "en": "BPK Approval Approved",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "BPK",
+   "statusId": 60152,
+   "en": "BPK Approval Rejected",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "BPK",
+   "statusId": 60153,
+   "en": "Pending Document Revision (BPK)",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004537"
+  },
+  {
+   "module": "SC",
+   "docType": "BPK",
+   "statusId": 60154,
+   "en": "Pending BPK Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "BPK",
+   "statusId": 60157,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "BSA",
+   "statusId": 63500,
+   "en": "Pending Additional BSV Attendance Approval",
+   "class": "UI_NO_FLOW",
+   "state": "CANNOT_UNMAPPED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSA",
+   "statusId": 63501,
+   "en": "Additional BSV Attendance Approved",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSA",
+   "statusId": 63502,
+   "en": "Additional BSV Attendance Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSA",
+   "statusId": 63503,
+   "en": "Pending Briefing/Site Visit Update Approval",
+   "class": "UI_NO_FLOW",
+   "state": "CANNOT_UNMAPPED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSV",
+   "statusId": 60550,
+   "en": "Pending",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSV",
+   "statusId": 60551,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSV",
+   "statusId": 60552,
+   "en": "Cancel",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSV",
+   "statusId": 60553,
+   "en": "Postpone",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "BSV",
+   "statusId": 60554,
+   "en": "Request Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60200,
+   "en": "Pending Committee Formation Submission",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60201,
+   "en": "Pending Committee Formation Approval",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004536"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60202,
+   "en": "Committee Formation Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004536"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60203,
+   "en": "Pending Committee Formation Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60204,
+   "en": "Pending Committee Formation Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60205,
+   "en": "Pending Appoint Finalization Committee Secretary",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60206,
+   "en": "Pending Finalization Committee Formation",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60207,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60208,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60209,
+   "en": "Proceed Manual Due To PTJ Code Changed",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60210,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60211,
+   "en": "Pending Jawatankuasa Perolehan Kerajaan di Peringkat Perbendaharaan Malaysia Decision",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60212,
+   "en": "Pending Committee Formation Update Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60213,
+   "en": "Pending Committee Formation Update (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "CMT",
+   "statusId": 60214,
+   "en": "Pending Committee Formation Update Approval (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "DAR",
+   "statusId": 63557,
+   "en": "Pending Desk Officer Assistant Update Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "DAR",
+   "statusId": 63558,
+   "en": "Desk Officer Assistant Update Approval Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "DAR",
+   "statusId": 63559,
+   "en": "Desk Officer Assistant Update Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "DAR",
+   "statusId": 63560,
+   "en": "Pending Desk Officer Assistant Update (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "DAR",
+   "statusId": 63561,
+   "en": "Pending Desk Officer Assistant Update Approval (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "DAR",
+   "statusId": 63562,
+   "en": "Desk Officer Assistant's update is cancelled.",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62050,
+   "en": "Pending Confirmation Evaluation Committee",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62051,
+   "en": "Pending Document Compliance and Proposal Evaluation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62053,
+   "en": "Pending Proposal Evaluation Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62054,
+   "en": "Pending Proposal Evaluation Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62055,
+   "en": "Proposal Evaluation Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62058,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EC",
+   "statusId": 62059,
+   "en": "Pending Document Compliance and Proposal Evaluation (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60350,
+   "en": "Pending Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60351,
+   "en": "Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60352,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60353,
+   "en": "Pending Supplier Acceptance",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60354,
+   "en": "Accepted",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60355,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60356,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "EPV",
+   "statusId": 60357,
+   "en": "Revised",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62150,
+   "en": "Pending Confirmation Financial Evaluation Committee",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62151,
+   "en": "Pending Financial Proposal Evaluation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62152,
+   "en": "Pending Financial Proposal Evaluation Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62153,
+   "en": "Pending Financial Proposal Evaluation Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62154,
+   "en": "Financial Proposal Evaluation Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62155,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62157,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "FEC",
+   "statusId": 62158,
+   "en": "Pending Financial Proposal Evaluation (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62500,
+   "en": "Pending Letter Of Acceptance Submission",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LA260000000004240"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62501,
+   "en": "Pending Letter Of Acceptance Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62502,
+   "en": "Pending Letter of Acceptance Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62504,
+   "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "LA260000000004228"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62505,
+   "en": "Pending Verification of Acknowledgement Receipt's Letter Of Acceptance",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "LA260000000004228"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62506,
+   "en": "Letter of Acceptance Completed",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "LA260000000004226"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62507,
+   "en": "Letter of Acceptance Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62508,
+   "en": "Pending Letter of Acceptance Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62509,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LA260000000004227"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62510,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62511,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62514,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62515,
+   "en": "Rejected due to Simple Quote validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62516,
+   "en": "Cancelled due to Simple Quote validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62517,
+   "en": "Cancelled (Not agree with extension validity period)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62520,
+   "en": "Pending Acknowledgement Receipt's Letter Of Acceptance (Supplier Action)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62521,
+   "en": "Pending Cancellation Letter of Acceptance",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62522,
+   "en": "Letter of Acceptance Cancellation Approved",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62523,
+   "en": "Letter of Acceptance Cancellation Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62602,
+   "en": "Letter of Acceptance Verified",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62604,
+   "en": "QT Cancellation Request From User Approved By BPK,MoF",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LA",
+   "statusId": 62605,
+   "en": "Quotation/Tender Closed by Agency Due To Validity Period Expired/Special Approval",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "LA260000000004238"
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62400,
+   "en": "Pending Letter Of Intent Submission",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LI260000000000781"
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62401,
+   "en": "Pending Letter Of Intent Approval",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LI260000000000781"
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62402,
+   "en": "Pending Letter Of Intent Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62403,
+   "en": "Pending Supplier Acknowledgement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LI260000000000781"
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62404,
+   "en": "Pending Letter Of Intent Negotiation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LI260000000000781"
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62405,
+   "en": "Letter Of Intent Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "LI260000000000781"
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62406,
+   "en": "Letter of Intent Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62407,
+   "en": "Pending Letter Of Intent Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62408,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62409,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62411,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62412,
+   "en": "QT Cancellation Request From User Approved By BPK,MoF",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62413,
+   "en": "Quotation/Tender Closed by Agency Due To Validity Period Expired/Special Approval",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "LI",
+   "statusId": 62414,
+   "en": "Cancelled (Not agree with extension validity period)",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "MS",
+   "statusId": 62650,
+   "en": "Pending",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "MS",
+   "statusId": 62651,
+   "en": "Cancelled",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "MS",
+   "statusId": 62652,
+   "en": "Done",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "MS",
+   "statusId": 62653,
+   "en": "Postpone",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62000,
+   "en": "Pending Confirmation Opening Committee",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62001,
+   "en": "Pending Compliance Verification",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62002,
+   "en": "Pending Compliance Verification Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62003,
+   "en": "Pending Compliance Verification Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62004,
+   "en": "Compliance Verification Completed",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62005,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62007,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "OC",
+   "statusId": 62008,
+   "en": "Pending Compliance Verification (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60250,
+   "en": "Pending Procurement Board Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60251,
+   "en": "Procurement Board Approval Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60252,
+   "en": "Procurement Board Approval Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60253,
+   "en": "Pending Procurement Board Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60254,
+   "en": "Pending Supplier Acceptance",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60255,
+   "en": "Pending Procurement Board Revision Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60256,
+   "en": "Accepted",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PCB",
+   "statusId": 60257,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60800,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60801,
+   "en": "Pending Verification",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60802,
+   "en": "Pending Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60803,
+   "en": "Pending Request Note Creation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60804,
+   "en": "Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60805,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60806,
+   "en": "Pending Simple Quote Creation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60807,
+   "en": "Purchase in Default Validity Period Expired",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60808,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60810,
+   "en": "Pending Supplier Response for Request to Reduce Minimum Order Quantity",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60811,
+   "en": "Pending Verification of Supplier Response",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60812,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60813,
+   "en": "Pending Revision Verification",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60814,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PD",
+   "statusId": 60815,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60750,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60751,
+   "en": "Pending Supplier Response",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60752,
+   "en": "Pending Request Note Creation",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60753,
+   "en": "Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60754,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60755,
+   "en": "Expired",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PI",
+   "statusId": 60756,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "PI260000000000804"
+  },
+  {
+   "module": "SC",
+   "docType": "PR",
+   "statusId": 61600,
+   "en": "Pending",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PR",
+   "statusId": 61601,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PTJ",
+   "statusId": 60300,
+   "en": "Pending Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PTJ",
+   "statusId": 60301,
+   "en": "Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PTJ",
+   "statusId": 60302,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PTJ",
+   "statusId": 60303,
+   "en": "Pending Revision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "PTJ",
+   "statusId": 60304,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 12340,
+   "en": "Rejected: Test Only",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 12341,
+   "en": "Approved: Test Only",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 12342,
+   "en": "Pending: Test Only",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 63450,
+   "en": "Pending Cancellation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 63451,
+   "en": "Cancelation Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 63452,
+   "en": "Cancellation Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 63453,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QC",
+   "statusId": 63454,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QDR",
+   "statusId": 63460,
+   "en": "Pending Desk Officer Maintenance Approval",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QDR",
+   "statusId": 63461,
+   "en": "Desk Officer Maintenance Approved",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QDR",
+   "statusId": 63462,
+   "en": "Desk Officer Maintenance Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QDR",
+   "statusId": 63463,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QDR",
+   "statusId": 63464,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60002,
+   "en": "Pending Quotation / Tender Submission",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004537"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60003,
+   "en": "Pending Specification Preparation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60004,
+   "en": "Pending Document Preparation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60005,
+   "en": "Pending Document Approval for Publication",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60006,
+   "en": "Pending Document Revision",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004538"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60007,
+   "en": "Pending Notice Publishing",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60008,
+   "en": "Pending Briefing / Site Visit Registration",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60009,
+   "en": "Pending Proposal Preparation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60010,
+   "en": "Pending Proposal Evaluation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60011,
+   "en": "Pending Supplier Finalization",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60012,
+   "en": "Pending Letter of Intent Preparation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60013,
+   "en": "Pending Letter of Acceptance Preparation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60014,
+   "en": "Awarded",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60015,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60016,
+   "en": "Pending Proposal Re-Evaluation",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60017,
+   "en": "Re-Finalization",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60018,
+   "en": "Cancelled Due To Migration",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60022,
+   "en": "Quotation / Tender Closed",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60023,
+   "en": "Pending Recommendation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60024,
+   "en": "Pending Quotation / Tender Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004536"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60025,
+   "en": "Pending Specification Endorsement",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004536"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60026,
+   "en": "Pending Specification Sign Off",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60027,
+   "en": "Pending Specification Preparation (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60028,
+   "en": "Pending Specification Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60029,
+   "en": "Pending Procurement Board Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60030,
+   "en": "Pending BPK Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60031,
+   "en": "Pending Reschedule",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60032,
+   "en": "Archived",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60033,
+   "en": "Pending Reform New Committee",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60034,
+   "en": "Pending Specification Committee Chairperson Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60035,
+   "en": "Pending Reschedule Publication",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60036,
+   "en": "Pending Reschedule Proposal Closing Date",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60037,
+   "en": "Pending Specification Revision Approval",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60038,
+   "en": "Pending Document Revision Approval",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60039,
+   "en": "Pending Document Revision",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60040,
+   "en": "Pending Specification Changes Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60041,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60042,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60043,
+   "en": "Cancelled due to PTJ Code Changed",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60044,
+   "en": "Proceed Manual Due To PTJ Code Changed",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60045,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60046,
+   "en": "QT Cancellation Request From User Approved By BPK,MoF",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60047,
+   "en": "Quotation/Tender Closed by Agency Due To Validity Period Expired/Special Approval",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60048,
+   "en": "Pending Jawatankuasa Perolehan Kerajaan di Peringkat Perbendaharaan Malaysia Decision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60049,
+   "en": "Pending Recommendation (Revise Briefing Paper)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60051,
+   "en": "Pending Document Approval for Publication (Reschedule)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60052,
+   "en": "Pending Presentation/Demonstration Invitation",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60053,
+   "en": "Cancelled Due To No Supplier Passed Technical Evaluation And Qualified For Presentation/Demonstration",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60054,
+   "en": "Cancelled due to New CPTPP Regulations",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60055,
+   "en": "Pending Quotation / Tender Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60056,
+   "en": "Pending Request Review from eGPA",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QT",
+   "statusId": 60057,
+   "en": "Pending Reschedule (eGPA)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "QTA",
+   "statusId": 63400,
+   "en": "Prepare",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QTA",
+   "statusId": 63401,
+   "en": "Pending Approval",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "QTA",
+   "statusId": 63402,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60700,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60701,
+   "en": "Pending Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "RN260000000004927"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60702,
+   "en": "Pending Revision",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60703,
+   "en": "Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "RN260000000004927"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60704,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60705,
+   "en": "Rejected",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60706,
+   "en": "Cancelled due to Purchase in Default validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60707,
+   "en": "Pending Revision Approval",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60708,
+   "en": "Pending Assign Item Code",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "RN260000000004925"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60709,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60710,
+   "en": "Cancelled due to Simple Quote validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60711,
+   "en": "Rejected due to Simple Quote validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 60715,
+   "en": "Rejected due to Purchase in Default validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "RN",
+   "statusId": 62603,
+   "en": "Request Note Approved",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "RN260000000004918"
+  },
+  {
+   "module": "SC",
+   "docType": "SE",
+   "statusId": 63550,
+   "en": "Pending Specification Preparation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SE",
+   "statusId": 63551,
+   "en": "Pending Specification Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SE",
+   "statusId": 63552,
+   "en": "Pending Specification Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SE",
+   "statusId": 63553,
+   "en": "Pending Specification Preparation (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SE",
+   "statusId": 63554,
+   "en": "Completed",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SE",
+   "statusId": 63556,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62200,
+   "en": "Pending Confirmation Finalization Committee",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62201,
+   "en": "Pending Supplier Finalization Decision",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62202,
+   "en": "Pending Escalation to BPK",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62203,
+   "en": "Supplier Finalization Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62204,
+   "en": "Pending Bidding Coordination",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62205,
+   "en": "Pending Bidding",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62206,
+   "en": "Pending Bidding Escalation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62207,
+   "en": "Pending Confirmation Finalization Committee After Bidding",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62208,
+   "en": "Pending Supplier Finalization After Bidding",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62209,
+   "en": "Pending Multiple LOI Recommendation",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62210,
+   "en": "Pending Supplier Finalization Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62211,
+   "en": "Pending Supplier Finalization Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62213,
+   "en": "Pending LOI Preparation / Acknowledgement or Negotiation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62214,
+   "en": "Proceed Manual Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62215,
+   "en": "Proceed Manual Due To PTJ Code Changed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62216,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "OPEN_SYSTEM",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62217,
+   "en": "Pending Confirmation Finalization Committee (Reverse LOI Status)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62218,
+   "en": "Supplier Finalization Preparation (Reverse LOI Status)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62219,
+   "en": "Pending Supplier Finalization Endorsement (Reverse LOI Status)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62220,
+   "en": "Pending Supplier Finalization Sign Off (Reverse LOI Status)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62221,
+   "en": "Pending Confirmation Finalization Committee (Reverse LOA Status)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62222,
+   "en": "Supplier Finalization Preparation (Reverse LOA Status)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62223,
+   "en": "Pending Supplier Finalization Endorsement (Reverse LOA Status)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62224,
+   "en": "Pending Supplier Finalization Sign Off (Reverse LOA Status)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62225,
+   "en": "Letter of Intent Cancelled (Reverse LOI)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62226,
+   "en": "Letter of Acceptance Cancelled (Reverse LOA)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62227,
+   "en": "Pending Letter of Acceptance Acknowledgement (Supplier Action)",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62228,
+   "en": "Pending Jawatankuasa Perolehan Kerajaan di Peringkat Perbendaharaan Malaysia Decision",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62229,
+   "en": "Pending Supplier Finalization Decision (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62230,
+   "en": "Pending Supplier Finalization After Bidding (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62231,
+   "en": "Pending Multiple LOI Recommendation (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SF",
+   "statusId": 62233,
+   "en": "Pending Jawatankuasa Perolehan Kerajaan di Peringkat Perbendaharaan Malaysia Decision After Bidding",
+   "class": "UI_NO_FLOW",
+   "state": "OPEN_NO_FLOW",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60850,
+   "en": "Pending Submission",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60851,
+   "en": "Pending Supplier Response",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "SQ260000000002365"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60852,
+   "en": "Pending Request Note Creation",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "SQ260000000002365"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60853,
+   "en": "Completed",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "SQ260000000002363"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60854,
+   "en": "Cancelled",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60855,
+   "en": "Cancelled due to Purchase in Default validity period is expired (60 days).",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60856,
+   "en": "Response Submitted",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60857,
+   "en": "Pending Item Code Assignment",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60858,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60860,
+   "en": "Simple Quote Validity Period Expired",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "SQ",
+   "statusId": 60861,
+   "en": "Cancelled due to Simple Quote validity period is expired (60 days)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "SQ260000000002371"
+  },
+  {
+   "module": "SC",
+   "docType": "TD",
+   "statusId": 60500,
+   "en": "Pending Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "TD",
+   "statusId": 60501,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62100,
+   "en": "Pending Confirmation Technical Evaluation Committee",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62101,
+   "en": "Pending Technical Proposal Evaluation",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62103,
+   "en": "Pending Technical Proposal Evaluation Endorsement",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62104,
+   "en": "Pending Technical Proposal Evaluation Sign Off",
+   "class": "UI_NO_FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62105,
+   "en": "Technical Proposal Evaluation Completed",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "QT260000000004539"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62106,
+   "en": "Cancel Due To Ministry Restructuring",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62108,
+   "en": "Quotation Has Been Cancelled Due To Proposal Validity Expired. Mof Approval Is Required For Further Action (If Any)",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62109,
+   "en": "Pending Technical Proposal Evaluation (Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62110,
+   "en": "Pending Technical Proposal Evaluation (Presentation / Demonstration)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62111,
+   "en": "Pending Technical Proposal Evaluation Endorsement (Presentation / Demonstration)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62112,
+   "en": "Pending Technical Proposal Evaluation Sign Off (Presentation / Demonstration)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62113,
+   "en": "Pending Technical Proposal Evaluation (Presentation / Demonstration - Revision)",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62114,
+   "en": "Cancelled Due To No Supplier Passed Technical Evaluation And Qualified For Presentation/Demonstration.",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62115,
+   "en": "Pending Cancellation",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62116,
+   "en": "Cancellation Approved",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TEC",
+   "statusId": 62117,
+   "en": "Cancellation Rejected",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "QT260000000004524"
+  },
+  {
+   "module": "SC",
+   "docType": "TS",
+   "statusId": 60450,
+   "en": "Pending Submission",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SC",
+   "docType": "TS",
+   "statusId": 60451,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20800,
+   "en": "Pending Complaint Investigation",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20801,
+   "en": "New Complaint - Rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20805,
+   "en": "Pending PTPK Decision - Round 1",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20806,
+   "en": "PTPK  Decision Round 1 - rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20810,
+   "en": "Pending Preparation Show Cause Letter",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20815,
+   "en": "Updating Supplier Received Show Cause Letter Date",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20820,
+   "en": "Pending Response Show Cause Letter by the Supplier",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20825,
+   "en": "Pending PTPK Decision - Round 2",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20826,
+   "en": "PTPK  Decision Round 2 - rejected",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20830,
+   "en": "Pending Preparation of Accusation Letter",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20835,
+   "en": "Updating Supplier Received Accusation Letter Date",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20840,
+   "en": "Pending Response Accusation Letter by the Supplier",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20845,
+   "en": "Pending JKTT Decision",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "DA",
+   "statusId": 20899,
+   "en": "Completed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20700,
+   "en": "Not Defined",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20701,
+   "en": "Bumiputera",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20702,
+   "en": "Registered",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20703,
+   "en": "Bumiputera Operated from Home",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20704,
+   "en": "Non-Bumiputera Operated from Home",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20705,
+   "en": "Bumiputera and Foreign Company Joint Venture",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20706,
+   "en": "Bumiputera and Non-Bumiputera and Foreign Company Joint Venture",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "RGS",
+   "statusId": 20707,
+   "en": "Foreign Company",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SPY",
+   "statusId": 20401,
+   "en": "Pending Payment Response",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SPY",
+   "statusId": 20402,
+   "en": "Payment Failed",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SPY",
+   "statusId": 20405,
+   "en": "Payment Successful",
+   "class": "NEVER_USED",
+   "state": "CANNOT_NEVER_USED",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20100,
+   "en": "Pending Application Declaration",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "KU-02112026-0021"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20101,
+   "en": "Pending Supporting Document Verification",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20102,
+   "en": "Pending Application Verification",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20103,
+   "en": "Pending Review Site Visit Report - Before Approval",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20104,
+   "en": "Pending Review Application",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "KR-25112026-0001"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20105,
+   "en": "Pending Site Visit",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20106,
+   "en": "Pending Re-Site Visit",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20107,
+   "en": "Pending Reply Enquiry by Processing Officer",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20108,
+   "en": "Pending Application Approval",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20109,
+   "en": "Pending Application Re-Approval",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20110,
+   "en": "Pending Site Visit Assignment - Before Approval",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20111,
+   "en": "Pending  Re-Site Visit Assignment",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20112,
+   "en": "Rejected by Processing Officer",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20113,
+   "en": "Rejected by Approver",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20114,
+   "en": "Pending Payment Processing Fee",
+   "class": "FLOW_MANUAL",
+   "state": "RUN",
+   "evidence": "KR-25112026-0001"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20115,
+   "en": "Pending Application Rejection",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20116,
+   "en": "Pending Review Site Visit Report - After Approval",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20117,
+   "en": "Pending Site Visit Assignment - After Approval",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20118,
+   "en": "Rejected by system - No response to inquiry",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20119,
+   "en": "Auto-cancelled by System due to No Payment for Registration Fee",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20120,
+   "en": "Auto-deleted by System due to No Payment for Processing Fee",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20121,
+   "en": "The application has been rejected by system due to no response to Processing Officer inquiry within pre-defined period",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20122,
+   "en": "The application has been rejected by system due to no response to supporting document inquiry within pre-defined period",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20123,
+   "en": "Auto-deleted by system due to supplier has cancelled the MOF Account",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20124,
+   "en": "Draft application deleted by system due to not declare within the given period",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20125,
+   "en": "Pending Site Visit - Before Approval",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20126,
+   "en": "Pending Site Visit - After Approval",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20188,
+   "en": "Delete Company",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20189,
+   "en": "Deleted by Contractor",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20190,
+   "en": "Deleted by Consultant",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20191,
+   "en": "MOF Account Cancelled by Contractor",
+   "class": "FLOW",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20192,
+   "en": "MOF Account Cancelled by Consultant",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20193,
+   "en": "Cancelled Pre-Registration Account",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20198,
+   "en": "Pending Certificate Generation",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20199,
+   "en": "Registered",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "KR-25112026-0001"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20200,
+   "en": "Pending Application Enquiry",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20201,
+   "en": "Rejection",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20202,
+   "en": "Cancelled",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20209,
+   "en": "Cancelled Due To Migration",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20251,
+   "en": "Pending Payment Registration Fee",
+   "class": "FLOW",
+   "state": "RUN",
+   "evidence": "KR-25112026-0001"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20252,
+   "en": "Pending Payment Soft Cert Fee",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20299,
+   "en": "Updated Successfully",
+   "class": "NEVER_USED",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20301,
+   "en": "Pending Review Cancellation",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20311,
+   "en": "Cancelled by system due to not activate the activation link within the given period",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20312,
+   "en": "Auto-deleted by system due to MOF Account has been cancelled",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20398,
+   "en": "Pending Revise Application",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20399,
+   "en": "Cancellation Approved",
+   "class": "FLOW_MANUAL",
+   "state": "OPEN_FLOW_EXISTS",
+   "evidence": ""
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 20400,
+   "en": "Application auto-rejected by system due to not submit supporting document (Offline) within pre-defined period",
+   "class": "SYSTEM",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  },
+  {
+   "module": "SM",
+   "docType": "SR",
+   "statusId": 97350,
+   "en": "Cancelled Pre-Registration Account",
+   "class": "UI_NO_FLOW",
+   "state": "SIMULATED",
+   "evidence": "KN-24112026-0035"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+  "flowRunId": "ct-amendment-supplement_20261128-134940",
+  "flowId": "ct-amendment-supplement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-28T13:49:40+08:00",
+  "updatedAt": "2026-11-28T13:50:48+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "CT": "CT260000000002328"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "CT-101": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-28_134941",
+          "startedAt": "2026-11-28T13:49:48+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\01_CT-101\\2026-11-28_134941",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51000
+          },
+          "endedAt": "2026-11-28T13:50:48+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Tab \"Approver Settings and Checklist\" did not open"
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

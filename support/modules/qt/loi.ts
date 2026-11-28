@@ -1,4 +1,5 @@
 import type { Page } from '@playwright/test';
+import { openTasks } from '../../core/bpm-tasks';
 import { dbSchema } from '../../core/doc-status';
 import { sitQuery } from '../../core/sit-db';
 import { clickButton, openTab, pageMessages, pfIdle, pfSelect, pressAndConfirm } from './pf';
@@ -140,6 +141,40 @@ export async function prepareLoi(ctx: StageCtx, qt: string): Promise<{ messages:
   // the LI status is written a moment after the message (11:27:00 check vs 11:27:01 row, 2026-11-25): wait for it
   const st = await waitLoiStatus(page, li, 62401);
   return { messages: [...msgs, `LOI ${li || '(number not shown)'} at ${st}`] };
+}
+
+/** SC_LOI_LOA.IS_LOI_REQ of a QT's recommended supplier row: '1' Yes, '0' No, '' not chosen yet. */
+export function loiRequiredOf(qt: string): string {
+  return sitQuery(`select nvl(to_char(x.is_loi_req), '-') from ngep_sit.sc_loi_loa x join ngep_sit.sc_qt q on q.qt_id = x.doc_id where q.qt_no = '${qt.replace(/'/g, '')}' order by x.created_date desc`)[0]?.[0]?.replace('-', '') ?? '';
+}
+
+/**
+ * QT-024: award without a Letter of Intent. Prepare LOI task (SF 62213) → LOI Required = No on the recommended supplier
+ * row → Save → Submit (the Submit button appears only after the save; Save alone leaves "Prepare LOI" ASSIGNED, SIT
+ * 2026-11-28 on QT260000000004524). SIT then withdraws "Prepare LOI" and opens "Prepare LOA" for the Desk Officer (path
+ * read from QT260000000004535 / LA260000000004244, 2026-11-25). Proof: a "Prepare LOA" BPM task exists.
+ */
+export async function loiNotRequired(ctx: StageCtx, qt: string): Promise<{ messages: string[] }> {
+  const { page, log } = ctx;
+  if (loiRequiredOf(qt) === '1' || loiOf(qt)) throw new Error(`${qt} already has LOI Required = Yes / an LOI (${loiOf(qt) || 'draft'}): not changing it`);
+  const messages: string[] = [];
+  if (!openTasks(qt, 'Prepare LOA').length) {
+    await openTask(page, ctx.baseURL, qt, log);
+    const req = page.locator('select[id$="isLoiReq"]').first();
+    await req.waitFor({ state: 'attached', timeout: 30_000 });
+    if (loiRequiredOf(qt) !== '0') {
+      await req.selectOption({ label: 'No' });
+      await pfIdle(page);
+      await clickButton(page, 'Save');
+      log(`LOI required = No; save: ${(await pageMessages(page)).join(' | ') || 'no message'}`);
+    }
+    messages.push(...(await pressAndConfirm(page, 'Submit', log)));
+    log(`submit: ${messages.join(' | ') || 'no message'}`);
+  }
+  // BPM opens "Prepare LOA" a moment after the submit
+  for (let i = 0; i < 24 && !openTasks(qt, 'Prepare LOA').length; i++) await page.waitForTimeout(5000);
+  if (!openTasks(qt, 'Prepare LOA').length) throw new Error(`No "Prepare LOA" task for ${qt} 2 min after the submit (IS_LOI_REQ = ${loiRequiredOf(qt) || 'null'})`);
+  return { messages: [...messages, `LOI not required for ${qt}; Prepare LOA open`] };
 }
 
 /** The LOI numbers of a QT (SC_LOI → SC_LOI_LOA.DOC_ID = SC_QT.QT_ID), newest first. */

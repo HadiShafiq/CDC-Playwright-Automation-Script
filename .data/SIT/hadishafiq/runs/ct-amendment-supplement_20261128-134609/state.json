@@ -1,0 +1,50 @@
+{
+  "flowRunId": "ct-amendment-supplement_20261128-134609",
+  "flowId": "ct-amendment-supplement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-28T13:46:09+08:00",
+  "updatedAt": "2026-11-28T13:46:43+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "CT": "CT260000000002328"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "CT-101": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-28_134610",
+          "startedAt": "2026-11-28T13:46:18+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\01_CT-101\\2026-11-28_134610",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": null
+          },
+          "endedAt": "2026-11-28T13:46:43+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is saved."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Button \"Submit\" not found"
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

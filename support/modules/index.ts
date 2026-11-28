@@ -11,10 +11,11 @@ import { prepareSpec } from './qt/spec';
 import { bpkApprove, prepareDocuments } from './qt/docprep';
 import { submitProposal, techAction } from './qt/supplier';
 import { ecPhase } from './qt/ecphase';
-import { acceptLoi, approveLoi, negotiateLoi, prepareLoi } from './qt/loi';
+import { acceptLoi, approveLoi, loiNotRequired, negotiateLoi, prepareLoi } from './qt/loi';
 import { acceptLoa, prepareLoa, verifyLoa } from './qt/loa';
 import { loadPasswordFor } from '../credentials';
 import { approveMaintenance, maintain, paymentMatchWith } from './fl/maintenance';
+import { ackFaSupplier, approveSa, confirmFaMeeting, createFa, createSa, faTaskAction, prepareSupplementalLetter, signOffFa, updateFaResult } from './ct/amendment';
 
 /**
  * Typed step functions for steps that have no Katalon script ("automation": "module" in registry/workflows/*.json).
@@ -195,6 +196,21 @@ export const MODULE_STEPS: Record<string, ModuleStep> = {
   'QT-019': { selfLogin: true, run: async (ctx) => acceptLoi(ctx, need(ctx, 'QT'), async (u) => !!(await loadPasswordFor(ctx.env.name, u))) },
   'QT-020': { selfLogin: true, run: async (ctx) => negotiateLoi(ctx, need(ctx, 'QT')) },
   'QT-021': { loginAs: QT_SIT.users.DESK_OFFICER, run: async (ctx) => prepareLoa(ctx, need(ctx, 'QT')) },
+  // CT Amendment With Supplement (FA): Contract Administrator = account of KAT-040 (registry login)
+  'CT-101': { run: async (ctx) => createFa(ctx, need(ctx, 'CT')) },
+  'CT-102': { run: async (ctx) => faTaskAction(ctx, need(ctx, 'CT'), 'Approve', 51050) },
+  'CT-103': { run: async (ctx) => confirmFaMeeting(ctx, need(ctx, 'CT')) },
+  'CT-104': { run: async (ctx) => updateFaResult(ctx, need(ctx, 'CT')) },
+  'CT-105': { selfLogin: true, run: async (ctx) => signOffFa(ctx, need(ctx, 'CT')) },
+  'CT-106': { run: async (ctx) => faTaskAction(ctx, need(ctx, 'CT'), 'Acknowledge', 51320) },
+  'CT-107': { run: async (ctx) => prepareSupplementalLetter(ctx, need(ctx, 'CT')) },
+  'CT-108': { selfLogin: true, run: async (ctx) => ackFaSupplier(ctx, need(ctx, 'CT')) },
+  'CT-109': { run: async (ctx) => faTaskAction(ctx, need(ctx, 'CT'), 'Acknowledge', 51500) },
+  'CT-110': { run: async (ctx) => createSa(ctx, need(ctx, 'CT')) },
+  'CT-111': { run: async (ctx) => approveSa(ctx, need(ctx, 'CT')) },
+  'QT-024': { loginAs: QT_SIT.users.DESK_OFFICER, run: async (ctx) => loiNotRequired(ctx, need(ctx, 'QT')) },
+  // QT LOA that SIT routes to "Approve LOA" (62501), e.g. LA260000000004244 (2026-11-25); skipped at any other status
+  'QT-025': { run: async (ctx) => approveTask(ctx, need(ctx, 'LA')) },
   'QT-022': { selfLogin: true, run: async (ctx) => acceptLoa(ctx, need(ctx, 'QT')) },
   'QT-023': { selfLogin: true, run: async (ctx) => verifyLoa(ctx, need(ctx, 'QT')) },
   'QT-006': { loginAs: QT_SIT.users.SC_CHAIR, run: async (ctx) => approveTask(ctx, need(ctx, 'QT'), { button: 'Sign Off', remark: 'Signed off (QA automation)' }) },

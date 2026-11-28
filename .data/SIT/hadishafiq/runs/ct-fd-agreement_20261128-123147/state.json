@@ -1,0 +1,236 @@
+{
+  "flowRunId": "ct-fd-agreement_20261128-123147",
+  "flowId": "ct-fd-agreement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-28T12:31:47+08:00",
+  "updatedAt": "2026-11-28T12:44:44+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "LA": "LA260000000004254",
+    "CT": "CT260000000002328"
+  },
+  "officers": {},
+  "gates": {
+    "LA_LOOKUP": {
+      "done": true,
+      "by": "hadishafiq (--input)",
+      "at": "2026-11-28T12:31:57+08:00",
+      "values": {
+        "LA": "LA260000000004254"
+      }
+    }
+  },
+  "steps": {
+    "KAT-040": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_123148",
+          "startedAt": "2026-11-28T12:31:59+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\02_KAT-040\\2026-11-28_123148",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002328",
+            "statusId": 50050
+          },
+          "endedAt": "2026-11-28T12:33:42+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Details Creation CT260000000002328 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002328"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "FD_SUBMITTED",
+      "db": {
+        "kind": "CT:FD",
+        "docNo": "CT260000000002328",
+        "expected": 50150,
+        "statusId": 50150,
+        "en": "Pending Fulfilment Details Approval",
+        "bm": "Menunggu Kelulusan Maklumat Pemenuhan",
+        "at": "2026-11-28 12:33:35",
+        "ok": true,
+        "checkedAt": "2026-11-28T12:33:42+08:00"
+      }
+    },
+    "KAT-041": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_123148",
+          "startedAt": "2026-11-28T12:33:44+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\03_KAT-041\\2026-11-28_123148",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002328",
+            "statusId": 50150
+          },
+          "endedAt": "2026-11-28T12:35:28+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "CT260000000002328 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-28_123634",
+          "startedAt": "2026-11-28T12:36:45+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\03_KAT-041\\2026-11-28_123634",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002328",
+            "statusId": 50150
+          },
+          "selfHeal": "the attempt failed before opening the document (CT260000000002328 is not in this account's My Task (no result)), so nothing was submitted",
+          "endedAt": "2026-11-28T12:38:30+08:00",
+          "messages": [],
+          "classification": "TEST_DATA (medium): the document is not in this account's task list (wrong account, not assigned yet, or already done)",
+          "error": "CT260000000002328 is not in this account's My Task (no result)"
+        },
+        {
+          "runId": "2026-11-28_124056",
+          "startedAt": "2026-11-28T12:41:06+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\03_KAT-041\\2026-11-28_124056",
+          "dbBefore": {
+            "kind": "CT:FD",
+            "docNo": "CT260000000002328",
+            "statusId": 50150
+          },
+          "endedAt": "2026-11-28T12:41:53+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Fulfilment Details Creation CT260000000002328 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002328"
+      },
+      "login": "officer 690127065209: BPM task \"Review FD\" of CT260000000002328 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "FD_APPROVED",
+      "db": {
+        "kind": "CT:FD",
+        "docNo": "CT260000000002328",
+        "expected": 50300,
+        "statusId": 50300,
+        "en": "Fulfilment Details Approved",
+        "bm": "Maklumat Pemenuhan Diluluskan",
+        "at": "2026-11-28 12:41:48",
+        "ok": true,
+        "checkedAt": "2026-11-28T12:41:53+08:00"
+      }
+    },
+    "KAT-042": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_124056",
+          "startedAt": "2026-11-28T12:41:55+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\04_KAT-042\\2026-11-28_124056",
+          "dbBefore": {
+            "kind": "CT:AC",
+            "docNo": "CT260000000002328",
+            "statusId": 56750
+          },
+          "endedAt": "2026-11-28T12:43:05+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agreement CT260000000002328 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002328"
+      },
+      "login": "Katalon default account of the step",
+      "checkpoint": "AGREEMENT_SUBMITTED",
+      "db": {
+        "kind": "CT:AC",
+        "docNo": "CT260000000002328",
+        "expected": 56800,
+        "statusId": 56800,
+        "en": "Pending Agreement Approval",
+        "bm": "Menunggu Kelulusan Perjanjian",
+        "at": "2026-11-28 12:42:58",
+        "ok": true,
+        "checkedAt": "2026-11-28T12:43:05+08:00"
+      }
+    },
+    "KAT-043": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_124056",
+          "startedAt": "2026-11-28T12:43:08+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\05_KAT-043\\2026-11-28_124056",
+          "dbBefore": {
+            "kind": "CT:AC",
+            "docNo": "CT260000000002328",
+            "statusId": 56800
+          },
+          "endedAt": "2026-11-28T12:43:52+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Agreement CT260000000002328 is approved."
+            }
+          ]
+        }
+      ],
+      "outputs": {
+        "CT": "CT260000000002328"
+      },
+      "login": "officer 690127065209: BPM task \"Review AC/SA\" of CT260000000002328 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "AGREEMENT_APPROVED",
+      "db": {
+        "kind": "CT:AC",
+        "docNo": "CT260000000002328",
+        "expected": 56600,
+        "statusId": 56600,
+        "en": "Agreement Completed",
+        "bm": "Perjanjian Selesai",
+        "at": "2026-11-28 12:43:44",
+        "ok": true,
+        "checkedAt": "2026-11-28T12:43:52+08:00"
+      }
+    },
+    "KAT-045": {
+      "state": "completed-unverified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_124056",
+          "startedAt": "2026-11-28T12:43:54+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-fd-agreement\\06_KAT-045\\2026-11-28_124056",
+          "endedAt": "2026-11-28T12:44:44+08:00",
+          "messages": []
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040",
+      "checkpoint": "AMENDMENT_FORM_FILLED"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

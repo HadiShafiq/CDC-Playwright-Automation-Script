@@ -763,7 +763,11 @@
           "doc": "QT"
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "doc": "LA"
+        }
+      ],
       "checkpoint": {
         "id": "QT_LOA_SUBMITTED",
         "description": "LA submitted (62501 pending approval or 62504)",
@@ -828,6 +832,72 @@
         "verification": "execution",
         "evidence": "SIT 2026-11-25: LA260000000004240 62505 → 62506 (\"is completed\"; the 62506 row came ~2 min later)",
         "proofSql": "select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loa a on a.loa_id = w.doc_id join ngep_sit.sc_loi_loa x on x.loi_loa_id = a.loi_loa_id join ngep_sit.sc_qt q on q.qt_id = x.doc_id where w.doc_type = 'LA' and w.status_id in (62506) and q.qt_no = '{QT}'"
+      }
+    },
+    "QT-024": {
+      "title": "Award without a Letter of Intent: LOI Required = No",
+      "role": "Desk Officer",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/qt/loi.ts loiNotRequired — verified on SIT 2026-11-28 (QT260000000004524)",
+      "instructions": "Prepare LOI task (SF 62213): recommended supplier row, LOI Required = No, Save, then Submit (appears after the save). SIT withdraws Prepare LOI and opens Prepare LOA.",
+      "inputs": [
+        {
+          "var": "qtNo",
+          "doc": "QT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "LOI_NOT_REQUIRED",
+        "description": "Prepare LOA BPM task opened (LOI Required = No submitted)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: QT260000000004524 LOI Required = No → Save → Submit (\"is submitted successfully\") → Prepare LOA task opened (run qt-loa-no-loi_20261128-121618). Path first read from QT260000000004535 / LA260000000004244 (another team, read only). Save alone left Prepare LOI ASSIGNED (run qt-loa-no-loi_20261128-120920)",
+        "proofSql": "select count(*) from SIT01_SOAINFRA.wftask@SITSOA where customattributestring1 = '{QT}' and activityname = 'Prepare LOA'"
+      }
+    },
+    "QT-025": {
+      "title": "Approve the QT Letter of Acceptance (only when SIT asks for approval)",
+      "role": "LOA Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "automation": "module",
+      "bpmTask": "Approve LOA",
+      "onlyIfStatus": {
+        "kind": "LA",
+        "statusId": 62501
+      },
+      "source": "support/modules (generic approveTask, as LA-APPROVE) — 2026-11-28",
+      "instructions": "BPM task Approve LOA (assignee): open from My Task, Approve.",
+      "inputs": [
+        {
+          "var": "laNo",
+          "doc": "LA"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "QT_LOA_APPROVED",
+        "description": "LA at 62504 Pending Acknowledgement Receipt",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "SIT DB 2026-11-25: LA260000000004244 (QT260000000004535, no LOI) had a done Approve LOA task before Accept LOA (another team's document, read only)",
+        "db": {
+          "kind": "LA",
+          "statusId": 62504,
+          "en": "Pending Acknowledgement Receipt's Letter Of Acceptance",
+          "bm": "Menunggu Pengakuan Penerimaan Surat Setuju Terima",
+          "observeOnly": true,
+          "evidence": "LA-APPROVE (direct-loa) 62501 → 62504, LA260000000004238 2026-11-24"
+        }
       }
     }
   },
@@ -944,6 +1014,20 @@
       "notes": "VERIFIED on SIT 2026-11-25: QT260000000004539 → LA260000000004240 62500 → 62504 → 62505 → 62506.",
       "steps": [
         "QT-021",
+        "QT-022",
+        "QT-023"
+      ]
+    },
+    {
+      "id": "qt-loa-no-loi",
+      "submodule": "award",
+      "title": "QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506)",
+      "verification": "execution",
+      "notes": "VERIFIED on SIT 2026-11-28: QT260000000004524 (SF 62213) → LOI Required = No → LA260000000004254 62500 → 62504 (no approval: QT-025 skipped) → 62505 → 62506 (run qt-loa-no-loi_20261128-121618). QT-025 Approve LOA only when SIT routes the LA to 62501 (seen on LA260000000004244).",
+      "steps": [
+        "QT-024",
+        "QT-021",
+        "QT-025",
         "QT-022",
         "QT-023"
       ]

@@ -1,0 +1,98 @@
+
+Running 5 tests using 1 worker
+
+[12:09:29] qt-loa-no-loi/01_QT-024: QT-024 Award without a Letter of Intent: LOI Required = No — role Desk Officer, login: Katalon default account of the step
+[12:09:29] qt-loa-no-loi/01_QT-024: QT-024: login 881204115188 (role user)
+[12:09:32] qt-loa-no-loi/01_QT-024: QT-024: Logged in as 881204115188
+[12:09:42] qt-loa-no-loi/01_QT-024: QT-024: LOI required = No; save: Quotation/Tender QT260000000004524 is saved.
+[12:12:11] qt-loa-no-loi/01_QT-024: QT-024: IS_LOI_REQ = 0; Prepare LOA task not open yet
+[12:12:14] qt-loa-no-loi/01_QT-024: Closed the TERKINI announcement
+[12:12:16] qt-loa-no-loi/01_QT-024: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 01 QT-024 Award without a Letter of Intent: LOI Required = No @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/01_QT-024 @QT-024 (2.8m)
+[12:12:17] qt-loa-no-loi/02_QT-021: QT-021 Prepare the Letter of Acceptance and submit it — role Desk Officer, login: Katalon default account of the step
+[12:12:17] qt-loa-no-loi/02_QT-021: QT-021: login 881204115188 (role user)
+[12:12:21] qt-loa-no-loi/02_QT-021: QT-021: Logged in as 881204115188
+[12:13:02] qt-loa-no-loi/02_QT-021: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 02 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/02_QT-021 @QT-021 (46.8s)
+  -  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 03 QT-025 Approve the QT Letter of Acceptance (only when SIT asks for approval) @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/03_QT-025 @QT-025
+  -  4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 04 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/04_QT-022 @QT-022
+  -  5 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 05 QT-023 Desk Officer verifies the accepted Letter of Acceptance @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/05_QT-023 @QT-023
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 02 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/02_QT-021 @QT-021 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Prepare Letter Of Acceptance' }).first()
+
+
+       at ..\support\modules\qt\loa.ts:95
+
+      93 |     await page.locator('tr').filter({ hasText: existing }).locator('button').last().click();
+      94 |   } else {
+    > 95 |     await page.getByRole('button', { name: 'Prepare Letter Of Acceptance' }).first().click();
+         |                                                                                      ^
+      96 |   }
+      97 |   await pfIdle(page);
+      98 |   await page.locator('[id$="fileExtNo"]').first().waitFor({ timeout: 30_000 });
+        at prepareLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:95:86)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_120920\flows-en-qt.flow-qt-loa-no-d93ad-of-Acceptance-and-submit-it-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_120920\flows-en-qt.flow-qt-loa-no-d93ad-of-Acceptance-and-submit-it-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 02 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/02_QT-021 @QT-021 
+  3 did not run
+  1 passed (3.7m)
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 01 QT-024 Award without a Letter of Intent: LOI Required = No @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/01_QT-024 @QT-024
+[12:14:09] qt-loa-no-loi/02_QT-021: SELF-HEAL QT-021: retry once — the step's proof query finds nothing in the SIT DB (select count(*) from ngep_sit.sc_workflow_status w join ngep_sit.sc_loa a on a.l…)
+[12:14:10] qt-loa-no-loi/02_QT-021: QT-021 Prepare the Letter of Acceptance and submit it — role Desk Officer, login: Katalon default account of the step
+[12:14:10] qt-loa-no-loi/02_QT-021: QT-021: login 881204115188 (role user)
+[12:14:13] qt-loa-no-loi/02_QT-021: QT-021: Logged in as 881204115188
+[12:14:54] qt-loa-no-loi/02_QT-021: Signed out (SSO logout)
+  ✘  2 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 02 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/02_QT-021 @QT-021 (47.2s)
+  -  3 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 03 QT-025 Approve the QT Letter of Acceptance (only when SIT asks for approval) @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/03_QT-025 @QT-025
+  -  4 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 04 QT-022 Supplier accepts the Letter of Acceptance @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/04_QT-022 @QT-022
+  -  5 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 05 QT-023 Desk Officer verifies the accepted Letter of Acceptance @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/05_QT-023 @QT-023
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 02 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/02_QT-021 @QT-021 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Prepare Letter Of Acceptance' }).first()
+
+
+       at ..\support\modules\qt\loa.ts:95
+
+      93 |     await page.locator('tr').filter({ hasText: existing }).locator('button').last().click();
+      94 |   } else {
+    > 95 |     await page.getByRole('button', { name: 'Prepare Letter Of Acceptance' }).first().click();
+         |                                                                                      ^
+      96 |   }
+      97 |   await pfIdle(page);
+      98 |   await page.locator('[id$="fileExtNo"]').first().waitFor({ timeout: 30_000 });
+        at prepareLoa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\loa.ts:95:86)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_121404\flows-en-qt.flow-qt-loa-no-d93ad-of-Acceptance-and-submit-it-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_121404\flows-en-qt.flow-qt-loa-no-d93ad-of-Acceptance-and-submit-it-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-loa-no-loi [EN] QT at SF 62213, no LOI, to Letter of Acceptance verified (LA 62506) › 02 QT-021 Prepare the Letter of Acceptance and submit it @flow-qt-loa-no-loi @module-qt @lang-en @FLOW @qt-loa-no-loi/02_QT-021 @QT-021 
+  1 skipped
+  3 did not run

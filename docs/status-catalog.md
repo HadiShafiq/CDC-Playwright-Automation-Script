@@ -27,7 +27,7 @@ database status it shows, and how to prepare a transaction there for **manual te
 | sm | reject | `sm-delete-pending-reject` (5), `sm-reject-by-po` (4), `sm-reject-by-approver` (5) |
 | qt | quotation-tender | `qt-to-recommendation` (15), `qt-to-recommendation-no-bpk` (14) |
 | qt | revision | `qt-doc-revision` (8), `qt-bpk-revision` (8) |
-| qt | award | `qt-supplier-finalization` (1), `qt-loi` (4), `qt-loa` (3) |
+| qt | award | `qt-supplier-finalization` (1), `qt-loi` (4), `qt-loa` (3), `qt-loa-no-loi` (5) |
 | sq | simple-quote | `sq-services` (2), `sq-product` (2), `sq-product-services` (2) |
 | dp | simple-quote-route | `dp-sq-pr` (7) |
 | dp | add-to-cart | `dp-add-to-cart` (4) |
@@ -40,6 +40,7 @@ database status it shows, and how to prepare a transaction there for **manual te
 | direct-loa | from-dp | `dloa-from-dp-rn` (8) |
 | ct | fd-agreement | `ct-fd-agreement` (5) |
 | ct | group-task | `ct-claim-group-task` (1) |
+| ct | amendment | `ct-amendment-supplement` (11) |
 | fl | non-contract | `fl-noncontract` (8), `fl-noncontract-partial-debit-note` (8) |
 | fl | contract | `fl-contract` (8), `fl-contract-debit-note` (9) |
 | fl | maintenance | `fl-noncontract-do-maint` (8), `fl-noncontract-inv-maint` (11), `fl-contract-do-maint` (8), `fl-contract-inv-maint` (11) |
@@ -123,9 +124,11 @@ Quotation/Tender from draft through specification, documents, BPK, publication, 
 | **LOI_APPROVED** | LOI at 62403 Pending Supplier Acknowledgement | QT-018 LOI approver approves the Letter of Intent (LOI Approver) | — | execution | award / `qt-loi` (2 items) |
 | **LOI_ACCEPTED** | LOI at 62404 Pending Letter Of Intent Negotiation | QT-019 Supplier accepts the Letter of Intent (Supplier) | — | execution | award / `qt-loi` (3 items) |
 | **LOI_COMPLETED** | LOI at 62405 Letter Of Intent Completed | QT-020 Desk Officer records the LOI negotiation result (Desk Officer) | — | execution | award / `qt-loi` (4 items) |
-| **QT_LOA_SUBMITTED** | LA submitted (62501 pending approval or 62504) | QT-021 Prepare the Letter of Acceptance and submit it (Desk Officer) | — | execution | award / `qt-loa` (1 items) |
-| **QT_LOA_ACCEPTED** | LA at 62505 (acknowledged by the supplier) | QT-022 Supplier accepts the Letter of Acceptance (Supplier (company admin)) | — | execution | award / `qt-loa` (2 items) |
-| **QT_LOA_VERIFIED** | LA at 62506 (verified) | QT-023 Desk Officer verifies the accepted Letter of Acceptance (Desk Officer) | — | execution | award / `qt-loa` (3 items) |
+| **QT_LOA_SUBMITTED** | LA submitted (62501 pending approval or 62504) | QT-021 Prepare the Letter of Acceptance and submit it (Desk Officer) | — | execution | award / `qt-loa` (1 items)<br>award / `qt-loa-no-loi` (2 items) |
+| **QT_LOA_ACCEPTED** | LA at 62505 (acknowledged by the supplier) | QT-022 Supplier accepts the Letter of Acceptance (Supplier (company admin)) | — | execution | award / `qt-loa` (2 items)<br>award / `qt-loa-no-loi` (4 items) |
+| **QT_LOA_VERIFIED** | LA at 62506 (verified) | QT-023 Desk Officer verifies the accepted Letter of Acceptance (Desk Officer) | — | execution | award / `qt-loa` (3 items)<br>award / `qt-loa-no-loi` (5 items) |
+| **LOI_NOT_REQUIRED** | Prepare LOA BPM task opened (LOI Required = No submitted) | QT-024 Award without a Letter of Intent: LOI Required = No (Desk Officer) | — | execution | award / `qt-loa-no-loi` (1 items) |
+| **QT_LOA_APPROVED** | LA at 62504 Pending Acknowledgement Receipt | QT-025 Approve the QT Letter of Acceptance (only when SIT asks for approval) (LOA Approver) | LA **62504** Pending Acknowledgement Receipt's Letter Of Acceptance / Menunggu Pengakuan Penerimaan Surat Setuju Terima *(expected, not yet seen on SIT)* | source | award / `qt-loa-no-loi` (3 items) |
 
 ## sq — Simple Quote
 
@@ -200,6 +203,17 @@ From a Desk-Officer-verified LOA: Fulfilment Details (FD) submit/approve, agreem
 | **AGREEMENT_SUBMITTED** | Agreement submitted to the Contract Approver | KAT-042 Submit Agreement (Contract Administrator) | CT:AC **56800** Pending Agreement Approval / Menunggu Kelulusan Perjanjian | execution | fd-agreement / `ct-fd-agreement` (4 items; LA_LOOKUP) |
 | **AGREEMENT_APPROVED** | Agreement approved | KAT-043 Approve Agreement (Contract Approver) | CT:AC **56600** Agreement Completed / Perjanjian Selesai | execution | fd-agreement / `ct-fd-agreement` (5 items; LA_LOOKUP) |
 | **AMENDMENT_FORM_FILLED** | Amendment form filled (NOT submitted: the Katalon script has no Save/Submit) | KAT-045 Contract Amendment with Supplement: fill the form (the Katalon script never submits) (Contract Administrator) | — | source | fd-agreement / `ct-fd-agreement` (6 items; LA_LOOKUP) |
+| **FA_SUBMITTED** | FA at 51050 Pending Amendment With Supplemental Approval | CT-101 Contract Amendment With Supplement: create and submit (FA) (Contract Administrator) | CT:FA **51050** Pending Amendment With Supplemental Approval / Menunggu Kelulusan Pindaan Dengan Kontrak Tambahan | execution | amendment / `ct-amendment-supplement` (1 items) |
+| **FA_APPROVED** | FA at 51200 Pending Meeting Confirmation (committee route) | CT-102 Contract Approver approves the amendment with supplement (Review FA) (Contract Approver) | CT:FA **51200** Pending Meeting Confirmation / Menunggu Pengesahan Mesyuarat | execution | amendment / `ct-amendment-supplement` (2 items) |
+| **FA_MEETING_CONFIRMED** | FA at 51250 Pending Decision by the Approving Authority | CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) (Desk Officer (committee secretary)) | CT:FA **51250** Pending Decision by the Approving Authority at the Ministry / Jabatan Level / Menunggu Keputusan Pihak Berkuasa Melulus di Peringkat Kementerian / Jabatan | execution | amendment / `ct-amendment-supplement` (3 items) |
+| **FA_RESULT_UPDATED** | FA at 51300 Pending Verification (members sign off) | CT-104 Committee secretary records the approving authority decision (Update FA Result) (Desk Officer (committee secretary)) | CT:FA **51300** Pending Verification / Menunggu Pengesahan | execution | amendment / `ct-amendment-supplement` (4 items) |
+| **FA_SIGNED_OFF** | FA at 51320 Pending Chairperson Sign Off | CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) (Committee members) | CT:FA **51320** Pending Chairperson Sign Off / Menunggu Pengesahan Pengerusi | execution | amendment / `ct-amendment-supplement` (5 items) |
+| **FA_CHAIR_SIGNED_OFF** | FA at 51400 Pending Supplemental Contract Letter Submission | CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) (Committee chairperson) | CT:FA **51400** Pending Supplemental Contract Letter Submission / Menunggu Penyerahan Surat Berkaitan Kontrak Tambahan | execution | amendment / `ct-amendment-supplement` (6 items) |
+| **FA_LETTER_SUBMITTED** | FA at 51450 Pending Supplemental Contract Letter Acknowledgement (acknowledge officer verification No; with Yes SIT goes to 51405 + Endorse LOA) | CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) (Contract Administrator) | CT:FA **51450** Pending Supplemental Contract Letter Acknowledgement / Menunggu Pengesahan Surat Berkaitan Kontrak Tambahan | execution | amendment / `ct-amendment-supplement` (7 items) |
+| **FA_LETTER_ACKNOWLEDGED** | FA at 51500 Pending Verification Acknowledgement of Supplemental Contract Letter | CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) (Supplier (company admin)) | CT:FA **51500** Pending Verification Acknowledgement of Supplemental Contract Letter / Menunggu Pengesahan Penerimaan Surat Berkaitan Kontrak Tambahan | execution | amendment / `ct-amendment-supplement` (8 items) |
+| **FA_COMPLETED** | FA at 51700 Supplemental Contract Letter Completed | CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) (Contract Administrator) | CT:FA **51700** Supplemental Contract Letter Completed / Surat Berkaitan Kontrak Tambahan Telah Lengkap | execution | amendment / `ct-amendment-supplement` (9 items) |
+| **SA_SUBMITTED** | SA leaves 57750 Pending Supplemental Agreement Creation (submitted to the Contract Approver) | CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) (Contract Administrator) | — | source | amendment / `ct-amendment-supplement` (10 items) |
+| **SA_APPROVED** | SA approved (supplemental agreement completed) | CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) (Contract Approver) | — | source | amendment / `ct-amendment-supplement` (11 items) |
 
 ## fl — Fulfilment
 

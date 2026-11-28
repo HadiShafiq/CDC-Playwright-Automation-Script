@@ -107,6 +107,28 @@ Pending, in order:
 
 **Latest (2026-11-25 19:15):** FL contract flows ALL VERIFIED: fl-contract (QT contract), fl-contract-do-maint (CT260000000002315 schedule 2, DO → 42900), fl-contract-inv-maint (LA260000000004233 → CT260000000002308, invoice → 44900). Still blocked: FL non-contract ×4 (PR5075/5076 at 40110, iGFMAS SIT passes CR but not PR), SM update-profile family (supplier data), sm-cancel-mof (soft cert defect). New run options: --officer STEP=account:KAT-0xx (another step's Katalon account), --var KAT-057.ScheduleNo=N (each periodic-contract schedule allows one CR per PTJ). Next candidates: QT LOA without LOI (LOI Required = No), QT reject/cancel paths, recount status coverage.
 
+**2026-11-28:** **qt-loa-no-loi VERIFIED** (new QT-024 LOI Required = No → Save → Submit → Prepare LOA; QT-025 Approve LOA
+only at 62501): QT260000000004524 → SF 62213 (QT-016, one ERR-BPM-10030 self-healed) → LA260000000004254 62500 → 62504 →
+62505 → 62506 (run qt-loa-no-loi_20261128-121618). FL non-contract still blocked: PR5075/5076 at 40110 (checked 2026-11-28 11:50).
+LA260000000004254 is free for ct-fd-agreement / a QT contract. Next candidates: QT reject/cancel paths, recount status coverage.
+
+**2026-11-28 14:45 (paused by the user) — CT amendment with supplement (FA) being built:** flow `ct-amendment-supplement`,
+module `support/modules/ct/amendment.ts`, sandbox **CT260000000002328** (from LA260000000004254; FD 50300, AC 56600).
+VERIFIED on SIT: CT-101 Create FA (51000 → 51050), CT-102 Review FA (→ 51200), CT-103 Confirm FA Meeting (→ 51250,
+committee 711105085487 chair + 770614135921/770614135925), CT-104 Update FA Result (→ 51300), CT-105 Sign Off (→ 51320),
+CT-106 Chairperson SignOff (→ 51400), CT-107 supplemental letter SL260000000000967 (→ 51450; acknowledge-officer
+verification No skips 51405), CT-108 supplier Ack FA (→ 51500; Acknowledge is enabled only after the letter PDF is
+downloaded), CT-109 Verify FA (→ **51700 Supplemental Contract Letter Completed**). **FA workflow done end to end.**
+SIT then opened SA 57750 (task Create Draft AC/SA). **Stuck at CT-110 (Create SA):** witnesses + uploads saved in the draft,
+but Submit is refused ERR-750010 "Approver is mandatory" although Shamsul Azri (690127065209, the approver of AC/FD/FA of
+this contract) shows in Selected Approver; after Submit the Selected list comes back empty. Tried: select→Save→Submit,
+Save→select→Submit, Remove All + Add, no Save (KAT-042 order) — all refused. SA still 57750 (nothing submitted). Next ideas:
+compare the AC run of KAT-042 (same portlet) step by step (it chooses the approver as the last action, never saves), check
+the picklist's hidden selects before Submit, or ask a person to submit once manually and watch. Then CT-111 Review AC/SA.
+Resume: `qa retry --run ct-amendment-supplement_20261128-135322 --step CT-110` then `qa resume`.
+Also done today: KAT-041/KAT-043 log in as the BPM assignee; coverage tool `tests/tools/coverage.tool.spec.ts` →
+docs/status-proven.md (369/804). Temporary: `tests/tools/q.tool.spec.ts`, `tests/tools/probe-fa.tool.spec.ts` (delete when done). Nothing committed yet.
+
 New-PC setup: `npm ci`, `npx playwright install chromium`; copy `.auth/` and `.data/` from the old PC (never via git);
 DBeaver workspace `EP` with the "SIT" connection (sit-db reads `%APPDATA%\DBeaverData\workspace6\EP\.dbeaver`);
 Oracle client sqlplus at `C:\oracle\product\10.2.0\client_1\bin\sqlplus.exe` (or env `SQLPLUS_PATH`); network/VPN to SIT;

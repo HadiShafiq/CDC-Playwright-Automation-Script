@@ -46,7 +46,11 @@ for (const f of flows)
   f.steps.forEach((r, i) => {
     if (typeof r !== 'string') return;
     const s = steps[r];
-    const score = RANK[f.verification] * 100 + (s.automation === 'manual' ? 50 : 0) + f.steps.slice(0, i + 1).filter((x) => typeof x === 'object').length * 10 + i;
+    // tie-break (+0.5): a flow that starts from a document the tester must give (e.g. qt-loa needs a QT at 62405) comes
+    // after a self-contained flow reaching the same point
+    const first = steps[f.steps.find((x) => typeof x === 'string')];
+    const needsInput = (first?.inputs ?? []).length > 0 ? 0.5 : 0;
+    const score = RANK[f.verification] * 100 + (s.automation === 'manual' ? 50 : 0) + f.steps.slice(0, i + 1).filter((x) => typeof x === 'object').length * 10 + i + needsInput;
     points.push({ flow: f, index: i, step: s, score });
   });
 const reachOf = (kind, statusId) =>

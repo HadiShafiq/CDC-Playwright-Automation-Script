@@ -1,0 +1,634 @@
+{
+  "flowRunId": "ct-amendment-supplement_20261128-135322",
+  "flowId": "ct-amendment-supplement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-28T13:53:22+08:00",
+  "updatedAt": "2026-11-28T16:05:12+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "CT": "CT260000000002328"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "CT-101": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_135323",
+          "startedAt": "2026-11-28T13:53:30+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\01_CT-101\\2026-11-28_135323",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51000
+          },
+          "endedAt": "2026-11-28T13:53:49+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is successfully submitted to Contract Approver."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040",
+      "checkpoint": "FA_SUBMITTED",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51050,
+        "statusId": 51050,
+        "en": "Pending Amendment With Supplemental Approval",
+        "bm": "Menunggu Kelulusan Pindaan Dengan Kontrak Tambahan",
+        "at": "2026-11-28 13:53:42",
+        "ok": true,
+        "checkedAt": "2026-11-28T13:53:49+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-102": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_135706",
+          "startedAt": "2026-11-28T13:57:16+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\02_CT-102\\2026-11-28_135706",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51050
+          },
+          "endedAt": "2026-11-28T13:57:37+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is approved and sent to the Desk Officer of the Quotation Committee / Procurement Board for the preparation of the meeting."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 690127065209: BPM task \"Review FA\" of CT260000000002328 is ASSIGNED to 690127065209 (SIT WFTASK)",
+      "checkpoint": "FA_APPROVED",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51200,
+        "statusId": 51200,
+        "en": "Pending Meeting Confirmation",
+        "bm": "Menunggu Pengesahan Mesyuarat",
+        "at": "2026-11-28 13:57:30",
+        "ok": true,
+        "checkedAt": "2026-11-28T13:57:37+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-103": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_140509",
+          "startedAt": "2026-11-28T14:05:22+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\03_CT-103\\2026-11-28_140509",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51200
+          },
+          "endedAt": "2026-11-28T14:06:00+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Role is mandatory."
+            }
+          ],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.waitFor: Timeout 20000ms exceeded."
+        },
+        {
+          "runId": "2026-11-28_140643",
+          "startedAt": "2026-11-28T14:06:55+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\03_CT-103\\2026-11-28_140643",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51200
+          },
+          "endedAt": "2026-11-28T14:07:24+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is saved."
+            },
+            {
+              "severity": "info",
+              "text": "Approving Authority Information for Supplementary Contract Amendment With CT260000000002328 has been updated."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "meeting submit: Approving Authority Information for Supplementary Contract Amendment With CT260000000002328 has been updated.",
+          "reconciled": {
+            "by": "hadishafiq",
+            "at": "2026-11-28T14:08:37+08:00",
+            "decision": "went through",
+            "values": {}
+          }
+        }
+      ],
+      "outputs": {},
+      "login": "officer 881204115188: BPM task \"Confirm FA Meeting\" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51250,
+        "statusId": 51250,
+        "en": "Pending Decision by the Approving Authority at the Ministry / Jabatan Level",
+        "bm": "Menunggu Keputusan Pihak Berkuasa Melulus di Peringkat Kementerian / Jabatan",
+        "at": "2026-11-28 14:07:17",
+        "ok": true,
+        "checkedAt": "2026-11-28T14:11:00+08:00"
+      }
+    },
+    "CT-104": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_141050",
+          "startedAt": "2026-11-28T14:11:03+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\04_CT-104\\2026-11-28_141050",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51250
+          },
+          "endedAt": "2026-11-28T14:11:49+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.isDisabled: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-28_141243",
+          "startedAt": "2026-11-28T14:12:58+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\04_CT-104\\2026-11-28_141243",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51250
+          },
+          "endedAt": "2026-11-28T14:13:16+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Button \"Save\" not found"
+        },
+        {
+          "runId": "2026-11-28_141450",
+          "startedAt": "2026-11-28T14:15:12+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\04_CT-104\\2026-11-28_141450",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51250
+          },
+          "endedAt": "2026-11-28T14:17:56+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is saved."
+            },
+            {
+              "severity": "error",
+              "text": "Decision Paper is mandatory. (ERR-100022)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100022: Decision Paper is mandatory. (ERR-100022)",
+          "error": "result submit: FA still 51250 (Decision Paper is mandatory. (ERR-100022))"
+        },
+        {
+          "runId": "2026-11-28_142122",
+          "startedAt": "2026-11-28T14:21:35+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\04_CT-104\\2026-11-28_142122",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51250
+          },
+          "endedAt": "2026-11-28T14:21:57+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is saved."
+            },
+            {
+              "severity": "info",
+              "text": "The decision of Approving Authorities at the Ministry / Jabatan Level for Amendment With Supplemental Contract CT260000000002328 has been updated."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 881204115188: BPM task \"Update FA Result\" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)",
+      "checkpoint": "FA_RESULT_UPDATED",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51300,
+        "statusId": 51300,
+        "en": "Pending Verification",
+        "bm": "Menunggu Pengesahan",
+        "at": "2026-11-28 14:21:49",
+        "ok": true,
+        "checkedAt": "2026-11-28T14:21:57+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-105": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_142441",
+          "startedAt": "2026-11-28T14:24:51+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\05_CT-105\\2026-11-28_142441",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51300
+          },
+          "endedAt": "2026-11-28T14:25:24+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "FA_SIGNED_OFF",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51320,
+        "statusId": 51320,
+        "en": "Pending Chairperson Sign Off",
+        "bm": "Menunggu Pengesahan Pengerusi",
+        "at": "2026-11-28 14:25:16",
+        "ok": true,
+        "checkedAt": "2026-11-28T14:25:24+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-106": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_142702",
+          "startedAt": "2026-11-28T14:27:16+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\06_CT-106\\2026-11-28_142702",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51320
+          },
+          "endedAt": "2026-11-28T14:27:33+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Amendment With Supplementary Contract CT260000000002328 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "officer 711105085487: BPM task \"Chairperson SignOff\" of CT260000000002328 is ASSIGNED to 711105085487 (SIT WFTASK)",
+      "checkpoint": "FA_CHAIR_SIGNED_OFF",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51400,
+        "statusId": 51400,
+        "en": "Pending Supplemental Contract Letter Submission",
+        "bm": "Menunggu Penyerahan Surat Berkaitan Kontrak Tambahan",
+        "at": "2026-11-28 14:27:26",
+        "ok": true,
+        "checkedAt": "2026-11-28T14:27:33+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-107": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_143044",
+          "startedAt": "2026-11-28T14:30:56+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\07_CT-107\\2026-11-28_143044",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51400
+          },
+          "endedAt": "2026-11-28T14:31:40+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.waitFor: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-28_143218",
+          "startedAt": "2026-11-28T14:32:30+08:00",
+          "result": "completed-unverified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\07_CT-107\\2026-11-28_143218",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51400
+          },
+          "endedAt": "2026-11-28T14:33:23+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Contract Letter CT260000000002328 is saved."
+            },
+            {
+              "severity": "info",
+              "text": "Supplemental Contract Letter CT260000000002328 is successfully submitted for acknowledgment."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040",
+      "checkpoint": "FA_LETTER_SUBMITTED",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51450,
+        "statusId": 51450,
+        "en": "Pending Supplemental Contract Letter Acknowledgement",
+        "bm": "Menunggu Pengesahan Surat Berkaitan Kontrak Tambahan",
+        "at": "2026-11-28 14:32:46",
+        "ok": true,
+        "checkedAt": "2026-11-28T14:36:32+08:00"
+      }
+    },
+    "CT-108": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_143619",
+          "startedAt": "2026-11-28T14:36:32+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\08_CT-108\\2026-11-28_143619",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51450
+          },
+          "endedAt": "2026-11-28T14:36:50+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Button \"Acknowledge\" not found"
+        },
+        {
+          "runId": "2026-11-28_143904",
+          "startedAt": "2026-11-28T14:39:15+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\08_CT-108\\2026-11-28_143904",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51450
+          },
+          "endedAt": "2026-11-28T14:39:34+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Contract Letter CT260000000002328 is saved."
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Acknowledge is still disabled after ticking the declaration and saving (nothing acknowledged)"
+        },
+        {
+          "runId": "2026-11-28_153434",
+          "startedAt": "2026-11-28T15:34:47+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\08_CT-108\\2026-11-28_153434",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51450
+          },
+          "endedAt": "2026-11-28T15:35:21+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Contract Letter CT260000000002328 is acknowledged."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "FA_LETTER_ACKNOWLEDGED",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51500,
+        "statusId": 51500,
+        "en": "Pending Verification Acknowledgement of Supplemental Contract Letter",
+        "bm": "Menunggu Pengesahan Penerimaan Surat Berkaitan Kontrak Tambahan",
+        "at": "2026-11-28 15:35:13",
+        "ok": true,
+        "checkedAt": "2026-11-28T15:35:21+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-109": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_153707",
+          "startedAt": "2026-11-28T15:37:21+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\09_CT-109\\2026-11-28_153707",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51500
+          },
+          "endedAt": "2026-11-28T15:37:38+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Contract Letter CT260000000002328 is completed."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040",
+      "checkpoint": "FA_COMPLETED",
+      "db": {
+        "kind": "CT:FA",
+        "docNo": "CT260000000002328",
+        "expected": 51700,
+        "statusId": 51700,
+        "en": "Supplemental Contract Letter Completed",
+        "bm": "Surat Berkaitan Kontrak Tambahan Telah Lengkap",
+        "at": "2026-11-28 15:37:31",
+        "ok": true,
+        "checkedAt": "2026-11-28T15:37:38+08:00",
+        "observeOnly": true
+      }
+    },
+    "CT-110": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-28_154049",
+          "startedAt": "2026-11-28T15:41:02+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_154049",
+          "endedAt": "2026-11-28T15:41:54+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.waitFor: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-28_154231",
+          "startedAt": "2026-11-28T15:42:43+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_154231",
+          "endedAt": "2026-11-28T15:45:31+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Agreement CT260000000002328 is saved."
+            },
+            {
+              "severity": "error",
+              "text": "At least one row should be in Supplier Witness section. (ERR-100023)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-100023: At least one row should be in Supplier Witness section. (ERR-100023)",
+          "error": "SA submit: still 57750 (At least one row should be in Supplier Witness section. (ERR-100023))"
+        },
+        {
+          "runId": "2026-11-28_154632",
+          "startedAt": "2026-11-28T15:46:43+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_154632",
+          "endedAt": "2026-11-28T15:47:28+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.click: Timeout 30000ms exceeded."
+        },
+        {
+          "runId": "2026-11-28_154805",
+          "startedAt": "2026-11-28T15:48:16+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_154805",
+          "endedAt": "2026-11-28T15:48:32+08:00",
+          "messages": [],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "approver Shamsul Azri Bin Abu Bakar not in Selected Approver (nothing submitted)"
+        },
+        {
+          "runId": "2026-11-28_154942",
+          "startedAt": "2026-11-28T15:49:53+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_154942",
+          "endedAt": "2026-11-28T15:52:33+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Agreement CT260000000002328 is saved."
+            },
+            {
+              "severity": "error",
+              "text": "Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-750010: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)",
+          "error": "SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))"
+        },
+        {
+          "runId": "2026-11-28_155316",
+          "startedAt": "2026-11-28T15:53:27+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_155316",
+          "endedAt": "2026-11-28T15:56:07+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Agreement CT260000000002328 is saved."
+            },
+            {
+              "severity": "error",
+              "text": "Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-750010: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)",
+          "error": "SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))"
+        },
+        {
+          "runId": "2026-11-28_155646",
+          "startedAt": "2026-11-28T15:56:57+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_155646",
+          "endedAt": "2026-11-28T15:59:38+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Supplemental Agreement CT260000000002328 is saved."
+            },
+            {
+              "severity": "error",
+              "text": "Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-750010: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)",
+          "error": "SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))"
+        },
+        {
+          "runId": "2026-11-28_160139",
+          "startedAt": "2026-11-28T16:02:26+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\10_CT-110\\2026-11-28_160139",
+          "endedAt": "2026-11-28T16:05:12+08:00",
+          "messages": [
+            {
+              "severity": "error",
+              "text": "Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)"
+            }
+          ],
+          "classification": "APPLICATION_VALIDATION (medium): the application showed ERR-750010: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)",
+          "error": "SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))"
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

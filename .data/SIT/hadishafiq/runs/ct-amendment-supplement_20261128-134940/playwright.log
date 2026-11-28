@@ -1,0 +1,38 @@
+
+Running 1 test using 1 worker
+
+[13:49:49] ct-amendment-supplement/01_CT-101: CT-101 Contract Amendment With Supplement: create and submit (FA) — role Contract Administrator, login: account of KAT-040
+[13:49:49] ct-amendment-supplement/01_CT-101: CT-101: login 000011113333 (account of KAT-040)
+[13:49:52] ct-amendment-supplement/01_CT-101: CT-101: Logged in as 000011113333
+[13:50:48] ct-amendment-supplement/01_CT-101: Closed the TERKINI announcement
+[13:50:51] ct-amendment-supplement/01_CT-101: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 (1.1m)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 
+
+    Error: Tab "Approver Settings and Checklist" did not open
+
+       at ..\support\modules\qt\pf.ts:196
+
+      194 |         return openTab(page, label, false);
+      195 |       }
+    > 196 |       throw new Error(`Tab "${label}" did not open${(await pageMessages(page)).length ? `: ${(await pageMessages(page)).join(' | ')}` : ''}`);
+          |             ^
+      197 |     }
+      198 |   }
+      199 | }
+        at openTab (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:196:13)
+        at createFa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:90:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_134941\flows-en-ct.flow-ct-amendm-751bb-ement-create-and-submit-FA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_134941\flows-en-ct.flow-ct-amendm-751bb-ement-create-and-submit-FA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 

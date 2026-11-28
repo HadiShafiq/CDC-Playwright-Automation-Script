@@ -42,7 +42,7 @@
       "title": "Approve Fulfilment Details",
       "role": "Contract Approver",
       "stateChanging": true,
-      "login": "default",
+      "login": "assignedOfficer",
       "inputs": [
         {
           "var": "Document_Number",
@@ -71,7 +71,8 @@
           "bm": "Maklumat Pemenuhan Diluluskan",
           "evidence": "SIT DB 2026-11-23: CT260000000002293 FD after KAT-041"
         }
-      }
+      },
+      "bpmTask": "Review FD"
     },
     "KAT-042": {
       "title": "Submit Agreement",
@@ -112,7 +113,7 @@
       "title": "Approve Agreement",
       "role": "Contract Approver",
       "stateChanging": true,
-      "login": "default",
+      "login": "assignedOfficer",
       "inputs": [
         {
           "var": "Document_Number",
@@ -141,7 +142,8 @@
           "bm": "Perjanjian Selesai",
           "evidence": "SIT DB 2026-11-23: CT260000000002293 AC after KAT-043"
         }
-      }
+      },
+      "bpmTask": "Review AC/SA"
     },
     "KAT-044": {
       "title": "Claim Group Task application",
@@ -190,6 +192,369 @@
         "verification": "source",
         "evidence": "support/katalon/steps/KAT-045.ts ends after the upload; no Save/Submit click anywhere (only the login submit). SIT run ct-fd-agreement_20261123-165421 2026-11-23 17:00:05 finished with no application message. Submitting the amendment needs a business decision (expected result) from the user."
       }
+    },
+    "CT-101": {
+      "title": "Contract Amendment With Supplement: create and submit (FA)",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-040"
+      },
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts createFa — screen probed on SIT 2026-11-28 (CT260000000002328)",
+      "instructions": "Contract Maintenance → contract → Option → Amendment With Supplement → Amendment Detail: amendment type Change of clause, File Reference No., approving authority Committee Type QQC + secretary, remarks → Save → Submit.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_SUBMITTED",
+        "description": "FA at 51050 Pending Amendment With Supplemental Approval",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51000 (Save → task Submit FA) → 51050 \"successfully submitted to Contract Approver\" (run ct-amendment-supplement_20261128-135323). Submit needs the checklist row of each chosen type ticked (ERR-750093)",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51050,
+          "en": "Pending Amendment With Supplemental Approval",
+          "bm": "Menunggu Kelulusan Pindaan Dengan Kontrak Tambahan",
+          "evidence": "CT260000000001864 2026-09-23 10:36:19"
+        }
+      }
+    },
+    "CT-102": {
+      "title": "Contract Approver approves the amendment with supplement (Review FA)",
+      "role": "Contract Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "bpmTask": "Review FA",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts faTaskAction — screen probed 2026-11-28 (Save / Approve / Revise / Reject)",
+      "instructions": "My Task \"Review FA\" → Approver Settings and Checklist remark → Approve.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_APPROVED",
+        "description": "FA at 51200 Pending Meeting Confirmation (committee route)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51050 → 51200 (\"approved and sent to the Desk Officer of the Quotation Committee / Procurement Board\"), approver 690127065209 from WFTASK",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51200,
+          "en": "Pending Meeting Confirmation",
+          "bm": "Menunggu Pengesahan Mesyuarat",
+          "evidence": "CT260000000001864 2026-09-23 10:38:06"
+        }
+      }
+    },
+    "CT-103": {
+      "title": "Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting)",
+      "role": "Desk Officer (committee secretary)",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "bpmTask": "Confirm FA Meeting",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts confirmFaMeeting — screen probed 2026-11-28",
+      "instructions": "My Task \"Confirm FA Meeting\" → Meeting Details: meeting row (today, location, Done); Approving Authority: add chair + 2 members (search by IC), role per row → Save → Submit.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_MEETING_CONFIRMED",
+        "description": "FA at 51250 Pending Decision by the Approving Authority",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51200 → 51250 (\"Approving Authority Information … has been updated\"); chair 711105085487 (roles Chairperson/Member), members 770614135921, 770614135925 got View FA Details; reconciled from the DB (message check too narrow, fixed)",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51250,
+          "en": "Pending Decision by the Approving Authority at the Ministry / Jabatan Level",
+          "bm": "Menunggu Keputusan Pihak Berkuasa Melulus di Peringkat Kementerian / Jabatan",
+          "evidence": "CT260000000001864 2026-09-23 10:40:03"
+        }
+      }
+    },
+    "CT-104": {
+      "title": "Committee secretary records the approving authority decision (Update FA Result)",
+      "role": "Desk Officer (committee secretary)",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "bpmTask": "Update FA Result",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts updateFaResult — screen probed 2026-11-28",
+      "instructions": "My Task \"Update FA Result\" → Decision: date, decision (approve), remarks, Decision Paper PDF, attendance and endorsement per member → Update Committee → Save → Submit.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_RESULT_UPDATED",
+        "description": "FA at 51300 Pending Verification (members sign off)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51250 → 51300 (\"The decision of Approving Authorities … has been updated\"); Decision Approve (options Approve / Reject), Decision Paper through uploadPbqcDecisionLetterDlg (input alone → ERR-100022)",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51300,
+          "en": "Pending Verification",
+          "bm": "Menunggu Pengesahan",
+          "evidence": "CT260000000001864 2026-09-23 10:40:52"
+        }
+      }
+    },
+    "CT-105": {
+      "title": "Committee members sign off the amendment decision (Sign Off → Acknowledge)",
+      "role": "Committee members",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts signOffFa — screen probed 2026-11-28 (Acknowledge / Revise)",
+      "instructions": "Each open \"Sign Off\" task with a named assignee: log in as the member → My Task → Acknowledge.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_SIGNED_OFF",
+        "description": "FA at 51320 Pending Chairperson Sign Off",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51300 → 51320 after Sign Off by 770614135921 and 770614135925 (\"is acknowledged\"); the third Sign Off task (no assignee) closed by itself",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51320,
+          "en": "Pending Chairperson Sign Off",
+          "bm": "Menunggu Pengesahan Pengerusi",
+          "evidence": "CT260000000001864 2026-09-23 10:43:54"
+        }
+      }
+    },
+    "CT-106": {
+      "title": "Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge)",
+      "role": "Committee chairperson",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "bpmTask": "Chairperson SignOff",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts faTaskAction — screen probed 2026-11-28 (Acknowledge / Revise)",
+      "instructions": "My Task \"Chairperson SignOff\" → Acknowledge.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_CHAIR_SIGNED_OFF",
+        "description": "FA at 51400 Pending Supplemental Contract Letter Submission",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51320 → 51400 (\"is acknowledged\"), chair 711105085487 from WFTASK; next task Prepare LOA → contract administrator 000011113333",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51400,
+          "en": "Pending Supplemental Contract Letter Submission",
+          "bm": "Menunggu Penyerahan Surat Berkaitan Kontrak Tambahan",
+          "evidence": "CT260000000001864 2026-09-23 10:44:40"
+        }
+      }
+    },
+    "CT-107": {
+      "title": "Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA)",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-040"
+      },
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts prepareSupplementalLetter — screens probed 2026-11-28",
+      "instructions": "My Task \"Prepare LOA\" → Supplemental Contract Letter Details: File Reference No. → Supplemental Contract Letter Content: letter date, PDF of the letter (attach) → Save → Submit.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_LETTER_SUBMITTED",
+        "description": "FA at 51450 Pending Supplemental Contract Letter Acknowledgement (acknowledge officer verification No; with Yes SIT goes to 51405 + Endorse LOA)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51400 → 51450 (\"successfully submitted for acknowledgment\", run ct-amendment-supplement_20261128-135322); letter PDF via the row attach dialog. CT260000000001864 went 51405 → Endorse LOA because its verification was required",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51450,
+          "en": "Pending Supplemental Contract Letter Acknowledgement",
+          "bm": "Menunggu Pengesahan Surat Berkaitan Kontrak Tambahan",
+          "evidence": "CT260000000002328 2026-11-28 14:32:46"
+        }
+      }
+    },
+    "CT-108": {
+      "title": "Supplier acknowledges the supplemental contract letter (Ack FA)",
+      "role": "Supplier (company admin)",
+      "stateChanging": true,
+      "login": "default",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts ackFaSupplier — screens probed 2026-11-28 (Save / Acknowledge / Reject; Declaration)",
+      "instructions": "Supplier admin (WFTASK assignee of \"Ack FA\"): My Task → bank account if empty → Supplemental Contract Letter Content: download the letter PDF → Declaration tick → Acknowledge (sign).",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_LETTER_ACKNOWLEDGED",
+        "description": "FA at 51500 Pending Verification Acknowledgement of Supplemental Contract Letter",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51450 → 51500 (\"is acknowledged\", firstallied123, soft cert dialog → Sign). Acknowledge is disabled until the letter PDF is downloaded from the Content menu (declaration tick + Save do not enable it)",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51500,
+          "en": "Pending Verification Acknowledgement of Supplemental Contract Letter",
+          "bm": "Menunggu Pengesahan Penerimaan Surat Berkaitan Kontrak Tambahan",
+          "evidence": "CT260000000001864 2026-09-23 10:50:29"
+        }
+      }
+    },
+    "CT-109": {
+      "title": "Contract Administrator verifies the supplier acknowledgement (Verify FA)",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-040"
+      },
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts faTaskAction — screen probed 2026-11-28 (Acknowledge / Cancel)",
+      "instructions": "My Task \"Verify FA\" → Acknowledge.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "FA_COMPLETED",
+        "description": "FA at 51700 Supplemental Contract Letter Completed",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "execution",
+        "evidence": "SIT 2026-11-28: CT260000000002328 FA 51500 → 51700 (\"is completed\"); SIT then opens SA 57750 Pending Supplemental Agreement Creation with task Create Draft AC/SA → 000011113333",
+        "db": {
+          "kind": "CT:FA",
+          "statusId": 51700,
+          "en": "Supplemental Contract Letter Completed",
+          "bm": "Surat Berkaitan Kontrak Tambahan Telah Lengkap",
+          "evidence": "CT260000000001864 2026-09-23 10:51:04"
+        }
+      }
+    },
+    "CT-110": {
+      "title": "Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA)",
+      "role": "Contract Administrator",
+      "stateChanging": true,
+      "login": {
+        "accountOf": "KAT-040"
+      },
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts createSa — screens probed 2026-11-28; selectors from KAT-042 (agreement, same portlet)",
+      "instructions": "My Task \"Create Draft AC/SA\" → Signer Information: agency witness → Contract Document: document, date signing, signing page, stamping page → Approver Settings: approver → Save → Submit.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SA_SUBMITTED",
+        "description": "SA leaves 57750 Pending Supplemental Agreement Creation (submitted to the Contract Approver)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "CT260000000001864 (another team, read only): Create Draft AC/SA 10:51 → Review AC/SA 10:52",
+        "proofSql": "select count(*) from ngep_sit.ct_workflow_status w join ngep_sit.ct_agreement a on a.agreement_id = w.doc_id join ngep_sit.ct_contract c on c.contract_id = a.contract_id where c.contract_no = '{CT}' and w.doc_type = 'SA' and w.status_id <> 57750"
+      }
+    },
+    "CT-111": {
+      "title": "Contract Approver approves the supplemental agreement (Review AC/SA)",
+      "role": "Contract Approver",
+      "stateChanging": true,
+      "login": "assignedOfficer",
+      "bpmTask": "Review AC/SA",
+      "automation": "module",
+      "source": "support/modules/ct/amendment.ts approveSa — 2026-11-28",
+      "instructions": "My Task \"Review AC/SA\" → Approve.",
+      "inputs": [
+        {
+          "var": "contractNo",
+          "doc": "CT"
+        }
+      ],
+      "outputs": [],
+      "checkpoint": {
+        "id": "SA_APPROVED",
+        "description": "SA approved (supplemental agreement completed)",
+        "displayedStatus": {
+          "en": null,
+          "bm": null
+        },
+        "verification": "source",
+        "evidence": "CT260000000001864 (another team, read only): Review AC/SA done 10:52"
+      }
     }
   },
   "flows": [
@@ -219,6 +584,26 @@
         "KAT-044"
       ],
       "submodule": "group-task"
+    },
+    {
+      "id": "ct-amendment-supplement",
+      "submodule": "amendment",
+      "title": "Contract amendment with supplement (FA) to supplemental contract letter completed (51700)",
+      "verification": "unverified",
+      "notes": "SIT 2026-11-28 on CT260000000002328 (from LA260000000004254): CT-101..CT-109 VERIFIED, FA 51000 → 51050 → 51200 → 51250 → 51300 → 51320 → 51400 → 51450 → 51500 → 51700 (run ct-amendment-supplement_20261128-135322). CT-110 Create SA blocked by ERR-750010 (approver picklist not received on Submit); CT-111 not run yet.",
+      "steps": [
+        "CT-101",
+        "CT-102",
+        "CT-103",
+        "CT-104",
+        "CT-105",
+        "CT-106",
+        "CT-107",
+        "CT-108",
+        "CT-109",
+        "CT-110",
+        "CT-111"
+      ]
     }
   ]
 }

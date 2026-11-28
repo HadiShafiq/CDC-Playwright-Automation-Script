@@ -1,0 +1,117 @@
+{
+  "flowRunId": "qt-supplier-finalization_20261128-115214",
+  "flowId": "qt-supplier-finalization",
+  "module": "qt",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-28T11:52:14+08:00",
+  "updatedAt": "2026-11-28T12:03:21+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "QT": "QT260000000004524"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "QT-016": {
+      "state": "verified",
+      "attempts": [
+        {
+          "runId": "2026-11-28_115215",
+          "startedAt": "2026-11-28T11:52:22+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-28_115215",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004524",
+            "statusId": null
+          },
+          "endedAt": "2026-11-28T11:55:55+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "error",
+              "text": "Error encountered processing your last request! Workflow exception. (ERR-BPM-10030)"
+            }
+          ],
+          "classification": "UNKNOWN (low): no rule matched; read the error, screenshot and trace",
+          "error": "Consolidation submit: Error encountered processing your last request! Workflow exception. (ERR-BPM-10030)"
+        },
+        {
+          "runId": "2026-11-28_115701",
+          "startedAt": "2026-11-28T11:57:09+08:00",
+          "result": "verified",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\qt-supplier-finalization\\01_QT-016\\2026-11-28_115701",
+          "dbBefore": {
+            "kind": "QT:SF",
+            "docNo": "QT260000000004524",
+            "statusId": null
+          },
+          "selfHeal": "the SIT DB still shows QT260000000004524 at null , as before the attempt",
+          "endedAt": "2026-11-28T12:03:21+08:00",
+          "messages": [
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Desk Officer recommendation for Quotation/Tender QT260000000004524 has been submitted successfully."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 has been successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Quotation/Tender QT260000000004524 is successfully submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Meeting details and Authorized Authority for Quotation/Tender QT260000000004524 has been submitted successfully."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004524 is successfully saved."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004524 is successfully finalized and submitted."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004524 is successfully endorsed."
+            },
+            {
+              "severity": "info",
+              "text": "Supplier Finalization QT260000000004524 is successfully signed off."
+            }
+          ]
+        }
+      ],
+      "outputs": {},
+      "login": "Katalon default account of the step",
+      "checkpoint": "SF_LOI_PREPARATION",
+      "db": {
+        "kind": "QT:SF",
+        "docNo": "QT260000000004524",
+        "expected": 62213,
+        "statusId": 62213,
+        "en": "Pending LOI Preparation / Acknowledgement or Negotiation",
+        "bm": "Menunggu Penyediaan / Maklumbalas Surat Niat atau Rundingan",
+        "at": "2026-11-28 12:03:17",
+        "ok": true,
+        "checkedAt": "2026-11-28T12:03:21+08:00"
+      }
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "completed"
+}

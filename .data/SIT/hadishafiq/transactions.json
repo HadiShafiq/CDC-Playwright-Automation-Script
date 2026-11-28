@@ -1031,18 +1031,18 @@
     "env": "SIT",
     "tester": "hadishafiq",
     "module": "qt",
-    "checkpoint": "PENDING_RECOMMENDATION",
+    "checkpoint": "QT_LOA_VERIFIED",
     "verification": "verified",
     "createdBy": {
       "flowRunId": "qt-to-recommendation-to-QT-003_2026-11-24_041721",
       "stepId": "QT-001"
     },
     "lastStep": {
-      "flowRunId": "qt-to-recommendation_eval_20261124-044738",
-      "stepId": "QT-015"
+      "flowRunId": "qt-loa-no-loi_20261128-121618",
+      "stepId": "QT-023"
     },
     "createdAt": "2026-11-24T04:17:47+08:00",
-    "lastVerifiedAt": "2026-11-24T05:15:43+08:00",
+    "lastVerifiedAt": "2026-11-28T12:20:57+08:00",
     "parents": [],
     "reuse": "available",
     "cr": null,
@@ -1933,6 +1933,56 @@
     "lastVerifiedAt": "2026-11-25T19:04:54+08:00",
     "parents": [
       "CO260000000006664"
+    ],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "LA260000000004254",
+    "docType": "LA",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "qt",
+    "checkpoint": "AGREEMENT_SUBMITTED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "qt-loa-no-loi_20261128-121618",
+      "stepId": "QT-021"
+    },
+    "lastStep": {
+      "flowRunId": "ct-fd-agreement_20261128-123147",
+      "stepId": "KAT-042"
+    },
+    "createdAt": "2026-11-28T12:17:35+08:00",
+    "lastVerifiedAt": "2026-11-28T12:43:05+08:00",
+    "parents": [
+      "QT260000000004524"
+    ],
+    "reuse": "available",
+    "cr": null,
+    "notes": []
+  },
+  {
+    "ref": "CT260000000002328",
+    "docType": "CT",
+    "env": "SIT",
+    "tester": "hadishafiq",
+    "module": "ct",
+    "checkpoint": "FA_COMPLETED",
+    "verification": "verified",
+    "createdBy": {
+      "flowRunId": "ct-fd-agreement_20261128-123147",
+      "stepId": "KAT-040"
+    },
+    "lastStep": {
+      "flowRunId": "ct-amendment-supplement_20261128-135322",
+      "stepId": "CT-109"
+    },
+    "createdAt": "2026-11-28T12:33:42+08:00",
+    "lastVerifiedAt": "2026-11-28T15:37:38+08:00",
+    "parents": [
+      "LA260000000004254"
     ],
     "reuse": "available",
     "cr": null,

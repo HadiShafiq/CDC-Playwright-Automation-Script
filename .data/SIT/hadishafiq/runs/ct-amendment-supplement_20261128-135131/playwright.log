@@ -1,0 +1,41 @@
+
+Running 1 test using 1 worker
+
+[13:51:41] ct-amendment-supplement/01_CT-101: CT-101 Contract Amendment With Supplement: create and submit (FA) — role Contract Administrator, login: account of KAT-040
+[13:51:41] ct-amendment-supplement/01_CT-101: CT-101: login 000011113333 (account of KAT-040)
+[13:51:44] ct-amendment-supplement/01_CT-101: CT-101: Logged in as 000011113333
+[13:52:24] ct-amendment-supplement/01_CT-101: Closed the TERKINI announcement
+[13:52:27] ct-amendment-supplement/01_CT-101: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 (48.2s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByText('APPROVER LIST', { exact: true }).first() to be visible
+
+
+       at ..\support\modules\ct\amendment.ts:106
+
+      104 |   await page.locator('li.ui-tabmenuitem:visible a', { hasText: new RegExp(`^\\s*${label}\\s*$`) }).first().click();
+      105 |   await pfIdle(page);
+    > 106 |   await page.getByText(expectText, { exact: true }).first().waitFor({ timeout: 30_000 });
+          |                                                             ^
+      107 | }
+      108 |
+      109 | /** Tick every visible, enabled, unticked checkbox outside dialogs (the current tab's checklist); returns how many. */
+        at sideMenu (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:106:61)
+        at createFa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:90:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_135132\flows-en-ct.flow-ct-amendm-751bb-ement-create-and-submit-FA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_135132\flows-en-ct.flow-ct-amendm-751bb-ement-create-and-submit-FA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 

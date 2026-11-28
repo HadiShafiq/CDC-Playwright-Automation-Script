@@ -1,0 +1,45 @@
+{
+  "flowRunId": "ct-amendment-supplement_20261128-135131",
+  "flowId": "ct-amendment-supplement",
+  "module": "ct",
+  "env": "SIT",
+  "tester": "hadishafiq",
+  "language": "EN",
+  "cr": null,
+  "createdAt": "2026-11-28T13:51:31+08:00",
+  "updatedAt": "2026-11-28T13:52:24+08:00",
+  "from": null,
+  "to": null,
+  "docs": {
+    "CT": "CT260000000002328"
+  },
+  "officers": {},
+  "gates": {},
+  "steps": {
+    "CT-101": {
+      "state": "failed",
+      "attempts": [
+        {
+          "runId": "2026-11-28_135132",
+          "startedAt": "2026-11-28T13:51:40+08:00",
+          "result": "failed",
+          "evidenceDir": "C:\\Users\\hadishafiq\\CDC-Playwright-Automation-Script\\evidence\\SIT\\FLOW\\ct-amendment-supplement\\01_CT-101\\2026-11-28_135132",
+          "dbBefore": {
+            "kind": "CT:FA",
+            "docNo": "CT260000000002328",
+            "statusId": 51000
+          },
+          "endedAt": "2026-11-28T13:52:24+08:00",
+          "messages": [],
+          "classification": "LOCATOR_OR_TIMING (low): an element was not found or not ready in time (could also be a slow SIT)",
+          "error": "locator.waitFor: Timeout 30000ms exceeded."
+        }
+      ],
+      "outputs": {},
+      "login": "account of KAT-040"
+    }
+  },
+  "allowRerun": [],
+  "vars": {},
+  "status": "failed"
+}

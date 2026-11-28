@@ -1,0 +1,104 @@
+
+Running 1 test using 1 worker
+
+[11:52:23] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[11:52:23] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[11:52:31] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[11:52:33] qt-supplier-finalization/01_QT-016: QT-016: Consolidate Report -> 881204115188
+[11:52:36] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[11:52:36] qt-supplier-finalization/01_QT-016: QT-016: login 881204115188 (switch)
+[11:52:38] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 881204115188
+[11:53:15] qt-supplier-finalization/01_QT-016: QT-016: QT260000000004524 not on this user's task list yet: waiting up to 8 min
+[11:55:28] qt-supplier-finalization/01_QT-016: QT-016: item "PENSEL KAYU 2B BERPEMADAM": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004524 is successfully saved.
+[11:55:32] qt-supplier-finalization/01_QT-016: QT-016: item "PEN BOLA (BALL POINT) DAKWAT BIRU": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004524 is successfully saved.
+[11:55:33] qt-supplier-finalization/01_QT-016: QT-016: consolidation: 2 supplier(s) ranked; save: Quotation/Tender QT260000000004524 is successfully saved.
+[11:55:34] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:55:36] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:55:37] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:55:38] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:55:39] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Are you sure with your recommendation(s)? Yes No" -> Yes
+[11:55:58] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (3.6m)
+
+
+  1) [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+    Error: Consolidation submit: Error encountered processing your last request! Workflow exception. (ERR-BPM-10030)
+
+       at ..\support\modules\qt\ecphase.ts:355
+
+      353 |   await clickButton(page, 'Save');
+      354 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+    > 355 |   if (!msgs.some((m) => /success|submitted/i.test(m))) throw new Error(`Consolidation submit: ${msgs.join(' | ') || 'no message'}`);
+          |                                                              ^
+      356 | }
+      357 |
+      358 | /**
+        at Array.consolidateReport (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:355:62)
+        at ecPhase (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\ecphase.ts:527:7)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\qt.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_115215\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_115215\flows-en-qt.flow-qt-suppli-0c4be-g-finalize-endorse-sign-off-flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 
+
+Running 1 test using 1 worker
+
+[11:57:08] qt-supplier-finalization/01_QT-016: SELF-HEAL QT-016: retry once — the SIT DB still shows QT260000000004524 at null , as before the attempt
+[11:57:10] qt-supplier-finalization/01_QT-016: QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off — role Desk Officer / FC Chair / Members, login: Katalon default account of the step
+[11:57:10] qt-supplier-finalization/01_QT-016: QT-016: login 740217035890 (role user)
+[11:57:13] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 740217035890
+[11:57:15] qt-supplier-finalization/01_QT-016: QT-016: Consolidate Report -> 881204115188
+[11:57:17] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[11:57:17] qt-supplier-finalization/01_QT-016: QT-016: login 881204115188 (switch)
+[11:57:19] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 881204115188
+[11:57:27] qt-supplier-finalization/01_QT-016: QT-016: item "PENSEL KAYU 2B BERPEMADAM": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004524 is successfully saved.
+[11:57:29] qt-supplier-finalization/01_QT-016: QT-016: item "PEN BOLA (BALL POINT) DAKWAT BIRU": 2 supplier(s) ranked; save: Quotation/Tender QT260000000004524 is successfully saved.
+[11:57:30] qt-supplier-finalization/01_QT-016: QT-016: consolidation: 2 supplier(s) ranked; save: Quotation/Tender QT260000000004524 is successfully saved.
+[11:57:32] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:57:32] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:57:33] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:57:34] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[11:57:35] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Are you sure with your recommendation(s)? Yes No" -> Yes
+[11:58:18] qt-supplier-finalization/01_QT-016: QT-016: Assign FC Secretary -> 881204115188
+[11:58:29] qt-supplier-finalization/01_QT-016: QT-016: finalization committee: Quotation Committee, secretary: 11oct-desk Officer Federal Procurement Board Sarawak
+[11:58:30] qt-supplier-finalization/01_QT-016: QT-016: save: Quotation/Tender QT260000000004524 has been successfully saved.
+[11:59:39] qt-supplier-finalization/01_QT-016: QT-016: Coordinate FC Meeting -> 111020145651
+[11:59:40] qt-supplier-finalization/01_QT-016: QT-016: login 111020145651 (switch)
+[11:59:41] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 111020145651
+[11:59:49] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Confirmation Are you sure to send meeting and invitation for supplier finalization decision to this committee member? Ye" -> Yes
+[11:59:54] qt-supplier-finalization/01_QT-016: QT-016: Finalize FC Selection -> 111020145651
+[12:00:08] qt-supplier-finalization/01_QT-016: QT-016: meeting Done, attendance 4 member(s); save: Supplier Finalization QT260000000004524 is successfully saved.
+[12:00:14] qt-supplier-finalization/01_QT-016: QT-016: decision Supplier Finalization / Award / rank-1 supplier; save: Supplier Finalization QT260000000004524 is successfully saved.
+[12:00:16] qt-supplier-finalization/01_QT-016: QT-016: briefing "": filled
+[12:00:23] qt-supplier-finalization/01_QT-016: QT-016: endorsement report: justification "Lowest offered price", signed report uploaded; no message
+[12:00:27] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Submit Confirmation Please ensure that the committee members are updated based on attendance. Are you sure with the meet" -> Yes
+[12:02:22] qt-supplier-finalization/01_QT-016: QT-016: Endorse FC Selection -> 560616015231
+[12:02:23] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[12:02:23] qt-supplier-finalization/01_QT-016: QT-016: login 560616015231 (switch)
+[12:02:25] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 560616015231
+[12:02:45] qt-supplier-finalization/01_QT-016: QT-016: Endorse FC Selection: no user assignee yet (none), waiting
+[12:02:45] qt-supplier-finalization/01_QT-016: QT-016: Endorse FC Selection -> 560616015239
+[12:02:46] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[12:02:46] qt-supplier-finalization/01_QT-016: QT-016: login 560616015239 (switch)
+[12:02:47] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 560616015239
+[12:03:02] qt-supplier-finalization/01_QT-016: QT-016: SignOff FC Selection -> 600711035218
+[12:03:03] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[12:03:03] qt-supplier-finalization/01_QT-016: QT-016: login 600711035218 (switch)
+[12:03:04] qt-supplier-finalization/01_QT-016: QT-016: Logged in as 600711035218
+[12:03:13] qt-supplier-finalization/01_QT-016: QT-016: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[12:03:20] qt-supplier-finalization/01_QT-016: Closed the TERKINI announcement
+[12:03:21] qt-supplier-finalization/01_QT-016: DB status QT:SF QT260000000004524: 62213 Pending LOI Preparation / Acknowledgement or Negotiation / Menunggu Penyediaan / Maklumbalas Surat Niat atau Rundingan (expected 62213, OK)
+[12:03:22] qt-supplier-finalization/01_QT-016: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\qt.flow.spec.ts:12:11 › qt-supplier-finalization [EN] QT at Pending Recommendation (60023) to Supplier Finalization signed off (SF 62213) › 01 QT-016 Supplier Finalization: consolidate report, FC meeting, finalize, endorse, sign off @flow-qt-supplier-finalization @module-qt @lang-en @FLOW @qt-supplier-finalization/01_QT-016 @QT-016 (6.2m)
+
+  Slow test file: [flows] › tests\flows\en\qt.flow.spec.ts (6.2m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 passed (6.3m)

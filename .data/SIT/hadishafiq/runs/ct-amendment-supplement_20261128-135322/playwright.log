@@ -1,0 +1,990 @@
+
+Running 1 test using 1 worker
+
+[13:53:31] ct-amendment-supplement/01_CT-101: CT-101 Contract Amendment With Supplement: create and submit (FA) — role Contract Administrator, login: account of KAT-040
+[13:53:31] ct-amendment-supplement/01_CT-101: CT-101: login 000011113333 (account of KAT-040)
+[13:53:35] ct-amendment-supplement/01_CT-101: CT-101: Logged in as 000011113333
+[13:53:41] ct-amendment-supplement/01_CT-101: CT-101: checklist ticked: Change of clause
+[13:53:44] ct-amendment-supplement/01_CT-101: CT-101: FA submit: Amendment With Supplementary Contract CT260000000002328 is successfully submitted to Contract Approver.
+[13:53:48] ct-amendment-supplement/01_CT-101: Closed the TERKINI announcement
+[13:53:49] ct-amendment-supplement/01_CT-101: DB status CT:FA CT260000000002328: 51050 Pending Amendment With Supplemental Approval / Menunggu Kelulusan Pindaan Dengan Kontrak Tambahan (expected 51050, OK)
+[13:53:49] ct-amendment-supplement/01_CT-101: Signed out (SSO logout)
+  ✓  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 (19.4s)
+
+  1 passed (26.4s)
+
+Running 2 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+[13:57:15] ct-amendment-supplement/02_CT-102: BPM task "Review FA" of CT260000000002328 is open (assigned to 690127065209)
+[13:57:17] ct-amendment-supplement/02_CT-102: CT-102 Contract Approver approves the amendment with supplement (Review FA) — role Contract Approver, login: officer 690127065209: BPM task "Review FA" of CT260000000002328 is ASSIGNED to 690127065209 (SIT WFTASK)
+[13:57:17] ct-amendment-supplement/02_CT-102: CT-102: login 690127065209 (BPM assignee)
+[13:57:21] ct-amendment-supplement/02_CT-102: CT-102: Logged in as 690127065209
+[13:57:29] ct-amendment-supplement/02_CT-102: CT-102: dialog: "Please key in the token PIN * Token PIN Sign Sign W/O GPKI" -> Sign W/O GPKI
+[13:57:32] ct-amendment-supplement/02_CT-102: CT-102: Approve: Amendment With Supplementary Contract CT260000000002328 is approved and sent to the Desk Officer of the Quotation Committee / Procurement Board for the preparation of the meeting.
+[13:57:36] ct-amendment-supplement/02_CT-102: Closed the TERKINI announcement
+[13:57:37] ct-amendment-supplement/02_CT-102: DB status CT:FA CT260000000002328: 51200 Pending Meeting Confirmation / Menunggu Pengesahan Mesyuarat (expected 51200, OK)
+[13:57:38] ct-amendment-supplement/02_CT-102: Signed out (SSO logout)
+  ✓  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102 (24.8s)
+
+  1 skipped
+  1 passed (32.8s)
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+[14:05:21] ct-amendment-supplement/03_CT-103: BPM task "Confirm FA Meeting" of CT260000000002328 is open (assigned to 881204115188)
+[14:05:23] ct-amendment-supplement/03_CT-103: CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) — role Desk Officer (committee secretary), login: officer 881204115188: BPM task "Confirm FA Meeting" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)
+[14:05:23] ct-amendment-supplement/03_CT-103: CT-103: login 881204115188 (BPM assignee)
+[14:05:27] ct-amendment-supplement/03_CT-103: CT-103: Logged in as 881204115188
+[14:05:37] ct-amendment-supplement/03_CT-103: CT-103: approving authority + 711105085487
+[14:06:04] ct-amendment-supplement/03_CT-103: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 (45.0s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 
+
+    TimeoutError: locator.waitFor: Timeout 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id$="form:modelDialog"]') to be visible
+        43 × locator resolved to hidden <div role="dialog" aria-hidden="true" id="_ctContractAmendment_WAR_NGePportlet_:form:modelDialog" aria-labelledby="_ctContractAmendment_WAR_NGePportlet_:form:modelDialog_title" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow pop_up_top ui-draggable">…</div>
+
+
+       at ..\support\modules\ct\amendment.ts:230
+
+      228 |     await pfIdle(page);
+      229 |     const dlg = page.locator('[id$="form:modelDialog"]');
+    > 230 |     await dlg.waitFor({ state: 'visible', timeout: 20_000 });
+          |               ^
+      231 |     const type = await dlg.evaluate((d) => (d.querySelector('select[id$="idenType_input"]') as HTMLSelectElement | null)?.id.replace(/_input$/, '') ?? '');
+      232 |     if (type) await pfSelect(page, type, 'Identification Card');
+      233 |     await dlg.locator('input[id$="idenNo"]').fill(m.ic);
+        at confirmFaMeeting (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:230:15)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_140509\flows-en-ct.flow-ct-amendm-ae9de-thority-Confirm-FA-Meeting--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_140509\flows-en-ct.flow-ct-amendm-ae9de-thority-Confirm-FA-Meeting--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 
+  2 skipped
+
+Running 3 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+[14:06:54] ct-amendment-supplement/03_CT-103: BPM task "Confirm FA Meeting" of CT260000000002328 is open (assigned to 881204115188)
+[14:06:56] ct-amendment-supplement/03_CT-103: CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) — role Desk Officer (committee secretary), login: officer 881204115188: BPM task "Confirm FA Meeting" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)
+[14:06:56] ct-amendment-supplement/03_CT-103: CT-103: login 881204115188 (BPM assignee)
+[14:06:59] ct-amendment-supplement/03_CT-103: CT-103: Logged in as 881204115188
+[14:07:08] ct-amendment-supplement/03_CT-103: CT-103: approving authority + 711105085487
+[14:07:09] ct-amendment-supplement/03_CT-103: CT-103: role 711105085487 = Chairperson (options - Select One - / Chairperson / Member)
+[14:07:12] ct-amendment-supplement/03_CT-103: CT-103: approving authority + 770614135921
+[14:07:12] ct-amendment-supplement/03_CT-103: CT-103: role 770614135921 = Member (options - Select One - / Member)
+[14:07:15] ct-amendment-supplement/03_CT-103: CT-103: approving authority + 770614135925
+[14:07:16] ct-amendment-supplement/03_CT-103: CT-103: role 770614135925 = Member (options - Select One - / Member)
+[14:07:16] ct-amendment-supplement/03_CT-103: CT-103: meeting save: Amendment With Supplementary Contract CT260000000002328 is saved.
+[14:07:19] ct-amendment-supplement/03_CT-103: CT-103: meeting submit: Approving Authority Information for Supplementary Contract Amendment With CT260000000002328 has been updated.
+[14:07:24] ct-amendment-supplement/03_CT-103: Closed the TERKINI announcement
+[14:07:27] ct-amendment-supplement/03_CT-103: Signed out (SSO logout)
+  ✘  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 (35.3s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 
+
+    Error: meeting submit: Approving Authority Information for Supplementary Contract Amendment With CT260000000002328 has been updated.
+
+       at ..\support\modules\ct\amendment.ts:270
+
+      268 |   const msgs = await pressAndConfirm(page, 'Submit', log);
+      269 |   log(`meeting submit: ${msgs.join(' | ') || 'no message'}`);
+    > 270 |   if (!msgs.some((x) => /success|submitted/i.test(x))) throw new Error(`meeting submit: ${msgs.join(' | ') || 'no message'}`);
+          |                                                              ^
+      271 |   for (let i = 0; i < 24 && faStatus(ct) === 51200; i++) await page.waitForTimeout(5000);
+      272 |   return { messages: [saved, ...msgs, `${ct} FA ${faStatus(ct)}`].filter(Boolean).map(clean) };
+      273 | }
+        at confirmFaMeeting (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:270:62)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_140643\flows-en-ct.flow-ct-amendm-ae9de-thority-Confirm-FA-Meeting--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_140643\flows-en-ct.flow-ct-amendm-ae9de-thority-Confirm-FA-Meeting--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 
+  2 skipped
+
+Running 4 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+[14:11:00] ct-amendment-supplement/03_CT-103: DB status CT:FA CT260000000002328: 51250 Pending Decision by the Approving Authority at the Ministry / Jabatan Level / Menunggu Keputusan Pihak Berkuasa Melulus di Peringkat Kementerian / Jabatan (expected 51250, OK)
+  ✓  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103 (1.3s)
+[14:11:02] ct-amendment-supplement/04_CT-104: BPM task "Update FA Result" of CT260000000002328 is open (assigned to 881204115188)
+[14:11:04] ct-amendment-supplement/04_CT-104: CT-104 Committee secretary records the approving authority decision (Update FA Result) — role Desk Officer (committee secretary), login: officer 881204115188: BPM task "Update FA Result" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)
+[14:11:04] ct-amendment-supplement/04_CT-104: CT-104: login 881204115188 (BPM assignee)
+[14:11:07] ct-amendment-supplement/04_CT-104: CT-104: Logged in as 881204115188
+[14:11:14] ct-amendment-supplement/04_CT-104: CT-104: decision = Approve (options - Select One - / Approve / Reject)
+[14:11:14] ct-amendment-supplement/04_CT-104: CT-104: upload File_pdf_for_testing.pdf → input[id$="pbqcDecisionLetterId_input"]: no message
+[14:11:49] ct-amendment-supplement/04_CT-104: Closed the TERKINI announcement
+[14:11:52] ct-amendment-supplement/04_CT-104: Signed out (SSO logout)
+  ✘  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 (51.3s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 
+
+    TimeoutError: locator.isDisabled: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//*[normalize-space()="List Of Committee Members" or normalize-space()="LIST OF COMMITTEE MEMBERS"]/following::tbody[1]//div[contains(@class,"ui-chkbox")]').nth(1).locator('input')
+
+
+       at ..\support\modules\ct\amendment.ts:321
+
+      319 |   for (let i = 0; i < (await boxes.count()); i++) {
+      320 |     const inp = boxes.nth(i).locator('input');
+    > 321 |     if ((await inp.isDisabled()) || (await inp.isChecked())) continue;
+          |                    ^
+      322 |     await boxes.nth(i).locator('.ui-chkbox-box').click();
+      323 |     await pfIdle(page);
+      324 |     ticked++;
+        at updateFaResult (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:321:20)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_141050\flows-en-ct.flow-ct-amendm-9e7c4--decision-Update-FA-Result--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_141050\flows-en-ct.flow-ct-amendm-9e7c4--decision-Update-FA-Result--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 
+  2 skipped
+  1 passed (1.0m)
+
+Running 4 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+[14:12:57] ct-amendment-supplement/04_CT-104: BPM task "Update FA Result" of CT260000000002328 is open (assigned to 881204115188)
+[14:12:59] ct-amendment-supplement/04_CT-104: CT-104 Committee secretary records the approving authority decision (Update FA Result) — role Desk Officer (committee secretary), login: officer 881204115188: BPM task "Update FA Result" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)
+[14:12:59] ct-amendment-supplement/04_CT-104: CT-104: login 881204115188 (BPM assignee)
+[14:13:03] ct-amendment-supplement/04_CT-104: CT-104: Logged in as 881204115188
+[14:13:10] ct-amendment-supplement/04_CT-104: CT-104: decision = Approve (options - Select One - / Approve / Reject)
+[14:13:10] ct-amendment-supplement/04_CT-104: CT-104: upload File_pdf_for_testing.pdf → input[id$="pbqcDecisionLetterId_input"]: no message
+[14:13:10] ct-amendment-supplement/04_CT-104: CT-104: attendance and endorsement ticked: 3
+[14:13:11] ct-amendment-supplement/04_CT-104: CT-104: update committee: no message
+[14:13:16] ct-amendment-supplement/04_CT-104: Closed the TERKINI announcement
+[14:13:19] ct-amendment-supplement/04_CT-104: Signed out (SSO logout)
+  ✘  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 (23.6s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 
+
+    Error: Button "Save" not found
+
+       at ..\support\modules\qt\pf.ts:106
+
+      104 |     { label, inDialog },
+      105 |   );
+    > 106 |   if (!ok) throw new Error(`Button "${label}" not found${inDialog ? ` in ${inDialog}` : ''}`);
+          |                  ^
+      107 |   await page.locator('[data-pw-target="1"]').click();
+      108 |   await pfIdle(page);
+      109 | }
+        at clickButton (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:106:18)
+        at updateFaResult (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:338:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_141243\flows-en-ct.flow-ct-amendm-9e7c4--decision-Update-FA-Result--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_141243\flows-en-ct.flow-ct-amendm-9e7c4--decision-Update-FA-Result--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 
+  3 skipped
+
+Running 4 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+[14:15:11] ct-amendment-supplement/04_CT-104: BPM task "Update FA Result" of CT260000000002328 is open (assigned to 881204115188)
+[14:15:13] ct-amendment-supplement/04_CT-104: CT-104 Committee secretary records the approving authority decision (Update FA Result) — role Desk Officer (committee secretary), login: officer 881204115188: BPM task "Update FA Result" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)
+[14:15:13] ct-amendment-supplement/04_CT-104: CT-104: login 881204115188 (BPM assignee)
+[14:15:17] ct-amendment-supplement/04_CT-104: CT-104: Logged in as 881204115188
+[14:15:24] ct-amendment-supplement/04_CT-104: CT-104: decision = Approve (options - Select One - / Approve / Reject)
+[14:15:24] ct-amendment-supplement/04_CT-104: CT-104: upload File_pdf_for_testing.pdf → input[id$="pbqcDecisionLetterId_input"]: no message
+[14:15:24] ct-amendment-supplement/04_CT-104: CT-104: attendance and endorsement ticked: 3
+[14:15:25] ct-amendment-supplement/04_CT-104: CT-104: result save: Amendment With Supplementary Contract CT260000000002328 is saved.
+[14:15:27] ct-amendment-supplement/04_CT-104: CT-104: result submit: Decision Paper is mandatory. (ERR-100022)
+[14:18:00] ct-amendment-supplement/04_CT-104: Signed out (SSO logout)
+  ✘  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 (2.8m)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 
+
+    Error: result submit: FA still 51250 (Decision Paper is mandatory. (ERR-100022))
+
+       at ..\support\modules\ct\amendment.ts:343
+
+      341 |   for (let i = 0; i < 24 && faStatus(ct) === 51250; i++) await page.waitForTimeout(5000);
+      342 |   // judge by the DB (submit texts vary: "has been updated", "successfully submitted")
+    > 343 |   if (faStatus(ct) === 51250) throw new Error(`result submit: FA still 51250 (${msgs.join(' | ') || 'no message'})`);
+          |                                     ^
+      344 |   return { messages: [saved, ...msgs, `${ct} FA ${faStatus(ct)}`].filter(Boolean).map(clean) };
+      345 | }
+      346 |
+        at updateFaResult (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:343:37)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_141450\flows-en-ct.flow-ct-amendm-9e7c4--decision-Update-FA-Result--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_141450\flows-en-ct.flow-ct-amendm-9e7c4--decision-Update-FA-Result--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 
+  3 skipped
+
+Running 4 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+[14:21:34] ct-amendment-supplement/04_CT-104: BPM task "Update FA Result" of CT260000000002328 is open (assigned to 881204115188)
+[14:21:36] ct-amendment-supplement/04_CT-104: CT-104 Committee secretary records the approving authority decision (Update FA Result) — role Desk Officer (committee secretary), login: officer 881204115188: BPM task "Update FA Result" of CT260000000002328 is ASSIGNED to 881204115188 (SIT WFTASK)
+[14:21:36] ct-amendment-supplement/04_CT-104: CT-104: login 881204115188 (BPM assignee)
+[14:21:40] ct-amendment-supplement/04_CT-104: CT-104: Logged in as 881204115188
+[14:21:45] ct-amendment-supplement/04_CT-104: CT-104: decision = Approve (options - Select One - / Approve / Reject)
+[14:21:47] ct-amendment-supplement/04_CT-104: CT-104: upload File_pdf_for_testing.pdf via uploadPbqcDecisionLetterDlg: no message
+[14:21:47] ct-amendment-supplement/04_CT-104: CT-104: attendance and endorsement ticked: 0
+[14:21:48] ct-amendment-supplement/04_CT-104: CT-104: result save: Amendment With Supplementary Contract CT260000000002328 is saved.
+[14:21:50] ct-amendment-supplement/04_CT-104: CT-104: result submit: The decision of Approving Authorities at the Ministry / Jabatan Level for Amendment With Supplemental Contract CT260000000002328 has been updated.
+[14:21:56] ct-amendment-supplement/04_CT-104: Closed the TERKINI announcement
+[14:21:57] ct-amendment-supplement/04_CT-104: DB status CT:FA CT260000000002328: 51300 Pending Verification / Menunggu Pengesahan (expected 51300, OK)
+[14:21:58] ct-amendment-supplement/04_CT-104: Signed out (SSO logout)
+  ✓  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104 (25.3s)
+
+  3 skipped
+  1 passed (36.4s)
+
+Running 5 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+[14:24:52] ct-amendment-supplement/05_CT-105: CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) — role Committee members, login: Katalon default account of the step
+[14:24:58] ct-amendment-supplement/05_CT-105: Closed the TERKINI announcement
+[14:24:58] ct-amendment-supplement/05_CT-105: CT-105: login 770614135921
+[14:25:02] ct-amendment-supplement/05_CT-105: CT-105: Logged in as 770614135921
+[14:25:08] ct-amendment-supplement/05_CT-105: CT-105: sign off 770614135921: Amendment With Supplementary Contract CT260000000002328 is acknowledged.
+[14:25:10] ct-amendment-supplement/05_CT-105: Closed the TERKINI announcement
+[14:25:10] ct-amendment-supplement/05_CT-105: CT-105: login 770614135925
+[14:25:12] ct-amendment-supplement/05_CT-105: CT-105: Logged in as 770614135925
+[14:25:18] ct-amendment-supplement/05_CT-105: CT-105: sign off 770614135925: Amendment With Supplementary Contract CT260000000002328 is acknowledged.
+[14:25:22] ct-amendment-supplement/05_CT-105: CT-105: after sign off: FA 51320; open Sign Off tasks 0 ()
+[14:25:24] ct-amendment-supplement/05_CT-105: DB status CT:FA CT260000000002328: 51320 Pending Chairperson Sign Off / Menunggu Pengesahan Pengerusi (expected 51320, OK)
+[14:25:25] ct-amendment-supplement/05_CT-105: Signed out (SSO logout)
+  ✓  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105 (34.3s)
+
+  4 skipped
+  1 passed (44.6s)
+
+Running 6 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+[14:27:14] ct-amendment-supplement/06_CT-106: BPM task "Chairperson SignOff" of CT260000000002328 is open (assigned to 711105085487)
+[14:27:17] ct-amendment-supplement/06_CT-106: CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) — role Committee chairperson, login: officer 711105085487: BPM task "Chairperson SignOff" of CT260000000002328 is ASSIGNED to 711105085487 (SIT WFTASK)
+[14:27:17] ct-amendment-supplement/06_CT-106: CT-106: login 711105085487 (BPM assignee)
+[14:27:21] ct-amendment-supplement/06_CT-106: CT-106: Logged in as 711105085487
+[14:27:28] ct-amendment-supplement/06_CT-106: CT-106: Acknowledge: Amendment With Supplementary Contract CT260000000002328 is acknowledged.
+[14:27:32] ct-amendment-supplement/06_CT-106: Closed the TERKINI announcement
+[14:27:33] ct-amendment-supplement/06_CT-106: DB status CT:FA CT260000000002328: 51400 Pending Supplemental Contract Letter Submission / Menunggu Penyerahan Surat Berkaitan Kontrak Tambahan (expected 51400, OK)
+[14:27:34] ct-amendment-supplement/06_CT-106: Signed out (SSO logout)
+  ✓  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106 (21.1s)
+
+  5 skipped
+  1 passed (32.3s)
+
+Running 7 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+[14:30:57] ct-amendment-supplement/07_CT-107: CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) — role Contract Administrator, login: account of KAT-040
+[14:30:57] ct-amendment-supplement/07_CT-107: CT-107: login 000011113333 (account of KAT-040)
+[14:31:00] ct-amendment-supplement/07_CT-107: CT-107: Logged in as 000011113333
+[14:31:43] ct-amendment-supplement/07_CT-107: Signed out (SSO logout)
+  ✘  7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107 (47.8s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByText(/^supplemental contract letter content$/i).first() to be visible
+
+
+       at ..\support\modules\ct\amendment.ts:111
+
+      109 |   await page.locator('li.ui-tabmenuitem:visible a', { hasText: new RegExp(`^\\s*${label}\\s*$`) }).first().click();
+      110 |   await pfIdle(page);
+    > 111 |   await page.getByText(expectText).first().waitFor({ timeout: 30_000 });
+          |                                            ^
+      112 | }
+      113 |
+      114 | /** Open Amendment With Supplement, fill Amendment Detail and Save (creates the FA draft 51000). */
+        at sideMenu (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:111:44)
+        at prepareSupplementalLetter (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:413:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_143044\flows-en-ct.flow-ct-amendm-d10c9-ontract-letter-Prepare-LOA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_143044\flows-en-ct.flow-ct-amendm-d10c9-ontract-letter-Prepare-LOA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107 
+  6 skipped
+
+Running 7 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+[14:32:32] ct-amendment-supplement/07_CT-107: CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) — role Contract Administrator, login: account of KAT-040
+[14:32:32] ct-amendment-supplement/07_CT-107: CT-107: login 000011113333 (account of KAT-040)
+[14:32:34] ct-amendment-supplement/07_CT-107: CT-107: Logged in as 000011113333
+[14:32:44] ct-amendment-supplement/07_CT-107: CT-107: upload File_pdf_for_testing.pdf via dialog: no message
+[14:32:45] ct-amendment-supplement/07_CT-107: CT-107: letter save: Supplemental Contract Letter CT260000000002328 is saved.
+[14:32:47] ct-amendment-supplement/07_CT-107: CT-107: letter submit: Supplemental Contract Letter CT260000000002328 is successfully submitted for acknowledgment.
+[14:33:23] ct-amendment-supplement/07_CT-107: DB status CT:FA CT260000000002328: 51450 Pending Supplemental Contract Letter Acknowledgement / Menunggu Pengesahan Surat Berkaitan Kontrak Tambahan (expected 51405, different — observe-only, reported)
+[14:33:24] ct-amendment-supplement/07_CT-107: Signed out (SSO logout)
+  ✓  7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107 (54.1s)
+
+  6 skipped
+  1 passed (1.1m)
+
+Running 8 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+[14:36:32] ct-amendment-supplement/07_CT-107: DB status CT:FA CT260000000002328: 51450 Pending Supplemental Contract Letter Acknowledgement / Menunggu Pengesahan Surat Berkaitan Kontrak Tambahan (expected 51450, OK)
+  ✓  7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107 (1.4s)
+[14:36:33] ct-amendment-supplement/08_CT-108: CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) — role Supplier (company admin), login: Katalon default account of the step
+[14:36:38] ct-amendment-supplement/08_CT-108: Closed the TERKINI announcement
+[14:36:38] ct-amendment-supplement/08_CT-108: CT-108: login firstallied123
+[14:36:41] ct-amendment-supplement/08_CT-108: CT-108: Logged in as firstallied123
+[14:36:50] ct-amendment-supplement/08_CT-108: Closed the TERKINI announcement
+[14:36:53] ct-amendment-supplement/08_CT-108: Signed out (SSO logout)
+  ✘  8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 (21.3s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 
+
+    Error: Button "Acknowledge" not found
+
+       at ..\support\modules\qt\pf.ts:106
+
+      104 |     { label, inDialog },
+      105 |   );
+    > 106 |   if (!ok) throw new Error(`Button "${label}" not found${inDialog ? ` in ${inDialog}` : ''}`);
+          |                  ^
+      107 |   await page.locator('[data-pw-target="1"]').click();
+      108 |   await pfIdle(page);
+      109 | }
+        at clickButton (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:106:18)
+        at pressAndConfirm (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:114:3)
+        at ackFaSupplier (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:462:16)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:749:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_143619\flows-en-ct.flow-ct-amendm-b0579-tal-contract-letter-Ack-FA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_143619\flows-en-ct.flow-ct-amendm-b0579-tal-contract-letter-Ack-FA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 
+  6 skipped
+  1 passed (33.9s)
+
+Running 8 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -  7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+[14:39:16] ct-amendment-supplement/08_CT-108: CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) — role Supplier (company admin), login: Katalon default account of the step
+[14:39:21] ct-amendment-supplement/08_CT-108: Closed the TERKINI announcement
+[14:39:21] ct-amendment-supplement/08_CT-108: CT-108: login firstallied123
+[14:39:24] ct-amendment-supplement/08_CT-108: CT-108: Logged in as firstallied123
+[14:39:29] ct-amendment-supplement/08_CT-108: CT-108: declaration save: Supplemental Contract Letter CT260000000002328 is saved.
+[14:39:34] ct-amendment-supplement/08_CT-108: Closed the TERKINI announcement
+[14:39:37] ct-amendment-supplement/08_CT-108: Signed out (SSO logout)
+  ✘  8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 (22.0s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 
+
+    Error: Acknowledge is still disabled after ticking the declaration and saving (nothing acknowledged)
+
+       at ..\support\modules\ct\amendment.ts:479
+
+      477 |       }
+      478 |     }
+    > 479 |     if (await ackDisabled()) throw new Error('Acknowledge is still disabled after ticking the declaration and saving (nothing acknowledged)');
+          |                                    ^
+      480 |   }
+      481 |   const msgs = await pressAndConfirm(page, 'Acknowledge', log);
+      482 |   log(`supplier acknowledge (${user}): ${msgs.join(' | ') || 'no message'}`);
+        at ackFaSupplier (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:479:36)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:749:21)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_143904\flows-en-ct.flow-ct-amendm-b0579-tal-contract-letter-Ack-FA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_143904\flows-en-ct.flow-ct-amendm-b0579-tal-contract-letter-Ack-FA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 
+  7 skipped
+
+Running 8 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -  7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+[15:34:50] ct-amendment-supplement/08_CT-108: CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) — role Supplier (company admin), login: Katalon default account of the step
+[15:34:55] ct-amendment-supplement/08_CT-108: Closed the TERKINI announcement
+[15:34:55] ct-amendment-supplement/08_CT-108: CT-108: login firstallied123
+[15:35:00] ct-amendment-supplement/08_CT-108: CT-108: Logged in as firstallied123
+[15:35:10] ct-amendment-supplement/08_CT-108: CT-108: letter downloaded: File_pdf_for_testing.pdf
+[15:35:12] ct-amendment-supplement/08_CT-108: CT-108: dialog: "Please answer the challenge response and key in Soft Cert PIN Number Soft Cert PIN Number * Sign Change Challenge Questi" -> Sign
+[15:35:15] ct-amendment-supplement/08_CT-108: CT-108: supplier acknowledge (firstallied123): Supplemental Contract Letter CT260000000002328 is acknowledged.
+[15:35:20] ct-amendment-supplement/08_CT-108: Closed the TERKINI announcement
+[15:35:21] ct-amendment-supplement/08_CT-108: DB status CT:FA CT260000000002328: 51500 Pending Verification Acknowledgement of Supplemental Contract Letter / Menunggu Pengesahan Penerimaan Surat Berkaitan Kontrak Tambahan (expected 51500, OK)
+[15:35:22] ct-amendment-supplement/08_CT-108: Signed out (SSO logout)
+  ✓  8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108 (34.8s)
+
+  7 skipped
+  1 passed (47.5s)
+
+Running 9 tests using 1 worker
+
+  -  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -  2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -  3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -  4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -  5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -  6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -  7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -  8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+[15:37:22] ct-amendment-supplement/09_CT-109: CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) — role Contract Administrator, login: account of KAT-040
+[15:37:22] ct-amendment-supplement/09_CT-109: CT-109: login 000011113333 (account of KAT-040)
+[15:37:25] ct-amendment-supplement/09_CT-109: CT-109: Logged in as 000011113333
+[15:37:32] ct-amendment-supplement/09_CT-109: CT-109: Acknowledge: Supplemental Contract Letter CT260000000002328 is completed.
+[15:37:37] ct-amendment-supplement/09_CT-109: Closed the TERKINI announcement
+[15:37:38] ct-amendment-supplement/09_CT-109: DB status CT:FA CT260000000002328: 51700 Supplemental Contract Letter Completed / Surat Berkaitan Kontrak Tambahan Telah Lengkap (expected 51700, OK)
+[15:37:38] ct-amendment-supplement/09_CT-109: Signed out (SSO logout)
+  ✓  9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109 (17.6s)
+
+  8 skipped
+  1 passed (31.1s)
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:41:02] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:41:02] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:41:06] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:41:12] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:41:14] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:41:17] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upAgrSignedPageDlg: no message
+[15:41:19] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upStampedPageDlg: no message
+[15:41:54] ct-amendment-supplement/10_CT-110: Closed the TERKINI announcement
+[15:41:57] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (55.1s)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByText(/^approver list$/i).first() to be visible
+
+
+       at ..\support\modules\ct\amendment.ts:111
+
+      109 |   await page.locator('li.ui-tabmenuitem:visible a', { hasText: new RegExp(`^\\s*${label}\\s*$`) }).first().click();
+      110 |   await pfIdle(page);
+    > 111 |   await page.getByText(expectText).first().waitFor({ timeout: 30_000 });
+          |                                            ^
+      112 | }
+      113 |
+      114 | /** Open Amendment With Supplement, fill Amendment Detail and Save (creates the FA draft 51000). */
+        at sideMenu (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:111:44)
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:528:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_154049\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_154049\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:42:43] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:42:43] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:42:47] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:42:53] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:42:55] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:42:58] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upAgrSignedPageDlg: no message
+[15:43:00] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upStampedPageDlg: no message
+[15:43:00] ct-amendment-supplement/10_CT-110: CT-110: selected approver: 
+[15:43:01] ct-amendment-supplement/10_CT-110: CT-110: SA save: Supplemental Agreement CT260000000002328 is saved.
+[15:43:03] ct-amendment-supplement/10_CT-110: CT-110: SA submit: At least one row should be in Supplier Witness section. (ERR-100023)
+[15:45:31] ct-amendment-supplement/10_CT-110: Closed the TERKINI announcement
+[15:45:35] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (2.9m)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    Error: SA submit: still 57750 (At least one row should be in Supplier Witness section. (ERR-100023))
+
+       at ..\support\modules\ct\amendment.ts:543
+
+      541 |   log(`SA submit: ${msgs.join(' | ') || 'no message'}`);
+      542 |   for (let i = 0; i < 24 && saStatus(ct) === 57750; i++) await page.waitForTimeout(5000);
+    > 543 |   if (saStatus(ct) === 57750) throw new Error(`SA submit: still 57750 (${msgs.join(' | ') || 'no message'})`);
+          |                                     ^
+      544 |   return { messages: [saved, ...msgs, `${ct} SA ${saStatus(ct)}`].filter(Boolean).map(clean) };
+      545 | }
+      546 |
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:543:37)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_154231\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_154231\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:46:43] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:46:43] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:46:46] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:46:52] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:46:52] ct-amendment-supplement/10_CT-110: CT-110: supplier witness filled
+[15:46:55] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:47:31] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (48.3s)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    TimeoutError: locator.click: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('//label[normalize-space()="Signing Page"]/following::button[contains(@class,"ui-button-icon-only")][1]')
+
+
+       at ..\support\modules\ct\amendment.ts:293
+
+      291 |     // the given trigger, else the visible upload icon button whose onclick opens this dialog, else the only visible one
+      292 |     const btn = trigger ?? page.locator(`button:visible:has(.ui-icon-upload)[onclick*="${dialog}"]`).or(page.locator('button:visible:has(.ui-icon-upload)')).first();
+    > 293 |     await btn.click();
+          |               ^
+      294 |     await pfIdle(page);
+      295 |   }
+      296 |   await dlg.waitFor({ state: 'visible', timeout: 20_000 });
+        at dialogUpload (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:293:15)
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:541:3)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_154632\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_154632\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:48:16] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:48:16] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:48:19] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:48:24] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:48:25] ct-amendment-supplement/10_CT-110: CT-110: supplier witness filled
+[15:48:27] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:48:27] ct-amendment-supplement/10_CT-110: CT-110: Signing Page: already uploaded (no upload button)
+[15:48:27] ct-amendment-supplement/10_CT-110: CT-110: Stamping Page: already uploaded (no upload button)
+[15:48:28] ct-amendment-supplement/10_CT-110: CT-110: selected approver: 
+[15:48:32] ct-amendment-supplement/10_CT-110: Closed the TERKINI announcement
+[15:48:35] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (19.2s)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    Error: approver Shamsul Azri Bin Abu Bakar not in Selected Approver (nothing submitted)
+
+       at ..\support\modules\ct\amendment.ts:558
+
+      556 |   const chosen = await selected.allInnerTexts();
+      557 |   log(`selected approver: ${chosen.join(', ')}`);
+    > 558 |   if (!chosen.some((t) => t.includes(approver))) throw new Error(`approver ${approver} not in Selected Approver (nothing submitted)`);
+          |                                                        ^
+      559 |   await clickButton(page, 'Save');
+      560 |   const saved = (await pageMessages(page)).join(' | ');
+      561 |   log(`SA save: ${saved || 'no message'}`);
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:558:56)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_154805\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_154805\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:49:53] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:49:53] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:49:56] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:50:01] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:50:01] ct-amendment-supplement/10_CT-110: CT-110: supplier witness filled
+[15:50:04] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:50:04] ct-amendment-supplement/10_CT-110: CT-110: Signing Page: already uploaded (no upload button)
+[15:50:04] ct-amendment-supplement/10_CT-110: CT-110: Stamping Page: already uploaded (no upload button)
+[15:50:05] ct-amendment-supplement/10_CT-110: CT-110: selected approver: Shamsul Azri Bin Abu Bakar
+[15:50:05] ct-amendment-supplement/10_CT-110: CT-110: SA save: Supplemental Agreement CT260000000002328 is saved.
+[15:50:07] ct-amendment-supplement/10_CT-110: CT-110: SA submit: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)
+[15:52:37] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (2.7m)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    Error: SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))
+
+       at ..\support\modules\ct\amendment.ts:574
+
+      572 |   log(`SA submit: ${msgs.join(' | ') || 'no message'}`);
+      573 |   for (let i = 0; i < 24 && saStatus(ct) === 57750; i++) await page.waitForTimeout(5000);
+    > 574 |   if (saStatus(ct) === 57750) throw new Error(`SA submit: still 57750 (${msgs.join(' | ') || 'no message'})`);
+          |                                     ^
+      575 |   return { messages: [saved, ...msgs, `${ct} SA ${saStatus(ct)}`].filter(Boolean).map(clean) };
+      576 | }
+      577 |
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:574:37)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_154942\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_154942\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:53:27] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:53:27] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:53:29] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:53:35] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:53:35] ct-amendment-supplement/10_CT-110: CT-110: supplier witness filled
+[15:53:38] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:53:38] ct-amendment-supplement/10_CT-110: CT-110: Signing Page: already uploaded (no upload button)
+[15:53:38] ct-amendment-supplement/10_CT-110: CT-110: Stamping Page: already uploaded (no upload button)
+[15:53:38] ct-amendment-supplement/10_CT-110: CT-110: SA save: Supplemental Agreement CT260000000002328 is saved.
+[15:53:39] ct-amendment-supplement/10_CT-110: CT-110: selected approver: Shamsul Azri Bin Abu Bakar
+[15:53:41] ct-amendment-supplement/10_CT-110: CT-110: SA submit: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)
+[15:56:10] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (2.7m)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    Error: SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))
+
+       at ..\support\modules\ct\amendment.ts:577
+
+      575 |   log(`SA submit: ${msgs.join(' | ') || 'no message'}`);
+      576 |   for (let i = 0; i < 24 && saStatus(ct) === 57750; i++) await page.waitForTimeout(5000);
+    > 577 |   if (saStatus(ct) === 57750) throw new Error(`SA submit: still 57750 (${msgs.join(' | ') || 'no message'})`);
+          |                                     ^
+      578 |   return { messages: [saved, ...msgs, `${ct} SA ${saStatus(ct)}`].filter(Boolean).map(clean) };
+      579 | }
+      580 |
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:577:37)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_155316\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_155316\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[15:56:57] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[15:56:57] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[15:57:00] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[15:57:05] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[15:57:05] ct-amendment-supplement/10_CT-110: CT-110: supplier witness filled
+[15:57:07] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[15:57:07] ct-amendment-supplement/10_CT-110: CT-110: Signing Page: already uploaded (no upload button)
+[15:57:07] ct-amendment-supplement/10_CT-110: CT-110: Stamping Page: already uploaded (no upload button)
+[15:57:08] ct-amendment-supplement/10_CT-110: CT-110: SA save: Supplemental Agreement CT260000000002328 is saved.
+[15:57:08] ct-amendment-supplement/10_CT-110: CT-110: selected approver: Shamsul Azri Bin Abu Bakar
+[15:57:10] ct-amendment-supplement/10_CT-110: CT-110: SA submit: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)
+[15:59:42] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (2.8m)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    Error: SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))
+
+       at ..\support\modules\ct\amendment.ts:584
+
+      582 |   log(`SA submit: ${msgs.join(' | ') || 'no message'}`);
+      583 |   for (let i = 0; i < 24 && saStatus(ct) === 57750; i++) await page.waitForTimeout(5000);
+    > 584 |   if (saStatus(ct) === 57750) throw new Error(`SA submit: still 57750 (${msgs.join(' | ') || 'no message'})`);
+          |                                     ^
+      585 |   return { messages: [saved, ...msgs, `${ct} SA ${saStatus(ct)}`].filter(Boolean).map(clean) };
+      586 | }
+      587 |
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:584:37)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_155646\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_155646\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run
+
+Running 11 tests using 1 worker
+
+  -   1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101
+  -   2 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 02 CT-102 Contract Approver approves the amendment with supplement (Review FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/02_CT-102 @CT-102
+  -   3 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 03 CT-103 Committee secretary confirms the FA meeting and the approving authority (Confirm FA Meeting) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/03_CT-103 @CT-103
+  -   4 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 04 CT-104 Committee secretary records the approving authority decision (Update FA Result) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/04_CT-104 @CT-104
+  -   5 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 05 CT-105 Committee members sign off the amendment decision (Sign Off → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/05_CT-105 @CT-105
+  -   6 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 06 CT-106 Committee chairperson signs off the amendment decision (Chairperson SignOff → Acknowledge) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/06_CT-106 @CT-106
+  -   7 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 07 CT-107 Contract Administrator prepares and submits the supplemental contract letter (Prepare LOA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/07_CT-107 @CT-107
+  -   8 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 08 CT-108 Supplier acknowledges the supplemental contract letter (Ack FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/08_CT-108 @CT-108
+  -   9 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 09 CT-109 Contract Administrator verifies the supplier acknowledgement (Verify FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/09_CT-109 @CT-109
+[16:01:56] ct-amendment-supplement/10_CT-110: Waiting for memory before CT-110: 1.2 GB free, need 1.2 GB
+[16:02:26] ct-amendment-supplement/10_CT-110: CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) — role Contract Administrator, login: account of KAT-040
+[16:02:26] ct-amendment-supplement/10_CT-110: CT-110: login 000011113333 (account of KAT-040)
+[16:02:30] ct-amendment-supplement/10_CT-110: CT-110: Logged in as 000011113333
+[16:02:37] ct-amendment-supplement/10_CT-110: CT-110: agency witness filled
+[16:02:37] ct-amendment-supplement/10_CT-110: CT-110: supplier witness filled
+[16:02:40] ct-amendment-supplement/10_CT-110: CT-110: upload File_pdf_for_testing.pdf via upContractDocumentDlg: no message
+[16:02:40] ct-amendment-supplement/10_CT-110: CT-110: Signing Page: already uploaded (no upload button)
+[16:02:40] ct-amendment-supplement/10_CT-110: CT-110: Stamping Page: already uploaded (no upload button)
+[16:02:40] ct-amendment-supplement/10_CT-110: CT-110: selected approver: Shamsul Azri Bin Abu Bakar
+[16:02:42] ct-amendment-supplement/10_CT-110: CT-110: SA submit: Approver is mandatory for document submission. Please select at least one approver. (ERR-750010)
+[16:05:15] ct-amendment-supplement/10_CT-110: Signed out (SSO logout)
+  ✘  10 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 (3.3m)
+  -  11 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 11 CT-111 Contract Approver approves the supplemental agreement (Review AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/11_CT-111 @CT-111
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+
+    Error: SA submit: still 57750 (Approver is mandatory for document submission. Please select at least one approver. (ERR-750010))
+
+       at ..\support\modules\ct\amendment.ts:580
+
+      578 |   log(`SA submit: ${msgs.join(' | ') || 'no message'}`);
+      579 |   for (let i = 0; i < 24 && saStatus(ct) === 57750; i++) await page.waitForTimeout(5000);
+    > 580 |   if (saStatus(ct) === 57750) throw new Error(`SA submit: still 57750 (${msgs.join(' | ') || 'no message'})`);
+          |                                     ^
+      581 |   return { messages: [saved, ...msgs, `${ct} SA ${saStatus(ct)}`].filter(Boolean).map(clean) };
+      582 | }
+      583 |
+        at createSa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:580:37)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_160139\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_160139\flows-en-ct.flow-ct-amendm-205a3-reement-Create-Draft-AC-SA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 10 CT-110 Contract Administrator creates and submits the supplemental agreement (Create Draft AC/SA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/10_CT-110 @CT-110 
+  9 skipped
+  1 did not run

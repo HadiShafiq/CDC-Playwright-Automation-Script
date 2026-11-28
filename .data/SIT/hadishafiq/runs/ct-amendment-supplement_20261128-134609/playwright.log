@@ -1,0 +1,41 @@
+
+Running 1 test using 1 worker
+
+[13:46:19] ct-amendment-supplement/01_CT-101: CT-101 Contract Amendment With Supplement: create and submit (FA) — role Contract Administrator, login: account of KAT-040
+[13:46:19] ct-amendment-supplement/01_CT-101: CT-101: login 000011113333 (account of KAT-040)
+[13:46:22] ct-amendment-supplement/01_CT-101: CT-101: Logged in as 000011113333
+[13:46:25] ct-amendment-supplement/01_CT-101: CT-101: CT260000000002328: Contract Maintenance → Amendment With Supplement
+[13:46:39] ct-amendment-supplement/01_CT-101: CT-101: FA save: Amendment With Supplementary Contract CT260000000002328 is saved.
+[13:46:43] ct-amendment-supplement/01_CT-101: Closed the TERKINI announcement
+[13:46:46] ct-amendment-supplement/01_CT-101: Signed out (SSO logout)
+  ✘  1 [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 (29.4s)
+
+
+  1) [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 
+
+    Error: Button "Submit" not found
+
+       at ..\support\modules\qt\pf.ts:106
+
+      104 |     { label, inDialog },
+      105 |   );
+    > 106 |   if (!ok) throw new Error(`Button "${label}" not found${inDialog ? ` in ${inDialog}` : ''}`);
+          |                  ^
+      107 |   await page.locator('[data-pw-target="1"]').click();
+      108 |   await pfIdle(page);
+      109 | }
+        at clickButton (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:106:18)
+        at pressAndConfirm (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\qt\pf.ts:114:3)
+        at createFa (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\modules\ct\amendment.ts:109:16)
+        at runStep (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:777:19)
+        at runItem (C:\Users\hadishafiq\CDC-Playwright-Automation-Script\support\core\flow-runner.ts:141:8)
+        at C:\Users\hadishafiq\CDC-Playwright-Automation-Script\tests\flows\en\ct.flow.spec.ts:13:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\SIT\2026-11-28_134610\flows-en-ct.flow-ct-amendm-751bb-ement-create-and-submit-FA--flows\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\SIT\2026-11-28_134610\flows-en-ct.flow-ct-amendm-751bb-ement-create-and-submit-FA--flows\error-context.md
+
+  1 failed
+    [flows] › tests\flows\en\ct.flow.spec.ts:12:11 › ct-amendment-supplement [EN] Contract amendment with supplement (FA) to supplemental contract letter completed (51700) › 01 CT-101 Contract Amendment With Supplement: create and submit (FA) @flow-ct-amendment-supplement @module-ct @lang-en @FLOW @ct-amendment-supplement/01_CT-101 @CT-101 
