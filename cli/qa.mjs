@@ -563,6 +563,29 @@ async function cmdDocStatus(args) {
   if (!DOC_TYPES.some((t) => DOC_RE(t).test(no))) die('Give --doc <document number>, e.g. --doc LA260000000004216');
   await runTool(env, { QA_TOOL: 'doc-status', QA_DOC: no });
 }
+/** Read-only SELECT on SIT (sitQuery refuses anything else: one SELECT/WITH, no FOR UPDATE). */
+async function cmdSql(args) {
+  const env = envOf(args);
+  const sql = String(args._.slice(1).join(' ') || args.query || '').trim();
+  if (!sql) die('Give the query: npm run qa -- sql --env sit "select … from ngep_sit.…"   (SELECT only)');
+  if (!/^(select|with)\b/i.test(sql)) die('qa sql runs SELECT statements only; data changes go through qa simulate --run (allow-listed, audited).');
+  await runTool(env, { QA_TOOL: 'sql', QA_SQL: sql, QA_MAX_ROWS: String(args.max ?? 200) });
+}
+/** Read-only screen probe: log in, open a document's task, read the screen and the given menus / tabs. */
+async function cmdProbe(args) {
+  const env = envOf(args);
+  const no = String(args.doc ?? '');
+  if (!no) die('Give --doc <document number> and --user <login ID> or --account KAT-0xx [--tabs "Menu A,Menu B"]');
+  if (!args.user && !args.account) die('Give --user <login ID> (BPM assignee, see qa doc-status) or --account KAT-0xx');
+  if (args.account && !/^KAT-\d{3}$/.test(String(args.account))) die('--account takes a Katalon step id, e.g. KAT-040');
+  await runTool(env, {
+    QA_TOOL: 'probe',
+    QA_DOC: no,
+    ...(args.user ? { QA_USER: String(args.user) } : {}),
+    ...(args.account ? { QA_ACCOUNT: String(args.account) } : {}),
+    ...(args.tabs ? { QA_TABS: String(args.tabs) } : {}),
+  });
+}
 /** Simulate a backend-only status on one document: prints the data patch (tester runs it), --check confirms + logs it. */
 async function cmdSimulate(args) {
   const env = envOf(args);
@@ -889,6 +912,10 @@ ${bold('CR suites')} ${dim('(tests/cr-suites/<CR>/: cr.json → data-prep/ + exe
 
 ${bold('SIT database')} ${dim('(read-only, via your DBeaver SIT connection)')}
   doc-status --env sit --doc LA260000000004216   Status history EN/BM (whole path) + BPM tasks and who they are assigned to
+  sql        --env sit "select … from ngep_sit.…" [--max 200]   One read-only SELECT (anything else is refused)
+  probe      --env sit --doc <no> --user <id> | --account KAT-0xx [--tabs "Menu A,Menu B"]
+                                                 Read a task's screen (menus, buttons + disabled, fields, options, picklists,
+                                                 screenshots); clicks only the task and menu items, never Save/Submit/Add
   db-usage   --env sit                          Every status SIT ever wrote → registry/db-usage.json + docs/status-coverage.md (vs the active list)
   simulate   --env sit --doc <no> --status <id> [--type OC]   Data patch to put one document at a backend-only status (tester runs it)
   simulate   --env sit --doc <no> --status <id> --check       Confirm it in the DB and log it in knowledge/data-change-audit.md
@@ -922,7 +949,7 @@ const cmd = args._[0] ?? 'help';
 const COMMANDS = {
   help: () => console.log(HELP), 'list-modules': cmdListModules, 'list-flows': cmdListFlows, 'show-flow': cmdShowFlow, 'list-statuses': cmdListStatuses,
   doctor: cmdDoctor, plan: cmdPlan, run: cmdRun, prepare: cmdPrepare, resume: cmdResume, stop: cmdStop, watch: cmdWatch,
-  gate: cmdGate, reconcile: cmdReconcile, 'doc-status': cmdDocStatus, 'db-catalog': cmdDbCatalog, 'db-usage': cmdDbUsage, simulate: cmdSimulate, cr: cmdCr, retry: cmdRetry, runs: cmdRuns, status: cmdStatus, report: cmdReport, data: cmdData, clean: cmdClean, menu: cmdMenu,
+  gate: cmdGate, reconcile: cmdReconcile, 'doc-status': cmdDocStatus, sql: cmdSql, probe: cmdProbe, 'db-catalog': cmdDbCatalog, 'db-usage': cmdDbUsage, simulate: cmdSimulate, cr: cmdCr, retry: cmdRetry, runs: cmdRuns, status: cmdStatus, report: cmdReport, data: cmdData, clean: cmdClean, menu: cmdMenu,
 };
 if (!COMMANDS[cmd]) die(`Unknown command "${cmd}". npm run qa -- help`);
 await COMMANDS[cmd](args);

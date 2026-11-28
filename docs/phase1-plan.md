@@ -127,7 +127,11 @@ compare the AC run of KAT-042 (same portlet) step by step (it chooses the approv
 the picklist's hidden selects before Submit, or ask a person to submit once manually and watch. Then CT-111 Review AC/SA.
 Resume: `qa retry --run ct-amendment-supplement_20261128-135322 --step CT-110` then `qa resume`.
 Also done today: KAT-041/KAT-043 log in as the BPM assignee; coverage tool `tests/tools/coverage.tool.spec.ts` →
-docs/status-proven.md (369/804). Temporary: `tests/tools/q.tool.spec.ts`, `tests/tools/probe-fa.tool.spec.ts` (delete when done). Nothing committed yet.
+docs/status-proven.md (380/804 after the FA flow). Committed and merged to main (32a2278).
+New read-only tools for mapping screens (use them before writing a new step): `npm run qa -- probe --env sit --doc <no>
+--user <id> | --account KAT-0xx [--tabs "Menu A,Menu B"]` (menus, buttons with disabled state, fields, options,
+picklists, screenshots in %TEMP%\qa-probe; clicks only the task and menu items) and `npm run qa -- sql --env sit
+"select …"` (one SELECT; sitQuery now also folds line breaks and sets DEFINE OFF).
 
 New-PC setup: `npm ci`, `npx playwright install chromium`; copy `.auth/` and `.data/` from the old PC (never via git);
 DBeaver workspace `EP` with the "SIT" connection (sit-db reads `%APPDATA%\DBeaverData\workspace6\EP\.dbeaver`);

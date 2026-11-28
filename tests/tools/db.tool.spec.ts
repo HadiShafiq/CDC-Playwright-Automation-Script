@@ -160,6 +160,16 @@ MODULE ${M} (${dry ? 'dry run' : 'run'}): ${out.length} statuses · ${JSON.strin
     if (!r.ok) process.exitCode = 1;
   });
 
+  test('sql', () => {
+    test.skip(tool !== 'sql');
+    // Ad-hoc READ-ONLY query (npm run qa -- sql): sitQuery itself refuses anything but one SELECT/WITH (no FOR UPDATE,
+    // line breaks folded, DEFINE off). Writes stay with sitExecute (allow-list, audited).
+    const max = Number(process.env.QA_MAX_ROWS ?? 200);
+    const rows = sitQuery(process.env.QA_SQL ?? '');
+    for (const r of rows.slice(0, max)) console.log(r.join(' | '));
+    console.log(`\n${rows.length} row(s)${rows.length > max ? `, first ${max} shown (--max to change)` : ''}`);
+  });
+
   test('db-usage', () => {
     test.skip(tool !== 'db-usage');
     // Every (doc type, status) ever written to each workflow table, with row count and last use: which active statuses

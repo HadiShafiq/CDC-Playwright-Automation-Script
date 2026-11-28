@@ -39,7 +39,8 @@ function sitLogin() {
 }
 
 function assertReadOnly(sql: string) {
-  const s = sql.trim().replace(/;\s*$/, '');
+  // one line: a line break could smuggle an SQL*Plus command (HOST, @script, /) into the script after the SELECT
+  const s = sql.replace(/[\r\n]+/g, ' ').trim().replace(/;\s*$/, '');
   if (!/^(select|with)\b/i.test(s)) throw new Error('sit-db: only SELECT statements are allowed');
   if (s.includes(';')) throw new Error('sit-db: one statement only');
   if (/\bfor\s+update\b/i.test(s)) throw new Error('sit-db: SELECT … FOR UPDATE is not allowed');
@@ -55,6 +56,7 @@ export function sitQuery(sql: string): string[][] {
     'WHENEVER SQLERROR EXIT FAILURE',
     `CONNECT ${user}/"${password}"@"(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=${SIT_HOST})(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=${SIT_SERVICE})))"`,
     'SET PAGESIZE 0 HEADING OFF FEEDBACK OFF VERIFY OFF ECHO OFF TAB OFF',
+    'SET DEFINE OFF', // "&" in a literal must not start a substitution prompt
     'SET LINESIZE 32767 TRIMSPOOL ON TRIMOUT ON',
     `SET COLSEP '${SEP}'`,
     "ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS';",
